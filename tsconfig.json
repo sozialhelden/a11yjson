@@ -1,32 +1,36 @@
 {
-    "compilerOptions": {
-        "moduleResolution": "node",
-        "target": "es5",
-        "module":"es2015",
-        "lib": ["es2015", "es2016", "es2017", "dom"],
-        "strict": true,
-        "sourceMap": true,
-        "declaration": true,
-        "jsx": "react",
-        "allowSyntheticDefaultImports": true,
-        "experimentalDecorators": true,
-        "emitDecoratorMetadata": true,
-        "declarationDir": "dist/types",
-        "outDir": "compiled",
-        "forceConsistentCasingInFileNames": true,
-        "noImplicitReturns": true,
-        "noImplicitThis": true,
-        "noImplicitAny": true,
-        "strictNullChecks": true,
-        "typeRoots": [
-          "node_modules/@types"
-        ]
-    },
-    "include": [
-        "src"
-    ],
-    "exclude": [
-      "node_modules",
-      "compiled"
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "target": "es5",
+    "module":"es2015",
+    "lib": ["es2015", "es2016", "es2017", "dom"],
+    "strict": true,
+    "sourceMap": true,
+    "declaration": true,
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declarationDir": "dist/types",
+    "outDir": "compiled",
+    "rootDir": "src",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "typeRoots": [
+      "typings",
+      "node_modules/@types"
     ]
+  },
+  "include": [
+    "typings",
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "compiled", 
+    "dist"
+  ]
 }
