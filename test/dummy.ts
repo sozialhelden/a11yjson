@@ -1,4 +1,4 @@
-import { DummyClass, DummySchema, IDummy } from '../src/ac-format'
+import { DummyClass, DummySchema, IDummy } from '../src/dummy'
 
 /**
  * Dummy test
