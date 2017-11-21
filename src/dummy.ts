@@ -1,4 +1,4 @@
-import SimpleSchema, { SimpleSchemaStatic } from 'simpl-schema'
+import SimpleSchema from 'simpl-schema'
 
 export interface IDummy {
   name: string
