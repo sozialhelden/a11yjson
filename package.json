@@ -75,6 +75,7 @@
   },
   "devDependencies": {
     "@types/jest": "^21.1.0",
+    "@types/js-quantities": "^1.6.2",
     "@types/node": "^8.0.53",
     "colors": "^1.1.2",
     "commitizen": "^2.9.6",
@@ -104,6 +105,7 @@
     "validate-commit-msg": "^2.12.2"
   },
   "dependencies": {
+    "js-quantities": "^1.7.0",
     "simpl-schema": "^0.5.0"
   }
 }
