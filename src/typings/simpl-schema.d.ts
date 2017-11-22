@@ -1,6 +1,6 @@
 // Type definitions for simpl-schema
 
-type Integer = RegExp
+type Integer = RegExp;
 
 type SchemaType =
   | String
@@ -11,221 +11,224 @@ type SchemaType =
   | Array<any>
   | SchemaDefinition
   | Date
-  | SimpleSchema
+  | SimpleSchema;
 
 interface CleanOption {
-  filter?: boolean
-  autoConvert?: boolean
-  removeEmptyStrings?: boolean
-  trimStrings?: boolean
-  getAutoValues?: boolean
-  isModifier?: boolean
-  extendAutoValueContext?: boolean
+  filter?: boolean;
+  autoConvert?: boolean;
+  removeEmptyStrings?: boolean;
+  trimStrings?: boolean;
+  getAutoValues?: boolean;
+  isModifier?: boolean;
+  extendAutoValueContext?: boolean;
 }
 
 interface ValidationFunctionSelf<T> {
-  value: T
-  key: string
-  genericKey: string
-  definition: SchemaDefinition
-  isSet: boolean
-  operator: any
-  validationContext: ValidationContext
-  field: (fieldName: string) => any
-  siblingField: (fieldName: string) => any
-  addValidationErrors: (errors: string[]) => {}
+  value: T;
+  key: string;
+  genericKey: string;
+  definition: SchemaDefinition;
+  isSet: boolean;
+  operator: any;
+  validationContext: ValidationContext;
+  field: (fieldName: string) => any;
+  siblingField: (fieldName: string) => any;
+  addValidationErrors: (errors: string[]) => {};
 }
 
 type ValidationFunction = (
   this: ValidationFunctionSelf<any>
-) => string | undefined
+) => string | undefined;
 
 interface SchemaDefinition {
-  type: SchemaType
-  label?: string | Function
-  optional?: boolean | Function
-  min?: number | boolean | Date | Function
-  max?: number | boolean | Date | Function
-  minCount?: number | Function
-  maxCount?: number | Function
-  allowedValues?: any[] | Function
-  decimal?: boolean
-  exclusiveMax?: boolean
-  exclusiveMin?: boolean
-  regEx?: RegExp | RegExp[]
-  custom?: ValidationFunction
-  blackbox?: boolean
-  autoValue?: Function
-  defaultValue?: any
-  trim?: boolean
+  type: SchemaType;
+  label?: string | Function;
+  optional?: boolean | Function;
+  min?: number | boolean | Date | Function;
+  max?: number | boolean | Date | Function;
+  minCount?: number | Function;
+  maxCount?: number | Function;
+  allowedValues?: any[] | Function;
+  decimal?: boolean;
+  exclusiveMax?: boolean;
+  exclusiveMin?: boolean;
+  regEx?: RegExp | RegExp[];
+  custom?: ValidationFunction;
+  blackbox?: boolean;
+  autoValue?: Function;
+  defaultValue?: any;
+  trim?: boolean;
 }
 
 interface ValidationOption {
-  modifier?: boolean
-  upsert?: boolean
-  clean?: boolean
-  filter?: boolean
-  upsertextendedCustomContext?: boolean
+  modifier?: boolean;
+  upsert?: boolean;
+  clean?: boolean;
+  filter?: boolean;
+  upsertextendedCustomContext?: boolean;
 }
 
 interface SimpleSchemaValidationContext {
-  validate(obj: any, options?: ValidationOption): boolean
+  validate(obj: any, options?: ValidationOption): boolean;
 
-  validateOne(doc: any, keyName: string, options?: ValidationOption): boolean
+  validateOne(doc: any, keyName: string, options?: ValidationOption): boolean;
 
-  resetValidation(): void
+  resetValidation(): void;
 
-  isValid(): boolean
+  isValid(): boolean;
 
-  invalidKeys(): { name: string; type: string; value?: any }[]
+  invalidKeys(): { name: string; type: string; value?: any }[];
 
-  addInvalidKeys(errors: { name: string; type: string }[]): void
+  addInvalidKeys(errors: { name: string; type: string }[]): void;
 
-  keyIsInvalid(name: any): boolean
+  keyIsInvalid(name: any): boolean;
 
-  keyErrorMessage(name: any): string
+  keyErrorMessage(name: any): string;
 
-  getErrorObject(): any
+  getErrorObject(): any;
 }
 
 declare class ValidationContext {
-  constructor(ss: any)
+  constructor(ss: any);
 
-  addValidationErrors(errors: any): void
+  addValidationErrors(errors: any): void;
 
-  clean(...args: any[]): any
+  clean(...args: any[]): any;
 
-  getErrorForKey(key: any, ...args: any[]): any
+  getErrorForKey(key: any, ...args: any[]): any;
 
-  isValid(): any
+  isValid(): any;
 
-  keyErrorMessage(key: any, ...args: any[]): any
+  keyErrorMessage(key: any, ...args: any[]): any;
 
-  keyIsInvalid(key: any, ...args: any[]): any
+  keyIsInvalid(key: any, ...args: any[]): any;
 
-  reset(): void
+  reset(): void;
 
-  setValidationErrors(errors: any): void
+  setValidationErrors(errors: any): void;
 
-  validate(obj: any, ...args: any[]): any
+  validate(obj: any, ...args: any[]): any;
 
-  validationErrors(): any
+  validationErrors(): any;
 }
 
 interface MongoObjectStatic {
-  forEachNode(func: Function, options?: { endPointsOnly: boolean }): void
+  forEachNode(func: Function, options?: { endPointsOnly: boolean }): void;
 
-  getValueForPosition(position: string): any
+  getValueForPosition(position: string): any;
 
-  setValueForPosition(position: string, value: any): void
+  setValueForPosition(position: string, value: any): void;
 
-  removeValueForPosition(position: string): void
+  removeValueForPosition(position: string): void;
 
-  getKeyForPosition(position: string): any
+  getKeyForPosition(position: string): any;
 
-  getGenericKeyForPosition(position: string): any
+  getGenericKeyForPosition(position: string): any;
 
-  getInfoForKey(key: string): any
+  getInfoForKey(key: string): any;
 
-  getPositionForKey(key: string): string
+  getPositionForKey(key: string): string;
 
-  getPositionsForGenericKey(key: string): string[]
+  getPositionsForGenericKey(key: string): string[];
 
-  getValueForKey(key: string): any
+  getValueForKey(key: string): any;
 
-  addKey(key: string, val: any, op: string): any
+  addKey(key: string, val: any, op: string): any;
 
-  removeGenericKeys(keys: string[]): void
+  removeGenericKeys(keys: string[]): void;
 
-  removeGenericKey(key: string): void
+  removeGenericKey(key: string): void;
 
-  removeKey(key: string): void
+  removeKey(key: string): void;
 
-  removeKeys(keys: string[]): void
+  removeKeys(keys: string[]): void;
 
-  filterGenericKeys(test: Function): void
+  filterGenericKeys(test: Function): void;
 
-  setValueForKey(key: string, val: any): void
+  setValueForKey(key: string, val: any): void;
 
-  setValueForGenericKey(key: string, val: any): void
+  setValueForGenericKey(key: string, val: any): void;
 
-  getObject(): any
+  getObject(): any;
 
-  getFlatObject(options?: { keepArrays?: boolean }): any
+  getFlatObject(options?: { keepArrays?: boolean }): any;
 
-  affectsKey(key: string): any
+  affectsKey(key: string): any;
 
-  affectsGenericKey(key: string): any
+  affectsGenericKey(key: string): any;
 
-  affectsGenericKeyImplicit(key: string): any
+  affectsGenericKeyImplicit(key: string): any;
 }
 
 interface MongoObject {
-  expandKey(val: any, key: string, obj: any): void
+  expandKey(val: any, key: string, obj: any): void;
 }
 
 declare class SimpleSchema {
-  static Integer: Integer
+  static Integer: Integer;
   static RegEx: {
-    Email: RegExp
-    EmailWithTLD: RegExp
-    Domain: RegExp
-    WeakDomain: RegExp
-    IP: RegExp
-    IPv4: RegExp
-    IPv6: RegExp
-    Url: RegExp
-    Id: RegExp
-    ZipCode: RegExp
-    Phone: RegExp
-  }
-  debug: boolean
+    Email: RegExp;
+    EmailWithTLD: RegExp;
+    Domain: RegExp;
+    WeakDomain: RegExp;
+    IP: RegExp;
+    IPv4: RegExp;
+    IPv6: RegExp;
+    Url: RegExp;
+    Id: RegExp;
+    ZipCode: RegExp;
+    Phone: RegExp;
+  };
+  debug: boolean;
 
-  constructor(schema: { [key: string]: SchemaDefinition | SchemaType } | any[])
+  constructor(
+    schema: { [key: string]: SchemaDefinition | SchemaType } | any[],
+    options?: any
+  );
 
-  static oneOf(...schemas: SchemaType[]): SchemaType
+  static oneOf(...schemas: SchemaType[]): SchemaType;
 
-  static extendOptions(allowedOptionFields: string[]): void
+  static extendOptions(allowedOptionFields: string[]): void;
 
   static setDefaultMessages(messages: {
-    messages: { [key: string]: { [key: string]: string } }
-  }): void
+    messages: { [key: string]: { [key: string]: string } };
+  }): void;
 
-  namedContext(name?: string): SimpleSchemaValidationContext
+  namedContext(name?: string): SimpleSchemaValidationContext;
 
-  addValidator(validator: Function): any
+  addValidator(validator: Function): any;
 
-  pick(...fields: string[]): SimpleSchema
+  pick(...fields: string[]): SimpleSchema;
 
-  omit(...fields: string[]): SimpleSchema
+  omit(...fields: string[]): SimpleSchema;
 
-  clean(doc: any, options?: CleanOption): any
+  clean(doc: any, options?: CleanOption): any;
 
-  schema(key?: string): SchemaDefinition | SchemaDefinition[]
+  schema(key?: string): SchemaDefinition | SchemaDefinition[];
 
-  getDefinition(key: string, propList?: any, functionContext?: any): any
+  getDefinition(key: string, propList?: any, functionContext?: any): any;
 
-  keyIsInBlackBox(key: string): boolean
+  keyIsInBlackBox(key: string): boolean;
 
-  labels(labels: { [key: string]: string }): void
+  labels(labels: { [key: string]: string }): void;
 
-  label(key: any): any
+  label(key: any): any;
 
-  messages(messages: any): void
+  messages(messages: any): void;
 
-  messageForError(type: any, key: any, def: any, value: any): string
+  messageForError(type: any, key: any, def: any, value: any): string;
 
-  allowsKey(key: any): string
+  allowsKey(key: any): string;
 
-  newContext(): SimpleSchemaValidationContext
+  newContext(): SimpleSchemaValidationContext;
 
-  objectKeys(keyPrefix: any): any[]
+  objectKeys(keyPrefix: any): any[];
 
-  validate(obj: any, options?: ValidationOption): void
+  validate(obj: any, options?: ValidationOption): void;
 
-  validator(options: ValidationOption): Function
+  validator(options: ValidationOption): Function;
 }
 
 declare module 'simpl-schema' {
-  export = SimpleSchema
+  export = SimpleSchema;
 }

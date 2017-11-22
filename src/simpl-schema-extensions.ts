@@ -1,9 +1,9 @@
-import SimpleSchema from 'simpl-schema'
+import SimpleSchema from 'simpl-schema';
 
 // allow custom uniforms fields
-SimpleSchema.extendOptions(['accessibility'])
+SimpleSchema.extendOptions(['accessibility']);
 
 interface AccessibilitySchemaExtension {
-  description: string
-  extendedInformationUrl: string
+  description: string;
+  extendedInformationUrl: string;
 }

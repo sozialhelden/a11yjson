@@ -1,5 +1,5 @@
-import Qty from 'js-quantities'
-import SimpleSchema from 'simpl-schema'
+import Qty from 'js-quantities';
+import SimpleSchema from 'simpl-schema';
 
 // TODO make this more generic
 
@@ -9,9 +9,9 @@ SimpleSchema.setDefaultMessages({
       invalid_unit: 'Invalid Unit'
     }
   }
-})
+});
 
-const LengthUnitKind = 'length'
+const LengthUnitKind = 'length';
 
 /**
  * Builds a custom validation function that ensures that the value of the field
@@ -24,36 +24,36 @@ const LengthUnitKind = 'length'
  */
 const validateUnit = function(kind: string): ValidationFunction {
   return function(this: ValidationFunctionSelf<string>) {
-    const qty = Qty.parse(this.value)
+    const qty = Qty.parse(this.value);
     if (!qty || qty.scalar !== 1 || qty.kind() !== kind) {
-      return 'invalid_unit'
+      return 'invalid_unit';
     }
 
-    return undefined
-  }
-}
+    return undefined;
+  };
+};
 
 export interface QuantityRange {
-  from: number // the start value in the specified unit, less than to
-  to: number // the end value in the specified unit, greater than from
-  unit: string // one of the length units in js-quantities
-  accuracy?: number // ± in given units, uniform error
-  rawValue: string // raw, imported value, eg. '90 .. 120cm'
+  from: number; // the start value in the specified unit, less than to
+  to: number; // the end value in the specified unit, greater than from
+  unit: string; // one of the length units in js-quantities
+  accuracy?: number; // ± in given units, uniform error
+  rawValue: string; // raw, imported value, eg. '90 .. 120cm'
 }
 
 export interface Quantity {
-  value: number // the value in the specified unit
-  unit: string // one of the length units in js-quantities
-  rawValue: string // raw, imported value, eg. '90 .. 120cm'
-  accuracy?: number // ± in given units, uniform error
+  value: number; // the value in the specified unit
+  unit: string; // one of the length units in js-quantities
+  rawValue: string; // raw, imported value, eg. '90 .. 120cm'
+  accuracy?: number; // ± in given units, uniform error
 }
 
 export interface EstimatedQuantity {
-  operator?: '<' | '<=' | '==' | '>=' | '>'
-  value: number // the value in the specified unit
-  unit: string // one of the length units in js-quantities
-  rawValue: string // raw, imported value, eg. '<20 cm'
-  accuracy?: number // ± in given units, uniform error
+  operator?: '<' | '<=' | '==' | '>=' | '>';
+  value: number; // the value in the specified unit
+  unit: string; // one of the length units in js-quantities
+  rawValue: string; // raw, imported value, eg. '<20 cm'
+  accuracy?: number; // ± in given units, uniform error
 }
 
 export const LengthQuantitySchema = new SimpleSchema({
@@ -62,14 +62,15 @@ export const LengthQuantitySchema = new SimpleSchema({
   },
   unit: {
     type: String,
-    custom: validateUnit(LengthUnitKind)
+    custom: validateUnit(LengthUnitKind),
+    defaultValue: 'meter'
   },
   accuracy: {
     type: Number,
     optional: true
   },
   rawValue: String
-})
+});
 
 export const LengthQuantityRangeSchema = new SimpleSchema({
   from: {
@@ -80,14 +81,15 @@ export const LengthQuantityRangeSchema = new SimpleSchema({
   },
   unit: {
     type: String,
-    custom: validateUnit(LengthUnitKind)
+    custom: validateUnit(LengthUnitKind),
+    defaultValue: 'meter'
   },
   accuracy: {
     type: Number,
     optional: true
   },
   rawValue: String
-})
+});
 
 export const LengthEstimatedQuantitySchema = new SimpleSchema({
   operator: {
@@ -99,14 +101,15 @@ export const LengthEstimatedQuantitySchema = new SimpleSchema({
   },
   unit: {
     type: String,
-    custom: validateUnit(LengthUnitKind)
+    custom: validateUnit(LengthUnitKind),
+    defaultValue: 'meter'
   },
   accuracy: {
     type: Number,
     optional: true
   },
   rawValue: String
-})
+});
 
 // BUG: cannot have more than one Schema Instance in oneOf see https://github.com/aldeed/simple-schema-js/issues/112
 export const LengthSchema = SimpleSchema.oneOf(
@@ -114,6 +117,6 @@ export const LengthSchema = SimpleSchema.oneOf(
   // LengthQuantityRangeSchema,
   LengthQuantitySchema
   // LengthEstimatedQuantitySchema,
-)
+);
 
-export type Length = EstimatedQuantity | QuantityRange | Quantity | string
+export type Length = EstimatedQuantity | QuantityRange | Quantity | string;

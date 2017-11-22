@@ -1,8 +1,8 @@
-import SimpleSchema from 'simpl-schema'
+import SimpleSchema from 'simpl-schema';
 
 export interface PointGeometry {
-  type: 'Point'
-  coordinates: [number, number]
+  type: 'Point';
+  coordinates: [number, number];
 }
 
 export const PointGeometrySchema = new SimpleSchema({
@@ -20,8 +20,8 @@ export const PointGeometrySchema = new SimpleSchema({
     min: -180,
     max: 180
   }
-})
+});
 
-export type Geometry = PointGeometry
+export type Geometry = PointGeometry;
 
-export const GeometrySchema = PointGeometrySchema
+export const GeometrySchema = PointGeometrySchema;

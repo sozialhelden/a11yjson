@@ -2,5 +2,10 @@
   "extends": [
     "tslint-config-standard",
     "tslint-config-prettier"
+  ],
+  "semicolon": [
+    true,
+    "always"
   ]
 }
+

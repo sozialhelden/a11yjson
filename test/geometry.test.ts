@@ -1,39 +1,50 @@
-import { PointGeometrySchema } from '../src/geometry'
+import { PointGeometrySchema } from '../src/geometry';
+
+export const validPointGeometryFixture = {
+  type: 'Point',
+  coordinates: [53.12, 14.02]
+};
+
+const allValidFixtures = Object.freeze([validPointGeometryFixture]);
+
+const invalidPointGeometryOutOfBoundsFixture = {
+  type: 'Point',
+  coordinates: [220, 500]
+};
+
+const invalidPointGeometryMistypedData = {
+  type: 'BoundingBox',
+  coordinates: [53.12, 14.02]
+};
+
+const invalidPointGeometryTooManyFields = {
+  type: 'Point',
+  coordinates: [53.12, 14.02],
+  foo: 'bar'
+};
+
+const allInvalidFixtures = Object.freeze([
+  {},
+  invalidPointGeometryOutOfBoundsFixture,
+  invalidPointGeometryMistypedData,
+  invalidPointGeometryTooManyFields
+]);
 
 describe('PointGeometrySchema Schema', () => {
-  it('tests empty data as invalid', () => {
-    expect(() => {
-      PointGeometrySchema.validate({})
-    }).toThrow()
-  })
-  it('tests out of bounds data as invalid', () => {
-    expect(() => {
-      PointGeometrySchema.validate({ type: 'Point', coordinates: [220, 500] })
-    }).toThrow()
-  })
-  it('tests mistyped data as invalid', () => {
-    expect(() => {
-      PointGeometrySchema.validate({
-        type: 'BoundingBox',
-        coordinates: [53.12, 14.02]
-      })
-    }).toThrow()
-  })
-  it('tests too much data as invalid', () => {
-    expect(() => {
-      PointGeometrySchema.validate({
-        type: 'Point',
-        coordinates: [53.12, 14.02],
-        foo: 'bar'
-      })
-    }).toThrow()
-  })
-  it('tests valid data correctly', () => {
-    expect(
-      PointGeometrySchema.validate({
-        type: 'Point',
-        coordinates: [53.12, 14.02]
-      })
-    ).toBeUndefined()
-  })
-})
+  it('tests field as invalid', () => {
+    allInvalidFixtures.forEach(value => {
+      const context = PointGeometrySchema.newContext();
+      context.validate(value);
+      expect(context.validationErrors()).not.toHaveLength(0);
+      expect(context.isValid()).toBeFalsy();
+    });
+  });
+  it('tests field as valid', () => {
+    allValidFixtures.forEach(value => {
+      const context = PointGeometrySchema.newContext();
+      context.validate(value);
+      expect(context.validationErrors()).toHaveLength(0);
+      expect(context.isValid()).toBeTruthy();
+    });
+  });
+});

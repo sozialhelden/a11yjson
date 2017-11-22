@@ -1,15 +1,15 @@
-import { LengthSchema } from '../src/units'
-import SimpleSchema from 'simpl-schema'
+import { LengthSchema } from '../src/units';
+import SimpleSchema from 'simpl-schema';
 
-const lengthStringFixture = '10cm'
+const lengthStringFixture = '10cm';
 
-const lengthQuantityFixture = { value: 10, unit: 'meter', rawValue: '10m' }
+const lengthQuantityFixture = { value: 10, unit: 'meter', rawValue: '10m' };
 const lengthQuantityWithAccuracyFixture = {
   value: 10,
   unit: 'kilometer',
   accuracy: 2,
   rawValue: '10km'
-}
+};
 
 // BUG: cannot have more than one Schema Instance in oneOf see https://github.com/aldeed/simple-schema-js/issues/112
 // const lengthQuantityRangeFixture = {from: 10, to: 20, unit: 'meter', rawValue: '10m'};
@@ -26,35 +26,37 @@ const allValidFixtures = Object.freeze([
   // lengthQuantityRangeWithAccuracyFixture,
   // lengthEstimatedQuantityFixture,
   // lengthEstimatedQuantityWithAccuracyFixture,
-])
+]);
 
 const lengthInvalidUnitQuantityFixture = {
   value: 10,
   unit: 'breadcrumbs',
   rawValue: '10breadcrumb'
-}
+};
 
 const allInvalidFixtures = Object.freeze([
   undefined,
   {},
   lengthInvalidUnitQuantityFixture
-])
+]);
 
-const SchemaWithLengthField = new SimpleSchema({ field: LengthSchema })
+const SchemaWithLengthField = new SimpleSchema({ field: LengthSchema });
 
 describe('Length Schema', () => {
   it('tests field as invalid', () => {
     allInvalidFixtures.forEach(value => {
-      const context = SchemaWithLengthField.newContext()
-      context.validate({ field: value })
-      expect(context.isValid()).toBeFalsy()
-    })
-  })
+      const context = SchemaWithLengthField.newContext();
+      context.validate({ field: value });
+      expect(context.validationErrors()).not.toHaveLength(0);
+      expect(context.isValid()).toBeFalsy();
+    });
+  });
   it('tests field as valid', () => {
     allValidFixtures.forEach(value => {
-      const context = SchemaWithLengthField.newContext()
-      context.validate({ field: value })
-      expect(context.isValid()).toBeTruthy()
-    })
-  })
-})
+      const context = SchemaWithLengthField.newContext();
+      context.validate({ field: value });
+      expect(context.validationErrors()).toHaveLength(0);
+      expect(context.isValid()).toBeTruthy();
+    });
+  });
+});

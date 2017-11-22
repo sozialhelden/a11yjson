@@ -1,17 +1,17 @@
-import { Length, LengthSchema } from './units'
-import SimpleSchema from 'simpl-schema'
+import { Length, LengthSchema } from './units';
+import SimpleSchema from 'simpl-schema';
 
 export interface EquipmentAccessibility {
-  height: Length
-  languages: Array<string>
-  isRaised: boolean
-  isBraille: boolean
-  hasSpeech: boolean
-  isHighContrast: boolean
-  hasLargePrint: boolean
-  isVoiceActivated: boolean
-  hasHeadPhoneJack: boolean
-  isEasyToUnderstand: boolean
+  height: Length;
+  languages: Array<string>;
+  isRaised: boolean;
+  isBraille: boolean;
+  hasSpeech: boolean;
+  isHighContrast: boolean;
+  hasLargePrint: boolean;
+  isVoiceActivated: boolean;
+  hasHeadPhoneJack: boolean;
+  isEasyToUnderstand: boolean;
 }
 
 export const EquipmentAccessibilitySchema = new SimpleSchema({
@@ -57,4 +57,4 @@ export const EquipmentAccessibilitySchema = new SimpleSchema({
     type: Boolean,
     defaultValue: false
   }
-})
+});
