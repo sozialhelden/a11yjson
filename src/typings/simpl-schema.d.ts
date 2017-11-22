@@ -185,6 +185,8 @@ declare class SimpleSchema {
 
   static oneOf(...schemas: SchemaType[]): SchemaType
 
+  static extendOptions(allowedOptionFields: string[]): void
+
   static setDefaultMessages(messages: {
     messages: { [key: string]: { [key: string]: string } }
   }): void
