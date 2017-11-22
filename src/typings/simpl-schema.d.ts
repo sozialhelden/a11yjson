@@ -9,8 +9,9 @@ type SchemaType =
   | Boolean
   | Object
   | Array<any>
-  | SimpleSchema
+  | SchemaDefinition
   | Date
+  | SimpleSchema
 
 interface CleanOption {
   filter?: boolean
@@ -21,6 +22,23 @@ interface CleanOption {
   isModifier?: boolean
   extendAutoValueContext?: boolean
 }
+
+interface ValidationFunctionSelf<T> {
+  value: T
+  key: string
+  genericKey: string
+  definition: SchemaDefinition
+  isSet: boolean
+  operator: any
+  validationContext: ValidationContext
+  field: (fieldName: string) => any
+  siblingField: (fieldName: string) => any
+  addValidationErrors: (errors: string[]) => {}
+}
+
+type ValidationFunction = (
+  this: ValidationFunctionSelf<any>
+) => string | undefined
 
 interface SchemaDefinition {
   type: SchemaType
@@ -35,7 +53,7 @@ interface SchemaDefinition {
   exclusiveMax?: boolean
   exclusiveMin?: boolean
   regEx?: RegExp | RegExp[]
-  custom?: Function
+  custom?: ValidationFunction
   blackbox?: boolean
   autoValue?: Function
   defaultValue?: any
@@ -165,11 +183,11 @@ declare class SimpleSchema {
 
   constructor(schema: { [key: string]: SchemaDefinition | SchemaType } | any[])
 
-  static oneOf(
-    ...schemas: (
-      | { [key: string]: SchemaDefinition | SchemaType }
-      | SchemaType)[]
-  ): void
+  static oneOf(...schemas: SchemaType[]): SchemaType
+
+  static setDefaultMessages(messages: {
+    messages: { [key: string]: { [key: string]: string } }
+  }): void
 
   namedContext(name?: string): SimpleSchemaValidationContext
 
@@ -204,10 +222,6 @@ declare class SimpleSchema {
   validate(obj: any, options?: ValidationOption): void
 
   validator(options: ValidationOption): Function
-}
-
-declare namespace SimpleSchema {
-
 }
 
 declare module 'simpl-schema' {
