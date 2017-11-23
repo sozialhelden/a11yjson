@@ -1,6 +1,7 @@
 import { Length, LengthSchema } from './units';
 import SimpleSchema from 'simpl-schema';
 
+// QUESTION: This should rather be EquipmentControlsAccessibility?
 export interface EquipmentAccessibility {
   height: Length;
   languages: Array<string>;
