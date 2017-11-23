@@ -1,10 +1,10 @@
-import { AllowedAreaTags, Area, AreaSchema } from '../src/area';
+import { AllowedAreaTypes, Area, AreaSchema } from '../src/area';
 import { entranceMinimumFixture } from './entrance.test';
 
 export const areaMinimumFixture: Area = {};
 
 const areaWithOptionalsFixture: Area = {
-  tags: AllowedAreaTags,
+  tags: AllowedAreaTypes,
   name: 'string',
   buildingName: 'string',
   buildingNumber: 1,

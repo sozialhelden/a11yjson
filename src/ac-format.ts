@@ -4,7 +4,7 @@ export * from './accessibility';
 export * from './area';
 export * from './entrance';
 export * from './equipment';
-export * from './equipment-accessibility';
+export * from './equipment-properties';
 export * from './geometry';
 export * from './personal-profile';
 export * from './external-id';

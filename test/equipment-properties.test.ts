@@ -1,11 +1,11 @@
 import {
-  EquipmentAccessibility,
-  EquipmentAccessibilitySchema
-} from '../src/equipment-accessibility';
+  EquipmentProperties,
+  EquipmentPropertiesSchema
+} from '../src/equipment-properties';
 
-export const equipmentAccessibilityMinimumFixture: EquipmentAccessibility = {};
+export const equipmentAccessibilityMinimumFixture: EquipmentProperties = {};
 
-const equipmentAccessibilityFixture: EquipmentAccessibility = {
+const equipmentAccessibilityFixture: EquipmentProperties = {
   height: '90 .. 120cm',
   languages: ['en', 'de'],
   isRaised: true,
@@ -32,10 +32,10 @@ const allInvalidFixtures = Object.freeze([
   invalidEquipmentAccessibilityFixture
 ]);
 
-describe('EquipmentAccessibilitySchema Schema', () => {
+describe('EquipmentPropertiesSchema Schema', () => {
   it('tests field as invalid', () => {
     allInvalidFixtures.forEach(value => {
-      const context = EquipmentAccessibilitySchema.newContext();
+      const context = EquipmentPropertiesSchema.newContext();
       context.validate(value);
       expect(context.validationErrors()).not.toHaveLength(0);
       expect(context.isValid()).toBeFalsy();
@@ -43,7 +43,7 @@ describe('EquipmentAccessibilitySchema Schema', () => {
   });
   it('tests field as valid', () => {
     allValidFixtures.forEach(value => {
-      const context = EquipmentAccessibilitySchema.newContext();
+      const context = EquipmentPropertiesSchema.newContext();
       context.validate(value);
       expect(context.validationErrors()).toHaveLength(0);
       expect(context.isValid()).toBeTruthy();

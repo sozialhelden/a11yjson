@@ -3,19 +3,23 @@ import { Accessibility, AccessibilitySchema } from './accessibility';
 import { ExternalId, ExternalIdSchemaDefinition } from './external-id';
 
 export interface PlaceProperties {
+  // properties
   name: string;
   address: string; // TODO this can also be an object see 22BnzkzXfzuznupvb
   description?: string;
   phoneNumber?: string;
   infoPageUrl: string;
-  originalId: string; // QUESTION: is this deprecated in favor of ids?
-  ids?: Array<ExternalId>;
   category: string;
-  originalData?: any;
   accessibility?: Accessibility;
+
   // accessibility-cloud fields
-  sourceId: string;
+  sourceId?: string;
   sourceImportId?: string; // only valid for import
+
+  // references to external services
+  originalId: string;
+  ids?: Array<ExternalId>;
+  originalData?: any;
 }
 
 export const PlacePropertiesSchema = new SimpleSchema({
@@ -57,7 +61,8 @@ export const PlacePropertiesSchema = new SimpleSchema({
     optional: true
   },
   sourceId: {
-    type: String
+    type: String,
+    optional: true
   },
   sourceImportId: {
     type: String,

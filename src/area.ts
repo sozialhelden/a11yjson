@@ -1,7 +1,7 @@
 import SimpleSchema from 'simpl-schema';
 import { Entrance, EntranceSchema } from './entrance';
 
-export type AreaTags =
+export type AreaTypes =
   | 'indoors'
   | 'hotel-room'
   | 'outdoors'
@@ -12,21 +12,21 @@ export type AreaTags =
   | 'roof'
   | 'front-space';
 
-export const AllowedAreaTags = Object.freeze([
+export const AllowedAreaTypes = Object.freeze([
   'indoors',
-  'hotel-room',
   'outdoors',
+  'hotel-room',
   'meeting-room',
   'confidential',
   'bedroom',
   'terrace',
   'roof',
   'front-space'
-]) as Array<AreaTags>;
+]) as Array<AreaTypes>;
 
 export interface Area {
   // QUESTION should this really be optional? How to treat rooms that do not fit any of the categories. Unused atm.
-  tags?: ArrayLike<AreaTags>;
+  tags?: ArrayLike<AreaTypes>;
   name?: string;
   buildingName?: string;
   buildingNumber?: number;
@@ -71,7 +71,7 @@ export const AreaSchema = new SimpleSchema({
   },
   'tags.$': {
     type: String,
-    allowedValues: AllowedAreaTags.map(s => s)
+    allowedValues: AllowedAreaTypes.map(s => s)
   },
   name: {
     type: String,
