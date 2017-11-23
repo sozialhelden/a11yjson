@@ -1,4 +1,5 @@
 import SimpleSchema from 'simpl-schema';
+import { Door, DoorSchema } from './door';
 
 export interface Entrance {
   name?: string;
@@ -13,7 +14,7 @@ export interface Entrance {
   hasRemovableRamp?: boolean;
   // QUESTION duplicated from area
   stairs?: any; // TODO add object type
-  door?: any; // TODO add object type
+  door?: Door;
   /// reference to the equipment id if this entrance is a lift
   liftEquipmentId?: string;
   /// reference to the equipment id of the intercom of this entrance
@@ -54,7 +55,7 @@ export const EntranceSchema = new SimpleSchema({
     optional: true
   },
   door: {
-    type: Object, // TODO add object type
+    type: DoorSchema,
     optional: true
   },
   liftEquipmentId: {

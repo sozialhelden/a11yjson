@@ -1,4 +1,5 @@
 import { Entrance, EntranceSchema } from '../src/entrance';
+import { doorMinimumFixture } from './door.test';
 
 export const entranceMinimumFixture: Entrance = {};
 
@@ -11,7 +12,7 @@ const entranceWithOptionalsFixture: Entrance = {
   slopeAngle: 5,
   hasRemovableRamp: true,
   stairs: {},
-  door: {},
+  door: doorMinimumFixture,
   liftEquipmentId: 'idHere',
   intercomEquipmentId: 'idHere'
 };
