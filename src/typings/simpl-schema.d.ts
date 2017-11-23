@@ -220,7 +220,7 @@ declare class SimpleSchema {
 
   allowsKey(key: any): string;
 
-  newContext(): SimpleSchemaValidationContext;
+  newContext(): ValidationContext;
 
   objectKeys(keyPrefix: any): any[];
 
