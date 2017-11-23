@@ -77,7 +77,8 @@ export const PlacePropertiesSchema = new SimpleSchema({
     optional: true
   },
   infoPageUrl: {
-    type: SimpleSchema.RegEx.Url,
+    type: String,
+    regEx: SimpleSchema.RegEx.Url,
     optional: true
   },
   ids: {

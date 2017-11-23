@@ -37,11 +37,19 @@ const allValidFixtures = Object.freeze([
   placePropertiesWithOptionalsFixture
 ]);
 
-const invalidPlacePropertiesFixture = {
+const invalidPlacePropertiesBadUrlFixture = {
+  infoPageUrl: '??NoURL!!'
+};
+
+const invalidPlacePropertiesWrongFieldFixture = {
   bar: []
 };
 
-const allInvalidFixtures = Object.freeze([{}, invalidPlacePropertiesFixture]);
+const allInvalidFixtures = Object.freeze([
+  {},
+  invalidPlacePropertiesBadUrlFixture,
+  invalidPlacePropertiesWrongFieldFixture
+]);
 
 describe('PlaceInfoSchema Schema', () => {
   it('tests field as invalid', () => {
