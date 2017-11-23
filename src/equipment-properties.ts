@@ -23,7 +23,7 @@ export const AllowedEquipmentTypes = Object.freeze([
   'vending-machine',
   'intercom',
   'power-outlet'
-]) as Array<EquipmentTypes>;
+]) as ReadonlyArray<EquipmentTypes>;
 
 export interface EquipmentProperties {
   // properties

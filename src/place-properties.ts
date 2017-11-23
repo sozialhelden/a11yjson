@@ -1,6 +1,7 @@
 import SimpleSchema from 'simpl-schema';
 import { Accessibility, AccessibilitySchema } from './accessibility';
 import { ExternalId, ExternalIdSchemaDefinition } from './external-id';
+import { AllowedAreaTypes, AreaTypes } from './area-types';
 
 export interface PlaceProperties {
   // properties
@@ -10,6 +11,14 @@ export interface PlaceProperties {
   phoneNumber?: string;
   category: string;
   accessibility?: Accessibility;
+
+  // QUESTION merge with category/ies?
+  areaTypes?: ArrayLike<AreaTypes>;
+  buildingName?: string;
+  buildingNumber?: number;
+  floorLevel?: number;
+  roomName?: string;
+  roomNumber?: number;
 
   // accessibility-cloud fields
   parentPlaceId?: string;
@@ -37,6 +46,34 @@ export const PlacePropertiesSchema = new SimpleSchema({
   },
   phoneNumber: {
     type: String,
+    optional: true
+  },
+  areaTypes: {
+    type: Array,
+    optional: true
+  },
+  'areaTypes.$': {
+    type: String,
+    allowedValues: AllowedAreaTypes.map(s => s)
+  },
+  buildingName: {
+    type: String,
+    optional: true
+  },
+  buildingNumber: {
+    type: Number,
+    optional: true
+  },
+  floorLevel: {
+    type: Number,
+    optional: true
+  },
+  roomName: {
+    type: String,
+    optional: true
+  },
+  roomNumber: {
+    type: Number,
     optional: true
   },
   infoPageUrl: {

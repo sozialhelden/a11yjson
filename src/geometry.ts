@@ -1,7 +1,9 @@
 import SimpleSchema from 'simpl-schema';
 
+// TODO add altitude
 export interface PointGeometry {
   type: 'Point';
+  /// An array of longitude and latitude, in this unnatural order
   coordinates: [number, number];
 }
 

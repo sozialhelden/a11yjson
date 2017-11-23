@@ -1,7 +1,7 @@
 // re-export all library components
 
 export * from './accessibility';
-export * from './area';
+export * from './area-types';
 export * from './entrance';
 export * from './equipment';
 export * from './equipment-properties';
