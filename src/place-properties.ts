@@ -1,6 +1,6 @@
 import SimpleSchema from 'simpl-schema';
 import { Accessibility, AccessibilitySchema } from './accessibility';
-import { PlaceId, PlaceIdSchemaDefinition } from './place-id';
+import { ExternalId, ExternalIdSchemaDefinition } from './external-id';
 
 export interface PlaceProperties {
   name: string;
@@ -9,7 +9,7 @@ export interface PlaceProperties {
   phoneNumber?: string;
   infoPageUrl: string;
   originalId: string; // QUESTION: is this deprecated in favor of ids?
-  ids?: Array<PlaceId>;
+  ids?: Array<ExternalId>;
   category: string;
   originalData?: any;
   accessibility?: Accessibility;
@@ -41,7 +41,7 @@ export const PlacePropertiesSchema = new SimpleSchema({
     type: Array,
     optional: true
   },
-  'ids.$': PlaceIdSchemaDefinition,
+  'ids.$': ExternalIdSchemaDefinition,
   originalId: {
     type: String
   },

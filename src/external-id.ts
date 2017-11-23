@@ -1,6 +1,6 @@
 import SimpleSchema from 'simpl-schema';
 
-export interface PlaceId {
+export interface ExternalId {
   provider: string;
 
   [key: string]: any;
@@ -15,7 +15,7 @@ SimpleSchema.setDefaultMessages({
   }
 });
 
-const ValidatePlaceId = function(this: ValidationFunctionSelf<any>) {
+const ValidateExternalId = function(this: ValidationFunctionSelf<any>) {
   if (!this.value.provider) {
     return 'missing_provider';
   }
@@ -26,8 +26,8 @@ const ValidatePlaceId = function(this: ValidationFunctionSelf<any>) {
   return undefined;
 };
 
-export const PlaceIdSchemaDefinition: SchemaDefinition = {
+export const ExternalIdSchemaDefinition: SchemaDefinition = {
   type: Object,
   blackbox: true,
-  custom: ValidatePlaceId
+  custom: ValidateExternalId
 };

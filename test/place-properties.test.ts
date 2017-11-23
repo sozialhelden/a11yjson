@@ -1,5 +1,5 @@
 import { PlacePropertiesSchema } from '../src/place-properties';
-import { validPlaceIdWithExtendedDataFixture } from './place-id.test';
+import { validExternalIdWithExtendedDataFixture } from './external-id.test';
 import { accessibilityMinimumFixture } from './accessibilty.test';
 
 export const placePropertiesMinimumFixture = {
@@ -11,7 +11,7 @@ export const placePropertiesMinimumFixture = {
 };
 
 const placePropertiesWithOptionalsFixture = {
-  ids: [validPlaceIdWithExtendedDataFixture],
+  ids: [validExternalIdWithExtendedDataFixture],
   originalId: 'ChIJwSo_DaaHUocRFFAENf-ILl8',
   infoPageUrl: 'https://axsmap.com/venue/ChIJwSo_DaaHUocRFFAENf-ILl8',
   name: 'T-Mobile Sandy',

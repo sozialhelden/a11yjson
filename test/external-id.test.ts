@@ -1,33 +1,35 @@
-import { PlaceIdSchemaDefinition } from '../src/place-id';
+import { ExternalIdSchemaDefinition } from '../src/external-id';
 import SimpleSchema from 'simpl-schema';
 
-export const validPlaceIdWithExtendedDataFixture = {
+export const validExternalIdWithExtendedDataFixture = {
   provider: 'Deutsche Bahn',
   stationNumber: 123,
   ril100Identifier: 'KA',
   evaNumber: 123
 };
 
-const allValidFixtures = Object.freeze([validPlaceIdWithExtendedDataFixture]);
+const allValidFixtures = Object.freeze([
+  validExternalIdWithExtendedDataFixture
+]);
 
-const invalidPlaceIdWithJustAProviderFixture = {
+const invalidExternalIdWithJustAProviderFixture = {
   provider: 'Deutsche Bahn'
 };
 
 const allInvalidFixtures = Object.freeze([
   undefined,
   {},
-  invalidPlaceIdWithJustAProviderFixture
+  invalidExternalIdWithJustAProviderFixture
 ]);
 
-const SchemaWithPlaceIdField = new SimpleSchema({
-  field: PlaceIdSchemaDefinition
+const SchemaWithExternalIdField = new SimpleSchema({
+  field: ExternalIdSchemaDefinition
 });
 
-describe('PlaceIdSchema Schema', () => {
+describe('ExternalIdSchema Schema', () => {
   it('tests field as invalid', () => {
     allInvalidFixtures.forEach(value => {
-      const context = SchemaWithPlaceIdField.newContext();
+      const context = SchemaWithExternalIdField.newContext();
       context.validate({ field: value });
       expect(context.validationErrors()).not.toHaveLength(0);
       expect(context.isValid()).toBeFalsy();
@@ -35,7 +37,7 @@ describe('PlaceIdSchema Schema', () => {
   });
   it('tests field as valid', () => {
     allValidFixtures.forEach(value => {
-      const context = SchemaWithPlaceIdField.newContext();
+      const context = SchemaWithExternalIdField.newContext();
       context.validate({ field: value });
       expect(context.validationErrors()).toHaveLength(0);
       expect(context.isValid()).toBeTruthy();

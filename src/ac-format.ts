@@ -7,7 +7,7 @@ export * from './equipment';
 export * from './equipment-accessibility';
 export * from './geometry';
 export * from './personal-profile';
-export * from './place-id';
+export * from './external-id';
 export * from './place-info';
 export * from './place-properties';
 export * from './simpl-schema-extensions';
