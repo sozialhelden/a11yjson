@@ -4,7 +4,7 @@ import { PlaceId, PlaceIdSchemaDefinition } from './place-id';
 
 export interface PlaceProperties {
   name: string;
-  address: string;
+  address: string; // TODO this can also be an object see 22BnzkzXfzuznupvb
   description?: string;
   phoneNumber?: string;
   infoPageUrl: string;
