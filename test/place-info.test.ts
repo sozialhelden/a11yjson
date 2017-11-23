@@ -1,13 +1,13 @@
-import { PlaceInfoSchema } from '../src/place-info';
+import { PlaceInfo, PlaceInfoSchema } from '../src/place-info';
 import { validPointGeometryFixture } from './geometry.test';
 import { placePropertiesMinimumFixture } from './place-properties.test';
 
-const placeMinimumFixture = {
+const placeMinimumFixture: PlaceInfo = {
   properties: placePropertiesMinimumFixture,
   geometry: validPointGeometryFixture
 };
 
-const placeWithOptionalsFixture = {
+const placeWithOptionalsFixture: PlaceInfo = {
   formatVersion: '1',
   properties: placePropertiesMinimumFixture,
   geometry: validPointGeometryFixture
