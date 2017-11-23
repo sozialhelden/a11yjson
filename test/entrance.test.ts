@@ -7,17 +7,13 @@ const entranceWithOptionalsFixture: Entrance = {
   ratingForWheelchair: 0.6,
   isMainEntrance: true,
   isLevel: true,
-  isALift: true,
   hasSlope: true,
-  slopeAngle: '5%',
+  slopeAngle: 5,
   hasRemovableRamp: true,
-  hasIntercom: true,
-  intercom: {},
-  payment: {},
-  sitemap: {},
   stairs: {},
   door: {},
-  lift: {}
+  liftEquipmentId: 'idHere',
+  intercomEquipmentId: 'idHere'
 };
 
 const allValidFixtures = Object.freeze([

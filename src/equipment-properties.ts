@@ -27,7 +27,7 @@ export const AllowedEquipmentTypes = Object.freeze([
 
 export interface EquipmentProperties {
   // properties
-  description: string;
+  description?: string;
   category?: EquipmentTypes;
   height?: Length;
   languages?: Array<string>;
@@ -40,7 +40,7 @@ export interface EquipmentProperties {
   hasHeadPhoneJack?: boolean;
   isEasyToUnderstand?: boolean;
   isWorking?: boolean;
-  // QUESTION how to mark staff available
+  // QUESTION how to mark staff available e.g. lift-boy
 
   // accessibility-cloud reference fields
   sourceId?: string;
@@ -49,9 +49,9 @@ export interface EquipmentProperties {
   placeInfoId?: string;
 
   // references to external services
-  originalPlaceInfoId: string;
-  originalData: string;
-  originalId: string;
+  originalPlaceInfoId?: string;
+  originalData?: string;
+  originalId?: string;
   ids?: ArrayLike<ExternalId>;
 }
 

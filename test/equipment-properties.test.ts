@@ -1,11 +1,16 @@
 import {
+  AllowedEquipmentTypes,
   EquipmentProperties,
-  EquipmentPropertiesSchema
+  EquipmentPropertiesSchema,
+  EquipmentTypes
 } from '../src/equipment-properties';
+import { validExternalIdWithExtendedDataFixture } from './external-id.test';
 
 export const equipmentAccessibilityMinimumFixture: EquipmentProperties = {};
 
 const equipmentAccessibilityFixture: EquipmentProperties = {
+  description: 'string',
+  category: 'elevator',
   height: '90 .. 120cm',
   languages: ['en', 'de'],
   isRaised: true,
@@ -15,7 +20,18 @@ const equipmentAccessibilityFixture: EquipmentProperties = {
   hasLargePrint: true,
   isVoiceActivated: true,
   hasHeadPhoneJack: true,
-  isEasyToUnderstand: true
+  isEasyToUnderstand: true,
+  isWorking: true,
+
+  sourceId: 'string',
+  sourceImportId: 'string',
+  disruptionSourceImportId: 'string',
+  placeInfoId: 'string',
+
+  originalPlaceInfoId: 'string',
+  originalData: 'string',
+  originalId: 'string',
+  ids: [validExternalIdWithExtendedDataFixture]
 };
 
 const allValidFixtures = Object.freeze([
