@@ -1,7 +1,7 @@
 import Qty from 'js-quantities';
 import SimpleSchema from 'simpl-schema';
 
-// TODO make this more generic
+// TODO make this file more generic
 
 SimpleSchema.setDefaultMessages({
   messages: {

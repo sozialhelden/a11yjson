@@ -1,6 +1,6 @@
 import SimpleSchema from 'simpl-schema';
 import { Accessibility, AccessibilitySchema } from './accessibility';
-import { PlaceId, PlaceIdSchema } from './place-id';
+import { PlaceId, PlaceIdSchemaDefinition } from './place-id';
 
 export interface PlaceProperties {
   name: string;
@@ -40,9 +40,7 @@ export const PlacePropertiesSchema = new SimpleSchema({
   ids: {
     type: Array
   },
-  'ids.$': {
-    type: PlaceIdSchema
-  },
+  'ids.$': PlaceIdSchemaDefinition,
   originalId: {
     type: String
   },
