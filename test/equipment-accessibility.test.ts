@@ -1,6 +1,11 @@
-import { EquipmentAccessibilitySchema } from '../src/equipment-accessibility';
+import {
+  EquipmentAccessibility,
+  EquipmentAccessibilitySchema
+} from '../src/equipment-accessibility';
 
-const equipmentFixture = {
+export const equipmentAccessibilityMinimumFixture: EquipmentAccessibility = {};
+
+const equipmentAccessibilityFixture: EquipmentAccessibility = {
   height: '90 .. 120cm',
   languages: ['en', 'de'],
   isRaised: true,
@@ -13,7 +18,10 @@ const equipmentFixture = {
   isEasyToUnderstand: true
 };
 
-const allValidFixtures = Object.freeze([equipmentFixture]);
+const allValidFixtures = Object.freeze([
+  equipmentAccessibilityMinimumFixture,
+  equipmentAccessibilityFixture
+]);
 
 const invalidEquipmentAccessibilityFixture = {
   height: [],
@@ -21,7 +29,6 @@ const invalidEquipmentAccessibilityFixture = {
 };
 
 const allInvalidFixtures = Object.freeze([
-  {},
   invalidEquipmentAccessibilityFixture
 ]);
 
