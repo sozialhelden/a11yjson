@@ -21,7 +21,9 @@ const placePropertiesWithOptionalsFixture = {
   originalData: 'originalData',
   sourceId: 'T8j8nnnqMpbxpLxZu',
   sourceImportId: 'ZmrXoY5ZFbG3EbRBB',
-  accessibility: {}
+  accessibility: {
+    areas: []
+  }
 };
 
 const allValidFixtures = Object.freeze([
