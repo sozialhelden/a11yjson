@@ -1,6 +1,3 @@
-import SimpleSchema from 'simpl-schema';
-import { Entrance, EntranceSchema } from './entrance';
-
 export type AreaTypes =
   | 'indoors'
   | 'hotel-room'

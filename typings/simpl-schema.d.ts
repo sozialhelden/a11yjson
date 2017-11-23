@@ -36,9 +36,7 @@ interface ValidationFunctionSelf<T> {
   addValidationErrors: (errors: string[]) => {};
 }
 
-type ValidationFunction = (
-  this: ValidationFunctionSelf<any>
-) => string | undefined;
+type ValidationFunction = (this: ValidationFunctionSelf<any>) => string | undefined;
 
 interface SchemaDefinition {
   type: SchemaType;
@@ -181,10 +179,8 @@ declare class SimpleSchema {
   };
   debug: boolean;
 
-  constructor(
-    schema: { [key: string]: SchemaDefinition | SchemaType } | any[],
-    options?: any
-  );
+  constructor(schema: { [key: string]: SchemaDefinition | SchemaType } | any[],
+              options?: any);
 
   static oneOf(...schemas: SchemaType[]): SchemaType;
 
