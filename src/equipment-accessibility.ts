@@ -13,6 +13,7 @@ export interface EquipmentAccessibility {
   isVoiceActivated?: boolean;
   hasHeadPhoneJack?: boolean;
   isEasyToUnderstand?: boolean;
+  // QUESTION how to mark staff available
 }
 
 export const EquipmentAccessibilitySchema = new SimpleSchema({

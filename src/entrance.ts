@@ -1,4 +1,5 @@
 import SimpleSchema from 'simpl-schema';
+import { EquipmentWithDistanceFromEntrance } from './equipment';
 
 export interface Entrance {
   // QUESTION add entry number
@@ -8,15 +9,17 @@ export interface Entrance {
   isMainEntrance?: boolean;
   isLevel?: boolean;
   // QUESTION how should this be aligned with lift equipment?
+  // QUESTION could be part of the lift object, duplication of information
   isALift?: boolean;
   hasSlope?: boolean;
   slopeAngle?: string; // TODO convert to unit angle or remove trailing % - '6%', not used atm
   hasRemovableRamp?: boolean;
   // QUESTION could be part of the intercom object, duplication of information
   hasIntercom?: boolean;
-  intercom?: any; // TODO add object type
+  // QUESTION format does not fit with current AC (or maybe my version of the data)
+  intercom?: EquipmentWithDistanceFromEntrance;
   payment?: any; // TODO add object type
-  // QUESTION duplicated from are
+  // QUESTION duplicated from area
   sitemap?: any; // TODO add object type
   stairs?: any; // TODO add object type
   door?: any; // TODO add object type

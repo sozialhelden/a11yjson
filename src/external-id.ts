@@ -1,6 +1,7 @@
 import SimpleSchema from 'simpl-schema';
 
 export interface ExternalId {
+  /// organization who manages the equipment database
   provider: string;
 
   [key: string]: any;
