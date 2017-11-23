@@ -38,7 +38,8 @@ export const PlacePropertiesSchema = new SimpleSchema({
     type: SimpleSchema.RegEx.Url
   },
   ids: {
-    type: Array
+    type: Array,
+    optional: true
   },
   'ids.$': PlaceIdSchemaDefinition,
   originalId: {
@@ -53,6 +54,13 @@ export const PlacePropertiesSchema = new SimpleSchema({
   },
   accessibility: {
     type: AccessibilitySchema,
+    optional: true
+  },
+  sourceId: {
+    type: String
+  },
+  sourceImportId: {
+    type: String,
     optional: true
   }
 });
