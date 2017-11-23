@@ -5,6 +5,7 @@ export * from './area';
 export * from './equipment';
 export * from './equipment-accessibility';
 export * from './geometry';
+export * from './personal-profile';
 export * from './place-id';
 export * from './place-info';
 export * from './place-properties';

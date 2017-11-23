@@ -1,11 +1,12 @@
 import { Accessibility, AccessibilitySchema } from '../src/accessibility';
+import { personalProfileMinimumFixture } from './personal-profile.test';
 
 export const accessibilityMinimumFixture: Accessibility = {};
 
 const accessibilityWithOptionalsFixture: Accessibility = {
-  accessibleWith: {},
-  partiallyAccessibleWith: {},
-  offersActivitiesForPeopleWith: {},
+  accessibleWith: personalProfileMinimumFixture,
+  partiallyAccessibleWith: personalProfileMinimumFixture,
+  offersActivitiesForPeopleWith: personalProfileMinimumFixture,
   areas: [],
   staff: {},
   parking: {}
