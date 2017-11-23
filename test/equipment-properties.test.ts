@@ -6,9 +6,9 @@ import {
 } from '../src/equipment-properties';
 import { validExternalIdWithExtendedDataFixture } from './external-id.test';
 
-export const equipmentAccessibilityMinimumFixture: EquipmentProperties = {};
+export const equipmentPropertiesMinimumFixture: EquipmentProperties = {};
 
-const equipmentAccessibilityFixture: EquipmentProperties = {
+const equipmentPropertiesFixture: EquipmentProperties = {
   description: 'string',
   category: 'elevator',
   height: '90 .. 120cm',
@@ -35,18 +35,16 @@ const equipmentAccessibilityFixture: EquipmentProperties = {
 };
 
 const allValidFixtures = Object.freeze([
-  equipmentAccessibilityMinimumFixture,
-  equipmentAccessibilityFixture
+  equipmentPropertiesMinimumFixture,
+  equipmentPropertiesFixture
 ]);
 
-const invalidEquipmentAccessibilityFixture = {
+const invalidEquipmentPropertiesFixture = {
   height: [],
   languages: 'foo'
 };
 
-const allInvalidFixtures = Object.freeze([
-  invalidEquipmentAccessibilityFixture
-]);
+const allInvalidFixtures = Object.freeze([invalidEquipmentPropertiesFixture]);
 
 describe('EquipmentPropertiesSchema Schema', () => {
   it('tests field as invalid', () => {

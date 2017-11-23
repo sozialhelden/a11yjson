@@ -5,18 +5,21 @@ import {
   EquipmentPropertiesSchema
 } from './equipment-properties';
 
-export interface Equipment {
+export interface EquipmentInfo {
+  formatVersion?: string;
   properties?: EquipmentProperties;
   geometry?: PointGeometry;
 }
 
-export const EquipmentSchema = new SimpleSchema({
-  properties: {
-    type: EquipmentPropertiesSchema,
+export const EquipmentInfoSchema = new SimpleSchema({
+  formatVersion: {
+    type: String,
     optional: true
   },
+  properties: {
+    type: EquipmentPropertiesSchema
+  },
   geometry: {
-    type: PointGeometrySchema,
-    optional: true
+    type: PointGeometrySchema
   }
 });
