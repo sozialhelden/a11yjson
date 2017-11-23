@@ -5,21 +5,22 @@ import { ExternalId, ExternalIdSchemaDefinition } from './external-id';
 export interface PlaceProperties {
   // properties
   name: string;
-  address: string; // TODO this can also be an object see 22BnzkzXfzuznupvb
+  address?: string; // TODO this can also be an object see 22BnzkzXfzuznupvb
   description?: string;
   phoneNumber?: string;
-  infoPageUrl: string;
   category: string;
   accessibility?: Accessibility;
 
   // accessibility-cloud fields
+  parentPlaceId?: string;
   sourceId?: string;
   sourceImportId?: string; // only valid for import
 
   // references to external services
-  originalId: string;
+  originalId?: string;
   ids?: Array<ExternalId>;
   originalData?: any;
+  infoPageUrl?: string;
 }
 
 export const PlacePropertiesSchema = new SimpleSchema({
@@ -39,7 +40,8 @@ export const PlacePropertiesSchema = new SimpleSchema({
     optional: true
   },
   infoPageUrl: {
-    type: SimpleSchema.RegEx.Url
+    type: SimpleSchema.RegEx.Url,
+    optional: true
   },
   ids: {
     type: Array,
@@ -47,7 +49,12 @@ export const PlacePropertiesSchema = new SimpleSchema({
   },
   'ids.$': ExternalIdSchemaDefinition,
   originalId: {
-    type: String
+    type: String,
+    optional: true
+  },
+  parentPlaceId: {
+    type: String,
+    optional: true
   },
   category: {
     type: String

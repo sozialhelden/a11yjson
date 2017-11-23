@@ -1,16 +1,16 @@
-import { PlacePropertiesSchema } from '../src/place-properties';
+import {
+  PlaceProperties,
+  PlacePropertiesSchema
+} from '../src/place-properties';
 import { validExternalIdWithExtendedDataFixture } from './external-id.test';
 import { accessibilityMinimumFixture } from './accessibilty.test';
 
-export const placePropertiesMinimumFixture = {
-  originalId: 'ChIJwSo_DaaHUocRFFAENf-ILl8',
-  infoPageUrl: 'https://axsmap.com/venue/ChIJwSo_DaaHUocRFFAENf-ILl8',
+export const placePropertiesMinimumFixture: PlaceProperties = {
   name: 'T-Mobile Sandy',
-  category: 'shopping',
-  sourceId: 'T8j8nnnqMpbxpLxZu'
+  category: 'shopping'
 };
 
-const placePropertiesWithOptionalsFixture = {
+const placePropertiesWithOptionalsFixture: PlaceProperties = {
   ids: [validExternalIdWithExtendedDataFixture],
   originalId: 'ChIJwSo_DaaHUocRFFAENf-ILl8',
   infoPageUrl: 'https://axsmap.com/venue/ChIJwSo_DaaHUocRFFAENf-ILl8',
