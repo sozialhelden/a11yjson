@@ -2,6 +2,7 @@
 
 export * from './accessibility';
 export * from './area';
+export * from './equipment';
 export * from './equipment-accessibility';
 export * from './geometry';
 export * from './place-id';

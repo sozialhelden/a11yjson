@@ -1,5 +1,6 @@
 import { PlacePropertiesSchema } from '../src/place-properties';
 import { validPlaceIdWithExtendedDataFixture } from './place-id.test';
+import { accessibilityMinimumFixture } from './accessibilty.test';
 
 export const placePropertiesMinimumFixture = {
   originalId: 'ChIJwSo_DaaHUocRFFAENf-ILl8',
@@ -21,9 +22,7 @@ const placePropertiesWithOptionalsFixture = {
   originalData: 'originalData',
   sourceId: 'T8j8nnnqMpbxpLxZu',
   sourceImportId: 'ZmrXoY5ZFbG3EbRBB',
-  accessibility: {
-    areas: []
-  }
+  accessibility: accessibilityMinimumFixture
 };
 
 const allValidFixtures = Object.freeze([
