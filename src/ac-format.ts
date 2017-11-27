@@ -1,5 +1,7 @@
 // re-export all library components
 
+import './simpl-schema-extensions';
+
 export * from './simpl-schema-extensions';
 
 export * from './accessibility';

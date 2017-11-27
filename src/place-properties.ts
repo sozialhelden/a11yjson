@@ -1,7 +1,11 @@
+import { t } from 'c-3po';
 import SimpleSchema from 'simpl-schema';
+
+import './simpl-schema-extensions';
+
+import { AllowedAreaTypes, AreaTypes } from './area-types';
 import { Accessibility, AccessibilitySchema } from './accessibility';
 import { ExternalId, ExternalIdSchemaDefinition } from './external-id';
-import { AllowedAreaTypes, AreaTypes } from './area-types';
 
 export interface PlaceProperties {
   // properties
@@ -20,6 +24,8 @@ export interface PlaceProperties {
   roomName?: string;
   roomNumber?: number;
 
+  // machine data fields
+
   // accessibility-cloud fields
   parentPlaceId?: string;
   sourceId?: string;
@@ -34,23 +40,46 @@ export interface PlaceProperties {
 
 export const PlacePropertiesSchema = new SimpleSchema({
   name: {
-    type: String
+    type: String,
+    accessibility: {
+      question: t`What is the name of this place?`
+    }
+  },
+  category: {
+    type: String,
+    accessibility: {
+      question: t`What kind of place is this?`
+    }
   },
   address: {
-    type: String,
-    optional: true
+    type: String, // TODO this can also be an object see 22BnzkzXfzuznupvb
+    optional: true,
+    accessibility: {
+      question: t`What is the address of this place?`
+    }
   },
   description: {
     type: String,
-    optional: true
+    optional: true,
+    accessibility: {
+      question: t`How would you describe this place?`
+    }
   },
   phoneNumber: {
     type: String,
-    optional: true
+    optional: true,
+    accessibility: {
+      question: t`What is the phone number of this place?`,
+      description: t`The phone number of this place, with international country code`,
+      example: t`e.g. +1-541-754-3010`
+    }
   },
   areaTypes: {
     type: Array,
-    optional: true
+    optional: true,
+    accessibility: {
+      question: t`What type of place or structure is this?`
+    }
   },
   'areaTypes.$': {
     type: String,
@@ -58,59 +87,100 @@ export const PlacePropertiesSchema = new SimpleSchema({
   },
   buildingName: {
     type: String,
-    optional: true
+    optional: true,
+    accessibility: {
+      question: t`What is the name of the building?`,
+      example: t`e.g. main exposition hall`
+    }
   },
   buildingNumber: {
     type: Number,
-    optional: true
+    optional: true,
+    accessibility: {
+      question: t`What is the number of the building?`,
+      example: t`e.g. 15`
+    }
   },
   floorLevel: {
     type: Number,
-    optional: true
+    optional: true,
+    accessibility: {
+      description: t`The number of the floor in british convention (ground floor is 0)`,
+      question: t`What is the number of the floor?`,
+      extendedInformationUrl: 'https://en.wikipedia.org/wiki/Storey',
+      example: t`e.g. 4`
+    }
   },
   roomName: {
     type: String,
-    optional: true
+    optional: true,
+    accessibility: {
+      question: t`What is the name of the room?`,
+      example: t`e.g. meeting room 'Rome'`
+    }
   },
   roomNumber: {
     type: Number,
-    optional: true
-  },
-  infoPageUrl: {
-    type: String,
-    regEx: SimpleSchema.RegEx.Url,
-    optional: true
-  },
-  ids: {
-    type: Array,
-    optional: true
-  },
-  'ids.$': ExternalIdSchemaDefinition,
-  originalId: {
-    type: String,
-    optional: true
-  },
-  parentPlaceId: {
-    type: String,
-    optional: true
-  },
-  category: {
-    type: String
-  },
-  originalData: {
-    type: String,
-    optional: true
+    optional: true,
+    accessibility: {
+      question: t`What is the number of the room?`,
+      example: t`e.g. 1.1.25`
+    }
   },
   accessibility: {
     type: AccessibilitySchema,
     optional: true
   },
+  // machine data fields
+  infoPageUrl: {
+    type: String,
+    regEx: SimpleSchema.RegEx.Url,
+    optional: true,
+    accessibility: {
+      machineData: true
+    }
+  },
+  ids: {
+    type: Array,
+    optional: true,
+    accessibility: {
+      machineData: true
+    }
+  },
+  'ids.$': ExternalIdSchemaDefinition,
+  originalId: {
+    type: String,
+    optional: true,
+    accessibility: {
+      machineData: true
+    }
+  },
+  parentPlaceId: {
+    type: String,
+    optional: true,
+    accessibility: {
+      machineData: true
+    }
+  },
+  originalData: {
+    type: String,
+    optional: true,
+    accessibility: {
+      machineData: true
+    }
+  },
   sourceId: {
     type: String,
-    optional: true
+    optional: true,
+    accessibility: {
+      machineData: true
+    }
   },
   sourceImportId: {
     type: String,
-    optional: true
+    optional: true,
+    accessibility: {
+      machineData: true
+    }
   }
 });

@@ -106,6 +106,7 @@
     "validate-commit-msg": "^2.12.2"
   },
   "dependencies": {
+    "c-3po": "^0.7.2",
     "js-quantities": "^1.7.0",
     "simpl-schema": "^0.5.0"
   }

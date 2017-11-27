@@ -1,4 +1,7 @@
+import { t } from 'c-3po';
 import SimpleSchema from 'simpl-schema';
+
+import './simpl-schema-extensions';
 
 // QUESTION should this be deprecated
 export interface PersonalProfile {

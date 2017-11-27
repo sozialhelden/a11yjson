@@ -1,4 +1,8 @@
+import { t } from 'c-3po';
 import SimpleSchema from 'simpl-schema';
+
+import './simpl-schema-extensions';
+
 import { PersonalProfile, PersonalProfileSchema } from './personal-profile';
 import { Entrance, EntranceSchema } from './entrance';
 

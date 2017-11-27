@@ -20,7 +20,7 @@ const LengthUnitKind = 'length';
  * If the validation fails, a new `invalid_unit` error message is raised.
  *
  * @param {string} kind One of js-quantities unit kinds, e.g. length, mass, etc.
- * @returns {ValidationFunction} A custom SimplSchema Validation function
+ * @returns {ValidationFunction} A custom SimpleSchema Validation function
  */
 const validateUnit = function(kind: string): ValidationFunction {
   return function(this: ValidationFunctionSelf<string>) {
@@ -33,68 +33,19 @@ const validateUnit = function(kind: string): ValidationFunction {
   };
 };
 
-export interface QuantityRange {
-  from: number; // the start value in the specified unit, less than to
-  to: number; // the end value in the specified unit, greater than from
-  unit: string; // one of the length units in js-quantities
-  accuracy?: number; // ± in given units, uniform error
-  rawValue: string; // raw, imported value, eg. '90 .. 120cm'
-}
-
 export interface Quantity {
-  value: number; // the value in the specified unit
-  unit: string; // one of the length units in js-quantities
-  rawValue: string; // raw, imported value, eg. '90 .. 120cm'
-  accuracy?: number; // ± in given units, uniform error
-}
-
-export interface EstimatedQuantity {
   operator?: '<' | '<=' | '==' | '>=' | '>';
   value: number; // the value in the specified unit
   unit: string; // one of the length units in js-quantities
-  rawValue: string; // raw, imported value, eg. '<20 cm'
+  rawValue: string; // raw, imported value, eg. '90 .. 120cm'
   accuracy?: number; // ± in given units, uniform error
 }
 
 export const LengthQuantitySchema = new SimpleSchema({
-  value: {
-    type: Number
-  },
-  unit: {
-    type: String,
-    custom: validateUnit(LengthUnitKind),
-    defaultValue: 'meter'
-  },
-  accuracy: {
-    type: Number,
-    optional: true
-  },
-  rawValue: String
-});
-
-export const LengthQuantityRangeSchema = new SimpleSchema({
-  from: {
-    type: Number
-  },
-  to: {
-    type: Number
-  },
-  unit: {
-    type: String,
-    custom: validateUnit(LengthUnitKind),
-    defaultValue: 'meter'
-  },
-  accuracy: {
-    type: Number,
-    optional: true
-  },
-  rawValue: String
-});
-
-export const LengthEstimatedQuantitySchema = new SimpleSchema({
   operator: {
     type: String,
-    allowedValues: ['<', '<=', '==', '>=', '>']
+    allowedValues: ['<', '<=', '==', '>=', '>'],
+    optional: true
   },
   value: {
     type: Number
@@ -111,12 +62,6 @@ export const LengthEstimatedQuantitySchema = new SimpleSchema({
   rawValue: String
 });
 
-// BUG: cannot have more than one Schema Instance in oneOf see https://github.com/aldeed/simple-schema-js/issues/112
-export const LengthSchema = SimpleSchema.oneOf(
-  String,
-  // LengthQuantityRangeSchema,
-  LengthQuantitySchema
-  // LengthEstimatedQuantitySchema,
-);
+export const LengthSchema = SimpleSchema.oneOf(String, LengthQuantitySchema);
 
-export type Length = EstimatedQuantity | QuantityRange | Quantity | string;
+export type Length = Quantity | string;

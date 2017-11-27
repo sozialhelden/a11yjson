@@ -1,4 +1,8 @@
+import { t } from 'c-3po';
 import SimpleSchema from 'simpl-schema';
+
+import './simpl-schema-extensions';
+
 import { Geometry, GeometrySchema } from './geometry';
 import { PlaceProperties, PlacePropertiesSchema } from './place-properties';
 
@@ -30,12 +34,20 @@ export interface PlaceInfo {
 export const PlaceInfoSchema = new SimpleSchema({
   formatVersion: {
     type: String,
-    optional: true
+    optional: true,
+    accessibility: {
+      machineData: true
+    }
   },
   properties: {
     type: PlacePropertiesSchema
   },
   geometry: {
-    type: GeometrySchema
+    type: GeometrySchema,
+    label: t`Place on map`,
+    accessibility: {
+      question: t`Where is the entrance of this place?`,
+      inseparable: true
+    }
   }
 });

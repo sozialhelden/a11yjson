@@ -1,5 +1,9 @@
-import { Length, LengthSchema } from './units';
+import { t } from 'c-3po';
 import SimpleSchema from 'simpl-schema';
+
+import './simpl-schema-extensions';
+
+import { Length, LengthSchema } from './units';
 import { ExternalId, ExternalIdSchemaDefinition } from './external-id';
 
 export type EquipmentTypes =
