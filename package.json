@@ -103,9 +103,12 @@
     "tslint-config-standard": "^7.0.0",
     "typedoc": "^0.9.0",
     "typescript": "^2.6.1",
-    "validate-commit-msg": "^2.12.2"
+    "validate-commit-msg": "^2.12.2",
+    "c-3po": "^0.7.2",
+    "js-quantities": "^1.7.0",
+    "simpl-schema": "^0.5.0"
   },
-  "dependencies": {
+  "peerDependencies": {
     "c-3po": "^0.7.2",
     "js-quantities": "^1.7.0",
     "simpl-schema": "^0.5.0"
