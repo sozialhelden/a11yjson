@@ -7,10 +7,12 @@ import { Door, DoorSchema } from './door';
 
 export interface Entrance {
   name?: string;
-  // QUESTION what is the range for the rating
+  // QUESTION what is the range for the rating, how is this objective?
   ratingForWheelchair?: number;
   isMainEntrance?: boolean;
+  // QUESTION merge with slope/stairs in some way
   isLevel?: boolean;
+  // QUESTION merge with slopeAngle in some way (e.g. > 0)
   hasSlope?: boolean;
   // TODO create unit for this
   /// grade in percent as calculated by `100 * rise / run` or the tangent of the angle of inclination times 100
@@ -28,46 +30,86 @@ export interface Entrance {
 export const EntranceSchema = new SimpleSchema({
   name: {
     type: String,
-    optional: true
+    optional: true,
+    accessibility: {
+      question: t`What is the name of this entrance?`,
+      example: t`e.g. main entrance`
+    }
   },
   ratingForWheelchair: {
     type: Number,
-    optional: true
+    optional: true,
+    min: 0,
+    max: 1,
+    accessibility: {
+      // QUESTION - this is very subjective, should not exist as a question like this
+      question: t`How would you rate this entrance for wheelchair users?`
+    }
   },
   isMainEntrance: {
     type: Boolean,
-    optional: true
+    optional: true,
+    accessibility: {
+      question: t`Is this the main entrance?`
+    }
   },
   isLevel: {
     type: Boolean,
-    optional: true
+    optional: true,
+    accessibility: {
+      question: t`Is this entrance level?`
+    }
   },
   hasSlope: {
     type: Boolean,
-    optional: true
+    optional: true,
+    accessibility: {
+      question: t`Is this entrance sloped?`
+    }
   },
   slopeAngle: {
     type: Number,
-    optional: true
+    optional: true,
+    accessibility: {
+      description: t`Grade in percent as calculated by \`100 * rise / run\` or the tangent of the angle of inclination times 100`,
+      question: t`What is the angle of the slope?`
+    }
   },
   hasRemovableRamp: {
     type: Boolean,
-    optional: true
+    optional: true,
+    accessibility: {
+      question: t`Is there a removable ramp?`
+    }
   },
   stairs: {
     type: Object, // TODO add object type
-    optional: true
+    optional: true,
+    accessibility: {
+      question: t`Are there stairs or steps at this entrance?`
+    }
   },
   door: {
     type: DoorSchema,
-    optional: true
+    optional: true,
+    accessibility: {
+      questionBlockBegin: t`Are you ready to specify the door of this entrance?`
+    }
   },
   liftEquipmentId: {
     type: String,
-    optional: true
+    optional: true,
+    accessibility: {
+      question: t`Is there a lift at this entrance?`
+      // TODO foreign object flow equipment
+    }
   },
   intercomEquipmentId: {
     type: String,
-    optional: true
+    optional: true,
+    accessibility: {
+      question: t`Is there an intercom at this entrance?`
+      // TODO foreign object flow equipment
+    }
   }
 });

@@ -11,6 +11,7 @@ export interface PlaceProperties {
   // properties
   name: string;
   address?: string; // TODO this can also be an object see 22BnzkzXfzuznupvb
+  // QUESTION what is expected in description?
   description?: string;
   phoneNumber?: string;
   category: string;
@@ -71,7 +72,7 @@ export const PlacePropertiesSchema = new SimpleSchema({
     accessibility: {
       question: t`What is the phone number of this place?`,
       description: t`The phone number of this place, with international country code`,
-      example: t`e.g. +1-541-754-3010`
+      example: t`e.g. +1-555-555-90-210`
     }
   },
   areaTypes: {
@@ -129,7 +130,10 @@ export const PlacePropertiesSchema = new SimpleSchema({
   },
   accessibility: {
     type: AccessibilitySchema,
-    optional: true
+    optional: true,
+    accessibility: {
+      question: t`Okay $USER, are you ready to map the accessibility of $PLACE?`
+    }
   },
   // machine data fields
   infoPageUrl: {

@@ -31,14 +31,21 @@ export interface AccessibilitySchemaExtension {
   /**
    * End user question to be asked
    */
-  existsQuestion?:
+  question?:
     | string
     | Array<string>
     | ((this: QuestionFunctionSelf<any>) => string);
   /**
-   * End user question to be asked
+   * End user question to be asked when more array entries should be added
    */
-  question?:
+  questionMore?:
+    | string
+    | Array<string>
+    | ((this: QuestionFunctionSelf<any>) => string);
+  /**
+   * End user question to be asked when starting a new accessibility block (toilet, entrance, beds...)
+   */
+  questionBlockBegin?:
     | string
     | Array<string>
     | ((this: QuestionFunctionSelf<any>) => string);
@@ -54,4 +61,8 @@ export interface AccessibilitySchemaExtension {
    * The preferred unit this field is usually documented in (e.g. seconds, meter, centimeter)
    */
   preferredUnit: string;
+  /**
+   * Deprecated, should not be used anymore
+   */
+  deprecated: boolean;
 }

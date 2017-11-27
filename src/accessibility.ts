@@ -17,28 +17,46 @@ export interface Accessibility {
   staff?: any; // TODO define type
   parking?: any; // TODO define type
 
+  // QUESTION what are the allowed numbers for this rating
   ratingSpacious?: number;
+  // QUESTION How is this measured, should be changed to ambient.lighting
   isWellLit?: boolean;
+  // QUESTION How is this measured, should be changed to ambient.noise
   isQuiet?: boolean;
   // QUESTION this should not be split across to fields, should rather be smoking: unknown | forbidden | allowed;
   isSmoking?: boolean;
   isNonSmoking?: boolean;
   ground?: any; // TODO define type
   pathways?: any; // TODO define type
+  // QUESTION equipment??, can entrances be disrupted/broken
   entrances?: ArrayLike<Entrance>;
+  // QUESTION equipment?
   restrooms?: [any]; // TODO define type
+  // QUESTION equipment?
   sitemap?: any; // TODO define type
+  // QUESTION equipment?
   lifts?: [any]; // TODO define type
+  // QUESTION equipment?
   switches?: [any]; // TODO define type
+  // QUESTION equipment?
   vendingMachines?: [any]; // TODO define type
+  // QUESTION equipment?
   powerOutlets?: [any]; // TODO define type
+  // QUESTION equipment?
   beds?: [any]; // TODO define type
+  // QUESTION equipment?
   wardrobe?: any; // TODO define type
+  // QUESTION equipment?
   changingRoom?: any; // TODO define type,
+  // QUESTION equipment?
   stage?: any; // TODO define type,
+  // QUESTION equipment?
   cashRegister?: any; // TODO define type,
+  // QUESTION equipment?
   wheelchairPlaces?: any; // TODO define type,
+  // QUESTION equipment?
   tables?: any; // TODO define type,
+  // QUESTION equipment?
   seats?: any; // TODO define type,
   serviceContact?: string;
   services?: any; // TODO define type,,
@@ -51,15 +69,24 @@ export interface Accessibility {
 export const AccessibilitySchema = new SimpleSchema({
   accessibleWith: {
     type: PersonalProfileSchema,
-    optional: true
+    optional: true,
+    accessibility: {
+      deprecated: true
+    }
   },
   partiallyAccessibleWith: {
     type: PersonalProfileSchema,
-    optional: true
+    optional: true,
+    accessibility: {
+      deprecated: true
+    }
   },
   offersActivitiesForPeopleWith: {
     type: PersonalProfileSchema,
-    optional: true
+    optional: true,
+    accessibility: {
+      deprecated: true
+    }
   },
   staff: {
     type: Object, // TODO define type
@@ -99,7 +126,12 @@ export const AccessibilitySchema = new SimpleSchema({
   },
   entrances: {
     type: Array,
-    optional: true
+    optional: true,
+    accessibility: {
+      questionBlockBegin: t`Are you ready for defining the entrances to this place?`,
+      questionMore: t`Do you want to enter another entrance?`,
+      example: t`e.g. 1.1.25`
+    }
   },
   'entrances.$': EntranceSchema,
   restrooms: {
