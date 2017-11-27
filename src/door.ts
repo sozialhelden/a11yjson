@@ -30,8 +30,16 @@ export const DoorSchema = new SimpleSchema({
     type: LengthSchema,
     optional: true,
     accessibility: {
-      question: t`Is there sufficient turning space in front of this door?`
-      // TODO add description or image for explaining this
+      question: t`Let's specify the turning space in front of this door.`,
+      inseparable: true,
+      // TODO define quick questions in more details
+      quickQuestion: t`Is there sufficient turning space in front of the door (> 90 cm)?`, // TODO make units translatable
+      quickQuestionValue: {
+        value: 90,
+        unit: 'centimeters',
+        accuracy: 5,
+        operator: '>'
+      } as Length
     }
   },
   doorOpensToOutside: {
@@ -52,7 +60,8 @@ export const DoorSchema = new SimpleSchema({
     type: LengthSchema,
     optional: true,
     accessibility: {
-      question: t`Let's specify the width of the door?`,
+      question: t`Let's specify the width of the door.`,
+      inseparable: true,
       // TODO define quick questions in more details
       quickQuestion: t`Is the width of the door > 90 cm?`, // TODO make units translatable
       quickQuestionValue: {
