@@ -21,6 +21,10 @@ export interface QuestionFunctionSelf<T> {
  */
 export interface AccessibilitySchemaExtension {
   /**
+   * Example value for this accessibility field
+   */
+  example?: string;
+  /**
    * Description for this accessibility field
    */
   description?: string;
