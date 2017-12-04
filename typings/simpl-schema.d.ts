@@ -56,6 +56,32 @@ interface SchemaDefinition {
   autoValue?: Function;
   defaultValue?: any;
   trim?: boolean;
+
+  // allow custom extensions
+  [key: string]: any;
+}
+
+interface EvaluatedSchemaDefinition {
+  type: Array<{ type: SchemaType }>;
+  label?: string | Function;
+  optional?: boolean | Function;
+  min?: number | boolean | Date | Function;
+  max?: number | boolean | Date | Function;
+  minCount?: number | Function;
+  maxCount?: number | Function;
+  allowedValues?: any[] | Function;
+  decimal?: boolean;
+  exclusiveMax?: boolean;
+  exclusiveMin?: boolean;
+  regEx?: RegExp | RegExp[];
+  custom?: ValidationFunction;
+  blackbox?: boolean;
+  autoValue?: Function;
+  defaultValue?: any;
+  trim?: boolean;
+
+  // allow custom extensions
+  [key: string]: any;
 }
 
 interface ValidationOption {
@@ -180,10 +206,18 @@ declare class SimpleSchema {
   debug: boolean;
 
   constructor(schema: { [key: string]: SchemaDefinition | SchemaType } | any[],
-              options?: any);
+              options?: any | { humanizeAutoLabels?: boolean, tracker?: any, check?: any });
+
+  /**
+   * Returns whether the obj is a SimpleSchema object.
+   * @param {Object} [obj] An object to test
+   * @returns {Boolean} True if the given object appears to be a SimpleSchema instance
+   */
+  static isSimpleSchema(obj: any): boolean;
 
   static oneOf(...schemas: SchemaType[]): SchemaType;
 
+  // If you need to allow properties other than those listed above, call this from your app or package
   static extendOptions(allowedOptionFields: string[]): void;
 
   static setDefaultMessages(messages: {
@@ -194,35 +228,161 @@ declare class SimpleSchema {
 
   addValidator(validator: Function): any;
 
+  /**
+   * @method SimpleSchema#pick
+   * @param {[fields]} The list of fields to pick to instantiate the subschema
+   * @returns {SimpleSchema} The subschema
+   */
   pick(...fields: string[]): SimpleSchema;
 
+  /**
+   * @method SimpleSchema#omit
+   * @param {[fields]} The list of fields to omit to instantiate the subschema
+   * @returns {SimpleSchema} The subschema
+   */
   omit(...fields: string[]): SimpleSchema;
+
+  /**
+   * Extends this schema with another schema, key by key.
+   *
+   * @param {SimpleSchema|Object} schema
+   * @returns The SimpleSchema instance (chainable)
+   */
+  extend(schema: Partial<SchemaDefinition> | SimpleSchema | { [key: string]: Partial<SchemaDefinition> }): SimpleSchema;
 
   clean(doc: any, options?: CleanOption): any;
 
-  schema(key?: string): SchemaDefinition | SchemaDefinition[];
+  /**
+   * @param {String} [key] One specific or generic key for which to get the schema.
+   * @returns {Object} The entire schema object or just the definition for one key.
+   *
+   * Note that this returns the raw, unevaluated definition object. Use `getDefinition`
+   * if you want the evaluated definition, where any properties that are functions
+   * have been run to produce a result.
+   */
+  schema(key?: string): SchemaDefinition | { [key: string]: SchemaDefinition };
 
-  getDefinition(key: string, propList?: any, functionContext?: any): any;
+  /**
+   * @returns {Object} The entire schema object with subschemas merged. This is the
+   * equivalent of what schema() returned in SimpleSchema < 2.0
+   *
+   * Note that this returns the raw, unevaluated definition object. Use `getDefinition`
+   * if you want the evaluated definition, where any properties that are functions
+   * have been run to produce a result.
+   */
+  mergedSchema(): { [key: string]: SchemaDefinition };
 
+  /**
+   * Returns the evaluated definition for one key in the schema
+   *
+   * @param {String} key Generic or specific schema key
+   * @param {Array(String)} [propList] Array of schema properties you need; performance optimization
+   * @param {Object} [functionContext] The context to use when evaluating schema options that are functions
+   * @returns {Object} The schema definition for the requested key
+   */
+  getDefinition(key: string, propList?: Array<string>, functionContext?: any): EvaluatedSchemaDefinition;
+
+  /**
+   * Returns a string identifying the best guess data type for a key. For keys
+   * that allow multiple types, the first type is used. This can be useful for
+   * building forms.
+   *
+   * @param {String} key Generic or specific schema key
+   * @returns {String} A type string. One of:
+   *  string, number, boolean, date, object, stringArray, numberArray, booleanArray,
+   *  dateArray, objectArray
+   */
+  getQuickTypeForKey(key: string): 'string' | 'number' | 'boolean' | 'date' | 'object' | 'stringArray' | 'numberArray' | 'booleanArray' | 'dateArray' | 'objectArray' | undefined;
+
+  /**
+   * Given a key that is an Object, returns a new SimpleSchema instance scoped to that object.
+   *
+   * @param {String} key Generic or specific schema key
+   */
+  getObjectSchema(key: string): SimpleSchema;
+
+  // Returns an array of all the autovalue functions, including those in subschemas all the
+  // way down the schema tree
+  autoValueFunctions(): Array<Function>;
+
+  // Returns an array of all the blackbox keys, including those in subschemas
+  blackboxKeys(): Array<string> ;
+
+  // Check if the key is a nested dot-syntax key inside of a blackbox object
   keyIsInBlackBox(key: string): boolean;
 
+  /**
+   * Change schema labels on the fly, causing mySchema.label computation
+   * to rerun. Useful when the user changes the language.
+   *
+   * @param {Object} labels A dictionary of all the new label values, by schema key.
+   */
   labels(labels: { [key: string]: string }): void;
 
+  /**
+   * Gets a field's label or all field labels reactively.
+   *
+   * @param {String} [key] The schema key, specific or generic.
+   *   Omit this argument to get a dictionary of all labels.
+   * @returns {String} The label
+   */
   label(key: any): any;
+
+  /**
+   * Gets a field's property
+   *
+   * @param {String} [key] The schema key, specific or generic.
+   *   Omit this argument to get a dictionary of all labels.
+   * @param {String} [prop] Name of the property to get.
+   *
+   * @returns {any} The property value
+   */
+  get(key?: string, prop?: string): any;
+
+  // shorthand for getting defaultValue
+  defaultValue(key: string): any;
 
   messages(messages: any): void;
 
+  // Returns a string message for the given error type and key. Passes through
+  // to message-box pkg.
   messageForError(type: any, key: any, def: any, value: any): string;
 
-  allowsKey(key: any): string;
+  // Returns true if key is explicitly allowed by the schema or implied
+  // by other explicitly allowed keys.
+  // The key string should have $ in place of any numeric array positions.
+  allowsKey(key: any): boolean;
 
   newContext(): ValidationContext;
 
-  objectKeys(keyPrefix: any): any[];
+  /**
+   * Returns all the child keys for the object identified by the generic prefix,
+   * or all the top level keys if no prefix is supplied.
+   *
+   * @param {String} [keyPrefix] The Object-type generic key for which to get child keys. Omit for
+   *   top-level Object-type keys
+   * @returns {[[Type]]} [[Description]]
+   */
+  objectKeys(keyPrefix?: any): any[];
 
+  /**
+   * @param obj {Object|Object[]} Object or array of objects to validate.
+   * @param [options] {Object} Same options object that ValidationContext#validate takes
+   *
+   * Throws an Error with name `ClientError` and `details` property containing the errors.
+   */
   validate(obj: any, options?: ValidationOption): void;
 
-  validator(options: ValidationOption): Function;
+  /**
+   * @param obj {Object} Object to validate.
+   * @param [options] {Object} Same options object that ValidationContext#validate takes
+   *
+   * Returns a Promise that resolves with the errors
+   */
+  validateAndReturnErrorsPromise(obj: any, options?: ValidationOption): Promise<Array<Error>>;
+
+
+  validator(options?: ValidationOption): (args: { [key: string]: any; }) => void;
 }
 
 declare module 'simpl-schema' {
