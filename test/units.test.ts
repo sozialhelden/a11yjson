@@ -1,4 +1,8 @@
-import { LengthSchema } from '../src/units';
+import {
+  determineUnitKind,
+  LengthQuantitySchema,
+  LengthSchema
+} from '../src/units';
 import SimpleSchema from 'simpl-schema';
 
 const lengthStringFixture = '10cm';
@@ -11,21 +15,26 @@ const lengthQuantityWithAccuracyFixture = {
   rawValue: '10km'
 };
 
-// BUG: cannot have more than one Schema Instance in oneOf see https://github.com/aldeed/simple-schema-js/issues/112
-// const lengthQuantityRangeFixture = {from: 10, to: 20, unit: 'meter', rawValue: '10m'};
-// const lengthQuantityRangeWithAccuracyFixture = {from: 10, to: 20, unit: 'kilometer', accuracy: 2, rawValue: '10km'};
-
-// const lengthEstimatedQuantityFixture = {from: 10, to: 20, unit: 'meter', rawValue: '10m'};
-// const lengthEstimatedQuantityWithAccuracyFixture = {from: 10, to: 20, unit: 'kilometer', accuracy: 2, rawValue: '10km'};
+const lengthEstimatedQuantityFixture = {
+  value: 10,
+  unit: 'meter',
+  rawValue: '< 10m',
+  operator: '<'
+};
+const lengthEstimatedQuantityWithAccuracyFixture = {
+  value: 10,
+  unit: 'kilometer',
+  accuracy: 2,
+  rawValue: '>= 10km',
+  operator: '>='
+};
 
 const allValidFixtures = Object.freeze([
   lengthStringFixture,
   lengthQuantityFixture,
-  lengthQuantityWithAccuracyFixture
-  // lengthQuantityRangeFixture,
-  // lengthQuantityRangeWithAccuracyFixture,
-  // lengthEstimatedQuantityFixture,
-  // lengthEstimatedQuantityWithAccuracyFixture,
+  lengthQuantityWithAccuracyFixture,
+  lengthEstimatedQuantityFixture,
+  lengthEstimatedQuantityWithAccuracyFixture
 ]);
 
 const lengthInvalidUnitQuantityFixture = {
@@ -34,15 +43,47 @@ const lengthInvalidUnitQuantityFixture = {
   rawValue: '10breadcrumb'
 };
 
+const lengthInvalidOperatorEstimatedQuantityFixture = {
+  value: 10,
+  unit: 'meter',
+  rawValue: '~ 10m',
+  operator: '~'
+};
+
 const allInvalidFixtures = Object.freeze([
   undefined,
   {},
-  lengthInvalidUnitQuantityFixture
+  lengthInvalidUnitQuantityFixture,
+  lengthInvalidOperatorEstimatedQuantityFixture
 ]);
 
 const SchemaWithLengthField = new SimpleSchema({ field: LengthSchema });
 
 describe('Length Schema', () => {
+  it('schema unit is added', () => {
+    const preferredUnit = LengthQuantitySchema.getDefinition('unit', [
+      'accessibility'
+    ]).accessibility.preferredUnit;
+    expect(preferredUnit).toEqual('length');
+  });
+  it('determineUnitKind', () => {
+    expect(() => {
+      determineUnitKind('foo');
+    }).toThrow('No simple schema passed to determineUnitKind');
+    expect(() => {
+      determineUnitKind(SchemaWithLengthField);
+    }).toThrow('No key passed into determineUnitKind for non Quantity schema');
+
+    expect(determineUnitKind(LengthQuantitySchema)).toEqual('length');
+    expect(determineUnitKind(LengthQuantitySchema, 'invalid')).toEqual(
+      'length'
+    );
+    expect(determineUnitKind(SchemaWithLengthField, 'field')).toEqual('length');
+
+    expect(determineUnitKind(SchemaWithLengthField, 'invalid')).toEqual(
+      'unknown'
+    );
+  });
   it('tests field as invalid', () => {
     allInvalidFixtures.forEach(value => {
       const context = SchemaWithLengthField.newContext();
