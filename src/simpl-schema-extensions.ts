@@ -64,9 +64,9 @@ export interface AccessibilitySchemaExtension {
   /**
    * The preferred unit this field is usually documented in (e.g. seconds, meter, centimeter)
    */
-  preferredUnit: string;
+  preferredUnit?: string;
   /**
-   * Deprecated, should not be used anymore
+   * This field is deprecated, should not be used anymore
    */
-  deprecated: boolean;
+  deprecated?: boolean;
 }
