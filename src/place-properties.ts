@@ -27,6 +27,10 @@ export interface PlaceProperties {
 
   // machine data fields
 
+  // wheelmap.pro fields
+  eventId?: string; // only valid for mapping event
+  creatorId?: string; // only valid for mapping event
+
   // accessibility-cloud fields
   parentPlaceId?: string;
   sourceId?: string;
@@ -162,6 +166,7 @@ export const PlacePropertiesSchema = new SimpleSchema({
   parentPlaceId: {
     type: String,
     optional: true,
+    regEx: SimpleSchema.RegEx.Id,
     accessibility: {
       machineData: true
     }
@@ -173,9 +178,26 @@ export const PlacePropertiesSchema = new SimpleSchema({
       machineData: true
     }
   },
+  eventId: {
+    type: String,
+    optional: true,
+    regEx: SimpleSchema.RegEx.Id,
+    accessibility: {
+      machineData: true
+    }
+  },
+  creatorId: {
+    type: String,
+    optional: true,
+    regEx: SimpleSchema.RegEx.Id,
+    accessibility: {
+      machineData: true
+    }
+  },
   sourceId: {
     type: String,
     optional: true,
+    regEx: SimpleSchema.RegEx.Id,
     accessibility: {
       machineData: true
     }
@@ -183,6 +205,7 @@ export const PlacePropertiesSchema = new SimpleSchema({
   sourceImportId: {
     type: String,
     optional: true,
+    regEx: SimpleSchema.RegEx.Id,
     accessibility: {
       machineData: true
     }

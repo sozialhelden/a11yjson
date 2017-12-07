@@ -27,8 +27,10 @@ const placePropertiesWithOptionalsFixture: PlaceProperties = {
   phoneNumber: '555-SANDY',
   description: 'Some Description',
   originalData: 'originalData',
+  eventId: 'T8j8nnnqMpbxpLxZu',
+  creatorId: 'T8j8nnnqMpbxpLxZu',
   sourceId: 'T8j8nnnqMpbxpLxZu',
-  sourceImportId: 'ZmrXoY5ZFbG3EbRBB',
+  sourceImportId: 'T8j8nnnqMpbxpLxZu',
   accessibility: accessibilityMinimumFixture
 };
 
