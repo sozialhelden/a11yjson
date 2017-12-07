@@ -2,9 +2,11 @@ import {
   PlaceProperties,
   PlacePropertiesSchema
 } from '../src/place-properties';
+
 import { validExternalIdWithExtendedDataFixture } from './external-id.test';
 import { accessibilityMinimumFixture } from './accessibilty.test';
 import { AllowedAreaTypes } from '../src/area-types';
+import { structuredAddressMinimalFixture } from './address.test';
 
 export const placePropertiesMinimumFixture: PlaceProperties = {
   name: 'T-Mobile Sandy',
@@ -17,13 +19,8 @@ const placePropertiesWithOptionalsFixture: PlaceProperties = {
   infoPageUrl: 'https://axsmap.com/venue/ChIJwSo_DaaHUocRFFAENf-ILl8',
   name: 'T-Mobile Sandy',
   areaTypes: AllowedAreaTypes,
-  buildingName: 'string',
-  buildingNumber: 1,
-  floorLevel: 1,
-  roomName: 'string',
-  roomNumber: 1,
   category: 'shopping',
-  address: ',Sandy,Utah',
+  address: structuredAddressMinimalFixture,
   phoneNumber: '555-SANDY',
   description: 'Some Description',
   originalData: 'originalData',

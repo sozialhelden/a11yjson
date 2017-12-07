@@ -19,7 +19,7 @@ export interface QuestionFunctionSelf<T> {
 /**
  * Describes additional data that can be stored within a SimpleSchema for accessibility data
  */
-export interface AccessibilitySchemaExtension {
+export interface AccessibilitySchemaExtension<T> {
   /**
    * Example value for this accessibility field
    */
@@ -33,30 +33,29 @@ export interface AccessibilitySchemaExtension {
    */
   extendedInformationUrl?: string;
   /**
+   * List of explicit choices with translated label
+   */
+  options?: Array<{ value: T; label: string }>;
+  /**
    * End user question to be asked
    */
-  question?:
-    | string
-    | Array<string>
-    | ((this: QuestionFunctionSelf<any>) => string);
+  question?: string | ((this: QuestionFunctionSelf<T>) => string);
   /**
    * End user question to be asked when more array entries should be added
    */
-  questionMore?:
-    | string
-    | Array<string>
-    | ((this: QuestionFunctionSelf<any>) => string);
+  questionMore?: string | ((this: QuestionFunctionSelf<T>) => string);
   /**
    * End user question to be asked when starting a new accessibility block (toilet, entrance, beds...)
    */
-  questionBlockBegin?:
-    | string
-    | Array<string>
-    | ((this: QuestionFunctionSelf<any>) => string);
+  questionBlockBegin?: string | ((this: QuestionFunctionSelf<T>) => string);
   /**
    * Should this field be presented to users?
    */
   machineData?: boolean;
+  /**
+   * Which component should be used for this field
+   */
+  componentHint?: string;
   /**
    * Can this fields sub-fields be chosen for individual inspection?
    */

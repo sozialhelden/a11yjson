@@ -6,11 +6,12 @@ import './simpl-schema-extensions';
 import { AllowedAreaTypes, AreaTypes } from './area-types';
 import { Accessibility, AccessibilitySchema } from './accessibility';
 import { ExternalId, ExternalIdSchemaDefinition } from './external-id';
+import { Address, AddressSchema } from './address';
 
 export interface PlaceProperties {
   // properties
   name: string;
-  address?: string; // TODO this can also be an object see 22BnzkzXfzuznupvb
+  address?: Address;
   // QUESTION what is expected in description?
   description?: string;
   phoneNumber?: string;
@@ -19,11 +20,6 @@ export interface PlaceProperties {
 
   // QUESTION merge with category/ies?
   areaTypes?: ArrayLike<AreaTypes>;
-  buildingName?: string;
-  buildingNumber?: number;
-  floorLevel?: number;
-  roomName?: string;
-  roomNumber?: number;
 
   // machine data fields
 
@@ -53,21 +49,24 @@ export const PlacePropertiesSchema = new SimpleSchema({
   category: {
     type: String,
     accessibility: {
-      question: t`What kind of place is this?`
+      question: t`What kind of place is this?`,
+      componentHint: 'Category'
     }
   },
   address: {
-    type: String, // TODO this can also be an object see 22BnzkzXfzuznupvb
+    type: AddressSchema,
     optional: true,
     accessibility: {
-      question: t`What is the address of this place?`
+      question: t`What is the address of this place?`,
+      componentHint: 'Address'
     }
   },
   description: {
     type: String,
     optional: true,
     accessibility: {
-      question: t`How would you describe this place?`
+      question: t`How would you describe this place?`,
+      componentHint: 'TextArea'
     }
   },
   phoneNumber: {
@@ -76,7 +75,8 @@ export const PlacePropertiesSchema = new SimpleSchema({
     accessibility: {
       question: t`What is the phone number of this place?`,
       description: t`The phone number of this place, with international country code`,
-      example: t`e.g. +1-555-555-90-210`
+      example: t`e.g. +1-555-555-90-210`,
+      componentHint: 'PhoneNumber'
     }
   },
   areaTypes: {
@@ -89,48 +89,6 @@ export const PlacePropertiesSchema = new SimpleSchema({
   'areaTypes.$': {
     type: String,
     allowedValues: AllowedAreaTypes.map(s => s)
-  },
-  buildingName: {
-    type: String,
-    optional: true,
-    accessibility: {
-      question: t`What is the name of the building?`,
-      example: t`e.g. main exposition hall`
-    }
-  },
-  buildingNumber: {
-    type: Number,
-    optional: true,
-    accessibility: {
-      question: t`What is the number of the building?`,
-      example: t`e.g. 15`
-    }
-  },
-  floorLevel: {
-    type: Number,
-    optional: true,
-    accessibility: {
-      description: t`The number of the floor in british convention (ground floor is 0)`,
-      question: t`What is the number of the floor?`,
-      extendedInformationUrl: 'https://en.wikipedia.org/wiki/Storey',
-      example: t`e.g. 4`
-    }
-  },
-  roomName: {
-    type: String,
-    optional: true,
-    accessibility: {
-      question: t`What is the name of the room?`,
-      example: t`e.g. meeting room 'Rome'`
-    }
-  },
-  roomNumber: {
-    type: Number,
-    optional: true,
-    accessibility: {
-      question: t`What is the number of the room?`,
-      example: t`e.g. 1.1.25`
-    }
   },
   accessibility: {
     type: AccessibilitySchema,
