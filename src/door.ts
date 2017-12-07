@@ -32,14 +32,7 @@ export const DoorSchema = new SimpleSchema({
     accessibility: {
       question: t`Let's specify the turning space in front of this door.`,
       inseparable: true,
-      // TODO define quick questions in more details
-      quickQuestion: t`Is there sufficient turning space in front of the door (> 90 cm)?`, // TODO make units translatable
-      quickQuestionValue: {
-        value: 90,
-        unit: 'centimeters',
-        accuracy: 5,
-        operator: '>'
-      } as Length
+      componentHint: 'Unit'
     }
   },
   doorOpensToOutside: {
@@ -62,23 +55,13 @@ export const DoorSchema = new SimpleSchema({
     accessibility: {
       question: t`Let's specify the width of the door.`,
       inseparable: true,
-      // TODO define quick questions in more details
-      quickQuestion: t`Is the width of the door > 90 cm?`, // TODO make units translatable
-      quickQuestionValue: {
-        value: 90,
-        unit: 'centimeters',
-        accuracy: 5,
-        operator: '>'
-      } as Length
+      componentHint: 'Unit'
     }
   },
   hasClearMarkingOnGlassDoor: {
     type: Boolean,
     optional: true,
     accessibility: {
-      // TODO define skip question in more details
-      skipQuestion: t`Is this a glass door?`,
-      skipQuestionValue: undefined,
       question: t`Does the glass door have clear markings?`
     }
   },

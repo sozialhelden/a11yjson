@@ -80,7 +80,10 @@ export const EquipmentPropertiesSchema = new SimpleSchema({
   },
   height: {
     type: LengthSchema,
-    optional: true
+    optional: true,
+    accessibility: {
+      componentHint: 'Unit'
+    }
   },
   languages: {
     type: Array,
