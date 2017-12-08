@@ -16,6 +16,8 @@ export interface QuestionFunctionSelf<T> {
   userName: string;
 }
 
+export type QuestionFunction<T> = ((this: QuestionFunctionSelf<T>) => string);
+
 /**
  * Describes additional data that can be stored within a SimpleSchema for accessibility data
  */
@@ -35,19 +37,22 @@ export interface AccessibilitySchemaExtension<T> {
   /**
    * List of explicit choices with translated label
    */
-  options?: Array<{ value: T; label: string }>;
+  options?: Array<{
+    value: T;
+    label: string;
+  }>;
   /**
    * End user question to be asked
    */
-  question?: string | ((this: QuestionFunctionSelf<T>) => string);
+  question?: string | QuestionFunction<T>;
   /**
    * End user question to be asked when more array entries should be added
    */
-  questionMore?: string | ((this: QuestionFunctionSelf<T>) => string);
+  questionMore?: string | QuestionFunction<T>;
   /**
    * End user question to be asked when starting a new accessibility block (toilet, entrance, beds...)
    */
-  questionBlockBegin?: string | ((this: QuestionFunctionSelf<T>) => string);
+  questionBlockBegin?: string | QuestionFunction<T>;
   /**
    * Should this field be presented to users?
    */
@@ -69,3 +74,73 @@ export interface AccessibilitySchemaExtension<T> {
    */
   deprecated?: boolean;
 }
+
+/**
+ * A schema for validating the AccessibilitySchemaExtension. Used for internal tests.
+ */
+export const AccessibilitySchemaExtensionSchema = new SimpleSchema({
+  example: {
+    type: String,
+    optional: true
+  },
+  description: {
+    type: String,
+    optional: true
+  },
+  extendedInformationUrl: {
+    type: String,
+    optional: true
+  },
+  options: {
+    type: Array,
+    optional: true
+  },
+  'options.$': {
+    type: Object
+  },
+  'options.$.value': {
+    type: SimpleSchema.oneOf(
+      String,
+      {
+        type: Object,
+        blackbox: true
+      },
+      Number
+    )
+  },
+  'options.$.label': {
+    type: String
+  },
+  question: {
+    type: String,
+    optional: true
+  },
+  questionMore: {
+    type: String,
+    optional: true
+  },
+  questionBlockBegin: {
+    type: String,
+    optional: true
+  },
+  machineData: {
+    type: Boolean,
+    optional: true
+  },
+  componentHint: {
+    type: String,
+    optional: true
+  },
+  inseparable: {
+    type: Boolean,
+    optional: true
+  },
+  preferredUnit: {
+    type: String,
+    optional: true
+  },
+  deprecated: {
+    type: Boolean,
+    optional: true
+  }
+});
