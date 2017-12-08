@@ -2,16 +2,13 @@
 
 type Integer = RegExp;
 
-type SchemaType =
-  | String
-  | Number
-  | Integer
-  | Boolean
-  | Object
-  | Array<any>
-  | SchemaDefinition
-  | Date
-  | SimpleSchema;
+type SchemaType = |String | Number | Integer | Boolean | Object | Array < any > | SchemaDefinition | Date | SimpleSchema | SimpleSchemaGroup;
+
+type SimpleSchemaGroup = {
+  definitions: Array < {
+    type: SchemaType
+  } >
+};
 
 interface CleanOption {
   filter?: boolean;
@@ -23,7 +20,7 @@ interface CleanOption {
   extendAutoValueContext?: boolean;
 }
 
-interface ValidationFunctionSelf<T> {
+interface ValidationFunctionSelf < T > {
   value: T;
   key: string;
   genericKey: string;
@@ -31,15 +28,15 @@ interface ValidationFunctionSelf<T> {
   isSet: boolean;
   operator: any;
   validationContext: ValidationContext;
-  field: (fieldName: string) => any;
-  siblingField: (fieldName: string) => any;
-  addValidationErrors: (errors: string[]) => {};
+  field: (fieldName : string) => any;
+  siblingField: (fieldName : string) => any;
+  addValidationErrors: (errors : string[]) => {};
 }
 
-type ValidationFunction = (this: ValidationFunctionSelf<any>) => string | undefined;
+type ValidationFunction = (this : ValidationFunctionSelf < any >) => string | undefined;
 
 interface SchemaDefinition {
-  type: SchemaType;
+  type : SchemaType;
   label?: string | Function;
   optional?: boolean | Function;
   min?: number | boolean | Date | Function;
@@ -58,30 +55,30 @@ interface SchemaDefinition {
   trim?: boolean;
 
   // allow custom extensions
-  [key: string]: any;
+  [key : string] : any;
 }
 
 interface EvaluatedSchemaDefinition {
-  type: Array<{ type: SchemaType }>;
-  label?: string | Function;
-  optional?: boolean | Function;
-  min?: number | boolean | Date | Function;
-  max?: number | boolean | Date | Function;
-  minCount?: number | Function;
-  maxCount?: number | Function;
-  allowedValues?: any[] | Function;
+  type : Array < {
+    type: SchemaType
+  } >;
+  label?: string;
+  optional?: boolean;
+  min?: number | boolean | Date;
+  max?: number | boolean | Date;
+  minCount?: number;
+  maxCount?: number;
+  allowedValues?: any[];
   decimal?: boolean;
   exclusiveMax?: boolean;
   exclusiveMin?: boolean;
   regEx?: RegExp | RegExp[];
-  custom?: ValidationFunction;
   blackbox?: boolean;
-  autoValue?: Function;
   defaultValue?: any;
   trim?: boolean;
 
   // allow custom extensions
-  [key: string]: any;
+  [key : string] : any;
 }
 
 interface ValidationOption {
@@ -93,104 +90,115 @@ interface ValidationOption {
 }
 
 interface SimpleSchemaValidationContext {
-  validate(obj: any, options?: ValidationOption): boolean;
+  validate(obj : any, options?: ValidationOption) : boolean;
 
-  validateOne(doc: any, keyName: string, options?: ValidationOption): boolean;
+  validateOne(doc : any, keyName : string, options?: ValidationOption) : boolean;
 
-  resetValidation(): void;
+  resetValidation() : void;
 
-  isValid(): boolean;
+  isValid() : boolean;
 
-  invalidKeys(): { name: string; type: string; value?: any }[];
+  invalidKeys() : {
+    name: string;
+    type: string;
+    value?: any
+  }[];
 
-  addInvalidKeys(errors: { name: string; type: string }[]): void;
+  addInvalidKeys(errors : {
+    name: string;
+    type: string
+  }[]) : void;
 
-  keyIsInvalid(name: any): boolean;
+  keyIsInvalid(name : any) : boolean;
 
-  keyErrorMessage(name: any): string;
+  keyErrorMessage(name : any) : string;
 
-  getErrorObject(): any;
+  getErrorObject() : any;
 }
 
 declare class ValidationContext {
-  constructor(ss: any);
+  constructor(ss : any);
 
-  addValidationErrors(errors: any): void;
+  addValidationErrors(errors : any) : void;
 
-  clean(...args: any[]): any;
+  clean(...args : any[]) : any;
 
-  getErrorForKey(key: any, ...args: any[]): any;
+  getErrorForKey(key : any, ...args : any[]) : any;
 
-  isValid(): any;
+  isValid() : any;
 
-  keyErrorMessage(key: any, ...args: any[]): any;
+  keyErrorMessage(key : any, ...args : any[]) : any;
 
-  keyIsInvalid(key: any, ...args: any[]): any;
+  keyIsInvalid(key : any, ...args : any[]) : any;
 
-  reset(): void;
+  reset() : void;
 
-  setValidationErrors(errors: any): void;
+  setValidationErrors(errors : any) : void;
 
-  validate(obj: any, ...args: any[]): any;
+  validate(obj : any, ...args : any[]) : any;
 
-  validationErrors(): any;
+  validationErrors() : any;
 }
 
 interface MongoObjectStatic {
-  forEachNode(func: Function, options?: { endPointsOnly: boolean }): void;
+  forEachNode(func : Function, options?: {
+    endPointsOnly: boolean
+  }) : void;
 
-  getValueForPosition(position: string): any;
+  getValueForPosition(position : string) : any;
 
-  setValueForPosition(position: string, value: any): void;
+  setValueForPosition(position : string, value : any) : void;
 
-  removeValueForPosition(position: string): void;
+  removeValueForPosition(position : string) : void;
 
-  getKeyForPosition(position: string): any;
+  getKeyForPosition(position : string) : any;
 
-  getGenericKeyForPosition(position: string): any;
+  getGenericKeyForPosition(position : string) : any;
 
-  getInfoForKey(key: string): any;
+  getInfoForKey(key : string) : any;
 
-  getPositionForKey(key: string): string;
+  getPositionForKey(key : string) : string;
 
-  getPositionsForGenericKey(key: string): string[];
+  getPositionsForGenericKey(key : string) : string[];
 
-  getValueForKey(key: string): any;
+  getValueForKey(key : string) : any;
 
-  addKey(key: string, val: any, op: string): any;
+  addKey(key : string, val : any, op : string) : any;
 
-  removeGenericKeys(keys: string[]): void;
+  removeGenericKeys(keys : string[]) : void;
 
-  removeGenericKey(key: string): void;
+  removeGenericKey(key : string) : void;
 
-  removeKey(key: string): void;
+  removeKey(key : string) : void;
 
-  removeKeys(keys: string[]): void;
+  removeKeys(keys : string[]) : void;
 
-  filterGenericKeys(test: Function): void;
+  filterGenericKeys(test : Function) : void;
 
-  setValueForKey(key: string, val: any): void;
+  setValueForKey(key : string, val : any) : void;
 
-  setValueForGenericKey(key: string, val: any): void;
+  setValueForGenericKey(key : string, val : any) : void;
 
-  getObject(): any;
+  getObject() : any;
 
-  getFlatObject(options?: { keepArrays?: boolean }): any;
+  getFlatObject(options?: {
+    keepArrays?: boolean
+  }) : any;
 
-  affectsKey(key: string): any;
+  affectsKey(key : string) : any;
 
-  affectsGenericKey(key: string): any;
+  affectsGenericKey(key : string) : any;
 
-  affectsGenericKeyImplicit(key: string): any;
+  affectsGenericKeyImplicit(key : string) : any;
 }
 
 interface MongoObject {
-  expandKey(val: any, key: string, obj: any): void;
+  expandKey(val : any, key : string, obj : any) : void;
 }
 
 declare class SimpleSchema {
-  static Integer: Integer;
-  static RegEx: {
+  static Integer : Integer;
+  static RegEx : {
     Email: RegExp;
     EmailWithTLD: RegExp;
     Domain: RegExp;
@@ -203,44 +211,54 @@ declare class SimpleSchema {
     ZipCode: RegExp;
     Phone: RegExp;
   };
-  debug: boolean;
+  debug : boolean;
 
-  constructor(schema: { [key: string]: SchemaDefinition | SchemaType } | any[],
-              options?: any | { humanizeAutoLabels?: boolean, tracker?: any, check?: any });
+  constructor(schema : {
+    [key : string]: SchemaDefinition | SchemaType
+  } | any[], options?: any | {
+    humanizeAutoLabels?: boolean,
+    tracker?: any,
+    check?: any
+  });
 
   /**
    * Returns whether the obj is a SimpleSchema object.
    * @param {Object} [obj] An object to test
    * @returns {Boolean} True if the given object appears to be a SimpleSchema instance
    */
-  static isSimpleSchema(obj: any): boolean;
+  static isSimpleSchema(obj : any) : boolean;
 
-  static oneOf(...schemas: SchemaType[]): SchemaType;
+  static oneOf(...schemas : SchemaType[]) : SchemaType;
 
-  // If you need to allow properties other than those listed above, call this from your app or package
-  static extendOptions(allowedOptionFields: string[]): void;
+  // If you need to allow properties other than those listed above, call this from
+  // your app or package
+  static extendOptions(allowedOptionFields : string[]) : void;
 
-  static setDefaultMessages(messages: {
-    messages: { [key: string]: { [key: string]: string } };
-  }): void;
+  static setDefaultMessages(messages : {
+    messages: {
+      [key : string]: {
+        [key : string]: string
+      }
+    };
+  }) : void;
 
-  namedContext(name?: string): SimpleSchemaValidationContext;
+  namedContext(name?: string) : SimpleSchemaValidationContext;
 
-  addValidator(validator: Function): any;
+  addValidator(validator : Function) : any;
 
   /**
    * @method SimpleSchema#pick
    * @param {[fields]} The list of fields to pick to instantiate the subschema
    * @returns {SimpleSchema} The subschema
    */
-  pick(...fields: string[]): SimpleSchema;
+  pick(...fields : string[]) : SimpleSchema;
 
   /**
    * @method SimpleSchema#omit
    * @param {[fields]} The list of fields to omit to instantiate the subschema
    * @returns {SimpleSchema} The subschema
    */
-  omit(...fields: string[]): SimpleSchema;
+  omit(...fields : string[]) : SimpleSchema;
 
   /**
    * Extends this schema with another schema, key by key.
@@ -248,9 +266,11 @@ declare class SimpleSchema {
    * @param {SimpleSchema|Object} schema
    * @returns The SimpleSchema instance (chainable)
    */
-  extend(schema: Partial<SchemaDefinition> | SimpleSchema | { [key: string]: Partial<SchemaDefinition> }): SimpleSchema;
+  extend(schema : Partial < SchemaDefinition > | SimpleSchema | {
+    [key : string]: Partial < SchemaDefinition >
+  }) : SimpleSchema;
 
-  clean(doc: any, options?: CleanOption): any;
+  clean(doc : any, options?: CleanOption) : any;
 
   /**
    * @param {String} [key] One specific or generic key for which to get the schema.
@@ -260,7 +280,7 @@ declare class SimpleSchema {
    * if you want the evaluated definition, where any properties that are functions
    * have been run to produce a result.
    */
-  schema(key?: string): SchemaDefinition | { [key: string]: SchemaDefinition };
+  schema(key?: string) : SchemaDefinition;
 
   /**
    * @returns {Object} The entire schema object with subschemas merged. This is the
@@ -270,7 +290,9 @@ declare class SimpleSchema {
    * if you want the evaluated definition, where any properties that are functions
    * have been run to produce a result.
    */
-  mergedSchema(): { [key: string]: SchemaDefinition };
+  mergedSchema() : {
+    [key : string]: SchemaDefinition
+  };
 
   /**
    * Returns the evaluated definition for one key in the schema
@@ -280,7 +302,7 @@ declare class SimpleSchema {
    * @param {Object} [functionContext] The context to use when evaluating schema options that are functions
    * @returns {Object} The schema definition for the requested key
    */
-  getDefinition(key: string, propList?: Array<string>, functionContext?: any): EvaluatedSchemaDefinition;
+  getDefinition(key : string, propList?: Array < string >, functionContext?: any) : EvaluatedSchemaDefinition;
 
   /**
    * Returns a string identifying the best guess data type for a key. For keys
@@ -292,24 +314,24 @@ declare class SimpleSchema {
    *  string, number, boolean, date, object, stringArray, numberArray, booleanArray,
    *  dateArray, objectArray
    */
-  getQuickTypeForKey(key: string): 'string' | 'number' | 'boolean' | 'date' | 'object' | 'stringArray' | 'numberArray' | 'booleanArray' | 'dateArray' | 'objectArray' | undefined;
+  getQuickTypeForKey(key : string) : 'string' | 'number' | 'boolean' | 'date' | 'object' | 'stringArray' | 'numberArray' | 'booleanArray' | 'dateArray' | 'objectArray' | undefined;
 
   /**
    * Given a key that is an Object, returns a new SimpleSchema instance scoped to that object.
    *
    * @param {String} key Generic or specific schema key
    */
-  getObjectSchema(key: string): SimpleSchema;
+  getObjectSchema(key : string) : SimpleSchema;
 
-  // Returns an array of all the autovalue functions, including those in subschemas all the
-  // way down the schema tree
-  autoValueFunctions(): Array<Function>;
+  // Returns an array of all the autovalue functions, including those in
+  // subschemas all the way down the schema tree
+  autoValueFunctions() : Array < Function >;
 
   // Returns an array of all the blackbox keys, including those in subschemas
-  blackboxKeys(): Array<string> ;
+  blackboxKeys() : Array < string >;
 
   // Check if the key is a nested dot-syntax key inside of a blackbox object
-  keyIsInBlackBox(key: string): boolean;
+  keyIsInBlackBox(key : string) : boolean;
 
   /**
    * Change schema labels on the fly, causing mySchema.label computation
@@ -317,7 +339,9 @@ declare class SimpleSchema {
    *
    * @param {Object} labels A dictionary of all the new label values, by schema key.
    */
-  labels(labels: { [key: string]: string }): void;
+  labels(labels : {
+    [key : string]: string
+  }) : void;
 
   /**
    * Gets a field's label or all field labels reactively.
@@ -326,7 +350,7 @@ declare class SimpleSchema {
    *   Omit this argument to get a dictionary of all labels.
    * @returns {String} The label
    */
-  label(key: any): any;
+  label(key : any) : any;
 
   /**
    * Gets a field's property
@@ -337,23 +361,23 @@ declare class SimpleSchema {
    *
    * @returns {any} The property value
    */
-  get(key?: string, prop?: string): any;
+  get(key?: string, prop?: string) : any;
 
   // shorthand for getting defaultValue
-  defaultValue(key: string): any;
+  defaultValue(key : string) : any;
 
-  messages(messages: any): void;
+  messages(messages : any) : void;
 
-  // Returns a string message for the given error type and key. Passes through
-  // to message-box pkg.
-  messageForError(type: any, key: any, def: any, value: any): string;
+  // Returns a string message for the given error type and key. Passes through to
+  // message-box pkg.
+  messageForError(type : any, key : any, def : any, value : any) : string;
 
-  // Returns true if key is explicitly allowed by the schema or implied
-  // by other explicitly allowed keys.
-  // The key string should have $ in place of any numeric array positions.
-  allowsKey(key: any): boolean;
+  // Returns true if key is explicitly allowed by the schema or implied by other
+  // explicitly allowed keys. The key string should have $ in place of any numeric
+  // array positions.
+  allowsKey(key : any) : boolean;
 
-  newContext(): ValidationContext;
+  newContext() : ValidationContext;
 
   /**
    * Returns all the child keys for the object identified by the generic prefix,
@@ -363,7 +387,7 @@ declare class SimpleSchema {
    *   top-level Object-type keys
    * @returns {[[Type]]} [[Description]]
    */
-  objectKeys(keyPrefix?: any): any[];
+  objectKeys(keyPrefix?: any) : any[];
 
   /**
    * @param obj {Object|Object[]} Object or array of objects to validate.
@@ -371,7 +395,7 @@ declare class SimpleSchema {
    *
    * Throws an Error with name `ClientError` and `details` property containing the errors.
    */
-  validate(obj: any, options?: ValidationOption): void;
+  validate(obj : any, options?: ValidationOption) : void;
 
   /**
    * @param obj {Object} Object to validate.
@@ -379,10 +403,11 @@ declare class SimpleSchema {
    *
    * Returns a Promise that resolves with the errors
    */
-  validateAndReturnErrorsPromise(obj: any, options?: ValidationOption): Promise<Array<Error>>;
+  validateAndReturnErrorsPromise(obj : any, options?: ValidationOption) : Promise < Array < Error >>;
 
-
-  validator(options?: ValidationOption): (args: { [key: string]: any; }) => void;
+  validator(options?: ValidationOption) : (args : {
+    [key : string]: any;
+  }) => void;
 }
 
 declare module 'simpl-schema' {
