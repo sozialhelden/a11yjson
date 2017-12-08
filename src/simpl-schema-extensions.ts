@@ -1,22 +1,34 @@
 import SimpleSchema from 'simpl-schema';
 
+import sample from 'lodash/sample';
+import { t } from 'c-3po';
+
 // allow custom fields
 SimpleSchema.extendOptions(['accessibility']);
 
 /**
  * Context for the question function, to read additional fields or generate questions dynamically
  */
-export interface QuestionFunctionSelf<T> {
+export interface QuestionFunctionContext<T> {
   value: T;
-  key: string;
-  genericKey: string;
+  path: string;
+  absolutePath: string;
   definition: SchemaDefinition;
   field: (fieldName: string) => any;
   siblingField: (fieldName: string) => any;
   userName: string;
 }
 
-export type QuestionFunction<T> = ((this: QuestionFunctionSelf<T>) => string);
+/**
+ * A function that gets evaluated in a questionnaire context
+ */
+export type QuestionFunction<T> = ((context: QuestionFunctionContext<T>) => string);
+
+/**
+ * Definition for a question, can be either a String, an Array of Strings (value will be picked at random),
+ * or a function that will be evaluated
+ */
+export type QuestionValue<T> = string | string[] | QuestionFunction<T>;
 
 /**
  * Describes additional data that can be stored within a SimpleSchema for accessibility data
@@ -44,15 +56,15 @@ export interface AccessibilitySchemaExtension<T> {
   /**
    * End user question to be asked
    */
-  question?: string | QuestionFunction<T>;
+  question?: QuestionValue<T>;
   /**
    * End user question to be asked when more array entries should be added
    */
-  questionMore?: string | QuestionFunction<T>;
+  questionMore?: QuestionValue<T>;
   /**
    * End user question to be asked when starting a new accessibility block (toilet, entrance, beds...)
    */
-  questionBlockBegin?: string | QuestionFunction<T>;
+  questionBlockBegin?: QuestionValue<T>;
   /**
    * Should this field be presented to users?
    */
@@ -73,6 +85,63 @@ export interface AccessibilitySchemaExtension<T> {
    * This field is deprecated, should not be used anymore
    */
   deprecated?: boolean;
+}
+export interface EvaluatedAccessibilitySchemaExtension<T> extends AccessibilitySchemaExtension<T> {
+  /**
+   * End user question to be asked
+   */
+  question?: string;
+  /**
+   * End user question to be asked when more array entries should be added
+   */
+  questionMore?: string;
+  /**
+   * End user question to be asked when starting a new accessibility block (toilet, entrance, beds...)
+   */
+  questionBlockBegin?: string;
+}
+
+export function evaluateQuestionValue<T>(
+  question: QuestionValue<T>,
+  context: QuestionFunctionContext<T>
+): string | undefined {
+  if (typeof question === 'string') {
+    return question;
+  }
+  if (Array.isArray(question)) {
+    return sample(question);
+  }
+  if (typeof question === 'function') {
+    return question.apply(context);
+  }
+
+  return undefined;
+}
+
+export function evaluateAccessibilitySchemaExtension<T>(
+  extension: AccessibilitySchemaExtension<T>,
+  context: QuestionFunctionContext<T>
+): EvaluatedAccessibilitySchemaExtension<T> {
+  let { question, questionMore, questionBlockBegin, ...remaining } = extension;
+
+  if (question) {
+    question = evaluateQuestionValue<T>(question, context);
+  }
+  if (questionMore) {
+    questionMore = evaluateQuestionValue<T>(questionMore, context);
+  }
+  if (questionBlockBegin) {
+    questionBlockBegin = evaluateQuestionValue<T>(questionBlockBegin, context);
+  }
+
+  return Object.assign(
+    {
+      question,
+      questionMore,
+      questionBlockBegin
+    },
+    remaining
+  );
 }
 
 /**
