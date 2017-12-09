@@ -9,14 +9,20 @@ SimpleSchema.extendOptions(['accessibility']);
 /**
  * Context for the question function, to read additional fields or generate questions dynamically
  */
-export interface QuestionFunctionContext<T> {
+export class QuestionFunctionContext<T> {
   value: T;
   path: string;
-  absolutePath: string;
-  definition: SchemaDefinition;
-  field: (fieldName: string) => any;
-  siblingField: (fieldName: string) => any;
+  schema: SimpleSchema;
   userName: string;
+  field: (fieldName: string) => any;
+}
+
+export function makeQuestionContext<T>(
+  path: string,
+  value: T,
+  schema: SimpleSchema
+): QuestionFunctionContext<T> {
+  return new QuestionFunctionContext<T>();
 }
 
 /**
@@ -112,7 +118,7 @@ export function evaluateQuestionValue<T>(
     return sample(question);
   }
   if (typeof question === 'function') {
-    return question.apply(context);
+    return question(context);
   }
 
   return undefined;
