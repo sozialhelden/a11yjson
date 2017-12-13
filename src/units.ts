@@ -86,7 +86,7 @@ export const BaseQuantitySchema = new SimpleSchema({
 
 // takes the BaseQuantitySchema and extends it with validation for the given unit type
 const makeQuantitySchema = (kind: string, defaultValue: string) => {
-  const extendedSchema = BaseQuantitySchema.extend({
+  const extendedSchema = new SimpleSchema({
     unit: {
       type: String,
       custom: validateUnit(kind),
@@ -95,7 +95,7 @@ const makeQuantitySchema = (kind: string, defaultValue: string) => {
         preferredUnit: kind
       }
     }
-  });
+  }).extend(BaseQuantitySchema);
   (extendedSchema as any).__schemaType = 'Quantity';
   return extendedSchema;
 };
