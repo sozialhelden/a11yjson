@@ -79,7 +79,6 @@
     "@types/js-quantities": "^1.6.2",
     "@types/node": "^8.0.53",
     "babel-plugin-c-3po": "^0.7.2",
-    "c-3po": "^0.7.2",
     "colors": "^1.1.2",
     "commitizen": "^2.9.6",
     "coveralls": "^3.0.0",
@@ -87,9 +86,7 @@
     "cz-conventional-changelog": "^2.1.0",
     "husky": "^0.14.0",
     "jest": "^21.2.1",
-    "js-quantities": "^1.7.0",
     "lint-staged": "^5.0.0",
-    "lodash.camelcase": "^4.3.0",
     "prettier": "^1.8.2",
     "prompt": "^1.0.0",
     "replace-in-file": "^3.0.0",
@@ -100,7 +97,6 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
     "semantic-release": "^8.2.3",
-    "simpl-schema": "^1.1.0",
     "ts-jest": "^21.2.3",
     "ts-node": "^3.0.6",
     "tslint": "^5.8.0",
@@ -110,7 +106,8 @@
     "typescript": "^2.6.1",
     "validate-commit-msg": "^2.12.2"
   },
-  "peerDependencies": {
+  "dependencies": {
+    "lodash": "^4.17.4",
     "c-3po": "^0.7.2",
     "js-quantities": "^1.7.0",
     "simpl-schema": "^1.1.0"

@@ -23,6 +23,7 @@ export default {
     'simpl-schema',
     'c-3po',
     'js-quantities',
+    'lodash',
   ],
   watch: {
     include: 'compiled/**',
