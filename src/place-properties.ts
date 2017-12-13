@@ -10,7 +10,7 @@ import { Address, AddressSchema } from './address';
 
 export interface PlaceProperties {
   // properties
-  name: string;
+  name?: string;
   address?: Address;
   // QUESTION what is expected in description?
   description?: string;
@@ -42,6 +42,7 @@ export interface PlaceProperties {
 export const PlacePropertiesSchema = new SimpleSchema({
   name: {
     type: String,
+    optional: true,
     accessibility: {
       question: t`What is the name of this place?`
     }
@@ -94,7 +95,7 @@ export const PlacePropertiesSchema = new SimpleSchema({
     type: AccessibilitySchema,
     optional: true,
     accessibility: {
-      question: t`Okay $USER, are you ready to map the accessibility of $PLACE?`
+      question: t`Ready to map the accessibility of this place?`
     }
   },
   // machine data fields
