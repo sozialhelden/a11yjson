@@ -129,15 +129,18 @@ export const AccessibilitySchema = new SimpleSchema({
     type: Array,
     optional: true,
     accessibility: {
-      questionBlockBegin: t`Are you ready for defining the entrances to this place?`,
-      questionMore: t`Do you want to enter another entrance?`,
-      example: t`e.g. 1.1.25`
+      questionBlockBegin: t`Add the first entrance to this place?`,
+      questionMore: t`Do you want to enter another entrance?`
     }
   },
   'entrances.$': EntranceSchema,
   restrooms: {
     type: Array,
-    optional: true
+    optional: true,
+    accessibility: {
+      questionBlockBegin: t`Add the first restroom to this place?`,
+      questionMore: t`Do you want to enter another restroom?`
+    }
   },
   'restrooms.$': RestroomSchema,
   sitemap: {
