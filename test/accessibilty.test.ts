@@ -1,5 +1,7 @@
 import { Accessibility, AccessibilitySchema } from '../src/accessibility';
 import { personalProfileMinimumFixture } from './personal-profile.test';
+import { restroomMinimumFixture } from './restroom.test';
+import { entranceMinimumFixture } from './entrance.test';
 
 export const accessibilityMinimumFixture: Accessibility = {};
 
@@ -16,8 +18,8 @@ const accessibilityWithOptionalsFixture: Accessibility = {
   isNonSmoking: true,
   ground: {},
   pathways: {},
-  entrances: [{}, {}],
-  restrooms: [{}, {}],
+  entrances: [entranceMinimumFixture, entranceMinimumFixture],
+  restrooms: [restroomMinimumFixture, restroomMinimumFixture],
   sitemap: {},
   lifts: [{}, {}],
   switches: [{}, {}],

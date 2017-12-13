@@ -5,6 +5,7 @@ import './simpl-schema-extensions';
 
 import { PersonalProfile, PersonalProfileSchema } from './personal-profile';
 import { Entrance, EntranceSchema } from './entrance';
+import { Restroom, RestroomSchema } from './restroom';
 
 export interface Accessibility {
   /// @deprecated
@@ -28,10 +29,10 @@ export interface Accessibility {
   isNonSmoking?: boolean;
   ground?: any; // TODO define type
   pathways?: any; // TODO define type
-  // QUESTION equipment??, can entrances be disrupted/broken
+  // QUESTION equipment??, can entrances be disrupted/broken?
   entrances?: ArrayLike<Entrance>;
   // QUESTION equipment?
-  restrooms?: [any]; // TODO define type
+  restrooms?: ArrayLike<Restroom>;
   // QUESTION equipment?
   sitemap?: any; // TODO define type
   // QUESTION equipment?
@@ -138,7 +139,7 @@ export const AccessibilitySchema = new SimpleSchema({
     type: Array,
     optional: true
   },
-  'restrooms.$': Object, // TODO define type
+  'restrooms.$': RestroomSchema,
   sitemap: {
     type: Object, // TODO define type
     optional: true
