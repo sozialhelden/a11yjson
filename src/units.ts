@@ -1,7 +1,7 @@
 import Qty from 'js-quantities';
 import SimpleSchema from 'simpl-schema';
 
-import './simpl-schema-extensions';
+import { createSchemaInstance } from './simpl-schema-extensions';
 
 // register a custom error for invalid unit parsing
 SimpleSchema.setDefaultMessages({
@@ -86,18 +86,20 @@ export const BaseQuantitySchema = new SimpleSchema({
 
 // takes the BaseQuantitySchema and extends it with validation for the given unit type
 const makeQuantitySchema = (kind: string, defaultValue: string) => {
-  const extendedSchema = new SimpleSchema({
-    unit: {
-      type: String,
-      custom: validateUnit(kind),
-      defaultValue,
-      accessibility: {
-        preferredUnit: kind
+  return createSchemaInstance(
+    'Quantity',
+    {
+      unit: {
+        type: String,
+        custom: validateUnit(kind),
+        defaultValue,
+        accessibility: {
+          preferredUnit: kind
+        }
       }
-    }
-  }).extend(BaseQuantitySchema);
-  (extendedSchema as any).__schemaType = 'Quantity';
-  return extendedSchema;
+    },
+    BaseQuantitySchema
+  );
 };
 
 /**

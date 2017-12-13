@@ -19,3 +19,5 @@ export * from './place-info';
 export * from './place-properties';
 export * from './schema-helpers';
 export * from './units';
+
+export * from './version';

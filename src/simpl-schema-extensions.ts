@@ -2,6 +2,7 @@ import SimpleSchema from 'simpl-schema';
 
 import sample from 'lodash/sample';
 import { t } from 'c-3po';
+import { FormatVersion } from './version';
 
 // allow custom fields
 SimpleSchema.extendOptions(['accessibility']);
@@ -28,7 +29,9 @@ export function makeQuestionContext<T>(
 /**
  * A function that gets evaluated in a questionnaire context
  */
-export type QuestionFunction<T> = ((context: QuestionFunctionContext<T>) => string);
+export type QuestionFunction<T> = ((
+  context: QuestionFunctionContext<T>
+) => string);
 
 /**
  * Definition for a question, can be either a String, an Array of Strings (value will be picked at random),
@@ -92,7 +95,9 @@ export interface AccessibilitySchemaExtension<T> {
    */
   deprecated?: boolean;
 }
-export interface EvaluatedAccessibilitySchemaExtension<T> extends AccessibilitySchemaExtension<T> {
+
+export interface EvaluatedAccessibilitySchemaExtension<T>
+  extends AccessibilitySchemaExtension<T> {
   /**
    * End user question to be asked
    */
@@ -148,6 +153,28 @@ export function evaluateAccessibilitySchemaExtension<T>(
     },
     remaining
   );
+}
+
+/**
+ * Internal helper for creating schemata with attached schemaType
+ */
+export function createSchemaInstance(
+  type: string,
+  definition: { [key: string]: SchemaDefinition | SchemaType },
+  baseSchema: SimpleSchema | null = null,
+  schemaOptions: {
+    humanizeAutoLabels?: boolean;
+    tracker?: any;
+    check?: any;
+  } = {}
+) {
+  const extendedSchema = new SimpleSchema(definition, schemaOptions);
+  if (baseSchema) {
+    extendedSchema.extend(baseSchema);
+  }
+  (extendedSchema as any).__schemaType = type;
+  (extendedSchema as any).__schemaVersion = FormatVersion;
+  return extendedSchema;
 }
 
 /**
