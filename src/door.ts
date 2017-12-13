@@ -3,7 +3,7 @@ import SimpleSchema from 'simpl-schema';
 
 import './simpl-schema-extensions';
 
-import { Length, LengthSchema } from './units';
+import { Length, LengthSchema, quantityDefinition } from './units';
 
 export interface Door {
   turningSpaceInFront?: Length;
@@ -26,15 +26,9 @@ export interface Door {
 }
 
 export const DoorSchema = new SimpleSchema({
-  turningSpaceInFront: {
-    type: LengthSchema,
-    optional: true,
-    accessibility: {
-      question: t`Let's specify the turning space in front of this door.`,
-      inseparable: true,
-      componentHint: 'Unit'
-    }
-  },
+  turningSpaceInFront: quantityDefinition(LengthSchema, true, {
+    question: t`Let's specify the turning space in front of this door.`
+  }),
   doorOpensToOutside: {
     type: Boolean,
     optional: true,
@@ -49,15 +43,9 @@ export const DoorSchema = new SimpleSchema({
       question: t`Is this an automatic door or is the door always open?`
     }
   },
-  width: {
-    type: LengthSchema,
-    optional: true,
-    accessibility: {
-      question: t`Let's specify the width of the door.`,
-      inseparable: true,
-      componentHint: 'Unit'
-    }
-  },
+  width: quantityDefinition(LengthSchema, true, {
+    question: t`Let's specify the width of the door.`
+  }),
   hasClearMarkingOnGlassDoor: {
     type: Boolean,
     optional: true,

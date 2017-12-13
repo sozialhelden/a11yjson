@@ -2,6 +2,7 @@ import Qty from 'js-quantities';
 import SimpleSchema from 'simpl-schema';
 
 import { createSchemaInstance } from './simpl-schema-extensions';
+import { extend } from 'lodash';
 
 // register a custom error for invalid unit parsing
 SimpleSchema.setDefaultMessages({
@@ -157,3 +158,27 @@ export const LengthSchema = SimpleSchema.oneOf(LengthQuantitySchema, String);
  * A union type between LengthQuantity and string
  */
 export type Length = Quantity | string;
+
+export function quantityDefinition(
+  type: SchemaType,
+  optional: boolean = true,
+  accessibility?: {}
+) {
+  const base: SchemaDefinition = {
+    type: LengthSchema,
+    accessibility: {
+      inseparable: true,
+      componentHint: 'Unit'
+    }
+  };
+
+  if (optional === true) {
+    base.optional = optional;
+  }
+
+  if (accessibility) {
+    extend(base.accessibility, accessibility);
+  }
+
+  return base;
+}

@@ -1,7 +1,8 @@
 import {
   determineUnitKind,
   LengthQuantitySchema,
-  LengthSchema
+  LengthSchema,
+  quantityDefinition
 } from '../src/units';
 import SimpleSchema from 'simpl-schema';
 
@@ -99,5 +100,17 @@ describe('Length Schema', () => {
       expect(context.validationErrors()).toHaveLength(0);
       expect(context.isValid()).toBeTruthy();
     });
+  });
+  it('extending quantity extends accessibility', () => {
+    const def = quantityDefinition(LengthSchema);
+    expect(def.optional).toEqual(true);
+    expect(def.type).toEqual(LengthSchema);
+    expect(def.accessibility.componentHint).toEqual('Unit');
+    expect(def.accessibility.inseparable).toEqual(true);
+  });
+  it('extending quantity extends accessibility', () => {
+    const def = quantityDefinition(LengthSchema, false, { field: true });
+    expect(def.optional).not.toBeDefined();
+    expect(def.accessibility.field).toEqual(true);
   });
 });
