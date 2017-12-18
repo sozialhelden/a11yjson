@@ -1,4 +1,4 @@
-import { Room, RoomSchema } from '../src/Room';
+import { Room, RoomSchema } from '../src/room';
 import { FormatVersion } from '../src/version';
 
 export const roomMinimumFixture: Room = {};

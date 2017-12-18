@@ -1,4 +1,4 @@
-import { Restroom, RestroomSchema } from '../src/Restroom';
+import { Restroom, RestroomSchema } from '../src/restroom';
 import { entranceMinimumFixture } from './entrance.test';
 import { FormatVersion } from '../src/version';
 import { toiletMinimumFixture } from './toilet.test';

@@ -1,4 +1,4 @@
-import { Shower, ShowerSchema } from '../src/Shower';
+import { Shower, ShowerSchema } from '../src/shower';
 import { FormatVersion } from '../src/version';
 
 export const showerMinimumFixture: Shower = {};
