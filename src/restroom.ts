@@ -18,6 +18,7 @@ export interface Restroom extends Room {
   };
   /// QUESTION undefined vs. null - how do we indicate that there is no mirror?
   mirror?: {
+    isLocatedInsideRestroom?: boolean;
     isAccessibleWhileSeated: boolean;
     heightFromGround: Length;
   };
@@ -42,6 +43,7 @@ export interface Restroom extends Room {
   heightOfSoapAndDrier?: Length;
   /// QUESTION undefined vs. null - how do we indicate that there is no washBasin?
   washBasin?: {
+    isLocatedInsideRestroom?: boolean;
     /// QUESTION is this calculated from the sub-fields or can this go away?
     /// QUESTION is called isAccessibleWithWheelchair in room.ts
     accessibleWithWheelchair?: boolean;
