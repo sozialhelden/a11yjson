@@ -4,6 +4,7 @@ import SimpleSchema from 'simpl-schema';
 import './simpl-schema-extensions';
 
 import { Door, DoorSchema } from './door';
+import { Stairs, StairsSchema } from './stairs';
 
 export interface Entrance {
   name?: string;
@@ -19,7 +20,7 @@ export interface Entrance {
   slopeAngle?: number;
   hasRemovableRamp?: boolean;
   // QUESTION duplicated from area
-  stairs?: any; // TODO add object type
+  stairs?: Stairs;
   door?: Door;
   /// reference to the equipment id if this entrance is a lift
   liftEquipmentId?: string;
@@ -83,7 +84,7 @@ export const EntranceSchema = new SimpleSchema({
     }
   },
   stairs: {
-    type: Object, // TODO add object type
+    type: StairsSchema,
     optional: true,
     accessibility: {
       question: t`Are there stairs or steps at this entrance?`

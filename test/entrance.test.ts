@@ -1,5 +1,6 @@
 import { Entrance, EntranceSchema } from '../src/entrance';
 import { doorMinimumFixture } from './door.test';
+import { stairsMinimumFixture } from './stairs.test';
 
 export const entranceMinimumFixture: Entrance = {};
 
@@ -11,16 +12,13 @@ const entranceWithOptionalsFixture: Entrance = {
   hasSlope: true,
   slopeAngle: 5,
   hasRemovableRamp: true,
-  stairs: {},
+  stairs: stairsMinimumFixture,
   door: doorMinimumFixture,
   liftEquipmentId: 'idHere',
   intercomEquipmentId: 'idHere'
 };
 
-const allValidFixtures = Object.freeze([
-  entranceMinimumFixture,
-  entranceWithOptionalsFixture
-]);
+const allValidFixtures = Object.freeze([entranceMinimumFixture, entranceWithOptionalsFixture]);
 
 const invalidEntranceFixture = {
   bar: []
