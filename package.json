@@ -1,6 +1,6 @@
 {
   "name": "@sozialhelden/ac-format",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "",
   "keywords": [],
   "main": "dist/ac-format.umd.js",
@@ -25,14 +25,15 @@
     "start": "tsc -w & rollup -c rollup.config.ts -w",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:prod": "npm run lint && npm run test -- --coverage --no-cache",
+    "test:prod": "yarn run lint && yarn run test -- --coverage --no-cache",
     "deploy-docs": "ts-node tools/gh-pages-publish",
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
     "commit": "git-cz",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "semantic-release": "semantic-release pre && yarn publish && semantic-release post",
     "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
     "precommit": "lint-staged",
-    "format": "tslint --fix src/**/*.ts"
+    "format": "tslint --fix src/**/*.ts",
+    "deploy": "yarn build && yarn test:prod && yarn publish --access public"
   },
   "lint-staged": {
     "{src,test}/**/*.{ts,tsx}": [
