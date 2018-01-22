@@ -17,6 +17,7 @@ const restroomWithOptionalsFixture: Restroom = {
     female: true
   },
   mirror: {
+    isLocatedInsideRestroom: false,
     isAccessibleWhileSeated: true,
     heightFromGround: '100cm'
   },
@@ -31,6 +32,7 @@ const restroomWithOptionalsFixture: Restroom = {
   shower: showerMinimumFixture,
   heightOfSoapAndDrier: '100 .. 120cm',
   washBasin: {
+    isLocatedInsideRestroom: false,
     accessibleWithWheelchair: true,
     height: '>80cm',
     spaceBelow: {
@@ -40,10 +42,7 @@ const restroomWithOptionalsFixture: Restroom = {
   }
 };
 
-const allValidFixtures = Object.freeze([
-  restroomMinimumFixture,
-  restroomWithOptionalsFixture
-]);
+const allValidFixtures = Object.freeze([restroomMinimumFixture, restroomWithOptionalsFixture]);
 
 const invalidRestroomFixture = {
   bar: []
