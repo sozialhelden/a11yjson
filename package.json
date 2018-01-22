@@ -109,9 +109,9 @@
     "validate-commit-msg": "^2.12.2"
   },
   "dependencies": {
-    "lodash": "^4.17.4",
     "c-3po": "^0.7.2",
     "js-quantities": "^1.7.0",
+    "lodash": "^4.17.4",
     "simpl-schema": "^1.1.0"
   }
 }
