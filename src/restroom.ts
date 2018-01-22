@@ -85,6 +85,11 @@ export const RestroomSchema = createSchemaInstance(
       optional: true,
       accessibility: {}
     },
+    'mirror.isLocatedInsideRestroom': {
+      type: Boolean,
+      optional: true,
+      accessibility: {}
+    },
     'mirror.isAccessibleWhileSeated': {
       type: Boolean,
       optional: true,
@@ -134,6 +139,11 @@ export const RestroomSchema = createSchemaInstance(
     heightOfSoapAndDrier: quantityDefinition(LengthSchema),
     washBasin: {
       type: Object,
+      optional: true,
+      accessibility: {}
+    },
+    'washBasin.isLocatedInsideRestroom': {
+      type: Boolean,
       optional: true,
       accessibility: {}
     },
