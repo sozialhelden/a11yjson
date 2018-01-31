@@ -30,7 +30,7 @@ export interface Restroom extends Room {
   // QUESTION how is this evaluated, doesn't this also depend on the kind of wheelchair?
   // could be similar to mirror object
   shampooAccessibleWithWheelchair?: boolean;
-  toilet: Toilet;
+  toilet?: Toilet;
   // QUESTION no definition of bathtub
   hasBathTub?: boolean;
   entrance?: Entrance;
@@ -115,7 +115,7 @@ export const RestroomSchema = createSchemaInstance(
     toilet: {
       type: ToiletSchema,
       optional: true,
-      accessibility: {},
+      accessibility: {}
     },
     hasBathTub: {
       type: Boolean,
@@ -126,7 +126,7 @@ export const RestroomSchema = createSchemaInstance(
       type: EntranceSchema,
       optional: true,
       accessibility: {
-        question: t`Can you add details about its entrance?`,
+        question: t`Can you add details about its entrance?`
       }
     },
     hasShower: {

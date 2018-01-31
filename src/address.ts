@@ -11,7 +11,7 @@ export interface StructuredAddress {
   /**
    * A displayable, formatted address as rich text.
    */
-  text: string;
+  text?: string;
   /**
    * Room name
    */
@@ -90,7 +90,7 @@ export const StructuredAddressSchema = new SimpleSchema({
     accessibility: {
       description: t`A displayable, formatted address as rich text.`
     },
-    optional: true,
+    optional: true
   },
   room: {
     label: t`Room`,
@@ -126,7 +126,7 @@ export const StructuredAddressSchema = new SimpleSchema({
     label: t`House`,
     type: String,
     accessibility: {
-      question: t`What’s the house number?`,
+      question: t`What’s the house number?`
     },
     optional: true
   },
@@ -134,7 +134,7 @@ export const StructuredAddressSchema = new SimpleSchema({
     label: t`Street`,
     type: String,
     accessibility: {
-      question: t`What's the street called?`,
+      question: t`What's the street called?`
     },
     optional: true
   },
@@ -143,7 +143,7 @@ export const StructuredAddressSchema = new SimpleSchema({
     type: String,
     accessibility: {
       description: t`Also called ZIP code.`,
-      question: t`The postal code is…`,
+      question: t`The postal code is…`
     },
     optional: true
   },
@@ -163,7 +163,7 @@ export const StructuredAddressSchema = new SimpleSchema({
     type: String,
     accessibility: {
       description: t`A division of city; typically an administrative unit within a larger city or a customary name of a city\'s neighborhood.`,
-      question: t`The place is located destrict…`,
+      question: t`The place is located destrict…`
     },
     optional: true
   },
@@ -171,7 +171,7 @@ export const StructuredAddressSchema = new SimpleSchema({
     label: t`City`,
     type: String,
     accessibility: {
-      question: t`And the city is…`,
+      question: t`And the city is…`
     },
     optional: true
   },
@@ -233,10 +233,7 @@ export const StructuredAddressSchema = new SimpleSchema({
 /**
  * The AddressSchema extends the StructuredAddressSchema and allows also Strings
  */
-export const AddressSchema = SimpleSchema.oneOf(
-  StructuredAddressSchema,
-  String
-);
+export const AddressSchema = SimpleSchema.oneOf(StructuredAddressSchema, String);
 
 /**
  * A union type between StructuredAddress and string

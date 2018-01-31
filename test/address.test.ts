@@ -3,9 +3,7 @@ import SimpleSchema from 'simpl-schema';
 
 const addressStringFixture = 'Testweg 12, Berlin';
 
-export const structuredAddressMinimalFixture: StructuredAddress = {
-  text: 'Testweg 12, Berlin'
-};
+export const structuredAddressMinimalFixture: StructuredAddress = {};
 
 const structuredAddressWithOptionalsFixture: StructuredAddress = {
   text: 'Testweg 12, Berlin',
@@ -42,11 +40,7 @@ const structuredAddressInvalidCountryCodeFixture = {
   countryCode: 'INVALID'
 };
 
-const allInvalidFixtures = Object.freeze([
-  undefined,
-  {},
-  structuredAddressTooManyFieldsFixture
-]);
+const allInvalidFixtures = Object.freeze([undefined, structuredAddressTooManyFieldsFixture]);
 
 const SchemaWithLengthField = new SimpleSchema({ field: AddressSchema });
 

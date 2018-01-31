@@ -4,9 +4,7 @@ import { FormatVersion } from '../src/version';
 import { toiletMinimumFixture } from './toilet.test';
 import { showerMinimumFixture } from './shower.test';
 
-export const restroomMinimumFixture: Restroom = {
-  toilet: toiletMinimumFixture
-};
+export const restroomMinimumFixture: Restroom = {};
 
 const restroomWithOptionalsFixture: Restroom = {
   name: 'Room name',
@@ -48,7 +46,7 @@ const invalidRestroomFixture = {
   bar: []
 };
 
-const allInvalidFixtures = Object.freeze([invalidRestroomFixture, {}]);
+const allInvalidFixtures = Object.freeze([invalidRestroomFixture]);
 
 describe('RestroomSchema Schema', () => {
   it('schema is tagged', () => {
