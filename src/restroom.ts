@@ -114,7 +114,8 @@ export const RestroomSchema = createSchemaInstance(
     },
     toilet: {
       type: ToiletSchema,
-      accessibility: {}
+      optional: true,
+      accessibility: {},
     },
     hasBathTub: {
       type: Boolean,
@@ -124,7 +125,9 @@ export const RestroomSchema = createSchemaInstance(
     entrance: {
       type: EntranceSchema,
       optional: true,
-      accessibility: {}
+      accessibility: {
+        question: t`Can you add details about its entrance?`,
+      }
     },
     hasShower: {
       type: Boolean,

@@ -129,8 +129,8 @@ export const AccessibilitySchema = new SimpleSchema({
     type: Array,
     optional: true,
     accessibility: {
-      questionBlockBegin: t`Add the first entrance to this place?`,
-      questionMore: t`Do you want to enter another entrance?`
+      questionBlockBegin: t`Does this place have an entrance?`,
+      questionMore: t`Is there another entrance?`
     }
   },
   'entrances.$': EntranceSchema,
@@ -138,8 +138,8 @@ export const AccessibilitySchema = new SimpleSchema({
     type: Array,
     optional: true,
     accessibility: {
-      questionBlockBegin: t`Add the first restroom to this place?`,
-      questionMore: t`Do you want to enter another restroom?`
+      questionBlockBegin: t`Does this place have a restroom?`,
+      questionMore: t`Is there another restroom?`
     }
   },
   'restrooms.$': RestroomSchema,

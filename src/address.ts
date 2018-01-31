@@ -89,7 +89,8 @@ export const StructuredAddressSchema = new SimpleSchema({
     type: String,
     accessibility: {
       description: t`A displayable, formatted address as rich text.`
-    }
+    },
+    optional: true,
   },
   room: {
     label: t`Room`,
@@ -125,7 +126,7 @@ export const StructuredAddressSchema = new SimpleSchema({
     label: t`House`,
     type: String,
     accessibility: {
-      description: t`House or street number.`
+      question: t`What’s the house number?`,
     },
     optional: true
   },
@@ -133,7 +134,7 @@ export const StructuredAddressSchema = new SimpleSchema({
     label: t`Street`,
     type: String,
     accessibility: {
-      description: t`Street name (in practice may also contain street number).`
+      question: t`What's the street called?`,
     },
     optional: true
   },
@@ -141,7 +142,8 @@ export const StructuredAddressSchema = new SimpleSchema({
     label: t`Postal Code`,
     type: String,
     accessibility: {
-      description: t`An alphanumeric string included in a postal address to facilitate mail sorting (a.k.a. post code, postcode, or ZIP code).`
+      description: t`Also called ZIP code.`,
+      question: t`The postal code is…`,
     },
     optional: true
   },
@@ -160,7 +162,8 @@ export const StructuredAddressSchema = new SimpleSchema({
     label: t`District`,
     type: String,
     accessibility: {
-      description: t`A division of city; typically an administrative unit within a larger city or a customary name of a city\'s neighborhood.`
+      description: t`A division of city; typically an administrative unit within a larger city or a customary name of a city\'s neighborhood.`,
+      question: t`The place is located destrict…`,
     },
     optional: true
   },
@@ -168,7 +171,7 @@ export const StructuredAddressSchema = new SimpleSchema({
     label: t`City`,
     type: String,
     accessibility: {
-      description: t`The name of the primary locality of the place.`
+      question: t`And the city is…`,
     },
     optional: true
   },

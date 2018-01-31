@@ -58,7 +58,7 @@ export const PlacePropertiesSchema = new SimpleSchema({
     type: AddressSchema,
     optional: true,
     accessibility: {
-      question: t`What is the address of this place?`,
+      question: t`Does this place have an address?`,
       componentHint: 'Address'
     }
   },

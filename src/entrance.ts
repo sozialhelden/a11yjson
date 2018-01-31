@@ -94,7 +94,7 @@ export const EntranceSchema = new SimpleSchema({
     type: DoorSchema,
     optional: true,
     accessibility: {
-      questionBlockBegin: t`Are you ready to specify the door of this entrance?`
+      questionBlockBegin: t`Does this entrance have a door?`
     }
   },
   liftEquipmentId: {
