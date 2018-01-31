@@ -134,7 +134,8 @@ export const StructuredAddressSchema = new SimpleSchema({
     label: t`Street`,
     type: String,
     accessibility: {
-      question: t`What's the street called?`
+      question: t`What's the street called?`,
+      description: t`Please avoid numbers for houses or buildings.`,
     },
     optional: true
   },
