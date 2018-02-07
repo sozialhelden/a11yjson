@@ -27,7 +27,7 @@ export interface Door {
 
 export const DoorSchema = new SimpleSchema({
   turningSpaceInFront: quantityDefinition(LengthSchema, true, {
-    question: t`Measure the turning space in front of the door…`
+    question: t`How much space for turning is there at the entrance?`
   }),
   doorOpensToOutside: {
     type: Boolean,
@@ -44,8 +44,8 @@ export const DoorSchema = new SimpleSchema({
     }
   },
   width: quantityDefinition(LengthSchema, true, {
-    question: t`The clear width is…`,
-    description: t`This refers to the maximum size of an object that can pass.`,
+    question: t`How wide is the door?`,
+    description: t`This refers to the maximum size of an object that can pass.`
   }),
   hasClearMarkingOnGlassDoor: {
     type: Boolean,

@@ -30,50 +30,65 @@ export const StairsSchema = createSchemaInstance('Stairs', {
   /// number of steps
   count: {
     type: Number,
-    optional: true
+    optional: true,
+    accessibility: {
+      question: t`How many steps are there?`
+    }
   },
   nosing: {
     type: Object,
-    optional: true
+    optional: true,
+    accessibility: {}
   },
   'nosing.isHighContrast': {
     type: Boolean,
-    optional: true
+    optional: true,
+    accessibility: {}
   },
   'nosing.isAntiSlip': {
     type: Boolean,
-    optional: true
+    optional: true,
+    accessibility: {}
   },
   name: {
     type: String,
-    optional: true
+    optional: true,
+    accessibility: {}
   },
-  stepHeight: quantityDefinition(LengthSchema),
+  stepHeight: quantityDefinition(LengthSchema, true, {
+    question: t`How high is this step/ are these steps?`
+  }),
   hasHoist: {
     type: Boolean,
-    optional: true
+    optional: true,
+    accessibility: {}
   },
   hasHandRail: {
     type: Boolean,
-    optional: true
+    optional: true,
+    accessibility: {}
   },
   hasStairLift: {
     type: Boolean,
-    optional: true
+    optional: true,
+    accessibility: {}
   },
 
   hasEscalator: {
     type: Boolean,
-    optional: true
+    optional: true,
+    accessibility: {}
   },
   hasTactileSafetyStrip: {
     type: Boolean,
-    optional: true
+    optional: true,
+    accessibility: {}
   },
   wheelChairPlatformLift: {
     type: Object,
-    optional: true
+    optional: true,
+    accessibility: {}
   },
-  'wheelChairPlatformLift.height': quantityDefinition(LengthSchema),
-  'wheelChairPlatformLift.width': quantityDefinition(LengthSchema)
+  'wheelChairPlatformLift.height': quantityDefinition(LengthSchema, true, {}),
+  'wheelChairPlatformLift.width': quantityDefinition(LengthSchema, true, {})
 });

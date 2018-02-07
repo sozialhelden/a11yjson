@@ -126,7 +126,7 @@ export const StructuredAddressSchema = new SimpleSchema({
     label: t`House`,
     type: String,
     accessibility: {
-      question: t`What’s the house number?`
+      question: t`What is the house number?`
     },
     optional: true
   },
@@ -134,8 +134,8 @@ export const StructuredAddressSchema = new SimpleSchema({
     label: t`Street`,
     type: String,
     accessibility: {
-      question: t`What's the street called?`,
-      description: t`Please avoid numbers for houses or buildings.`,
+      question: t`What is the name of the street?`,
+      description: t`Please avoid numbers for houses or buildings.`
     },
     optional: true
   },
@@ -143,8 +143,8 @@ export const StructuredAddressSchema = new SimpleSchema({
     label: t`Postal Code`,
     type: String,
     accessibility: {
-      description: t`Also called ZIP code.`,
-      question: t`The postal code is…`
+      question: t`What is the postal code?`,
+      description: t`Also called ZIP code.`
     },
     optional: true
   },
@@ -172,7 +172,7 @@ export const StructuredAddressSchema = new SimpleSchema({
     label: t`City`,
     type: String,
     accessibility: {
-      question: t`And the city is…`
+      question: t`In which city is this place?`
     },
     optional: true
   },

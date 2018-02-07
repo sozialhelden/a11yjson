@@ -128,18 +128,20 @@ export const AccessibilitySchema = new SimpleSchema({
   entrances: {
     type: Array,
     optional: true,
+    label: t`Entrances`,
     accessibility: {
-      questionBlockBegin: t`Does this place have an entrance?`,
-      questionMore: t`Is there another entrance?`
+      questionBlockBegin: t`Would you like to rate the first entrance?`,
+      questionMore: t`Would you like to rate another entrance?`
     }
   },
   'entrances.$': EntranceSchema,
   restrooms: {
     type: Array,
     optional: true,
+    label: t`Restrooms`,
     accessibility: {
-      questionBlockBegin: t`Does this place have a restroom?`,
-      questionMore: t`Is there another restroom?`
+      questionBlockBegin: t`Would you like to rate the accessibility of the restroom?`,
+      questionMore: t`Would you like to rate another restroom?`
     }
   },
   'restrooms.$': RestroomSchema,

@@ -50,15 +50,16 @@ export const PlacePropertiesSchema = new SimpleSchema({
   category: {
     type: String,
     accessibility: {
-      question: t`What kind of place is this?`,
+      question: t`What type of place is this?`,
       componentHint: 'Category'
     }
   },
   address: {
     type: AddressSchema,
     optional: true,
+    label: t`Address`,
     accessibility: {
-      question: t`Does this place have an address?`,
+      question: t`Would you like to add the address?`,
       componentHint: 'Address'
     }
   },
@@ -95,7 +96,7 @@ export const PlacePropertiesSchema = new SimpleSchema({
     type: AccessibilitySchema,
     optional: true,
     accessibility: {
-      question: t`Ready to map the accessibility of this place?`
+      question: t`Okay, now let\`s map the accessibility.`
     }
   },
   // machine data fields

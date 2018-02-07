@@ -58,14 +58,14 @@ export const EntranceSchema = new SimpleSchema({
     type: Boolean,
     optional: true,
     accessibility: {
-      question: t`Is this entrance level?`
+      question: t`Is the entrance stepless?`
     }
   },
   hasSlope: {
     type: Boolean,
     optional: true,
     accessibility: {
-      question: t`Is this entrance sloped?`
+      question: t`Is there a slope at the entrance?`
     }
   },
   slopeAngle: {
@@ -80,21 +80,23 @@ export const EntranceSchema = new SimpleSchema({
     type: Boolean,
     optional: true,
     accessibility: {
-      question: t`Is there a removable ramp?`
+      question: t`Is a portable ramp available? Please check with the staff on-site.`
     }
   },
   stairs: {
     type: StairsSchema,
     optional: true,
+    label: t`Stairs`,
     accessibility: {
-      question: t`Are there stairs or steps at this entrance?`
+      question: t`Are there steps at the entrance?`
     }
   },
   door: {
     type: DoorSchema,
     optional: true,
+    label: t`Door`,
     accessibility: {
-      questionBlockBegin: t`Does this entrance have a door?`
+      questionBlockBegin: t`Would you like to add information about the door at the entrance?`
     }
   },
   liftEquipmentId: {

@@ -40,13 +40,17 @@ export const PlaceInfoSchema = new SimpleSchema({
     }
   },
   properties: {
-    type: PlacePropertiesSchema
+    type: PlacePropertiesSchema,
+    label: t`Properties`,
+    accessibility: {
+      question: t`First we need some information about the place.`
+    }
   },
   geometry: {
     type: GeometrySchema,
     label: t`Place on map`,
     accessibility: {
-      question: t`Where is the entrance of this place?`,
+      question: t`On the map, drag the place icon to the entrance's exact position.`,
       inseparable: true
     }
   }
