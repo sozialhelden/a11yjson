@@ -123,6 +123,13 @@ export const EquipmentPropertiesSchema = new SimpleSchema({
       componentHint: 'Unit'
     }
   },
+  doorWidth: {
+    type: LengthSchema,
+    optional: true,
+    accessibility: {
+      componentHint: 'Unit'
+    }
+  },
   languages: {
     type: Array,
     defaultValue: [],
