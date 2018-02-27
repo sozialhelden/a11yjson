@@ -3,6 +3,7 @@ import SimpleSchema from 'simpl-schema';
 
 import './simpl-schema-extensions';
 
+import { Door, DoorSchema } from './door';
 import { Length, LengthSchema } from './units';
 import { ExternalId, ExternalIdSchemaDefinition } from './external-id';
 
