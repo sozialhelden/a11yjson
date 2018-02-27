@@ -3,6 +3,7 @@ import SimpleSchema from 'simpl-schema';
 
 import './simpl-schema-extensions';
 
+import { Door, DoorSchema } from './door';
 import { Length, LengthSchema } from './units';
 import { ExternalId, ExternalIdSchemaDefinition } from './external-id';
 
@@ -32,8 +33,13 @@ export const AllowedEquipmentTypes = Object.freeze([
 export interface EquipmentProperties {
   // properties
   description?: string;
+  shortDescription?: string;
+  longDescription?: string;
   category?: EquipmentTypes;
-  height?: Length;
+  heightOfControls?: Length;
+  cabinWidth?: Length;
+  cabinLength?: Length;
+  door?: Door;
   languages?: Array<string>;
   isRaised?: boolean;
   isBraille?: boolean;
@@ -78,7 +84,39 @@ export const EquipmentPropertiesSchema = new SimpleSchema({
     type: String,
     optional: true
   },
-  height: {
+  // Alternative description that is screen-reader compatible and replaces abbreviations / symbols with words
+  longDescription: {
+    type: String,
+    optional: true
+  },
+  // Alternative description that uses less screen estate, more abbreviations and Unicode symbols like `→`
+  shortDescription: {
+    type: String,
+    optional: true
+  },
+  heightOfControls: {
+    type: LengthSchema,
+    optional: true,
+    accessibility: {
+      componentHint: 'Unit'
+    }
+  },
+  door: {
+    type: DoorSchema,
+    optional: true,
+    label: t`Door`,
+    accessibility: {
+      questionBlockBegin: t`Would you like to add information about the door of this equipment?`
+    }
+  },
+  cabinWidth: {
+    type: LengthSchema,
+    optional: true,
+    accessibility: {
+      componentHint: 'Unit'
+    }
+  },
+  cabinLength: {
     type: LengthSchema,
     optional: true,
     accessibility: {
