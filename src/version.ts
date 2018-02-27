@@ -1,1 +1,1 @@
-export const FormatVersion = '0.5.4';
+export const FormatVersion = '1.5.4';
