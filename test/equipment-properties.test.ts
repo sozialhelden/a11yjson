@@ -4,14 +4,20 @@ import {
   EquipmentPropertiesSchema,
   EquipmentTypes
 } from '../src/equipment-properties';
+import { doorMinimumFixture } from './door.test';
 import { validExternalIdWithExtendedDataFixture } from './external-id.test';
 
 export const equipmentPropertiesMinimumFixture: EquipmentProperties = {};
 
 const equipmentPropertiesFixture: EquipmentProperties = {
   description: 'string',
+  longDescription: 'long string',
+  shortDescription: 's.',
   category: 'elevator',
-  height: '90 .. 120cm',
+  door: doorMinimumFixture,
+  heightOfControls: '90 .. 120cm',
+  cabinWidth: '100cm',
+  cabinLength: '120cm',
   languages: ['en', 'de'],
   isRaised: true,
   isBraille: true,
