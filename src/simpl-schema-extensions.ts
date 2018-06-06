@@ -195,18 +195,21 @@ export const AccessibilitySchemaExtensionSchema = new SimpleSchema({
     optional: true
   },
   'options.$': {
-    type: Object
+    type: Object,
+    blackbox: true
   },
-  'options.$.value': {
-    type: SimpleSchema.oneOf(
-      String,
-      {
-        type: Object,
-        blackbox: true
-      },
-      Number
-    )
-  },
+  // FIXME disabled value validation until SimpleSchema.oneOf bug is fixed
+  // https://github.com/aldeed/simple-schema-js/issues/112
+  // 'options.$.value': {
+  //   type: SimpleSchema.oneOf(
+  //     String,
+  //     {
+  //       type: Object,
+  //       blackbox: true
+  //     },
+  //     Number,
+  //   ),
+  // },
   'options.$.label': {
     type: String
   },
