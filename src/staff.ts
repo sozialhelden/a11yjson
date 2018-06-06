@@ -11,13 +11,13 @@ export interface Staff {
    * Does the staff has means to see visitors from the inside, either via a window or
    * some camera system.
    */
-
   canSeeVisitorsFromInside?: boolean;
+
   /**
    * ?
    */
-
   canAssistWithSpecialNeeds?: boolean; // QUESTION: what is the limitation of can? Is allowed? Physical capable? Wants to? What is special?
+
   /**
    * ?
    */

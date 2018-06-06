@@ -8,6 +8,7 @@ import { Accessibility, AccessibilitySchema } from './accessibility';
 import { ExternalId, ExternalIdSchemaDefinition } from './external-id';
 import { Address, AddressSchema } from './address';
 import { StaffSchema, Staff } from './staff';
+import { WheelchairPlaces, WheelchairPlacesSchema } from './wheelchair-places';
 
 export interface PlaceProperties {
   // properties
@@ -19,7 +20,7 @@ export interface PlaceProperties {
    * The address of this place.
    * `null` indicates that this place has no address, `undefined` or missing property indicates unknown.
    */
-  address?: Address;
+  address?: Address | null;
   description?: string; // QUESTION: what is expected in description?
   phoneNumber?: string;
   category: string;
@@ -27,7 +28,7 @@ export interface PlaceProperties {
    * The accessibility of this place.
    * `null` indicates that this place has no data, `undefined` or missing property indicates unknown.
    */
-  accessibility?: Accessibility;
+  accessibility?: Accessibility | null;
 
   areaTypes?: ArrayLike<AreaTypes>; // QUESTION: merge with category/ies?
 
@@ -36,6 +37,12 @@ export interface PlaceProperties {
    * `null` indicates there is no staff, `undefined` or missing property indicates unknown.
    */
   staff?: Staff | null;
+
+  /**
+   * Information about wheelchair places.
+   * `null` indicates there are no places, `undefined` or missing property indicates unknown.
+   */
+  wheelchairPlaces?: WheelchairPlaces | null;
 
   // - machine data fields -
 
@@ -122,6 +129,13 @@ export const PlacePropertiesSchema = new SimpleSchema({
     optional: true,
     accessibility: {
       question: t`Is there any staff on the premises?`
+    }
+  },
+  wheelchairPlaces: {
+    type: WheelchairPlacesSchema,
+    optional: true,
+    accessibility: {
+      question: t`Are there any spaces reserved for people in wheelchairs?`
     }
   },
   // machine data fields

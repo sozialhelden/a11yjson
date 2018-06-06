@@ -1,6 +1,6 @@
 {
   "name": "@sozialhelden/ac-format",
-  "version": "0.5.6",
+  "version": "0.5.7",
   "description": "",
   "keywords": [],
   "main": "dist/ac-format.umd.js",
