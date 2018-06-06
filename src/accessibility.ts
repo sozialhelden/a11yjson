@@ -11,6 +11,7 @@ import { WheelchairPlaces, WheelchairPlacesSchema } from './wheelchair-places';
 import { Media, MediaSchema } from './media';
 import { Payment, PaymentSchema } from './payment';
 import { AccessibleTablesPrefab, Tables, TablesSchema } from './tables';
+import { Pathways, PathwaysSchema } from './pathways';
 
 export interface Accessibility {
   /// @deprecated
@@ -39,7 +40,7 @@ export interface Accessibility {
   isSmoking?: boolean;
   isNonSmoking?: boolean;
   ground?: any; // TODO define type
-  pathways?: any; // TODO define type
+  pathways?: Pathways | null;
   entrances?: ArrayLike<Entrance> | null;
   restrooms?: ArrayLike<Restroom> | null;
   sitemap?: any; // TODO define type
@@ -165,7 +166,7 @@ export const AccessibilitySchema = new SimpleSchema({
     optional: true
   },
   pathways: {
-    type: Object, // TODO define type
+    type: PathwaysSchema,
     optional: true
   },
   entrances: {

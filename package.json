@@ -1,6 +1,6 @@
 {
   "name": "@sozialhelden/ac-format",
-  "version": "0.5.9",
+  "version": "0.5.11",
   "description": "",
   "keywords": [],
   "main": "dist/ac-format.umd.js",
@@ -114,6 +114,6 @@
     "c-3po": "^0.7.2",
     "js-quantities": "^1.7.0",
     "lodash": "^4.17.4",
-    "simpl-schema": "^1.1.0"
+    "simpl-schema": "^1.5.0"
   }
 }
