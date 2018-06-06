@@ -16,12 +16,8 @@ export const placePropertiesMinimumFixture: PlaceProperties = {
 export const placePropertiesWithNullFixture: PlaceProperties = {
   name: 'T-Mobile Sandy',
   category: 'shopping',
-  staff: null,
   address: null,
-  accessibility: null,
-  wheelchairPlaces: null,
-  media: null,
-  payment: null
+  accessibility: null
 };
 
 const placePropertiesWithOptionalsFixture: PlaceProperties = {
@@ -34,9 +30,6 @@ const placePropertiesWithOptionalsFixture: PlaceProperties = {
   address: structuredAddressMinimalFixture,
   phoneNumber: '555-SANDY',
   description: 'Some Description',
-  staff: staffMinimumFixture,
-  wheelchairPlaces: wheelchairPlacesMinimumFixture,
-  media: [mediaFormatMinimumFixture],
   originalData: 'originalData',
   eventId: 'T8j8nnnqMpbxpLxZu',
   creatorId: 'T8j8nnnqMpbxpLxZu',

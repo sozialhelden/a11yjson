@@ -34,31 +34,6 @@ export interface PlaceProperties {
 
   areaTypes?: ArrayLike<AreaTypes>; // QUESTION: merge with category/ies?
 
-  /**
-   * Information about the staff.
-   * `null` indicates there is no staff, `undefined` or missing property indicates unknown.
-   */
-  staff?: Staff | null;
-
-  /**
-   * Information about wheelchair places.
-   * `null` indicates there are no places, `undefined` or missing property indicates unknown.
-   */
-  wheelchairPlaces?: WheelchairPlaces | null;
-
-  /**
-   * Information about media.
-   * `null` indicates there is no media, `undefined` or missing property indicates unknown.
-   */
-  media?: Array<Media> | null;
-
-  /**
-   * Information about payment.
-   * `null` indicates there is no payment possible/required,
-   * `undefined` or missing property indicates unknown.
-   */
-  payment?: Payment;
-
   // - machine data fields -
 
   // -- wheelmap.pro fields --
@@ -137,39 +112,6 @@ export const PlacePropertiesSchema = new SimpleSchema({
     optional: true,
     accessibility: {
       question: t`Okay, now let\`s map the accessibility.`
-    }
-  },
-  staff: {
-    type: StaffSchema,
-    optional: true,
-    accessibility: {
-      question: t`Is there any staff on the premises?`
-    }
-  },
-  wheelchairPlaces: {
-    type: WheelchairPlacesSchema,
-    optional: true,
-    accessibility: {
-      question: t`Are there any spaces reserved for people in wheelchairs?`
-    }
-  },
-  media: {
-    type: Array,
-    optional: true,
-    accessibility: {
-      question: t`Is there any media available?`,
-      questionMore: t`Is there more media available?`,
-      description: t`e.g. menus, exhibits or presentations`
-    }
-  },
-  'media.$': {
-    type: MediaSchema
-  },
-  payment: {
-    type: PaymentSchema,
-    optional: true,
-    accessibility: {
-      question: t`Is there any payment possible?`
     }
   },
   // machine data fields

@@ -2,24 +2,42 @@ import { Accessibility, AccessibilitySchema } from '../src/accessibility';
 import { personalProfileMinimumFixture } from './personal-profile.test';
 import { restroomMinimumFixture } from './restroom.test';
 import { entranceMinimumFixture } from './entrance.test';
+import { wheelchairPlacesMinimumFixture } from './wheelchair-places.test';
+import { mediaFormatMinimumFixture } from './media.test';
+import { staffMinimumFixture } from './staff.test';
+import { paymentMinimumFixture } from './payment.test';
 
 export const accessibilityMinimumFixture: Accessibility = {};
+
+const accessibilityWithNullsFixture: Accessibility = {
+  entrances: null,
+  restrooms: null,
+  staff: null,
+  wheelchairPlaces: null,
+  media: null,
+  payment: null
+};
 
 const accessibilityWithOptionalsFixture: Accessibility = {
   accessibleWith: personalProfileMinimumFixture,
   partiallyAccessibleWith: personalProfileMinimumFixture,
   offersActivitiesForPeopleWith: personalProfileMinimumFixture,
-  staff: {},
-  parking: {},
+  staff: staffMinimumFixture,
+  wheelchairPlaces: wheelchairPlacesMinimumFixture,
+  media: [mediaFormatMinimumFixture],
+  payment: paymentMinimumFixture,
+  entrances: [entranceMinimumFixture, entranceMinimumFixture],
+  restrooms: [restroomMinimumFixture, restroomMinimumFixture],
   ratingSpacious: 1,
   isWellLit: true,
   isQuiet: true,
   isSmoking: true,
   isNonSmoking: true,
+  serviceContact: 'string',
+  // todo
+  parking: {},
   ground: {},
   pathways: {},
-  entrances: [entranceMinimumFixture, entranceMinimumFixture],
-  restrooms: [restroomMinimumFixture, restroomMinimumFixture],
   sitemap: {},
   lifts: [{}, {}],
   switches: [{}, {}],
@@ -30,19 +48,17 @@ const accessibilityWithOptionalsFixture: Accessibility = {
   changingRoom: {},
   stage: {},
   cashRegister: {},
-  wheelchairPlaces: {},
   tables: {},
   seats: {},
-  serviceContact: 'string',
   services: {},
   tactileGuideStrips: {},
   infoDesk: {},
-  signage: {},
-  media: [{}, {}]
+  signage: {}
 };
 
 const allValidFixtures = Object.freeze([
   accessibilityMinimumFixture,
+  accessibilityWithNullsFixture,
   accessibilityWithOptionalsFixture
 ]);
 

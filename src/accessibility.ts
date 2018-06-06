@@ -6,6 +6,10 @@ import './simpl-schema-extensions';
 import { PersonalProfile, PersonalProfileSchema } from './personal-profile';
 import { Entrance, EntranceSchema } from './entrance';
 import { Restroom, RestroomSchema } from './restroom';
+import { Staff, StaffSchema } from './staff';
+import { WheelchairPlaces, WheelchairPlacesSchema } from './wheelchair-places';
+import { Media, MediaSchema } from './media';
+import { Payment, PaymentSchema } from './payment';
 
 export interface Accessibility {
   /// @deprecated
@@ -15,7 +19,13 @@ export interface Accessibility {
   /// @deprecated
   offersActivitiesForPeopleWith?: PersonalProfile;
   // areas?: Array<Area>;
-  staff?: any; // TODO define type
+
+  /**
+   * Information about the staff.
+   * `null` indicates there is no staff, `undefined` or missing property indicates unknown.
+   */
+  staff?: Staff | null;
+
   parking?: any; // TODO define type
 
   // QUESTION what are the allowed numbers for this rating
@@ -29,42 +39,41 @@ export interface Accessibility {
   isNonSmoking?: boolean;
   ground?: any; // TODO define type
   pathways?: any; // TODO define type
-  // QUESTION equipment??, can entrances be disrupted/broken?
-  entrances?: ArrayLike<Entrance>;
-  // QUESTION equipment?
-  restrooms?: ArrayLike<Restroom>;
-  // QUESTION equipment?
+  entrances?: ArrayLike<Entrance> | null;
+  restrooms?: ArrayLike<Restroom> | null;
   sitemap?: any; // TODO define type
-  // QUESTION equipment?
   lifts?: [any]; // TODO define type
-  // QUESTION equipment?
   switches?: [any]; // TODO define type
-  // QUESTION equipment?
   vendingMachines?: [any]; // TODO define type
-  // QUESTION equipment?
   powerOutlets?: [any]; // TODO define type
-  // QUESTION equipment?
   beds?: [any]; // TODO define type
-  // QUESTION equipment?
   wardrobe?: any; // TODO define type
-  // QUESTION equipment?
   changingRoom?: any; // TODO define type,
-  // QUESTION equipment?
   stage?: any; // TODO define type,
-  // QUESTION equipment?
   cashRegister?: any; // TODO define type,
-  // QUESTION equipment?
-  wheelchairPlaces?: any; // TODO define type,
-  // QUESTION equipment?
+  /**
+   * Information about payment.
+   * `null` indicates there is no payment possible/required,
+   * `undefined` or missing property indicates unknown.
+   */
+  payment?: Payment | null;
+  /**
+   * Information about wheelchair places.
+   * `null` indicates there are no places, `undefined` or missing property indicates unknown.
+   */
+  wheelchairPlaces?: WheelchairPlaces | null;
   tables?: any; // TODO define type,
-  // QUESTION equipment?
   seats?: any; // TODO define type,
   serviceContact?: string;
   services?: any; // TODO define type,,
   tactileGuideStrips?: any; // TODO define type,
   infoDesk?: any; // TODO define type,
   signage?: any; // TODO define type,
-  media?: [any]; // TODO define type,
+  /**
+   * Information about media.
+   * `null` indicates there is no media, `undefined` or missing property indicates unknown.
+   */
+  media?: Array<Media> | null;
 }
 
 export const AccessibilitySchema = new SimpleSchema({
@@ -90,8 +99,37 @@ export const AccessibilitySchema = new SimpleSchema({
     }
   },
   staff: {
-    type: Object, // TODO define type
-    optional: true
+    type: StaffSchema,
+    optional: true,
+    accessibility: {
+      question: t`Is there any staff on the premises?`
+    }
+  },
+  wheelchairPlaces: {
+    type: WheelchairPlacesSchema,
+    optional: true,
+    accessibility: {
+      question: t`Are there any spaces reserved for people in wheelchairs?`
+    }
+  },
+  media: {
+    type: Array,
+    optional: true,
+    accessibility: {
+      question: t`Is there any media available?`,
+      questionMore: t`Is there more media available?`,
+      description: t`e.g. menus, exhibits or presentations`
+    }
+  },
+  'media.$': {
+    type: MediaSchema
+  },
+  payment: {
+    type: PaymentSchema,
+    optional: true,
+    accessibility: {
+      question: t`Is there any payment possible?`
+    }
   },
   parking: {
     type: Object, // TODO define type
@@ -190,10 +228,6 @@ export const AccessibilitySchema = new SimpleSchema({
     type: Object, // TODO define type
     optional: true
   },
-  wheelchairPlaces: {
-    type: Object, // TODO define type
-    optional: true
-  },
   tables: {
     type: Object, // TODO define type
     optional: true
@@ -221,10 +255,5 @@ export const AccessibilitySchema = new SimpleSchema({
   signage: {
     type: Object, // TODO define type
     optional: true
-  },
-  media: {
-    type: Array,
-    optional: true
-  },
-  'media.$': Object // TODO define type
+  }
 });
