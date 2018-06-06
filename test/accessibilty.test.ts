@@ -9,6 +9,7 @@ import { paymentMinimumFixture } from './payment.test';
 import { tablesMinimumFixture } from './tables.test';
 import { pathwaysMinimumFixture } from './pathways.test';
 import { parkingMinimumFixture } from './parking.test';
+import { groundMinimumFixture } from './ground.test';
 
 export const accessibilityMinimumFixture: Accessibility = {};
 
@@ -21,7 +22,8 @@ const accessibilityWithNullsFixture: Accessibility = {
   payment: null,
   tables: null,
   pathways: null,
-  parking: null
+  parking: null,
+  ground: null
 };
 
 const accessibilityWithOptionalsFixture: Accessibility = {
@@ -43,8 +45,8 @@ const accessibilityWithOptionalsFixture: Accessibility = {
   serviceContact: 'string',
   pathways: pathwaysMinimumFixture,
   parking: parkingMinimumFixture,
+  ground: groundMinimumFixture,
   // TODO
-  ground: {},
   sitemap: {},
   lifts: [{}, {}],
   switches: [{}, {}],

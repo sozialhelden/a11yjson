@@ -13,6 +13,7 @@ import { Payment, PaymentSchema } from './payment';
 import { AccessibleTablesPrefab, Tables, TablesSchema } from './tables';
 import { Pathways, PathwaysSchema } from './pathways';
 import { Parking, ParkingSchema } from './parking';
+import { Ground, GroundSchema } from './ground';
 
 export interface Accessibility {
   /// @deprecated
@@ -40,7 +41,7 @@ export interface Accessibility {
   // QUESTION this should not be split across to fields, should rather be smoking: unknown | forbidden | allowed;
   isSmoking?: boolean;
   isNonSmoking?: boolean;
-  ground?: any; // TODO define type
+  ground?: Ground | null;
   pathways?: Pathways | null;
   entrances?: ArrayLike<Entrance> | null;
   restrooms?: ArrayLike<Restroom> | null;
@@ -140,11 +141,27 @@ export const AccessibilitySchema = new SimpleSchema({
   },
   parking: {
     type: ParkingSchema,
-    optional: true
+    optional: true,
+    accessibility: {
+      question: t`Is there parking attached to this place?`
+    }
+  },
+  ground: {
+    type: GroundSchema,
+    optional: true,
+    accessibility: {
+      question: t`Is there a ground next to this place?`
+    }
   },
   ratingSpacious: {
     type: Number,
-    optional: true
+    optional: true,
+    min: 0,
+    max: 1,
+    accessibility: {
+      question: t`How spacious is this place?`,
+      componentHint: 'StarRating'
+    }
   },
   isWellLit: {
     type: Boolean,
@@ -160,10 +177,6 @@ export const AccessibilitySchema = new SimpleSchema({
   },
   isNonSmoking: {
     type: Boolean,
-    optional: true
-  },
-  ground: {
-    type: Object, // TODO define type
     optional: true
   },
   pathways: {

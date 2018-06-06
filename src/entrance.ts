@@ -43,8 +43,8 @@ export const EntranceSchema = new SimpleSchema({
     min: 0,
     max: 1,
     accessibility: {
-      // QUESTION - this is very subjective, should not exist as a question like this
-      question: t`How would you rate this entrance for wheelchair users?`
+      question: t`How would you rate this entrance for wheelchair users?`,
+      componentHint: 'AccessibilityRating'
     }
   },
   isMainEntrance: {

@@ -99,7 +99,12 @@ export const RestroomSchema = createSchemaInstance(
     ratingForWheelchair: {
       type: Number,
       optional: true,
-      accessibility: {}
+      min: 0,
+      max: 1,
+      accessibility: {
+        question: t`How would you rate this entrance for wheelchair users?`,
+        componentHint: 'AccessibilityRating'
+      }
     },
     turningSpaceInside: quantityDefinition(LengthSchema),
     hasSupportRails: {
