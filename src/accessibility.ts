@@ -10,6 +10,7 @@ import { Staff, StaffSchema } from './staff';
 import { WheelchairPlaces, WheelchairPlacesSchema } from './wheelchair-places';
 import { Media, MediaSchema } from './media';
 import { Payment, PaymentSchema } from './payment';
+import { AccessibleTablesPrefab, Tables, TablesSchema } from './tables';
 
 export interface Accessibility {
   /// @deprecated
@@ -62,7 +63,11 @@ export interface Accessibility {
    * `null` indicates there are no places, `undefined` or missing property indicates unknown.
    */
   wheelchairPlaces?: WheelchairPlaces | null;
-  tables?: any; // TODO define type,
+  /**
+   * Information about tables.
+   * `null` indicates there are no tables, `undefined` or missing property indicates unknown.
+   */
+  tables?: Tables | null;
   seats?: any; // TODO define type,
   serviceContact?: string;
   services?: any; // TODO define type,,
@@ -183,6 +188,19 @@ export const AccessibilitySchema = new SimpleSchema({
     }
   },
   'restrooms.$': RestroomSchema,
+  tables: {
+    type: TablesSchema,
+    optional: true,
+    accessibility: {
+      question: t`Are there any tables here?`,
+      options: [
+        {
+          label: t`Accessible table`,
+          option: AccessibleTablesPrefab
+        }
+      ]
+    }
+  },
   sitemap: {
     type: Object, // TODO define type
     optional: true
@@ -225,10 +243,6 @@ export const AccessibilitySchema = new SimpleSchema({
     optional: true
   },
   cashRegister: {
-    type: Object, // TODO define type
-    optional: true
-  },
-  tables: {
     type: Object, // TODO define type
     optional: true
   },

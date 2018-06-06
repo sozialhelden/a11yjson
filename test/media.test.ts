@@ -1,10 +1,10 @@
 import { Media, MediaSchema } from '../src/media';
 
-export const mediaFormatMinimumFixture: Media = {
+export const mediaMinimumFixture: Media = {
   type: 'document'
 };
 
-const mediaFormatWithOptionalsFixture: Media = {
+const mediaWithOptionalsFixture: Media = {
   type: 'document',
   name: 'menu',
   isBraille: true,
@@ -22,24 +22,17 @@ const mediaFormatWithOptionalsFixture: Media = {
   isInformationReadableWhileSeated: true
 };
 
-const allValidFixtures = Object.freeze([
-  mediaFormatMinimumFixture,
-  mediaFormatWithOptionalsFixture
-]);
+const allValidFixtures = Object.freeze([mediaMinimumFixture, mediaWithOptionalsFixture]);
 
-const invalidMediaFormatFixture = {
+const invalidMediaFixture = {
   bar: []
 };
 
-const invalidTypeMediaFormatFixture = {
+const invalidTypeMediaFixture = {
   type: 'sausage'
 };
 
-const allInvalidFixtures = Object.freeze([
-  {},
-  invalidMediaFormatFixture,
-  invalidTypeMediaFormatFixture
-]);
+const allInvalidFixtures = Object.freeze([{}, invalidMediaFixture, invalidTypeMediaFixture]);
 
 describe('MediaSchema Schema', () => {
   it('tests field as invalid', () => {

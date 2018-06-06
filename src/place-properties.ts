@@ -7,10 +7,6 @@ import { AllowedAreaTypes, AreaTypes } from './area-types';
 import { Accessibility, AccessibilitySchema } from './accessibility';
 import { ExternalId, ExternalIdSchemaDefinition } from './external-id';
 import { Address, AddressSchema } from './address';
-import { StaffSchema, Staff } from './staff';
-import { WheelchairPlaces, WheelchairPlacesSchema } from './wheelchair-places';
-import { Media, MediaSchema } from './media';
-import { Payment, PaymentSchema } from './payment';
 
 export interface PlaceProperties {
   // properties

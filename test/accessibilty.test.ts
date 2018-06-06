@@ -3,9 +3,10 @@ import { personalProfileMinimumFixture } from './personal-profile.test';
 import { restroomMinimumFixture } from './restroom.test';
 import { entranceMinimumFixture } from './entrance.test';
 import { wheelchairPlacesMinimumFixture } from './wheelchair-places.test';
-import { mediaFormatMinimumFixture } from './media.test';
+import { mediaMinimumFixture } from './media.test';
 import { staffMinimumFixture } from './staff.test';
 import { paymentMinimumFixture } from './payment.test';
+import { tablesMinimumFixture } from './tables.test';
 
 export const accessibilityMinimumFixture: Accessibility = {};
 
@@ -15,7 +16,8 @@ const accessibilityWithNullsFixture: Accessibility = {
   staff: null,
   wheelchairPlaces: null,
   media: null,
-  payment: null
+  payment: null,
+  tables: null
 };
 
 const accessibilityWithOptionalsFixture: Accessibility = {
@@ -24,17 +26,18 @@ const accessibilityWithOptionalsFixture: Accessibility = {
   offersActivitiesForPeopleWith: personalProfileMinimumFixture,
   staff: staffMinimumFixture,
   wheelchairPlaces: wheelchairPlacesMinimumFixture,
-  media: [mediaFormatMinimumFixture],
+  media: [mediaMinimumFixture],
   payment: paymentMinimumFixture,
   entrances: [entranceMinimumFixture, entranceMinimumFixture],
   restrooms: [restroomMinimumFixture, restroomMinimumFixture],
+  tables: tablesMinimumFixture,
   ratingSpacious: 1,
   isWellLit: true,
   isQuiet: true,
   isSmoking: true,
   isNonSmoking: true,
   serviceContact: 'string',
-  // todo
+  // TODO
   parking: {},
   ground: {},
   pathways: {},
@@ -48,7 +51,6 @@ const accessibilityWithOptionalsFixture: Accessibility = {
   changingRoom: {},
   stage: {},
   cashRegister: {},
-  tables: {},
   seats: {},
   services: {},
   tactileGuideStrips: {},

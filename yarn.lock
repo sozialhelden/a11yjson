@@ -2922,8 +2922,8 @@ lodash.map@^4.5.1:
   resolved "https://registry.yarnpkg.com/lodash.map/-/lodash.map-4.6.0.tgz#771ec7839e3473d9c4cde28b19394c3562f4f6d3"
 
 lodash.merge@^4.6.0:
-  version "4.6.0"
-  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.0.tgz#69884ba144ac33fe699737a6086deffadd0f89c5"
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.1.tgz#adc25d9cb99b9391c59624f379fbba60d7111d54"
 
 lodash.omit@^4.5.0:
   version "4.5.0"
@@ -4152,8 +4152,8 @@ signal-exit@^3.0.0, signal-exit@^3.0.2:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
 
 simpl-schema@^1.1.0:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/simpl-schema/-/simpl-schema-1.4.1.tgz#40e143556076f7a6337dc1b3d5c26fb61dec905b"
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/simpl-schema/-/simpl-schema-1.5.0.tgz#f90809c5ffb9fe7c4232a1b1d805c51862650f1a"
   dependencies:
     clone "^2.1.1"
     extend "^3.0.1"

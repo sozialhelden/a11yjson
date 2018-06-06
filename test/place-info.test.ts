@@ -3,7 +3,6 @@ import { forEachKeyInSchemas } from '../src/schema-helpers';
 import { PlaceInfo, PlaceInfoSchema } from '../src/place-info';
 import { validPointGeometryFixture } from './geometry.test';
 import { placePropertiesMinimumFixture } from './place-properties.test';
-import { gettext, addLocale, useLocale } from 'c-3po';
 
 const placeMinimumFixture: PlaceInfo = {
   properties: placePropertiesMinimumFixture,

@@ -4,9 +4,6 @@ import { validExternalIdWithExtendedDataFixture } from './external-id.test';
 import { accessibilityMinimumFixture } from './accessibilty.test';
 import { AllowedAreaTypes } from '../src/area-types';
 import { structuredAddressMinimalFixture } from './address.test';
-import { staffMinimumFixture } from './staff.test';
-import { wheelchairPlacesMinimumFixture } from './wheelchair-places.test';
-import { mediaFormatMinimumFixture } from './media.test';
 
 export const placePropertiesMinimumFixture: PlaceProperties = {
   name: 'T-Mobile Sandy',
