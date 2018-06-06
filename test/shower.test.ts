@@ -20,10 +20,7 @@ const showerWithOptionalsFixture: Shower = {
   }
 };
 
-const allValidFixtures = Object.freeze([
-  showerMinimumFixture,
-  showerWithOptionalsFixture
-]);
+const allValidFixtures = Object.freeze([showerMinimumFixture, showerWithOptionalsFixture]);
 
 const invalidShowerFixture = {
   bar: []

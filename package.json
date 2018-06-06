@@ -1,6 +1,6 @@
 {
   "name": "@sozialhelden/ac-format",
-  "version": "0.5.8",
+  "version": "0.5.9",
   "description": "",
   "keywords": [],
   "main": "dist/ac-format.umd.js",
@@ -33,6 +33,7 @@
     "semantic-release-prepare": "ts-node tools/semantic-release-prepare",
     "precommit": "lint-staged",
     "format": "tslint --fix src/**/*.ts",
+    "prettier": "npx prettier --fix src/**/*.ts test/**/*.ts --write --single-quote",
     "deploy": "yarn build && yarn test:prod && yarn publish --access public"
   },
   "lint-staged": {

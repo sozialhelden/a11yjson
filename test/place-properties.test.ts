@@ -20,7 +20,8 @@ export const placePropertiesWithNullFixture: PlaceProperties = {
   address: null,
   accessibility: null,
   wheelchairPlaces: null,
-  media: null
+  media: null,
+  payment: null
 };
 
 const placePropertiesWithOptionalsFixture: PlaceProperties = {

@@ -17,10 +17,7 @@ const toiletWithOptionalsFixture: Toilet = {
   }
 };
 
-const allValidFixtures = Object.freeze([
-  toiletMinimumFixture,
-  toiletWithOptionalsFixture
-]);
+const allValidFixtures = Object.freeze([toiletMinimumFixture, toiletWithOptionalsFixture]);
 
 const invalidToiletFixture = {
   bar: []

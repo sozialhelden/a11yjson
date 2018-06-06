@@ -10,9 +10,7 @@ type ForEachKeyInSchemasCallbackFunction = (
 /**
  *  Returns true if the given SimpleSchema definition contains a SimpleSchema instance
  */
-export const isDefinitionTypeSchema = (
-  definition: SchemaDefinition
-): boolean => {
+export const isDefinitionTypeSchema = (definition: SchemaDefinition): boolean => {
   const type = definition.type as SimpleSchemaGroup;
   // Check whether we need to handle multiple definitions & non SimpleSchemaGroups
   if (
@@ -30,9 +28,7 @@ export const isDefinitionTypeSchema = (
 /**
  * Returns the SimpleSchema of the type of the given definition
  */
-export const getFirstSchemaFromDefinition = (
-  definition: SchemaDefinition
-): SimpleSchema => {
+export const getFirstSchemaFromDefinition = (definition: SchemaDefinition): SimpleSchema => {
   const type = definition.type as SimpleSchemaGroup;
   // Check whether we need to handle multiple definitions & non SimpleSchemaGroups
   if (type && type.definitions && type.definitions[0]) {
@@ -45,9 +41,7 @@ export const getFirstSchemaFromDefinition = (
 /**
  *  Returns true if the given SimpleSchema definition contains an array
  */
-export const isDefinitionTypeArray = (
-  definition: SchemaDefinition
-): boolean => {
+export const isDefinitionTypeArray = (definition: SchemaDefinition): boolean => {
   const type = definition.type as SimpleSchemaGroup;
   // Check whether we need to handle multiple definitions
   if (type && type.definitions[0] && type.definitions[0].type === Array) {
@@ -87,12 +81,7 @@ export const forEachKeyInSchemas = (
     ) {
       if (isDefinitionTypeSchema(origDefinition)) {
         const subSchema = getFirstSchemaFromDefinition(origDefinition);
-        hasChildren = forEachKeyInSchemas(
-          subSchema,
-          callback,
-          '',
-          pathFromRoot
-        );
+        hasChildren = forEachKeyInSchemas(subSchema, callback, '', pathFromRoot);
       } else if (isDefinitionTypeArray(origDefinition)) {
         const arrayPath = definitionPath + '.$';
         const rootArrayPath = pathFromRoot + '.$';
@@ -100,27 +89,12 @@ export const forEachKeyInSchemas = (
         const arrayFieldDefinition = schema.schema(arrayPath);
         if (isDefinitionTypeSchema(arrayFieldDefinition)) {
           const subSchema = getFirstSchemaFromDefinition(arrayFieldDefinition);
-          hasChildren = forEachKeyInSchemas(
-            subSchema,
-            callback,
-            '',
-            rootArrayPath
-          );
+          hasChildren = forEachKeyInSchemas(subSchema, callback, '', rootArrayPath);
         } else {
-          hasChildren = forEachKeyInSchemas(
-            schema,
-            callback,
-            arrayPath,
-            rootArrayPath
-          );
+          hasChildren = forEachKeyInSchemas(schema, callback, arrayPath, rootArrayPath);
         }
       } else {
-        hasChildren = forEachKeyInSchemas(
-          schema,
-          callback,
-          definitionPath,
-          pathFromRoot
-        );
+        hasChildren = forEachKeyInSchemas(schema, callback, definitionPath, pathFromRoot);
       }
     }
 

@@ -62,9 +62,8 @@ const SchemaWithLengthField = new SimpleSchema({ field: LengthSchema });
 
 describe('Length Schema', () => {
   it('schema unit is added', () => {
-    const preferredUnit = LengthQuantitySchema.getDefinition('unit', [
-      'accessibility'
-    ]).accessibility.preferredUnit;
+    const preferredUnit = LengthQuantitySchema.getDefinition('unit', ['accessibility'])
+      .accessibility.preferredUnit;
     expect(preferredUnit).toEqual('length');
   });
   it('determineUnitKind', () => {
@@ -76,14 +75,10 @@ describe('Length Schema', () => {
     }).toThrow('No key passed into determineUnitKind for non Quantity schema');
 
     expect(determineUnitKind(LengthQuantitySchema)).toEqual('length');
-    expect(determineUnitKind(LengthQuantitySchema, 'invalid')).toEqual(
-      'length'
-    );
+    expect(determineUnitKind(LengthQuantitySchema, 'invalid')).toEqual('length');
     expect(determineUnitKind(SchemaWithLengthField, 'field')).toEqual('length');
 
-    expect(determineUnitKind(SchemaWithLengthField, 'invalid')).toEqual(
-      'unknown'
-    );
+    expect(determineUnitKind(SchemaWithLengthField, 'invalid')).toEqual('unknown');
   });
   it('tests field as invalid', () => {
     allInvalidFixtures.forEach(value => {

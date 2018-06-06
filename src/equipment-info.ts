@@ -4,10 +4,7 @@ import SimpleSchema from 'simpl-schema';
 import './simpl-schema-extensions';
 
 import { PointGeometry, PointGeometrySchema } from './geometry';
-import {
-  EquipmentProperties,
-  EquipmentPropertiesSchema
-} from './equipment-properties';
+import { EquipmentProperties, EquipmentPropertiesSchema } from './equipment-properties';
 
 export interface EquipmentInfo {
   formatVersion?: string;

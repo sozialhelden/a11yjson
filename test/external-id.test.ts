@@ -8,9 +8,7 @@ export const validExternalIdWithExtendedDataFixture = {
   evaNumber: 123
 };
 
-const allValidFixtures = Object.freeze([
-  validExternalIdWithExtendedDataFixture
-]);
+const allValidFixtures = Object.freeze([validExternalIdWithExtendedDataFixture]);
 
 const invalidExternalIdWithJustAProviderFixture = {
   provider: 'Deutsche Bahn'

@@ -1,9 +1,6 @@
 import SimpleSchema from 'simpl-schema';
 
-import {
-  forEachKeyInSchemas,
-  getFirstSchemaFromDefinition
-} from '../src/schema-helpers';
+import { forEachKeyInSchemas, getFirstSchemaFromDefinition } from '../src/schema-helpers';
 
 // allow custom fields
 SimpleSchema.extendOptions(['accessibility']);
@@ -53,12 +50,7 @@ describe('Schema Helpers forEachKeyInSchemas', () => {
     const callback = jest
       .fn()
       .mockImplementation(
-        (
-          schema: SimpleSchema,
-          path: string,
-          pathFromRoot: string,
-          hasChildren: boolean
-        ) => {
+        (schema: SimpleSchema, path: string, pathFromRoot: string, hasChildren: boolean) => {
           allPaths.push(pathFromRoot);
         }
       );

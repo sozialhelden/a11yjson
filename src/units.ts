@@ -111,10 +111,7 @@ const makeQuantitySchema = (kind: string, defaultValue: string) => {
  * @param {string} key the key to the schema property to determine the unit of
  * @returns {string} 'unknown' or one of the js-quantities unit kinds (e.g. 'length')
  */
-export const determineUnitKind = (
-  schema: SimpleSchema,
-  key?: string
-): string => {
+export const determineUnitKind = (schema: SimpleSchema, key?: string): string => {
   if (!SimpleSchema.isSimpleSchema(schema)) {
     throw new Error('No simple schema passed to determineUnitKind');
   }
@@ -123,20 +120,14 @@ export const determineUnitKind = (
     key = 'unit';
   } else {
     if (!key) {
-      throw new Error(
-        'No key passed into determineUnitKind for non Quantity schema'
-      );
+      throw new Error('No key passed into determineUnitKind for non Quantity schema');
     }
 
     key = `${key}.unit`;
   }
 
   const definition = schema.getDefinition(key, ['accessibility']);
-  if (
-    !definition ||
-    !definition.accessibility ||
-    !definition.accessibility.preferredUnit
-  ) {
+  if (!definition || !definition.accessibility || !definition.accessibility.preferredUnit) {
     return 'unknown';
   }
 
@@ -159,11 +150,7 @@ export const LengthSchema = SimpleSchema.oneOf(LengthQuantitySchema, String);
  */
 export type Length = Quantity | string;
 
-export function quantityDefinition(
-  type: SchemaType,
-  optional: boolean = true,
-  accessibility?: {}
-) {
+export function quantityDefinition(type: SchemaType, optional: boolean = true, accessibility?: {}) {
   const base: SchemaDefinition = {
     type: LengthSchema,
     accessibility: {

@@ -1,7 +1,4 @@
-import {
-  PersonalProfile,
-  PersonalProfileSchema
-} from '../src/personal-profile';
+import { PersonalProfile, PersonalProfileSchema } from '../src/personal-profile';
 
 export const personalProfileMinimumFixture: PersonalProfile = {};
 

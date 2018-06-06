@@ -10,6 +10,7 @@ import { Address, AddressSchema } from './address';
 import { StaffSchema, Staff } from './staff';
 import { WheelchairPlaces, WheelchairPlacesSchema } from './wheelchair-places';
 import { Media, MediaSchema } from './media';
+import { Payment, PaymentSchema } from './payment';
 
 export interface PlaceProperties {
   // properties
@@ -50,6 +51,13 @@ export interface PlaceProperties {
    * `null` indicates there is no media, `undefined` or missing property indicates unknown.
    */
   media?: Array<Media> | null;
+
+  /**
+   * Information about payment.
+   * `null` indicates there is no payment possible/required,
+   * `undefined` or missing property indicates unknown.
+   */
+  payment?: Payment;
 
   // - machine data fields -
 
@@ -156,6 +164,13 @@ export const PlacePropertiesSchema = new SimpleSchema({
   },
   'media.$': {
     type: MediaSchema
+  },
+  payment: {
+    type: PaymentSchema,
+    optional: true,
+    accessibility: {
+      question: t`Is there any payment possible?`
+    }
   },
   // machine data fields
   infoPageUrl: {

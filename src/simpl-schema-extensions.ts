@@ -29,9 +29,7 @@ export function makeQuestionContext<T>(
 /**
  * A function that gets evaluated in a questionnaire context
  */
-export type QuestionFunction<T> = ((
-  context: QuestionFunctionContext<T>
-) => string);
+export type QuestionFunction<T> = ((context: QuestionFunctionContext<T>) => string);
 
 /**
  * Definition for a question, can be either a String, an Array of Strings (value will be picked at random),
@@ -96,8 +94,7 @@ export interface AccessibilitySchemaExtension<T> {
   deprecated?: boolean;
 }
 
-export interface EvaluatedAccessibilitySchemaExtension<T>
-  extends AccessibilitySchemaExtension<T> {
+export interface EvaluatedAccessibilitySchemaExtension<T> extends AccessibilitySchemaExtension<T> {
   /**
    * End user question to be asked
    */
