@@ -7,32 +7,50 @@ import { AllowedAreaTypes, AreaTypes } from './area-types';
 import { Accessibility, AccessibilitySchema } from './accessibility';
 import { ExternalId, ExternalIdSchemaDefinition } from './external-id';
 import { Address, AddressSchema } from './address';
+import { StaffSchema, Staff } from './staff';
 
 export interface PlaceProperties {
   // properties
+  /**
+   * The name of this place
+   */
   name?: string;
+  /**
+   * The address of this place.
+   * `null` indicates that this place has no address, `undefined` or missing property indicates unknown.
+   */
   address?: Address;
-  // QUESTION what is expected in description?
-  description?: string;
+  description?: string; // QUESTION: what is expected in description?
   phoneNumber?: string;
   category: string;
+  /**
+   * The accessibility of this place.
+   * `null` indicates that this place has no data, `undefined` or missing property indicates unknown.
+   */
   accessibility?: Accessibility;
 
-  // QUESTION merge with category/ies?
-  areaTypes?: ArrayLike<AreaTypes>;
+  areaTypes?: ArrayLike<AreaTypes>; // QUESTION: merge with category/ies?
 
-  // machine data fields
+  /**
+   * Information about the staff.
+   * `null` indicates there is no staff, `undefined` or missing property indicates unknown.
+   */
+  staff?: Staff | null;
 
-  // wheelmap.pro fields
+  // - machine data fields -
+
+  // -- wheelmap.pro fields --
+
   eventId?: string; // only valid for mapping event
   creatorId?: string; // only valid for mapping event
 
-  // accessibility-cloud fields
+  // -- accessibility-cloud fields --
+
   parentPlaceId?: string;
   sourceId?: string;
   sourceImportId?: string; // only valid for import
 
-  // references to external services
+  // -- references to external services --
   originalId?: string;
   ids?: Array<ExternalId>;
   originalData?: any;
@@ -97,6 +115,13 @@ export const PlacePropertiesSchema = new SimpleSchema({
     optional: true,
     accessibility: {
       question: t`Okay, now let\`s map the accessibility.`
+    }
+  },
+  staff: {
+    type: StaffSchema,
+    optional: true,
+    accessibility: {
+      question: t`Is there any staff on the premises?`
     }
   },
   // machine data fields
