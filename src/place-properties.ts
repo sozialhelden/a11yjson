@@ -9,6 +9,7 @@ import { ExternalId, ExternalIdSchemaDefinition } from './external-id';
 import { Address, AddressSchema } from './address';
 import { StaffSchema, Staff } from './staff';
 import { WheelchairPlaces, WheelchairPlacesSchema } from './wheelchair-places';
+import { Media, MediaSchema } from './media';
 
 export interface PlaceProperties {
   // properties
@@ -43,6 +44,12 @@ export interface PlaceProperties {
    * `null` indicates there are no places, `undefined` or missing property indicates unknown.
    */
   wheelchairPlaces?: WheelchairPlaces | null;
+
+  /**
+   * Information about media.
+   * `null` indicates there is no media, `undefined` or missing property indicates unknown.
+   */
+  media?: Array<Media> | null;
 
   // - machine data fields -
 
@@ -137,6 +144,18 @@ export const PlacePropertiesSchema = new SimpleSchema({
     accessibility: {
       question: t`Are there any spaces reserved for people in wheelchairs?`
     }
+  },
+  media: {
+    type: Array,
+    optional: true,
+    accessibility: {
+      question: t`Is there any media available?`,
+      questionMore: t`Is there more media available?`,
+      description: t`e.g. menus, exhibits or presentations`
+    }
+  },
+  'media.$': {
+    type: MediaSchema
   },
   // machine data fields
   infoPageUrl: {

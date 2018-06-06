@@ -11,15 +11,11 @@ const doorWithOptionalsFixture: Door = {
   isEasyToHoldOpen: true,
   hasErgonomicDoorHandle: true,
   isRevolving: true,
-  // QUESTION could this be made more generic?
   needsRadarKey: true,
   needsEuroKey: true
 };
 
-const allValidFixtures = Object.freeze([
-  doorMinimumFixture,
-  doorWithOptionalsFixture
-]);
+const allValidFixtures = Object.freeze([doorMinimumFixture, doorWithOptionalsFixture]);
 
 const invalidDoorFixture = {
   bar: []

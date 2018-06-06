@@ -6,6 +6,7 @@ import { AllowedAreaTypes } from '../src/area-types';
 import { structuredAddressMinimalFixture } from './address.test';
 import { staffMinimumFixture } from './staff.test';
 import { wheelchairPlacesMinimumFixture } from './wheelchair-places.test';
+import { mediaFormatMinimumFixture } from './media.test';
 
 export const placePropertiesMinimumFixture: PlaceProperties = {
   name: 'T-Mobile Sandy',
@@ -18,7 +19,8 @@ export const placePropertiesWithNullFixture: PlaceProperties = {
   staff: null,
   address: null,
   accessibility: null,
-  wheelchairPlaces: null
+  wheelchairPlaces: null,
+  media: null
 };
 
 const placePropertiesWithOptionalsFixture: PlaceProperties = {
@@ -33,6 +35,7 @@ const placePropertiesWithOptionalsFixture: PlaceProperties = {
   description: 'Some Description',
   staff: staffMinimumFixture,
   wheelchairPlaces: wheelchairPlacesMinimumFixture,
+  media: [mediaFormatMinimumFixture],
   originalData: 'originalData',
   eventId: 'T8j8nnnqMpbxpLxZu',
   creatorId: 'T8j8nnnqMpbxpLxZu',
