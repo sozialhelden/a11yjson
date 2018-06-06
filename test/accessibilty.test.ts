@@ -7,6 +7,8 @@ import { mediaMinimumFixture } from './media.test';
 import { staffMinimumFixture } from './staff.test';
 import { paymentMinimumFixture } from './payment.test';
 import { tablesMinimumFixture } from './tables.test';
+import { pathwaysMinimumFixture } from './pathways.test';
+import { parkingMinimumFixture } from './parking.test';
 
 export const accessibilityMinimumFixture: Accessibility = {};
 
@@ -17,7 +19,9 @@ const accessibilityWithNullsFixture: Accessibility = {
   wheelchairPlaces: null,
   media: null,
   payment: null,
-  tables: null
+  tables: null,
+  pathways: null,
+  parking: null
 };
 
 const accessibilityWithOptionalsFixture: Accessibility = {
@@ -37,10 +41,10 @@ const accessibilityWithOptionalsFixture: Accessibility = {
   isSmoking: true,
   isNonSmoking: true,
   serviceContact: 'string',
+  pathways: pathwaysMinimumFixture,
+  parking: parkingMinimumFixture,
   // TODO
-  parking: {},
   ground: {},
-  pathways: {},
   sitemap: {},
   lifts: [{}, {}],
   switches: [{}, {}],

@@ -12,6 +12,7 @@ import { Media, MediaSchema } from './media';
 import { Payment, PaymentSchema } from './payment';
 import { AccessibleTablesPrefab, Tables, TablesSchema } from './tables';
 import { Pathways, PathwaysSchema } from './pathways';
+import { Parking, ParkingSchema } from './parking';
 
 export interface Accessibility {
   /// @deprecated
@@ -28,7 +29,7 @@ export interface Accessibility {
    */
   staff?: Staff | null;
 
-  parking?: any; // TODO define type
+  parking?: Parking | null;
 
   // QUESTION what are the allowed numbers for this rating
   ratingSpacious?: number;
@@ -138,7 +139,7 @@ export const AccessibilitySchema = new SimpleSchema({
     }
   },
   parking: {
-    type: Object, // TODO define type
+    type: ParkingSchema,
     optional: true
   },
   ratingSpacious: {

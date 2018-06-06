@@ -9,9 +9,9 @@ export interface Pathways {
   width: Length;
   widthAtObstacles?: Length;
   /// grade in percent as calculated by `100 * rise / run` or the tangent of the angle of inclination times 100
-  maxLongitudinalSlope?: number;
+  maxLongitudinalSlope?: number; // TODO use something for >10
   /// grade in percent as calculated by `100 * rise / run` or the tangent of the angle of inclination times 100
-  maxLateralSlope?: number;
+  maxLateralSlope?: number; // TODO use something for >10
 }
 
 export const PathwaysSchema = new SimpleSchema({

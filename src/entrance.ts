@@ -15,7 +15,7 @@ export interface Entrance {
   isLevel?: boolean;
   // QUESTION merge with slopeAngle in some way (e.g. > 0)
   hasSlope?: boolean;
-  // TODO create unit for this
+  // TODO create unit for this for eg. >10
   /// grade in percent as calculated by `100 * rise / run` or the tangent of the angle of inclination times 100
   slopeAngle?: number;
   hasRemovableRamp?: boolean;
