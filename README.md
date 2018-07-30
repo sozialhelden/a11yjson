@@ -1,4 +1,4 @@
-# ac-format - Accessibility format schema definitions for accessibility.cloud
+# ac-format — A unified accessibility data schema
 
 This repository contains TypeScript types of a unified data format describing the accessibility of places and facilities. We want this to eventually capture every possible attribute and data point provided by mapping and building related APIs. It is used by [accessibility.cloud](https://www.accessibility.cloud), one of the biggest databases providing accessibility data.
 
