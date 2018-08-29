@@ -1,14 +1,12 @@
-# ac-format — A Unified Accessibility Data Schema
+# ac-format – a unified accessibility data schema
 
-This repository contains TypeScript types of a unified data format describing the accessibility of places and facilities relevant for mobility.
+This repository contains TypeScript types of a unified data format describing the accessibility of places, facilities and services.
 
 It is the result of looking at many accessibility datasets that we got from organizations all over the world. Our aim is to allow any other accessibility API data format to be convertible to this harmonized format.
 
-By describing physical properties of things, its aim is to make the world more accessible for everybody — which is much easier if everybody who shares accessibility data uses the same language!
+By describing physical properties of things, its goal is to make the world more accessible for everybody — which is much easier if everybody who shares accessibility data uses the same language.
 
 The data format is used by [accessibility.cloud](https://www.accessibility.cloud), one of the biggest data exchange providers for accessibility data, by [Wheelmap.org](https://wheelmap.org/beta), and many others.
-
-## Schema
 
 The data schema is defined as TypeScript types. Data can be validated using [SimpleSchema](https://github.com/aldeed/simple-schema-js).
 
