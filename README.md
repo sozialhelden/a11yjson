@@ -4,9 +4,9 @@ This repository contains a unified data format that describes the accessibility 
 
 It is the result of looking at many accessibility datasets that we got from organizations all over the world. Our aim is to allow any other accessibility API data format to be convertible to this harmonized format in a way that makes the result easier to consume.
 
-By describing physical properties of things, it should eventually make the world more accessible for everybody — which is easier if everybody uses the same (or at least similar) language when sharing accessibility data.
+Our goal is to make the world more accessible for everybody — which is easier if everybody uses the same (or at least similar) language when sharing accessibility data.
 
-The schema is used by [accessibility.cloud](https://www.accessibility.cloud), one of the biggest data exchange providers for accessibility data, by [Wheelmap.org](https://wheelmap.org), and other organizations. Consumable data in this schema exists for many international sources, which you can find (mostly as open data) on https://www.accessibility.cloud.
+The schema is used by [accessibility.cloud](https://www.accessibility.cloud), one of the biggest data exchange providers for accessibility data, by [Wheelmap.org](https://wheelmap.org), and other organizations. Consumable data in this schema has been provided by many international sources, which you can find (mostly as open data) on https://www.accessibility.cloud.
 
 The definitions are written in TypeScript for compile-time validation. It supports validating data records at runtime using [SimpleSchema](https://github.com/aldeed/simple-schema-js).
 
