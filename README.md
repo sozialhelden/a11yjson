@@ -12,11 +12,11 @@ The definitions are written in TypeScript for compile-time validation. It suppor
 
 ## Physical quantities, rating scales and personal profiles
 
-Unfortunately, many datasets claim that places are (not) accessible for arbitrary categories of people. As an example, some wheelchair can climb stairs, but if an entrance has stairs, the data source claims it is inaccessible, which makes the data unusable for this target group.
+Unfortunately, we found many datasets claiming that places are (not) accessible for arbitrary categories of people. As an example, a data source might claim that a place is not accessible for wheelchair users, but does not mention that this is because the entrance has a step. For wheelchair users that can climb a step as long as it is not too high, a data point like this is misleading.
 
-The solution to this is to let each individual make their own decision about the accessibility of something – if you collect or share data, try to collect, display and share physical attributes of places instead of target group-based data. If possible, also avoid rating scales, as they can be misinterpreted.
+A solution for better data quality is to let each individual make their own decision about the accessibility of something – if you collect or share data, measure physical attributes of places instead of target group-based data. If possible, also avoid rating scales, as they can be misinterpreted.
 
-### Example with information that can be misleading or difficult to interpret
+### Bad examples with better solutions
 
 - Bad: ‘The place is not accessible in a wheelchair’ - Better: ‘There is one step at the entrance, its height is 2 inches’
 - Bad: ‘The sitemap is accessible for blind people’ – Better: ‘The sitemap is available in braille’ or ‘The sitemap has high contrast and uses big fonts’
@@ -34,7 +34,7 @@ The solution to this is to let each individual make their own decision about the
 - ‘The audition hall has an induction loop’
 - ‘The menu has a photo of each dish’
 
-While we need datasets and UIs that are easy to understand, the data itself should define measurable properties of a place only. Interpretation should be a separated step. **Describe places, not people!**
+While we need datasets and UIs that have a simple design and are easy to understand, the data itself should define measurable properties of a place only. Interpretation should always be a separated step. **Describe places, not people!**
 
 ## Quantities
 
