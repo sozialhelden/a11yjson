@@ -10,6 +10,10 @@ The schema is used by [accessibility.cloud](https://www.accessibility.cloud), on
 
 The definitions are written in TypeScript for compile-time validation. It supports validating data records at runtime using [SimpleSchema](https://github.com/aldeed/simple-schema-js).
 
+## Most important entities
+
+The format describes PoIs as in the [PlaceInfo](./src/place-info.ts) type. Places can have equipment that uses realtime information, like elevators, or escalators. This is described in the [EquipmentInfo](./src/equipment-info.ts) type.
+
 ## Physical quantities, rating scales and personal profiles
 
 Unfortunately, we found many datasets claiming that places are (not) accessible for arbitrary categories of people. As an example, a data source might claim that a place is not accessible for wheelchair users, but does not mention that this is because the entrance has a step. For wheelchair users that can climb a step as long as it is not too high, a data point like this is misleading.
