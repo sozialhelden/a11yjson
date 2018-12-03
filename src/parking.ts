@@ -12,10 +12,8 @@ export interface WheelchairParking {
   count?: number; // TODO use something for >10
   isLocatedInside?: boolean;
   width?: Length;
-  // QUESTION tables have depth
   length?: Length;
-  // QUESTION are the other not maxWidth/Length as well??
-  maxHeight?: Length;
+  maxVehicleHeight?: Length;
   hasDedicatedSignage?: boolean;
   paymentBySpace?: boolean;
   paymentByZone?: boolean;
@@ -58,8 +56,8 @@ export const WheelchairParkingSchema = new SimpleSchema({
   length: quantityDefinition(LengthSchema, true, {
     question: t`How long are the parking spaces?`
   }),
-  maxHeight: quantityDefinition(LengthSchema, true, {
-    question: t`What is the max height of the parking spaces?`
+  maxVehicleHeight: quantityDefinition(LengthSchema, true, {
+    question: t`What is the max vehicle height of the parking spaces?`
   }),
   hasDedicatedSignage: {
     type: Boolean,
