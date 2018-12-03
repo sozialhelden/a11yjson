@@ -6,9 +6,8 @@ import './simpl-schema-extensions';
 import { Length, LengthSchema, quantityDefinition } from './units';
 
 export interface WheelchairParking {
-  // QUESTION currently available? How many? At all? Unclear. No other object has isAvailable
-  isAvailable?: boolean;
   location?: string;
+  distanceToMainEntrance?: Length;
   count?: number; // TODO use something for >10
   isLocatedInside?: boolean;
   width?: Length;
@@ -21,13 +20,6 @@ export interface WheelchairParking {
 }
 
 export const WheelchairParkingSchema = new SimpleSchema({
-  isAvailable: {
-    type: Boolean,
-    optional: true,
-    accessibility: {
-      question: t`Is wheelchair parking available?`
-    }
-  },
   location: {
     type: String,
     optional: true,
@@ -35,11 +27,14 @@ export const WheelchairParkingSchema = new SimpleSchema({
       question: t`Where is the parking located?`
     }
   },
+  distanceToMainEntrance: quantityDefinition(LengthSchema, true, {
+    question: t`How far away is the parking from the main entrance?`
+  }),
   count: {
     type: Number,
     optional: true,
     accessibility: {
-      question: t`How many accessible parking spaces are there?`
+      question: t`How many wheelchair accessible parking spaces are there?`
     },
     min: 0
   },
