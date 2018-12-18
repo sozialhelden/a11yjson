@@ -6,8 +6,6 @@ import { LocalizedString, LocalizedStringSchema } from './localized-string';
 
 export interface Payment {
   hasPortablePaymentSystem?: boolean;
-  // QUESTION: any app?
-  acceptsPaymentByApp?: boolean;
   // QUESTION: which standard?
   acceptsPaymentByMobilePhone?: boolean;
   // QUESTION: which card types?
@@ -15,7 +13,6 @@ export interface Payment {
   acceptsDebitCards?: boolean;
   acceptsCoins?: boolean;
   acceptsBills?: boolean;
-  // offers?: Array<{}>,  QUESTION: Really needed?
   // e.g. for phone numbers, parking lot IDs etc.
   customPaymentMetaInfo?: Array<LocalizedString>;
 }
@@ -27,14 +24,6 @@ export const PaymentSchema = new SimpleSchema({
     optional: true,
     accessibility: {
       question: t`Is there a portable payment system?`
-    }
-  },
-  acceptsPaymentByApp: {
-    type: Boolean,
-    label: t`Payment App`,
-    optional: true,
-    accessibility: {
-      question: t`Is payment by app accepted?`
     }
   },
   acceptsPaymentByMobilePhone: {

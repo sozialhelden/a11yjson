@@ -4,7 +4,6 @@ export const paymentMinimumFixture: Payment = {};
 
 const paymentWithOptionalsFixture: Payment = {
   hasPortablePaymentSystem: true,
-  acceptsPaymentByApp: true,
   acceptsPaymentByMobilePhone: true,
   acceptsCreditCards: true,
   acceptsDebitCards: true,
