@@ -2,6 +2,10 @@ import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
 import './simpl-schema-extensions';
+import {
+  IetfLanguageTagOrSignLanguageCode,
+  ietfLanguageTagsAndSignLanguageCodes
+} from './ietf-language-tags';
 
 /**
  * The Staff interface describes the presence of staff and their qualifications.
@@ -12,24 +16,12 @@ export interface Staff {
    * some camera system.
    */
   canSeeVisitorsFromInside?: boolean;
+  spokenLanguages?: ArrayLike<IetfLanguageTagOrSignLanguageCode>;
 
-  /**
-   * ?
-   */
-  canAssistWithSpecialNeeds?: boolean; // QUESTION: what is the limitation of can? Is allowed? Physical capable? Wants to? What is special?
-
-  /**
-   * ?
-   */
-  isTrainedInSigning?: boolean; // QUESTION: there are plentz of sign languages around the world, which one is this
   /**
    * Is there an assistant for the duration of the visit that is free of charge?
    */
   hasFreeAssistantForVisitors?: boolean; // QUESTION: free versus paid? Why is there no hasPaidAssistantForVisitors? Unlikely?
-  /**
-   * Is the staff trained dealing with disabled visitors?
-   */
-  isTrainedInAccomodatingVisitorsWithDisabilities?: boolean; // QUESTION: what kind of training, what kind of disabilities?
 }
 
 /**
@@ -45,19 +37,11 @@ export const StaffSchema = new SimpleSchema({
     },
     optional: true
   },
-  canAssistWithSpecialNeeds: {
-    type: Boolean,
-    label: t`Special Needs Assistance`,
-    accessibility: {
-      question: t`Can the staff assist with special needs?`
-    },
-    optional: true
-  },
   isTrainedInSigning: {
     type: Boolean,
     label: t`Signing training`,
     accessibility: {
-      question: t`Is the staff trained in signing?`
+      question: t`Is the staff trained in local sign languages?`
     },
     optional: true
   },
@@ -69,12 +53,17 @@ export const StaffSchema = new SimpleSchema({
     },
     optional: true
   },
-  isTrainedInAccomodatingVisitorsWithDisabilities: {
-    type: Boolean,
-    label: t`Disabilities Training`,
+  spokenLanguages: {
+    type: Array,
+    defaultValue: [],
+    optional: true,
     accessibility: {
-      question: t`Is the staff trained in accomodating visitors with disabilities?`
-    },
-    optional: true
+      question: t`Which languages do the staff speak (including sign language variants)?`
+    }
+  },
+  'spokenLanguages.$': {
+    type: String,
+    label: t`Language`,
+    allowedValues: ietfLanguageTagsAndSignLanguageCodes
   }
 });

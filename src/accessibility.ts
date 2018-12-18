@@ -14,6 +14,7 @@ import { AccessibleTablesPrefab, Tables, TablesSchema } from './tables';
 import { Pathways, PathwaysSchema } from './pathways';
 import { Parking, ParkingSchema } from './parking';
 import { Ground, GroundSchema } from './ground';
+import { LocalizedString, LocalizedStringSchema } from './localized-string';
 
 /**
  * Describes the physical (and sometimes human rated) accessibility of a place.
@@ -75,7 +76,7 @@ export interface Accessibility {
    */
   tables?: Tables | null;
   seats?: any; // TODO define type,
-  serviceContact?: string;
+  serviceContact?: LocalizedString;
   services?: any; // TODO define type,,
   tactileGuideStrips?: any; // TODO define type,
   infoDesk?: any; // TODO define type,
@@ -269,8 +270,8 @@ export const AccessibilitySchema = new SimpleSchema({
     optional: true
   },
   serviceContact: {
-    type: String,
     optional: true
+    type: LocalizedStringSchema,
   },
   services: {
     type: Object, // TODO define type

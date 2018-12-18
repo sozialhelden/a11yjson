@@ -4,10 +4,17 @@ import SimpleSchema from 'simpl-schema';
 import './simpl-schema-extensions';
 
 import { Length, LengthSchema, quantityDefinition } from './units';
+import {
+  IetfLanguageTag,
+  ietfLanguageTags,
+  ietfLanguageTagsAndSignLanguageCodes,
+  IetfLanguageTagOrSignLanguageCode
+} from './ietf-language-tags';
+import { LocalizedStringSchema, LocalizedString } from './localized-string';
 
 export interface Media {
   type: 'document' | 'menu' | 'guide' | 'presentation' | 'exhibit' | 'movie' | 'screen';
-  name?: string;
+  name?: LocalizedString;
   isBraille?: boolean;
   isAudio?: boolean;
   isLargePrint?: boolean;
@@ -17,7 +24,7 @@ export interface Media {
   hasSubtitles?: boolean;
   hasRealTimeCaptioning?: boolean;
   hasPlainLanguageOption?: boolean;
-  languages?: Array<string>;
+  languages?: ArrayLike<IetfLanguageTagOrSignLanguageCode>;
   turningSpaceInFront?: Length;
   isClearlyVisibleWhileSeated?: boolean;
   isInformationReadableWhileSeated?: boolean;
@@ -42,7 +49,7 @@ export const MediaSchema = new SimpleSchema({
     }
   },
   name: {
-    type: String,
+    type: LocalizedStringSchema,
     label: t`Media Name`,
     optional: true,
     accessibility: {
@@ -114,6 +121,7 @@ export const MediaSchema = new SimpleSchema({
       question: t`Is there real time captioning?`
     }
   },
+  // There are no standardized language codes for this yet, so this needs to be an extra flag for now.
   hasPlainLanguageOption: {
     type: Boolean,
     label: t`Plain Language Option`,
@@ -132,8 +140,8 @@ export const MediaSchema = new SimpleSchema({
   },
   'languages.$': {
     type: String,
-    label: t`Language`
-    // TODO add allowed values
+    label: t`Language`,
+    allowedValues: ietfLanguageTagsAndSignLanguageCodes
   },
   turningSpaceInFront: quantityDefinition(LengthSchema, true, {
     question: t`How much space for turning is in front of the media?`

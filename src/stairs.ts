@@ -3,6 +3,7 @@ import SimpleSchema from 'simpl-schema';
 
 import { createSchemaInstance } from './simpl-schema-extensions';
 import { Length, LengthSchema, quantityDefinition } from './units';
+import { LocalizedString, LocalizedStringSchema } from './localized-string';
 
 /**
  * The `Stairs` interface describes one or more walkable stairs.
@@ -14,7 +15,7 @@ export interface Stairs {
     isHighContrast?: boolean;
     isAntiSlip?: boolean;
   };
-  name?: string;
+  name?: LocalizedString;
   stepHeight?: Length;
   hasHoist?: boolean;
   hasHandRail?: boolean;
@@ -54,7 +55,7 @@ export const StairsSchema = createSchemaInstance('Stairs', {
     accessibility: {}
   },
   name: {
-    type: String,
+    type: LocalizedStringSchema,
     optional: true,
     accessibility: {}
   },

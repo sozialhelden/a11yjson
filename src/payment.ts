@@ -2,6 +2,7 @@ import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
 import './simpl-schema-extensions';
+import { LocalizedString, LocalizedStringSchema } from './localized-string';
 
 export interface Payment {
   hasPortablePaymentSystem?: boolean;
@@ -16,7 +17,7 @@ export interface Payment {
   acceptsBills?: boolean;
   // offers?: Array<{}>,  QUESTION: Really needed?
   // e.g. for phone numbers, parking lot IDs etc.
-  customPaymentMetaInfo?: Array<string>;
+  customPaymentMetaInfo?: Array<LocalizedString>;
 }
 
 export const PaymentSchema = new SimpleSchema({
@@ -87,7 +88,7 @@ export const PaymentSchema = new SimpleSchema({
     }
   },
   'customPaymentMetaInfo.$': {
-    type: String,
+    type: LocalizedStringSchema,
     label: t`Custom Payment Information`,
     accessibility: {
       question: t`What is the custom information?`

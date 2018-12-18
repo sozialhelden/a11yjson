@@ -4,6 +4,7 @@ import SimpleSchema from 'simpl-schema';
 import './simpl-schema-extensions';
 
 import { Length, LengthSchema, quantityDefinition } from './units';
+import { LocalizedStringSchema, LocalizedString } from './localized-string';
 
 export interface WheelchairParking {
   location?: string;
@@ -16,12 +17,12 @@ export interface WheelchairParking {
   hasDedicatedSignage?: boolean;
   paymentBySpace?: boolean;
   paymentByZone?: boolean;
-  neededParkingPermits?: Array<string>;
+  neededParkingPermits?: Array<LocalizedString>;
 }
 
 export const WheelchairParkingSchema = new SimpleSchema({
   location: {
-    type: String,
+    type: LocalizedStringSchema,
     optional: true,
     accessibility: {
       question: t`Where is the parking located?`
@@ -83,7 +84,7 @@ export const WheelchairParkingSchema = new SimpleSchema({
     }
   },
   'neededParkingPermits.$': {
-    type: String,
+    type: LocalizedStringSchema,
     accessibility: {
       question: t`Which permit is needed?`
     }

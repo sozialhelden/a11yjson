@@ -6,6 +6,7 @@ import './simpl-schema-extensions';
 import { Door, DoorSchema } from './door';
 import { Length, LengthSchema } from './units';
 import { ExternalId, ExternalIdSchemaDefinition } from './external-id';
+import { LocalizedStringSchema, LocalizedString } from './localized-string';
 
 export type EquipmentTypes =
   | 'bed'
@@ -32,17 +33,17 @@ export const AllowedEquipmentTypes = Object.freeze([
 
 export interface EquipmentProperties {
   // properties
-  description?: string;
-  shortDescription?: string;
-  longDescription?: string;
+  description?: LocalizedString;
+  shortDescription?: LocalizedString;
+  longDescription?: LocalizedString;
   category?: EquipmentTypes;
   heightOfControls?: Length;
   cabinWidth?: Length;
   cabinLength?: Length;
   door?: Door;
-  languages?: Array<string>;
   isRaised?: boolean;
   isBraille?: boolean;
+  languages?: ArrayLike<IetfLanguageTagOrSignLanguageCode>;
   hasSpeech?: boolean;
   isHighContrast?: boolean;
   hasLargePrint?: boolean;
@@ -81,18 +82,18 @@ export const EquipmentPropertiesSchema = new SimpleSchema({
     allowedValues: AllowedEquipmentTypes.map(s => s)
   },
   description: {
-    type: String,
-    optional: true
+    type: LocalizedStringSchema,
+    optional: true,
   },
   // Alternative description that is screen-reader compatible and replaces abbreviations / symbols with words
   longDescription: {
-    type: String,
-    optional: true
+    type: LocalizedStringSchema,
+    optional: true,
   },
   // Alternative description that uses less screen estate, more abbreviations and Unicode symbols like `→`
   shortDescription: {
-    type: String,
-    optional: true
+    type: LocalizedStringSchema,
+    optional: true,
   },
   heightOfControls: {
     type: LengthSchema,
@@ -129,7 +130,9 @@ export const EquipmentPropertiesSchema = new SimpleSchema({
     optional: true
   },
   'languages.$': {
-    type: String
+    type: String,
+    label: t`Language`,
+    allowedValues: ietfLanguageTagsAndSignLanguageCodes
   },
   isRaised: {
     type: Boolean,

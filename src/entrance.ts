@@ -5,12 +5,13 @@ import './simpl-schema-extensions';
 
 import { Door, DoorSchema } from './door';
 import { Stairs, StairsSchema } from './stairs';
+import { LocalizedStringSchema, LocalizedString } from './localized-string';
 
 /**
  * Describes an entrance to a place.
  */
 export interface Entrance {
-  name?: string;
+  name?: LocalizedString;
   // QUESTION what is the range for the rating, how is this objective?
   ratingForWheelchair?: number;
   isMainEntrance?: boolean;
@@ -33,7 +34,7 @@ export interface Entrance {
 
 export const EntranceSchema = new SimpleSchema({
   name: {
-    type: String,
+    type: LocalizedStringSchema,
     optional: true,
     accessibility: {
       question: t`What is the name of this entrance?`,

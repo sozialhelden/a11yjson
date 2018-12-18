@@ -3,6 +3,7 @@ import SimpleSchema from 'simpl-schema';
 
 import './simpl-schema-extensions';
 import { isoAlphaThreeCountryCodes } from './country-codes';
+import { LocalizedStringSchema, LocalizedString } from './localized-string';
 
 /**
  * The address of a places as Address as a series of structured attributes.
@@ -11,73 +12,69 @@ export interface StructuredAddress {
   /**
    * A displayable, formatted address as rich text.
    */
-  text?: string;
+  text?: LocalizedString;
   /**
    * Room name
    */
-  room?: string;
+  room?: LocalizedString;
   /**
    * Contains level of place inside of a venue
    */
-  level?: string;
+  level?: LocalizedString;
   /**
    * Building name
    */
-  building?: string;
+  building?: LocalizedString;
   /**
    * House or street number.
    */
-  house?: string;
+  house?: LocalizedString;
   /**
    * Street name (in practice may also contain street number).
    */
-  street?: string;
+  street?: LocalizedString;
   /**
    * An alphanumeric string included in a postal address to
    * facilitate mail sorting (a.k.a. post code, postcode, or ZIP code).
    */
-  postalCode?: string;
+  postalCode?: LocalizedString;
   /**
    * An array of named areas below the district and above street.
    * In some regions such areas might also contain street names,
    * when individual street segments have names separate from the name of the whole road.
    */
-  areas?: string[];
+  areas?: LocalizedString[];
   /**
    * A division of city; typically an administrative unit within a larger
    * city or a customary name of a city's neighborhood.
    */
-  district?: string;
+  district?: LocalizedString;
   /**
    * The name of the primary locality of the place.
    */
-  city?: string;
+  city?: LocalizedString;
   /**
    * For address conventions where more than to levels of named areas above the city level are in use,
    * the regions attribute provides an array with all additional area names,
    * ordered by decreasing size (starting with the highest subdivision below state)
    */
-  regions?: string[];
+  regions?: LocalizedString[];
   /**
    * A division of a state; typically a secondary-level administrative division of a country or equivalent.
    */
-  county?: string;
+  county?: LocalizedString;
   /**
    * A division of a country; typically a first-level administrative division of a country and/or a geographical region.
    */
-  state?: string;
+  state?: LocalizedString;
   /**
    * A code/abbreviation for the state division of a country.
    */
-  stateCode?: string;
-  /**
-   * The localised country name.
-   */
-  country?: string;
+  stateCode?: LocalizedString;
   /**
    * A three-letter country code in ISO 3166-1 alpha-3, see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3
    */
-  countryCode?: string;
+  countryCode?: LocalizedString;
 }
 
 /**
@@ -86,7 +83,7 @@ export interface StructuredAddress {
 export const StructuredAddressSchema = new SimpleSchema({
   text: {
     label: t`Text`,
-    type: String,
+    type: LocalizedStringSchema,
     accessibility: {
       description: t`A displayable, formatted address as rich text.`
     },
@@ -94,7 +91,7 @@ export const StructuredAddressSchema = new SimpleSchema({
   },
   room: {
     label: t`Room`,
-    type: String,
+    type: LocalizedStringSchema,
     accessibility: {
       description: t`Room name`,
       question: t`What is the name of the room?`,
@@ -104,7 +101,7 @@ export const StructuredAddressSchema = new SimpleSchema({
   },
   level: {
     label: t`Level`,
-    type: String,
+    type: LocalizedStringSchema,
     accessibility: {
       description: t`The number of the floor in british convention (ground floor is 0)`,
       question: t`What is the number of the floor?`,
@@ -115,7 +112,7 @@ export const StructuredAddressSchema = new SimpleSchema({
   },
   building: {
     label: t`Building`,
-    type: String,
+    type: LocalizedStringSchema,
     accessibility: {
       description: t`Building name`,
       example: t`e.g. main exposition hall`
@@ -124,7 +121,7 @@ export const StructuredAddressSchema = new SimpleSchema({
   },
   house: {
     label: t`House`,
-    type: String,
+    type: LocalizedStringSchema,
     accessibility: {
       question: t`What is the house number?`
     },
@@ -132,7 +129,7 @@ export const StructuredAddressSchema = new SimpleSchema({
   },
   street: {
     label: t`Street`,
-    type: String,
+    type: LocalizedStringSchema,
     accessibility: {
       question: t`What is the name of the street?`,
       description: t`Please avoid numbers for houses or buildings.`
@@ -141,7 +138,7 @@ export const StructuredAddressSchema = new SimpleSchema({
   },
   postalCode: {
     label: t`Postal Code`,
-    type: String,
+    type: LocalizedStringSchema,
     accessibility: {
       question: t`What is the postal code?`,
       description: t`Also called ZIP code.`
@@ -157,11 +154,11 @@ export const StructuredAddressSchema = new SimpleSchema({
     optional: true
   },
   'areas.$': {
-    type: String
+    type: LocalizedStringSchema
   },
   district: {
     label: t`District`,
-    type: String,
+    type: LocalizedStringSchema,
     accessibility: {
       description: t`A division of city; typically an administrative unit within a larger city or a customary name of a city\'s neighborhood.`,
       question: t`The place is located destrict…`
@@ -170,7 +167,7 @@ export const StructuredAddressSchema = new SimpleSchema({
   },
   city: {
     label: t`City`,
-    type: String,
+    type: LocalizedStringSchema,
     accessibility: {
       question: t`In which city is this place?`
     },
@@ -185,11 +182,11 @@ export const StructuredAddressSchema = new SimpleSchema({
     optional: true
   },
   'regions.$': {
-    type: String
+    type: LocalizedStringSchema
   },
   county: {
     label: t`County`,
-    type: String,
+    type: LocalizedStringSchema,
     accessibility: {
       description: t`A division of a state; typically a secondary-level administrative division of a country or equivalent.`
     },
@@ -197,7 +194,7 @@ export const StructuredAddressSchema = new SimpleSchema({
   },
   state: {
     label: t`State`,
-    type: String,
+    type: LocalizedStringSchema,
     accessibility: {
       description: t`A division of a country; typically a first-level administrative division of a country and/or a geographical region.`
     },
@@ -205,7 +202,7 @@ export const StructuredAddressSchema = new SimpleSchema({
   },
   stateCode: {
     label: t`State Code`,
-    type: String,
+    type: LocalizedStringSchema,
     accessibility: {
       description: t`A code/abbreviation for the state division of a country.`
     },
@@ -221,7 +218,7 @@ export const StructuredAddressSchema = new SimpleSchema({
   },
   countryCode: {
     label: t`Country Code`,
-    type: String,
+    type: LocalizedStringSchema,
     optional: true,
     allowedValues: isoAlphaThreeCountryCodes.map(c => c.value),
     accessibility: {

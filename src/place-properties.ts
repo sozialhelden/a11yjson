@@ -7,20 +7,21 @@ import { AllowedAreaTypes, AreaTypes } from './area-types';
 import { Accessibility, AccessibilitySchema } from './accessibility';
 import { ExternalId, ExternalIdSchemaDefinition } from './external-id';
 import { Address, AddressSchema } from './address';
+import { LocalizedStringSchema, LocalizedString } from './localized-string';
 
 export interface PlaceProperties {
   // properties
   /**
    * The name of this place
    */
-  name?: string;
+  name?: LocalizedString;
   /**
    * The address of this place.
    * `null` indicates that this place has no address, `undefined` or missing property indicates unknown.
    */
   address?: Address | null;
-  description?: string; // QUESTION: what is expected in description?
-  phoneNumber?: string;
+  description?: LocalizedString; // QUESTION: what is expected in description?
+  phoneNumber?: LocalizedString;
   category: string;
   /**
    * The accessibility of this place.
@@ -73,7 +74,7 @@ export const PlacePropertiesSchema = new SimpleSchema({
     }
   },
   description: {
-    type: String,
+    type: LocalizedStringSchema,
     optional: true,
     accessibility: {
       question: t`How would you describe this place?`,
@@ -81,7 +82,7 @@ export const PlacePropertiesSchema = new SimpleSchema({
     }
   },
   phoneNumber: {
-    type: String,
+    type: LocalizedStringSchema,
     optional: true,
     accessibility: {
       question: t`What is the phone number of this place?`,
@@ -105,7 +106,7 @@ export const PlacePropertiesSchema = new SimpleSchema({
   },
   // machine data fields
   infoPageUrl: {
-    type: String,
+    type: LocalizedStringSchema,
     regEx: SimpleSchema.RegEx.Url,
     optional: true,
     accessibility: {
