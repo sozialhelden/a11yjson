@@ -3,7 +3,6 @@ import SimpleSchema from 'simpl-schema';
 
 import './simpl-schema-extensions';
 
-import { AllowedAreaTypes, AreaTypes } from './area-types';
 import { Accessibility, AccessibilitySchema } from './accessibility';
 import { ExternalId, ExternalIdSchemaDefinition } from './external-id';
 import { Address, AddressSchema } from './address';
@@ -46,12 +45,12 @@ export interface PlaceProperties {
   originalId?: string;
   ids?: Array<ExternalId>;
   originalData?: any;
-  infoPageUrl?: string;
+  infoPageUrl?: LocalizedString;
 }
 
 export const PlacePropertiesSchema = new SimpleSchema({
   name: {
-    type: String,
+    type: LocalizedStringSchema,
     optional: true,
     accessibility: {
       question: t`What is the name of this place?`
@@ -99,20 +98,23 @@ export const PlacePropertiesSchema = new SimpleSchema({
       description: t`Describes the overall accessibility of a place.`
     }
   },
-    optional: true,
-    accessibility: {
-      question: t`Okay, now let\`s map the accessibility.`
-    }
-  },
-  // machine data fields
   infoPageUrl: {
     type: LocalizedStringSchema,
     regEx: SimpleSchema.RegEx.Url,
     optional: true,
     accessibility: {
-      machineData: true
+      description: t`URL of the original data source’s website describing this place`
     }
   },
+  placeWebsiteUrl: {
+    type: LocalizedStringSchema,
+    regEx: SimpleSchema.RegEx.Url,
+    optional: true,
+    accessibility: {
+      description: t`URL of the place’s own website`
+    }
+  },
+  // machine data fields
   ids: {
     type: Array,
     optional: true,
