@@ -20,7 +20,6 @@ const structuredAddressWithOptionalsFixture: StructuredAddress = {
   county: 'foo',
   state: 'foo',
   stateCode: 'foo',
-  country: 'foo',
   countryCode: 'DEU'
 };
 
