@@ -5,7 +5,7 @@ export const showerMinimumFixture: Shower = {};
 
 const showerWithOptionalsFixture: Shower = {
   step: '<2cm',
-  isWalkIn: true, // needs review
+  isLevel: true, // needs review
   hasSupportRails: true,
   supportRails: {
     height: '85 .. 107cm',
@@ -15,8 +15,7 @@ const showerWithOptionalsFixture: Shower = {
   hasErgonomicHandle: true,
   showerSeat: {
     isRemovable: true,
-    isFixed: false,
-    isFoldable: false
+    isFolding: false
   }
 };
 
