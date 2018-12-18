@@ -33,7 +33,7 @@ export const StaffSchema = new SimpleSchema({
     label: t`See From Inside`,
     accessibility: {
       question: t`Can the staff see visitors arriving?`,
-      description: t`e.g. via a greeter or reception, a window or a camera system`
+      description: t`e.g. via a greeter or reception, a window or a always-monitored camera system`
     },
     optional: true
   },

@@ -4,10 +4,7 @@ export const staffMinimumFixture: Staff = {};
 
 const staffWithOptionalsFixture: Staff = {
   canSeeVisitorsFromInside: true,
-  canAssistWithSpecialNeeds: true,
-  isTrainedInSigning: true,
-  hasFreeAssistantForVisitors: true,
-  isTrainedInAccomodatingVisitorsWithDisabilities: true
+  hasFreeAssistantForVisitors: true
 };
 
 const allValidFixtures = Object.freeze([staffMinimumFixture, staffWithOptionalsFixture]);
