@@ -36,7 +36,7 @@ export const MediaSchema = new SimpleSchema({
     label: t`Media Type`,
     allowedValues: ['document', 'menu', 'guide', 'presentation', 'exhibit', 'movie', 'screen'],
     accessibility: {
-      question: t`What format is the media in?`,
+      question: t`What kind of media is described?`,
       options: [
         { value: 'document', label: t`document` },
         { value: 'menu', label: t`menu` },

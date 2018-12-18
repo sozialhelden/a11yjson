@@ -4,7 +4,7 @@ import SimpleSchema from 'simpl-schema';
 import './simpl-schema-extensions';
 
 export interface ExternalId {
-  /// organization who manages the equipment database
+  /// Organization who manages the equipment database, or name of the ID standard.
   provider: string;
 
   [key: string]: any;

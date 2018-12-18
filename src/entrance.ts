@@ -47,6 +47,7 @@ export const EntranceSchema = new SimpleSchema({
     min: 0,
     max: 1,
     accessibility: {
+      deprecated: true,
       question: t`How would you rate this entrance for wheelchair users?`,
       componentHint: 'AccessibilityRating'
     }
@@ -107,7 +108,8 @@ export const EntranceSchema = new SimpleSchema({
     type: String,
     optional: true,
     accessibility: {
-      question: t`Is there a lift at this entrance?`
+      question: t`Is there a lift at this entrance?`,
+      machineData: true
       // TODO foreign object flow equipment
     }
   },
@@ -115,7 +117,8 @@ export const EntranceSchema = new SimpleSchema({
     type: String,
     optional: true,
     accessibility: {
-      question: t`Is there an intercom at this entrance?`
+      question: t`Is there an intercom at this entrance?`,
+      machineData: true
       // TODO foreign object flow equipment
     }
   }

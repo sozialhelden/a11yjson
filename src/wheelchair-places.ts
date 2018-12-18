@@ -33,7 +33,7 @@ export const WheelchairPlacesSchema = new SimpleSchema({
     type: Boolean,
     label: t`Assistant Space`,
     accessibility: {
-      question: t`Is there additional space for an assistant?`
+      question: t`Is there additional space for an assistant for each seat?`
     },
     optional: true
   }

@@ -14,12 +14,17 @@ export interface Pathways {
   maxLateralSlope?: number; // TODO use something for >10
 }
 
+// TODO: Harmonize this with:
+// https://register.apple.com/resources/imdf/Relationship/
+// and
+// https://docs.google.com/document/d/1qJOTe4m_a4dcJnvXYt4smYj4QQ1ejZ8CvLBYzDM5IyM
+
 export const PathwaysSchema = new SimpleSchema({
   width: quantityDefinition(LengthSchema, true, {
     question: t`How wide are the aisles or pathways?`
   }),
   widthAtObstacles: quantityDefinition(LengthSchema, true, {
-    question: t`What is the minimum width at obstacles`
+    question: t`What is the minimum width at obstacles?`
   }),
   maxLongitudinalSlope: {
     type: Number,

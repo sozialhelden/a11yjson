@@ -88,7 +88,7 @@ export interface Accessibility {
    * Information about media.
    * `null` indicates there is no media, `undefined` or missing property indicates unknown.
    */
-  media?: Array<Media> | null;
+  media?: ArrayLike<Media> | null;
 }
 
 export const AccessibilitySchema = new SimpleSchema({
@@ -157,7 +157,7 @@ export const AccessibilitySchema = new SimpleSchema({
     type: GroundSchema,
     optional: true,
     accessibility: {
-      question: t`Is there a ground next to this place?`
+      question: t`In which condition is the ground you have to traverse to get here?`
     }
   },
   ratingSpacious: {
@@ -166,13 +166,17 @@ export const AccessibilitySchema = new SimpleSchema({
     min: 0,
     max: 1,
     accessibility: {
+      deprecated: true,
       question: t`How spacious is this place?`,
       componentHint: 'StarRating'
     }
   },
   isWellLit: {
     type: Boolean,
-    optional: true
+    optional: true,
+    accessibility: {
+      question: t`Is the place well lit?`
+    }
   },
   isQuiet: {
     type: Boolean,
@@ -292,8 +296,11 @@ export const AccessibilitySchema = new SimpleSchema({
     optional: true
   },
   serviceContact: {
-    optional: true
     type: LocalizedStringSchema,
+    optional: true,
+    accessibility: {
+      question: t`How can the service staff be reached?`
+    }
   },
   services: {
     type: Object, // TODO define type

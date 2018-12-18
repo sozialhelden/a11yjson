@@ -54,7 +54,9 @@ export const GroundSchema = new SimpleSchema({
       question: t`Is the pavement even, ie. no cobble stones?`
     }
   },
-  distanceToDroppedCurb: quantityDefinition(LengthSchema),
+  distanceToDroppedCurb: quantityDefinition(LengthSchema, true, {
+    question: t`How far is the entrance from the next dropped curb?`
+  }),
   turningSpace: quantityDefinition(LengthSchema, true, {
     question: t`How much space for turning is there?`
   })
