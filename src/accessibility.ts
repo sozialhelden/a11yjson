@@ -15,6 +15,10 @@ import { Pathways, PathwaysSchema } from './pathways';
 import { Parking, ParkingSchema } from './parking';
 import { Ground, GroundSchema } from './ground';
 import { LocalizedString, LocalizedStringSchema } from './localized-string';
+import { AnimalPolicySchema, AnimalPolicy } from './animal-policy';
+import { SmokingPolicy, smokingPolicies } from './smoking-policy';
+import { Volume, quantityDefinition } from './units';
+import { VolumeSchema } from './ac-format';
 
 /**
  * Describes the physical (and sometimes human rated) accessibility of a place.
@@ -40,11 +44,11 @@ export interface Accessibility {
   ratingSpacious?: number;
   // QUESTION How is this measured, should be changed to ambient.lighting
   isWellLit?: boolean;
-  // QUESTION How is this measured, should be changed to ambient.noise
   isQuiet?: boolean;
-  // QUESTION this should not be split across to fields, should rather be smoking: unknown | forbidden | allowed;
-  isSmoking?: boolean;
-  isNonSmoking?: boolean;
+  ambientNoiseLevel?: Volume; // in dB(A) relative to a reference pressure of 0.00002 Pa
+  smokingPolicy?: SmokingPolicy;
+  hasTactileGuideStrips?: boolean;
+  animalPolicy?: AnimalPolicy;
   ground?: Ground | null;
   pathways?: Pathways | null;
   entrances?: ArrayLike<Entrance> | null;
@@ -78,7 +82,7 @@ export interface Accessibility {
   seats?: any; // TODO define type,
   serviceContact?: LocalizedString;
   services?: any; // TODO define type,,
-  tactileGuideStrips?: any; // TODO define type,
+
   infoDesk?: any; // TODO define type,
   signage?: any; // TODO define type,
   /**
@@ -173,15 +177,34 @@ export const AccessibilitySchema = new SimpleSchema({
   },
   isQuiet: {
     type: Boolean,
-    optional: true
+    optional: true,
+    accessibility: {
+      question: t`Is the place quiet?`
+    }
   },
-  isSmoking: {
+  ambientNoiseLevel: quantityDefinition(VolumeSchema, true, {
+    question: t`How loud is the ambient noise here typically (A-Weighted)?`,
+    machineData: true
+  }),
+  smokingPolicy: {
+    type: Boolean,
+    optional: true,
+    allowedValues: smokingPolicies.map(s => s.value),
+    accessibility: {
+      question: t`Is smoking allowed here?`,
+      options: smokingPolicies
+    }
+  },
+  hasTactileGuideStrips: {
     type: Boolean,
     optional: true
   },
-  isNonSmoking: {
-    type: Boolean,
-    optional: true
+  animalPolicy: {
+    type: AnimalPolicySchema,
+    optional: true,
+    accessibility: {
+      question: t`What is the animal policy of this place?`
+    }
   },
   pathways: {
     type: PathwaysSchema,
@@ -274,10 +297,6 @@ export const AccessibilitySchema = new SimpleSchema({
     type: LocalizedStringSchema,
   },
   services: {
-    type: Object, // TODO define type
-    optional: true
-  },
-  tactileGuideStrips: {
     type: Object, // TODO define type
     optional: true
   },

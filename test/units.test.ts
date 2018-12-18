@@ -2,7 +2,8 @@ import {
   determineUnitKind,
   LengthQuantitySchema,
   LengthSchema,
-  quantityDefinition
+  quantityDefinition,
+  validateUnit
 } from '../src/units';
 import SimpleSchema from 'simpl-schema';
 
@@ -65,6 +66,14 @@ describe('Length Schema', () => {
     const preferredUnit = LengthQuantitySchema.getDefinition('unit', ['accessibility'])
       .accessibility.preferredUnit;
     expect(preferredUnit).toEqual('length');
+  });
+  it('validateUnit', () => {
+    const validationFunction = validateUnit('length');
+    expect(validationFunction.call({ value: '2m' })).toEqual('invalid_unit');
+    expect(validationFunction.call({ value: 'dB' })).toEqual('invalid_unit');
+    expect(validationFunction.call({ value: '1m' })).toBeUndefined();
+    expect(validationFunction.call({ value: 'centimeters' })).toBeUndefined();
+    expect(validationFunction.call({ value: '1 m' })).toBeUndefined();
   });
   it('determineUnitKind', () => {
     expect(() => {

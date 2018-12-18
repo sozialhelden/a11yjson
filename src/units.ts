@@ -17,6 +17,7 @@ SimpleSchema.setDefaultMessages({
  * The unit kind for length units such as meter, centimeter or inch
  */
 export const LengthUnitKind = 'length';
+export const OtherUnitKind = 'other';
 
 /**
  * Builds a custom validation function that ensures that the value of the field
@@ -27,7 +28,7 @@ export const LengthUnitKind = 'length';
  * @param {string} kind One of js-quantities unit kinds, e.g. length, mass, etc.
  * @returns {ValidationFunction} A custom SimpleSchema Validation function
  */
-const validateUnit = function(kind: string): ValidationFunction {
+export const validateUnit = function(kind: string): ValidationFunction {
   return function(this: ValidationFunctionSelf<string>) {
     const qty = Qty.parse(this.value);
     if (!qty || qty.scalar !== 1 || qty.kind() !== kind) {
@@ -139,16 +140,13 @@ export const determineUnitKind = (schema: SimpleSchema, key?: string): string =>
  * It validates the unit and will only accept length units, eg. meter, centimeter or inch.
  */
 export const LengthQuantitySchema = makeQuantitySchema(LengthUnitKind, 'meter');
+export const VolumeQuantitySchema = makeQuantitySchema(OtherUnitKind, 'decibel');
 
-/**
- * The LengthSchema extends the LengthQuantitySchema and allows also Strings
- */
 export const LengthSchema = SimpleSchema.oneOf(LengthQuantitySchema, String);
+export const VolumeSchema = SimpleSchema.oneOf(VolumeQuantitySchema, String);
 
-/**
- * A union type between LengthQuantity and string
- */
 export type Length = Quantity | string;
+export type Volume = Quantity | string;
 
 export function quantityDefinition(type: SchemaType, optional: boolean = true, accessibility?: {}) {
   const base: SchemaDefinition = {

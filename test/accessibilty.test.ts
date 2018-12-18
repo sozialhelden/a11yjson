@@ -40,8 +40,9 @@ const accessibilityWithOptionalsFixture: Accessibility = {
   ratingSpacious: 1,
   isWellLit: true,
   isQuiet: true,
-  isSmoking: true,
-  isNonSmoking: true,
+  ambientNoiseLevel: '80dB',
+  smokingPolicy: 'prohibited',
+  hasTactileGuideStrips: true,
   serviceContact: 'string',
   pathways: pathwaysMinimumFixture,
   parking: parkingMinimumFixture,
@@ -59,7 +60,6 @@ const accessibilityWithOptionalsFixture: Accessibility = {
   cashRegister: {},
   seats: {},
   services: {},
-  tactileGuideStrips: {},
   infoDesk: {},
   signage: {}
 };
