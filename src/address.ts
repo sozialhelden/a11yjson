@@ -208,14 +208,6 @@ export const StructuredAddressSchema = new SimpleSchema({
     },
     optional: true
   },
-  country: {
-    label: t`Country`,
-    type: String,
-    accessibility: {
-      description: t`The localised country name.`
-    },
-    optional: true
-  },
   countryCode: {
     label: t`Country Code`,
     type: LocalizedStringSchema,
