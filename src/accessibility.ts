@@ -54,7 +54,6 @@ export interface Accessibility {
   entrances?: ArrayLike<Entrance> | null;
   restrooms?: ArrayLike<Restroom> | null;
   sitemap?: any; // TODO define type
-  lifts?: [any]; // TODO define type
   switches?: [any]; // TODO define type
   vendingMachines?: [any]; // TODO define type
   powerOutlets?: [any]; // TODO define type

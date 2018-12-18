@@ -17,7 +17,6 @@ const accessibilityWithNullsFixture: Accessibility = {
   entrances: null,
   restrooms: null,
   staff: null,
-  wheelchairPlaces: null,
   media: null,
   payment: null,
   tables: null,
@@ -49,7 +48,6 @@ const accessibilityWithOptionalsFixture: Accessibility = {
   ground: groundMinimumFixture,
   // TODO
   sitemap: {},
-  lifts: [{}, {}],
   switches: [{}, {}],
   vendingMachines: [{}, {}],
   powerOutlets: [{}, {}],
