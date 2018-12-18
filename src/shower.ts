@@ -1,5 +1,5 @@
-import { t } from 'c-3po';
 import SimpleSchema from 'simpl-schema';
+import { t } from "ttag";
 
 import { createSchemaInstance } from './simpl-schema-extensions';
 import { Length, LengthSchema, quantityDefinition } from './units';

@@ -21,7 +21,7 @@ export default {
   // Indicate here external modules you don't wanna include in your bundle (i.e.: 'lodash')
   external: [
     'simpl-schema',
-    'c-3po',
+    'ttag',
     'js-quantities',
     'lodash',
   ],
@@ -32,7 +32,7 @@ export default {
     babel({
       plugins: [
         [
-          'c-3po',
+          'ttag',
           {
             'extract': {
               'output': 'dist/ac-format.pot',

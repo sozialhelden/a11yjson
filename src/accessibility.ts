@@ -1,4 +1,4 @@
-import { t } from 'c-3po';
+import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
 import './simpl-schema-extensions';

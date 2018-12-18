@@ -1,4 +1,4 @@
-import { t } from 'c-3po';
+import { t } from 'ttag';
 
 /**
  * All existing ISO 3166-1 alpha-3 country codes
