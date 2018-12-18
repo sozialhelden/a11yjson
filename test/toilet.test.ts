@@ -5,15 +5,14 @@ export const toiletMinimumFixture: Toilet = {};
 
 const toiletWithOptionalsFixture: Toilet = {
   heightOfBase: '40 .. 45cm',
-  spaceOnLeftSide: '>70',
-  spaceOnRightSide: '>70',
+  spaceOnUsersLeftSide: '>70',
+  spaceOnUsersRightSide: '>70',
   spaceInFront: '>70',
-  foldableHandles: {
-    onLeftSide: true,
-    onRightSide: true,
-    height: '>85cm',
-    extensionOverToilet: '>28cm',
-    distance: '60 .. 65cm'
+  foldingHandles: {
+    onUsersLeftSide: true,
+    onUsersRightSide: true,
+    topHeightFromFloor: '>85cm',
+    distanceBetweenHandles: '60 .. 65cm'
   }
 };
 
