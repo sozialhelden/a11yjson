@@ -15,37 +15,37 @@ export const AnimalPolicySchema = new SimpleSchema({
   allowsGuideDogs: {
     type: Boolean,
     accessibility: {
-      question: t`Does this place allow guide dogs?`,
-    },
+      question: t`Does this place allow guide dogs?`
+    }
   },
   allowsTherapyAnimals: {
     type: Boolean,
     accessibility: {
-      question: t`Does this place allow therapy animals?`,
-    },
+      question: t`Does this place allow therapy animals?`
+    }
   },
   allowsDogs: {
     type: Boolean,
     accessibility: {
-      question: t`Does this place allow visitors to bring dogs?`,
-    },
+      question: t`Does this place allow visitors to bring dogs?`
+    }
   },
   dogsNeedMuzzle: {
     type: Boolean,
     accessibility: {
-      question: t`Does this place enforce that dogs wear a muzzle?`,
-    },
+      question: t`Does this place enforce that dogs wear a muzzle?`
+    }
   },
   allowsAnyPets: {
     type: Boolean,
     accessibility: {
-      question: t`Does this place allow any kind of pets?`,
-    },
+      question: t`Does this place allow any kind of pets?`
+    }
   },
   suppliesWaterForPets: {
     type: Boolean,
     accessibility: {
-      question: t`Does this place supply water for pets?`,          
-    },
-  },
+      question: t`Does this place supply water for pets?`
+    }
+  }
 });
