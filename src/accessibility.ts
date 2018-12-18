@@ -190,7 +190,7 @@ export const AccessibilitySchema = new SimpleSchema({
     machineData: true
   }),
   smokingPolicy: {
-    type: Boolean,
+    type: String,
     optional: true,
     allowedValues: smokingPolicies.map(s => s.value),
     accessibility: {
