@@ -9,11 +9,7 @@ export const restroomMinimumFixture: Restroom = {};
 const restroomWithOptionalsFixture: Restroom = {
   name: 'Room name',
   isAccessibleWithWheelchair: true,
-  signage: {
-    unisex: true,
-    male: true,
-    female: true
-  },
+  signIcons: ['female', 'personInWheelchair'],
   mirror: {
     isLocatedInsideRestroom: false,
     isAccessibleWhileSeated: true,
@@ -22,7 +18,6 @@ const restroomWithOptionalsFixture: Restroom = {
   ratingForWheelchair: 0.3,
   turningSpaceInside: '>150cm',
   hasSupportRails: true,
-  shampooAccessibleWithWheelchair: true,
   toilet: {},
   hasBathTub: true,
   hasShower: true,
@@ -31,7 +26,6 @@ const restroomWithOptionalsFixture: Restroom = {
   heightOfSoapAndDrier: '100 .. 120cm',
   washBasin: {
     isLocatedInsideRestroom: false,
-    accessibleWithWheelchair: true,
     height: '>80cm',
     spaceBelow: {
       height: '> 67cm',

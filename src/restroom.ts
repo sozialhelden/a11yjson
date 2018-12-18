@@ -9,14 +9,34 @@ import { Length, LengthSchema, quantityDefinition } from './units';
 import { Toilet, ToiletSchema } from './toilet';
 import { Shower, ShowerSchema } from './shower';
 
+const restroomSignIcons = [
+  'allGender',
+  'female',
+  'male',
+  'personInWheelchair',
+  'changingTable',
+  'baby',
+  'family',
+  'urinal',
+  'washBasin',
+  'toiletBowl'
+];
+
+export type RestroomSignIcon =
+  | 'allGender'
+  | 'female'
+  | 'male'
+  | 'personInWheelchair'
+  | 'changingTable'
+  | 'baby'
+  | 'family'
+  | 'urinal'
+  | 'washBasin'
+  | 'toiletBowl';
+
 export interface Restroom extends Room {
-  /// QUESTION wheelchair signage, pregnant, with kids, etc. maybe tags instead of booleans?
-  signage?: {
-    unisex: boolean;
-    male: boolean;
-    female: boolean;
-  };
-  /// QUESTION undefined vs. null - how do we indicate that there is no mirror?
+  signIcons?: Array<RestroomSignIcon>;
+  hasMirror?: boolean;
   mirror?: {
     isLocatedInsideRestroom?: boolean;
     isAccessibleWhileSeated: boolean;
@@ -27,9 +47,6 @@ export interface Restroom extends Room {
   ratingForWheelchair?: number;
   turningSpaceInside?: Length;
   hasSupportRails?: boolean;
-  // QUESTION how is this evaluated, doesn't this also depend on the kind of wheelchair?
-  // could be similar to mirror object
-  shampooAccessibleWithWheelchair?: boolean;
   toilet?: Toilet;
   // QUESTION no definition of bathtub
   hasBathTub?: boolean;
@@ -59,26 +76,23 @@ export interface Restroom extends Room {
 export const RestroomSchema = createSchemaInstance(
   'Restroom',
   {
-    /// QUESTION wheelchair signage, pregnant, with kids, etc. maybe tags instead of booleans?
-    signage: {
-      type: Object,
+    signIcons: {
+      type: Array,
       optional: true,
-      accessibility: {}
+      accessibility: {
+        description: t`Visible icons on the restroom’s sign`
+      }
     },
-    'signage.unisex': {
+    'signIcons.$': {
+      type: String,
+      allowedValues: restroomSignIcons
+    },
+    hasMirror: {
       type: Boolean,
       optional: true,
-      accessibility: {}
-    },
-    'signage.male': {
-      type: Boolean,
-      optional: true,
-      accessibility: {}
-    },
-    'signage.female': {
-      type: Boolean,
-      optional: true,
-      accessibility: {}
+      accessibility: {
+        question: t`Does the restroom have a mirror?`
+      }
     },
     mirror: {
       type: Object,
@@ -88,12 +102,16 @@ export const RestroomSchema = createSchemaInstance(
     'mirror.isLocatedInsideRestroom': {
       type: Boolean,
       optional: true,
-      accessibility: {}
+      accessibility: {
+        question: t`Is the mirror inside the restroom?`
+      }
     },
     'mirror.isAccessibleWhileSeated': {
       type: Boolean,
       optional: true,
-      accessibility: {}
+      accessibility: {
+        question: t`Can the mirror be used when sitting in a wheelchair?`
+      }
     },
     'mirror.heightFromGround': quantityDefinition(LengthSchema),
     ratingForWheelchair: {
@@ -102,33 +120,35 @@ export const RestroomSchema = createSchemaInstance(
       min: 0,
       max: 1,
       accessibility: {
-        question: t`How would you rate this entrance for wheelchair users?`,
+        deprecated: true,
+        question: t`How would you rate this restroom for wheelchair users?`,
         componentHint: 'AccessibilityRating'
       }
     },
-    turningSpaceInside: quantityDefinition(LengthSchema),
+    turningSpaceInside: quantityDefinition(LengthSchema, true, {
+      question: t`How wide is the space inside that is usable for turning?`
+    }),
     hasSupportRails: {
       type: Boolean,
       optional: true,
-      accessibility: {}
-    },
-    shampooAccessibleWithWheelchair: {
-      type: Boolean,
-      optional: true,
-      accessibility: {}
+      accessibility: {
+        question: t`Are there support rails on the walls?`
+      }
     },
     toilet: {
       type: ToiletSchema,
       label: t`Toilet`,
       optional: true,
       accessibility: {
-        question: t`Let's take a look at the toilet.`
+        question: t`Let’s take a look at the toilet.`
       }
     },
     hasBathTub: {
       type: Boolean,
       optional: true,
-      accessibility: {}
+      accessibility: {
+        question: t`Is there a bath tub in this room?`
+      }
     },
     entrance: {
       type: EntranceSchema,
@@ -141,37 +161,50 @@ export const RestroomSchema = createSchemaInstance(
     hasShower: {
       type: Boolean,
       optional: true,
-      accessibility: {}
+      accessibility: {
+        question: t`Does the restroom have a shower?`
+      }
     },
     shower: {
       type: ShowerSchema,
       optional: true,
-      accessibility: {}
+      accessibility: {
+        question: t`Would you like to add information about the shower?`
+      }
     },
-    heightOfSoapAndDrier: quantityDefinition(LengthSchema),
+    heightOfSoapAndDrier: quantityDefinition(LengthSchema, true, {
+      question: t`At which height from the floor are the soap and/or drier located?`
+    }),
     washBasin: {
       type: Object,
       optional: true,
-      accessibility: {}
+      accessibility: {
+        question: t`Would you like to add information about the wash basin?`
+      }
     },
     'washBasin.isLocatedInsideRestroom': {
       type: Boolean,
       optional: true,
-      accessibility: {}
+      accessibility: {
+        question: t`Is the wash basin located inside the restroom cabin?`
+      }
     },
-    'washBasin.accessibleWithWheelchair': {
-      type: Boolean,
-      optional: true,
-      accessibility: {}
-    },
-    'washBasin.height': quantityDefinition(LengthSchema),
+    'washBasin.height': quantityDefinition(LengthSchema, true, {
+      question: t`At which height is the wash basin's top?`
+    }),
     'washBasin.spaceBelow': {
       type: Object,
       optional: true,
-      accessibility: {}
+      accessibility: {
+        question: t`Let’s take a look at the space below the wash basin.`
+      }
     },
-    'washBasin.spaceBelow.height': quantityDefinition(LengthSchema),
-    'washBasin.spaceBelow.depth': quantityDefinition(LengthSchema)
+    'washBasin.spaceBelow.height': quantityDefinition(LengthSchema, true, {
+      question: t`How high is the space below the wash basin?`
+    }),
+    'washBasin.spaceBelow.depth': quantityDefinition(LengthSchema, true, {
+      question: t`How deep is the space below the wash basin?`
+    })
   },
   RoomSchema
 );
