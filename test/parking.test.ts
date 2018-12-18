@@ -8,13 +8,12 @@ const parkingWithNullFixture: Parking = {
 
 const parkingWithOptionalsFixture: Parking = {
   forWheelchairUsers: {
-    isAvailable: true,
     location: '2nd floor',
     count: 2,
     isLocatedInside: true,
     width: '>350cm',
     length: '>500cm',
-    maxHeight: '>500cm',
+    maxVehicleHeight: '>500cm',
     hasDedicatedSignage: true,
     paymentBySpace: true,
     paymentByZone: true,
