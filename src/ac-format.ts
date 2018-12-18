@@ -4,7 +4,6 @@ import './simpl-schema-extensions';
 
 export * from './accessibility';
 export * from './address';
-export * from './area-types';
 export * from './country-codes';
 export * from './door';
 export * from './entrance';
@@ -16,8 +15,8 @@ export * from './personal-profile';
 export * from './place-info';
 export * from './place-properties';
 export * from './restroom';
-export * from './room';
 export * from './schema-helpers';
+export * from './room';
 export * from './shower';
 export * from './simpl-schema-extensions';
 export * from './toilet';

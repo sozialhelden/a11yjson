@@ -28,8 +28,6 @@ export interface PlaceProperties {
    */
   accessibility?: Accessibility | null;
 
-  areaTypes?: ArrayLike<AreaTypes>; // QUESTION: merge with category/ies?
-
   // - machine data fields -
 
   // -- wheelmap.pro fields --
@@ -92,19 +90,14 @@ export const PlacePropertiesSchema = new SimpleSchema({
       componentHint: 'PhoneNumber'
     }
   },
-  areaTypes: {
-    type: Array,
-    optional: true,
-    accessibility: {
-      question: t`What type of place or structure is this?`
-    }
-  },
-  'areaTypes.$': {
-    type: String,
-    allowedValues: AllowedAreaTypes.map(s => s)
-  },
   accessibility: {
     type: AccessibilitySchema,
+    optional: true,
+    accessibility: {
+      question: t`Okay, now let\`s map the accessibility.`,
+      description: t`Describes the overall accessibility of a place.`
+    }
+  },
     optional: true,
     accessibility: {
       question: t`Okay, now let\`s map the accessibility.`
