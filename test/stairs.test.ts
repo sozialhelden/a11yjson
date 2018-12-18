@@ -11,15 +11,8 @@ const stairsWithOptionalsFixture: Stairs = {
   },
   name: 'mainStairs',
   stepHeight: '10cm',
-  hasHoist: true,
   hasHandRail: true,
-  hasStairLift: true,
-  hasEscalator: true,
-  hasTactileSafetyStrip: true,
-  wheelChairPlatformLift: {
-    height: '120cm',
-    width: '110cm'
-  }
+  hasTactileSafetyStrips: true
 };
 
 const allValidFixtures = Object.freeze([stairsMinimumFixture, stairsWithOptionalsFixture]);

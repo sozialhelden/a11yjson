@@ -17,17 +17,10 @@ export interface Stairs {
   };
   name?: LocalizedString;
   stepHeight?: Length;
-  hasHoist?: boolean;
   hasHandRail?: boolean;
-  // QUESTION should this be an external id to a lift
-  hasStairLift?: boolean;
-  // QUESTION should this be an external id to an escalator
-  hasEscalator?: boolean;
-  hasTactileSafetyStrip?: boolean;
-  wheelChairPlatformLift?: {
-    height?: Length;
-    width?: Length;
-  };
+  hasBrailleNavigation?: boolean;
+  alternativeMobileEquipmentIds?: Array<string>;
+  hasTactileSafetyStrips?: boolean;
 }
 
 export const StairsSchema = createSchemaInstance('Stairs', {
@@ -47,52 +40,58 @@ export const StairsSchema = createSchemaInstance('Stairs', {
   'nosing.isHighContrast': {
     type: Boolean,
     optional: true,
-    accessibility: {}
+    accessibility: {
+      question: t`Are the steps nosings marked for higher contrast?`
+    }
   },
   'nosing.isAntiSlip': {
     type: Boolean,
     optional: true,
-    accessibility: {}
+    accessibility: {
+      question: t`Do the steps have anti-slip material?`
+    }
   },
   name: {
     type: LocalizedStringSchema,
     optional: true,
-    accessibility: {}
+    accessibility: {
+      question: t`What is the name of these stairs?`
+    }
   },
   stepHeight: quantityDefinition(LengthSchema, true, {
-    question: t`How high is this step/ are these steps?`
+    question: t`How high is this step / are these steps?`
   }),
-  hasHoist: {
-    type: Boolean,
-    optional: true,
-    accessibility: {}
-  },
   hasHandRail: {
     type: Boolean,
     optional: true,
-    accessibility: {}
+    accessibility: {
+      question: t`Is there a hand rail?`
+    }
   },
-  hasStairLift: {
+  hasTactileSafetyStrips: {
     type: Boolean,
     optional: true,
-    accessibility: {}
+    accessibility: {
+      description: t`Do the stairs have tactile safety strips?`
+    }
   },
-
-  hasEscalator: {
+  hasBrailleNavigation: {
     type: Boolean,
     optional: true,
-    accessibility: {}
+    accessibility: {
+      description: t`Do the stairs have braille navigation hints printed on the rails?`
+    }
   },
-  hasTactileSafetyStrip: {
-    type: Boolean,
+  alternativeMobileEquipmentIds: {
+    type: Array,
     optional: true,
-    accessibility: {}
+    accessibility: {
+      machineData: true,
+      description: t`accessibility.cloud IDs of alternative escalators, elevators, hoists, or stair lifts to replace this pathway`
+    }
   },
-  wheelChairPlatformLift: {
-    type: Object,
-    optional: true,
-    accessibility: {}
-  },
-  'wheelChairPlatformLift.height': quantityDefinition(LengthSchema, true, {}),
-  'wheelChairPlatformLift.width': quantityDefinition(LengthSchema, true, {})
+  'alternativeMobileEquipmentIds.$': {
+    type: String,
+    label: t`accessibility.cloud Equipment ID`
+  }
 });
