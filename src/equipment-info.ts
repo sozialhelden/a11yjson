@@ -6,6 +6,11 @@ import './simpl-schema-extensions';
 import { PointGeometry, PointGeometrySchema } from './geometry';
 import { EquipmentProperties, EquipmentPropertiesSchema } from './equipment-properties';
 
+/**
+ * Describes a facility equipment that is part of a place, like an elevator, an escalator, or a
+ * sitemap. Can contain attributes that are realtime updated to indicate operational status.
+ */
+
 export interface EquipmentInfo {
   formatVersion?: string;
   properties?: EquipmentProperties;

@@ -5,6 +5,9 @@ import './simpl-schema-extensions';
 
 import { Length, LengthSchema, quantityDefinition } from './units';
 
+/**
+ * Describes the door of a place's entrance or to one of its facilities (e.g. to a shower, or to an elevator)
+ */
 export interface Door {
   turningSpaceInFront?: Length;
   doorOpensToOutside?: boolean;

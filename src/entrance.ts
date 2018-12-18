@@ -6,6 +6,9 @@ import './simpl-schema-extensions';
 import { Door, DoorSchema } from './door';
 import { Stairs, StairsSchema } from './stairs';
 
+/**
+ * Describes an entrance to a place.
+ */
 export interface Entrance {
   name?: string;
   // QUESTION what is the range for the rating, how is this objective?

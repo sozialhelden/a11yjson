@@ -4,6 +4,9 @@ import SimpleSchema from 'simpl-schema';
 import { createSchemaInstance } from './simpl-schema-extensions';
 import { Length, LengthSchema, quantityDefinition } from './units';
 
+/**
+ * The `Stairs` interface describes one or more walkable stairs.
+ */
 export interface Stairs {
   /// number of steps
   count?: number;

@@ -15,6 +15,9 @@ import { Pathways, PathwaysSchema } from './pathways';
 import { Parking, ParkingSchema } from './parking';
 import { Ground, GroundSchema } from './ground';
 
+/**
+ * Describes the physical (and sometimes human rated) accessibility of a place.
+ */
 export interface Accessibility {
   /// @deprecated
   accessibleWith?: PersonalProfile;
