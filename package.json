@@ -38,8 +38,7 @@
   },
   "lint-staged": {
     "{src,test}/**/*.{ts,tsx}": [
-      "prettier --write --single-quote",
-      "git add"
+      "prettier --write --single-quote"
     ]
   },
   "config": {
