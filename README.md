@@ -12,13 +12,38 @@ We wrote the definitions in TypeScript for compile-time validation. It supports 
 
 ## Most important entities
 
-The format describes PoIs as in the [PlaceInfo](./src/place-info.ts) type. Places can have equipment that uses realtime information, like elevators, or escalators. This is described in the [EquipmentInfo](./src/equipment-info.ts) type.
+The format is based on the [GeoJSON format (RFC 7946)](https://tools.ietf.org/html/rfc7946).
+
+- Describe places of interest with the [`PlaceInfo`](./src/place-info.ts) and [`PlaceProperties`](https://sozialhelden.github.io/ac-format/interfaces/_placeproperties_.placeproperties.html) interfaces
+- Describe the accessibility of a place of interest with the [`Accessibility`](https://sozialhelden.github.io/ac-format/interfaces/_accessibility_.accessibility.html) interface
+- Places can have restrooms (described by the [`Restroom`](https://sozialhelden.github.io/ac-format/interfaces/_restroom_.restroom.html) interface)
+- Places can have equipment like elevators or escalators, including realtime operational status information. Use the [`EquipmentProperties`](https://sozialhelden.github.io/ac-format/interfaces/_equipmentproperties_.equipmentproperties.html) interface for describing facilities.
+- Find other interfaces in [documentation](https://sozialhelden.github.io/ac-format/globals.html).
+
+Even if you cannot adapt the whole format as part of your own indoor mapping specs, it’s a good idea to adapt single interfaces where you see fit.
 
 ## Physical quantities, rating scales and personal profiles
 
 We found a lot of datasets claiming that places are (not) accessible for arbitrary categories of people. As an example, a data source might claim that a place is not accessible for wheelchair users, but does not mention that this is because the entrance has a step. For wheelchair users that can climb a step as long as it’s not too high, a data point like this is misleading.
 
 A solution for better data quality is to let each individual make their own decision about the accessibility of something – if you collect or share data, measure physical attributes of places instead of target group-based data. If possible, also avoid rating scales, as their interpretation is difficult.
+
+## Internationalization (I18n)
+
+You can localize all human-readable strings using JSON objects with IETF language tags as property names and the translations as property values:
+
+```json
+{
+  "en": "Accessibility",
+  "de": "Zugänglichkeit",
+  "zh-Hans": "无障碍",
+  "ase": "https://www.handspeak.com/word/search/index.php?id=1643"
+}
+```
+
+This is optional - the specification allows to simply use a string, too.
+
+We encourage you to localize your strings—If available, you can even use IETF sign language tags (like `ase` for American Sign Language) for adding sign language localization using video, image or website URLs.
 
 ### Bad examples with better solutions
 
