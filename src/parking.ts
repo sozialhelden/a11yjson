@@ -6,18 +6,69 @@ import './simpl-schema-extensions';
 import { Length, LengthSchema, quantityDefinition } from './units';
 import { LocalizedStringSchema, LocalizedString } from './localized-string';
 
+/**
+ * Describes one or more wheelchair parking lots.
+ */
 export interface WheelchairParking {
-  location?: string;
-  distanceToMainEntrance?: Length;
+  /**
+   * Describes where the parking is located.
+   */
+  location?: LocalizedString;
+
+  /**
+   * How far away is the parking from the main entrance? If there is a separate wheelchair entrance,
+   * the distance to this entrance MUST be used.
+   */
+  distanceToEntrance?: Length;
+
+  /**
+   * Defines many wheelchair accessible parking lots are provided
+   */
   count?: number; // TODO use something for >10
+
+  /**
+   * `true` if the parking is inside a building or under a roof, `false` if not, `undefined` if
+   * unknown.
+   */
   isLocatedInside?: boolean;
+
+  /**
+   * Width constraint of the parking lots.
+   */
   width?: Length;
+
+  /**
+   * Length constraint of the parking lots.
+   */
   length?: Length;
+
+  /**
+   * Maximal allowed vehicle height for users of this parking.
+   */
   maxVehicleHeight?: Length;
+
+  /**
+   * `true` if there is dedicated signage at all relevant turning points from the street to the
+   * parking, `false` if not, `undefined` if this is unknown.
+   */
   hasDedicatedSignage?: boolean;
+
+  /**
+   * `true` if the parking has to be paid by space, `false` if not, `undefined` if unknown.
+   */
   paymentBySpace?: boolean;
+
+  /**
+   * `true` if the parking has to be paid by parking zone, `false` if not, `undefined` if unknown.
+   */
   paymentByZone?: boolean;
-  neededParkingPermits?: Array<LocalizedString>;
+
+  /**
+   * List of permit names that allow using this parking.
+   *
+   * @example `['Blue Badge', 'Red badge', 'Turqouise badge']
+   */
+  neededParkingPermits?: ArrayLike<LocalizedString>;
 }
 
 export const WheelchairParkingSchema = new SimpleSchema({
@@ -28,7 +79,7 @@ export const WheelchairParkingSchema = new SimpleSchema({
       question: t`Where is the parking located?`
     }
   },
-  distanceToMainEntrance: quantityDefinition(LengthSchema, true, {
+  distanceToEntrance: quantityDefinition(LengthSchema, true, {
     question: t`How far away is the parking from the main entrance?`
   }),
   count: {

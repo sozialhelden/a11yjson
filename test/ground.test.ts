@@ -8,8 +8,7 @@ const sidewalkWithOptionalsFixture: Ground = {
   distanceToDroppedCurb: '<20m ±10',
   slopeAngle: 6,
   evenPavement: true,
-  turningSpace: '<150cm',
-  streetIsSloping: true
+  turningSpace: '<150cm'
 };
 
 const allValidFixtures = Object.freeze([groundMinimumFixture, sidewalkWithOptionalsFixture]);

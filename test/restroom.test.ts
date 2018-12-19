@@ -23,7 +23,8 @@ const restroomWithOptionalsFixture: Restroom = {
   hasShower: true,
   entrance: entranceMinimumFixture,
   shower: showerMinimumFixture,
-  heightOfSoapAndDrier: '100 .. 120cm',
+  heightOfSoap: '100 .. 120cm',
+  heightOfDrier: '100 .. 120cm',
   washBasin: {
     isLocatedInsideRestroom: false,
     height: '>80cm',

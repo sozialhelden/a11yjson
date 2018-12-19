@@ -11,17 +11,32 @@ import { LocalizedStringSchema, LocalizedString } from './localized-string';
 export interface PlaceProperties {
   // properties
   /**
-   * The name of this place
+   * The official name of this place.
    */
   name?: LocalizedString;
   /**
    * The address of this place.
-   * `null` indicates that this place has no address, `undefined` or missing property indicates unknown.
+   * `null` indicates that this place has no address, `undefined` or missing property indicates
+   * unknown.
    */
   address?: Address | null;
-  description?: LocalizedString; // QUESTION: what is expected in description?
+
+  /**
+   * Text description containing helpful information for people with disabilities.
+   */
+  description?: LocalizedString;
+
+  /**
+   * Phone number to call a representant of the place's operator.
+   */
   phoneNumber?: LocalizedString;
+
+  /**
+   * Category name of the place
+   * @example ‘Restaurant’
+   */
   category: string;
+
   /**
    * The accessibility of this place.
    * `null` indicates that this place has no data, `undefined` or missing property indicates unknown.
@@ -45,7 +60,16 @@ export interface PlaceProperties {
   originalId?: string;
   ids?: Array<ExternalId>;
   originalData?: any;
+
+  /**
+   * URL of the original data source’s website describing this place.
+   */
   infoPageUrl?: LocalizedString;
+
+  /**
+   * URL of the place’s own website.
+   */
+  placeWebsiteUrl?: LocalizedString;
 }
 
 export const PlacePropertiesSchema = new SimpleSchema({

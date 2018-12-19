@@ -8,7 +8,7 @@ const personalProfileWithOptionalsFixture: PersonalProfile = {
   hearingImpairment: true,
   learningImpairment: true,
   limitedSight: true,
-  physicalImpairment: true,
+  mobilityImpairment: true,
   visualImpairment: true,
   blindness: true,
   wheelchair: true

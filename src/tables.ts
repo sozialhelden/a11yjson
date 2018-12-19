@@ -6,10 +6,25 @@ import './simpl-schema-extensions';
 import { Length, LengthSchema, Operator, quantityDefinition } from './units';
 
 export interface Tables {
+  /**
+   * Height or heights of the tables at this place, measured from the top of the table surface.
+   */
   height?: Length;
+  /**
+   * Object describing the space below existing tables.
+   */
   spaceBelow: {
+    /**
+     * Indicates how high the space below a table is.
+     */
     height: Length;
+    /**
+     * Indicates how wide the space below a table is for each user.
+     */
     width: Length;
+    /**
+     * Indicates how deep the space below a table is for each user.
+     */
     depth: Length;
   };
 }

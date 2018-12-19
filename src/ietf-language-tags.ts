@@ -1,8 +1,5 @@
 /**
  * All existing IETF language tags.
- * We assume that these will be extended with sign language codes proposed by
- * http://www.evertype.com/standards/iso639/sign-language.html eventually, so our language tags
- * support them already.s
  */
 
 export const ietfLanguageTags = [
@@ -761,6 +758,15 @@ export const ietfLanguageTags = [
   'zu',
   'zu-ZA'
 ];
+
+/**
+ * We assume that IETF language tags will be extended with sign language codes (as proposed by
+ * http://www.evertype.com/standards/iso639/sign-language.html) eventually, so our language tags
+ * support them already.
+ *
+ * For sign language translations of strings, you can use media URLs pointing to videos or
+ * description pictures.
+ */
 
 export const signLanguageCodes = [
   'sgn-GH-EP',
@@ -1643,7 +1649,15 @@ export type IetfLanguageTag =
   | 'zu'
   | 'zu-ZA';
 
-// For sign language translations, you can use media URLs pointing to a video or description picture.
+/**
+ * We assume that IETF language tags will be extended with sign language codes (as proposed by
+ * http://www.evertype.com/standards/iso639/sign-language.html) eventually, so our language tags
+ * support them already.
+ *
+ * For sign language translations of strings, you can use media URLs pointing to videos or
+ * description pictures.
+ */
+
 export type SignLanguageCode =
   | 'sgn-GH-EP'
   | 'sgn-DZ'
@@ -1768,5 +1782,22 @@ export type SignLanguageCode =
   | 'sgn-por-PT'
   | 'sgn-swe-SE';
 
+/**
+ * We assume that IETF language tags will be extended with sign language codes (as proposed by
+ * http://www.evertype.com/standards/iso639/sign-language.html) eventually, so our language tags
+ * support them already.
+ *
+ * For sign language translations of strings, you can use media URLs pointing to videos or
+ * description pictures.
+ */
 export const ietfLanguageTagsAndSignLanguageCodes = ietfLanguageTags.concat(signLanguageCodes);
+
+/**
+ * We assume that IETF language tags will be extended with sign language codes (as proposed by
+ * http://www.evertype.com/standards/iso639/sign-language.html) eventually, so our language tags
+ * support them already.
+ *
+ * For sign language translations of strings, you can use media URLs pointing to videos or
+ * description pictures.
+ */
 export type IetfLanguageTagOrSignLanguageCode = IetfLanguageTag | SignLanguageCode;

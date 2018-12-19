@@ -5,13 +5,38 @@ import './simpl-schema-extensions';
 import { Length, LengthSchema, quantityDefinition } from './units';
 
 export interface Ground {
+  /**
+   * Rating value (range `[0..1]`) with subjective sidewalk conditions.
+   */
   sidewalkConditions?: number;
+  /**
+   * `true` if the ground is level, `false` if not, `undefined` if the condition is unknown.
+   */
   isLevel?: boolean;
+  /**
+   * Specifies the distance between the main entrance and the next dropped curb if the place is
+   * reachable from a street.
+   *
+   * If people with mobility impairments have to use a secondary entrance, the walking distance
+   * between this entrance and the main entrance has to be added to this value.
+   */
   distanceToDroppedCurb?: Length;
+
+  /**
+   * Angle of the slope that this ground has, if applicable. `undefined` if the slope is unknown.
+   */
   slopeAngle?: number; // TODO  replace with unit for degrees
+
+  /**
+   * `true` if the pavement is even and not plastered, `false` if not. `undefined` if this condition
+   * is unknown.
+   */
   evenPavement?: boolean;
+
+  /**
+   * Turning space that this ground provides to people.
+   */
   turningSpace?: Length;
-  streetIsSloping?: boolean;
 }
 
 export const GroundSchema = new SimpleSchema({
@@ -30,13 +55,6 @@ export const GroundSchema = new SimpleSchema({
     optional: true,
     accessibility: {
       question: t`Is the ground level?`
-    }
-  },
-  streetIsSloping: {
-    type: Boolean,
-    optional: true,
-    accessibility: {
-      question: t`Is the street sloping?`
     }
   },
   slopeAngle: {

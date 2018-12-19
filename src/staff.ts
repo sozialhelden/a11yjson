@@ -8,18 +8,22 @@ import {
 } from './ietf-language-tags';
 
 /**
- * The Staff interface describes the presence of staff and their qualifications.
+ * Describes the presence of staff and their qualifications and/or provided services.
  */
 export interface Staff {
   /**
-   * Does the staff has means to see visitors from the inside, either via a window or
-   * some camera system.
+   * `true` if the staff has means to see visitors from the inside at all times when the place is
+   * open (for example a window or CCTV system), `false` if not, `undefined` if unknown.
    */
   canSeeVisitorsFromInside?: boolean;
+  /**
+   * Languages that the staff speaks, including sign language variants.
+   */
   spokenLanguages?: ArrayLike<IetfLanguageTagOrSignLanguageCode>;
 
   /**
-   * Is there an assistant for the duration of the visit that is free of charge?
+   * `true` if there is an assistant for the duration of the visit that is free of charge, `false`
+   * if not, `undefined` if unknown.
    */
   hasFreeAssistantForVisitors?: boolean; // QUESTION: free versus paid? Why is there no hasPaidAssistantForVisitors? Unlikely?
 }

@@ -1,5 +1,8 @@
 import { t } from 'ttag';
 
+/**
+ * Describes the smoking policy for visitors of a place.
+ */
 export type SmokingPolicy =
   | 'dedicatedToSmoking'
   | 'allowedEverywhere'

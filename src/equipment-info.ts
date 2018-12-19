@@ -12,8 +12,16 @@ import { EquipmentProperties, EquipmentPropertiesSchema } from './equipment-prop
  */
 
 export interface EquipmentInfo {
+  /**
+   * The format version this place info document was created with
+   * (Uses the npm module version from `package.json`)
+   * Not used right now, but added for future compatibility.
+   */
   formatVersion?: string;
   properties?: EquipmentProperties;
+  /**
+   * The physical location of the place in WGS84 coordinates. Currently only a GeoJSON `PointGeometry` is supported.
+   */
   geometry?: PointGeometry;
 }
 

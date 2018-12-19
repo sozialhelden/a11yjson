@@ -85,7 +85,7 @@ export const StructuredAddressSchema = new SimpleSchema({
     label: t`Text`,
     type: LocalizedStringSchema,
     accessibility: {
-      description: t`A displayable, formatted address as rich text.`
+      description: t`A displayable, formatted address as rich text (Markdown).`
     },
     optional: true
   },

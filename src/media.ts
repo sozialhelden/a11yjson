@@ -12,29 +12,89 @@ import {
 } from './ietf-language-tags';
 import { LocalizedStringSchema, LocalizedString } from './localized-string';
 
+/**
+ * Describes a media unit provided at this place, for example an exhibit at a museum or a movie in
+ * a cinema.
+ */
 export interface Media {
-  type: 'document' | 'menu' | 'guide' | 'presentation' | 'exhibit' | 'movie' | 'screen';
+  /**
+   * Type of the media unit
+   */
+  type: 'document' | 'menu' | 'guide' | 'presentation' | 'exhibit' | 'movie' | 'play' | 'screen';
+
+  /**
+   * Name of the media unit (relevant if there are multiple units of the same kind)
+   */
   name?: LocalizedString;
+
+  /**
+   * Is the media unit consumable or described for Braille readers?
+   */
   isBraille?: boolean;
+
+  /**
+   * Is the media unit consumable as audio-only option?
+   */
   isAudio?: boolean;
+
+  /**
+   * If the media unit is printed, is the print large?
+   */
   isLargePrint?: boolean;
+
+  /**
+   * If the media unit is printed or on a screen, does it have high contrast between background and
+   * foreground?
+   */
   hasContrastingBackground?: boolean;
-  isEasyToUnderstand?: boolean;
+
+  /**
+   * Relevant for movies, screens and presentations: Is there a dedicated screen where subtitles can
+   * be read?
+   */
   hasDedicatedScreenForSubtitles?: boolean;
+
+  /**
+   * Is the media unit provided with subtitles?
+   */
   hasSubtitles?: boolean;
+
+  /**
+   * Does the media unit have [real time captioning](https://www.washington.edu/doit/what-real-time-captioning)?
+   */
   hasRealTimeCaptioning?: boolean;
+
+  /**
+   * Is the media unit provided in a [Plain Language](https://en.wikipedia.org/wiki/Plain_language) option?
+   */
   hasPlainLanguageOption?: boolean;
+
+  /**
+   * Specifies which languages (including sign languages) in which the media unit is provided
+   */
   languages?: ArrayLike<IetfLanguageTagOrSignLanguageCode>;
+
+  /**
+   * If the media is consumed while the consumer is directly in front of it, this property specifies
+   * how much turning space there is in front of it.
+   */
   turningSpaceInFront?: Length;
-  isClearlyVisibleWhileSeated?: boolean;
-  isInformationReadableWhileSeated?: boolean;
 }
 
 export const MediaSchema = new SimpleSchema({
   type: {
     type: String,
     label: t`Media Type`,
-    allowedValues: ['document', 'menu', 'guide', 'presentation', 'exhibit', 'movie', 'screen'],
+    allowedValues: [
+      'document',
+      'menu',
+      'guide',
+      'presentation',
+      'exhibit',
+      'movie',
+      'play',
+      'screen'
+    ],
     accessibility: {
       question: t`What kind of media is described?`,
       options: [
@@ -89,14 +149,6 @@ export const MediaSchema = new SimpleSchema({
       question: t`Is the print on a contrasting background?`
     }
   },
-  isEasyToUnderstand: {
-    type: Boolean,
-    label: t`Easy To Understand`,
-    optional: true,
-    accessibility: {
-      question: t`Is the media easy to understand?`
-    }
-  },
   hasDedicatedScreenForSubtitles: {
     type: Boolean,
     label: t`Dedicated Subtitle Screen`,
@@ -145,21 +197,5 @@ export const MediaSchema = new SimpleSchema({
   },
   turningSpaceInFront: quantityDefinition(LengthSchema, true, {
     question: t`How much space for turning is in front of the media?`
-  }),
-  isClearlyVisibleWhileSeated: {
-    type: Boolean,
-    label: t`Clearly Visible While Seated`,
-    optional: true,
-    accessibility: {
-      question: t`Is the media clearly visible while seated?`
-    }
-  },
-  isInformationReadableWhileSeated: {
-    type: Boolean,
-    label: t`Information Readable While Seated`,
-    optional: true,
-    accessibility: {
-      question: t`Is the information readable while seated?`
-    }
-  }
+  })
 });

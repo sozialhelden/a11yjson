@@ -33,38 +33,58 @@ export interface Accessibility {
   // areas?: Array<Area>;
 
   /**
-   * Information about the staff.
+   * Information about the service staff.
    * `null` indicates there is no staff, `undefined` or missing property indicates unknown.
    */
   staff?: Staff | null;
 
+  /**
+   * Information about parking facilities at/around the venue.
+   * `null` indicates there is no parking, `undefined` or missing property indicates unknown.
+   */
   parking?: Parking | null;
-
-  // QUESTION what are the allowed numbers for this rating
-  ratingSpacious?: number;
   // QUESTION How is this measured, should be changed to ambient.lighting
+  /**
+   * Determines if the venue is well lit (subjectively, by the assessor).  Will be replaced by a measurable lumen value in the future.
+   */
   isWellLit?: boolean;
+  /**
+   * Determines if the venue is quiet (subjectively, by the assessor). Will be replaced by a measurable ambient noise level in the future.
+   */
   isQuiet?: boolean;
   // TODO: Causes test error. Fix this!
   // ambientNoiseLevel?: Volume; // in dB(A) relative to a reference pressure of 0.00002 Pa
-  smokingPolicy?: SmokingPolicy;
-  hasTactileGuideStrips?: boolean;
-  animalPolicy?: AnimalPolicy;
-  ground?: Ground | null;
-  pathways?: Pathways | null;
-  entrances?: ArrayLike<Entrance> | null;
-  restrooms?: ArrayLike<Restroom> | null;
-  sitemap?: any; // TODO define type
-  switches?: [any]; // TODO define type
-  vendingMachines?: [any]; // TODO define type
-  powerOutlets?: [any]; // TODO define type
-  beds?: [any]; // TODO define type
-  wardrobe?: any; // TODO define type
-  changingRoom?: any; // TODO define type,
-  stage?: any; // TODO define type,
-  cashRegister?: any; // TODO define type,
   /**
-   * Information about payment.
+   * Object describing the owner's smoking policy.
+   */
+  smokingPolicy?: SmokingPolicy;
+  /**
+   * Object describing the owner's policy regarding visitors bringing animals with them.
+   */
+  animalPolicy?: AnimalPolicy;
+  /**
+   * `true` if the venue has tactile guide strips on the floor or at the walls, `false` if not. `undefined` or missing property indicates unknown.
+   */
+  hasTactileGuideStrips?: boolean;
+  /**
+   * Object describing the place's ground condition. If there are very different ground conditions, you can create multiple places and nest them.
+   */
+  ground?: Ground | null;
+  /**
+   * Describes the accessibility of pathways to the place or inside the place’s boundaries.
+   */
+  pathways?: Pathways | null;
+  /**
+   * Describes the accessibility of entrances to the place.
+   */
+  entrances?: ArrayLike<Entrance> | null;
+  /**
+   * Describes the accessibility of restrooms in the place.
+   */
+  restrooms?: ArrayLike<Restroom> | null;
+
+  /**
+   * Information about payment at the place.
    * `null` indicates there is no payment possible/required,
    * `undefined` or missing property indicates unknown.
    */
@@ -79,17 +99,64 @@ export interface Accessibility {
    * `null` indicates there are no tables, `undefined` or missing property indicates unknown.
    */
   tables?: Tables | null;
-  seats?: any; // TODO define type,
   serviceContact?: LocalizedString;
-  services?: any; // TODO define type,,
-
-  infoDesk?: any; // TODO define type,
-  signage?: any; // TODO define type,
   /**
    * Information about media.
    * `null` indicates there is no media, `undefined` or missing property indicates unknown.
    */
   media?: ArrayLike<Media> | null;
+  /**
+   * TODO
+   */
+  sitemap?: any; // TODO define type
+  /**
+   * TODO
+   */
+  switches?: [any]; // TODO define type
+  /**
+   * TODO
+   */
+  vendingMachines?: [any]; // TODO define type
+  /**
+   * TODO
+   */
+  powerOutlets?: [any]; // TODO define type
+  /**
+   * TODO
+   */
+  beds?: [any]; // TODO define type
+  /**
+   * TODO
+   */
+  wardrobe?: any; // TODO define type
+  /**
+   * TODO
+   */
+  changingRoom?: any; // TODO define type,
+  /**
+   * TODO
+   */
+  stage?: any; // TODO define type,
+  /**
+   * TODO
+   */
+  cashRegister?: any; // TODO define type,
+  /**
+   * TODO
+   */
+  seats?: any; // TODO define type,
+  /**
+   * TODO
+   */
+  services?: any; // TODO define type,,
+  /**
+   * TODO
+   */
+  infoDesk?: any; // TODO define type,
+  /**
+   * TODO
+   */
+  signage?: any; // TODO define type,
 }
 
 export const AccessibilitySchema = new SimpleSchema({

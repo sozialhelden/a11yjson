@@ -9,17 +9,47 @@ import { LocalizedString, LocalizedStringSchema } from './localized-string';
  * The `Stairs` interface describes one or more walkable stairs.
  */
 export interface Stairs {
-  /// number of steps
+  /**
+   * Number of steps.
+   */
   count?: number;
+  /**
+   * Object describing the stair nosing, if existent.
+   */
   nosing?: {
+    /**
+     * `true` if all relevant steps have a high contrast nosing.
+     */
     isHighContrast?: boolean;
+    /**
+     * `true` if all relevant steps are made with anti-slip material.
+     */
     isAntiSlip?: boolean;
   };
+  /**
+   * If there are multiple staircase, you SHOULD indicate a name for this staircase here.
+   */
   name?: LocalizedString;
+  /**
+   * Indicates how high the steps if these stairs are (can be a range).
+   */
   stepHeight?: Length;
+  /**
+   * `true` if there is a handrail covering all relevant steps, `false` if not, `undefined` if condition is unknown.
+   */
   hasHandRail?: boolean;
+  /**
+   * `true` if there is braille navigation for this staircase, `false` if not, `undefined` if condition is unknown.
+   */
   hasBrailleNavigation?: boolean;
+  /**
+   * You SHOULD reference alternative equipment IDs with this field, for example elevators, escalators, or hoists.
+   */
   alternativeMobileEquipmentIds?: Array<string>;
+  /**
+   * `true` if all relevant steps have tactile safety surfaces, used as warnings, implying textures
+   * detectable with the touch of a foot or sweep of a cane.
+   */
   hasTactileSafetyStrips?: boolean;
 }
 

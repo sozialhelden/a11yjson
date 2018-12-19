@@ -1,7 +1,9 @@
 import { IetfLanguageTag } from './ietf-language-tags';
 
-// Localized strings can either be just of the string type, or be an object with ietf language tags
-// as property names and localized strings as property values.
+/**
+ * Localized strings can either be just `String`s, or be `Object`s with IETF language tags
+ * as property names and localized strings as property values.
+ */
 
 export type LocalizedString =
   | string

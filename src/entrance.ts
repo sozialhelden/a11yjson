@@ -11,24 +11,44 @@ import { LocalizedStringSchema, LocalizedString } from './localized-string';
  * Describes an entrance to a place.
  */
 export interface Entrance {
+  /**
+   * Name of the entrance (helpful if there are multiple entrances).
+   * */
   name?: LocalizedString;
-  // QUESTION what is the range for the rating, how is this objective?
-  ratingForWheelchair?: number;
+  /**
+   * `true` if this is the main entrance, `false` if not, `undefined` if unknown. If there is only one entrance, this attribute SHOULD be `undefined`.
+   */
   isMainEntrance?: boolean;
   // QUESTION merge with slope/stairs in some way
+  /**
+   * `true` if this entrance has no steps and needs no ramp, `false` if there are steps or a ramp, `undefined` if unknown.
+   */
   isLevel?: boolean;
-  // QUESTION merge with slopeAngle in some way (e.g. > 0)
-  hasSlope?: boolean;
   // TODO create unit for this for eg. >10
-  /// grade in percent as calculated by `100 * rise / run` or the tangent of the angle of inclination times 100
+  /**
+   * grade in percent as calculated by `100 * rise / run` or the tangent of the angle of inclination times 100, or `undefined` if there is no slope.
+   */
   slopeAngle?: number;
+  /**
+   *  `true` if there is a removable ramp, `false` if not, `undefined` if unknown. If there is a fixed ramp, this property MUST be `undefined`.
+   */
   hasRemovableRamp?: boolean;
   // QUESTION duplicated from area
+  /**
+   *  Object that describes stairs that you have to take to use the entrance.
+   */
   stairs?: Stairs;
-  door?: Door;
-  /// reference to the equipment id if this entrance is a lift
-  liftEquipmentId?: string;
-  /// reference to the equipment id of the intercom of this entrance
+  /**
+   *  Object that describes the entrance’s door. `null` if there is no doof, `undefined` if it is unknown.
+   */
+  door?: Door | null;
+  /**
+   *  reference to the equipment id if this entrance is an elevator (on accessibility.cloud)
+   */
+  elevatorEquipmentId?: string;
+  /**
+   * reference to the equipment id of the intercom of this entrance (on accessibility.cloud)
+   */
   intercomEquipmentId?: string;
 }
 
@@ -39,17 +59,6 @@ export const EntranceSchema = new SimpleSchema({
     accessibility: {
       question: t`What is the name of this entrance?`,
       example: t`e.g. main entrance`
-    }
-  },
-  ratingForWheelchair: {
-    type: Number,
-    optional: true,
-    min: 0,
-    max: 1,
-    accessibility: {
-      deprecated: true,
-      question: t`How would you rate this entrance for wheelchair users?`,
-      componentHint: 'AccessibilityRating'
     }
   },
   isMainEntrance: {
@@ -64,13 +73,6 @@ export const EntranceSchema = new SimpleSchema({
     optional: true,
     accessibility: {
       question: t`Is the entrance stepless?`
-    }
-  },
-  hasSlope: {
-    type: Boolean,
-    optional: true,
-    accessibility: {
-      question: t`Is there a slope at the entrance?`
     }
   },
   slopeAngle: {
@@ -104,7 +106,7 @@ export const EntranceSchema = new SimpleSchema({
       questionBlockBegin: t`Would you like to add information about the door at the entrance?`
     }
   },
-  liftEquipmentId: {
+  elevatorEquipmentId: {
     type: String,
     optional: true,
     accessibility: {

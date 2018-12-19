@@ -3,10 +3,11 @@ import SimpleSchema from 'simpl-schema';
 
 import './simpl-schema-extensions';
 
-// TODO add altitude
+/**
+ * [GeoJSON](https://tools.ietf.org/html/rfc7946) `Point` object.
+ */
 export interface PointGeometry {
   type: 'Point';
-  /// An array of longitude and latitude, in this unnatural order
   coordinates: [number, number];
 }
 
