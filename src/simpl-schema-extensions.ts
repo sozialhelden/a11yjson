@@ -11,11 +11,11 @@ SimpleSchema.extendOptions(['accessibility']);
  * Context for the question function, to read additional fields or generate questions dynamically
  */
 export class QuestionFunctionContext<T> {
-  value: T;
-  path: string;
-  schema: SimpleSchema;
-  userName: string;
-  field: (fieldName: string) => any;
+  value?: T;
+  path?: string;
+  schema?: SimpleSchema;
+  userName?: string;
+  field?: (fieldName: string) => any;
 }
 
 export function makeQuestionContext<T>(
