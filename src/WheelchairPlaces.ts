@@ -1,7 +1,7 @@
 import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
-import './simpl-schema-extensions';
+import './SimpleSchemaExtensions';
 
 /**
  * The WheelchairPlaces interface describes the presence of reserved spots for wheelchairs.

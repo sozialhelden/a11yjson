@@ -1,17 +1,17 @@
 import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
-import './simpl-schema-extensions';
+import './SimpleSchemaExtensions';
 
-import { Door, DoorSchema } from './door';
-import { Length, LengthSchema } from './units';
-import { ExternalId, ExternalIdSchemaDefinition } from './external-id';
+import { Door, DoorSchema } from './Door';
+import { Length, LengthSchema } from './Units';
+import { ExternalId, ExternalIdSchemaDefinition } from './ExternalId';
 import {
   IetfLanguageTag,
   IetfLanguageTagOrSignLanguageCode,
   ietfLanguageTagsAndSignLanguageCodes
-} from './ietf-language-tags';
-import { LocalizedStringSchema, LocalizedString } from './localized-string';
+} from './ietfLanguageTags';
+import { LocalizedStringSchema, LocalizedString } from './LocalizedString';
 
 export type EquipmentTypes =
   | 'bed'

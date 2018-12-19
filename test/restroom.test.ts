@@ -1,8 +1,8 @@
-import { Restroom, RestroomSchema } from '../src/restroom';
-import { entranceMinimumFixture } from './entrance.test';
-import { FormatVersion } from '../src/version';
-import { toiletMinimumFixture } from './toilet.test';
-import { showerMinimumFixture } from './shower.test';
+import { Restroom, RestroomSchema } from '../src/Restroom';
+import { entranceMinimumFixture } from './Entrance.test';
+import { FormatVersion } from '../src/Version';
+import { toiletMinimumFixture } from './Toilet.test';
+import { showerMinimumFixture } from './Shower.test';
 
 export const restroomMinimumFixture: Restroom = {};
 

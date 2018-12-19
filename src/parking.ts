@@ -1,10 +1,10 @@
 import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
-import './simpl-schema-extensions';
+import './SimpleSchemaExtensions';
 
-import { Length, LengthSchema, quantityDefinition } from './units';
-import { LocalizedStringSchema, LocalizedString } from './localized-string';
+import { Length, LengthSchema, quantityDefinition } from './Units';
+import { LocalizedStringSchema, LocalizedString } from './LocalizedString';
 
 /**
  * Describes one or more wheelchair parking lots.

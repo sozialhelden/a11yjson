@@ -1,6 +1,6 @@
 import SimpleSchema from 'simpl-schema';
 
-import { forEachKeyInSchemas, getFirstSchemaFromDefinition } from '../src/schema-helpers';
+import { forEachKeyInSchemas, getFirstSchemaFromDefinition } from '../src/SchemaHelpers';
 
 // allow custom fields
 SimpleSchema.extendOptions(['accessibility']);

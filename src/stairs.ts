@@ -1,9 +1,9 @@
 import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
-import { createSchemaInstance } from './simpl-schema-extensions';
-import { Length, LengthSchema, quantityDefinition } from './units';
-import { LocalizedString, LocalizedStringSchema } from './localized-string';
+import { createSchemaInstance } from './SimpleSchemaExtensions';
+import { Length, LengthSchema, quantityDefinition } from './Units';
+import { LocalizedString, LocalizedStringSchema } from './LocalizedString';
 
 /**
  * The `Stairs` interface describes one or more walkable stairs.

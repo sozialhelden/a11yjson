@@ -1,4 +1,4 @@
-import { Ground, GroundSchema } from '../src/ground';
+import { Ground, GroundSchema } from '../src/Ground';
 
 export const groundMinimumFixture: Ground = {};
 

@@ -1,4 +1,4 @@
-import { Staff, StaffSchema } from '../src/staff';
+import { Staff, StaffSchema } from '../src/Staff';
 
 export const staffMinimumFixture: Staff = {};
 

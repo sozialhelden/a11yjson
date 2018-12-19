@@ -1,4 +1,4 @@
-import { WheelchairPlaces, WheelchairPlacesSchema } from '../src/wheelchair-places';
+import { WheelchairPlaces, WheelchairPlacesSchema } from '../src/WheelchairPlaces';
 
 export const wheelchairPlacesMinimumFixture: WheelchairPlaces = {
   count: 10

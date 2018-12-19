@@ -1,8 +1,8 @@
 import { AccessibilitySchemaExtensionSchema } from '../src/index';
-import { forEachKeyInSchemas } from '../src/schema-helpers';
-import { PlaceInfo, PlaceInfoSchema } from '../src/place-info';
-import { validPointGeometryFixture } from './geometry.test';
-import { placePropertiesMinimumFixture } from './place-properties.test';
+import { forEachKeyInSchemas } from '../src/SchemaHelpers';
+import { PlaceInfo, PlaceInfoSchema } from '../src/PlaceInfo';
+import { validPointGeometryFixture } from './Geometry.test';
+import { placePropertiesMinimumFixture } from './PlaceProperties.test';
 
 const placeMinimumFixture: PlaceInfo = {
   properties: placePropertiesMinimumFixture,

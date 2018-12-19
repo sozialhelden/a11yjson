@@ -1,8 +1,8 @@
 import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
-import './simpl-schema-extensions';
-import { Length, LengthSchema, quantityDefinition } from './units';
+import './SimpleSchemaExtensions';
+import { Length, LengthSchema, quantityDefinition } from './Units';
 
 export interface Ground {
   /**

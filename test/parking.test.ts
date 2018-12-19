@@ -1,4 +1,4 @@
-import { Parking, ParkingSchema } from '../src/parking';
+import { Parking, ParkingSchema } from '../src/Parking';
 
 export const parkingMinimumFixture: Parking = {};
 

@@ -1,5 +1,5 @@
-import { Toilet, ToiletSchema } from '../src/toilet';
-import { FormatVersion } from '../src/version';
+import { Toilet, ToiletSchema } from '../src/Toilet';
+import { FormatVersion } from '../src/Version';
 
 export const toiletMinimumFixture: Toilet = {};
 

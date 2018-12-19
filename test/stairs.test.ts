@@ -1,5 +1,5 @@
-import { Stairs, StairsSchema } from '../src/stairs';
-import { FormatVersion } from '../src/version';
+import { Stairs, StairsSchema } from '../src/Stairs';
+import { FormatVersion } from '../src/Version';
 
 export const stairsMinimumFixture: Stairs = {};
 

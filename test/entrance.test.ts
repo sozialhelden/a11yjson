@@ -1,6 +1,6 @@
-import { Entrance, EntranceSchema } from '../src/entrance';
-import { doorMinimumFixture } from './door.test';
-import { stairsMinimumFixture } from './stairs.test';
+import { Entrance, EntranceSchema } from '../src/Entrance';
+import { doorMinimumFixture } from './Door.test';
+import { stairsMinimumFixture } from './Stairs.test';
 
 export const entranceMinimumFixture: Entrance = {};
 

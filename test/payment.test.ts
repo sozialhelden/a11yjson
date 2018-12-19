@@ -1,4 +1,4 @@
-import { Payment, PaymentSchema } from '../src/payment';
+import { Payment, PaymentSchema } from '../src/Payment';
 
 export const paymentMinimumFixture: Payment = {};
 

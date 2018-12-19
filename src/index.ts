@@ -1,24 +1,24 @@
 // re-export all library components
 
-import './simpl-schema-extensions';
+import './SimpleSchemaExtensions';
 
-export * from './accessibility';
-export * from './address';
-export * from './country-codes';
-export * from './door';
-export * from './entrance';
-export * from './equipment-info';
-export * from './equipment-properties';
-export * from './external-id';
-export * from './geometry';
-export * from './personal-profile';
-export * from './place-info';
-export * from './place-properties';
-export * from './restroom';
-export * from './schema-helpers';
-export * from './room';
-export * from './shower';
-export * from './simpl-schema-extensions';
-export * from './toilet';
-export * from './units';
-export * from './version';
+export * from './Accessibility';
+export * from './Address';
+export * from './CountryCodes';
+export * from './Door';
+export * from './Entrance';
+export * from './EquipmentInfo';
+export * from './EquipmentProperties';
+export * from './ExternalId';
+export * from './Geometry';
+export * from './PersonalProfile';
+export * from './PlaceInfo';
+export * from './PlaceProperties';
+export * from './Restroom';
+export * from './SchemaHelpers';
+export * from './Room';
+export * from './Shower';
+export * from './SimpleSchemaExtensions';
+export * from './Toilet';
+export * from './Units';
+export * from './Version';

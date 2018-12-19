@@ -1,7 +1,7 @@
 import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
-import './simpl-schema-extensions';
+import './SimpleSchemaExtensions';
 
 /**
  * [GeoJSON](https://tools.ietf.org/html/rfc7946) `Point` object.

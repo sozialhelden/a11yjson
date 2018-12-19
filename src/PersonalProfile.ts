@@ -1,7 +1,7 @@
 import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
-import './simpl-schema-extensions';
+import './SimpleSchemaExtensions';
 
 /**
  * Describes a person. This exists only to transform data from sources where no physical attributes

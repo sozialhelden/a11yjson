@@ -1,4 +1,4 @@
-import { PointGeometry, PointGeometrySchema } from '../src/geometry';
+import { PointGeometry, PointGeometrySchema } from '../src/Geometry';
 
 export const validPointGeometryFixture: PointGeometry = {
   type: 'Point',

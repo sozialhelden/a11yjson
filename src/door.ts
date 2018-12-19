@@ -1,9 +1,9 @@
 import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
-import './simpl-schema-extensions';
+import './SimpleSchemaExtensions';
 
-import { Length, LengthSchema, quantityDefinition } from './units';
+import { Length, LengthSchema, quantityDefinition } from './Units';
 
 /**
  * Describes the door of a place's entrance or to one of its facilities (e.g. to a shower, or to an elevator)

@@ -1,16 +1,16 @@
 import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
-import './simpl-schema-extensions';
+import './SimpleSchemaExtensions';
 
-import { Length, LengthSchema, quantityDefinition } from './units';
+import { Length, LengthSchema, quantityDefinition } from './Units';
 import {
   IetfLanguageTag,
   ietfLanguageTags,
   ietfLanguageTagsAndSignLanguageCodes,
   IetfLanguageTagOrSignLanguageCode
-} from './ietf-language-tags';
-import { LocalizedStringSchema, LocalizedString } from './localized-string';
+} from './ietfLanguageTags';
+import { LocalizedStringSchema, LocalizedString } from './LocalizedString';
 
 /**
  * Describes a media unit provided at this place, for example an exhibit at a museum or a movie in

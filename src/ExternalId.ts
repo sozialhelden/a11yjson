@@ -1,7 +1,7 @@
 import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
-import './simpl-schema-extensions';
+import './SimpleSchemaExtensions';
 
 export interface ExternalId {
   /// Organization who manages the equipment database, or name of the ID standard.

@@ -1,12 +1,12 @@
 import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
-import './simpl-schema-extensions';
+import './SimpleSchemaExtensions';
 
-import { Accessibility, AccessibilitySchema } from './accessibility';
-import { ExternalId, ExternalIdSchemaDefinition } from './external-id';
-import { Address, AddressSchema } from './address';
-import { LocalizedStringSchema, LocalizedString } from './localized-string';
+import { Accessibility, AccessibilitySchema } from './Accessibility';
+import { ExternalId, ExternalIdSchemaDefinition } from './ExternalId';
+import { Address, AddressSchema } from './Address';
+import { LocalizedStringSchema, LocalizedString } from './LocalizedString';
 
 export interface PlaceProperties {
   // properties

@@ -1,4 +1,4 @@
-import { Door, DoorSchema } from '../src/door';
+import { Door, DoorSchema } from '../src/Door';
 
 export const doorMinimumFixture: Door = {};
 

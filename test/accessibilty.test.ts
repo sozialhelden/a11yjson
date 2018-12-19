@@ -1,15 +1,15 @@
-import { Accessibility, AccessibilitySchema } from '../src/accessibility';
-import { personalProfileMinimumFixture } from './personal-profile.test';
-import { restroomMinimumFixture } from './restroom.test';
-import { entranceMinimumFixture } from './entrance.test';
-import { wheelchairPlacesMinimumFixture } from './wheelchair-places.test';
-import { mediaMinimumFixture } from './media.test';
-import { staffMinimumFixture } from './staff.test';
-import { paymentMinimumFixture } from './payment.test';
-import { tablesMinimumFixture } from './tables.test';
-import { pathwaysMinimumFixture } from './pathways.test';
-import { parkingMinimumFixture } from './parking.test';
-import { groundMinimumFixture } from './ground.test';
+import { Accessibility, AccessibilitySchema } from '../src/Accessibility';
+import { personalProfileMinimumFixture } from './PersonalProfile.test';
+import { restroomMinimumFixture } from './Restroom.test';
+import { entranceMinimumFixture } from './Entrance.test';
+import { wheelchairPlacesMinimumFixture } from './WheelchairPlaces.test';
+import { mediaMinimumFixture } from './Media.test';
+import { staffMinimumFixture } from './Staff.test';
+import { paymentMinimumFixture } from './Payment.test';
+import { tablesMinimumFixture } from './Tables.test';
+import { pathwaysMinimumFixture } from './Pathways.test';
+import { parkingMinimumFixture } from './Parking.test';
+import { groundMinimumFixture } from './Ground.test';
 
 export const accessibilityMinimumFixture: Accessibility = {};
 

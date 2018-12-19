@@ -1,11 +1,11 @@
 import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
-import './simpl-schema-extensions';
+import './SimpleSchemaExtensions';
 import {
   IetfLanguageTagOrSignLanguageCode,
   ietfLanguageTagsAndSignLanguageCodes
-} from './ietf-language-tags';
+} from './ietfLanguageTags';
 
 /**
  * Describes the presence of staff and their qualifications and/or provided services.

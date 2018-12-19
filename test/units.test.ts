@@ -4,7 +4,7 @@ import {
   LengthSchema,
   quantityDefinition,
   validateUnit
-} from '../src/units';
+} from '../src/Units';
 import SimpleSchema from 'simpl-schema';
 
 const lengthStringFixture = '10cm';

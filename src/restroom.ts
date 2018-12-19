@@ -1,13 +1,13 @@
 import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
-import { createSchemaInstance } from './simpl-schema-extensions';
+import { createSchemaInstance } from './SimpleSchemaExtensions';
 
-import { Room, RoomSchema } from './room';
-import { Entrance, EntranceSchema } from './entrance';
-import { Length, LengthSchema, quantityDefinition } from './units';
-import { Toilet, ToiletSchema } from './toilet';
-import { Shower, ShowerSchema } from './shower';
+import { Room, RoomSchema } from './Room';
+import { Entrance, EntranceSchema } from './Entrance';
+import { Length, LengthSchema, quantityDefinition } from './Units';
+import { Toilet, ToiletSchema } from './Toilet';
+import { Shower, ShowerSchema } from './Shower';
 
 const restroomSignIcons = [
   'allGender',

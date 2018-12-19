@@ -1,6 +1,6 @@
-import { EquipmentInfo, EquipmentInfoSchema } from '../src/equipment-info';
-import { validPointGeometryFixture } from './geometry.test';
-import { equipmentPropertiesMinimumFixture } from './equipment-properties.test';
+import { EquipmentInfo, EquipmentInfoSchema } from '../src/EquipmentInfo';
+import { validPointGeometryFixture } from './Geometry.test';
+import { equipmentPropertiesMinimumFixture } from './EquipmentProperties.test';
 
 const equipmentInfoMinimumFixture: EquipmentInfo = {
   properties: equipmentPropertiesMinimumFixture,

@@ -1,7 +1,7 @@
 import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
-import { createSchemaInstance } from './simpl-schema-extensions';
+import { createSchemaInstance } from './SimpleSchemaExtensions';
 
 export interface Room {
   // QUESTION is this calculated from the subfields or can this go away?

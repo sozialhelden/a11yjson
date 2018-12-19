@@ -1,4 +1,4 @@
-import { Media, MediaSchema } from '../src/media';
+import { Media, MediaSchema } from '../src/Media';
 
 export const mediaMinimumFixture: Media = {
   type: 'document'

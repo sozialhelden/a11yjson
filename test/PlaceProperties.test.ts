@@ -1,6 +1,6 @@
-import { PlaceProperties, PlacePropertiesSchema } from '../src/place-properties';
+import { PlaceProperties, PlacePropertiesSchema } from '../src/PlaceProperties';
 
-import { validExternalIdWithExtendedDataFixture } from './external-id.test';
+import { validExternalIdWithExtendedDataFixture } from './ExternalId.test';
 import { accessibilityMinimumFixture } from './accessibilty.test';
 import { structuredAddressMinimalFixture } from './address.test';
 

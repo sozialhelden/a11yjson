@@ -1,4 +1,4 @@
-import { IetfLanguageTag } from './ietf-language-tags';
+import { IetfLanguageTag } from './ietfLanguageTags';
 
 /**
  * Localized strings can either be just `String`s, or be `Object`s with IETF language tags

@@ -1,23 +1,23 @@
 import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
-import './simpl-schema-extensions';
+import './SimpleSchemaExtensions';
 
-import { PersonalProfile, PersonalProfileSchema } from './personal-profile';
-import { Entrance, EntranceSchema } from './entrance';
-import { Restroom, RestroomSchema } from './restroom';
-import { Staff, StaffSchema } from './staff';
-import { WheelchairPlaces, WheelchairPlacesSchema } from './wheelchair-places';
-import { Media, MediaSchema } from './media';
-import { Payment, PaymentSchema } from './payment';
-import { AccessibleTablesPrefab, Tables, TablesSchema } from './tables';
-import { Pathways, PathwaysSchema } from './pathways';
-import { Parking, ParkingSchema } from './parking';
-import { Ground, GroundSchema } from './ground';
-import { LocalizedString, LocalizedStringSchema } from './localized-string';
-import { AnimalPolicySchema, AnimalPolicy } from './animal-policy';
-import { SmokingPolicy, smokingPolicies } from './smoking-policy';
-import { quantityDefinition, Volume, LengthSchema } from './units';
+import { PersonalProfile, PersonalProfileSchema } from './PersonalProfile';
+import { Entrance, EntranceSchema } from './Entrance';
+import { Restroom, RestroomSchema } from './Restroom';
+import { Staff, StaffSchema } from './Staff';
+import { WheelchairPlaces, WheelchairPlacesSchema } from './WheelchairPlaces';
+import { Media, MediaSchema } from './Media';
+import { Payment, PaymentSchema } from './Payment';
+import { AccessibleTablesPrefab, Tables, TablesSchema } from './Tables';
+import { Pathways, PathwaysSchema } from './Pathways';
+import { Parking, ParkingSchema } from './Parking';
+import { Ground, GroundSchema } from './Ground';
+import { LocalizedString, LocalizedStringSchema } from './LocalizedString';
+import { AnimalPolicySchema, AnimalPolicy } from './AnimalPolicy';
+import { SmokingPolicy, smokingPolicies } from './SmokingPolicy';
+import { quantityDefinition, Volume, LengthSchema } from './Units';
 
 /**
  * Describes the physical (and sometimes human rated) accessibility of a place.

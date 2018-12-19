@@ -1,4 +1,4 @@
-import { Pathways, PathwaysSchema } from '../src/pathways';
+import { Pathways, PathwaysSchema } from '../src/Pathways';
 
 export const pathwaysMinimumFixture: Pathways = {
   width: '<90cm'

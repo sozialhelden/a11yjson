@@ -1,10 +1,10 @@
 import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
-import './simpl-schema-extensions';
+import './SimpleSchemaExtensions';
 
-import { Geometry, GeometrySchema } from './geometry';
-import { PlaceProperties, PlacePropertiesSchema } from './place-properties';
+import { Geometry, GeometrySchema } from './Geometry';
+import { PlaceProperties, PlacePropertiesSchema } from './PlaceProperties';
 
 /**
  * The PlaceInfo interface describes a physical location with added accessibility properties.

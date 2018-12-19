@@ -1,7 +1,7 @@
 import { makeQuestionContext } from '../src/index';
 import SimpleSchema from 'simpl-schema';
 
-import { evaluateAccessibilitySchemaExtension } from '../src/simpl-schema-extensions';
+import { evaluateAccessibilitySchemaExtension } from '../src/SimpleSchemaExtensions';
 
 describe('Simple-Schema Accessibility Extension', () => {
   it('Arrays are sampled', () => {

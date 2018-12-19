@@ -1,10 +1,10 @@
 import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
-import './simpl-schema-extensions';
+import './SimpleSchemaExtensions';
 
-import { PointGeometry, PointGeometrySchema } from './geometry';
-import { EquipmentProperties, EquipmentPropertiesSchema } from './equipment-properties';
+import { PointGeometry, PointGeometrySchema } from './Geometry';
+import { EquipmentProperties, EquipmentPropertiesSchema } from './EquipmentProperties';
 
 /**
  * Describes a facility equipment that is part of a place, like an elevator, an escalator, or a

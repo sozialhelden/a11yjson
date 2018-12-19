@@ -1,8 +1,8 @@
 import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
-import './simpl-schema-extensions';
-import { LocalizedString, LocalizedStringSchema } from './localized-string';
+import './SimpleSchemaExtensions';
+import { LocalizedString, LocalizedStringSchema } from './LocalizedString';
 
 export interface Payment {
   hasPortablePaymentSystem?: boolean;

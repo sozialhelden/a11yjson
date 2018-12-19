@@ -1,8 +1,8 @@
 import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
-import { createSchemaInstance } from './simpl-schema-extensions';
-import { Length, LengthSchema, quantityDefinition } from './units';
+import { createSchemaInstance } from './SimpleSchemaExtensions';
+import { Length, LengthSchema, quantityDefinition } from './Units';
 
 export interface Shower {
   // QUESTION could be more than one step

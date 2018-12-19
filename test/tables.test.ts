@@ -1,4 +1,4 @@
-import { Tables, TablesSchema } from '../src/tables';
+import { Tables, TablesSchema } from '../src/Tables';
 
 export const tablesMinimumFixture: Tables = {
   spaceBelow: {

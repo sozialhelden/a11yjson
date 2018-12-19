@@ -1,11 +1,11 @@
 import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
-import './simpl-schema-extensions';
+import './SimpleSchemaExtensions';
 
-import { Door, DoorSchema } from './door';
-import { Stairs, StairsSchema } from './stairs';
-import { LocalizedStringSchema, LocalizedString } from './localized-string';
+import { Door, DoorSchema } from './Door';
+import { Stairs, StairsSchema } from './Stairs';
+import { LocalizedStringSchema, LocalizedString } from './LocalizedString';
 
 /**
  * Describes an entrance to a place.

@@ -1,4 +1,4 @@
-import { ExternalIdSchemaDefinition } from '../src/external-id';
+import { ExternalIdSchemaDefinition } from '../src/ExternalId';
 import SimpleSchema from 'simpl-schema';
 
 export const validExternalIdWithExtendedDataFixture = {

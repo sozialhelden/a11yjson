@@ -1,9 +1,9 @@
 import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
-import './simpl-schema-extensions';
-import { isoAlphaThreeCountryCodes } from './country-codes';
-import { LocalizedStringSchema, LocalizedString } from './localized-string';
+import './SimpleSchemaExtensions';
+import { isoAlphaThreeCountryCodes } from './CountryCodes';
+import { LocalizedStringSchema, LocalizedString } from './LocalizedString';
 
 /**
  * The address of a places as Address as a series of structured attributes.
