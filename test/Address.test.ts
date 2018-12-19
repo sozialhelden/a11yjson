@@ -1,4 +1,4 @@
-import { Address, AddressSchema, StructuredAddress } from '../src/address';
+import { Address, AddressSchema, StructuredAddress } from '../src/Address';
 import SimpleSchema from 'simpl-schema';
 
 const addressStringFixture = 'Testweg 12, Berlin';
