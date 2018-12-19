@@ -13,7 +13,7 @@ import { LocalizedStringSchema, LocalizedString } from './LocalizedString';
 export interface Entrance {
   /**
    * Name of the entrance (helpful if there are multiple entrances).
-   * */
+   */
   name?: LocalizedString;
   /**
    * `true` if this is the main entrance, `false` if not, `undefined` if unknown. If there is only one entrance, this attribute SHOULD be `undefined`.
