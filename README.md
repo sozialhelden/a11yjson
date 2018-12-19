@@ -1,14 +1,14 @@
-# A harmonized data schema for describing the accessibility of physical places
+# A11yJSON: A harmonized data schema for describing the accessibility of physical places
 
 This repository contains a unified data format that describes the accessibility of places, facilities and services.
 
-It is the result of looking at many accessibility datasets that we got from organizations all over the world. Our aim is to allow any other accessibility API data format to be convertible to this harmonized format in a way that makes the result easier to consume.
+It’s the result of looking at accessibility datasets that we got from organizations all over the world. Our aim is to allow any other accessibility API data format to be convertible to this harmonized format in a way that makes the result easier to consume.
 
 Our goal is to make the world more accessible for everybody — which is easier if everybody uses the same (or at least similar) language when sharing accessibility data.
 
-The schema is used by [accessibility.cloud](https://www.accessibility.cloud), one of the biggest data exchange providers for accessibility data, by [Wheelmap.org](https://wheelmap.org), and other organizations. Consumable data in this schema has been provided by many international sources, which you can find (mostly as open data) on https://www.accessibility.cloud.
+This is the successor of the data schema we use for [accessibility.cloud](https://www.accessibility.cloud), one of the biggest data exchange providers for accessibility data, by [Wheelmap.org](https://wheelmap.org), and other organizations. Consumable data in this schema has been provided by many international sources, which you can find (in most cases as open data) on https://www.accessibility.cloud.
 
-The definitions are written in TypeScript for compile-time validation. It supports validating data records at runtime using [SimpleSchema](https://github.com/aldeed/simple-schema-js).
+We wrote the definitions in TypeScript for compile-time validation. It supports validating data records at runtime using [SimpleSchema](https://github.com/aldeed/simple-schema-js). SimpleSchema is convertible to other schemes, if necessary.
 
 ## Most important entities
 
@@ -16,9 +16,9 @@ The format describes PoIs as in the [PlaceInfo](./src/place-info.ts) type. Place
 
 ## Physical quantities, rating scales and personal profiles
 
-Unfortunately, we found many datasets claiming that places are (not) accessible for arbitrary categories of people. As an example, a data source might claim that a place is not accessible for wheelchair users, but does not mention that this is because the entrance has a step. For wheelchair users that can climb a step as long as it is not too high, a data point like this is misleading.
+We found a lot of datasets claiming that places are (not) accessible for arbitrary categories of people. As an example, a data source might claim that a place is not accessible for wheelchair users, but does not mention that this is because the entrance has a step. For wheelchair users that can climb a step as long as it’s not too high, a data point like this is misleading.
 
-A solution for better data quality is to let each individual make their own decision about the accessibility of something – if you collect or share data, measure physical attributes of places instead of target group-based data. If possible, also avoid rating scales, as they can be misinterpreted.
+A solution for better data quality is to let each individual make their own decision about the accessibility of something – if you collect or share data, measure physical attributes of places instead of target group-based data. If possible, also avoid rating scales, as their interpretation is difficult.
 
 ### Bad examples with better solutions
 
