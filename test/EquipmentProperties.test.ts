@@ -4,7 +4,7 @@ import {
   EquipmentPropertiesSchema,
   EquipmentTypes
 } from '../src/EquipmentProperties';
-import { doorMinimumFixture } from './door.test';
+import { doorMinimumFixture } from './Door.test';
 import { validExternalIdWithExtendedDataFixture } from './ExternalId.test';
 
 export const equipmentPropertiesMinimumFixture: EquipmentProperties = {};

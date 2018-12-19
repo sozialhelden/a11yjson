@@ -16,7 +16,7 @@ const restroomWithOptionalsFixture: Restroom = {
   },
   turningSpaceInside: '>150cm',
   hasSupportRails: true,
-  toilet: {},
+  toilet: toiletMinimumFixture,
   hasBathTub: true,
   hasShower: true,
   entrance: entranceMinimumFixture,
