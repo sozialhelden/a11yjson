@@ -7,7 +7,6 @@ const personalProfileWithOptionalsFixture: PersonalProfile = {
   guideDog: true,
   hearingImpairment: true,
   learningImpairment: true,
-  limitedSight: true,
   mobilityImpairment: true,
   visualImpairment: true,
   blindness: true,

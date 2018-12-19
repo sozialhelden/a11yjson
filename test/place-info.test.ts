@@ -1,4 +1,4 @@
-import { AccessibilitySchemaExtensionSchema } from '../src/ac-format';
+import { AccessibilitySchemaExtensionSchema } from '../src/index';
 import { forEachKeyInSchemas } from '../src/schema-helpers';
 import { PlaceInfo, PlaceInfoSchema } from '../src/place-info';
 import { validPointGeometryFixture } from './geometry.test';

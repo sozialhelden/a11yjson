@@ -6,15 +6,13 @@ export const entranceMinimumFixture: Entrance = {};
 
 const entranceWithOptionalsFixture: Entrance = {
   name: 'string',
-  ratingForWheelchair: 0.6,
   isMainEntrance: true,
   isLevel: true,
-  hasSlope: true,
   slopeAngle: 5,
   hasRemovableRamp: true,
   stairs: stairsMinimumFixture,
   door: doorMinimumFixture,
-  liftEquipmentId: 'idHere',
+  elevatorEquipmentId: 'idHere',
   intercomEquipmentId: 'idHere'
 };
 

@@ -36,7 +36,6 @@ const accessibilityWithOptionalsFixture: Accessibility = {
   entrances: [entranceMinimumFixture, entranceMinimumFixture],
   restrooms: [restroomMinimumFixture, restroomMinimumFixture],
   tables: tablesMinimumFixture,
-  ratingSpacious: 1,
   isWellLit: true,
   isQuiet: true,
   // ambientNoiseLevel: '80decibels',

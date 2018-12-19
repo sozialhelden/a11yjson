@@ -11,15 +11,12 @@ const mediaWithOptionalsFixture: Media = {
   isAudio: true,
   isLargePrint: true,
   hasContrastingBackground: true,
-  isEasyToUnderstand: true,
   hasDedicatedScreenForSubtitles: true,
   hasSubtitles: true,
   hasRealTimeCaptioning: true,
   hasPlainLanguageOption: true,
   languages: ['en', 'de'],
-  turningSpaceInFront: '>140cm',
-  isClearlyVisibleWhileSeated: true,
-  isInformationReadableWhileSeated: true
+  turningSpaceInFront: '>140cm'
 };
 
 const allValidFixtures = Object.freeze([mediaMinimumFixture, mediaWithOptionalsFixture]);

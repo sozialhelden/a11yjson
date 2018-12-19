@@ -7,7 +7,6 @@ import { showerMinimumFixture } from './shower.test';
 export const restroomMinimumFixture: Restroom = {};
 
 const restroomWithOptionalsFixture: Restroom = {
-  name: 'Room name',
   isAccessibleWithWheelchair: true,
   signIcons: ['female', 'personInWheelchair'],
   mirror: {
@@ -15,7 +14,6 @@ const restroomWithOptionalsFixture: Restroom = {
     isAccessibleWhileSeated: true,
     heightFromGround: '100cm'
   },
-  ratingForWheelchair: 0.3,
   turningSpaceInside: '>150cm',
   hasSupportRails: true,
   toilet: {},

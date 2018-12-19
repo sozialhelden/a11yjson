@@ -4,7 +4,6 @@ import { FormatVersion } from '../src/version';
 export const roomMinimumFixture: Room = {};
 
 const roomWithOptionalsFixture: Room = {
-  name: 'Room name',
   isAccessibleWithWheelchair: true
 };
 
