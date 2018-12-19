@@ -50,11 +50,9 @@ Additionally to value and unit, you can save the original data value as string r
 
 ## For developers: starting points in the code
 
-Start here for the base type that describes a place:
-https://github.com/sozialhelden/ac-format/blob/master/src/place-info.ts
+Start here for the base type that describes a place [./src/PlaceInfo.ts]
 
-…and here for accessibility specs:
-https://github.com/sozialhelden/ac-format/blob/master/src/accessibility.ts
+…and here for accessibility specs: [./src/Accessibility.ts]
 
 ## What if I want to make my data available, but my infrastructure does not support JavaScript/SimpleSchema/your nesting…?
 
