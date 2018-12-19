@@ -14,7 +14,7 @@ We wrote the definitions in TypeScript for compile-time validation. It supports 
 
 The format is based on the [GeoJSON format (RFC 7946)](https://tools.ietf.org/html/rfc7946).
 
-- Describe places of interest with the [`PlaceInfo`](./src/place-info.ts) and [`PlaceProperties`](https://sozialhelden.github.io/ac-format/interfaces/_placeproperties_.placeproperties.html) interfaces
+- Describe places of interest with the [`PlaceInfo`](https://sozialhelden.github.io/ac-format/interfaces/_placeinfo_.placeinfo.html) and [`PlaceProperties`](https://sozialhelden.github.io/ac-format/interfaces/_placeproperties_.placeproperties.html) interfaces
 - Describe the accessibility of a place of interest with the [`Accessibility`](https://sozialhelden.github.io/ac-format/interfaces/_accessibility_.accessibility.html) interface
 - Places can have restrooms (described by the [`Restroom`](https://sozialhelden.github.io/ac-format/interfaces/_restroom_.restroom.html) interface)
 - Places can have equipment like elevators or escalators, including realtime operational status information. Use the [`EquipmentProperties`](https://sozialhelden.github.io/ac-format/interfaces/_equipmentproperties_.equipmentproperties.html) interface for describing facilities.
