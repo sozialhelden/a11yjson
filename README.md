@@ -10,7 +10,7 @@ This is the successor of the data schema we use for [accessibility.cloud](https:
 
 We wrote the definitions in TypeScript for compile-time validation. It supports validating data records at runtime using [SimpleSchema](https://github.com/aldeed/simple-schema-js). SimpleSchema is convertible to other schemes, if necessary.
 
-## Most important entities
+## The specification
 
 The format is based on the [GeoJSON format (RFC 7946)](https://tools.ietf.org/html/rfc7946).
 
@@ -75,7 +75,7 @@ Additionally to value and unit, you can save the original data value as string r
 
 ## What if I want to make my data available, but my infrastructure does not support JavaScript/SimpleSchema/your nesting…?
 
-If you want to make your data available on accessibility.cloud, it is enough if your own data format is as close as possible to the attribute names / nesting described here. The more platforms use this, the easier it gets to share accessibility data. With accessibility.cloud, it’s possible to import data delivered in different schemas and formats. We encourage you to implement as many attributes as possible!
+If you want to make your data available on accessibility.cloud, it is enough if your own data format is as close as possible to the attribute names / nesting described here. The more platforms use the same format, the easier it gets to share accessibility data. With accessibility.cloud, it’s possible to import data delivered in different schemas and formats. We encourage you to implement as many attributes as possible!
 
 ## Contributing
 
