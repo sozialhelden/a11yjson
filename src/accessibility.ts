@@ -17,8 +17,7 @@ import { Ground, GroundSchema } from './ground';
 import { LocalizedString, LocalizedStringSchema } from './localized-string';
 import { AnimalPolicySchema, AnimalPolicy } from './animal-policy';
 import { SmokingPolicy, smokingPolicies } from './smoking-policy';
-import { quantityDefinition, Volume } from './units';
-import { LengthSchema } from './ac-format';
+import { quantityDefinition, Volume, LengthSchema } from './units';
 
 /**
  * Describes the physical (and sometimes human rated) accessibility of a place.

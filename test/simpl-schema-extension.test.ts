@@ -1,4 +1,4 @@
-import { makeQuestionContext } from '../src/ac-format';
+import { makeQuestionContext } from '../src/index';
 import SimpleSchema from 'simpl-schema';
 
 import { evaluateAccessibilitySchemaExtension } from '../src/simpl-schema-extensions';
