@@ -12,9 +12,9 @@ process.env['NODE_ENV'] = 'production';
 process.env['BABEL_ENV'] = 'production';
 
 export default {
-  input: `compiled/${libraryName}.js`,
+  input: `compiled/index.js`,
   output: [
-    {file: pkg.main, name: camelCase(libraryName), format: 'umd'},
+    {file: pkg.main, name: 'index', format: 'umd'},
     {file: pkg.module, format: 'es'},
   ],
   sourcemap: true,
