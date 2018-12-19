@@ -26,6 +26,6 @@ exec("git add .")
 // exec('git config user.email "henrik.hinrichs@framefield.com"')
 exec('git commit -m "docs(docs): update gh-pages"')
 exec(
-  `git push --force --quiet "https://${ghToken}@${repository}" master:gh-pages`
+  `git push --force --quiet git@github.com:sozialhelden/ac-format.git master:gh-pages`
 )
 echo("Docs deployed!!")
