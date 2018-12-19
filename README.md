@@ -73,12 +73,6 @@ Each attribute definition contains a preferred unit, and when saving quantities,
 
 Additionally to value and unit, you can save the original data value as string representation to debug conversion errors.
 
-## For developers: starting points in the code
-
-Start here for the base type that describes a place [./src/PlaceInfo.ts]
-
-…and here for accessibility specs: [./src/Accessibility.ts]
-
 ## What if I want to make my data available, but my infrastructure does not support JavaScript/SimpleSchema/your nesting…?
 
 If you want to make your data available on accessibility.cloud, it is enough if your own data format is as close as possible to the attribute names / nesting described here. The more platforms use this, the easier it gets to share accessibility data. With accessibility.cloud, it’s possible to import data delivered in different schemas and formats. We encourage you to implement as many attributes as possible!
