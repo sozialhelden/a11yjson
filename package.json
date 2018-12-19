@@ -9,7 +9,7 @@
   "files": [
     "dist"
   ],
-  "author": "Henrik Hinrichs <henrik.hinrichs@framefield.com>",
+  "author": "Henrik Hinrichs <henrik.hinrichs@framefield.com>, Sebastian Felix Zappe <sebastian@felixzappe.com>",
   "repository": {
     "type": "git",
     "url": "https://github.com/sozialhelden/ac-format"
