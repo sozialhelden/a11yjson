@@ -1,7 +1,7 @@
 import { PlaceProperties, PlacePropertiesSchema } from '../src/PlaceProperties';
 
 import { validExternalIdWithExtendedDataFixture } from './ExternalId.test';
-import { accessibilityMinimumFixture } from './accessibilty.test';
+import { accessibilityMinimumFixture } from './Accessibilty.test';
 import { structuredAddressMinimalFixture } from './Address.test';
 
 export const placePropertiesMinimumFixture: PlaceProperties = {
