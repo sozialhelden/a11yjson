@@ -760,15 +760,17 @@ export const ietfLanguageTags = [
 ];
 
 /**
- * We assume that IETF language tags will be extended with sign language codes (as proposed by
- * http://www.evertype.com/standards/iso639/sign-language.html) eventually, so our language tags
- * support them already.
+ * We support preliminary IETF language tags for sign language.
  *
- * For sign language translations of strings, you can use media URLs pointing to videos or
- * description pictures.
+ * For sign language translations of strings, you can use media URLs pointing to video, video
+ * websites or description pictures. If there are several alternatives, it's best to point to a
+ * video.
  */
 
 export const signLanguageCodes = [
+  'ase',
+  'sgn-ase',
+  'sgn-ase-US',
   'sgn-GH-EP',
   'sgn-DZ',
   'sgn-US',
