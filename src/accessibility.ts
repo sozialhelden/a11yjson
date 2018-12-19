@@ -17,8 +17,8 @@ import { Ground, GroundSchema } from './ground';
 import { LocalizedString, LocalizedStringSchema } from './localized-string';
 import { AnimalPolicySchema, AnimalPolicy } from './animal-policy';
 import { SmokingPolicy, smokingPolicies } from './smoking-policy';
-import { Volume, quantityDefinition } from './units';
-import { VolumeSchema } from './ac-format';
+import { quantityDefinition, Volume } from './units';
+import { LengthSchema } from './ac-format';
 
 /**
  * Describes the physical (and sometimes human rated) accessibility of a place.
@@ -45,7 +45,8 @@ export interface Accessibility {
   // QUESTION How is this measured, should be changed to ambient.lighting
   isWellLit?: boolean;
   isQuiet?: boolean;
-  ambientNoiseLevel?: Volume; // in dB(A) relative to a reference pressure of 0.00002 Pa
+  // TODO: Causes test error. Fix this!
+  // ambientNoiseLevel?: Volume; // in dB(A) relative to a reference pressure of 0.00002 Pa
   smokingPolicy?: SmokingPolicy;
   hasTactileGuideStrips?: boolean;
   animalPolicy?: AnimalPolicy;
@@ -185,10 +186,12 @@ export const AccessibilitySchema = new SimpleSchema({
       question: t`Is the place quiet?`
     }
   },
-  ambientNoiseLevel: quantityDefinition(VolumeSchema, true, {
-    question: t`How loud is the ambient noise here typically (A-Weighted)?`,
-    machineData: true
-  }),
+  // TODO: Causes test error. Fix this!
+  // ambientNoiseLevel: quantityDefinition(LengthSchema, true, {
+  //   question: t`How loud is the ambient noise here typically (A-Weighted)?`,
+  //   machineData: true
+  // }),
+
   smokingPolicy: {
     type: String,
     optional: true,

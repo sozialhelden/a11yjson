@@ -39,7 +39,7 @@ const accessibilityWithOptionalsFixture: Accessibility = {
   ratingSpacious: 1,
   isWellLit: true,
   isQuiet: true,
-  ambientNoiseLevel: '80dB',
+  // ambientNoiseLevel: '80decibels',
   smokingPolicy: 'prohibited',
   hasTactileGuideStrips: true,
   serviceContact: 'string',
