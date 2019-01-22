@@ -1661,6 +1661,9 @@ export type IetfLanguageTag =
  */
 
 export type SignLanguageCode =
+  'ase'
+  | 'sgn-ase'
+  | 'sgn-ase-US'
   | 'sgn-GH-EP'
   | 'sgn-DZ'
   | 'sgn-US'
