@@ -24,6 +24,10 @@ export interface Entrance {
    * `true` if this entrance has no steps and needs no ramp, `false` if there are steps or a ramp, `undefined` if unknown.
    */
   isLevel?: boolean;
+  /**
+   * `true` if this entrance has a fixed ramp, `false` if not, `undefined` if unknown.
+   */
+  hasFixedRamp?: boolean;
   // TODO create unit for this for eg. >10
   /**
    * grade in percent as calculated by `100 * rise / run` or the tangent of the angle of inclination times 100, or `undefined` if there is no slope.
