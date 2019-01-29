@@ -36,7 +36,7 @@ export const AnimalPolicySchema = new SimpleSchema({
       question: t`Does this place allow guide dogs?`
     }
   },
-  allowsTherapyAnimals: {
+  allowsServiceAnimals: {
     type: Boolean,
     accessibility: {
       question: t`Does this place allow therapy animals?`
