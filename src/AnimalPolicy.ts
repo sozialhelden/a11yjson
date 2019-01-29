@@ -8,9 +8,9 @@ export interface AnimalPolicy {
    */
   allowsGuideDogs?: boolean;
   /**
-   * `true` if the place allows visitors to bring therapy animals, `false` if bringing them is explicitly prohibited, `undefined` if the policy is unknown.
+   * `true` if the place allows visitors to bring service animals, `false` if bringing them is explicitly prohibited, `undefined` if the policy is unknown.
    */
-  allowsTherapyAnimals?: boolean;
+  allowsServiceAnimals?: boolean;
   /**
    * `true` if the place allows visitors to bring dogs in general, `false` if bringing them is explicitly prohibited (with exception of dogs specified by `allowsGuideDogs` and `allowsTherapyAnimals`), `undefined` if the policy is unknown.
    */
