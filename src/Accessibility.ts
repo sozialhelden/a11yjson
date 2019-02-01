@@ -66,6 +66,10 @@ export interface Accessibility {
    */
   hasTactileGuideStrips?: boolean;
   /**
+   * `true` if the venue has induction loops installed in its functional units where this is relevant.
+   */
+  hasInductionLoop?: boolean,
+  /**
    * Object describing the place's ground condition. If there are very different ground conditions, you can create multiple places and nest them.
    */
   ground?: Ground | null;
@@ -250,6 +254,13 @@ export const AccessibilitySchema = new SimpleSchema({
     optional: true,
     accessibility: {
       question: t`Is the place quiet?`
+    }
+  },
+  hasInductionLoop: {
+    type: Boolean,
+    optional: true,
+    accessibility: {
+      question: t`Does this place have induction loops?`
     }
   },
   // TODO: Causes test error. Fix this!
