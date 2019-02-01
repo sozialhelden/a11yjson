@@ -760,7 +760,7 @@ export const ietfLanguageTags = [
 ];
 
 /**
- * We support preliminary IETF language tags for sign language.
+ * We support IETF language tags for sign language (https://tools.ietf.org/html/rfc5646).
  *
  * For sign language translations of strings, you can use media URLs pointing to video, video
  * websites or description pictures. If there are several alternatives, it's best to point to a
