@@ -38,6 +38,7 @@ const accessibilityWithOptionalsFixture: Accessibility = {
   tables: tablesMinimumFixture,
   isWellLit: true,
   isQuiet: true,
+  hasInductionLoop: false,
   // ambientNoiseLevel: '80decibels',
   smokingPolicy: 'prohibited',
   hasTactileGuideStrips: true,
