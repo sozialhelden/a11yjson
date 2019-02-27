@@ -1,0 +1,17 @@
+{
+  "mode": "file",
+  "target": "es6",
+  "theme": "minimal",
+  "externalPattern": "**/node_modules/**/*",
+  "excludeExternals": true,
+  "exclude": [
+    "test",
+    "node_modules",
+    "test/",
+    "node_modules/",
+    "**/test",
+    "**/node_modules",
+    "**/test/**/*",
+    "**/node_modules/**/*"
+  ]
+}
