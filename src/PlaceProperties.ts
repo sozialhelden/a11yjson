@@ -4,7 +4,7 @@ import SimpleSchema from 'simpl-schema';
 import './SimpleSchemaExtensions';
 
 import { Accessibility, AccessibilitySchema } from './Accessibility';
-import { ExternalId, ExternalIdSchemaDefinition } from './ExternalId';
+import { ExternalId, ExternalIdSchema } from './ExternalId';
 import { Address, AddressSchema } from './Address';
 import { LocalizedStringSchema, LocalizedString } from './LocalizedString';
 
@@ -146,7 +146,7 @@ export const PlacePropertiesSchema = new SimpleSchema({
       machineData: true
     }
   },
-  'ids.$': ExternalIdSchemaDefinition,
+  'ids.$': ExternalIdSchema,
   originalId: {
     type: String,
     optional: true,

@@ -5,7 +5,7 @@ import './SimpleSchemaExtensions';
 
 import { Door, DoorSchema } from './Door';
 import { Length, LengthSchema } from './Units';
-import { ExternalId, ExternalIdSchemaDefinition } from './ExternalId';
+import { ExternalId, ExternalIdSchema } from './ExternalId';
 import {
   IetfLanguageTag,
   IetfLanguageTagOrSignLanguageCode,
@@ -297,7 +297,7 @@ export const EquipmentPropertiesSchema = new SimpleSchema({
     type: Array,
     optional: true
   },
-  'ids.$': ExternalIdSchemaDefinition,
+  'ids.$': ExternalIdSchema,
   originalId: {
     type: String,
     optional: true

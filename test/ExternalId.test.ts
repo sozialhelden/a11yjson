@@ -1,11 +1,10 @@
-import { ExternalIdSchemaDefinition } from '../src/ExternalId';
+import { ExternalIdSchema } from '../src/ExternalId';
 import SimpleSchema from 'simpl-schema';
 
 export const validExternalIdWithExtendedDataFixture = {
   provider: 'Deutsche Bahn',
-  stationNumber: 123,
-  ril100Identifier: 'KA',
-  evaNumber: 123
+  schemaName: 'ril100',
+  id: 'KA'
 };
 
 const allValidFixtures = Object.freeze([validExternalIdWithExtendedDataFixture]);
@@ -21,7 +20,7 @@ const allInvalidFixtures = Object.freeze([
 ]);
 
 const SchemaWithExternalIdField = new SimpleSchema({
-  field: ExternalIdSchemaDefinition
+  field: ExternalIdSchema
 });
 
 describe('ExternalIdSchema Schema', () => {
