@@ -3,6 +3,7 @@ import { entranceMinimumFixture } from './Entrance.test';
 import { FormatVersion } from '../src/Version';
 import { toiletMinimumFixture } from './Toilet.test';
 import { showerMinimumFixture } from './Shower.test';
+import { washBasinFixture } from './WashBasin.test';
 
 export const restroomMinimumFixture: Restroom = {};
 
@@ -23,14 +24,7 @@ const restroomWithOptionalsFixture: Restroom = {
   shower: showerMinimumFixture,
   heightOfSoap: '100 .. 120cm',
   heightOfDrier: '100 .. 120cm',
-  washBasin: {
-    isLocatedInsideRestroom: false,
-    height: '>80cm',
-    spaceBelow: {
-      height: '> 67cm',
-      depth: '30cm'
-    }
-  }
+  washBasin: washBasinFixture
 };
 
 const allValidFixtures = Object.freeze([restroomMinimumFixture, restroomWithOptionalsFixture]);

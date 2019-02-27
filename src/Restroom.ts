@@ -4,6 +4,8 @@ import SimpleSchema from 'simpl-schema';
 import { createSchemaInstance } from './SimpleSchemaExtensions';
 
 import { Room, RoomSchema } from './Room';
+import { Mirror, MirrorSchema } from './Mirror';
+import { WashBasin, WashBasinSchema } from './WashBasin';
 import { Entrance, EntranceSchema } from './Entrance';
 import { Length, LengthSchema, quantityDefinition } from './Units';
 import { Toilet, ToiletSchema } from './Toilet';
@@ -46,22 +48,7 @@ export interface Restroom extends Room {
   /**
    * Describes a mirror, if existing.
    */
-  mirror?: {
-    /**
-     * `true` if the mirror is located inside the restroom, `false` if not, `undefined` if
-     * condition is unknown.
-     */
-    isLocatedInsideRestroom?: boolean;
-    /**
-     * `true` if the mirror is accessible while sitting in a wheelchair, `false` if not, `undefined`
-     * if condition is unknown.
-     */
-    isAccessibleWhileSeated: boolean;
-    /**
-     * How far is the mirror's bottom from the ground?
-     */
-    heightFromGround: Length;
-  };
+  mirror?: Mirror;
   /**
    * How wide is the space inside that is usable for turning?
    */
@@ -108,40 +95,7 @@ export interface Restroom extends Room {
   /**
    * Object describing a wash basin belonging to this restroom. It can be outside of the restroom.
    */
-  washBasin?: {
-    /**
-     * `true` if the restroom's wash basin is inside the cabin, `false` if not, `undefined`
-     * if condition is unknown.
-     */
-    isLocatedInsideRestroom?: boolean;
-
-    /**
-     * `true` if the wash basin is accessible with wheelchairs, `false` if not, `undefined`
-     * if condition is unknown.
-     */
-    accessibleWithWheelchair?: boolean;
-
-    /**
-     * Defines at which height is the wash basin's top
-     */
-    height?: Length;
-
-    // QUESTION undefined vs. null - how do we indicate that there is no space below
-
-    /**
-     * Object describing the space below the wash basin.
-     */
-    spaceBelow?: {
-      /**
-       * How high is the space below the wash basin?
-       */
-      height?: Length;
-      /**
-       * How deep is the space below the wash basin?
-       */
-      depth?: Length;
-    };
-  };
+  washBasin?: WashBasin;
 }
 
 export const RestroomSchema = createSchemaInstance(
@@ -166,25 +120,10 @@ export const RestroomSchema = createSchemaInstance(
       }
     },
     mirror: {
-      type: Object,
+      type: MirrorSchema,
       optional: true,
       accessibility: {}
     },
-    'mirror.isLocatedInsideRestroom': {
-      type: Boolean,
-      optional: true,
-      accessibility: {
-        question: t`Is the mirror inside the restroom?`
-      }
-    },
-    'mirror.isAccessibleWhileSeated': {
-      type: Boolean,
-      optional: true,
-      accessibility: {
-        question: t`Can the mirror be used when sitting in a wheelchair?`
-      }
-    },
-    'mirror.heightFromGround': quantityDefinition(LengthSchema),
     turningSpaceInside: quantityDefinition(LengthSchema, true, {
       question: t`How wide is the space inside that is usable for turning?`
     }),
@@ -239,35 +178,12 @@ export const RestroomSchema = createSchemaInstance(
       question: t`At which height from the floor is the drier or towel?`
     }),
     washBasin: {
-      type: Object,
+      type: WashBasinSchema,
       optional: true,
       accessibility: {
         question: t`Would you like to add information about the wash basin?`
       }
-    },
-    'washBasin.isLocatedInsideRestroom': {
-      type: Boolean,
-      optional: true,
-      accessibility: {
-        question: t`Is the wash basin located inside the restroom cabin?`
-      }
-    },
-    'washBasin.height': quantityDefinition(LengthSchema, true, {
-      question: t`At which height is the wash basin's top?`
-    }),
-    'washBasin.spaceBelow': {
-      type: Object,
-      optional: true,
-      accessibility: {
-        question: t`Let’s take a look at the space below the wash basin.`
-      }
-    },
-    'washBasin.spaceBelow.height': quantityDefinition(LengthSchema, true, {
-      question: t`How high is the space below the wash basin?`
-    }),
-    'washBasin.spaceBelow.depth': quantityDefinition(LengthSchema, true, {
-      question: t`How deep is the space below the wash basin?`
-    })
+    }
   },
   RoomSchema
 );

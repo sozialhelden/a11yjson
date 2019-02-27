@@ -7,16 +7,12 @@ const showerWithOptionalsFixture: Shower = {
   step: '<2cm',
   isLevel: true, // needs review
   hasSupportRails: true,
-  supportRails: {
-    height: '85 .. 107cm',
-    aboveAndBelowControls: true
-  },
+  supportRailsHeight: '85 .. 107cm',
+  supportRailsAreAboveAndBelowControls: true,
   hasShowerSeat: true,
   hasErgonomicHandle: true,
-  showerSeat: {
-    isRemovable: true,
-    isFolding: false
-  }
+  showerSeatIsRemovable: true,
+  showerSeatIsFolding: false
 };
 
 const allValidFixtures = Object.freeze([showerMinimumFixture, showerWithOptionalsFixture]);

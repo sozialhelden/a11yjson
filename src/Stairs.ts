@@ -14,18 +14,13 @@ export interface Stairs {
    */
   count?: number;
   /**
-   * Object describing the stair nosing, if existent.
+   * `true` if all relevant steps have a high contrast nosing.
    */
-  nosing?: {
-    /**
-     * `true` if all relevant steps have a high contrast nosing.
-     */
-    isHighContrast?: boolean;
-    /**
-     * `true` if all relevant steps are made with anti-slip material.
-     */
-    isAntiSlip?: boolean;
-  };
+  hasHighContrastNosing?: boolean;
+  /**
+   * `true` if all relevant steps are made with anti-slip material.
+   */
+  hasAntiSlipNosing?: boolean;
   /**
    * If there are multiple staircase, you SHOULD indicate a name for this staircase here.
    */

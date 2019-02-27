@@ -1,7 +1,6 @@
 import SimpleSchema from 'simpl-schema';
 
 import sample from 'lodash/sample';
-import { t } from 'ttag';
 import { FormatVersion } from './Version';
 
 // allow custom fields

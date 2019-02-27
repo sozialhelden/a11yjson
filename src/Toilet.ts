@@ -2,6 +2,7 @@ import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
 import { createSchemaInstance } from './SimpleSchemaExtensions';
+import { FoldingHandles, FoldingHandlesSchema } from './FoldingHandles';
 import { Length, LengthSchema, quantityDefinition } from './Units';
 
 export interface Toilet {
@@ -30,26 +31,7 @@ export interface Toilet {
   /**
    * Object describing the folding handles.
    */
-  foldingHandles?: {
-    /**
-     * `true` if there is a folding handle on left side (from the perspective of somebody using the
-     * toilet), `false` if not, `undefined` if condition is unknown.
-     */
-    onUsersLeftSide?: boolean;
-    /**
-     * `true` if there is a folding handle on right side (from the perspective of somebody using the
-     * toilet), `false` if not, `undefined` if condition is unknown.
-     */
-    onUsersRightSide?: boolean;
-    /**
-     * Indicates how high the folding handles are (top edge, measured from the floor).
-     */
-    topHeightFromFloor?: Length;
-    /**
-     * Indicates how far the handles are apart.
-     */
-    distanceBetweenHandles?: Length;
-  };
+  foldingHandles?: FoldingHandles;
 }
 
 export const ToiletSchema = createSchemaInstance('Toilet', {
@@ -73,30 +55,10 @@ export const ToiletSchema = createSchemaInstance('Toilet', {
     }
   },
   foldingHandles: {
-    type: Object,
+    type: FoldingHandlesSchema,
     optional: true,
     accessibility: {
       question: t`Let’s describe the folding handles.`
     }
-  },
-  'foldingHandles.onUsersLeftSide': {
-    type: Boolean,
-    optional: true,
-    accessibility: {
-      question: t`Is there a folding handle on left side? (from the perspective of somebody using the toilet)`
-    }
-  },
-  'foldingHandles.onUsersRightSide': {
-    type: Boolean,
-    optional: true,
-    accessibility: {
-      question: t`Is there a folding handle on right side? (from the perspective of somebody using the toilet)`
-    }
-  },
-  'foldingHandles.topHeightFromFloor': quantityDefinition(LengthSchema, true, {
-    question: t`How high are the folding handles (top edge, measured from the floor)`
-  }),
-  'foldingHandles.distanceBetweenHandles': quantityDefinition(LengthSchema, true, {
-    question: t`How far are the handles apart?`
-  })
+  }
 });

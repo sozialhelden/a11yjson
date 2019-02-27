@@ -1,20 +1,16 @@
 import { Tables, TablesSchema } from '../src/Tables';
 
 export const tablesMinimumFixture: Tables = {
-  spaceBelow: {
-    height: '>67cm',
-    width: '>30cm',
-    depth: '>30cm'
-  }
+  spaceBelowHeight: '>67cm',
+  spaceBelowWidth: '>30cm',
+  spaceBelowDepth: '>30cm'
 };
 
 const tablesWithOptionalsFixture: Tables = {
   height: '60 .. 80cm',
-  spaceBelow: {
-    height: '>67cm',
-    width: '>30cm',
-    depth: '>30cm'
-  }
+  spaceBelowHeight: '>67cm',
+  spaceBelowWidth: '>30cm',
+  spaceBelowDepth: '>30cm'
 };
 
 const allValidFixtures = Object.freeze([tablesMinimumFixture, tablesWithOptionalsFixture]);

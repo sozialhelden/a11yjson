@@ -18,37 +18,27 @@ export interface Shower {
    */
   hasSupportRails?: boolean;
   /**
-   * Object describing the shower’s support rails
+   * At which height are the support rails? Measured from the top.
    */
-  supportRails?: {
-    /**
-     * At which height are the support rails? Measured from the top.
-     */
-    height?: Length;
-    /**
-     * `true` if the support rails are above and below the controls, `false` if not, `undefined`
-     * if condition is unknown.
-     */
-    aboveAndBelowControls?: boolean;
-  };
+  supportRailsHeight?: Length;
+  /**
+   * `true` if the support rails are above and below the controls, `false` if not, `undefined`
+   * if condition is unknown.
+   */
+  supportRailsAreAboveAndBelowControls?: boolean;
   /**
    * `true` if the shower has a seat, `false` if not, `undefined` if condition is unknown..
    */
   hasShowerSeat?: boolean;
   /**
-   * Object describing the shower’s seat.
+   * `true` if the shower seat can be removed from the shower easily, `false` if not, `undefined`
+   * if condition is unknown.
    */
-  showerSeat?: {
-    /**
-     * `true` if the shower seat can be removed from the shower easily, `false` if not, `undefined`
-     * if condition is unknown.
-     */
-    isRemovable?: boolean;
-    /**
-     * `true` if the shower seat can be folded, `false` if not, `undefined` if condition is unknown.
-     */
-    isFolding?: boolean;
-  };
+  showerSeatIsRemovable?: boolean;
+  /**
+   * `true` if the shower seat can be folded, `false` if not, `undefined` if condition is unknown.
+   */
+  showerSeatIsFolding?: boolean;
   /**
    * `true` if the shower has an ergonomic handle, `false` if not, `undefined` if condition is
    * unknown.
@@ -79,10 +69,10 @@ export const ShowerSchema = createSchemaInstance('Shower', {
       question: t`Let’s describe the support rails further.`
     }
   },
-  'supportRails.height': quantityDefinition(LengthSchema, true, {
+  supportRailsHeight: quantityDefinition(LengthSchema, true, {
     question: t`At which height are the support rails?`
   }),
-  'supportRails.aboveAndBelowControls': {
+  supportRailsAreAboveAndBelowControls: {
     type: Boolean,
     optional: true,
     accessibility: {
@@ -103,21 +93,14 @@ export const ShowerSchema = createSchemaInstance('Shower', {
       question: t`Is there an ergonomic handle?`
     }
   },
-  showerSeat: {
-    type: Object,
-    optional: true,
-    accessibility: {
-      question: t`Let’s take a look at the shower seat.`
-    }
-  },
-  'showerSeat.isRemovable': {
+  showerSeatIsRemovable: {
     type: Boolean,
     optional: true,
     accessibility: {
       question: t`Is the seat removable from the shower?`
     }
   },
-  'showerSeat.isFolding': {
+  showerSeatIsFolding: {
     type: Boolean,
     optional: true,
     accessibility: {
