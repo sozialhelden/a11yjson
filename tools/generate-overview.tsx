@@ -191,9 +191,6 @@ function HtmlRoot() {
       <p>
         You can use the following interfaces in your own structured data formats to simplify sharing accessibility data with others.
       </p>
-      <p>
-        Each property is optional and can be <code>undefined</code>.
-      </p>
       <Interfaces />
 
       <h2>Type Aliases</h2>
