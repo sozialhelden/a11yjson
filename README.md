@@ -6,7 +6,7 @@ It’s the result of looking at accessibility datasets that we got from organiza
 
 Our goal is to make the world more accessible for everybody — which is easier if everybody uses the same (or at least similar) language when sharing accessibility data.
 
-This is the successor of the data schema we use for [accessibility.cloud](https://www.accessibility.cloud), one of the biggest data exchange providers for accessibility data, by [Wheelmap.org](https://wheelmap.org), and other organizations. Consumable data in this schema has been provided by many international sources, which you can find (in most cases as open data) on https://www.accessibility.cloud.
+This is the successor of the data schema we use for [accessibility.cloud](https://www.accessibility.cloud), one of the biggest data exchange providers for accessibility data, by [Wheelmap.org](https://wheelmap.org), and other organizations. Some international sources already provide consumable data in this schema. You can find them–in most cases as open data–on https://www.accessibility.cloud.
 
 We wrote the definitions in TypeScript for compile-time validation. It supports validating data records at runtime using [SimpleSchema](https://github.com/aldeed/simple-schema-js). SimpleSchema is convertible to other schemes, if necessary.
 
@@ -14,13 +14,14 @@ We wrote the definitions in TypeScript for compile-time validation. It supports 
 
 The format is based on the [GeoJSON format (RFC 7946)](https://tools.ietf.org/html/rfc7946).
 
-We have a [shorter generated interface documentation](https://sozialhelden.github.io/ac-format/attributes.html), and [a more extensive TypeDoc-based documentation](https://sozialhelden.github.io/ac-format/).
+We have an [overview of interfaces and types](https://sozialhelden.github.io/ac-format/attributes.html), and [a more extensive TypeDoc-based documentation](https://sozialhelden.github.io/ac-format/).
 
-- Describe places of interest with the [`PlaceInfo`](https://sozialhelden.github.io/ac-format/interfaces/_placeinfo_.placeinfo.html) and [`PlaceProperties`](https://sozialhelden.github.io/ac-format/interfaces/_placeproperties_.placeproperties.html) interfaces
-- Describe the accessibility of a place of interest with the [`Accessibility`](https://sozialhelden.github.io/ac-format/interfaces/_accessibility_.accessibility.html) interface
-- Places can have restrooms (described by the [`Restroom`](https://sozialhelden.github.io/ac-format/interfaces/_restroom_.restroom.html) interface)
-- Places can have equipment like elevators or escalators, including realtime operational status information. Use the [`EquipmentProperties`](https://sozialhelden.github.io/ac-format/interfaces/_equipmentproperties_.equipmentproperties.html) interface for describing facilities.
-- Find other interfaces in [documentation](https://sozialhelden.github.io/ac-format/globals.html).
+Some examples:
+
+- Describe places of interest with the [`PlaceInfo`](https://sozialhelden.github.io/ac-format/attributes.html#PlaceInfo) and [`PlaceProperties`](https://sozialhelden.github.io/ac-format/attributes.html#PlaceProperties) interfaces
+- Describe the accessibility of a place of interest with the [`Accessibility`](https://sozialhelden.github.io/ac-format/attributes.html#Accessibility) interface
+- Places can have restrooms (described in every detail by the [`Restroom`](https://sozialhelden.github.io/ac-format/attributes.html#RestRoom) interface)
+- Places can have equipment like elevators or escalators, including realtime operational status information. Use the [`EquipmentProperties`](https://sozialhelden.github.io/ac-format/attributes.html#EquipmentProperties) interface for describing facilities.
 
 Even if you cannot adapt the whole format as part of your own indoor mapping specs, it’s a good idea to adapt single interfaces where you see fit.
 
@@ -28,7 +29,7 @@ Even if you cannot adapt the whole format as part of your own indoor mapping spe
 
 We found a lot of datasets claiming that places are (not) accessible for arbitrary categories of people. As an example, a data source might claim that a place is not accessible for wheelchair users, but does not mention that this is because the entrance has a step. For wheelchair users that can climb a step as long as it’s not too high, a data point like this is misleading.
 
-A solution for better data quality is to let each individual make their own decision about the accessibility of something – if you collect or share data, measure physical attributes of places instead of target group-based data. If possible, also avoid rating scales, as their interpretation is difficult.
+A solution for better data quality is to let each individual make their own decision about the accessibility of something—if you collect or share data, measure physical attributes of places instead of target group-based data. If possible, also avoid rating scales, as their interpretation is difficult.
 
 ## Internationalization (I18n)
 
@@ -69,15 +70,25 @@ While we need datasets and UIs that have a simple design and are easy to underst
 
 ## Quantities
 
-While analyzing accessibility data sets, we often encountered unclear definitions of quantities. Should a length be defined in imperial or metric units, and which prefix is to be used – centimeters or meters, for example? ac-format allows you to use any units that are supported by [js-quantities](https://github.com/gentooboontoo/js-quantities) as input.
+While analyzing accessibility data sets, we often encountered unclear definitions of quantities. Should we define a length in imperial or metric units, and which prefix should we use – centimeters or meters, for example? ac-format allows us to use any quantity+unit strings that [js-quantities](https://github.com/gentooboontoo/js-quantities) supports as input.
 
-Each attribute definition contains a preferred unit, and when saving quantities, you cannot specify them without a unit. You can specify fixed quantities, but also constraints and variance. This allows for fuzzy quantities when the measurement method is imprecise, for example when a person just guesses the width of a door, or when you want to transform a data source that just has averaged data calculated from measurements of multiple objects.
+As the measurement data is SI-unit based, you can use them with any code that supports SI units:
 
-Additionally to value and unit, you can save the original data value as string representation to debug conversion errors.
+- C++: [Boost Units](https://www.boost.org/doc/libs/1_69_0/doc/html/boost_units/Examples.html)
+- Java: [Unit API](https://github.com/unitsofmeasurement/unit-api)
+- Python: [Pint](https://pint.readthedocs.io/en/latest/) and [uncertainties](https://pythonhosted.org/uncertainties/)
+- Rust: [uom crate](https://docs.rs/uom/0.21.0/uom/)
+- Swift: [Quantities package](https://github.com/BradLarson/Quantities)
+
+Each attribute definition contains a preferred unit. When saving quantities, you have to specify them with a unit. You can provide measures as fixed quantities, but also with constraints and uncertainty or variance. This allows for fuzzy quantities when the measurement method is imprecise, for example when a person guesses the width of a door, or when you want to transform a data source that has averaged data calculated from measurements of more than one object.
+
+Besides value and unit, you can save the original data value as string representation to debug conversion errors.
 
 ## What if I want to make my data available, but my infrastructure does not support JavaScript/SimpleSchema/your nesting…?
 
-If you want to make your data available on accessibility.cloud, it is enough if your own data format is as close as possible to the attribute names / nesting described here. The more platforms use the same format, the easier it gets to share accessibility data. With accessibility.cloud, it’s possible to import data delivered in different schemas and formats. We encourage you to implement as many attributes as possible!
+If you want to make your data available on accessibility.cloud, it’s enough if your own data format is as close as possible to the attribute names / nesting described here. The more platforms use the same format, the easier it gets to share accessibility data. With accessibility.cloud, it’s possible to import data delivered in different schemas and formats.
+
+We encourage you to implement as many attributes as possible in your project!
 
 ## Contributing
 

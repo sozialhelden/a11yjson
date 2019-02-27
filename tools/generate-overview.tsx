@@ -8,7 +8,7 @@ const ReactDOMServer = require('react-dom/server');
 const marked = require('marked');
 
 
-function Markdown(props: { children: string }) {
+function Markdown(props: { inline?: boolean, children: string }) {
   const firstLineWithContent = props.children && props.children
     .split(/\n/)
     .find(line => line.replace(/\s/, '').length > 0);
@@ -27,8 +27,15 @@ function Markdown(props: { children: string }) {
     .map(line => line.replace(indentation, ''))
     .join('\n') : props.children;
 
-  return <span dangerouslySetInnerHTML={{ __html: marked.inlineLexer(lines, [], {}) }} />;
+  const html = props.inline ? marked.inlineLexer(lines, [], {}) : marked(lines);
+  return <span dangerouslySetInnerHTML={{ __html: html }} />;
 }
+
+
+function Header(props: any) {
+  return <header style={{ marginBottom: '1rem' }}>{props.children}</header>
+}
+
 
 const json = JSON.parse(fs.readFileSync('./dist/typedoc-output.json').toString())
 
@@ -60,9 +67,9 @@ function ArrayLikeType(props: { type: any, name: string, typeArguments: any[] })
   if (!type) {
     return null;
   }
-  return <span>
+  return <>
     {<Type object={type} />}[]
-  </span>;
+  </>;
 }
 
 function ArrayType(props: { type: any, name: string, elementType: any }) {
@@ -70,9 +77,9 @@ function ArrayType(props: { type: any, name: string, elementType: any }) {
   if (!type) {
     return null;
   }
-  return <span>
+  return <>
     {<Type object={type} />}[]
-  </span>;
+  </>;
 }
 
 function ReferenceType(props: { type: any, name: string, typeArguments: any[], elementType: any }) {
@@ -102,17 +109,17 @@ function UnionType(props: { type: any, name: string, types: any[] }) {
   const types = props.types
     .filter(t => t.name !== 'undefined')
     .map((t, i) => <Type key={i} object={t} />);
-  return <span>
+  return <>
     {intersperse(types, <code>&nbsp;|&nbsp;</code>)}
-  </span>;
+  </>;
 }
 
 function TupleType(props: { type: any, name: string, elements: any[] }) {
   const elements = props.elements
     .map((t, i) => <Type key={i} object={t} />);
-  return <span>
+  return <>
     [{intersperse(elements, <code>,&nbsp;</code>)}]
-  </span>;
+  </>;
 }
 
 function Type(props: { object: any }) {
@@ -132,14 +139,14 @@ function Interfaces() {
     .map((i: any) => {
       return <section>
         <h3><a id={i.name}>{i.name}</a></h3>
-        <header><Markdown>{get(i, 'comment.shortText')}</Markdown></header>
+        <Header><Markdown inline>{get(i, 'comment.shortText')}</Markdown></Header>
         <table>
           {i.children
             .filter((property: any) => get(property, 'comment.shortText') !== 'TODO')
             .map((property: any) => <tr key={property.name}>
-            <td style={{ width: '15rem', maxWidth: '15rem' }}><code>{property.name}</code></td>
-            <td style={{ width: '10rem', maxWidth: '10rem' }}><code><Type object={property.type} /></code></td>
-            <td><Markdown>{get(property, 'comment.shortText')}</Markdown></td>
+            <td style={{ width: '15rem', maxWidth: '15rem', wordBreak: 'break-word' }}><code>{property.name}</code></td>
+            <td style={{ width: '15rem', maxWidth: '15rem', wordBreak: 'break-word' }}><code><Type object={property.type} /></code></td>
+            <td><Markdown inline>{get(property, 'comment.shortText')}</Markdown></td>
           </tr>)}
         </table>
       </section>;
@@ -150,9 +157,9 @@ function TypeAliases() {
   return typeAliases.map((alias: any) => {
     return <section>
       <h3><a id={alias.name}>{alias.name}</a></h3>
-      <header><Markdown>{get(alias, 'comment.shortText')}</Markdown></header>
-      <section>
-        Definition: <code><Type object={alias.type} /></code>
+      <Header><Markdown inline>{get(alias, 'comment.shortText')}</Markdown></Header>
+      <section style={{ wordBreak: 'break-word' }}>
+        Definition: <Type object={alias.type} />
       </section>
     </section>;
   });
@@ -165,15 +172,30 @@ function HtmlRoot() {
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
       <title>A11yJSON attribute documentation</title>
+      <style dangerouslySetInnerHTML={{ __html: `
+        code {
+          font-size: 15px;
+        }
+      `}}></style>
     </head>
     <body style={{
       fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
       lineHeight: 1.25,
+      margin: '3rem',
     }}>
-      <h1><code>A11yJSON</code> attribute documentation</h1>
-      <h2>{packageJSON.version}</h2>
+      <code>Version {packageJSON.version}</code>
+
+      <Markdown>{fs.readFileSync('./README.md').toString()}</Markdown>
+
       <h2>Interfaces</h2>
+      <p>
+        You can use the following interfaces in your own structured data formats to simplify sharing accessibility data with others.
+      </p>
+      <p>
+        Each property is optional and can be <code>undefined</code>.
+      </p>
       <Interfaces />
+
       <h2>Type Aliases</h2>
       <TypeAliases />
     </body>
