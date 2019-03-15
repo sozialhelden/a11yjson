@@ -265,13 +265,19 @@ export interface EquipmentProperties {
   disruptionSourceImportId?: string;
 
   /**
-   * Place info ID that this equipment belongs to (on accessibility.cloud)
+   * Place info ID that this equipment belongs to (accessibility.cloud ID)
    */
   placeInfoId?: string;
 
   // references to external services
   /**
-   * ID of the place that this equipment belongs to (in the original data source)
+   * ID of the place data source that this equipment belongs to (accessibility.cloud ID)
+   */
+  placeSourceId?: string;
+
+  // references to external services
+  /**
+   * ID of the place that this equipment belongs to (unique in the original data source)
    */
   originalPlaceInfoId?: string;
 
@@ -512,6 +518,14 @@ export const EquipmentPropertiesSchema = new SimpleSchema({
     accessibility: {
       machineData: true,
       description: t`Reference to the data import where this information comes from (accessibility.cloud ID)`
+    }
+  },
+  placeSourceId: {
+    type: String,
+    optional: true,
+    accessibility: {
+      machineData: true,
+      description: t`Original ID of the place data source that this equipment belongs to (accessibility.cloud ID)`
     }
   },
   originalPlaceInfoId: {

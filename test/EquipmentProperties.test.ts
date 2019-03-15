@@ -34,6 +34,7 @@ const equipmentPropertiesFixture: EquipmentProperties = {
   disruptionSourceImportId: 'string',
   placeInfoId: 'string',
 
+  placeSourceId: 'string',
   originalPlaceInfoId: 'string',
   originalData: 'string',
   originalId: 'string',
