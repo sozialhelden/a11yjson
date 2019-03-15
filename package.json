@@ -1,6 +1,6 @@
 {
   "name": "@sozialhelden/ac-format",
-  "version": "7.0.0",
+  "version": "7.1.5",
   "description": "",
   "keywords": [],
   "main": "dist/index.umd.js",
@@ -122,7 +122,8 @@
     "marked": "^0.6.1",
     "react-style-tag": "^2.0.1",
     "simpl-schema": "^1.5.0",
-    "ttag": "^1.5.1"
+    "ttag": "^1.5.1",
+    "yarn": "^1.13.0"
   },
   "husky": {
     "hooks": {
