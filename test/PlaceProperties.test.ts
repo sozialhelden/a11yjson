@@ -19,7 +19,8 @@ export const placePropertiesWithNullFixture: PlaceProperties = {
 const placePropertiesWithOptionalsFixture: PlaceProperties = {
   ids: [validExternalIdWithExtendedDataFixture],
   originalId: 'ChIJwSo_DaaHUocRFFAENf-ILl8',
-  infoPageUrl: 'https://axsmap.com/venue/ChIJwSo_DaaHUocRFFAENf-ILl8',
+  infoPageUrl: 'https://example.com/venue/ChIJwSo_DaaHUocRFFAENf-ILl8',
+  editPageUrl: 'https://example.com/venue/ChIJwSo_DaaHUocRFFAENf-ILl8/edit',
   name: 'T-Mobile Sandy',
   category: 'shopping',
   address: structuredAddressMinimalFixture,

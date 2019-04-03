@@ -67,6 +67,11 @@ export interface PlaceProperties {
   infoPageUrl?: LocalizedString;
 
   /**
+   * URL of the original data source’s website on a subpage that allows to edit the original data.
+   */
+  editPageUrl?: LocalizedString;
+
+  /**
    * URL of the place’s own website.
    */
   placeWebsiteUrl?: LocalizedString;
@@ -128,6 +133,14 @@ export const PlacePropertiesSchema = new SimpleSchema({
     optional: true,
     accessibility: {
       description: t`URL of the original data source’s website describing this place`
+    }
+  },
+  editPageUrl: {
+    type: LocalizedStringSchema,
+    regEx: SimpleSchema.RegEx.Url,
+    optional: true,
+    accessibility: {
+      description: t`URL of the original data source’s website on a subpage that allows to edit the original data.`
     }
   },
   placeWebsiteUrl: {
