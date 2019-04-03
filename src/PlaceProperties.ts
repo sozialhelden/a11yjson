@@ -32,6 +32,11 @@ export interface PlaceProperties {
   phoneNumber?: LocalizedString;
 
   /**
+   * Email address of the place's operator where you can get accessibility relevant information.
+   */
+  emailAddress?: LocalizedString;
+
+  /**
    * Category name of the place
    * @example ‘Restaurant’
    */
@@ -117,6 +122,15 @@ export const PlacePropertiesSchema = new SimpleSchema({
       description: t`The phone number of this place, with international country code`,
       example: t`e.g. +1-555-555-90-210`,
       componentHint: 'PhoneNumber'
+    }
+  },
+  emailAddress: {
+    type: LocalizedStringSchema,
+    optional: true,
+    accessibility: {
+      question: t`What is the email address of this place?`,
+      description: t`An email address where visitors can get accessibility relevant information`,
+      example: t`e.g. accessibility@example.com`
     }
   },
   accessibility: {

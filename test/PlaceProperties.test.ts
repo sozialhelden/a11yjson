@@ -25,6 +25,7 @@ const placePropertiesWithOptionalsFixture: PlaceProperties = {
   category: 'shopping',
   address: structuredAddressMinimalFixture,
   phoneNumber: '555-SANDY',
+  emailAddress: 'sandy@example.com',
   description: 'Some Description',
   originalData: 'originalData',
   eventId: 'T8j8nnnqMpbxpLxZu',
