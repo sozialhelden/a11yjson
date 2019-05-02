@@ -46,6 +46,11 @@ export interface Stairs {
    * detectable with the touch of a foot or sweep of a cane.
    */
   hasTactileSafetyStrips?: boolean;
+  /**
+   * `true` if first and last step of the stair is colorized in a way, so that people with visual impairment can 
+   * recognize it easily.
+   */
+  firstAndLastStepColorized?: boolean;
 }
 
 export const StairsSchema = createSchemaInstance('Stairs', {
@@ -118,5 +123,12 @@ export const StairsSchema = createSchemaInstance('Stairs', {
   'alternativeMobileEquipmentIds.$': {
     type: String,
     label: t`accessibility.cloud Equipment ID`
-  }
+  },
+  firstAndLastStepColorized: {
+    type: Boolean,
+    optional: true,
+    accessibility: {
+      description: t`Do the stairs have first and last step colorized?`
+    }
+  },
 });
