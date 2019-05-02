@@ -130,5 +130,5 @@ export const StairsSchema = createSchemaInstance('Stairs', {
     accessibility: {
       description: t`Do the stairs have first and last step colorized?`
     }
-  },
+  }
 });
