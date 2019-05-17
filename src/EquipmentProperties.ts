@@ -310,7 +310,7 @@ export interface EquipmentProperties {
   /**
    * The gradient of the ramp in percent (e.g. 6%).
    */
-  rampGradient?: Length;
+  rampSlope?: Length;
 
   /**
    * `true` if there is a handrail on the left side of the equipment, from the perspective in front of the entrance resp. the place.
