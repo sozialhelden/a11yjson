@@ -182,12 +182,14 @@ function evaluateMatchRule(data: {}, rule: MatchRule): RuleEvaluationResult {
         logRule('-match.isDefined', 'data', fieldData, 'matched', matched);
       } else if (isExistsRule) {
         // custom exists check
-        matched = (fieldData !== null) === matcher.$exists;
-        logRule('-match.$exists =', matcher.$exists, 'data', fieldData, 'matched', matched);
+        const existsValue = matcher['$exists'];
+        matched = (fieldData !== null) === existsValue;
+        logRule('-match.$exists =', existsValue, 'data', fieldData, 'matched', matched);
       } else if (isUnknownOrRule) {
         // either undefined or exactly the value
-        matched = fieldData === matcher.$unknownOr || typeof fieldData === 'undefined';
-        logRule('-match.$unknownOr =', matcher.$unknownOr, 'data', fieldData, 'matched', matched);
+        const unknownOrValue = matcher['$unknownOr'];
+        matched = fieldData === unknownOrValue || typeof fieldData === 'undefined';
+        logRule('-match.$unknownOr =', unknownOrValue, 'data', fieldData, 'matched', matched);
       } else {
         // match whole object
         matched = isMatch(fieldData, matcher as object);
@@ -227,6 +229,7 @@ function evaluateMatchRule(data: {}, rule: MatchRule): RuleEvaluationResult {
 export function evaluateRule(data: {}, rule: Rule): RuleEvaluationResult {
   logRule('begin rule');
   let type = 'unknown';
+  let result: RuleEvaluationResult = 'unknown';
   indent++;
   if (isOrRule(rule)) {
     result = evaluateOrRule(data, rule);
@@ -237,8 +240,6 @@ export function evaluateRule(data: {}, rule: Rule): RuleEvaluationResult {
   } else if (isMatchRule(rule)) {
     result = evaluateMatchRule(data, rule);
     type = 'match';
-  } else {
-    result = 'unknown';
   }
 
   indent--;
