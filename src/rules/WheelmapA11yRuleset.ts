@@ -1,4 +1,5 @@
 import { Rule, evaluateRule } from './RatingRules';
+import { get } from 'lodash';
 
 // constants
 export const flatStepHeight = { unit: 'cm', value: 7, operator: '<=' };
@@ -6,61 +7,43 @@ export const flatStepHeight = { unit: 'cm', value: 7, operator: '<=' };
 // TODO put real values in here!
 export const wheelChairWashBasin = {
   height: { unit: 'cm', operator: '>=', value: 80 },
-  depth: { unit: 'cm', operator: '>=', value: 50 },
+  depth: { unit: 'cm', operator: '>=', value: 50 }
 };
 
 // the rules for determining that places are fully accessible
 // first version only support one entrance / stair
 export const fullWheelmapA11yRuleSet: Rule = {
-  $and: [
-    // survey responder thought the place was fully wheelchair accessible
+  $or: [
     {
-      'properties.accessibility.accessibleWith.wheelchair': { $unknownOr: true },
+      'properties.accessibility.entrances.0.hasFixedRamp': true
     },
-    // check that there are no stairs
     {
-      $or: [
-        {
-          'properties.accessibility.entrances.0.hasFixedRamp': true,
-        },
-        {
-          'properties.accessibility.entrances.0.hasRemovableRamp': true,
-        },
-        {
-          'properties.accessibility.entrances.0.stairs.0.count': 0,
-        },
-        {
-          'properties.accessibility.entrances.0.stairs': null,
-        },
-        {
-          'properties.accessibility.entrances.0.isLevel': true,
-        },
-      ],
+      'properties.accessibility.entrances.0.hasRemovableRamp': true
     },
-  ],
+    {
+      'properties.accessibility.entrances.0.stairs.0.count': 0
+    },
+    {
+      'properties.accessibility.entrances.0.stairs': null
+    },
+    {
+      'properties.accessibility.entrances.0.isLevel': true
+    }
+  ]
   // TODO add more rules for door width etc., multiple entrances, etc.
 };
 
 // the rules for determining that places are at least partially accessible, omitting the full rules
 // first version only support one entrance / stair
 export const partialWheelmapA11yRuleSet: Rule = {
-  $and: [
-    {
-      $or: [
-        {
-          'properties.accessibility.accessibleWith.wheelchair': { $unknownOr: true },
-        },
-        {
-          'properties.accessibility.partiallyAccessibleWith.wheelchair': { $unknownOr: true },
-        }
-      ]
-    },
+  $or: [
     {
       'properties.accessibility.entrances.0.stairs.0.count': 1,
-      'properties.accessibility.entrances.0.stairs.0.stepHeight':
-        { $lte: { value: 7.0, unit: 'cm' } },
-    },
-  ],
+      'properties.accessibility.entrances.0.stairs.0.stepHeight': {
+        $lte: { value: 7.0, unit: 'cm' }
+      }
+    }
+  ]
   // TODO add more rules for door width etc., multiple entrances, etc.
 };
 
@@ -71,7 +54,7 @@ export const wheelmapToiletA11yRuleSet: Rule = {
   'properties.accessibility.restrooms.0': { $exists: true },
   'properties.accessibility.restrooms.0.toilet': { $exists: true },
   'properties.accessibility.restrooms.0.entrance.isLevel': true,
-  'properties.accessibility.restrooms.0.washBasin.accessibleWithWheelchair': true,
+  'properties.accessibility.restrooms.0.washBasin.accessibleWithWheelchair': true
   // TODO add more rules for door width etc.
 };
 
