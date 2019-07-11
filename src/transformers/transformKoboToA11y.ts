@@ -215,7 +215,7 @@ const parseMultiSelect = (data: KoboResult, field: KoboKey) => {
   return rawValue.split(' ');
 };
 
-const transformKoboToA11y = (data: KoboResult) => {
+export const transformKoboToA11y = (data: KoboResult) => {
   const usedLengthUnit = data['user/user_measuring'] || 'cm';
 
   const mapping = {
@@ -444,5 +444,3 @@ const transformKoboToA11y = (data: KoboResult) => {
 
   return result;
 };
-
-export default transformKoboToA11y;

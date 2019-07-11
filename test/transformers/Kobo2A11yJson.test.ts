@@ -1,4 +1,4 @@
-import transformKoboToA11y, { KoboResult } from '../../src/transformers/transformKoboToA11y';
+import { transformKoboToA11y, KoboResult } from '../../src/transformers/transformKoboToA11y';
 import { get } from 'lodash';
 
 const partiallyAccessibleByUserData: KoboResult = {
