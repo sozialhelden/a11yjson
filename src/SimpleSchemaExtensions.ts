@@ -1,6 +1,6 @@
 import SimpleSchema from 'simpl-schema';
 
-import sample from 'lodash/sample';
+import { sample } from 'lodash';
 import { FormatVersion } from './Version';
 
 // allow custom fields
@@ -28,7 +28,7 @@ export function makeQuestionContext<T>(
 /**
  * A function that gets evaluated in a questionnaire context
  */
-export type QuestionFunction<T> = ((context: QuestionFunctionContext<T>) => string);
+export type QuestionFunction<T> = (context: QuestionFunctionContext<T>) => string;
 
 /**
  * Definition for a question, can be either a String, an Array of Strings (value will be picked at random),
@@ -151,6 +151,11 @@ export function evaluateAccessibilitySchemaExtension<T>(
   );
 }
 
+export type ExtendedSchema = {
+  __schemaType: string;
+  __schemaVersion: string;
+} & SimpleSchema;
+
 /**
  * Internal helper for creating schemata with attached schemaType
  */
@@ -163,13 +168,16 @@ export function createSchemaInstance(
     tracker?: any;
     check?: any;
   } = {}
-) {
-  const extendedSchema = new SimpleSchema(definition, schemaOptions);
+): ExtendedSchema {
+  const extendedSchema = new SimpleSchema(definition, schemaOptions) as ExtendedSchema;
+
   if (baseSchema) {
     extendedSchema.extend(baseSchema);
   }
-  (extendedSchema as any).__schemaType = type;
-  (extendedSchema as any).__schemaVersion = FormatVersion;
+
+  extendedSchema.__schemaType = type;
+  extendedSchema.__schemaVersion = FormatVersion;
+
   return extendedSchema;
 }
 

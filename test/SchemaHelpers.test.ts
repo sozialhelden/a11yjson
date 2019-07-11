@@ -1,4 +1,4 @@
-import SimpleSchema from 'simpl-schema';
+import SimpleSchema, { SchemaDefinition } from 'simpl-schema';
 
 import { forEachKeyInSchemas, getFirstSchemaFromDefinition } from '../src/SchemaHelpers';
 
@@ -90,7 +90,7 @@ describe('Schema Helpers forEachKeyInSchemas', () => {
 describe('Schema Helpers getFirstSchemaFromDefinition', () => {
   it('missing schema throws', () => {
     expect(() => {
-      getFirstSchemaFromDefinition({});
+      getFirstSchemaFromDefinition({} as SchemaDefinition);
     }).toThrow();
   });
 });

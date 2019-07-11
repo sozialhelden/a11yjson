@@ -1,8 +1,8 @@
-import Qty from 'js-quantities';
+import * as Qty from 'js-quantities';
+import { extend } from 'lodash';
 import SimpleSchema from 'simpl-schema';
 
 import { createSchemaInstance } from './SimpleSchemaExtensions';
-import { extend } from 'lodash';
 
 // register a custom error for invalid unit parsing
 SimpleSchema.setDefaultMessages({
