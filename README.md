@@ -96,4 +96,4 @@ This project is not complete and will never be. We're open to your suggestions a
 
 ## Builds
 
-[![Build Status](https://travis-ci.org/sozialhelden/ac-format.svg?branch=master)](https://travis-ci.org/sozialhelden/ac-format)
+[![Build Status](https://travis-ci.org/sozialhelden/ac-format.svg?branch=master)](https://travis-ci.org/sozialhelden/ac-format) [![Greenkeeper badge](https://badges.greenkeeper.io/sozialhelden/ac-format.svg)](https://greenkeeper.io/)
