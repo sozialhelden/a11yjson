@@ -16,14 +16,14 @@ We wrote the definitions in TypeScript for compile-time validation. It supports 
 
 The format is based on the [GeoJSON format (RFC 7946)](https://tools.ietf.org/html/rfc7946).
 
-We have an [overview of interfaces and types](https://sozialhelden.github.io/ac-format/attributes.html), and [a more extensive TypeDoc-based documentation](https://sozialhelden.github.io/ac-format/).
+We have an [overview of interfaces and types](https://sozialhelden.github.io/a11yjson/attributes.html), and [a more extensive TypeDoc-based documentation](https://sozialhelden.github.io/a11yjson/).
 
 Some examples:
 
-- Describe places of interest with the [`PlaceInfo`](https://sozialhelden.github.io/ac-format/attributes.html#PlaceInfo) and [`PlaceProperties`](https://sozialhelden.github.io/ac-format/attributes.html#PlaceProperties) interfaces
-- Describe the accessibility of a place of interest with the [`Accessibility`](https://sozialhelden.github.io/ac-format/attributes.html#Accessibility) interface
-- Places can have restrooms (described in every detail by the [`Restroom`](https://sozialhelden.github.io/ac-format/attributes.html#RestRoom) interface)
-- Places can have equipment like elevators or escalators, including realtime operational status information. Use the [`EquipmentProperties`](https://sozialhelden.github.io/ac-format/attributes.html#EquipmentProperties) interface for describing facilities.
+- Describe places of interest with the [`PlaceInfo`](https://sozialhelden.github.io/a11yjson/attributes.html#PlaceInfo) and [`PlaceProperties`](https://sozialhelden.github.io/a11yjson/attributes.html#PlaceProperties) interfaces
+- Describe the accessibility of a place of interest with the [`Accessibility`](https://sozialhelden.github.io/a11yjson/attributes.html#Accessibility) interface
+- Places can have restrooms (described in every detail by the [`Restroom`](https://sozialhelden.github.io/a11yjson/attributes.html#RestRoom) interface)
+- Places can have equipment like elevators or escalators, including realtime operational status information. Use the [`EquipmentProperties`](https://sozialhelden.github.io/a11yjson/attributes.html#EquipmentProperties) interface for describing facilities.
 
 Even if you cannot adapt the whole format as part of your own indoor mapping specs, it’s a good idea to adapt single interfaces where you see fit.
 
@@ -72,7 +72,7 @@ While we need datasets and UIs that have a simple design and are easy to underst
 
 ## Quantities
 
-While analyzing accessibility data sets, we often encountered unclear definitions of quantities. Should we define a length in imperial or metric units, and which prefix should we use – centimeters or meters, for example? ac-format allows us to use any quantity+unit strings that [js-quantities](https://github.com/gentooboontoo/js-quantities) supports as input.
+While analyzing accessibility data sets, we often encountered unclear definitions of quantities. Should we define a length in imperial or metric units, and which prefix should we use – centimeters or meters, for example? a11yjson allows us to use any quantity+unit strings that [js-quantities](https://github.com/gentooboontoo/js-quantities) supports as input.
 
 As the measurement data is SI-unit based, you can use them with any code that supports SI units:
 
@@ -98,4 +98,4 @@ This project is not complete and will never be. We're open to your suggestions a
 
 ## Builds
 
-[![Build Status](https://travis-ci.org/sozialhelden/ac-format.svg?branch=master)](https://travis-ci.org/sozialhelden/ac-format)
+[![Build Status](https://travis-ci.org/sozialhelden/a11yjson.svg?branch=master)](https://travis-ci.org/sozialhelden/a11yjson)

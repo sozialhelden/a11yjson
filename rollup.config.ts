@@ -43,7 +43,7 @@ export default {
           'ttag',
           {
             'extract': {
-              'output': 'dist/ac-format.pot',
+              'output': 'dist/a11yjson.pot',
             },
           },
         ]

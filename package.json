@@ -1,7 +1,7 @@
 {
-  "name": "@sozialhelden/ac-format",
+  "name": "@sozialhelden/a11yjson",
   "version": "7.4.2",
-  "description": "",
+  "description": "A harmonized data schema for describing the accessibility of physical places",
   "keywords": [],
   "main": "dist/index.umd.js",
   "module": "dist/index.es5.js",
@@ -9,10 +9,10 @@
   "files": [
     "dist"
   ],
-  "author": "Henrik Hinrichs <henrik.hinrichs@framefield.com>, Sebastian Felix Zappe <sebastian@felixzappe.com>",
+  "author": "Henrik Hinrichs <henrik.hinrichs@framefield.com>, Sebastian Felix Zappe <sebastian@sozialhelden.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sozialhelden/ac-format"
+    "url": "https://github.com/sozialhelden/a11yjson"
   },
   "license": "MIT",
   "engines": {

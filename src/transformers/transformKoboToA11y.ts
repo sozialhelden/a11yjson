@@ -425,7 +425,7 @@ export const transformKoboToA11y = (data: KoboResult) => {
   const toiletA11y = evaluateToiletWheelmapA11y(result);
 
   // rate toilet a11y
-  // TODO this field doesn't exist in ac format! Clarify & align with wheelmap frontend & ac-format
+  // TODO this field doesn't exist in ac format! Clarify & align with wheelmap frontend & a11yjson
   if (toiletA11y === 'yes') {
     setWith(
       result,
