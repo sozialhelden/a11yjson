@@ -87,6 +87,13 @@ export const EntranceSchema = new SimpleSchema({
       question: t`What is the angle of the slope?`
     }
   },
+  hasFixedRamp: {
+    type: Boolean,
+    optional: true,
+    accessibility: {
+      question: t`Is there a fixed ramp to enter the place?`
+    }
+  },
   hasRemovableRamp: {
     type: Boolean,
     optional: true,

@@ -9,6 +9,7 @@ const entranceWithOptionalsFixture: Entrance = {
   isMainEntrance: true,
   isLevel: true,
   slopeAngle: 5,
+  hasFixedRamp: false,
   hasRemovableRamp: true,
   stairs: stairsMinimumFixture,
   door: doorMinimumFixture,
