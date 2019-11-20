@@ -42,6 +42,13 @@ export const WashBasinSchema = createSchemaInstance('WashBasin', {
   height: quantityDefinition(LengthSchema, true, {
     question: t`At which height is the wash basin's top?`
   }),
+  accessibleWithWheelchair: {
+    type: Boolean,
+    optional: true,
+    accessibility: {
+      question: t`Can a wheelchair drive under the wash basin?`
+    }
+  },
   spaceBelow: {
     type: Object,
     optional: true,
