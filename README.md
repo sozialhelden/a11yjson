@@ -1,6 +1,6 @@
-# A11yJSON: A harmonized data schema for describing the accessibility of physical places
-
 ![A11yJSON](./logo.svg)
+
+# A11yJSON: A harmonized data schema for describing the accessibility of physical places
 
 This repository contains a unified data format that describes the accessibility of places, facilities and services.
 
