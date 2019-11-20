@@ -171,6 +171,21 @@ function HtmlRoot() {
       <meta charSet="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+
+      <meta property="og:title" content="A11yJSON" />
+      <meta property="og:site_name" content="A11yJSON" />
+      <meta property="og:url" content="https://a11yjson.org" />
+      <meta property="og:description" content="" />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content="https://raw.githubusercontent.com/sozialhelden/a11yjson/master/A11yJSON%20GitHub%20share%20pic.png" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@sozialhelden" />
+      <meta name="twitter:creator" content="@sozialhelden" />
+      <meta name="twitter:title" content="A11yJSON" />
+      <meta name="twitter:description" content="A11yJSON: A harmonized data schema for describing the accessibility of physical places." />
+      <meta name="twitter:image" content="https://raw.githubusercontent.com/sozialhelden/a11yjson/master/A11yJSON%20GitHub%20share%20pic.png" />
+
       <title>A11yJSON attribute documentation</title>
       <style dangerouslySetInnerHTML={{ __html: `
         code {
