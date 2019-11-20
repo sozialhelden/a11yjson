@@ -174,8 +174,8 @@ function HtmlRoot() {
 
       <meta property="og:title" content="A11yJSON" />
       <meta property="og:site_name" content="A11yJSON" />
-      <meta property="og:url" content="https://a11yjson.org" />
-      <meta property="og:description" content="" />
+      <meta property="og:url" content="https://sozialhelden.github.io/a11yjson/index.html" />
+      <meta property="og:description" content="A harmonized data schema for describing the accessibility of physical places." />
       <meta property="og:type" content="website" />
       <meta property="og:image" content="https://raw.githubusercontent.com/sozialhelden/a11yjson/master/A11yJSON%20GitHub%20share%20pic.png" />
 
@@ -183,7 +183,7 @@ function HtmlRoot() {
       <meta name="twitter:site" content="@sozialhelden" />
       <meta name="twitter:creator" content="@sozialhelden" />
       <meta name="twitter:title" content="A11yJSON" />
-      <meta name="twitter:description" content="A11yJSON: A harmonized data schema for describing the accessibility of physical places." />
+      <meta name="twitter:description" content="A harmonized data schema for describing the accessibility of physical places." />
       <meta name="twitter:image" content="https://raw.githubusercontent.com/sozialhelden/a11yjson/master/A11yJSON%20GitHub%20share%20pic.png" />
 
       <title>A11yJSON attribute documentation</title>
