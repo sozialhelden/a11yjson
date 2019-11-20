@@ -16,7 +16,7 @@ We wrote the definitions in TypeScript for compile-time validation. It supports 
 
 The format is based on the [GeoJSON format (RFC 7946)](https://tools.ietf.org/html/rfc7946).
 
-We have an [overview of interfaces and types](https://sozialhelden.github.io/a11yjson/attributes.html), and [a more extensive TypeDoc-based documentation](https://sozialhelden.github.io/a11yjson/).
+We have an [overview of interfaces and types](https://sozialhelden.github.io/a11yjson/), and [a more extensive TypeDoc-based documentation](https://sozialhelden.github.io/a11yjson/typescript/).
 
 Some examples:
 
