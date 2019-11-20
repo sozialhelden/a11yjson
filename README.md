@@ -10,8 +10,6 @@ Our goal is to make the world more accessible for everybody — which is easier 
 
 This is the successor of the data schema we use for [accessibility.cloud](https://www.accessibility.cloud), one of the biggest data exchange providers for accessibility data, by [Wheelmap.org](https://wheelmap.org), and other organizations. Some international sources already provide consumable data in this schema. You can find them–in most cases as open data–on https://www.accessibility.cloud.
 
-We wrote the definitions in TypeScript for compile-time validation. It supports validating data records at runtime using [SimpleSchema](https://github.com/aldeed/simple-schema-js). SimpleSchema is convertible to other schemes, if necessary.
-
 ## The specification
 
 The format is based on the [GeoJSON format (RFC 7946)](https://tools.ietf.org/html/rfc7946).
@@ -26,6 +24,49 @@ Some examples:
 - Places can have equipment like elevators or escalators, including realtime operational status information. Use the [`EquipmentProperties`](https://sozialhelden.github.io/a11yjson/index.html#EquipmentProperties) interface for describing facilities.
 
 Even if you cannot adapt the whole format as part of your own indoor mapping specs, it’s a good idea to adapt single interfaces where you see fit.
+
+## Using A11yJSON as a TypeScript library
+
+We wrote the definitions in TypeScript for compile-time validation and web compatibility. The code supports validating data records at runtime using [`SimpleSchema`](https://github.com/aldeed/simple-schema-js). `SimpleSchema` is convertible to other schemes (e.g. GraphQL, JSON LD, JSON Schema, …), if necessary.
+
+You can integrate the library into your web or backend projects as [`@sozialhelden/a11yjson` npm module](https://www.npmjs.com/package/@sozialhelden/a11yjson).
+
+### Installing the npm module
+
+```bash
+  npm install --save @sozialhelden/a11yjson
+```
+
+### Usage
+
+```javascript
+// This imports only one schema interface, `PlaceInfoSchema`, from A11yJSON.
+// See the documentation below for all available interfaces.
+
+import { PlaceInfoSchema } from '@sozialhelden/ac-format';
+
+// This could be your GeoJSON feature.
+const myGeoJSONFeature = {
+  geometry: { … }
+  properties: { … }
+};
+
+// See https://github.com/aldeed/simple-schema-js for the full documentation of how validation works.
+const validationContext = PlaceInfoSchema.newContext();
+
+// Sanitizes the input object.
+// Converts types automatically if possible, e.g. convert string values to numbers where the schema demands numbers.
+const sanitizedGeoJSONFeature = PlaceInfoSchema.clean(myGeoJSONFeature);
+
+// Validate the GeoJSON feature against A11yJSON’s `PlaceInfo` schema.
+validationContext.validate(sanitizedGeoJSONFeature);
+
+if (!validationContext.isValid()) {
+  const errors = validationContext.validationErrors();
+  // `errors` is a JSON object with detailled validation infos about each field in the input object.
+  console.log(errors);
+}
+```
 
 ## Physical quantities, rating scales and personal profiles
 
