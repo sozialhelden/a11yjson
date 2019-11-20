@@ -20,10 +20,10 @@ We have an [overview of interfaces and types](https://sozialhelden.github.io/a11
 
 Some examples:
 
-- Describe places of interest with the [`PlaceInfo`](https://sozialhelden.github.io/a11yjson/attributes.html#PlaceInfo) and [`PlaceProperties`](https://sozialhelden.github.io/a11yjson/attributes.html#PlaceProperties) interfaces
-- Describe the accessibility of a place of interest with the [`Accessibility`](https://sozialhelden.github.io/a11yjson/attributes.html#Accessibility) interface
-- Places can have restrooms (described in every detail by the [`Restroom`](https://sozialhelden.github.io/a11yjson/attributes.html#RestRoom) interface)
-- Places can have equipment like elevators or escalators, including realtime operational status information. Use the [`EquipmentProperties`](https://sozialhelden.github.io/a11yjson/attributes.html#EquipmentProperties) interface for describing facilities.
+- Describe places of interest with the [`PlaceInfo`](https://sozialhelden.github.io/a11yjson/index.html#PlaceInfo) and [`PlaceProperties`](https://sozialhelden.github.io/a11yjson/index.html#PlaceProperties) interfaces
+- Describe the accessibility of a place of interest with the [`Accessibility`](https://sozialhelden.github.io/a11yjson/index.html#Accessibility) interface
+- Places can have restrooms (described in every detail by the [`Restroom`](https://sozialhelden.github.io/a11yjson/index.html#RestRoom) interface)
+- Places can have equipment like elevators or escalators, including realtime operational status information. Use the [`EquipmentProperties`](https://sozialhelden.github.io/a11yjson/index.html#EquipmentProperties) interface for describing facilities.
 
 Even if you cannot adapt the whole format as part of your own indoor mapping specs, it’s a good idea to adapt single interfaces where you see fit.
 
