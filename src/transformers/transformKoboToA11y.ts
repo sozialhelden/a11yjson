@@ -178,7 +178,7 @@ const parseIsAnyOf = (data: KoboResult, field: KoboKey, list: string[]) => {
 };
 
 const parseIsAnyOfEntry = (data: KoboResult, field: KoboKey, list: string[]) => {
-  return parseIsAnyOfWithDefault(data, field, list, {}, null);
+  return parseIsAnyOfWithDefault(data, field, list, {}, undefined);
 };
 
 const parseFloatUnit = (data: KoboResult, field: KoboKey, unit: string, operator?: string) => {
@@ -220,7 +220,7 @@ export const transformKoboToA11y = (data: KoboResult) => {
 
   const mapping = {
     geometry: data._geolocation ? { coordinates: data._geolocation.reverse(), type: 'Point' } : {},
-    'properties.originalId': `${data._id}`,
+    'properties.originalId': data._id && `${data._id}`,
     'properties.infoPageUrl': null,
     'properties.originalData': JSON.stringify(data),
     // basic place data
@@ -300,17 +300,17 @@ export const transformKoboToA11y = (data: KoboResult) => {
     ),
     'properties.accessibility.restrooms.0.toilet.spaceOnUsersLeftSide': parseFloatUnit(
       data,
-      'inside/toilet/free_space_front',
+      'inside/toilet/free_space_left',
       usedLengthUnit
     ),
     'properties.accessibility.restrooms.0.toilet.spaceOnUsersRightSide': parseFloatUnit(
       data,
-      'inside/toilet/free_space_left',
+      'inside/toilet/free_space_right',
       usedLengthUnit
     ),
     'properties.accessibility.restrooms.0.toilet.spaceInFront': parseFloatUnit(
       data,
-      'inside/toilet/free_space_right',
+      'inside/toilet/free_space_front',
       usedLengthUnit
     ),
     // handles
@@ -419,6 +419,15 @@ export const transformKoboToA11y = (data: KoboResult) => {
     ) {
       unset(result, 'properties.accessibility.accessibleWith.wheelchair');
     }
+  }
+
+  if (Object.keys(get(result, 'properties.accessibility.accessibleWith') || {}).length === 0) {
+    unset(result, 'properties.accessibility.accessibleWith');
+  }
+  if (
+    Object.keys(get(result, 'properties.accessibility.partiallyAccessibleWith') || {}).length === 0
+  ) {
+    unset(result, 'properties.accessibility.partiallyAccessibleWith');
   }
 
   // rate place a11y
