@@ -39,6 +39,7 @@ export default {
       plugins: [
         "@babel/plugin-transform-runtime",
         "@babel/plugin-transform-destructuring",
+        "@babel/plugin-transform-parameters",
         [
           'ttag',
           {

@@ -81,6 +81,7 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-destructuring": "^7.5.0",
+    "@babel/plugin-transform-parameters": "^7.9.3",
     "@babel/plugin-transform-runtime": "^7.5.0",
     "@types/jest": "^21.1.8",
     "@types/js-quantities": "^1.6.2",
