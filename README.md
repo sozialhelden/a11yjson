@@ -10,6 +10,12 @@ Our goal is to make the world more accessible for everybody — which is easier 
 
 This is the successor of the data schema we use for [accessibility.cloud](https://www.accessibility.cloud), one of the biggest data exchange providers for accessibility data, by [Wheelmap.org](https://wheelmap.org), and other organizations. Some international sources already provide consumable data in this schema. You can find them–in most cases as open data–on https://www.accessibility.cloud.
 
+## Q: Should I use this standard?
+
+A: Yes, until there is something better.
+
+While A11yJSON is one of the most comprehensive standards for specifying physical accessibility to date, its development is not complete yet and there are more domains that need this kind of standardization - for example services, products, and events. And we think that physical accessibility is a topic too important to be taken care of by one single NGO! Work is happening at the W3C to create an improved standard - Linked Data graph based for better interoperability, and with a democratized creation process: We have co-founded the [W3C Linked Data for Accessibility (LDA) Community Group](https://www.w3.org/community/lda/) so you can take part in the standardization, too!
+
 ## The specification
 
 The format is based on the [GeoJSON format (RFC 7946)](https://tools.ietf.org/html/rfc7946).
