@@ -76,8 +76,7 @@
         "statements": 75
       }
     },
-    "collectCoverage": true,
-    "mapCoverage": true
+    "collectCoverage": true
   },
   "devDependencies": {
     "@babel/plugin-transform-destructuring": "^7.5.0",
