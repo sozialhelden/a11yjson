@@ -29,7 +29,7 @@ const accessibilityWithNullsFixture: Accessibility = {
 
 const accessibilityPickUpOrDropOffZoneFixture: Accessibility = {
   pickUpOrDropOffZone: groundIsLevelFixture
-}
+};
 
 const accessibilityWithOptionalsFixture: Accessibility = {
   accessibleWith: personalProfileMinimumFixture,
