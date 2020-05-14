@@ -26,7 +26,11 @@ const mediaInRoomCompendiumFixture: Media = {
   isAudio: true
 };
 
-const allValidFixtures = Object.freeze([mediaMinimumFixture, mediaWithOptionalsFixture, mediaInRoomCompendiumFixture]);
+const allValidFixtures = Object.freeze([
+  mediaMinimumFixture,
+  mediaWithOptionalsFixture,
+  mediaInRoomCompendiumFixture
+]);
 
 const invalidMediaFixture = {
   bar: []

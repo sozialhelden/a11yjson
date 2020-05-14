@@ -10,10 +10,23 @@ export interface Room {
    * `false` if not, `undefined` if the condition is unknown or difficult to assess.
    */
   isAccessibleWithWheelchair?: boolean;
+
+  /**
+   * `true if the room is on an accessible path or on the accessible route`
+   * `false` if not, `undefined` if the condition is unknown or difficult to assess.
+   */
+  hasWheelchairAccessiblePathFromOutside?: boolean;
 }
 
 export const RoomSchema = createSchemaInstance('Room', {
   isAccessibleWithWheelchair: {
+    type: Boolean,
+    optional: true,
+    accessibility: {
+      machineData: true
+    }
+  },
+  hasWheelchairAccessiblePathFromOutside: {
     type: Boolean,
     optional: true,
     accessibility: {
