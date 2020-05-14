@@ -10,6 +10,7 @@ import { tablesMinimumFixture } from './Tables.test';
 import { pathwaysMinimumFixture } from './Pathways.test';
 import { parkingMinimumFixture } from './Parking.test';
 import { groundMinimumFixture } from './Ground.test';
+import { groundIsLevelFixture } from './Ground.test';
 
 export const accessibilityMinimumFixture: Accessibility = {};
 
@@ -22,8 +23,13 @@ const accessibilityWithNullsFixture: Accessibility = {
   tables: null,
   pathways: null,
   parking: null,
-  ground: null
+  ground: null,
+  pickUpOrDropOffZone: null
 };
+
+const accessibilityPickUpOrDropOffZoneFixture: Accessibility = {
+  pickUpOrDropOffZone: groundIsLevelFixture
+}
 
 const accessibilityWithOptionalsFixture: Accessibility = {
   accessibleWith: personalProfileMinimumFixture,
@@ -66,7 +72,8 @@ const accessibilityWithOptionalsFixture: Accessibility = {
 const allValidFixtures = Object.freeze([
   accessibilityMinimumFixture,
   accessibilityWithNullsFixture,
-  accessibilityWithOptionalsFixture
+  accessibilityWithOptionalsFixture,
+  accessibilityPickUpOrDropOffZoneFixture
 ]);
 
 const invalidAccessibilityFixture = {

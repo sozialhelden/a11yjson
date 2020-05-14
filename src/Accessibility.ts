@@ -113,6 +113,10 @@ export interface Accessibility {
    */
   providesMobilityEquipment?: boolean;
   /**
+   * Describes the pick up or drop off zone
+   */
+  pickUpOrDropOffZone?: Ground | null;
+  /**
    * TODO
    */
   sitemap?: any; // TODO define type
@@ -233,6 +237,13 @@ export const AccessibilitySchema = new SimpleSchema({
     optional: true,
     accessibility: {
       question: t`In which condition is the ground you have to traverse to get here?`
+    }
+  },
+  pickUpOrDropOffZone: {
+    type: GroundSchema,
+    optional: true,
+    accessibility: {
+      question: t`In which condition is the ground around the pick or drop off zone?`
     }
   },
   ratingSpacious: {
