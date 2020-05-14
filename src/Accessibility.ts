@@ -109,6 +109,10 @@ export interface Accessibility {
    */
   media?: ArrayLike<Media> | null;
   /**
+   * `true` if the facility provides mobility equipment e.g. foldable wheelchairs or crutches
+   */
+  providesMobilityEquipment?: boolean;
+  /**
    * TODO
    */
   sitemap?: any; // TODO define type
@@ -324,6 +328,13 @@ export const AccessibilitySchema = new SimpleSchema({
           option: AccessibleTablesPrefab
         }
       ]
+    }
+  },
+  providesMobilityEquipment: {
+    type: Boolean,
+    optional: true,
+    accessibility: {
+      question: t`Does the place provide mobility equipment, e.g. foldable wheelchairs or crutches?`
     }
   },
   sitemap: {

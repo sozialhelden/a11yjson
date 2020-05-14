@@ -11,7 +11,11 @@ const roomHasWheelchairAccessiblePathFromOutsideFixture: Room = {
   hasWheelchairAccessiblePathFromOutside: true
 };
 
-const allValidFixtures = Object.freeze([roomMinimumFixture, roomWithOptionalsFixture, roomHasWheelchairAccessiblePathFromOutsideFixture]);
+const allValidFixtures = Object.freeze([
+  roomMinimumFixture,
+  roomWithOptionalsFixture,
+  roomHasWheelchairAccessiblePathFromOutsideFixture
+]);
 
 const invalidRoomFixture = {
   bar: []

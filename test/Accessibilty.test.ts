@@ -59,7 +59,8 @@ const accessibilityWithOptionalsFixture: Accessibility = {
   seats: {},
   services: {},
   infoDesk: {},
-  signage: {}
+  signage: {},
+  providesMobilityEquipment: true
 };
 
 const allValidFixtures = Object.freeze([
