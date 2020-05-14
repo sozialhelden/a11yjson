@@ -19,7 +19,14 @@ const mediaWithOptionalsFixture: Media = {
   turningSpaceInFront: '>140cm'
 };
 
-const allValidFixtures = Object.freeze([mediaMinimumFixture, mediaWithOptionalsFixture]);
+const mediaInRoomCompendiumFixture: Media = {
+  type: 'in-room-compendium',
+  name: 'Room 42 Compendium',
+  isBraille: true,
+  isAudio: true
+};
+
+const allValidFixtures = Object.freeze([mediaMinimumFixture, mediaWithOptionalsFixture, mediaInRoomCompendiumFixture]);
 
 const invalidMediaFixture = {
   bar: []
