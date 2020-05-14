@@ -17,7 +17,7 @@ export interface Staff {
    */
   canSeeVisitorsFromInside?: boolean;
   /**
-   * `true` if staff is available upon request 
+   * `true` if staff is available upon request
    */
   hasAccessibilityAssistantForEnquiries?: boolean;
   /**
@@ -57,7 +57,8 @@ export const StaffSchema = new SimpleSchema({
     },
     optional: true
   },
-  hasAccessibilityAssistantForEnquiries: { // TODO clarify with be.accessible what access enquiries are 
+  hasAccessibilityAssistantForEnquiries: {
+    // TODO clarify with be.accessible what access enquiries are
     type: Boolean,
     label: t`assistant for access enquiries`,
     accessibility: {

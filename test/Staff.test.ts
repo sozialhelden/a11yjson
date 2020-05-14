@@ -12,8 +12,11 @@ const staffBeAccessibleNewZealandPropertiesFixture: Staff = {
   hasAccessibilityAwarenessTraining: true
 };
 
-
-const allValidFixtures = Object.freeze([staffMinimumFixture, staffWithOptionalsFixture, staffBeAccessibleNewZealandPropertiesFixture]);
+const allValidFixtures = Object.freeze([
+  staffMinimumFixture,
+  staffWithOptionalsFixture,
+  staffBeAccessibleNewZealandPropertiesFixture
+]);
 
 const invalidStaffFixture = {
   bar: []
