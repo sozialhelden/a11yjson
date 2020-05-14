@@ -17,6 +17,14 @@ export interface Staff {
    */
   canSeeVisitorsFromInside?: boolean;
   /**
+   * `true` if staff is available upon request 
+   */
+  hasAccessibilityAssistantForEnquiries?: boolean;
+  /**
+   * true` if the staff
+   */
+  hasAccessibilityAwarenessTraining?: boolean;
+  /**
    * Languages that the staff speaks, including sign language variants.
    */
   spokenLanguages?: ArrayLike<IetfLanguageTagOrSignLanguageCode>;
@@ -46,6 +54,22 @@ export const StaffSchema = new SimpleSchema({
     label: t`Signing training`,
     accessibility: {
       question: t`Is the staff trained in local sign languages?`
+    },
+    optional: true
+  },
+  hasAccessibilityAssistantForEnquiries: { // TODO clarify with be.accessible what access enquiries are 
+    type: Boolean,
+    label: t`assistant for access enquiries`,
+    accessibility: {
+      question: t`Can the staff assist with access enquiries?`
+    },
+    optional: true
+  },
+  hasAccessibilityAwarenessTraining: {
+    type: Boolean,
+    label: t`awareness training`,
+    accessibility: {
+      question: t`Is the staff trained in accessibility awareness?`
     },
     optional: true
   },

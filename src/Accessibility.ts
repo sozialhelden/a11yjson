@@ -68,7 +68,7 @@ export interface Accessibility {
   /**
    * `true` if the venue has induction loops installed in its functional units where this is relevant.
    */
-  hasInductionLoop?: boolean,
+  hasInductionLoop?: boolean;
   /**
    * Object describing the place's ground condition. If there are very different ground conditions, you can create multiple places and nest them.
    */

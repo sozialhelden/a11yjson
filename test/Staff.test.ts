@@ -7,7 +7,13 @@ const staffWithOptionalsFixture: Staff = {
   hasFreeAssistantForVisitors: true
 };
 
-const allValidFixtures = Object.freeze([staffMinimumFixture, staffWithOptionalsFixture]);
+const staffBeAccessibleNewZealandPropertiesFixture: Staff = {
+  hasAccessibilityAssistantForEnquiries: true,
+  hasAccessibilityAwarenessTraining: true
+};
+
+
+const allValidFixtures = Object.freeze([staffMinimumFixture, staffWithOptionalsFixture, staffBeAccessibleNewZealandPropertiesFixture]);
 
 const invalidStaffFixture = {
   bar: []
