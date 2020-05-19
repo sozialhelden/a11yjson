@@ -44,4 +44,7 @@ export * from './rules/WheelmapA11yRuleset';
 
 export * from './transformers/transformKoboToA11y';
 
+export * from './EmergencyDevice';
 export * from './Bed';
+export * from './RoomAccessibility'
+export * from './Level'

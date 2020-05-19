@@ -2,7 +2,7 @@ import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
 import { createSchemaInstance } from './SimpleSchemaExtensions';
-import { Length } from './Units';
+import { Length, LengthSchema } from './Units';
 import { LocalizedStringSchema } from './LocalizedString';
 
 export interface Bed {
@@ -12,11 +12,10 @@ export interface Bed {
    */
   isAccessibleWithWheelchair?: boolean;
   hasEasyAccessFromBothSides?: boolean;
-  spaceAround?: Length;
   hasAccessibleLightSwitch?: boolean;
 }
 
-export const BedSchema = new SimpleSchema ({
+export const BedSchema = createSchemaInstance('Bed', {
   isAccessibleWithWheelchair: {
     type: Boolean,
     optional: true,
@@ -36,13 +35,6 @@ export const BedSchema = new SimpleSchema ({
     optional: true,
     accessibility: {
       question: t`Does the bed have enough space to easily access it from both sides?`
-    }
-  },
-  spaceAround: {
-    type: LocalizedStringSchema,
-    optional: true,
-    accessibility: {
-      question: t`Is the bed accessible with wheelchair?`
     }
   }
 });

@@ -18,7 +18,8 @@ import { LocalizedString, LocalizedStringSchema } from './LocalizedString';
 import { AnimalPolicySchema, AnimalPolicy } from './AnimalPolicy';
 import { SmokingPolicy, smokingPolicies } from './SmokingPolicy';
 import { quantityDefinition, Volume, LengthSchema } from './Units';
-import { Door } from './Door';
+import { Door, DoorSchema } from './Door';
+import { EmergencyDevice, EmergencyDeviceSchema } from './EmergencyDevice';
 
 /**
  * Describes the physical (and sometimes human rated) accessibility of a place.
@@ -132,6 +133,10 @@ export interface Accessibility {
    */
   hasDedicatedAccessibilitySignage?: boolean;
   /**
+   * Describes the emergency devices in the place
+   */
+  emergencyDevices?: ArrayLike<EmergencyDevice> | null;
+  /**
    * TODO
    */
   sitemap?: any; // TODO define type
@@ -232,6 +237,19 @@ export const AccessibilitySchema = new SimpleSchema({
   },
   'media.$': {
     type: MediaSchema
+  },
+ 
+  emergencyDevices: {
+    type: Array,
+    optional: true,
+    accessibility: {
+      question: t`Are there any emergency devices?`,
+      questionMore: t`Are there more emergency devices?`,
+      description: t`e.g. evacuation chairs, fire alarms, audible alarms`
+    }
+  },
+  'emergencyDevices.$': {
+    type: EmergencyDeviceSchema
   },
   payment: {
     type: PaymentSchema,
@@ -375,6 +393,14 @@ export const AccessibilitySchema = new SimpleSchema({
     optional: true,
     accessibility: {
       question: t`Does the place provide mobility equipment, e.g. foldable wheelchairs or crutches?`
+    }
+  },
+  doors: {
+    type: DoorSchema,
+    optional: true,
+    label: t`Door`,
+    accessibility: {
+      questionBlockBegin: t`Would you like soem general information about the doors in the place?`
     }
   },
   sitemap: {

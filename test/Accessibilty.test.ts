@@ -11,6 +11,8 @@ import { pathwaysMinimumFixture } from './Pathways.test';
 import { parkingMinimumFixture } from './Parking.test';
 import { groundMinimumFixture } from './Ground.test';
 import { groundIsLevelFixture } from './Ground.test';
+import { doorWithOptionalsFixture } from './Door.test';
+import { emergencyDeviceGenericAlarmFixture } from './EmergencyDevice.test'; 
 
 export const accessibilityMinimumFixture: Accessibility = {};
 
@@ -19,6 +21,7 @@ const accessibilityWithNullsFixture: Accessibility = {
   restrooms: null,
   staff: null,
   media: null,
+  emergencyDevices: null,
   payment: null,
   tables: null,
   pathways: null,
@@ -31,9 +34,11 @@ const accessibilityWithNullsFixture: Accessibility = {
 const accessibilityChangesForNewZealandFixture: Accessibility = {
   pickUpOrDropOffZone: groundIsLevelFixture,
   hasDedicatedAccessibilitySignage: false,
-  hasWheelchairAccessiblePathFromOutside: true
+  hasWheelchairAccessiblePathFromOutside: true,
+  emergencyDevices: [emergencyDeviceGenericAlarmFixture],
+  providesMobilityEquipment: true,
+  doors: doorWithOptionalsFixture
 };
-
 
 const accessibilityWithOptionalsFixture: Accessibility = {
   accessibleWith: personalProfileMinimumFixture,
@@ -69,8 +74,7 @@ const accessibilityWithOptionalsFixture: Accessibility = {
   seats: {},
   services: {},
   infoDesk: {},
-  signage: {},
-  providesMobilityEquipment: true
+  signage: {}
 };
 
 const allValidFixtures = Object.freeze([

@@ -8,6 +8,7 @@ import { ExternalId, ExternalIdSchema } from './ExternalId';
 import { Address, AddressSchema } from './Address';
 import { LocalizedStringSchema, LocalizedString } from './LocalizedString';
 import { RoomSchema, Room } from './Room';
+import { Level, LevelSchema } from './Level';
 
 export interface PlaceProperties {
   // properties
@@ -89,6 +90,10 @@ export interface PlaceProperties {
    * Information about the place’s rooms.
    */
   rooms?: Room;
+  /**
+   * Information about the accessibility of the interior levels
+   */
+  levels?: Level;
 }
 
 export const PlacePropertiesSchema = new SimpleSchema({
@@ -113,6 +118,13 @@ export const PlacePropertiesSchema = new SimpleSchema({
     accessibility: {
       question: t`Would you like to add the address?`,
       componentHint: 'Address'
+    }
+  },
+  levels: {
+    type: LevelSchema,
+    optional: true,
+    accessibility: {
+      question: t`Describe the accessibility of the place's levels.`,
     }
   },
   description: {
@@ -149,7 +161,6 @@ export const PlacePropertiesSchema = new SimpleSchema({
       question: t`How would you describe the rooms inside this place?`,
       description: t`Information about the rooms inside the place`
     }
-
   },
   accessibility: {
     type: AccessibilitySchema,

@@ -3,6 +3,7 @@ import { PlaceProperties, PlacePropertiesSchema } from '../src/PlaceProperties';
 import { validExternalIdWithExtendedDataFixture } from './ExternalId.test';
 import { accessibilityMinimumFixture } from './Accessibilty.test';
 import { structuredAddressMinimalFixture } from './Address.test';
+import { levelWithOptionalsFixture } from './Level.test';
 
 export const placePropertiesMinimumFixture: PlaceProperties = {
   name: 'T-Mobile Sandy',
@@ -33,7 +34,8 @@ const placePropertiesWithOptionalsFixture: PlaceProperties = {
   sourceId: 'T8j8nnnqMpbxpLxZu',
   sourceImportId: 'T8j8nnnqMpbxpLxZu',
   accessibility: accessibilityMinimumFixture,
-  hasInfoPageUrl: true
+  hasInfoPageUrl: true,
+  levels: levelWithOptionalsFixture
 };
 
 const allValidFixtures = Object.freeze([

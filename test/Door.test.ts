@@ -2,7 +2,7 @@ import { Door, DoorSchema } from '../src/Door';
 
 export const doorMinimumFixture: Door = {};
 
-const doorWithOptionalsFixture: Door = {
+export const doorWithOptionalsFixture: Door = {
   turningSpaceInFront: '<90cm',
   doorOpensToOutside: true,
   isAutomaticOrAlwaysOpen: true,

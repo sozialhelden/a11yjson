@@ -7,21 +7,21 @@ import { LocalizedString, LocalizedStringSchema } from './LocalizedString';
 import { MediaSchema, Media } from './Media';
 import { Accessibility, AccessibilitySchema } from './Accessibility';
 import { Bed, BedSchema } from './Bed';
+import { RoomAccessibility, RoomAccessibilitySchema } from './RoomAccessibility';
 
 export interface Room {
-
   /**
    * `true` if the room's relevant facilities are completely accessible while using a wheelchair,
    * `false` if not, `undefined` if the condition is unknown or difficult to assess.
    */
   isAccessibleWithWheelchair?: boolean;
-  
-  // // Adding accessibility throws test errors without adding tests ??
-  /**
-   * The accessibility of this place.
-   * `null` indicates that this place has no data, `undefined` or missing property indicates unknown.
-   */
-  accessibility?: Accessibility;
+
+  // // // Adding accessibility throws test errors without adding tests ??
+  // /**
+  //  * The accessibility of this place.
+  //  * `null` indicates that this place has no data, `undefined` or missing property indicates unknown.
+  //  */
+  // accessibility?: Accessibility;
 
   /**
    * `true if the room is on an accessible path or on the accessible route`
@@ -32,19 +32,19 @@ export interface Room {
   /**
    * Object describing the place's ground condition. If there are very different ground conditions, you can create multiple places and nest them.
    */
-  
+
   ground?: Ground;
-  
+
   /**
    * the name of the room
    */
   name?: LocalizedString;
-  
+
   /**
    * Information if at least one chair is accessible with wheelchair
    */
   hasAccessibleChairs?: boolean;
-  
+
   /**
    * Information about media.
    * `null` indicates there is no media, `undefined` or missing property indicates unknown.
@@ -54,8 +54,11 @@ export interface Room {
   /**
    * Information about the room's beds
    */
-  beds?: Bed | null;
-
+  beds?: Bed;
+  /**
+   * Describes the accessibility dedicated to a room.
+   */
+  roomAccessibility?: RoomAccessibility;
 }
 
 export const RoomSchema = createSchemaInstance('Room', {
@@ -66,15 +69,15 @@ export const RoomSchema = createSchemaInstance('Room', {
       question: t`Is the room accessible with wheelchair?`
     }
   },
-  // Adding accessiblity throws test errors without adding test cases ??
-  accessibility: {
-    type: AccessibilitySchema,
-    optional: true,
-    accessibility: {
-      question: t`Okay, now let\`s map the accessibility.`,
-      description: t`Describes the overall accessibility of the room.`
-    }
-  },
+  // // Adding accessiblity throws test errors without adding test cases ??
+  // accessibility: {
+  //   type: AccessibilitySchema,
+  //   optional: true,
+  //   accessibility: {
+  //     question: t`Okay, now let\`s map the accessibility.`,
+  //     description: t`Describes the overall accessibility of the room.`
+  //   }
+  // },
   hasAccessibleChairs: {
     type: Boolean,
     optional: true,
@@ -115,12 +118,19 @@ export const RoomSchema = createSchemaInstance('Room', {
   'media.$': {
     type: MediaSchema
   },
-  bed: {
+  beds: {
     type: BedSchema,
     optional: true,
     accessibility: {
       question: t`Describe the room's beds if available.`
     }
-  }
+  },
+  roomAccessibility: {
+    type: RoomAccessibilitySchema,
+    optional: true,
+    accessibility: {
+      question: t`Describe the room's individual accessibility.`
+    }
+  },
 
 });
