@@ -2,7 +2,7 @@ import { Ground, GroundSchema } from '../src/Ground';
 
 export const groundMinimumFixture: Ground = {};
 
-const groundIsLevelFixture: Ground = {
+export const groundIsLevelFixture: Ground = {
   isLevel: true
 };
 const sidewalkWithOptionalsFixture: Ground = {

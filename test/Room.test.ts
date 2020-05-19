@@ -1,20 +1,34 @@
 import { Room, RoomSchema } from '../src/Room';
 import { FormatVersion } from '../src/Version';
+import { groundIsLevelFixture } from './Ground.test';
+import { mediaWithOptionalsFixture } from './Media.test';
+// import { accessibilityWithOptionalsFixture } from './Accessibilty.test'
 
 export const roomMinimumFixture: Room = {};
 
+
+// const roomWithNullFixture: Room = {
+//   beds: null
+// };
+
 const roomWithOptionalsFixture: Room = {
-  isAccessibleWithWheelchair: true
+  isAccessibleWithWheelchair: true,
 };
 
-const roomHasWheelchairAccessiblePathFromOutsideFixture: Room = {
-  hasWheelchairAccessiblePathFromOutside: true
+const changesToRoomForNewZealandFixture: Room = {
+  hasWheelchairAccessiblePathFromOutside: true,
+  ground: groundIsLevelFixture,
+  hasAccessibleChairs: false,
+  name: 'Waiting room',
+  media: [mediaWithOptionalsFixture],
+  // accessibility: accessibilityWithOptionalsFixture
 };
 
 const allValidFixtures = Object.freeze([
   roomMinimumFixture,
   roomWithOptionalsFixture,
-  roomHasWheelchairAccessiblePathFromOutsideFixture
+  changesToRoomForNewZealandFixture,
+  // roomWithNullFixture
 ]);
 
 const invalidRoomFixture = {

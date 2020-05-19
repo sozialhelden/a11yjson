@@ -4,7 +4,7 @@ export const mediaMinimumFixture: Media = {
   type: 'document'
 };
 
-const mediaWithOptionalsFixture: Media = {
+export const mediaWithOptionalsFixture: Media = {
   type: 'document',
   name: 'menu',
   isBraille: true,

@@ -7,6 +7,7 @@ import { Accessibility, AccessibilitySchema } from './Accessibility';
 import { ExternalId, ExternalIdSchema } from './ExternalId';
 import { Address, AddressSchema } from './Address';
 import { LocalizedStringSchema, LocalizedString } from './LocalizedString';
+import { RoomSchema, Room } from './Room';
 
 export interface PlaceProperties {
   // properties
@@ -70,6 +71,10 @@ export interface PlaceProperties {
    * URL of the original data source’s website describing this place.
    */
   infoPageUrl?: LocalizedString;
+  /**
+   * URL of the original data source’s website describing this place.
+   */
+  hasInfoPageUrl?: Boolean;
 
   /**
    * URL of the original data source’s website on a subpage that allows to edit the original data.
@@ -80,6 +85,10 @@ export interface PlaceProperties {
    * URL of the place’s own website.
    */
   placeWebsiteUrl?: LocalizedString;
+  /**
+   * Information about the place’s rooms.
+   */
+  rooms?: Room;
 }
 
 export const PlacePropertiesSchema = new SimpleSchema({
@@ -133,12 +142,28 @@ export const PlacePropertiesSchema = new SimpleSchema({
       example: t`e.g. accessibility@example.com`
     }
   },
+  rooms: {
+    type: RoomSchema,
+    optional: true,
+    accessibility: {
+      question: t`How would you describe the rooms inside this place?`,
+      description: t`Information about the rooms inside the place`
+    }
+
+  },
   accessibility: {
     type: AccessibilitySchema,
     optional: true,
     accessibility: {
       question: t`Okay, now let\`s map the accessibility.`,
       description: t`Describes the overall accessibility of a place.`
+    }
+  },
+  hasInfoPageUrl: {
+    type: Boolean,
+    optional: true,
+    accessibility: {
+      question: t`Is there an URL of the original data source’s website describing this place`
     }
   },
   infoPageUrl: {

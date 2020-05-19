@@ -18,6 +18,7 @@ import { LocalizedString, LocalizedStringSchema } from './LocalizedString';
 import { AnimalPolicySchema, AnimalPolicy } from './AnimalPolicy';
 import { SmokingPolicy, smokingPolicies } from './SmokingPolicy';
 import { quantityDefinition, Volume, LengthSchema } from './Units';
+import { Door } from './Door';
 
 /**
  * Describes the physical (and sometimes human rated) accessibility of a place.
@@ -116,6 +117,20 @@ export interface Accessibility {
    * Describes the pick up or drop off zone
    */
   pickUpOrDropOffZone?: Ground | null;
+  /**
+   * `true if the room is on an accessible path or on the accessible route`
+   * `false` if not, `undefined` if the condition is unknown or difficult to assess.
+   */
+  hasWheelchairAccessiblePathFromOutside?: boolean;
+  /**
+   * Describes the doors of the place
+   */
+  doors?: Door;
+  /**
+   * `true if the place provides dedicated signage for way finding`
+   * `false` if not, `undefined` if the condition is unknown or difficult to assess.
+   */
+  hasDedicatedAccessibilitySignage?: boolean;
   /**
    * TODO
    */
@@ -244,6 +259,20 @@ export const AccessibilitySchema = new SimpleSchema({
     optional: true,
     accessibility: {
       question: t`In which condition is the ground around the pick or drop off zone?`
+    }
+  },
+  hasWheelchairAccessiblePathFromOutside: {
+    type: Boolean,
+    optional: true,
+    accessibility: {
+      question: t`Is the place on a wheeclchair accessible path?`
+    }
+  },
+  hasDedicatedAccessibilitySignage: {
+    type: Boolean,
+    optional: true,
+    accessibility: {
+      question: t`Is there dedicated signage for way finding?`
     }
   },
   ratingSpacious: {

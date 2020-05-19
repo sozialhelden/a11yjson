@@ -43,3 +43,5 @@ export * from './rules/RatingRules';
 export * from './rules/WheelmapA11yRuleset';
 
 export * from './transformers/transformKoboToA11y';
+
+export * from './Bed';

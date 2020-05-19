@@ -24,12 +24,16 @@ const accessibilityWithNullsFixture: Accessibility = {
   pathways: null,
   parking: null,
   ground: null,
-  pickUpOrDropOffZone: null
+  pickUpOrDropOffZone: null,
+  hasDedicatedAccessibilitySignage: null
 };
 
-const accessibilityPickUpOrDropOffZoneFixture: Accessibility = {
-  pickUpOrDropOffZone: groundIsLevelFixture
+const accessibilityChangesForNewZealandFixture: Accessibility = {
+  pickUpOrDropOffZone: groundIsLevelFixture,
+  hasDedicatedAccessibilitySignage: false,
+  hasWheelchairAccessiblePathFromOutside: true
 };
+
 
 const accessibilityWithOptionalsFixture: Accessibility = {
   accessibleWith: personalProfileMinimumFixture,
@@ -73,7 +77,7 @@ const allValidFixtures = Object.freeze([
   accessibilityMinimumFixture,
   accessibilityWithNullsFixture,
   accessibilityWithOptionalsFixture,
-  accessibilityPickUpOrDropOffZoneFixture
+  accessibilityChangesForNewZealandFixture
 ]);
 
 const invalidAccessibilityFixture = {

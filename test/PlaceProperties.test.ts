@@ -32,7 +32,8 @@ const placePropertiesWithOptionalsFixture: PlaceProperties = {
   creatorId: 'T8j8nnnqMpbxpLxZu',
   sourceId: 'T8j8nnnqMpbxpLxZu',
   sourceImportId: 'T8j8nnnqMpbxpLxZu',
-  accessibility: accessibilityMinimumFixture
+  accessibility: accessibilityMinimumFixture,
+  hasInfoPageUrl: true
 };
 
 const allValidFixtures = Object.freeze([
