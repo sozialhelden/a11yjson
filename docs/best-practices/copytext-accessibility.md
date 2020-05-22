@@ -58,7 +58,7 @@ The HTML code could look like this:
 </ul>
 ```
 
-Nifty typography, with Unicode arrows! But do you have a working sense of hearing? Then listen to a voice assistant reading this sign aloud. If you are near a Mac, open your Terminal app and enter this:
+Do you have a working sense of hearing? Then listen to a voice assistant reading this sign aloud. If you are near a Mac, open your Terminal app and enter this:
 
 `say -v Dan "Pl. 9 3/4 -> Hogsmeade"`
 
@@ -69,8 +69,10 @@ With some typographic polishing and [accessibility labels](https://developer.moz
 ```html
 <h1>King’s Cross</h1>
 <ul>
+    <!-- Uses the `ttsTitle` field mentioned above -->
     <li aria-label="Platform Nine and Three Quarters, to Hogsmeade">
-	Pl. 9 3⁄4 → Hogsmeade
+        <!-- Uses the `shortTitle` field mentioned above -->
+        Pl. 9 3⁄4 → Hogsmeade
     </li>
     <li aria-label="Platform 10, to Eaglescliffe">
         Pl. 10 → Eaglescliffe
