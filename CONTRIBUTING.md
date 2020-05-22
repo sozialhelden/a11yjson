@@ -1,4 +1,8 @@
+# Contributing
+
 We're really glad you're reading this, because we need volunteer developers to help this project come to fruition. 👏
+
+This project is not complete and will never be. We're open to your suggestions and comments, no matter if you share data yourself or want to consume them from [accessibility.cloud](https://www.accessibility.cloud) – [send an email to us](support@accessibility.cloud) or create an issue or pull request!
 
 ## Instructions
 
