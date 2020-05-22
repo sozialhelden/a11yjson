@@ -2,8 +2,8 @@
 
 <!-- ![A11yJSON icon](./images/logo-dark.svg) -->
 
-[![Build
-Status](https://travis-ci.org/sozialhelden/a11yjson.svg?branch=master)](https://travis-ci.org/sozialhelden/a11yjson)
+<!-- [![Build
+Status](https://travis-ci.org/sozialhelden/a11yjson.svg?branch=master)](https://travis-ci.org/sozialhelden/a11yjson) -->
 
 A11yJSON is an open standard based on [GeoJSON (RFC 7946)](https://tools.ietf.org/html/rfc7946). Its goal is to make accessibility information more comfortable to exchange.
 
