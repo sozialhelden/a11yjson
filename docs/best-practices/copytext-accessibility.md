@@ -62,7 +62,7 @@ Do you have a working sense of hearing? Then listen to a voice assistant reading
 
 `say -v Dan "Pl. 9 3/4 -> Hogsmeade"`
 
-Then press Enter. Experience the cringy but mystifying situation of a British passenger listening to their VoiceOver assistant, which states aloud: "Pee Ell Nine. Three Stroke Four to Hogsmeade." It sounds like an intriguing riddle! The pronunciation "Platform nine three quarters to Hogsmeade" would make more sense, however. They would assist the rider to reach the picturesque little village in time. 🧙‍♀️
+Then press Enter. Experience the cringy but mystifying situation of a British passenger listening to their VoiceOver assistant, which states aloud: "Pee Ell Nine. Three Stroke Four to Hogsmeade." It sounds like an intriguing riddle! The pronunciation "Platform nine three quarters to Hogsmeade" would make more sense, however. It would assist the rider to reach the picturesque little village in time. 🧙‍♀️
 
 With some typographic polishing and [accessibility labels](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute), we achieve a visual and auditory improvement:
 
