@@ -21,8 +21,8 @@ A valid A11yJSON data snippet:
 ```json
 {
   "entrances": [
-    { name: "30th St", "isMainEntrance": true, "isLevel": false },
-    { name: "Side gate", "hasFixedRamp": true }
+    { "name": "30th St", "isMainEntrance": true, "isLevel": false },
+    { "name": "Side gate", "hasFixedRamp": true }
   ],
   "allowsGuideDogs": false
 }
