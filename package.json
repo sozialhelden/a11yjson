@@ -21,7 +21,7 @@
   "scripts": {
     "lint": "tslint -t codeFrame -e 'src/typings/*' 'src/**/*.ts' 'test/**/*.ts'",
     "prebuild": "rimraf dist",
-    "build": "tsc && rollup -c rollup.config.ts && rimraf compiled && typedoc src typings --options typedoc.json --out dist/docs/typescript --json dist/typedoc-output.json && npx ts-node ./tools/generate-overview.tsx > dist/docs/index.html && cp logo.svg dist/docs/ && cp logo.svg dist/docs/typescript/",
+    "build": "tsc && rollup -c rollup.config.ts && rimraf compiled && typedoc src typings --options typedoc.json --out dist/docs/typescript --json dist/typedoc-output.json && npx ts-node ./tools/generate-overview.ts && cp README.md docs/index.md",
     "start": "tsc -w & rollup -c rollup.config.ts -w",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -127,6 +127,7 @@
     "js-quantities": "^1.7.4",
     "kind-of": "^6.0.3",
     "lodash": "^4.17.11",
+    "markdown-table": "^2.0.0",
     "marked": "^0.7.0",
     "react-style-tag": "^2.0.1",
     "simpl-schema": "^1.5.0",

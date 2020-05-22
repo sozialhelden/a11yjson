@@ -28,7 +28,7 @@ A valid A11yJSON data snippet:
 }
 ```
 
-See the [examples](.docs/1-example-data.md) for more complex definitions, or [interfaces](./docs/3-interfaces.md) for the full spec.
+See the [examples](1-example-data.md) for more complex definitions, or [interfaces](3-interfaces.md) for the full spec.
 
 ## Is this for me?
 
@@ -42,17 +42,17 @@ A11yJSON can help you if you work with data in…
 - Outdoor/transit navigation
 - Building Information Management (BIM)
 
-We have a [list of projects using A11yJSON](./docs/2-who-uses-a11yjson.md).
+We have a [list of projects using A11yJSON](./2-who-uses-a11yjson.md).
 
 ## Technically…
 
-A11yJSON provides a collection of [documented interfaces](./docs/3-interfaces.md) for structuring data in your own projects – no matter which language you use.
+A11yJSON provides a collection of [documented interfaces](./3-interfaces.md) for structuring data in your own projects – no matter which language you use.
 
 It comes with a TypeScript library to check your data structures at compile-time.
 
 For web and Node.js, there is [`@sozialhelden/a11yjson`, a npm module](https://www.npmjs.com/package/@sozialhelden/a11yjson). The model validates data at runtime using [`SimpleSchema`](https://github.com/aldeed/simple-schema-js),  sanitizes input, and returns sophisticated error messages for wrong data.
 
-The schema definition API is simple to read, so the schema should be portable to other schema languages (e.g. GraphQL, JSON Schema, …), if necessary. If you have a specific idea, [let's talk](developers@sozialhelden.de)!
+The schema definition API is simple to read, so the schema should be portable to other schema languages (e.g. GraphQL, JSON Schema, …), if necessary. If you have a specific idea, [let's talk](mailto:developers@sozialhelden.de)!
 
 ## Who is behind A11yJSON?
 

@@ -1,0 +1,155 @@
+# Copyright (c) 2016-2020 Martin Donath <martin.donath@squidfunk.com>
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to
+# deal in the Software without restriction, including without limitation the
+# rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+# sell copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+# IN THE SOFTWARE.
+
+# Project information
+site_name: A11yJSON
+site_url: https://sozialhelden.github.io/a11yjson
+site_author: Sozialhelden e.V.
+site_description: >-
+  A harmonized data schema for describing the accessibility of physical places.
+
+# Repository
+repo_name: sozialhelden/a11yjson
+repo_url: https://github.com/sozialhelden/a11yjson
+# edit_uri: https://github.com/sozialhelden/k8s/edit/master/docs/
+
+# Copyright
+copyright: Copyright &copy; 2018-2020 Sozialhelden e.V.
+
+# Configuration
+theme:
+  name: material
+
+  # 404 page
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  features:
+    # - tabs
+    - instant
+  palette:
+    scheme: default
+    primary: red
+    accent: blue grey
+  font:
+    text: Inter
+    code: Source Code Pro
+  icon:
+    logo: logo
+  logo: images/logo-white.svg
+  favicon: assets/logo-dark.png
+
+# Plugins
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+# Customization
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/sozialhelden/a11yjson
+    # - icon: fontawesome/brands/gitter
+    #   link: https://gitter.im/squidfunk/mkdocs-material
+    # - icon: fontawesome/brands/docker
+    #   link: https://hub.docker.com/r/squidfunk/mkdocs-material/
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/sozialhelden
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/sozialhelden/
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/sozialhelden
+
+
+# TODO:
+#      <meta property="og:title" content="A11yJSON" />
+#      <meta property="og:site_name" content="A11yJSON" />
+#      <meta property="og:url" content="https://sozialhelden.github.io/a11yjson/index.html" />
+#      <meta property="og:description" content="A harmonized data schema for describing the accessibility of physical places." />
+#      <meta property="og:type" content="website" />
+#      <meta property="og:image" content="https://raw.githubusercontent.com/sozialhelden/a11yjson/master/A11yJSON%20GitHub%20share%20pic.png" />
+#
+#      <meta name="twitter:card" content="summary_large_image" />
+#      <meta name="twitter:site" content="@sozialhelden" />
+#      <meta name="twitter:creator" content="@sozialhelden" />
+#      <meta name="twitter:title" content="A11yJSON" />
+#      <meta name="twitter:description" content="A harmonized data schema for describing the accessibility of physical places." />
+#      <meta name="twitter:image" content="https://raw.githubusercontent.com/sozialhelden/a11yjson/master/A11yJSON%20GitHub%20share%20pic.png" />
+
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.attr_list
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  # - pymdownx.highlight:
+  #     linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# nav:
+#   - Home: index.md
+#   - Dashboards: dashboards.md
+#   - Cluster setup: cluster-setup.md
+#   - Development processes: dev-process.md
+#   - Culture: dev-culture.md
+#   - Ideas: ideas.md
+
+
+
+# Google Analytics
+# google_analytics:
+#   - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+#   - auto
