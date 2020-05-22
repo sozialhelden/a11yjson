@@ -166,6 +166,6 @@ ${TypeAliases()}
 `;
 }
 
-fs.writeFileSync('docs/reference/interfaces.md', Interfaces());
+fs.writeFileSync('docs/3-interfaces.md', Interfaces());
 
-fs.writeFileSync('docs/reference/type-aliases.md', TypeAliases());
+fs.writeFileSync('docs/4-type-aliases.md', TypeAliases());
