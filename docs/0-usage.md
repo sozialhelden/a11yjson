@@ -18,7 +18,7 @@ For each interface `X` you find in the reference, the `a11yjson` npm module prov
 ## TypeScript usage
 
 ```typescript
-import { PlaceInfo } from '@sozialhelden/ac-format';
+import { PlaceInfo } from '@sozialhelden/a11yjson';
 
 const placeInfo: PlaceInfo = {
   geometry: {
@@ -45,7 +45,7 @@ The following code imports one interface schema, `PlaceInfoSchema`, from A11yJSO
 If the object isn't valid, you get a detailed error object as validation result.
 
 ```javascript
-import { PlaceInfoSchema } from '@sozialhelden/ac-format';
+import { PlaceInfoSchema } from '@sozialhelden/a11yjson';
 
 // This could be your GeoJSON feature.
 const myGeoJSONFeature = {
