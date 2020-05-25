@@ -22,14 +22,14 @@ export const LevelSchema = new SimpleSchema({
     label: t`Level Name`,
     optional: true,
     accessibility: {
-      question: t`What the name of the Level`,
+      question: t`What the name of the Level`
     }
   },
   index: {
     type: Number,
     optional: true,
     accessibility: {
-      question: t`Index of the level in question`,
-    }    
+      question: t`Index of the level in question`
+    }
   }
 });

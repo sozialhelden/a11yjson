@@ -12,7 +12,8 @@ import { parkingMinimumFixture } from './Parking.test';
 import { groundMinimumFixture } from './Ground.test';
 import { groundIsLevelFixture } from './Ground.test';
 import { doorWithOptionalsFixture } from './Door.test';
-import { emergencyDeviceGenericAlarmFixture } from './EmergencyDevice.test'; 
+import { emergencyDeviceGenericAlarmFixture } from './EmergencyDevice.test';
+import { staffWithOptionalsFixture } from './Staff.test';
 
 export const accessibilityMinimumFixture: Accessibility = {};
 
@@ -37,7 +38,8 @@ const accessibilityChangesForNewZealandFixture: Accessibility = {
   hasWheelchairAccessiblePathFromOutside: true,
   emergencyDevices: [emergencyDeviceGenericAlarmFixture],
   providesMobilityEquipment: true,
-  doors: doorWithOptionalsFixture
+  doors: doorWithOptionalsFixture,
+  staff: staffWithOptionalsFixture
 };
 
 const accessibilityWithOptionalsFixture: Accessibility = {

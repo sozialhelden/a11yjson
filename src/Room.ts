@@ -131,6 +131,5 @@ export const RoomSchema = createSchemaInstance('Room', {
     accessibility: {
       question: t`Describe the room's individual accessibility.`
     }
-  },
-
+  }
 });

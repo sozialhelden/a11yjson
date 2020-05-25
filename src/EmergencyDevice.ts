@@ -22,7 +22,7 @@ export interface EmergencyDevice {
    * Is the emergency device visual
    */
   isVisual?: boolean;
-  
+
   /**
    * Is the emergency device visual
    */
@@ -33,12 +33,7 @@ export const EmergencyDeviceSchema = new SimpleSchema({
   type: {
     type: String,
     label: t`EmergencyDevice Type`,
-    allowedValues: [
-      'evacChair', 
-      'visualFireAlarm', 
-      'audibleFireAlarm',
-      'alarm'
-    ],
+    allowedValues: ['evacChair', 'visualFireAlarm', 'audibleFireAlarm', 'alarm'],
     accessibility: {
       question: t`What kind of EmergencyDevice is described?`,
       options: [
@@ -72,5 +67,5 @@ export const EmergencyDeviceSchema = new SimpleSchema({
     accessibility: {
       question: t`Is the emergency device available?`
     }
-  },
+  }
 });

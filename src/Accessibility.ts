@@ -238,7 +238,7 @@ export const AccessibilitySchema = new SimpleSchema({
   'media.$': {
     type: MediaSchema
   },
- 
+
   emergencyDevices: {
     type: Array,
     optional: true,

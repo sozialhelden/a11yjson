@@ -2,20 +2,17 @@ import { Staff, StaffSchema } from '../src/Staff';
 
 export const staffMinimumFixture: Staff = {};
 
-const staffWithOptionalsFixture: Staff = {
+export const staffWithOptionalsFixture: Staff = {
   canSeeVisitorsFromInside: true,
-  hasFreeAssistantForVisitors: true
-};
-
-const staffBeAccessibleNewZealandPropertiesFixture: Staff = {
+  hasFreeAssistantForVisitors: true,
   hasAccessibilityAssistantForEnquiries: true,
   hasAccessibilityAwarenessTraining: true
 };
 
+
 const allValidFixtures = Object.freeze([
   staffMinimumFixture,
   staffWithOptionalsFixture,
-  staffBeAccessibleNewZealandPropertiesFixture
 ]);
 
 const invalidStaffFixture = {

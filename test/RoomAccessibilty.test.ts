@@ -1,16 +1,8 @@
 import { RoomAccessibility, RoomAccessibilitySchema } from '../src/RoomAccessibility';
 import { personalProfileMinimumFixture } from './PersonalProfile.test';
-import { restroomMinimumFixture } from './Restroom.test';
-import { entranceMinimumFixture } from './Entrance.test';
-import { wheelchairPlacesMinimumFixture } from './WheelchairPlaces.test';
 import { mediaMinimumFixture } from './Media.test';
-import { staffMinimumFixture } from './Staff.test';
-import { paymentMinimumFixture } from './Payment.test';
 import { tablesMinimumFixture } from './Tables.test';
-import { pathwaysMinimumFixture } from './Pathways.test';
-import { parkingMinimumFixture } from './Parking.test';
 import { groundMinimumFixture } from './Ground.test';
-import { groundIsLevelFixture } from './Ground.test';
 import { doorWithOptionalsFixture } from './Door.test';
 
 export const roomAccessibilityMinimumFixture: RoomAccessibility = {};
@@ -33,6 +25,7 @@ export const roomAccessibilityWithOptionalsFixture: RoomAccessibility = {
   smokingPolicy: 'prohibited',
   hasTactileGuideStrips: true,
   ground: groundMinimumFixture,
+  hasDedicatedAccessibilitySignage: true,
   doors: doorWithOptionalsFixture
 };
 

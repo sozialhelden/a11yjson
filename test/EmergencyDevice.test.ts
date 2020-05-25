@@ -5,6 +5,11 @@ export const emergencyDeviceEvacChairFixture: EmergencyDevice = {
   isAvailable: true
 };
 
+export const emergencyDeviceFireAlarmFixture: EmergencyDevice = {
+  type: 'visualFireAlarm',
+  isAvailable: true
+};
+
 export const emergencyDeviceGenericAlarmFixture: EmergencyDevice = {
   type: 'alarm',
   isAudio: true,
@@ -13,7 +18,8 @@ export const emergencyDeviceGenericAlarmFixture: EmergencyDevice = {
 
 const allValidFixtures = Object.freeze([
   emergencyDeviceEvacChairFixture,
-  emergencyDeviceGenericAlarmFixture
+  emergencyDeviceGenericAlarmFixture,
+  emergencyDeviceFireAlarmFixture
 ]);
 
 const invalidEmergencyDeviceFixture = {
@@ -24,7 +30,11 @@ const invalidTypeEmergencyDeviceFixture = {
   type: 'sausage'
 };
 
-const allInvalidFixtures = Object.freeze([{}, invalidEmergencyDeviceFixture, invalidTypeEmergencyDeviceFixture]);
+const allInvalidFixtures = Object.freeze([
+  {},
+  invalidEmergencyDeviceFixture,
+  invalidTypeEmergencyDeviceFixture
+]);
 
 describe('EmergencyDeviceSchema Schema', () => {
   it('tests field as invalid', () => {

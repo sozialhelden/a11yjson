@@ -46,5 +46,5 @@ export * from './transformers/transformKoboToA11y';
 
 export * from './EmergencyDevice';
 export * from './Bed';
-export * from './RoomAccessibility'
-export * from './Level'
+export * from './RoomAccessibility';
+export * from './Level';

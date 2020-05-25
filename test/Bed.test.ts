@@ -9,10 +9,7 @@ export const bedWithOptionalsFixture: Bed = {
   hasAccessibleLightSwitch: true
 };
 
-const allValidFixtures = Object.freeze([
-  bedMinimumFixture,
-  bedWithOptionalsFixture,
-]);
+const allValidFixtures = Object.freeze([bedMinimumFixture, bedWithOptionalsFixture]);
 
 const invalidBedFixture = {
   bar: []

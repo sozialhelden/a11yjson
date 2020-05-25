@@ -2,8 +2,8 @@ import { Room, RoomSchema } from '../src/Room';
 import { FormatVersion } from '../src/Version';
 import { groundIsLevelFixture } from './Ground.test';
 import { mediaWithOptionalsFixture } from './Media.test';
-import { bedWithOptionalsFixture } from './Bed.test'
-import { roomAccessibilityWithOptionalsFixture } from './RoomAccessibilty.test'
+import { bedWithOptionalsFixture } from './Bed.test';
+import { roomAccessibilityWithOptionalsFixture } from './RoomAccessibilty.test';
 export const roomMinimumFixture: Room = {};
 
 const roomWithOptionalsFixture: Room = {

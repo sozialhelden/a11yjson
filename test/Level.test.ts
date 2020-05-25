@@ -1,4 +1,3 @@
-
 import { Level, LevelSchema } from '../src/Level';
 
 export const levelMinimumFixture: Level = {};

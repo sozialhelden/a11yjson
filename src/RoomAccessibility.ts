@@ -70,7 +70,7 @@ export interface RoomAccessibility {
    * `null` indicates there is no media, `undefined` or missing property indicates unknown.
    */
   media?: ArrayLike<Media> | null;
- 
+
   /**
    * `true if the room is on an accessible path or on the accessible route`
    * `false` if not, `undefined` if the condition is unknown or difficult to assess.
