@@ -121,7 +121,7 @@
     "validate-commit-msg": "^2.12.2"
   },
   "dependencies": {
-    "@types/lodash": "^4.14.119",
+    "@types/lodash": "^4.14.150",
     "@types/prop-types": "^15.5.8",
     "gh-pages": "^2.2.0",
     "intersperse": "^1.0.0",
