@@ -134,11 +134,25 @@ function Interface(i: any): string {
 }
 
 function Interfaces() {
-  return '# Interfaces\n\n' + interfaces.map(Interface).join('\n\n');
+  return `# Interfaces - things you can describe with A11yJSON
+
+This is a list of data structures that A11yJSON specifies.
+
+They are meant to be interfaces in the software development sense: This means you can either use
+them as they are, or mix them into your own entity definitions.
+
+  ${interfaces.map(Interface).join('\n\n')}
+`;
 }
 
 function TypeAliases() {
-  return '# Type Aliases\n\n' + typeAliases.map((alias: any) =>
+  return `# Type Aliases
+
+Besides [interfaces](./3-interfaces.md], A11yJSON defines the following bare types.
+
+Some lack proper formatting in the documentation. Fixes in [\`tools/generate-overview.ts\`](https://github.com/sozialhelden/a11yjson/blob/master/tools/generate-overview.ts) are welcome!
+
+` + typeAliases.map((alias: any) =>
 
 `### <a id="${alias.name}">${alias.name}</a>
 
@@ -147,23 +161,6 @@ ${get(alias, 'comment.shortText') || ''}
 Definition: ${Type({ object: alias.type })}
 
 `).join('\n\n');
-}
-
-function MarkdownRoot() {
-  return `
-Version ${packageJSON.version}
-
-## Interfaces
-
-Mix the following interfaces into your own structured data formats:
-
-${Interfaces()}
-
-## Type Aliases
-
-${TypeAliases()}
-
-`;
 }
 
 fs.writeFileSync('docs/3-interfaces.md', Interfaces());

@@ -30,7 +30,7 @@ This is a valid A11yJSON data snippet:
 }
 ```
 
-See the [examples](docs/1-example-data.md) for more complex definitions, or the [list of interfaces](docs/3-interfaces.md) to see the format's extent.
+See the [examples](docs/1-example-data.md) for more complex definitions, or the [list of accessibility criteria](docs/3-interfaces.md) to see the format's extent.
 
 ## Is this for me?
 
