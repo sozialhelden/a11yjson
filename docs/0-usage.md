@@ -13,7 +13,7 @@ A11yJSON's reference provides a documentation of [all available interfaces](./3-
 For each interface `X` you find in the reference, the `a11yjson` npm module provides
 
 1. a TypeScript interface `X` (if you use TypeScript)
-2. a [SimpleSchema](https://www.npmjs.com/package/simpl-schema) instance to validate and sanitize objects to be correct A11yJSON
+2. a [SimpleSchema](https://www.npmjs.com/package/simpl-schema) instance named `XSchema` to validate and sanitize objects to be correct A11yJSON
 
 ## TypeScript usage
 
