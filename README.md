@@ -7,8 +7,6 @@ Status](https://travis-ci.org/sozialhelden/a11yjson.svg?branch=master)](https://
 
 A11yJSON is an open standard based on [GeoJSON (RFC 7946)](https://tools.ietf.org/html/rfc7946). Its goal is to make accessibility information more comfortable to exchange.
 
-## How?
-
 Integrate A11yJSON into data schemas that describe…
 
 - real places
