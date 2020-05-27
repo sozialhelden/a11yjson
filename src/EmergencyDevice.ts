@@ -57,7 +57,7 @@ export const EmergencyDeviceSchema = new SimpleSchema({
     label: t`Visual`,
     optional: true,
     accessibility: {
-      question: t`Is there an visual alarm present?`
+      question: t`Does the emergency device emit a visual signal?`
     }
   },
   isAvailable: {
