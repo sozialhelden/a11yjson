@@ -122,7 +122,7 @@ export const RoomSchema = createSchemaInstance('Room', {
     type: BedSchema,
     optional: true,
     accessibility: {
-      question: t`Describe the room's beds if available.`
+      question: t`Describe the room’s beds if available.`
     }
   },
   roomAccessibility: {
