@@ -20,7 +20,7 @@ export const BedSchema = createSchemaInstance('Bed', {
     type: Boolean,
     optional: true,
     accessibility: {
-      question: t`Is the bed accessible with wheelchair?`
+      question: t`Is the bed wheelchair accessible?`
     }
   },
   hasAccessibleLightSwitch: {
