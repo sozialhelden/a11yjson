@@ -124,7 +124,7 @@ export interface Accessibility {
    */
   hasWheelchairAccessiblePathFromOutside?: boolean;
   /**
-   * Describes the doors of the place
+   * Describes the place’s doors.
    */
   doors?: Door;
   /**
