@@ -19,7 +19,7 @@ export interface EmergencyDevice {
   isAudio?: boolean;
 
   /**
-   * Is the emergency device visual
+  * Does the emergency device emit a visual signal?
    */
   isVisual?: boolean;
 
