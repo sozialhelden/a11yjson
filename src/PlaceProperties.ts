@@ -124,7 +124,7 @@ export const PlacePropertiesSchema = new SimpleSchema({
     type: LevelSchema,
     optional: true,
     accessibility: {
-      question: t`Describe the accessibility of the place's levels.`
+      question: t`Describe the accessibility of the place’s levels.`
     }
   },
   description: {
