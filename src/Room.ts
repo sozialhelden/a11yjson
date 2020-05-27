@@ -112,7 +112,7 @@ export const RoomSchema = createSchemaInstance('Room', {
     accessibility: {
       question: t`Is there any media available?`,
       questionMore: t`Is there more media available?`,
-      description: t`e.g. menus, exhibits or presentations`
+      description: t`e.g. menus, exhibits, or presentations.`
     }
   },
   'media.$': {
