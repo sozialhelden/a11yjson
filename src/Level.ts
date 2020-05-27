@@ -22,7 +22,7 @@ export const LevelSchema = new SimpleSchema({
     label: t`Level Name`,
     optional: true,
     accessibility: {
-      question: t`What the name of the Level`
+      question: t`Optional name of the level (matching level lettering/numbering used inside the structure). Is useful for elevator routing (e.g. “take the elevator to level ‘Rooftop terrace’ or ‘Platforms’ or ‘-1’”).`
     }
   },
   index: {
