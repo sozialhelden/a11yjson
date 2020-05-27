@@ -14,7 +14,7 @@ export interface EmergencyDevice {
   type: 'evacChair' | 'alarm' | 'visualFireAlarm' | 'audibleFireAlarm';
 
   /**
-   * Is the emergency device in audio
+   * Does the emergency device emit an audible signal?
    */
   isAudio?: boolean;
 
