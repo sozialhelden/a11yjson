@@ -133,7 +133,7 @@ export interface Accessibility {
    */
   hasDedicatedAccessibilitySignage?: boolean;
   /**
-   * Describes the emergency devices in the place
+   * Describes emergency-related devices inside or around the place.
    */
   emergencyDevices?: ArrayLike<EmergencyDevice> | null;
   /**
