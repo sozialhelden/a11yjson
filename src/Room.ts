@@ -89,7 +89,7 @@ export const RoomSchema = createSchemaInstance('Room', {
     type: Boolean,
     optional: true,
     accessibility: {
-      question: t`Is the room on a wheelchair accessible path?`
+      question: t`Is the room on a wheelchair accessible path so you can reach it from outside?`
     }
   },
   ground: {
