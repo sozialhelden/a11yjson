@@ -245,7 +245,7 @@ export const AccessibilitySchema = new SimpleSchema({
     accessibility: {
       question: t`Are there any emergency devices?`,
       questionMore: t`Are there more emergency devices?`,
-      description: t`e.g. evacuation chairs, fire alarms, audible alarms`
+      description: t`e.g. escape chairs, fire alarms, audible alarms`
     }
   },
   'emergencyDevices.$': {
