@@ -16,7 +16,7 @@ export interface Bed {
 }
 
 export const BedSchema = createSchemaInstance('Bed', {
-  isAccessibleWithWheelchair: {
+  isWheelchairAccessible: {
     type: Boolean,
     optional: true,
     accessibility: {
