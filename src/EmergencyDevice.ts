@@ -32,7 +32,7 @@ export interface EmergencyDevice {
 export const EmergencyDeviceSchema = new SimpleSchema({
   type: {
     type: String,
-    label: t`EmergencyDevice Type`,
+    label: t`Kind of emergency device`,
     allowedValues: ['evacChair', 'visualFireAlarm', 'audibleFireAlarm', 'alarm'],
     accessibility: {
       question: t`What kind of emergency device is described?`,
