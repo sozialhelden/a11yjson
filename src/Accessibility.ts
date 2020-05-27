@@ -283,7 +283,7 @@ export const AccessibilitySchema = new SimpleSchema({
     type: Boolean,
     optional: true,
     accessibility: {
-      question: t`Is the place on a wheeclchair accessible path?`
+      question: t`Is the described place on a wheelchair accessible path?`
     }
   },
   hasDedicatedAccessibilitySignage: {
