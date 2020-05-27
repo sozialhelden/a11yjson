@@ -49,7 +49,7 @@ export const EmergencyDeviceSchema = new SimpleSchema({
     label: t`Audio`,
     optional: true,
     accessibility: {
-      question: t`Is there an audio alarm present?`
+      question: t`Does the emergency device emit an audible signal?`
     }
   },
   isVisual: {
