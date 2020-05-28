@@ -34,7 +34,7 @@ See the [examples](1-example-data.md) for more complex definitions, or the [list
 
 ## Is this for me?
 
-If you build an app that digitalizes any aspect of real life, *you decide if it adds a new barrier to this real world – or creates a new entrance*. Use this power wisely and ensure that your data design is inclusive.
+If you build an app that digitalizes any aspect of real life, *you decide if it adds a new barrier to this real world – or creates a new entrance*. Use this power wisely and ensure that your data design is inclusive 🦾
 
 A11yJSON can help you if you work with data in…
 
