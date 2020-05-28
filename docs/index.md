@@ -62,4 +62,4 @@ A11yJSON is made by [Sozialhelden e.V.](https://sozialhelden.de), a non-profit t
 
 ## Finally…
 
-If you think that A11yJSON deserves attention, consider to give it a [Star on GitHub](https://github.com/sozialhelden/a11yjson/)! 🙌
+If you think that A11yJSON deserves attention, consider giving it a [Star on GitHub](https://github.com/sozialhelden/a11yjson/), and [sharing it on Twitter](https://twitter.com/share?text=I%20support%20A11yJSON,%20and%20you%20should%20too.%20RT%20to%20spread%20this%20idea!&url=https://a11yjson.org&hashtags=accessibility,a11y,a11yjson,sozialhelden)! 🙌
