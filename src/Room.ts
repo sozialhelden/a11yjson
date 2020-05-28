@@ -16,7 +16,6 @@ export interface Room {
    */
   isAccessibleWithWheelchair?: boolean;
 
-
   /**
    * `true if the room is on an accessible path or on the accessible route`
    * `false` if not, `undefined` if the condition is unknown or difficult to assess.
@@ -37,7 +36,7 @@ export interface Room {
   /**
    * Information if at least one chair is accessible with wheelchair
    */
-  hasAccessibleChairs?: boolean;
+  hasOneOrMoreAccessibleChairs?: boolean;
 
   /**
    * Information about media.
@@ -48,7 +47,7 @@ export interface Room {
   /**
    * Information about the room's beds
    */
-  beds?: ArrayLike<Bed>; 
+  beds?: ArrayLike<Bed>;
   /**
    * Describes the accessibility dedicated to a room.
    */
@@ -72,7 +71,7 @@ export const RoomSchema = createSchemaInstance('Room', {
   //     description: t`Describes the overall accessibility of the room.`
   //   }
   // },
-  hasAccessibleChairs: {
+  hasOneOrMoreAccessibleChairs: {
     type: Boolean,
     optional: true,
     accessibility: {

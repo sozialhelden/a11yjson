@@ -74,7 +74,7 @@ export interface PlaceProperties {
   infoPageUrl?: LocalizedString;
   /**
    * Is there a dedicated website page displaying accessible information?
-   * 
+   *
    * @deprecated
    */
   hasDedicatedAccessibilityInfoPage?: Boolean;

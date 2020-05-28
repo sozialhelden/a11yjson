@@ -10,14 +10,14 @@ const roomWithOptionalsFixture: Room = {
   isAccessibleWithWheelchair: true,
   hasWheelchairAccessiblePathFromOutside: true,
   ground: groundIsLevelFixture,
-  hasAccessibleChairs: false,
+  hasOneOrMoreAccessibleChairs: false,
   name: 'Waiting room',
   media: [mediaWithOptionalsFixture],
   roomAccessibility: roomAccessibilityWithOptionalsFixture
 };
 
 const roomWithBedFixture: Room = {
-  beds: [bedWithOptionalsFixture,bedWithOptionalsFixture]
+  beds: [bedWithOptionalsFixture, bedWithOptionalsFixture]
 };
 
 const allValidFixtures = Object.freeze([

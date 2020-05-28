@@ -21,9 +21,9 @@ export interface Staff {
    */
   hasAccessibilityAssistantForEnquiries?: boolean;
   /**
-   * Which educational credentials have been awarded to the staff? 
-   * This can be a diploma, certification, qualification, or badge.  
-   * 
+   * Which educational credentials have been awarded to the staff?
+   * This can be a diploma, certification, qualification, or badge.
+   *
    * [Prefer using URLs supporting Linked Data.](https://schema.org/EducationalOccupationalCredential)
    */
   educationalCredentialsAwarded?: ArrayLike<String>;
@@ -101,6 +101,6 @@ export const StaffSchema = new SimpleSchema({
   'educationalCredentialsAwarded.$': {
     type: String,
     regEx: SimpleSchema.RegEx.Url,
-    label: t`URL of educational credentials awarded`,
+    label: t`URL of educational credentials awarded`
   }
 });
