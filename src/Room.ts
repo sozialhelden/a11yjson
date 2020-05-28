@@ -72,7 +72,7 @@ export const RoomSchema = createSchemaInstance('Room', {
   //     description: t`Describes the overall accessibility of the room.`
   //   }
   // },
-  hasAccessibleChairs: {
+  hasOneOrMoreAccessibleChairs: {
     type: Boolean,
     optional: true,
     accessibility: {
