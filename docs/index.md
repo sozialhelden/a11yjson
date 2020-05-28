@@ -3,9 +3,7 @@
 <!-- [![Build
 Status](https://travis-ci.org/sozialhelden/a11yjson.svg?branch=master)](https://travis-ci.org/sozialhelden/a11yjson) -->
 
-A11yJSON is an open standard based on [GeoJSON (RFC 7946)](https://tools.ietf.org/html/rfc7946). Its goal is to make accessibility information more comfortable to exchange.
-
-<img alt="A11yJSON icon" src="./images/logo-dark.svg" align="right" />
+<img alt="A11yJSON icon" src="./images/logo-dark.svg" align="right" width="80" height="80" style="margin-left: 10px; margin-bottom: 10px;" /> A11yJSON is an open standard based on [GeoJSON (RFC 7946)](https://tools.ietf.org/html/rfc7946). Its goal is to make accessibility information more comfortable to exchange.
 
 Integrate A11yJSON into data schemas that describe…
 
@@ -34,7 +32,7 @@ See the [examples](1-example-data.md) for more complex definitions, or the [list
 
 ## Is this for me?
 
-If you build an app that digitalizes any aspect of real life, *you decide if it adds a new barrier to this real world – or creates a new entrance*. Use this power wisely and ensure that your data design is inclusive 🦾
+If you build an app that digitalizes any aspect of real life, *you decide if it adds a new barrier to this real world – or creates a new entrance*. Use this power wisely and ensure that your data design is inclusive. 🦾
 
 A11yJSON can help you if you work with data in…
 
@@ -64,4 +62,4 @@ A11yJSON is made by [Sozialhelden e.V.](https://sozialhelden.de), a non-profit t
 
 ## Finally…
 
-If you think that A11yJSON is worth more attention, consider to give it a [Star on GitHub](https://github.com/sozialhelden/a11yjson/)! 🦾
+If you think that A11yJSON deserves attention, consider to give it a [Star on GitHub](https://github.com/sozialhelden/a11yjson/)! 🙌

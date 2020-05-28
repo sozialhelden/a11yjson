@@ -23,7 +23,7 @@ site_name: A11yJSON
 site_url: https://sozialhelden.github.io/a11yjson
 site_author: Sozialhelden e.V.
 site_description: >-
-  A harmonized data schema for describing the accessibility of physical places.
+  A standard to describe the accessibility of the physical world.
 
 # Repository
 repo_name: sozialhelden/a11yjson
@@ -61,7 +61,8 @@ theme:
     logo: logo
   logo: images/logo-white.svg
   favicon: assets/logo-dark.png
-
+  custom_dir: overrides
+  
 # Plugins
 plugins:
   - search
