@@ -73,9 +73,11 @@ export interface PlaceProperties {
    */
   infoPageUrl?: LocalizedString;
   /**
-   * URL of the original data source’s website describing this place.
+   * Is there a dedicated website page displaying accessible information?
+   * 
+   * @deprecated
    */
-  hasInfoPageUrl?: Boolean;
+  hasDedicatedAccessibilityInfoPage?: Boolean;
 
   /**
    * URL of the original data source’s website on a subpage that allows to edit the original data.
@@ -170,11 +172,11 @@ export const PlacePropertiesSchema = new SimpleSchema({
       description: t`Describes the overall accessibility of a place.`
     }
   },
-  hasInfoPageUrl: {
+  hasDedicatedAccessibilityInfoPage: {
     type: Boolean,
     optional: true,
     accessibility: {
-      question: t`Is there an URL of the original data source’s website describing this place`
+      question: t`Is there a dedicated website page displaying accessible information?`
     }
   },
   infoPageUrl: {

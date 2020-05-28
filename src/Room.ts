@@ -48,7 +48,7 @@ export interface Room {
   /**
    * Information about the room's beds
    */
-  beds?: Bed;
+  beds?: ArrayLike<Bed>; 
   /**
    * Describes the accessibility dedicated to a room.
    */
@@ -63,7 +63,7 @@ export const RoomSchema = createSchemaInstance('Room', {
       question: t`Is the room accessible with wheelchair?`
     }
   },
-  // // Adding accessiblity throws test errors without adding test cases ??
+  // // Adding accessibility throws test errors without adding test cases ??
   // accessibility: {
   //   type: AccessibilitySchema,
   //   optional: true,
@@ -118,6 +118,9 @@ export const RoomSchema = createSchemaInstance('Room', {
     accessibility: {
       question: t`Describe the room’s beds if available.`
     }
+  },
+  'beds.$': {
+    type: BedSchema
   },
   roomAccessibility: {
     type: RoomAccessibilitySchema,

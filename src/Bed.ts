@@ -10,7 +10,7 @@ export interface Bed {
    * `true` if the bed is completely accessible while using a wheelchair,
    * `false` if not, `undefined` if the condition is unknown or difficult to assess.
    */
-  isAccessibleWithWheelchair?: boolean;
+  isWheelchairAccessible?: boolean;
   hasEasyAccessFromBothSides?: boolean;
   hasAccessibleLightSwitch?: boolean;
 }

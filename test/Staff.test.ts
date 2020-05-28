@@ -6,14 +6,10 @@ export const staffWithOptionalsFixture: Staff = {
   canSeeVisitorsFromInside: true,
   hasFreeAssistantForVisitors: true,
   hasAccessibilityAssistantForEnquiries: true,
-  hasAccessibilityAwarenessTraining: true
+  educationalCredentialsAwarded: ['https://www.belab.co.nz/be-welcome']
 };
 
-
-const allValidFixtures = Object.freeze([
-  staffMinimumFixture,
-  staffWithOptionalsFixture,
-]);
+const allValidFixtures = Object.freeze([staffMinimumFixture, staffWithOptionalsFixture]);
 
 const invalidStaffFixture = {
   bar: []

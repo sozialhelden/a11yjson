@@ -117,7 +117,7 @@ export interface Accessibility {
   /**
    * Describes the pick up or drop off zone
    */
-  pickUpOrDropOffZone?: Ground | null;
+  groundConditionsAtPickupOrDropoffZone?: Ground | null;
   /**
    * `true if the room is on an accessible path or on the accessible route`
    * `false` if not, `undefined` if the condition is unknown or difficult to assess.
@@ -152,10 +152,6 @@ export interface Accessibility {
    * TODO
    */
   powerOutlets?: [any]; // TODO define type
-  /**
-   * TODO
-   */
-  beds?: [any]; // TODO define type
   /**
    * TODO
    */
@@ -272,7 +268,7 @@ export const AccessibilitySchema = new SimpleSchema({
       question: t`In which condition is the ground you have to traverse to get here?`
     }
   },
-  pickUpOrDropOffZone: {
+  groundConditionsAtPickupOrDropoffZone: {
     type: GroundSchema,
     optional: true,
     accessibility: {
@@ -427,11 +423,6 @@ export const AccessibilitySchema = new SimpleSchema({
     optional: true
   },
   'powerOutlets.$': Object, // TODO define type
-  beds: {
-    type: Array,
-    optional: true
-  },
-  'beds.$': Object, // TODO define type
   wardrobe: {
     type: Object, // TODO define type
     optional: true

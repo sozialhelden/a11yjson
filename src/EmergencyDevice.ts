@@ -22,11 +22,6 @@ export interface EmergencyDevice {
   * Does the emergency device emit a visual signal?
    */
   isVisual?: boolean;
-
-  /**
-   * Is the emergency device visual
-   */
-  isAvailable?: boolean;
 }
 
 export const EmergencyDeviceSchema = new SimpleSchema({
@@ -58,14 +53,6 @@ export const EmergencyDeviceSchema = new SimpleSchema({
     optional: true,
     accessibility: {
       question: t`Does the emergency device emit a visual signal?`
-    }
-  },
-  isAvailable: {
-    type: Boolean,
-    label: t`Available`,
-    optional: true,
-    accessibility: {
-      question: t`Is the emergency device available?`
     }
   }
 });

@@ -17,7 +17,7 @@ const roomWithOptionalsFixture: Room = {
 };
 
 const roomWithBedFixture: Room = {
-  beds: bedWithOptionalsFixture
+  beds: [bedWithOptionalsFixture,bedWithOptionalsFixture]
 };
 
 const allValidFixtures = Object.freeze([

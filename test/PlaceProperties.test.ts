@@ -34,7 +34,7 @@ const placePropertiesWithOptionalsFixture: PlaceProperties = {
   sourceId: 'T8j8nnnqMpbxpLxZu',
   sourceImportId: 'T8j8nnnqMpbxpLxZu',
   accessibility: accessibilityMinimumFixture,
-  hasInfoPageUrl: true,
+  hasDedicatedAccessibilityInfoPage: true,
   levels: levelWithOptionalsFixture
 };
 

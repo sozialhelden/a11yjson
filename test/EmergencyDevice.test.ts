@@ -1,23 +1,20 @@
 import { EmergencyDevice, EmergencyDeviceSchema } from '../src/EmergencyDevice';
 
-export const emergencyDeviceEvacChairFixture: EmergencyDevice = {
-  type: 'evacChair',
-  isAvailable: true
+export const emergencyDeviceEscapeChairFixture: EmergencyDevice = {
+  type: 'escapeChair'
 };
 
 export const emergencyDeviceFireAlarmFixture: EmergencyDevice = {
-  type: 'visualFireAlarm',
-  isAvailable: true
+  type: 'visualFireAlarm'
 };
 
 export const emergencyDeviceGenericAlarmFixture: EmergencyDevice = {
   type: 'alarm',
-  isAudio: true,
-  isAvailable: true
+  isAudio: true
 };
 
 const allValidFixtures = Object.freeze([
-  emergencyDeviceEvacChairFixture,
+  emergencyDeviceEscapeChairFixture,
   emergencyDeviceGenericAlarmFixture,
   emergencyDeviceFireAlarmFixture
 ]);

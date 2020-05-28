@@ -28,12 +28,12 @@ const accessibilityWithNullsFixture: Accessibility = {
   pathways: null,
   parking: null,
   ground: null,
-  pickUpOrDropOffZone: null,
+  groundConditionsAtPickupOrDropoffZone: null,
   hasDedicatedAccessibilitySignage: null
 };
 
 const accessibilityChangesForNewZealandFixture: Accessibility = {
-  pickUpOrDropOffZone: groundIsLevelFixture,
+  groundConditionsAtPickupOrDropoffZone: groundIsLevelFixture,
   hasDedicatedAccessibilitySignage: false,
   hasWheelchairAccessiblePathFromOutside: true,
   emergencyDevices: [emergencyDeviceGenericAlarmFixture],
@@ -68,7 +68,6 @@ const accessibilityWithOptionalsFixture: Accessibility = {
   // switches: [{}, {}],
   // vendingMachines: [{}, {}],
   // powerOutlets: [{}, {}],
-  // beds: [{}, {}],
   wardrobe: {},
   changingRoom: {},
   stage: {},

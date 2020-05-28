@@ -4,7 +4,7 @@ import { FormatVersion } from '../src/Version';
 export const bedMinimumFixture: Bed = {};
 
 export const bedWithOptionalsFixture: Bed = {
-  isAccessibleWithWheelchair: true,
+  isWheelchairAccessible: true,
   hasEasyAccessFromBothSides: true,
   hasAccessibleLightSwitch: true
 };
