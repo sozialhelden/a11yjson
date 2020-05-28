@@ -16,12 +16,6 @@ export interface Room {
    */
   isAccessibleWithWheelchair?: boolean;
 
-  // // // Adding accessibility throws test errors without adding tests ??
-  // /**
-  //  * The accessibility of this place.
-  //  * `null` indicates that this place has no data, `undefined` or missing property indicates unknown.
-  //  */
-  // accessibility?: Accessibility;
 
   /**
    * `true if the room is on an accessible path or on the accessible route`
