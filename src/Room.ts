@@ -41,7 +41,7 @@ export interface Room {
 
   /**
    * Information about media.
-   * `null` indicates there is no media, `undefined` or missing property indicates unknown.
+   * `null` indicates there is no media, `undefined` or missing property indicates that media presence is unknown.
    */
   media?: ArrayLike<Media> | null;
 
