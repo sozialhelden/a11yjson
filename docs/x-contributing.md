@@ -7,6 +7,8 @@ This project is not complete and will never be. We're open to your suggestions a
 matter if you share data yourself or want to consume it (for example, from
 [accessibility.cloud](https://www.accessibility.cloud)). [Say hi via email](mailto:support@accessibility.cloud) or [create an issue](https://github.com/sozialhelden/a11yjson/issues/new)!
 
+Please respect our [Code of Conduct](https://github.com/sozialhelden/a11yjson/blob/master/code-of-conduct.md).
+
 ## Pull requests
 
 Before you make a pull request, please open an issue so we can discuss the contribution you want to

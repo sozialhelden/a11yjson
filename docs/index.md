@@ -61,3 +61,7 @@ The schema definition API is simple to read, so the schema should be portable to
 ## Who is behind A11yJSON?
 
 A11yJSON is made by [Sozialhelden e.V.](https://sozialhelden.de), a non-profit that works on innovative solutions to social issues. It’s based in Berlin, Germany, and known for [Wheelmap.org](https://wheelmap.org), the world’s biggest open online map of accessible places.
+
+## Finally…
+
+If you think that A11yJSON is worth more attention, consider to give it a [Star on GitHub](https://github.com/sozialhelden/a11yjson/)! 🦾
