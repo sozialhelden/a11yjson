@@ -18,6 +18,8 @@ import { LocalizedString, LocalizedStringSchema } from './LocalizedString';
 import { AnimalPolicySchema, AnimalPolicy } from './AnimalPolicy';
 import { SmokingPolicy, smokingPolicies } from './SmokingPolicy';
 import { quantityDefinition, Volume, LengthSchema } from './Units';
+import { Door, DoorSchema } from './Door';
+import { EmergencyDevice, EmergencyDeviceSchema } from './EmergencyDevice';
 
 /**
  * Describes the physical (and sometimes human rated) accessibility of a place.
@@ -68,7 +70,7 @@ export interface Accessibility {
   /**
    * `true` if the venue has induction loops installed in its functional units where this is relevant.
    */
-  hasInductionLoop?: boolean,
+  hasInductionLoop?: boolean;
   /**
    * Object describing the place's ground condition. If there are very different ground conditions, you can create multiple places and nest them.
    */
@@ -109,6 +111,32 @@ export interface Accessibility {
    */
   media?: ArrayLike<Media> | null;
   /**
+   * `true` if the facility provides mobility equipment e.g. foldable wheelchairs or crutches
+   */
+  providesMobilityEquipment?: boolean;
+  /**
+   * Describes the pick up or drop off zone
+   */
+  groundConditionsAtPickupOrDropoffZone?: Ground | null;
+  /**
+   * `true if the room is on an accessible path or on the accessible route`
+   * `false` if not, `undefined` if the condition is unknown or difficult to assess.
+   */
+  hasWheelchairAccessiblePathFromOutside?: boolean;
+  /**
+   * Describes the place’s doors.
+   */
+  doors?: Door;
+  /**
+   * `true if the place provides dedicated signage for way finding`
+   * `false` if not, `undefined` if the condition is unknown or difficult to assess.
+   */
+  hasDedicatedAccessibilitySignage?: boolean;
+  /**
+   * Describes emergency-related devices inside or around the place.
+   */
+  emergencyDevices?: ArrayLike<EmergencyDevice> | null;
+  /**
    * TODO
    */
   sitemap?: any; // TODO define type
@@ -124,10 +152,6 @@ export interface Accessibility {
    * TODO
    */
   powerOutlets?: [any]; // TODO define type
-  /**
-   * TODO
-   */
-  beds?: [any]; // TODO define type
   /**
    * TODO
    */
@@ -210,6 +234,19 @@ export const AccessibilitySchema = new SimpleSchema({
   'media.$': {
     type: MediaSchema
   },
+
+  emergencyDevices: {
+    type: Array,
+    optional: true,
+    accessibility: {
+      question: t`Are there any emergency devices?`,
+      questionMore: t`Are there more emergency devices?`,
+      description: t`e.g. escape chairs, fire alarms, audible alarms`
+    }
+  },
+  'emergencyDevices.$': {
+    type: EmergencyDeviceSchema
+  },
   payment: {
     type: PaymentSchema,
     optional: true,
@@ -229,6 +266,27 @@ export const AccessibilitySchema = new SimpleSchema({
     optional: true,
     accessibility: {
       question: t`In which condition is the ground you have to traverse to get here?`
+    }
+  },
+  groundConditionsAtPickupOrDropoffZone: {
+    type: GroundSchema,
+    optional: true,
+    accessibility: {
+      question: t`In which condition is the ground around the pick or drop off zone?`
+    }
+  },
+  hasWheelchairAccessiblePathFromOutside: {
+    type: Boolean,
+    optional: true,
+    accessibility: {
+      question: t`Is the described place on a wheelchair accessible path?`
+    }
+  },
+  hasDedicatedAccessibilitySignage: {
+    type: Boolean,
+    optional: true,
+    accessibility: {
+      question: t`Is there dedicated signage for way finding?`
     }
   },
   ratingSpacious: {
@@ -326,6 +384,21 @@ export const AccessibilitySchema = new SimpleSchema({
       ]
     }
   },
+  providesMobilityEquipment: {
+    type: Boolean,
+    optional: true,
+    accessibility: {
+      question: t`Does the place provide mobility equipment, e.g. foldable wheelchairs or crutches?`
+    }
+  },
+  doors: {
+    type: DoorSchema,
+    optional: true,
+    label: t`Door`,
+    accessibility: {
+      questionBlockBegin: t`Would you like soem general information about the doors in the place?`
+    }
+  },
   sitemap: {
     type: Object, // TODO define type
     optional: true
@@ -350,11 +423,6 @@ export const AccessibilitySchema = new SimpleSchema({
     optional: true
   },
   'powerOutlets.$': Object, // TODO define type
-  beds: {
-    type: Array,
-    optional: true
-  },
-  'beds.$': Object, // TODO define type
   wardrobe: {
     type: Object, // TODO define type
     optional: true

@@ -20,7 +20,7 @@ export interface Media {
   /**
    * Type of the media unit
    */
-  type: 'document' | 'menu' | 'guide' | 'presentation' | 'exhibit' | 'movie' | 'play' | 'screen';
+  type: 'document' | 'menu' | 'guide' | 'presentation' | 'exhibit' | 'movie' | 'play' | 'screen' | 'in-room-compendium';
 
   /**
    * Name of the media unit (relevant if there are multiple units of the same kind)
@@ -93,7 +93,8 @@ export const MediaSchema = new SimpleSchema({
       'exhibit',
       'movie',
       'play',
-      'screen'
+      'screen',
+      'in-room-compendium'
     ],
     accessibility: {
       question: t`What kind of media is described?`,
@@ -104,7 +105,8 @@ export const MediaSchema = new SimpleSchema({
         { value: 'presentation', label: t`presentation` },
         { value: 'exhibit', label: t`exhibit` },
         { value: 'movie', label: t`movie` },
-        { value: 'screen', label: t`screen` }
+        { value: 'screen', label: t`screen` },
+        { value: 'in-room-compendium', label: t`in-room-compendium` }
       ]
     }
   },

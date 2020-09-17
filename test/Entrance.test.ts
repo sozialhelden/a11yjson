@@ -14,7 +14,8 @@ const entranceWithOptionalsFixture: Entrance = {
   stairs: stairsMinimumFixture,
   door: doorMinimumFixture,
   elevatorEquipmentId: 'idHere',
-  intercomEquipmentId: 'idHere'
+  intercomEquipmentId: 'idHere',
+  isOnWheelchairAccessiblePath: true
 };
 
 const allValidFixtures = Object.freeze([entranceMinimumFixture, entranceWithOptionalsFixture]);

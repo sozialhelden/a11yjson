@@ -7,6 +7,8 @@ import { Accessibility, AccessibilitySchema } from './Accessibility';
 import { ExternalId, ExternalIdSchema } from './ExternalId';
 import { Address, AddressSchema } from './Address';
 import { LocalizedStringSchema, LocalizedString } from './LocalizedString';
+import { RoomSchema, Room } from './Room';
+import { Level, LevelSchema } from './Level';
 
 export interface PlaceProperties {
   // properties
@@ -70,6 +72,12 @@ export interface PlaceProperties {
    * URL of the original data source’s website describing this place.
    */
   infoPageUrl?: LocalizedString;
+  /**
+   * Is there a dedicated website page displaying accessible information?
+   *
+   * @deprecated
+   */
+  hasDedicatedAccessibilityInfoPage?: Boolean;
 
   /**
    * URL of the original data source’s website on a subpage that allows to edit the original data.
@@ -80,6 +88,14 @@ export interface PlaceProperties {
    * URL of the place’s own website.
    */
   placeWebsiteUrl?: LocalizedString;
+  /**
+   * Information about the place’s rooms.
+   */
+  rooms?: Room;
+  /**
+   * Information about the accessibility of the interior levels
+   */
+  levels?: Level;
 }
 
 export const PlacePropertiesSchema = new SimpleSchema({
@@ -104,6 +120,13 @@ export const PlacePropertiesSchema = new SimpleSchema({
     accessibility: {
       question: t`Would you like to add the address?`,
       componentHint: 'Address'
+    }
+  },
+  levels: {
+    type: LevelSchema,
+    optional: true,
+    accessibility: {
+      question: t`Describe the accessibility of the place’s levels.`
     }
   },
   description: {
@@ -133,12 +156,27 @@ export const PlacePropertiesSchema = new SimpleSchema({
       example: t`e.g. accessibility@example.com`
     }
   },
+  rooms: {
+    type: RoomSchema,
+    optional: true,
+    accessibility: {
+      question: t`How would you describe the rooms inside this place?`,
+      description: t`Information about the rooms inside the place`
+    }
+  },
   accessibility: {
     type: AccessibilitySchema,
     optional: true,
     accessibility: {
       question: t`Okay, now let\`s map the accessibility.`,
       description: t`Describes the overall accessibility of a place.`
+    }
+  },
+  hasDedicatedAccessibilityInfoPage: {
+    type: Boolean,
+    optional: true,
+    accessibility: {
+      question: t`Is there a dedicated website page displaying accessible information?`
     }
   },
   infoPageUrl: {

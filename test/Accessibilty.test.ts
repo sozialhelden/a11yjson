@@ -10,6 +10,10 @@ import { tablesMinimumFixture } from './Tables.test';
 import { pathwaysMinimumFixture } from './Pathways.test';
 import { parkingMinimumFixture } from './Parking.test';
 import { groundMinimumFixture } from './Ground.test';
+import { groundIsLevelFixture } from './Ground.test';
+import { doorWithOptionalsFixture } from './Door.test';
+import { emergencyDeviceGenericAlarmFixture } from './EmergencyDevice.test';
+import { staffWithOptionalsFixture } from './Staff.test';
 
 export const accessibilityMinimumFixture: Accessibility = {};
 
@@ -18,11 +22,24 @@ const accessibilityWithNullsFixture: Accessibility = {
   restrooms: null,
   staff: null,
   media: null,
+  emergencyDevices: null,
   payment: null,
   tables: null,
   pathways: null,
   parking: null,
-  ground: null
+  ground: null,
+  groundConditionsAtPickupOrDropoffZone: null,
+  hasDedicatedAccessibilitySignage: null
+};
+
+const accessibilityChangesForNewZealandFixture: Accessibility = {
+  groundConditionsAtPickupOrDropoffZone: groundIsLevelFixture,
+  hasDedicatedAccessibilitySignage: false,
+  hasWheelchairAccessiblePathFromOutside: true,
+  emergencyDevices: [emergencyDeviceGenericAlarmFixture],
+  providesMobilityEquipment: true,
+  doors: doorWithOptionalsFixture,
+  staff: staffWithOptionalsFixture
 };
 
 const accessibilityWithOptionalsFixture: Accessibility = {
@@ -51,7 +68,6 @@ const accessibilityWithOptionalsFixture: Accessibility = {
   // switches: [{}, {}],
   // vendingMachines: [{}, {}],
   // powerOutlets: [{}, {}],
-  // beds: [{}, {}],
   wardrobe: {},
   changingRoom: {},
   stage: {},
@@ -65,7 +81,8 @@ const accessibilityWithOptionalsFixture: Accessibility = {
 const allValidFixtures = Object.freeze([
   accessibilityMinimumFixture,
   accessibilityWithNullsFixture,
-  accessibilityWithOptionalsFixture
+  accessibilityWithOptionalsFixture,
+  accessibilityChangesForNewZealandFixture
 ]);
 
 const invalidAccessibilityFixture = {

@@ -17,6 +17,17 @@ export interface Staff {
    */
   canSeeVisitorsFromInside?: boolean;
   /**
+   * `true` if staff is available upon request
+   */
+  hasAccessibilityAssistantForEnquiries?: boolean;
+  /**
+   * Which educational credentials have been awarded to the staff?
+   * This can be a diploma, certification, qualification, or badge.
+   *
+   * [Prefer using URLs supporting Linked Data.](https://schema.org/EducationalOccupationalCredential)
+   */
+  educationalCredentialsAwarded?: ArrayLike<String>;
+  /**
    * Languages that the staff speaks, including sign language variants.
    */
   spokenLanguages?: ArrayLike<IetfLanguageTagOrSignLanguageCode>;
@@ -49,6 +60,15 @@ export const StaffSchema = new SimpleSchema({
     },
     optional: true
   },
+  hasAccessibilityAssistantForEnquiries: {
+    // TODO clarify with be.accessible what access enquiries are
+    type: Boolean,
+    label: t`assistant for access enquiries`,
+    accessibility: {
+      question: t`Can the staff assist with access enquiries?`
+    },
+    optional: true
+  },
   hasFreeAssistantForVisitors: {
     type: Boolean,
     label: t`Visitor Assistant`,
@@ -69,5 +89,18 @@ export const StaffSchema = new SimpleSchema({
     type: String,
     label: t`Language`,
     allowedValues: ietfLanguageTagsAndSignLanguageCodes
+  },
+  educationalCredentialsAwarded: {
+    type: Array,
+    label: t`URLs of educational credentials awarded`,
+    optional: true,
+    accessibility: {
+      question: t`Which educational credentials have been awarded to the staff? This can be a diploma, certification, qualification, or badge.`
+    }
+  },
+  'educationalCredentialsAwarded.$': {
+    type: String,
+    regEx: SimpleSchema.RegEx.Url,
+    label: t`URL of educational credentials awarded`
   }
 });

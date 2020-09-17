@@ -54,6 +54,11 @@ export interface Entrance {
    * reference to the equipment id of the intercom of this entrance (on accessibility.cloud)
    */
   intercomEquipmentId?: string;
+  /**
+   * `true` if the entrance is on a wheelchair accessible path
+   * `false` if not, `undefined` if unknown. Of interest if, for example, the main entrance is not wheelchair accessible.
+   */
+  isOnWheelchairAccessiblePath?: boolean;
 }
 
 export const EntranceSchema = new SimpleSchema({
@@ -115,6 +120,13 @@ export const EntranceSchema = new SimpleSchema({
     label: t`Door`,
     accessibility: {
       questionBlockBegin: t`Would you like to add information about the door at the entrance?`
+    }
+  },
+  isOnWheelchairAccessiblePath: {
+    type: Boolean,
+    optional: true,
+    accessibility: {
+      question: t`Is the entrance along a path which fully accessible via wheelchair.`
     }
   },
   elevatorEquipmentId: {

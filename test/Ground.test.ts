@@ -2,6 +2,9 @@ import { Ground, GroundSchema } from '../src/Ground';
 
 export const groundMinimumFixture: Ground = {};
 
+export const groundIsLevelFixture: Ground = {
+  isLevel: true
+};
 const sidewalkWithOptionalsFixture: Ground = {
   sidewalkConditions: 0.4,
   isLevel: true,
@@ -11,7 +14,11 @@ const sidewalkWithOptionalsFixture: Ground = {
   turningSpace: '<150cm'
 };
 
-const allValidFixtures = Object.freeze([groundMinimumFixture, sidewalkWithOptionalsFixture]);
+const allValidFixtures = Object.freeze([
+  groundMinimumFixture,
+  sidewalkWithOptionalsFixture,
+  groundIsLevelFixture
+]);
 
 const invalidGroundFixture = {
   bar: []

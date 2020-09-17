@@ -2,9 +2,11 @@ import { Staff, StaffSchema } from '../src/Staff';
 
 export const staffMinimumFixture: Staff = {};
 
-const staffWithOptionalsFixture: Staff = {
+export const staffWithOptionalsFixture: Staff = {
   canSeeVisitorsFromInside: true,
-  hasFreeAssistantForVisitors: true
+  hasFreeAssistantForVisitors: true,
+  hasAccessibilityAssistantForEnquiries: true,
+  educationalCredentialsAwarded: ['https://www.belab.co.nz/be-welcome']
 };
 
 const allValidFixtures = Object.freeze([staffMinimumFixture, staffWithOptionalsFixture]);
