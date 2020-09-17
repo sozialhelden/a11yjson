@@ -30,9 +30,17 @@ export const OtherUnitKind = 'other';
  */
 export const validateUnit = function(kind: string): ValidationFunction {
   return function(this: ValidationFunctionSelf<string>) {
-    const qty = Qty.parse(this.value);
-    if (!qty || qty.scalar !== 1 || qty.kind() !== kind) {
-      return 'invalid_unit';
+    try {
+      const qty = new Qty(this.value);
+      if (!qty || qty.scalar !== 1 || qty.kind() !== kind) {
+        return 'invalid_unit';
+      }
+    } catch (e) {
+      if (e instanceof Qty.Error) {
+        return 'invalid_unit';
+      } else {
+        throw e;
+      }
     }
 
     return undefined;
