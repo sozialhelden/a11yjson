@@ -133,7 +133,7 @@
     "markdown-table": "^2.0.0",
     "marked": "^0.7.0",
     "react-style-tag": "^2.0.1",
-    "simpl-schema": "^1.7.0",
+    "simpl-schema": "^1.10.2",
     "ttag": "^1.5.1",
     "yarn": "^1.22.4"
   },
