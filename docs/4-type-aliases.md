@@ -1,5 +1,9 @@
 # Type Aliases
 
+Besides [interfaces](./3-interfaces.md], A11yJSON defines the following bare types.
+
+Some lack proper formatting in the documentation. Fixes in [`tools/generate-overview.ts`](https://github.com/sozialhelden/a11yjson/blob/master/tools/generate-overview.ts) are welcome!
+
 ### <a id="A11yRating">A11yRating</a>
 
 
