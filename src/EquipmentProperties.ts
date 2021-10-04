@@ -420,44 +420,65 @@ export const EquipmentPropertiesSchema = new SimpleSchema({
   },
   hasRaisedText: {
     type: Boolean,
-    defaultValue: false,
-    optional: true
+    optional: true,
   },
   hasBrailleText: {
     type: Boolean,
-    defaultValue: false,
-    optional: true
+    optional: true,
   },
   hasSpeech: {
     type: Boolean,
-    defaultValue: false,
-    optional: true
+    optional: true,
   },
   isHighContrast: {
     type: Boolean,
-    defaultValue: false,
-    optional: true
+    optional: true,
   },
   hasLargePrint: {
     type: Boolean,
-    defaultValue: false,
-    optional: true
+    optional: true,
   },
   isVoiceActivated: {
     type: Boolean,
-    defaultValue: false,
-    optional: true
+    optional: true,
   },
   hasHeadPhoneJack: {
     type: Boolean,
-    defaultValue: false,
-    optional: true
+    optional: true,
   },
   isEasyToUnderstand: {
     type: Boolean,
-    defaultValue: false,
-    optional: true
+    optional: true,
   },
+  needsTouchScreenInput: {
+    type: Boolean,
+    optional: true,
+  },
+  hasTouchScreenInput: {
+    type: Boolean,
+    optional: true,
+  },
+  needsQRCodeScan: {
+    type: Boolean,
+    optional: true,
+  },
+  hasQRCode: {
+    type: Boolean,
+    optional: true,
+  },
+  needsHapticInput: {
+    type: Boolean,
+    optional: true,      
+  },
+  hasHapticInput: {
+    type: Boolean,
+    optional: true,      
+  },
+  needsVisualRecognition: {
+    type: Boolean,
+    optional: true,      
+  },
+
   isIndoors: {
     type: Boolean,
     optional: true,
