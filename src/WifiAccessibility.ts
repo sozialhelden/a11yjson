@@ -1,7 +1,6 @@
 import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
-import './SimpleSchemaExtensions';
 import { LocalizedString, LocalizedStringSchema } from './LocalizedString';
 import { createSchemaInstance } from './SimpleSchemaExtensions';
 
