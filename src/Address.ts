@@ -18,6 +18,10 @@ export interface StructuredAddress {
    */
   room?: LocalizedString;
   /**
+   * Room number
+   */
+  roomNumber?: LocalizedString;
+  /**
    * Contains level of place inside of a venue
    */
   level?: LocalizedString;
@@ -96,6 +100,16 @@ export const StructuredAddressSchema = new SimpleSchema({
       description: t`Room name`,
       question: t`What is the name of the room?`,
       example: t`e.g. meeting room 'Rome'`
+    },
+    optional: true
+  },
+  roomNumber: {
+    label: t`Room number`,
+    type: LocalizedStringSchema,
+    accessibility: {
+      description: t`Room number`,
+      question: t`Does the room have a unique number?`,
+      example: t`e.g. 'A204'`
     },
     optional: true
   },

@@ -143,6 +143,7 @@ export const WheelchairParkingSchema = new SimpleSchema({
 });
 
 export interface Parking {
+  count?: number;
   forWheelchairUsers?: WheelchairParking | null;
 }
 
@@ -153,5 +154,13 @@ export const ParkingSchema = new SimpleSchema({
     accessibility: {
       question: t`Is there parking for wheelchair users?`
     }
+  },
+  count: {
+    type: Number,
+    optional: true,
+    accessibility: {
+      question: t`How many parking spaces are there?`
+    },
+    min: 0
   }
 });
