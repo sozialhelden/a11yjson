@@ -1085,9 +1085,9 @@ acorn-walk@^6.0.1:
   integrity sha512-7evsyfH1cLOCdAzZAd43Cic04yKydNx0cF+7tiA19p1XnLLPU4dpCQOqpjqwokFe//vS0QqfqqjCS2JkiIs0cA==
 
 acorn@^6.0.1:
-  version "6.3.0"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.3.0.tgz#0087509119ffa4fc0a0041d1e93a417e68cb856e"
-  integrity sha512-/czfa8BwS88b9gWQVhc8eknunSA2DoJpJyTQkhheIf5E48u1N0R4q/YxxsAeqRrmK9TQ/uYfgLDfZo91UlANIA==
+  version "6.4.2"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.4.2.tgz#35866fd710528e92de10cf06016498e47e39e1e6"
+  integrity sha512-XtGIhXwF8YM8bJhGxG5kXgjkEuNGLTkoYqVE+KMR+aspr4KGYmKYg7yUe3KghyQ9yheNwLnjmzh/7+gfDBmHCQ==
 
 acorn@^7.1.0:
   version "7.1.0"
@@ -6193,10 +6193,15 @@ lodash@4.17.14:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.14.tgz#9ce487ae66c96254fe20b599f21b6816028078ba"
   integrity sha512-mmKYbW3GLuJeX+iGP+Y7Gp1AiGHGbXHCOh/jZmrawMmsE7MS4znI3RL2FsjbqOyMayHInjOeykW7PEajUk1/xw==
 
-lodash@4.17.15, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.4:
+lodash@4.17.15, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.4:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
   integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+
+lodash@^4.17.21:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 log-driver@^1.2.7:
   version "1.2.7"
@@ -6397,6 +6402,11 @@ marked@^0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.7.0.tgz#b64201f051d271b1edc10a04d1ae9b74bb8e5c0e"
   integrity sha512-c+yYdCZJQrsRjTPhUx7VKkApw9bwDkNbHUKo1ovgcfDjb2kc8rLuRbIFyXL5WOEUwzSSKo3IXpph2K6DqB/KZg==
+
+marked@^1.1.1:
+  version "1.2.9"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-1.2.9.tgz#53786f8b05d4c01a2a5a76b7d1ec9943d29d72dc"
+  integrity sha512-H8lIX2SvyitGX+TRdtS06m1jHMijKN/XjfH6Ooii9fvxMlh8QdqBfBDkGUpMWH2kQNrtixjzYUa3SH8ROTgRRw==
 
 meant@~1.0.1:
   version "1.0.1"
@@ -7606,10 +7616,10 @@ plural-forms@0.3.3:
   resolved "https://registry.yarnpkg.com/plural-forms/-/plural-forms-0.3.3.tgz#22d9cddf3fe50d7f6930e3aa1eea339bdc27e152"
   integrity sha512-9CEFxpHa1KrtZFoa0FybZcxyDx1ceWelowtlSWtFsmRzBgQ9Dj47YmyY6cynPAJUoA/kLm2B7VYi0CfNIDZnCw==
 
-plural-forms@^0.3.10:
-  version "0.3.10"
-  resolved "https://registry.yarnpkg.com/plural-forms/-/plural-forms-0.3.10.tgz#b2c04fa3f49382221b75442ff743fc97cec99bad"
-  integrity sha512-WrBD4Ojmt55Fmk6WpggelL5Y0VkPglgv6ddUEtt7gVN1EvZ6MWofpx1P92bRuYqqbne3C78SMF40mBrxtVnvmg==
+plural-forms@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/plural-forms/-/plural-forms-0.5.3.tgz#63c97b0f3be6ead92276d6f6ae81996508997911"
+  integrity sha512-t/hkjsTeDwaK9n/z6tUiSHySTC8sPnTiS5YF3Y5p4L+eomzXh7O0vEemkjwb68/82w0Rjw4uED3X84X7vXf9lg==
 
 pn@^1.1.0:
   version "1.1.0"
@@ -8667,10 +8677,10 @@ signale@^1.2.1:
     figures "^2.0.0"
     pkg-conf "^2.1.0"
 
-simpl-schema@^1.7.0:
-  version "1.10.2"
-  resolved "https://registry.yarnpkg.com/simpl-schema/-/simpl-schema-1.10.2.tgz#5a2628a3936105b54c13f9245acbb6c1704a8df2"
-  integrity sha512-s53RTUqy4sLR9ah8Jqgs2yqyQeImYDPWGqBxcboJRj4FN3Z022r1TEeYkN0k6sxVtE1E+dXk0aFEbRnEiFHB8w==
+simpl-schema@^1.10.2:
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/simpl-schema/-/simpl-schema-1.12.0.tgz#299ff4446c7fce59678be7e55b5ab0db7566a343"
+  integrity sha512-lzXC3L8jJbPhNXGR3cjlyIauqqrC5WUJS4O34Ym/wLIvb8K3ZieK+1OfTzs4mBpDc3Y8u53gQFAr1X37DmTcEg==
   dependencies:
     clone "^2.1.2"
     message-box "^0.2.7"
@@ -9525,13 +9535,13 @@ tsutils@^3.0.0:
   dependencies:
     tslib "^1.8.1"
 
-ttag@^1.5.1:
-  version "1.7.20"
-  resolved "https://registry.yarnpkg.com/ttag/-/ttag-1.7.20.tgz#979219a81385a511f202e24add5659eef63fc8fd"
-  integrity sha512-FEHXHxplu1WLetyve3njHVU9LbMnr7yJo3DDPNOJ8eh7M64FbnkbUzhYR1yV1QSyBx8gw9yi/XKEkUD92aF5Ew==
+ttag@^1.7.22:
+  version "1.7.24"
+  resolved "https://registry.yarnpkg.com/ttag/-/ttag-1.7.24.tgz#3da0eb52ed3a3cef0cf94328d07b2ba570906788"
+  integrity sha512-8H/0dS6VYqBXzVBCo8f4s48TMIkC9UrALfMkXsaNWqKo3P3UQzfE1KZXlBkrhZho2A1iJuxUgGzHSgQvkZwGmg==
   dependencies:
     dedent "^0.7.0"
-    plural-forms "^0.3.10"
+    plural-forms "^0.5.3"
 
 tunnel-agent@^0.6.0:
   version "0.6.0"
