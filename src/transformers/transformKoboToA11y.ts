@@ -319,17 +319,17 @@ export const transformKoboToA11y = (data: KoboResult) => {
       'inside/toilet/has_arm_rests',
       ['left_and_right', 'right', 'left']
     ),
-    'properties.accessibility.restrooms.0.toilet.GrabBars': parseIsAnyOfEntry(
+    'properties.accessibility.restrooms.0.toilet.grabBars': parseIsAnyOfEntry(
       data,
       'inside/toilet/has_arm_rests',
       ['left_and_right', 'right', 'left']
     ),
-    'properties.accessibility.restrooms.0.toilet.GrabBars.onUsersLeftSide': parseIsAnyOf(
+    'properties.accessibility.restrooms.0.toilet.grabBars.onUsersLeftSide': parseIsAnyOf(
       data,
       'inside/toilet/has_arm_rests',
       ['left_and_right', 'left']
     ),
-    'properties.accessibility.restrooms.0.toilet.GrabBars.onUsersRightSide': parseIsAnyOf(
+    'properties.accessibility.restrooms.0.toilet.grabBars.onUsersRightSide': parseIsAnyOf(
       data,
       'inside/toilet/has_arm_rests',
       ['left_and_right', 'right']
