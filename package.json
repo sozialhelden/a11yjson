@@ -1,6 +1,6 @@
 {
   "name": "@sozialhelden/a11yjson",
-  "version": "9.0.1",
+  "version": "10.0.0",
   "description": "A harmonized data schema for describing the accessibility of physical places",
   "keywords": [],
   "main": "dist/index.umd.js",
@@ -21,12 +21,14 @@
   "scripts": {
     "lint": "tslint -t codeFrame -e 'src/typings/*' 'src/**/*.ts' 'test/**/*.ts'",
     "prebuild": "rimraf dist",
-    "build": "tsc && rollup -c rollup.config.ts && rimraf compiled && typedoc src typings --options typedoc.json --out dist/docs/typescript --json dist/typedoc-output.json && npx ts-node ./tools/generate-overview.tsx > dist/docs/index.html && cp logo.svg dist/docs/ && cp logo.svg dist/docs/typescript/",
+    "build": "tsc && rollup -c rollup.config.ts && rimraf compiled && typedoc src typings --options typedoc.json --out dist/docs/typescript --json dist/typedoc-output.json && npx ts-node ./tools/generate-overview.ts",
     "start": "tsc -w & rollup -c rollup.config.ts -w",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:prod": "yarn run lint && yarn run test -- --coverage --no-cache",
-    "deploy-docs": "ts-node tools/gh-pages-publish",
+    "docs:install": "docker pull squidfunk/mkdocs-material",
+    "docs:deploy": "(docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material build) && gh-pages --dist site",
+    "docs:live": "docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material",
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
     "commit": "git-cz",
     "semantic-release": "semantic-release pre && yarn publish && semantic-release post",
@@ -94,6 +96,7 @@
     "coveralls": "^3.0.0",
     "cross-env": "^5.1.1",
     "cz-conventional-changelog": "^2.1.0",
+    "gh-pages": "^2.2.0",
     "husky": "^1.2.1",
     "jest": "^25.2.6",
     "jest-cli": "^25.0.0",
@@ -121,17 +124,18 @@
     "validate-commit-msg": "^2.12.2"
   },
   "dependencies": {
-    "@types/lodash": "^4.14.119",
+    "@types/lodash": "^4.14.150",
     "@types/prop-types": "^15.5.8",
     "intersperse": "^1.0.0",
     "js-quantities": "^1.7.4",
     "kind-of": "^6.0.3",
-    "lodash": "^4.17.11",
     "marked": "^0.8.2",
+    "lodash": "^4.17.16",
+    "markdown-table": "^2.0.0",
     "react-style-tag": "^2.0.1",
-    "simpl-schema": "^1.5.0",
+    "simpl-schema": "^1.7.0",
     "ttag": "^1.5.1",
-    "yarn": "^1.13.0"
+    "yarn": "^1.22.4"
   },
   "husky": {
     "hooks": {

@@ -41,8 +41,8 @@ describe('Kobo2A11yJson', () => {
               spaceOnUsersLeftSide: { unit: 'cm', value: 260.4 },
               spaceOnUsersRightSide: { unit: 'cm', value: 100 },
               spaceInFront: { unit: 'cm', value: 100 },
-              hasFoldingHandles: false,
-              foldingHandles: {
+              hasGrabBars: false,
+              grabBars: {
                 onUsersLeftSide: false,
                 onUsersRightSide: false
               }

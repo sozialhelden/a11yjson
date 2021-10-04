@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+
+<meta property="og:url" content="{{ page.canonical_url }}">
+{% if page and page.meta and page.meta.title %}
+  <meta property="og:title" content="{{ page.meta.title }}">
+{% elif page and page.title and not page.is_homepage %}
+  <meta property="og:title" content="{{ page.title }} - {{ config.site_name }}">
+{% else %}
+  <meta property="og:title" content="{{ config.site_name }}">
+{% endif %}
+<meta property="og:description" content="{{ config.site_description }}">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://repository-images.githubusercontent.com/111114163/180dae00-0b8f-11ea-9470-49871d14b7b9">
+<meta property="og:image:alt" content="Logo of A11yJSON, referencing its creator Sozialhelden e.V.">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="640">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@sozialhelden">
+<meta name="twitter:creator" content="@sozialhelden">
+{% if page and page.meta and page.meta.title %}
+  <meta property="twitter:title" content="{{ page.meta.title }}">
+{% elif page and page.title and not page.is_homepage %}
+  <meta property="twitter:title" content="{{ page.title }} - {{ config.site_name }}">
+{% else %}
+  <meta property="twitter:title" content="{{ config.site_name }}">
+{% endif %}
+<meta name="twitter:description" content="{{ config.site_description }}">
+<meta name="twitter:image" content="https://repository-images.githubusercontent.com/111114163/180dae00-0b8f-11ea-9470-49871d14b7b9">
+<meta name="twitter:image:alt" content="Logo of A11yJSON, referencing its creator Sozialhelden e.V.">
+
+<link href="https://github.com/sozialhelden/a11yjson/commits/master.atom" rel="alternate" title="Recent Commits to a11yjson:master" type="application/atom+xml">
+<link href="https://github.com/sozialhelden/a11yjson" rel="alternate" title="A11yJSON GitHub repository" type="text/html">
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "url": "https://a11yjson.org",
+    "@type": "WebPage",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".md-content__inner"]
+      },
+    "mainEntity": {
+      "@type": "SoftwareSourceCode",
+      "url": "https://a11yjson.org",
+      "codeRepository": "https://github.com/sozialhelden/a11yjson",
+      "programmingLanguage": "TypeScript",
+      "creator": {
+        "@context": "http://www.schema.org",
+        "@type": "NGO",
+        "name": "SOZIALHELDEN e.V.",
+        "url": "https://sozialhelden.de",
+        "logo": "https://en.wikipedia.org/wiki/Sozialhelden#/media/File:Sozialhelden_logo.svg",
+        "description": "Sozialhelden e.V. is a registered nonprofit organisation based in Berlin, Germany. Its projects engage people in activities promoting social justice. The organisation is funded primarily through donations and grants and has been awarded multiple national and international prizes for its projects.",
+        "contactPoint" : [{
+          "@type" : "ContactPoint",
+          "telephone" : "+49 (0) 30 24301 1912",
+          "email" : "andi@sozialhelden.de",
+          "contactType" : "press inquiries",
+          "availableLanguage" : ["English","German"]
+        }],
+      
+        "location": {
+          "@type": "Place",
+          "address": [
+            {
+              "@type": "PostalAddress",
+              "streetAddress": "c/o ImmobilienScout24, Andreasstr. 10",
+              "addressLocality": "Berlin",
+              "addressRegion": "Berlin",
+              "postalCode": "10243",
+              "addressCountry": "Germany"
+            }
+          ],
+          "geo":             {
+              "@type": "GeoCoordinates",
+              "latitude": " 52.5119111",
+              "longitude": "13.4311331"
+            },
+          "hasMap": "https://www.openstreetmap.org/node/4544823443"
+        },
+        "sameAs": [
+          "https://facebook.com/SOZIALHELDEN",
+          "http://twitter.com/SOZIALHELDEN",
+          "http://instagram.com/SOZIALHELDEN",
+          "http://www.linkedin.com/company/sozialhelden",
+          "https://en.wikipedia.org/wiki/Sozialhelden",
+          "https://www.wikidata.org/wiki/Q2305714",
+          "http://dbpedia.org/resource/Sozialhelden"
+        ],
+        "diversityPolicy": "https://sozialhelden.de/transparenz/",
+        "memberOf": [
+          {
+            "@type": "ProgramMembership",
+            "hostingOrganization": {
+              "@type": "Organization",
+              "url": "https://www.transparency.de"
+            },
+            "programName": "Initiative Transparente Zivilgesellschaft",
+            "url": "https://www.transparency.de/mitmachen/initiative-transparente-zivilgesellschaft/"
+          }
+        ],
+        "award": [
+          "https://sozialhelden.de/blog/neon-wettbewerb-2005-was-fehlt-in-der-welt/",
+          "https://sozialhelden.de/blog/startsocial-2008/",
+          "https://sozialhelden.de/blog/leuchtturmprojekt-2008/",
+          "https://sozialhelden.de/blog/karmakonsum-grunder-award-2009/",
+          "https://sozialhelden.de/blog/deutscher-engagementpreis-2009/",
+          "https://sozialhelden.de/blog/ashoka-fellow-2010/",
+          "https://sozialhelden.de/blog/deutscher-burgerpreis-2010/",
+          "https://sozialhelden.de/blog/inca-award-2010/",
+          "https://sozialhelden.de/blog/land-der-ideen-ausgewahlter-ort-2011/",
+          "https://sozialhelden.de/blog/sozialhelden-gewinnen-deutschen-mobilitaetspreis/",
+          "https://sozialhelden.de/blog/vodafone-smart-accessibility-awards/",
+          "https://sozialhelden.de/blog/deutscher-verzeichnismedienpreis-2012/",
+          "https://sozialhelden.de/blog/world-summit-award-mobile-der-vereinten-nationen/",
+          "https://sozialhelden.de/blog/sozialhelden-gewinnen-nachhaltigkeitspreis/"
+        ],
+        "founder": {
+          "@type": "Person",
+          "gender": "http://schema.org/Male",
+          "givenName": "Raúl",
+          "familyName": "Krauthausen",
+          "sameAs": [
+            "https://raul.de"
+          ]
+        }
+      }
+    }
+  }
+</script>
+{% endblock %}
