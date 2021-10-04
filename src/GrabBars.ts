@@ -2,7 +2,7 @@ import { t } from 'ttag';
 import { createSchemaInstance } from './SimpleSchemaExtensions';
 import { Length, LengthSchema, quantityDefinition } from './Units';
 
-export interface FoldingHandles {
+export interface GrabBars {
   /**
    * `true` if there is a folding handle on left side (from the perspective of somebody using the
    * toilet), `false` if not, `undefined` if condition is unknown.
@@ -14,16 +14,20 @@ export interface FoldingHandles {
    */
   onUsersRightSide?: boolean;
   /**
-   * Indicates how high the folding handles are (top edge, measured from the floor).
+   * Indicates how high the grab bars are (top edge, measured from the floor).
    */
   topHeightFromFloor?: Length;
   /**
-   * Indicates how far the handles are apart.
+   * Indicates how far the bars are apart.
    */
-  distanceBetweenHandles?: Length;
+  distanceBetweenBars?: Length;
+  /**
+   * `true` if the grab bars can be folded, `false` if not, `undefined` if condition is unknown.
+   */
+  foldable?: boolean;
 }
 
-export const FoldingHandlesSchema = createSchemaInstance('FoldingHandles', {
+export const GrabBarsSchema = createSchemaInstance('GrabBars', {
   onUsersLeftSide: {
     type: Boolean,
     optional: true,
@@ -39,9 +43,16 @@ export const FoldingHandlesSchema = createSchemaInstance('FoldingHandles', {
     }
   },
   topHeightFromFloor: quantityDefinition(LengthSchema, true, {
-    question: t`How high are the folding handles (top edge, measured from the floor)`
+    question: t`How high are the grab bars (top edge, measured from the floor)`
   }),
-  distanceBetweenHandles: quantityDefinition(LengthSchema, true, {
-    question: t`How far are the handles apart?`
-  })
+  distanceBetweenBars: quantityDefinition(LengthSchema, true, {
+    question: t`How far are the bars apart?`
+  }),
+  foldable: {
+    type: Boolean,
+    optional: true,
+    accessibility: {
+      question: t`Can the grab bars be folded? If only one can be folded, answer 'No'.`
+    }
+  }
 });

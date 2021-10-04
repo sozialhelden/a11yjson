@@ -11,7 +11,7 @@ export * from './Entrance';
 export * from './EquipmentInfo';
 export * from './EquipmentProperties';
 export * from './ExternalId';
-export * from './FoldingHandles';
+export * from './GrabBars';
 export * from './Geometry';
 export * from './Ground';
 export * from './LocalizedString';

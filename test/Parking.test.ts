@@ -7,6 +7,7 @@ const parkingWithNullFixture: Parking = {
 };
 
 const parkingWithOptionalsFixture: Parking = {
+  count: 14,
   forWheelchairUsers: {
     location: '2nd floor',
     count: 2,
