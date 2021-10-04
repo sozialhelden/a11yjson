@@ -28,6 +28,13 @@ const equipmentPropertiesFixture: EquipmentProperties = {
   hasHeadPhoneJack: true,
   isEasyToUnderstand: true,
   isWorking: true,
+  needsTouchScreenInput: true,
+  hasTouchScreenInput: true,
+  needsQRCodeScan: true,
+  hasQRCode: true,
+  needsHapticInput: true,
+  hasHapticInput: true,
+  needsVisualRecognition: true,
 
   sourceId: 'string',
   sourceImportId: 'string',

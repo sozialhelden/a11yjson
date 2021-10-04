@@ -2,7 +2,7 @@ import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
 import { createSchemaInstance } from './SimpleSchemaExtensions';
-import { FoldingHandles, FoldingHandlesSchema } from './FoldingHandles';
+import { GrabBars, GrabBarsSchema } from './GrabBars';
 import { Length, LengthSchema, quantityDefinition } from './Units';
 
 export interface Toilet {
@@ -25,13 +25,13 @@ export interface Toilet {
    */
   spaceInFront?: Length;
   /**
-   * Does the toilet have folding handles?
+   * Does the toilet have grab bars?
    */
-  hasFoldingHandles?: boolean;
+  hasGrabBars?: boolean;
   /**
-   * Object describing the folding handles.
+   * Object describing the grab bars.
    */
-  foldingHandles?: FoldingHandles;
+  grabBars?: GrabBars;
 }
 
 export const ToiletSchema = createSchemaInstance('Toilet', {
@@ -47,18 +47,18 @@ export const ToiletSchema = createSchemaInstance('Toilet', {
   spaceInFront: quantityDefinition(LengthSchema, true, {
     question: t`How much space is in front of the toilet?`
   }),
-  hasFoldingHandles: {
+  hasGrabBars: {
     type: Boolean,
     optional: true,
     accessibility: {
-      question: t`Does the toilet have folding handles?`
+      question: t`Does the toilet have grab bars?`
     }
   },
-  foldingHandles: {
-    type: FoldingHandlesSchema,
+  grabBars: {
+    type: GrabBarsSchema,
     optional: true,
     accessibility: {
-      question: t`Let’s describe the folding handles.`
+      question: t`Let’s describe the grab bars.`
     }
   }
 });

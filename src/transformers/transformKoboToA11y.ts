@@ -313,23 +313,23 @@ export const transformKoboToA11y = (data: KoboResult) => {
       'inside/toilet/free_space_front',
       usedLengthUnit
     ),
-    // handles
-    'properties.accessibility.restrooms.0.toilet.hasFoldingHandles': parseIsAnyOf(
+    // bars
+    'properties.accessibility.restrooms.0.toilet.hasGrabBars': parseIsAnyOf(
       data,
       'inside/toilet/has_arm_rests',
       ['left_and_right', 'right', 'left']
     ),
-    'properties.accessibility.restrooms.0.toilet.foldingHandles': parseIsAnyOfEntry(
+    'properties.accessibility.restrooms.0.toilet.GrabBars': parseIsAnyOfEntry(
       data,
       'inside/toilet/has_arm_rests',
       ['left_and_right', 'right', 'left']
     ),
-    'properties.accessibility.restrooms.0.toilet.foldingHandles.onUsersLeftSide': parseIsAnyOf(
+    'properties.accessibility.restrooms.0.toilet.GrabBars.onUsersLeftSide': parseIsAnyOf(
       data,
       'inside/toilet/has_arm_rests',
       ['left_and_right', 'left']
     ),
-    'properties.accessibility.restrooms.0.toilet.foldingHandles.onUsersRightSide': parseIsAnyOf(
+    'properties.accessibility.restrooms.0.toilet.GrabBars.onUsersRightSide': parseIsAnyOf(
       data,
       'inside/toilet/has_arm_rests',
       ['left_and_right', 'right']
