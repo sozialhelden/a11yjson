@@ -69,7 +69,7 @@ export interface Accessibility {
   /**
    * `true` if the venue has induction loops installed in its functional units where this is relevant.
    */
-  hasInductionLoop?: boolean,
+  hasInductionLoop?: boolean;
   /**
    * Describes the Wifi availability and accessibility at the place.
    */
