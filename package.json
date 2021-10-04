@@ -129,7 +129,7 @@
     "intersperse": "^1.0.0",
     "js-quantities": "^1.7.4",
     "kind-of": "^6.0.3",
-    "lodash": "^4.17.16",
+    "lodash": "^4.17.21",
     "markdown-table": "^2.0.0",
     "marked": "^1.1.1",
     "react-style-tag": "^2.0.1",
