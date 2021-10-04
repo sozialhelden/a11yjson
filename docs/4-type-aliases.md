@@ -1,5 +1,9 @@
 # Type Aliases
 
+Besides [interfaces](./3-interfaces.md], A11yJSON defines the following bare types.
+
+Some lack proper formatting in the documentation. Fixes in [`tools/generate-overview.ts`](https://github.com/sozialhelden/a11yjson/blob/master/tools/generate-overview.ts) are welcome!
+
 ### <a id="A11yRating">A11yRating</a>
 
 
@@ -21,14 +25,14 @@ Definition: <a href="#StructuredAddress">StructuredAddress</a>&nbsp;|&nbsp;<code
 
 
 Definition: <pre>{
-  "id": 578,
+  "id": 604,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "children": [
     {
-      "id": 579,
+      "id": 605,
       "name": "$and",
       "kind": 32,
       "kindString": "Variable",
@@ -47,7 +51,7 @@ Definition: <pre>{
           {
             "type": "reference",
             "name": "Rule",
-            "id": 580
+            "id": 606
           }
         ]
       }
@@ -58,7 +62,7 @@ Definition: <pre>{
       "title": "Variables",
       "kind": 32,
       "children": [
-        579
+        605
       ]
     }
   ],
@@ -86,14 +90,14 @@ Definition: <code>number</code>&nbsp;|&nbsp;<code>string</code>&nbsp;|&nbsp;<a h
 
 
 Definition: <pre>{
-  "id": 549,
+  "id": 575,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "children": [
     {
-      "id": 550,
+      "id": 576,
       "name": "$defined",
       "kind": 32,
       "kindString": "Variable",
@@ -116,7 +120,7 @@ Definition: <pre>{
       "title": "Variables",
       "kind": 32,
       "children": [
-        550
+        576
       ]
     }
   ],
@@ -136,14 +140,14 @@ Definition: <pre>{
 
 
 Definition: <pre>{
-  "id": 564,
+  "id": 590,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "children": [
     {
-      "id": 565,
+      "id": 591,
       "name": "$eq",
       "kind": 32,
       "kindString": "Variable",
@@ -158,7 +162,7 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "Comparable",
-        "id": 541
+        "id": 567
       }
     }
   ],
@@ -167,7 +171,7 @@ Definition: <pre>{
       "title": "Variables",
       "kind": 32,
       "children": [
-        565
+        591
       ]
     }
   ],
@@ -195,14 +199,14 @@ Definition: <code>"bed"</code>&nbsp;|&nbsp;<code>"wardrobe"</code>&nbsp;|&nbsp;<
 
 
 Definition: <pre>{
-  "id": 543,
+  "id": 569,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "children": [
     {
-      "id": 544,
+      "id": 570,
       "name": "$exists",
       "kind": 32,
       "kindString": "Variable",
@@ -225,7 +229,7 @@ Definition: <pre>{
       "title": "Variables",
       "kind": 32,
       "children": [
-        544
+        570
       ]
     }
   ],
@@ -269,14 +273,14 @@ Definition: <a href="#PointGeometry">PointGeometry</a>
 
 
 Definition: <pre>{
-  "id": 558,
+  "id": 584,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "children": [
     {
-      "id": 559,
+      "id": 585,
       "name": "$gt",
       "kind": 32,
       "kindString": "Variable",
@@ -291,7 +295,7 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "Comparable",
-        "id": 541
+        "id": 567
       }
     }
   ],
@@ -300,7 +304,7 @@ Definition: <pre>{
       "title": "Variables",
       "kind": 32,
       "children": [
-        559
+        585
       ]
     }
   ],
@@ -320,14 +324,14 @@ Definition: <pre>{
 
 
 Definition: <pre>{
-  "id": 561,
+  "id": 587,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "children": [
     {
-      "id": 562,
+      "id": 588,
       "name": "$gte",
       "kind": 32,
       "kindString": "Variable",
@@ -342,7 +346,7 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "Comparable",
-        "id": 541
+        "id": 567
       }
     }
   ],
@@ -351,7 +355,7 @@ Definition: <pre>{
       "title": "Variables",
       "kind": 32,
       "children": [
-        562
+        588
       ]
     }
   ],
@@ -389,14 +393,14 @@ Definition: <a href="#IetfLanguageTag">IetfLanguageTag</a>&nbsp;|&nbsp;<a href="
 
 
 Definition: <pre>{
-  "id": 672,
+  "id": 698,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "children": [
     {
-      "id": 674,
+      "id": 700,
       "name": "download_url",
       "kind": 32,
       "kindString": "Variable",
@@ -414,7 +418,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 675,
+      "id": 701,
       "name": "filename",
       "kind": 32,
       "kindString": "Variable",
@@ -432,7 +436,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 677,
+      "id": 703,
       "name": "id",
       "kind": 32,
       "kindString": "Variable",
@@ -450,7 +454,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 676,
+      "id": 702,
       "name": "instance",
       "kind": 32,
       "kindString": "Variable",
@@ -468,7 +472,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 673,
+      "id": 699,
       "name": "mimetype",
       "kind": 32,
       "kindString": "Variable",
@@ -486,7 +490,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 678,
+      "id": 704,
       "name": "xform",
       "kind": 32,
       "kindString": "Variable",
@@ -509,12 +513,12 @@ Definition: <pre>{
       "title": "Variables",
       "kind": 32,
       "children": [
-        674,
-        675,
-        677,
-        676,
-        673,
-        678
+        700,
+        701,
+        703,
+        702,
+        699,
+        704
       ]
     }
   ],
@@ -542,14 +546,14 @@ Definition: {"type":"typeOperator","operator":"keyof","target":{"type":"referenc
 
 
 Definition: <pre>{
-  "id": 682,
+  "id": 708,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "children": [
     {
-      "id": 700,
+      "id": 726,
       "name": "__version__",
       "kind": 32,
       "kindString": "Variable",
@@ -567,7 +571,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 686,
+      "id": 712,
       "name": "_attachments",
       "kind": 32,
       "kindString": "Variable",
@@ -584,12 +588,12 @@ Definition: <pre>{
         "elementType": {
           "type": "reference",
           "name": "KoboAttachment",
-          "id": 671
+          "id": 697
         }
       }
     },
     {
-      "id": 690,
+      "id": 716,
       "name": "_bamboo_dataset_id",
       "kind": 32,
       "kindString": "Variable",
@@ -618,7 +622,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 685,
+      "id": 711,
       "name": "_geolocation",
       "kind": 32,
       "kindString": "Variable",
@@ -645,7 +649,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 683,
+      "id": 709,
       "name": "_id",
       "kind": 32,
       "kindString": "Variable",
@@ -663,7 +667,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 687,
+      "id": 713,
       "name": "_notes",
       "kind": 32,
       "kindString": "Variable",
@@ -686,7 +690,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 699,
+      "id": 725,
       "name": "_status",
       "kind": 32,
       "kindString": "Variable",
@@ -704,7 +708,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 703,
+      "id": 729,
       "name": "_submission_time",
       "kind": 32,
       "kindString": "Variable",
@@ -722,7 +726,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 704,
+      "id": 730,
       "name": "_submitted_by",
       "kind": 32,
       "kindString": "Variable",
@@ -749,7 +753,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 688,
+      "id": 714,
       "name": "_tags",
       "kind": 32,
       "kindString": "Variable",
@@ -772,7 +776,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 684,
+      "id": 710,
       "name": "_uuid",
       "kind": 32,
       "kindString": "Variable",
@@ -790,7 +794,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 702,
+      "id": 728,
       "name": "_validation_status",
       "kind": 32,
       "kindString": "Variable",
@@ -808,7 +812,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 689,
+      "id": 715,
       "name": "_xform_id_string",
       "kind": 32,
       "kindString": "Variable",
@@ -837,7 +841,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 701,
+      "id": 727,
       "name": "deviceid",
       "kind": 32,
       "kindString": "Variable",
@@ -855,7 +859,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 697,
+      "id": 723,
       "name": "end",
       "kind": 32,
       "kindString": "Variable",
@@ -873,7 +877,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 746,
+      "id": 772,
       "name": "feedback/feedback_matrix/no_interaction_problems",
       "kind": 32,
       "kindString": "Variable",
@@ -891,7 +895,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 745,
+      "id": 771,
       "name": "feedback/feedback_matrix/questions_fits_this_place",
       "kind": 32,
       "kindString": "Variable",
@@ -909,7 +913,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 695,
+      "id": 721,
       "name": "formhub/uuid",
       "kind": 32,
       "kindString": "Variable",
@@ -927,7 +931,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 749,
+      "id": 775,
       "name": "has_phone_number",
       "kind": 32,
       "kindString": "Variable",
@@ -942,11 +946,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoResult",
-        "id": 679
+        "id": 705
       }
     },
     {
-      "id": 738,
+      "id": 764,
       "name": "inquire/are_service_animals_allowed",
       "kind": 32,
       "kindString": "Variable",
@@ -961,11 +965,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoResult",
-        "id": 679
+        "id": 705
       }
     },
     {
-      "id": 739,
+      "id": 765,
       "name": "inquire/media/has_audio",
       "kind": 32,
       "kindString": "Variable",
@@ -980,11 +984,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoResult",
-        "id": 679
+        "id": 705
       }
     },
     {
-      "id": 740,
+      "id": 766,
       "name": "inquire/media/has_braille",
       "kind": 32,
       "kindString": "Variable",
@@ -999,11 +1003,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoResult",
-        "id": 679
+        "id": 705
       }
     },
     {
-      "id": 741,
+      "id": 767,
       "name": "inquire/media/has_large_print",
       "kind": 32,
       "kindString": "Variable",
@@ -1018,11 +1022,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoResult",
-        "id": 679
+        "id": 705
       }
     },
     {
-      "id": 742,
+      "id": 768,
       "name": "inquire/staff_can_speak_sign_lang",
       "kind": 32,
       "kindString": "Variable",
@@ -1037,11 +1041,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoResult",
-        "id": 679
+        "id": 705
       }
     },
     {
-      "id": 743,
+      "id": 769,
       "name": "inquire/staff_has_disabled_training",
       "kind": 32,
       "kindString": "Variable",
@@ -1056,11 +1060,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoResult",
-        "id": 679
+        "id": 705
       }
     },
     {
-      "id": 744,
+      "id": 770,
       "name": "inquire/staff_spoken_sign_langs",
       "kind": 32,
       "kindString": "Variable",
@@ -1078,7 +1082,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 737,
+      "id": 763,
       "name": "inside/has_wide_aisles",
       "kind": 32,
       "kindString": "Variable",
@@ -1093,11 +1097,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoResult",
-        "id": 679
+        "id": 705
       }
     },
     {
-      "id": 723,
+      "id": 749,
       "name": "inside/is_quiet",
       "kind": 32,
       "kindString": "Variable",
@@ -1112,11 +1116,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoResult",
-        "id": 679
+        "id": 705
       }
     },
     {
-      "id": 722,
+      "id": 748,
       "name": "inside/is_well_lit",
       "kind": 32,
       "kindString": "Variable",
@@ -1131,11 +1135,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoResult",
-        "id": 679
+        "id": 705
       }
     },
     {
-      "id": 726,
+      "id": 752,
       "name": "inside/toilet/basin_inside_cabin",
       "kind": 32,
       "kindString": "Variable",
@@ -1150,11 +1154,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoResult",
-        "id": 679
+        "id": 705
       }
     },
     {
-      "id": 724,
+      "id": 750,
       "name": "inside/toilet/basin_wheelchair_fits_belows",
       "kind": 32,
       "kindString": "Variable",
@@ -1169,11 +1173,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoResult",
-        "id": 679
+        "id": 705
       }
     },
     {
-      "id": 725,
+      "id": 751,
       "name": "inside/toilet/basin_wheelchair_reachable",
       "kind": 32,
       "kindString": "Variable",
@@ -1188,11 +1192,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoResult",
-        "id": 679
+        "id": 705
       }
     },
     {
-      "id": 727,
+      "id": 753,
       "name": "inside/toilet/door_width",
       "kind": 32,
       "kindString": "Variable",
@@ -1210,7 +1214,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 728,
+      "id": 754,
       "name": "inside/toilet/free_space_front",
       "kind": 32,
       "kindString": "Variable",
@@ -1228,7 +1232,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 729,
+      "id": 755,
       "name": "inside/toilet/free_space_left",
       "kind": 32,
       "kindString": "Variable",
@@ -1246,7 +1250,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 730,
+      "id": 756,
       "name": "inside/toilet/free_space_right",
       "kind": 32,
       "kindString": "Variable",
@@ -1264,7 +1268,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 731,
+      "id": 757,
       "name": "inside/toilet/has_arm_rests",
       "kind": 32,
       "kindString": "Variable",
@@ -1282,7 +1286,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 732,
+      "id": 758,
       "name": "inside/toilet/has_basin",
       "kind": 32,
       "kindString": "Variable",
@@ -1297,11 +1301,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoResult",
-        "id": 679
+        "id": 705
       }
     },
     {
-      "id": 733,
+      "id": 759,
       "name": "inside/toilet/has_toilet",
       "kind": 32,
       "kindString": "Variable",
@@ -1316,11 +1320,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoResult",
-        "id": 679
+        "id": 705
       }
     },
     {
-      "id": 734,
+      "id": 760,
       "name": "inside/toilet/seat_height",
       "kind": 32,
       "kindString": "Variable",
@@ -1338,7 +1342,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 735,
+      "id": 761,
       "name": "inside/toilet/stepless_access",
       "kind": 32,
       "kindString": "Variable",
@@ -1353,11 +1357,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoResult",
-        "id": 679
+        "id": 705
       }
     },
     {
-      "id": 736,
+      "id": 762,
       "name": "inside/toilet/toilet_photo",
       "kind": 32,
       "kindString": "Variable",
@@ -1375,7 +1379,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 747,
+      "id": 773,
       "name": "is_wheelchair_accessible",
       "kind": 32,
       "kindString": "Variable",
@@ -1390,11 +1394,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoPartiallyResult",
-        "id": 680
+        "id": 706
       }
     },
     {
-      "id": 694,
+      "id": 720,
       "name": "meta/instanceID",
       "kind": 32,
       "kindString": "Variable",
@@ -1412,7 +1416,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 709,
+      "id": 735,
       "name": "outside/category/category_sub",
       "kind": 32,
       "kindString": "Variable",
@@ -1430,7 +1434,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 710,
+      "id": 736,
       "name": "outside/category/category_top",
       "kind": 32,
       "kindString": "Variable",
@@ -1448,7 +1452,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 712,
+      "id": 738,
       "name": "outside/entrance/has_automatic_door",
       "kind": 32,
       "kindString": "Variable",
@@ -1463,11 +1467,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoResult",
-        "id": 679
+        "id": 705
       }
     },
     {
-      "id": 713,
+      "id": 739,
       "name": "outside/entrance/has_door",
       "kind": 32,
       "kindString": "Variable",
@@ -1482,11 +1486,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoResult",
-        "id": 679
+        "id": 705
       }
     },
     {
-      "id": 714,
+      "id": 740,
       "name": "outside/entrance/has_entrance",
       "kind": 32,
       "kindString": "Variable",
@@ -1501,11 +1505,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoResult",
-        "id": 679
+        "id": 705
       }
     },
     {
-      "id": 711,
+      "id": 737,
       "name": "outside/entrance/has_fixed_ramp",
       "kind": 32,
       "kindString": "Variable",
@@ -1520,11 +1524,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoResult",
-        "id": 679
+        "id": 705
       }
     },
     {
-      "id": 715,
+      "id": 741,
       "name": "outside/entrance/has_mobile_ramp",
       "kind": 32,
       "kindString": "Variable",
@@ -1539,11 +1543,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoResult",
-        "id": 679
+        "id": 705
       }
     },
     {
-      "id": 716,
+      "id": 742,
       "name": "outside/entrance/has_steps",
       "kind": 32,
       "kindString": "Variable",
@@ -1558,11 +1562,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoResult",
-        "id": 679
+        "id": 705
       }
     },
     {
-      "id": 718,
+      "id": 744,
       "name": "outside/entrance/picture",
       "kind": 32,
       "kindString": "Variable",
@@ -1580,7 +1584,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 719,
+      "id": 745,
       "name": "outside/entrance/steps_count",
       "kind": 32,
       "kindString": "Variable",
@@ -1598,7 +1602,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 720,
+      "id": 746,
       "name": "outside/entrance/steps_height",
       "kind": 32,
       "kindString": "Variable",
@@ -1616,7 +1620,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 717,
+      "id": 743,
       "name": "outside/entrance/steps_low_height",
       "kind": 32,
       "kindString": "Variable",
@@ -1631,11 +1635,11 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "YesNoResult",
-        "id": 679
+        "id": 705
       }
     },
     {
-      "id": 706,
+      "id": 732,
       "name": "outside/geometry_point",
       "kind": 32,
       "kindString": "Variable",
@@ -1653,7 +1657,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 721,
+      "id": 747,
       "name": "outside/name",
       "kind": 32,
       "kindString": "Variable",
@@ -1671,7 +1675,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 750,
+      "id": 776,
       "name": "phone_number",
       "kind": 32,
       "kindString": "Variable",
@@ -1700,7 +1704,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 692,
+      "id": 718,
       "name": "phonenumber",
       "kind": 32,
       "kindString": "Variable",
@@ -1729,7 +1733,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 753,
+      "id": 779,
       "name": "place_email_address",
       "kind": 32,
       "kindString": "Variable",
@@ -1747,7 +1751,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 751,
+      "id": 777,
       "name": "place_phone_number",
       "kind": 32,
       "kindString": "Variable",
@@ -1765,7 +1769,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 752,
+      "id": 778,
       "name": "place_website_url",
       "kind": 32,
       "kindString": "Variable",
@@ -1783,7 +1787,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 691,
+      "id": 717,
       "name": "simserial",
       "kind": 32,
       "kindString": "Variable",
@@ -1812,7 +1816,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 698,
+      "id": 724,
       "name": "start",
       "kind": 32,
       "kindString": "Variable",
@@ -1830,7 +1834,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 705,
+      "id": 731,
       "name": "subscriberid",
       "kind": 32,
       "kindString": "Variable",
@@ -1848,7 +1852,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 696,
+      "id": 722,
       "name": "today",
       "kind": 32,
       "kindString": "Variable",
@@ -1866,7 +1870,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 707,
+      "id": 733,
       "name": "user/user_measuring",
       "kind": 32,
       "kindString": "Variable",
@@ -1893,7 +1897,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 708,
+      "id": 734,
       "name": "user/user_record_type",
       "kind": 32,
       "kindString": "Variable",
@@ -1911,7 +1915,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 693,
+      "id": 719,
       "name": "username",
       "kind": 32,
       "kindString": "Variable",
@@ -1929,7 +1933,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 748,
+      "id": 774,
       "name": "wheelchair_comment",
       "kind": 32,
       "kindString": "Variable",
@@ -1952,77 +1956,77 @@ Definition: <pre>{
       "title": "Variables",
       "kind": 32,
       "children": [
-        700,
-        686,
-        690,
-        685,
-        683,
-        687,
-        699,
-        703,
-        704,
-        688,
-        684,
-        702,
-        689,
-        701,
-        697,
-        746,
-        745,
-        695,
+        726,
+        712,
+        716,
+        711,
+        709,
+        713,
+        725,
+        729,
+        730,
+        714,
+        710,
+        728,
+        715,
+        727,
+        723,
+        772,
+        771,
+        721,
+        775,
+        764,
+        765,
+        766,
+        767,
+        768,
+        769,
+        770,
+        763,
         749,
+        748,
+        752,
+        750,
+        751,
+        753,
+        754,
+        755,
+        756,
+        757,
+        758,
+        759,
+        760,
+        761,
+        762,
+        773,
+        720,
+        735,
+        736,
         738,
         739,
         740,
+        737,
         741,
         742,
-        743,
         744,
-        737,
-        723,
-        722,
-        726,
-        724,
-        725,
-        727,
-        728,
-        729,
-        730,
-        731,
+        745,
+        746,
+        743,
         732,
+        747,
+        776,
+        718,
+        779,
+        777,
+        778,
+        717,
+        724,
+        731,
+        722,
         733,
         734,
-        735,
-        736,
-        747,
-        694,
-        709,
-        710,
-        712,
-        713,
-        714,
-        711,
-        715,
-        716,
-        718,
         719,
-        720,
-        717,
-        706,
-        721,
-        750,
-        692,
-        753,
-        751,
-        752,
-        691,
-        698,
-        705,
-        696,
-        707,
-        708,
-        693,
-        748
+        774
       ]
     }
   ],
@@ -2050,14 +2054,14 @@ Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
 
 
 Definition: <pre>{
-  "id": 552,
+  "id": 578,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "children": [
     {
-      "id": 553,
+      "id": 579,
       "name": "$lt",
       "kind": 32,
       "kindString": "Variable",
@@ -2072,7 +2076,7 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "Comparable",
-        "id": 541
+        "id": 567
       }
     }
   ],
@@ -2081,7 +2085,7 @@ Definition: <pre>{
       "title": "Variables",
       "kind": 32,
       "children": [
-        553
+        579
       ]
     }
   ],
@@ -2101,14 +2105,14 @@ Definition: <pre>{
 
 
 Definition: <pre>{
-  "id": 555,
+  "id": 581,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "children": [
     {
-      "id": 556,
+      "id": 582,
       "name": "$lte",
       "kind": 32,
       "kindString": "Variable",
@@ -2123,7 +2127,7 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "Comparable",
-        "id": 541
+        "id": 567
       }
     }
   ],
@@ -2132,7 +2136,7 @@ Definition: <pre>{
       "title": "Variables",
       "kind": 32,
       "children": [
-        556
+        582
       ]
     }
   ],
@@ -2200,21 +2204,21 @@ Definition: <code>string</code>&nbsp;|&nbsp;<pre>{
 
 
 Definition: <pre>{
-  "id": 571,
+  "id": 597,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "indexSignature": [
     {
-      "id": 572,
+      "id": 598,
       "name": "__index",
       "kind": 8192,
       "kindString": "Index signature",
       "flags": {},
       "parameters": [
         {
-          "id": 573,
+          "id": 599,
           "name": "key",
           "kind": 32768,
           "kindString": "Parameter",
@@ -2228,7 +2232,7 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "MatchValue",
-        "id": 569
+        "id": 595
       }
     }
   ],
@@ -2256,14 +2260,14 @@ Definition: <code>string</code>&nbsp;|&nbsp;<code>number</code>&nbsp;|&nbsp;<cod
 
 
 Definition: <pre>{
-  "id": 567,
+  "id": 593,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "children": [
     {
-      "id": 568,
+      "id": 594,
       "name": "$ne",
       "kind": 32,
       "kindString": "Variable",
@@ -2278,7 +2282,7 @@ Definition: <pre>{
       "type": {
         "type": "reference",
         "name": "Comparable",
-        "id": 541
+        "id": 567
       }
     }
   ],
@@ -2287,7 +2291,7 @@ Definition: <pre>{
       "title": "Variables",
       "kind": 32,
       "children": [
-        568
+        594
       ]
     }
   ],
@@ -2323,14 +2327,14 @@ Definition: <code>"$eq"</code>&nbsp;|&nbsp;<code>"$lt"</code>&nbsp;|&nbsp;<code>
 
 
 Definition: <pre>{
-  "id": 575,
+  "id": 601,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "children": [
     {
-      "id": 576,
+      "id": 602,
       "name": "$or",
       "kind": 32,
       "kindString": "Variable",
@@ -2349,7 +2353,7 @@ Definition: <pre>{
           {
             "type": "reference",
             "name": "Rule",
-            "id": 580
+            "id": 606
           }
         ]
       }
@@ -2360,7 +2364,7 @@ Definition: <pre>{
       "title": "Variables",
       "kind": 32,
       "children": [
-        576
+        602
       ]
     }
   ],
@@ -2422,14 +2426,14 @@ Definition: <code>"dedicatedToSmoking"</code>&nbsp;|&nbsp;<code>"allowedEverywhe
 
 
 Definition: <pre>{
-  "id": 546,
+  "id": 572,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "children": [
     {
-      "id": 547,
+      "id": 573,
       "name": "$unknownOr",
       "kind": 32,
       "kindString": "Variable",
@@ -2452,7 +2456,7 @@ Definition: <pre>{
       "title": "Variables",
       "kind": 32,
       "children": [
-        547
+        573
       ]
     }
   ],

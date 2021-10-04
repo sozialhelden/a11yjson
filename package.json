@@ -1,6 +1,6 @@
 {
   "name": "@sozialhelden/a11yjson",
-  "version": "9.0.1",
+  "version": "10.0.0",
   "description": "A harmonized data schema for describing the accessibility of physical places",
   "keywords": [],
   "main": "dist/index.umd.js",
@@ -21,7 +21,7 @@
   "scripts": {
     "lint": "tslint -t codeFrame -e 'src/typings/*' 'src/**/*.ts' 'test/**/*.ts'",
     "prebuild": "rimraf dist",
-    "build": "tsc && rollup -c rollup.config.ts && rimraf compiled && typedoc src typings --options typedoc.json --out dist/docs/typescript --json dist/typedoc-output.json && npx ts-node ./tools/generate-overview.ts && cp README.md docs/index.md",
+    "build": "tsc && rollup -c rollup.config.ts && rimraf compiled && typedoc src typings --options typedoc.json --out dist/docs/typescript --json dist/typedoc-output.json && npx ts-node ./tools/generate-overview.ts",
     "start": "tsc -w & rollup -c rollup.config.ts -w",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -129,12 +129,12 @@
     "intersperse": "^1.0.0",
     "js-quantities": "^1.7.4",
     "kind-of": "^6.0.3",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.16",
     "markdown-table": "^2.0.0",
     "marked": "^1.1.1",
     "react-style-tag": "^2.0.1",
+    "ttag": "^1.7.22",
     "simpl-schema": "^1.7.0",
-    "ttag": "^1.5.1",
     "yarn": "^1.22.4"
   },
   "husky": {
