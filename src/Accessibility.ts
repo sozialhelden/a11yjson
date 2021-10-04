@@ -18,6 +18,7 @@ import { LocalizedString, LocalizedStringSchema } from './LocalizedString';
 import { AnimalPolicySchema, AnimalPolicy } from './AnimalPolicy';
 import { SmokingPolicy, smokingPolicies } from './SmokingPolicy';
 import { quantityDefinition, Volume, LengthSchema } from './Units';
+import { WifiAccessibility, WifiAccessibilitySchema } from './WifiAccessibility';
 
 /**
  * Describes the physical (and sometimes human rated) accessibility of a place.
@@ -69,6 +70,10 @@ export interface Accessibility {
    * `true` if the venue has induction loops installed in its functional units where this is relevant.
    */
   hasInductionLoop?: boolean,
+  /**
+   * Describes the Wifi availability and accessibility at the place.
+   */
+  wifi?: WifiAccessibility;
   /**
    * Object describing the place's ground condition. If there are very different ground conditions, you can create multiple places and nest them.
    */
@@ -229,6 +234,13 @@ export const AccessibilitySchema = new SimpleSchema({
     optional: true,
     accessibility: {
       question: t`In which condition is the ground you have to traverse to get here?`
+    }
+  },
+  wifi: {
+    type: WifiAccessibilitySchema,
+    optional: true,
+    accessibility: {
+      question: t`Is there a local wifi?`
     }
   },
   ratingSpacious: {
