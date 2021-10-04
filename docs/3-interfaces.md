@@ -1,6 +1,11 @@
-# Accessibility Criteria (‘Interfaces’)
+# Interfaces - things you can describe with A11yJSON
 
-### <a id="Accessibility">Accessibility</a>
+This is a list of data structures that A11yJSON specifies.
+
+They are meant to be interfaces in the software development sense: This means you can either use
+them as they are, or mix them into your own entity definitions.
+
+  ### <a id="Accessibility">Accessibility</a>
 
   Describes the physical (and sometimes human rated) accessibility of a place.
 
@@ -27,6 +32,7 @@
 <code>null</code> indicates there are no tables, <code>undefined</code> or missing property indicates unknown.</p>
 </td></tr><tr><td>wheelchairPlaces</td><td><a href="#WheelchairPlaces">WheelchairPlaces</a>&nbsp;|&nbsp;<code>null</code></td><td><p>Information about wheelchair places.
 <code>null</code> indicates there are no places, <code>undefined</code> or missing property indicates unknown.</p>
+</td></tr><tr><td>wifi</td><td><a href="#WifiAccessibility">WifiAccessibility</a></td><td><p>Describes the Wifi availability and accessibility at the place.</p>
 </td></tr></table>
   
 
@@ -103,10 +109,13 @@ screen readers or voice assistants.</p>
 </td></tr><tr><td>door</td><td><a href="#Door">Door</a></td><td><p>Object describing the door to the equipment, or <code>undefined</code> if there is no door.</p>
 </td></tr><tr><td>hasBrailleText</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if the equipment’s controls or signs are printed in braille letters, <code>false</code> if not, or <code>undefined</code> if this is unknown.</p>
 </td></tr><tr><td>hasDoorsInBothDirections</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if the equipment has doors in two directions, so wheelchair, rollator, bike or pushchair users do not have to move backwards to exit.</p>
+</td></tr><tr><td>hasHapticInput</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if the equipment&#39;s user interface has haptic input elements, <code>false</code> if not.</p>
 </td></tr><tr><td>hasHeadPhoneJack</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if the equipment has a headphone jack for speech output (common for ATMs), <code>false</code> if not, or <code>undefined</code> if this is unknown.</p>
 </td></tr><tr><td>hasLargePrint</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if the equipment’s controls or signs do not use small fonts, <code>false</code> if they do, or <code>undefined</code> if this is unknown.</p>
+</td></tr><tr><td>hasQRCode</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if the equipment offers users to use a QR code to use the equipment&#39;s main function, <code>false</code> if not.</p>
 </td></tr><tr><td>hasRaisedText</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if the equipment’s controls or signs have raised letters, <code>false</code> if not, or <code>undefined</code> if this is unknown.</p>
 </td></tr><tr><td>hasSpeech</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if the equipment has speech output, <code>false</code> if not, or <code>undefined</code> if this is unknown.</p>
+</td></tr><tr><td>hasTouchScreenInput</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if the equipment has a touch screen, <code>false</code> if not.</p>
 </td></tr><tr><td>heightOfControls</td><td><a href="#Length">Length</a></td><td><p>Height of the lowest working controls that are needed to operate this equipment.
 <code>undefined</code> if the equipment needs no controls.</p>
 </td></tr><tr><td>ids</td><td><a href="#ExternalId">ExternalId</a>[]</td><td><p>IDs of this equipment in external data sources, for example in GTFS, IMDF or other sources.</p>
@@ -120,6 +129,10 @@ screen readers or voice assistants.</p>
 screen reader or voice assistant.</p>
 </td></tr><tr><td>manufacturerName</td><td><a href="#LocalizedString">LocalizedString</a></td><td><p>Official name of the company that manufactured the equipment.</p>
 </td></tr><tr><td>manufacturerSerialNumber</td><td><code>string</code></td><td><p>Manufacturer serial number of the equipment / facility.</p>
+</td></tr><tr><td>needsHapticInput</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if the equipment needs users to input something using buttons or other haptic means to use the equipment&#39;s main function, <code>false</code> if not.</p>
+</td></tr><tr><td>needsQRCodeScan</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if the equipment needs users to use a QR code to use the equipment&#39;s main function, <code>false</code> if not.</p>
+</td></tr><tr><td>needsTouchScreenInput</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if the equipment needs users to touch a screen for the equipment&#39;s main function.</p>
+</td></tr><tr><td>needsVisualRecognition</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if the equipment&#39;s user interface forces users to recognize elements visually, <code>false</code> if not.</p>
 </td></tr><tr><td>originalData</td><td><code>string</code></td><td><p>Original source data for this equipment (for easier debugging)</p>
 </td></tr><tr><td>originalId</td><td><code>string</code></td><td><p>ID of this equipment in the original data source. To simplify communication with the operator,
 it’s a good idea to use the operator facility management system ID here.</p>
@@ -147,16 +160,17 @@ screen. This CAN contain Unicode characters such as ⟷ or ↘︎ as well as abb
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>id</td><td><code>string</code></td><td></td></tr><tr><td>provider</td><td><code>string</code></td><td></td></tr><tr><td>schemaName</td><td><code>string</code></td><td></td></tr></table>
   
 
-### <a id="FoldingHandles">FoldingHandles</a>
+### <a id="GrabBars">GrabBars</a>
 
   
 
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>distanceBetweenHandles</td><td><a href="#Length">Length</a></td><td><p>Indicates how far the handles are apart.</p>
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>distanceBetweenBars</td><td><a href="#Length">Length</a></td><td><p>Indicates how far the bars are apart.</p>
+</td></tr><tr><td>foldable</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if the grab bars can be folded, <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
 </td></tr><tr><td>onUsersLeftSide</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if there is a folding handle on left side (from the perspective of somebody using the
 toilet), <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
 </td></tr><tr><td>onUsersRightSide</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if there is a folding handle on right side (from the perspective of somebody using the
 toilet), <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
-</td></tr><tr><td>topHeightFromFloor</td><td><a href="#Length">Length</a></td><td><p>Indicates how high the folding handles are (top edge, measured from the floor).</p>
+</td></tr><tr><td>topHeightFromFloor</td><td><a href="#Length">Length</a></td><td><p>Indicates how high the grab bars are (top edge, measured from the floor).</p>
 </td></tr></table>
   
 
@@ -214,7 +228,7 @@ condition is unknown.</p>
 
   
 
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>forWheelchairUsers</td><td><a href="#WheelchairParking">WheelchairParking</a>&nbsp;|&nbsp;<code>null</code></td><td></td></tr></table>
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>count</td><td><code>number</code></td><td></td></tr><tr><td>forWheelchairUsers</td><td><a href="#WheelchairParking">WheelchairParking</a>&nbsp;|&nbsp;<code>null</code></td><td></td></tr></table>
   
 
 ### <a id="Pathways">Pathways</a>
@@ -405,6 +419,7 @@ facilitate mail sorting (a.k.a. post code, postcode, or ZIP code).</p>
 the regions attribute provides an array with all additional area names,
 ordered by decreasing size (starting with the highest subdivision below state)</p>
 </td></tr><tr><td>room</td><td><a href="#LocalizedString">LocalizedString</a></td><td><p>Room name</p>
+</td></tr><tr><td>roomNumber</td><td><a href="#LocalizedString">LocalizedString</a></td><td><p>Room number</p>
 </td></tr><tr><td>state</td><td><a href="#LocalizedString">LocalizedString</a></td><td><p>A division of a country; typically a first-level administrative division of a country and/or a geographical region.</p>
 </td></tr><tr><td>stateCode</td><td><a href="#LocalizedString">LocalizedString</a></td><td><p>A code/abbreviation for the state division of a country.</p>
 </td></tr><tr><td>street</td><td><a href="#LocalizedString">LocalizedString</a></td><td><p>Street name (in practice may also contain street number).</p>
@@ -427,8 +442,8 @@ ordered by decreasing size (starting with the highest subdivision below state)</
 
   
 
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>foldingHandles</td><td><a href="#FoldingHandles">FoldingHandles</a></td><td><p>Object describing the folding handles.</p>
-</td></tr><tr><td>hasFoldingHandles</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p>Does the toilet have folding handles?</p>
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>grabBars</td><td><a href="#GrabBars">GrabBars</a></td><td><p>Object describing the grab bars.</p>
+</td></tr><tr><td>hasGrabBars</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p>Does the toilet have grab bars?</p>
 </td></tr><tr><td>heightOfBase</td><td><a href="#Length">Length</a></td><td><p>Indicates the height of the toilet’s base.</p>
 </td></tr><tr><td>spaceInFront</td><td><a href="#Length">Length</a></td><td><p>How much space is in front of the toilet?</p>
 </td></tr><tr><td>spaceOnUsersLeftSide</td><td><a href="#Length">Length</a></td><td><p>How much space is on the left side of the toilet? (from the perspective of somebody using the
@@ -479,5 +494,22 @@ unknown.</p>
 
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>count</td><td><code>number</code></td><td><p>The amount of places for wheelchairs.</p>
 </td></tr><tr><td>hasSpaceForAssistant</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p>Is there additional space for an assistant?</p>
+</td></tr></table>
+  
+
+### <a id="WifiAccessibility">WifiAccessibility</a>
+
+  Describes the presence of staff and their qualifications and/or provided services.
+
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>descriptionWhereToGetLoginData</td><td><a href="#LocalizedString">LocalizedString</a></td><td><p>Describes where you get the login data / guest pass.</p>
+</td></tr><tr><td>hasCaptivePortal</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if the wifi has a captive portal website.</p>
+</td></tr><tr><td>hasFixedPassword</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if the wifi has a fixed password. Knowing this password must be enough to enter and use the wifi.</p>
+</td></tr><tr><td>isCaptivePortalAccessible</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if the wifi captive portal is accessible (WAI/ARIA).</p>
+</td></tr><tr><td>isOpenToEveryone</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if the wifi is open to everyone, <code>false</code> if it is explicitly not.</p>
+</td></tr><tr><td>isOpenToStaff</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if the wifi is open to explicit place staff, <code>false</code> if explicitly not.</p>
+</td></tr><tr><td>isOpenToVisitors</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if the wifi is open to explicit place visitors, <code>false</code> if explicitly not.</p>
+</td></tr><tr><td>needsGuestPass</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if the wifi has a fixed password. Knowing this password must be enough to enter and use the wifi.</p>
+</td></tr><tr><td>password</td><td><code>string</code></td><td><p>A string with the Wifi password. Only use this attribute if security allows to publish this info online publicly.</p>
+</td></tr><tr><td>ssid</td><td><code>string</code></td><td><p>A string with the Wifi name (SSID). Only use this attribute if security allows to publish this info online publicly.</p>
 </td></tr></table>
   

@@ -153,6 +153,34 @@ export interface EquipmentProperties {
    * `true` if the equipment has a headphone jack for speech output (common for ATMs), `false` if not, or `undefined` if this is unknown.
    */
   hasHeadPhoneJack?: boolean;
+  /**
+   * `true` if the equipment needs users to touch a screen for the equipment's main function.
+   */
+  needsTouchScreenInput?: boolean;
+  /**
+   * `true` if the equipment has a touch screen, `false` if not.
+   */
+  hasTouchScreenInput?: boolean;
+  /**
+   * `true` if the equipment needs users to use a QR code to use the equipment's main function, `false` if not.
+   */
+  needsQRCodeScan?: boolean;
+  /**
+   * `true` if the equipment offers users to use a QR code to use the equipment's main function, `false` if not.
+   */
+  hasQRCode?: boolean;
+  /**
+   * `true` if the equipment needs users to input something using buttons or other haptic means to use the equipment's main function, `false` if not.
+   */
+  needsHapticInput?: boolean;
+  /**
+   * `true` if the equipment's user interface has haptic input elements, `false` if not.
+   */
+  hasHapticInput?: boolean;
+  /**
+   * `true` if the equipment's user interface forces users to recognize elements visually, `false` if not.
+   */
+  needsVisualRecognition?: boolean;
 
   /**
    * `true` if the equipment is easy to operate, `false` if people might face difficulties trying to understand how the equipment works, or `undefined` if this is unknown or irrelevant.
@@ -449,6 +477,16 @@ export const EquipmentPropertiesSchema = new SimpleSchema({
     optional: true,
     accessibility: {
       question: t`Is the equipment currently in operation?`,
+      accessibility: {
+        machineData: true
+      }
+    }
+  },
+  isAccessibleWithWheelchair: {
+    type: Boolean,
+    optional: true,
+    accessibility: {
+      question: t`Is the equipment accessible with a wheelchair?`,
       accessibility: {
         machineData: true
       }

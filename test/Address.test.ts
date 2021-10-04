@@ -8,6 +8,7 @@ export const structuredAddressMinimalFixture: StructuredAddress = {};
 const structuredAddressWithOptionalsFixture: StructuredAddress = {
   text: 'Testweg 12, Berlin',
   room: 'foo',
+  roomNumber: '123',
   level: 'foo',
   building: 'foo',
   house: 'foo',

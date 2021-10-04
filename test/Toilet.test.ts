@@ -8,11 +8,11 @@ const toiletWithOptionalsFixture: Toilet = {
   spaceOnUsersLeftSide: '>70',
   spaceOnUsersRightSide: '>70',
   spaceInFront: '>70',
-  foldingHandles: {
+  grabBars: {
     onUsersLeftSide: true,
     onUsersRightSide: true,
     topHeightFromFloor: '>85cm',
-    distanceBetweenHandles: '60 .. 65cm'
+    distanceBetweenBars: '60 .. 65cm'
   }
 };
 
