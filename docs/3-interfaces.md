@@ -1,6 +1,11 @@
-# Accessibility Criteria (‘Interfaces’)
+# Interfaces - things you can describe with A11yJSON
 
-### <a id="Accessibility">Accessibility</a>
+This is a list of data structures that A11yJSON specifies.
+
+They are meant to be interfaces in the software development sense: This means you can either use
+them as they are, or mix them into your own entity definitions.
+
+  ### <a id="Accessibility">Accessibility</a>
 
   Describes the physical (and sometimes human rated) accessibility of a place.
 
@@ -147,16 +152,16 @@ screen. This CAN contain Unicode characters such as ⟷ or ↘︎ as well as abb
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>id</td><td><code>string</code></td><td></td></tr><tr><td>provider</td><td><code>string</code></td><td></td></tr><tr><td>schemaName</td><td><code>string</code></td><td></td></tr></table>
   
 
-### <a id="FoldingHandles">FoldingHandles</a>
+### <a id="GrabBars">GrabBars</a>
 
   
 
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>distanceBetweenHandles</td><td><a href="#Length">Length</a></td><td><p>Indicates how far the handles are apart.</p>
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>distanceBetweenBars</td><td><a href="#Length">Length</a></td><td><p>Indicates how far the bars are apart.</p>
 </td></tr><tr><td>onUsersLeftSide</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if there is a folding handle on left side (from the perspective of somebody using the
 toilet), <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
 </td></tr><tr><td>onUsersRightSide</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p><code>true</code> if there is a folding handle on right side (from the perspective of somebody using the
 toilet), <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
-</td></tr><tr><td>topHeightFromFloor</td><td><a href="#Length">Length</a></td><td><p>Indicates how high the folding handles are (top edge, measured from the floor).</p>
+</td></tr><tr><td>topHeightFromFloor</td><td><a href="#Length">Length</a></td><td><p>Indicates how high the grab bars are (top edge, measured from the floor).</p>
 </td></tr></table>
   
 
@@ -427,8 +432,8 @@ ordered by decreasing size (starting with the highest subdivision below state)</
 
   
 
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>foldingHandles</td><td><a href="#FoldingHandles">FoldingHandles</a></td><td><p>Object describing the folding handles.</p>
-</td></tr><tr><td>hasFoldingHandles</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p>Does the toilet have folding handles?</p>
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>GrabBars</td><td><a href="#GrabBars">GrabBars</a></td><td><p>Object describing the grab bars.</p>
+</td></tr><tr><td>hasGrabBars</td><td><code>false</code>&nbsp;|&nbsp;<code>true</code></td><td><p>Does the toilet have grab bars?</p>
 </td></tr><tr><td>heightOfBase</td><td><a href="#Length">Length</a></td><td><p>Indicates the height of the toilet’s base.</p>
 </td></tr><tr><td>spaceInFront</td><td><a href="#Length">Length</a></td><td><p>How much space is in front of the toilet?</p>
 </td></tr><tr><td>spaceOnUsersLeftSide</td><td><a href="#Length">Length</a></td><td><p>How much space is on the left side of the toilet? (from the perspective of somebody using the
