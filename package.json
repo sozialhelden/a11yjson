@@ -1,6 +1,6 @@
 {
   "name": "@sozialhelden/a11yjson",
-  "version": "10.0.1",
+  "version": "10.0.2",
   "description": "A harmonized data schema for describing the accessibility of physical places",
   "keywords": [],
   "main": "dist/index.umd.js",
@@ -41,15 +41,6 @@
     "{src,test}/**/*.{ts,tsx}": [
       "prettier --write --single-quote"
     ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-conventional-changelog"
-    },
-    "validate-commit-msg": {
-      "types": "conventional-commit-types",
-      "helpMessage": "Use \"npm run commit\" instead, we use conventional-changelog format :) (https://github.com/commitizen/cz-cli)"
-    }
   },
   "jest": {
     "globals": {
@@ -92,7 +83,6 @@
     "babel-plugin-ttag": "^1.5.1",
     "babel-preset-env": "^1.7.0",
     "colors": "^1.1.2",
-    "commitizen": "^4.0.3",
     "coveralls": "^3.0.0",
     "cross-env": "^5.1.1",
     "cz-conventional-changelog": "^2.1.0",

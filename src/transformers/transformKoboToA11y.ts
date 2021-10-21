@@ -59,7 +59,7 @@ export type KoboResult = {
   'outside/entrance/picture': string;
   'outside/entrance/steps_count': string;
   'outside/entrance/steps_height': string;
-  'outside/name': string;
+  'outside/name': string | object;
   'inside/is_well_lit': YesNoResult;
   'inside/is_quiet': YesNoResult;
   'inside/toilet/basin_wheelchair_fits_belows': YesNoResult;
