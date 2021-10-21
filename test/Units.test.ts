@@ -69,15 +69,15 @@ describe('Length Schema', () => {
   });
   it('validateUnit', () => {
     const validationFunction = validateUnit('length');
-    expect(validationFunction.call({ value: '2m' })).toEqual('invalid_unit');
-    expect(validationFunction.call({ value: 'dB' })).toEqual('invalid_unit');
-    expect(validationFunction.call({ value: '1m' })).toBeUndefined();
-    expect(validationFunction.call({ value: 'centimeters' })).toBeUndefined();
-    expect(validationFunction.call({ value: '1 m' })).toBeUndefined();
+    expect(validationFunction.call({ value: '2m' } as any)).toEqual('invalid_unit');
+    expect(validationFunction.call({ value: 'dB' } as any)).toEqual('invalid_unit');
+    expect(validationFunction.call({ value: '1m' } as any)).toBeUndefined();
+    expect(validationFunction.call({ value: 'centimeters' } as any)).toBeUndefined();
+    expect(validationFunction.call({ value: '1 m' } as any)).toBeUndefined();
   });
   it('determineUnitKind', () => {
     expect(() => {
-      determineUnitKind('foo');
+      determineUnitKind('foo' as any);
     }).toThrow('No simple schema passed to determineUnitKind');
     expect(() => {
       determineUnitKind(SchemaWithLengthField);
