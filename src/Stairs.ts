@@ -62,14 +62,14 @@ export const StairsSchema = createSchemaInstance('Stairs', {
     optional: true,
     accessibility: {}
   },
-  'nosing.isHighContrast': {
+  hasHighContrastNosing: {
     type: Boolean,
     optional: true,
     accessibility: {
       question: t`Are the steps nosings marked for higher contrast?`
     }
   },
-  'nosing.isAntiSlip': {
+  hasAntiSlipNosing: {
     type: Boolean,
     optional: true,
     accessibility: {

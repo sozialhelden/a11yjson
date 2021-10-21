@@ -5,10 +5,8 @@ export const stairsMinimumFixture: Stairs = {};
 
 const stairsWithOptionalsFixture: Stairs = {
   count: 123,
-  nosing: {
-    isHighContrast: false,
-    isAntiSlip: true
-  },
+  hasHighContrastNosing: false,
+  hasAntiSlipNosing: true,
   name: 'mainStairs',
   stepHeight: '10cm',
   hasHandRail: true,
