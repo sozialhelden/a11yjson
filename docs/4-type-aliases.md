@@ -20,172 +20,6 @@ Definition: <a href="#StructuredAddress">StructuredAddress</a>&nbsp;|&nbsp;<code
 
 
 
-### <a id="AndRule">AndRule</a>
-
-
-
-Definition: <pre>{
-  "id": 604,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "children": [
-    {
-      "id": 605,
-      "name": "$and",
-      "kind": 32,
-      "kindString": "Variable",
-      "flags": {},
-      "sources": [
-        {
-          "fileName": "src/rules/RatingRules.ts",
-          "line": 40,
-          "character": 6
-        }
-      ],
-      "type": {
-        "type": "reference",
-        "name": "ReadonlyArray",
-        "typeArguments": [
-          {
-            "type": "reference",
-            "name": "Rule",
-            "id": 606
-          }
-        ]
-      }
-    }
-  ],
-  "groups": [
-    {
-      "title": "Variables",
-      "kind": 32,
-      "children": [
-        605
-      ]
-    }
-  ],
-  "sources": [
-    {
-      "fileName": "src/rules/RatingRules.ts",
-      "line": 39,
-      "character": 14
-    }
-  ]
-}</pre>
-
-
-
-### <a id="Comparable">Comparable</a>
-
-
-
-Definition: <code>number</code>&nbsp;|&nbsp;<code>string</code>&nbsp;|&nbsp;<a href="#Quantity">Quantity</a>
-
-
-
-### <a id="DefinedValue">DefinedValue</a>
-
-
-
-Definition: <pre>{
-  "id": 575,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "children": [
-    {
-      "id": 576,
-      "name": "$defined",
-      "kind": 32,
-      "kindString": "Variable",
-      "flags": {},
-      "sources": [
-        {
-          "fileName": "src/rules/RatingRules.ts",
-          "line": 11,
-          "character": 30
-        }
-      ],
-      "type": {
-        "type": "intrinsic",
-        "name": "true"
-      }
-    }
-  ],
-  "groups": [
-    {
-      "title": "Variables",
-      "kind": 32,
-      "children": [
-        576
-      ]
-    }
-  ],
-  "sources": [
-    {
-      "fileName": "src/rules/RatingRules.ts",
-      "line": 11,
-      "character": 19
-    }
-  ]
-}</pre>
-
-
-
-### <a id="Equals">Equals</a>
-
-
-
-Definition: <pre>{
-  "id": 590,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "children": [
-    {
-      "id": 591,
-      "name": "$eq",
-      "kind": 32,
-      "kindString": "Variable",
-      "flags": {},
-      "sources": [
-        {
-          "fileName": "src/rules/RatingRules.ts",
-          "line": 16,
-          "character": 19
-        }
-      ],
-      "type": {
-        "type": "reference",
-        "name": "Comparable",
-        "id": 567
-      }
-    }
-  ],
-  "groups": [
-    {
-      "title": "Variables",
-      "kind": 32,
-      "children": [
-        591
-      ]
-    }
-  ],
-  "sources": [
-    {
-      "fileName": "src/rules/RatingRules.ts",
-      "line": 16,
-      "character": 13
-    }
-  ]
-}</pre>
-
-
-
 ### <a id="EquipmentTypes">EquipmentTypes</a>
 
 
@@ -194,69 +28,11 @@ Definition: <code>"bed"</code>&nbsp;|&nbsp;<code>"wardrobe"</code>&nbsp;|&nbsp;<
 
 
 
-### <a id="ExistsValue">ExistsValue</a>
-
-
-
-Definition: <pre>{
-  "id": 569,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "children": [
-    {
-      "id": 570,
-      "name": "$exists",
-      "kind": 32,
-      "kindString": "Variable",
-      "flags": {},
-      "sources": [
-        {
-          "fileName": "src/rules/RatingRules.ts",
-          "line": 7,
-          "character": 28
-        }
-      ],
-      "type": {
-        "type": "intrinsic",
-        "name": "boolean"
-      }
-    }
-  ],
-  "groups": [
-    {
-      "title": "Variables",
-      "kind": 32,
-      "children": [
-        570
-      ]
-    }
-  ],
-  "sources": [
-    {
-      "fileName": "src/rules/RatingRules.ts",
-      "line": 7,
-      "character": 18
-    }
-  ]
-}</pre>
-
-
-
 ### <a id="ExtendedSchema">ExtendedSchema</a>
 
 
 
-Definition: {"type":"intersection","types":[{"type":"reflection","declaration":{"id":70,"name":"__type","kind":65536,"kindString":"Type literal","flags":{},"children":[{"id":71,"name":"__schemaType","kind":32,"kindString":"Variable","flags":{},"sources":[{"fileName":"src/SimpleSchemaExtensions.ts","line":155,"character":14}],"type":{"type":"intrinsic","name":"string"}},{"id":72,"name":"__schemaVersion","kind":32,"kindString":"Variable","flags":{},"sources":[{"fileName":"src/SimpleSchemaExtensions.ts","line":156,"character":17}],"type":{"type":"intrinsic","name":"string"}}],"groups":[{"title":"Variables","kind":32,"children":[71,72]}],"sources":[{"fileName":"src/SimpleSchemaExtensions.ts","line":154,"character":28}]}},{"type":"reference","name":"SimpleSchema"}]}
-
-
-
-### <a id="FieldTypes">FieldTypes</a>
-
-
-
-Definition: <code>"yesno"</code>&nbsp;|&nbsp;<code>"float"</code>&nbsp;|&nbsp;<code>"int"</code>
+Definition: {"type":"intersection","types":[{"type":"reflection","declaration":{"id":386,"name":"__type","kind":65536,"kindString":"Type literal","flags":{},"children":[{"id":387,"name":"__schemaType","kind":1024,"kindString":"Property","flags":{},"sources":[{"fileName":"SimpleSchemaExtensions.ts","line":155,"character":2}],"type":{"type":"intrinsic","name":"string"}},{"id":388,"name":"__schemaVersion","kind":1024,"kindString":"Property","flags":{},"sources":[{"fileName":"SimpleSchemaExtensions.ts","line":156,"character":2}],"type":{"type":"intrinsic","name":"string"}}],"groups":[{"title":"Properties","kind":1024,"children":[387,388]}],"sources":[{"fileName":"SimpleSchemaExtensions.ts","line":154,"character":29}]}},{"type":"reference","name":"SimpleSchema"}]}
 
 
 
@@ -265,108 +41,6 @@ Definition: <code>"yesno"</code>&nbsp;|&nbsp;<code>"float"</code>&nbsp;|&nbsp;<c
 
 
 Definition: <a href="#PointGeometry">PointGeometry</a>
-
-
-
-### <a id="GreaterThan">GreaterThan</a>
-
-
-
-Definition: <pre>{
-  "id": 584,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "children": [
-    {
-      "id": 585,
-      "name": "$gt",
-      "kind": 32,
-      "kindString": "Variable",
-      "flags": {},
-      "sources": [
-        {
-          "fileName": "src/rules/RatingRules.ts",
-          "line": 14,
-          "character": 24
-        }
-      ],
-      "type": {
-        "type": "reference",
-        "name": "Comparable",
-        "id": 567
-      }
-    }
-  ],
-  "groups": [
-    {
-      "title": "Variables",
-      "kind": 32,
-      "children": [
-        585
-      ]
-    }
-  ],
-  "sources": [
-    {
-      "fileName": "src/rules/RatingRules.ts",
-      "line": 14,
-      "character": 18
-    }
-  ]
-}</pre>
-
-
-
-### <a id="GreaterThanEquals">GreaterThanEquals</a>
-
-
-
-Definition: <pre>{
-  "id": 587,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "children": [
-    {
-      "id": 588,
-      "name": "$gte",
-      "kind": 32,
-      "kindString": "Variable",
-      "flags": {},
-      "sources": [
-        {
-          "fileName": "src/rules/RatingRules.ts",
-          "line": 15,
-          "character": 31
-        }
-      ],
-      "type": {
-        "type": "reference",
-        "name": "Comparable",
-        "id": 567
-      }
-    }
-  ],
-  "groups": [
-    {
-      "title": "Variables",
-      "kind": 32,
-      "children": [
-        588
-      ]
-    }
-  ],
-  "sources": [
-    {
-      "fileName": "src/rules/RatingRules.ts",
-      "line": 15,
-      "character": 24
-    }
-  ]
-}</pre>
 
 
 
@@ -388,156 +62,11 @@ Definition: <a href="#IetfLanguageTag">IetfLanguageTag</a>&nbsp;|&nbsp;<a href="
 
 
 
-### <a id="KoboAttachment">KoboAttachment</a>
-
-
-
-Definition: <pre>{
-  "id": 698,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "children": [
-    {
-      "id": 700,
-      "name": "download_url",
-      "kind": 32,
-      "kindString": "Variable",
-      "flags": {},
-      "sources": [
-        {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
-          "line": 12,
-          "character": 14
-        }
-      ],
-      "type": {
-        "type": "intrinsic",
-        "name": "string"
-      }
-    },
-    {
-      "id": 701,
-      "name": "filename",
-      "kind": 32,
-      "kindString": "Variable",
-      "flags": {},
-      "sources": [
-        {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
-          "line": 13,
-          "character": 10
-        }
-      ],
-      "type": {
-        "type": "intrinsic",
-        "name": "string"
-      }
-    },
-    {
-      "id": 703,
-      "name": "id",
-      "kind": 32,
-      "kindString": "Variable",
-      "flags": {},
-      "sources": [
-        {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
-          "line": 15,
-          "character": 4
-        }
-      ],
-      "type": {
-        "type": "intrinsic",
-        "name": "number"
-      }
-    },
-    {
-      "id": 702,
-      "name": "instance",
-      "kind": 32,
-      "kindString": "Variable",
-      "flags": {},
-      "sources": [
-        {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
-          "line": 14,
-          "character": 10
-        }
-      ],
-      "type": {
-        "type": "intrinsic",
-        "name": "number"
-      }
-    },
-    {
-      "id": 699,
-      "name": "mimetype",
-      "kind": 32,
-      "kindString": "Variable",
-      "flags": {},
-      "sources": [
-        {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
-          "line": 11,
-          "character": 10
-        }
-      ],
-      "type": {
-        "type": "intrinsic",
-        "name": "string"
-      }
-    },
-    {
-      "id": 704,
-      "name": "xform",
-      "kind": 32,
-      "kindString": "Variable",
-      "flags": {},
-      "sources": [
-        {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
-          "line": 16,
-          "character": 7
-        }
-      ],
-      "type": {
-        "type": "intrinsic",
-        "name": "number"
-      }
-    }
-  ],
-  "groups": [
-    {
-      "title": "Variables",
-      "kind": 32,
-      "children": [
-        700,
-        701,
-        703,
-        702,
-        699,
-        704
-      ]
-    }
-  ],
-  "sources": [
-    {
-      "fileName": "src/transformers/transformKoboToA11y.ts",
-      "line": 10,
-      "character": 28
-    }
-  ]
-}</pre>
-
-
-
 ### <a id="KoboKey">KoboKey</a>
 
 
 
-Definition: {"type":"typeOperator","operator":"keyof","target":{"type":"reference","name":"KoboResult"}}
+Definition: {"type":"typeOperator","operator":"keyof","target":{"type":"reference","id":528,"name":"KoboResult"}}
 
 
 
@@ -546,23 +75,23 @@ Definition: {"type":"typeOperator","operator":"keyof","target":{"type":"referenc
 
 
 Definition: <pre>{
-  "id": 708,
+  "id": 529,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "children": [
     {
-      "id": 726,
+      "id": 547,
       "name": "__version__",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 40,
-          "character": 13
+          "character": 2
         }
       ],
       "type": {
@@ -571,67 +100,58 @@ Definition: <pre>{
       }
     },
     {
-      "id": 712,
+      "id": 533,
       "name": "_attachments",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 26,
-          "character": 14
+          "character": 2
         }
       ],
       "type": {
         "type": "array",
         "elementType": {
           "type": "reference",
-          "name": "KoboAttachment",
-          "id": 697
+          "id": 520,
+          "name": "KoboAttachment"
         }
       }
     },
     {
-      "id": 716,
+      "id": 537,
       "name": "_bamboo_dataset_id",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {
         "isOptional": true
       },
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 30,
-          "character": 20
+          "character": 2
         }
       ],
       "type": {
-        "type": "union",
-        "types": [
-          {
-            "type": "intrinsic",
-            "name": "undefined"
-          },
-          {
-            "type": "intrinsic",
-            "name": "string"
-          }
-        ]
+        "type": "intrinsic",
+        "name": "string"
       }
     },
     {
-      "id": 711,
+      "id": 532,
       "name": "_geolocation",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 25,
-          "character": 14
+          "character": 2
         }
       ],
       "type": {
@@ -649,16 +169,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 709,
+      "id": 530,
       "name": "_id",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 23,
-          "character": 5
+          "character": 2
         }
       ],
       "type": {
@@ -667,18 +187,18 @@ Definition: <pre>{
       }
     },
     {
-      "id": 713,
+      "id": 534,
       "name": "_notes",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {
         "isOptional": true
       },
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 27,
-          "character": 8
+          "character": 2
         }
       ],
       "type": {
@@ -690,16 +210,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 725,
+      "id": 546,
       "name": "_status",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 39,
-          "character": 9
+          "character": 2
         }
       ],
       "type": {
@@ -708,16 +228,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 729,
+      "id": 550,
       "name": "_submission_time",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 43,
-          "character": 18
+          "character": 2
         }
       ],
       "type": {
@@ -726,16 +246,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 730,
+      "id": 551,
       "name": "_submitted_by",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 44,
-          "character": 15
+          "character": 2
         }
       ],
       "type": {
@@ -746,25 +266,25 @@ Definition: <pre>{
             "name": "unknown"
           },
           {
-            "type": "intrinsic",
-            "name": "null"
+            "type": "literal",
+            "value": null
           }
         ]
       }
     },
     {
-      "id": 714,
+      "id": 535,
       "name": "_tags",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {
         "isOptional": true
       },
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 28,
-          "character": 7
+          "character": 2
         }
       ],
       "type": {
@@ -776,16 +296,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 710,
+      "id": 531,
       "name": "_uuid",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 24,
-          "character": 7
+          "character": 2
         }
       ],
       "type": {
@@ -794,16 +314,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 728,
+      "id": 549,
       "name": "_validation_status",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 42,
-          "character": 20
+          "character": 2
         }
       ],
       "type": {
@@ -812,45 +332,36 @@ Definition: <pre>{
       }
     },
     {
-      "id": 715,
+      "id": 536,
       "name": "_xform_id_string",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {
         "isOptional": true
       },
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 29,
-          "character": 18
+          "character": 2
         }
       ],
       "type": {
-        "type": "union",
-        "types": [
-          {
-            "type": "intrinsic",
-            "name": "undefined"
-          },
-          {
-            "type": "intrinsic",
-            "name": "string"
-          }
-        ]
+        "type": "intrinsic",
+        "name": "string"
       }
     },
     {
-      "id": 727,
+      "id": 548,
       "name": "deviceid",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 41,
-          "character": 10
+          "character": 2
         }
       ],
       "type": {
@@ -859,16 +370,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 723,
+      "id": 544,
       "name": "end",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 37,
-          "character": 5
+          "character": 2
         }
       ],
       "type": {
@@ -877,16 +388,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 772,
+      "id": 593,
       "name": "feedback/feedback_matrix/no_interaction_problems",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 87,
-          "character": 52
+          "character": 2
         }
       ],
       "type": {
@@ -895,16 +406,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 771,
+      "id": 592,
       "name": "feedback/feedback_matrix/questions_fits_this_place",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 86,
-          "character": 54
+          "character": 2
         }
       ],
       "type": {
@@ -913,16 +424,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 721,
+      "id": 542,
       "name": "formhub/uuid",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 35,
-          "character": 16
+          "character": 2
         }
       ],
       "type": {
@@ -931,149 +442,142 @@ Definition: <pre>{
       }
     },
     {
-      "id": 775,
+      "id": 596,
       "name": "has_phone_number",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 90,
-          "character": 18
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoResult",
-        "id": 705
+        "name": "YesNoResult"
       }
     },
     {
-      "id": 764,
+      "id": 585,
       "name": "inquire/are_service_animals_allowed",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 79,
-          "character": 39
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoResult",
-        "id": 705
+        "name": "YesNoResult"
       }
     },
     {
-      "id": 765,
+      "id": 586,
       "name": "inquire/media/has_audio",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 80,
-          "character": 27
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoResult",
-        "id": 705
+        "name": "YesNoResult"
       }
     },
     {
-      "id": 766,
+      "id": 587,
       "name": "inquire/media/has_braille",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 81,
-          "character": 29
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoResult",
-        "id": 705
+        "name": "YesNoResult"
       }
     },
     {
-      "id": 767,
+      "id": 588,
       "name": "inquire/media/has_large_print",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 82,
-          "character": 33
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoResult",
-        "id": 705
+        "name": "YesNoResult"
       }
     },
     {
-      "id": 768,
+      "id": 589,
       "name": "inquire/staff_can_speak_sign_lang",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 83,
-          "character": 37
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoResult",
-        "id": 705
+        "name": "YesNoResult"
       }
     },
     {
-      "id": 769,
+      "id": 590,
       "name": "inquire/staff_has_disabled_training",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 84,
-          "character": 39
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoResult",
-        "id": 705
+        "name": "YesNoResult"
       }
     },
     {
-      "id": 770,
+      "id": 591,
       "name": "inquire/staff_spoken_sign_langs",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 85,
-          "character": 35
+          "character": 2
         }
       ],
       "type": {
@@ -1082,130 +586,124 @@ Definition: <pre>{
       }
     },
     {
-      "id": 763,
+      "id": 584,
       "name": "inside/has_wide_aisles",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 78,
-          "character": 26
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoResult",
-        "id": 705
+        "name": "YesNoResult"
       }
     },
     {
-      "id": 749,
+      "id": 570,
       "name": "inside/is_quiet",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 64,
-          "character": 19
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoResult",
-        "id": 705
+        "name": "YesNoResult"
       }
     },
     {
-      "id": 748,
+      "id": 569,
       "name": "inside/is_well_lit",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 63,
-          "character": 22
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoResult",
-        "id": 705
+        "name": "YesNoResult"
       }
     },
     {
-      "id": 752,
+      "id": 573,
       "name": "inside/toilet/basin_inside_cabin",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 67,
-          "character": 36
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoResult",
-        "id": 705
+        "name": "YesNoResult"
       }
     },
     {
-      "id": 750,
+      "id": 571,
       "name": "inside/toilet/basin_wheelchair_fits_belows",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 65,
-          "character": 46
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoResult",
-        "id": 705
+        "name": "YesNoResult"
       }
     },
     {
-      "id": 751,
+      "id": 572,
       "name": "inside/toilet/basin_wheelchair_reachable",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 66,
-          "character": 44
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoResult",
-        "id": 705
+        "name": "YesNoResult"
       }
     },
     {
-      "id": 753,
+      "id": 574,
       "name": "inside/toilet/door_width",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 68,
-          "character": 28
+          "character": 2
         }
       ],
       "type": {
@@ -1214,16 +712,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 754,
+      "id": 575,
       "name": "inside/toilet/free_space_front",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 69,
-          "character": 34
+          "character": 2
         }
       ],
       "type": {
@@ -1232,16 +730,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 755,
+      "id": 576,
       "name": "inside/toilet/free_space_left",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 70,
-          "character": 33
+          "character": 2
         }
       ],
       "type": {
@@ -1250,16 +748,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 756,
+      "id": 577,
       "name": "inside/toilet/free_space_right",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 71,
-          "character": 34
+          "character": 2
         }
       ],
       "type": {
@@ -1268,16 +766,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 757,
+      "id": 578,
       "name": "inside/toilet/has_arm_rests",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 72,
-          "character": 31
+          "character": 2
         }
       ],
       "type": {
@@ -1286,54 +784,52 @@ Definition: <pre>{
       }
     },
     {
-      "id": 758,
+      "id": 579,
       "name": "inside/toilet/has_basin",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 73,
-          "character": 27
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoResult",
-        "id": 705
+        "name": "YesNoResult"
       }
     },
     {
-      "id": 759,
+      "id": 580,
       "name": "inside/toilet/has_toilet",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 74,
-          "character": 28
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoResult",
-        "id": 705
+        "name": "YesNoResult"
       }
     },
     {
-      "id": 760,
+      "id": 581,
       "name": "inside/toilet/seat_height",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 75,
-          "character": 29
+          "character": 2
         }
       ],
       "type": {
@@ -1342,35 +838,34 @@ Definition: <pre>{
       }
     },
     {
-      "id": 761,
+      "id": 582,
       "name": "inside/toilet/stepless_access",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 76,
-          "character": 33
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoResult",
-        "id": 705
+        "name": "YesNoResult"
       }
     },
     {
-      "id": 762,
+      "id": 583,
       "name": "inside/toilet/toilet_photo",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 77,
-          "character": 30
+          "character": 2
         }
       ],
       "type": {
@@ -1379,35 +874,34 @@ Definition: <pre>{
       }
     },
     {
-      "id": 773,
+      "id": 594,
       "name": "is_wheelchair_accessible",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 88,
-          "character": 26
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoPartiallyResult",
-        "id": 706
+        "name": "YesNoPartiallyResult"
       }
     },
     {
-      "id": 720,
+      "id": 541,
       "name": "meta/instanceID",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 34,
-          "character": 19
+          "character": 2
         }
       ],
       "type": {
@@ -1416,16 +910,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 735,
+      "id": 556,
       "name": "outside/category/category_sub",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 50,
-          "character": 33
+          "character": 2
         }
       ],
       "type": {
@@ -1434,16 +928,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 736,
+      "id": 557,
       "name": "outside/category/category_top",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 51,
-          "character": 33
+          "character": 2
         }
       ],
       "type": {
@@ -1452,130 +946,124 @@ Definition: <pre>{
       }
     },
     {
-      "id": 738,
+      "id": 559,
       "name": "outside/entrance/has_automatic_door",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 53,
-          "character": 39
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoResult",
-        "id": 705
+        "name": "YesNoResult"
       }
     },
     {
-      "id": 739,
+      "id": 560,
       "name": "outside/entrance/has_door",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 54,
-          "character": 29
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoResult",
-        "id": 705
+        "name": "YesNoResult"
       }
     },
     {
-      "id": 740,
+      "id": 561,
       "name": "outside/entrance/has_entrance",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 55,
-          "character": 33
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoResult",
-        "id": 705
+        "name": "YesNoResult"
       }
     },
     {
-      "id": 737,
+      "id": 558,
       "name": "outside/entrance/has_fixed_ramp",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 52,
-          "character": 35
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoResult",
-        "id": 705
+        "name": "YesNoResult"
       }
     },
     {
-      "id": 741,
+      "id": 562,
       "name": "outside/entrance/has_mobile_ramp",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 56,
-          "character": 36
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoResult",
-        "id": 705
+        "name": "YesNoResult"
       }
     },
     {
-      "id": 742,
+      "id": 563,
       "name": "outside/entrance/has_steps",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 57,
-          "character": 30
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoResult",
-        "id": 705
+        "name": "YesNoResult"
       }
     },
     {
-      "id": 744,
+      "id": 565,
       "name": "outside/entrance/picture",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 59,
-          "character": 28
+          "character": 2
         }
       ],
       "type": {
@@ -1584,16 +1072,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 745,
+      "id": 566,
       "name": "outside/entrance/steps_count",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 60,
-          "character": 32
+          "character": 2
         }
       ],
       "type": {
@@ -1602,16 +1090,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 746,
+      "id": 567,
       "name": "outside/entrance/steps_height",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 61,
-          "character": 33
+          "character": 2
         }
       ],
       "type": {
@@ -1620,35 +1108,34 @@ Definition: <pre>{
       }
     },
     {
-      "id": 743,
+      "id": 564,
       "name": "outside/entrance/steps_low_height",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 58,
-          "character": 37
+          "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "name": "YesNoResult",
-        "id": 705
+        "name": "YesNoResult"
       }
     },
     {
-      "id": 732,
+      "id": 553,
       "name": "outside/geometry_point",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 47,
-          "character": 26
+          "character": 2
         }
       ],
       "type": {
@@ -1657,92 +1144,83 @@ Definition: <pre>{
       }
     },
     {
-      "id": 747,
+      "id": 568,
       "name": "outside/name",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 62,
-          "character": 16
+          "character": 2
         }
       ],
       "type": {
-        "type": "intrinsic",
-        "name": "string"
+        "type": "union",
+        "types": [
+          {
+            "type": "intrinsic",
+            "name": "string"
+          },
+          {
+            "type": "intrinsic",
+            "name": "object"
+          }
+        ]
       }
     },
     {
-      "id": 776,
+      "id": 597,
       "name": "phone_number",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {
         "isOptional": true
       },
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 91,
-          "character": 14
+          "character": 2
         }
       ],
       "type": {
-        "type": "union",
-        "types": [
-          {
-            "type": "intrinsic",
-            "name": "undefined"
-          },
-          {
-            "type": "intrinsic",
-            "name": "string"
-          }
-        ]
+        "type": "intrinsic",
+        "name": "string"
       }
     },
     {
-      "id": 718,
+      "id": 539,
       "name": "phonenumber",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {
         "isOptional": true
       },
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 32,
-          "character": 13
+          "character": 2
         }
       ],
       "type": {
-        "type": "union",
-        "types": [
-          {
-            "type": "intrinsic",
-            "name": "undefined"
-          },
-          {
-            "type": "intrinsic",
-            "name": "string"
-          }
-        ]
+        "type": "intrinsic",
+        "name": "string"
       }
     },
     {
-      "id": 779,
+      "id": 600,
       "name": "place_email_address",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 94,
-          "character": 21
+          "character": 2
         }
       ],
       "type": {
@@ -1751,16 +1229,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 777,
+      "id": 598,
       "name": "place_phone_number",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 92,
-          "character": 20
+          "character": 2
         }
       ],
       "type": {
@@ -1769,16 +1247,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 778,
+      "id": 599,
       "name": "place_website_url",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 93,
-          "character": 19
+          "character": 2
         }
       ],
       "type": {
@@ -1787,45 +1265,36 @@ Definition: <pre>{
       }
     },
     {
-      "id": 717,
+      "id": 538,
       "name": "simserial",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {
         "isOptional": true
       },
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 31,
-          "character": 11
+          "character": 2
         }
       ],
       "type": {
-        "type": "union",
-        "types": [
-          {
-            "type": "intrinsic",
-            "name": "undefined"
-          },
-          {
-            "type": "intrinsic",
-            "name": "string"
-          }
-        ]
+        "type": "intrinsic",
+        "name": "string"
       }
     },
     {
-      "id": 724,
+      "id": 545,
       "name": "start",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 38,
-          "character": 7
+          "character": 2
         }
       ],
       "type": {
@@ -1834,16 +1303,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 731,
+      "id": 552,
       "name": "subscriberid",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 45,
-          "character": 14
+          "character": 2
         }
       ],
       "type": {
@@ -1852,16 +1321,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 722,
+      "id": 543,
       "name": "today",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 36,
-          "character": 7
+          "character": 2
         }
       ],
       "type": {
@@ -1870,43 +1339,43 @@ Definition: <pre>{
       }
     },
     {
-      "id": 733,
+      "id": 554,
       "name": "user/user_measuring",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 48,
-          "character": 23
+          "character": 2
         }
       ],
       "type": {
         "type": "union",
         "types": [
           {
-            "type": "stringLiteral",
+            "type": "literal",
             "value": "inch"
           },
           {
-            "type": "stringLiteral",
+            "type": "literal",
             "value": "cm"
           }
         ]
       }
     },
     {
-      "id": 734,
+      "id": 555,
       "name": "user/user_record_type",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 49,
-          "character": 25
+          "character": 2
         }
       ],
       "type": {
@@ -1915,16 +1384,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 719,
+      "id": 540,
       "name": "username",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 33,
-          "character": 10
+          "character": 2
         }
       ],
       "type": {
@@ -1933,16 +1402,16 @@ Definition: <pre>{
       }
     },
     {
-      "id": 774,
+      "id": 595,
       "name": "wheelchair_comment",
-      "kind": 32,
-      "kindString": "Variable",
+      "kind": 1024,
+      "kindString": "Property",
       "flags": {},
       "sources": [
         {
-          "fileName": "src/transformers/transformKoboToA11y.ts",
+          "fileName": "transformers/transformKoboToA11y.ts",
           "line": 89,
-          "character": 20
+          "character": 2
         }
       ],
       "type": {
@@ -1953,88 +1422,88 @@ Definition: <pre>{
   ],
   "groups": [
     {
-      "title": "Variables",
-      "kind": 32,
+      "title": "Properties",
+      "kind": 1024,
       "children": [
-        726,
-        712,
-        716,
-        711,
-        709,
-        713,
-        725,
-        729,
-        730,
-        714,
-        710,
-        728,
-        715,
-        727,
-        723,
-        772,
-        771,
-        721,
-        775,
-        764,
-        765,
-        766,
-        767,
-        768,
-        769,
-        770,
-        763,
-        749,
-        748,
-        752,
-        750,
-        751,
-        753,
-        754,
-        755,
-        756,
-        757,
-        758,
-        759,
-        760,
-        761,
-        762,
-        773,
-        720,
-        735,
-        736,
-        738,
-        739,
-        740,
-        737,
-        741,
-        742,
-        744,
-        745,
-        746,
-        743,
-        732,
-        747,
-        776,
-        718,
-        779,
-        777,
-        778,
-        717,
-        724,
-        731,
-        722,
-        733,
-        734,
-        719,
-        774
+        547,
+        533,
+        537,
+        532,
+        530,
+        534,
+        546,
+        550,
+        551,
+        535,
+        531,
+        549,
+        536,
+        548,
+        544,
+        593,
+        592,
+        542,
+        596,
+        585,
+        586,
+        587,
+        588,
+        589,
+        590,
+        591,
+        584,
+        570,
+        569,
+        573,
+        571,
+        572,
+        574,
+        575,
+        576,
+        577,
+        578,
+        579,
+        580,
+        581,
+        582,
+        583,
+        594,
+        541,
+        556,
+        557,
+        559,
+        560,
+        561,
+        558,
+        562,
+        563,
+        565,
+        566,
+        567,
+        564,
+        553,
+        568,
+        597,
+        539,
+        600,
+        598,
+        599,
+        538,
+        545,
+        552,
+        543,
+        554,
+        555,
+        540,
+        595
       ]
     }
   ],
   "sources": [
     {
-      "fileName": "src/transformers/transformKoboToA11y.ts",
+      "fileName": "transformers/transformKoboToA11y.ts",
       "line": 22,
-      "character": 24
+      "character": 25
     }
   ]
 }</pre>
@@ -2049,259 +1518,47 @@ Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
 
 
 
-### <a id="LessThan">LessThan</a>
-
-
-
-Definition: <pre>{
-  "id": 578,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "children": [
-    {
-      "id": 579,
-      "name": "$lt",
-      "kind": 32,
-      "kindString": "Variable",
-      "flags": {},
-      "sources": [
-        {
-          "fileName": "src/rules/RatingRules.ts",
-          "line": 12,
-          "character": 21
-        }
-      ],
-      "type": {
-        "type": "reference",
-        "name": "Comparable",
-        "id": 567
-      }
-    }
-  ],
-  "groups": [
-    {
-      "title": "Variables",
-      "kind": 32,
-      "children": [
-        579
-      ]
-    }
-  ],
-  "sources": [
-    {
-      "fileName": "src/rules/RatingRules.ts",
-      "line": 12,
-      "character": 15
-    }
-  ]
-}</pre>
-
-
-
-### <a id="LessThanEquals">LessThanEquals</a>
-
-
-
-Definition: <pre>{
-  "id": 581,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "children": [
-    {
-      "id": 582,
-      "name": "$lte",
-      "kind": 32,
-      "kindString": "Variable",
-      "flags": {},
-      "sources": [
-        {
-          "fileName": "src/rules/RatingRules.ts",
-          "line": 13,
-          "character": 28
-        }
-      ],
-      "type": {
-        "type": "reference",
-        "name": "Comparable",
-        "id": 567
-      }
-    }
-  ],
-  "groups": [
-    {
-      "title": "Variables",
-      "kind": 32,
-      "children": [
-        582
-      ]
-    }
-  ],
-  "sources": [
-    {
-      "fileName": "src/rules/RatingRules.ts",
-      "line": 13,
-      "character": 21
-    }
-  ]
-}</pre>
-
-
-
 ### <a id="LocalizedString">LocalizedString</a>
 
 Localized strings can either be just `String`s, or be `Object`s with IETF language tags
 as property names and localized strings as property values.
 
 Definition: <code>string</code>&nbsp;|&nbsp;<pre>{
-  "id": 159,
+  "id": 173,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
-  "indexSignature": [
-    {
-      "id": 160,
-      "name": "__index",
-      "kind": 8192,
-      "kindString": "Index signature",
-      "flags": {},
-      "parameters": [
-        {
-          "id": 161,
-          "name": "key",
-          "kind": 32768,
-          "kindString": "Parameter",
-          "flags": {},
-          "type": {
-            "type": "intrinsic",
-            "name": "string"
-          }
-        }
-      ],
-      "type": {
-        "type": "intrinsic",
-        "name": "string"
-      }
-    }
-  ],
   "sources": [
     {
-      "fileName": "src/LocalizedString.ts",
+      "fileName": "LocalizedString.ts",
       "line": 8,
-      "character": 3
+      "character": 4
     }
-  ]
-}</pre>
-
-
-
-### <a id="MatchRule">MatchRule</a>
-
-
-
-Definition: <pre>{
-  "id": 597,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": [
-    {
-      "id": 598,
-      "name": "__index",
-      "kind": 8192,
-      "kindString": "Index signature",
-      "flags": {},
-      "parameters": [
-        {
-          "id": 599,
-          "name": "key",
-          "kind": 32768,
-          "kindString": "Parameter",
-          "flags": {},
-          "type": {
-            "type": "intrinsic",
-            "name": "string"
-          }
+  ],
+  "indexSignature": {
+    "id": 174,
+    "name": "__index",
+    "kind": 8192,
+    "kindString": "Index signature",
+    "flags": {},
+    "parameters": [
+      {
+        "id": 175,
+        "name": "key",
+        "kind": 32768,
+        "flags": {},
+        "type": {
+          "type": "intrinsic",
+          "name": "string"
         }
-      ],
-      "type": {
-        "type": "reference",
-        "name": "MatchValue",
-        "id": 595
       }
+    ],
+    "type": {
+      "type": "intrinsic",
+      "name": "string"
     }
-  ],
-  "sources": [
-    {
-      "fileName": "src/rules/RatingRules.ts",
-      "line": 33,
-      "character": 16
-    }
-  ]
-}</pre>
-
-
-
-### <a id="MatchValue">MatchValue</a>
-
-
-
-Definition: <code>string</code>&nbsp;|&nbsp;<code>number</code>&nbsp;|&nbsp;<code>null</code>&nbsp;|&nbsp;<code>boolean</code>&nbsp;|&nbsp;<a href="#DefinedValue">DefinedValue</a>&nbsp;|&nbsp;<a href="#ExistsValue">ExistsValue</a>&nbsp;|&nbsp;<a href="#UnknownOrValue">UnknownOrValue</a>&nbsp;|&nbsp;<a href="#LessThan">LessThan</a>&nbsp;|&nbsp;<a href="#LessThanEquals">LessThanEquals</a>&nbsp;|&nbsp;<a href="#GreaterThan">GreaterThan</a>&nbsp;|&nbsp;<a href="#GreaterThanEquals">GreaterThanEquals</a>&nbsp;|&nbsp;<a href="#Equals">Equals</a>&nbsp;|&nbsp;<a href="#NotEquals">NotEquals</a>
-
-
-
-### <a id="NotEquals">NotEquals</a>
-
-
-
-Definition: <pre>{
-  "id": 593,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "children": [
-    {
-      "id": 594,
-      "name": "$ne",
-      "kind": 32,
-      "kindString": "Variable",
-      "flags": {},
-      "sources": [
-        {
-          "fileName": "src/rules/RatingRules.ts",
-          "line": 17,
-          "character": 22
-        }
-      ],
-      "type": {
-        "type": "reference",
-        "name": "Comparable",
-        "id": 567
-      }
-    }
-  ],
-  "groups": [
-    {
-      "title": "Variables",
-      "kind": 32,
-      "children": [
-        594
-      ]
-    }
-  ],
-  "sources": [
-    {
-      "fileName": "src/rules/RatingRules.ts",
-      "line": 17,
-      "character": 16
-    }
-  ]
+  }
 }</pre>
 
 
@@ -2311,71 +1568,6 @@ Definition: <pre>{
 The allowed operators for comparison quantities
 
 Definition: <code>"<"</code>&nbsp;|&nbsp;<code>"<="</code>&nbsp;|&nbsp;<code>"=="</code>&nbsp;|&nbsp;<code>">="</code>&nbsp;|&nbsp;<code>">"</code>
-
-
-
-### <a id="Operators">Operators</a>
-
-
-
-Definition: <code>"$eq"</code>&nbsp;|&nbsp;<code>"$lt"</code>&nbsp;|&nbsp;<code>"$lte"</code>&nbsp;|&nbsp;<code>"$gt"</code>&nbsp;|&nbsp;<code>"$gte"</code>&nbsp;|&nbsp;<code>"$ne"</code>
-
-
-
-### <a id="OrRule">OrRule</a>
-
-
-
-Definition: <pre>{
-  "id": 601,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "children": [
-    {
-      "id": 602,
-      "name": "$or",
-      "kind": 32,
-      "kindString": "Variable",
-      "flags": {},
-      "sources": [
-        {
-          "fileName": "src/rules/RatingRules.ts",
-          "line": 37,
-          "character": 5
-        }
-      ],
-      "type": {
-        "type": "reference",
-        "name": "ReadonlyArray",
-        "typeArguments": [
-          {
-            "type": "reference",
-            "name": "Rule",
-            "id": 606
-          }
-        ]
-      }
-    }
-  ],
-  "groups": [
-    {
-      "title": "Variables",
-      "kind": 32,
-      "children": [
-        602
-      ]
-    }
-  ],
-  "sources": [
-    {
-      "fileName": "src/rules/RatingRules.ts",
-      "line": 36,
-      "character": 13
-    }
-  ]
-}</pre>
 
 
 
@@ -2421,75 +1613,9 @@ Definition: <code>"dedicatedToSmoking"</code>&nbsp;|&nbsp;<code>"allowedEverywhe
 
 
 
-### <a id="UnknownOrValue">UnknownOrValue</a>
-
-
-
-Definition: <pre>{
-  "id": 572,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "children": [
-    {
-      "id": 573,
-      "name": "$unknownOr",
-      "kind": 32,
-      "kindString": "Variable",
-      "flags": {},
-      "sources": [
-        {
-          "fileName": "src/rules/RatingRules.ts",
-          "line": 9,
-          "character": 34
-        }
-      ],
-      "type": {
-        "type": "intrinsic",
-        "name": "boolean"
-      }
-    }
-  ],
-  "groups": [
-    {
-      "title": "Variables",
-      "kind": 32,
-      "children": [
-        573
-      ]
-    }
-  ],
-  "sources": [
-    {
-      "fileName": "src/rules/RatingRules.ts",
-      "line": 9,
-      "character": 21
-    }
-  ]
-}</pre>
-
-
-
 ### <a id="Volume">Volume</a>
 
 
 
 Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
-
-
-
-### <a id="YesNoPartiallyResult">YesNoPartiallyResult</a>
-
-
-
-Definition: <code>"true"</code>&nbsp;|&nbsp;<code>"partially"</code>&nbsp;|&nbsp;<code>"false"</code>&nbsp;|&nbsp;<code>"undefined"</code>
-
-
-
-### <a id="YesNoResult">YesNoResult</a>
-
-
-
-Definition: <code>"true"</code>&nbsp;|&nbsp;<code>"false"</code>&nbsp;|&nbsp;<code>"undefined"</code>
 

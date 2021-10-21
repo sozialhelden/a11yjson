@@ -14,6 +14,7 @@ const interfaces = json.children.filter((c: any) => {
   !includes([
     'AccessibilitySchemaExtension',
     'EvaluatedAccessibilitySchemaExtension',
+    'KoboAttachment'
   ], t.name)
 );
 
@@ -27,6 +28,7 @@ const typeAliases = json.children.filter((c: any) => {
     'ForEachKeyInSchemasCallbackFunction',
     'QuestionFunction',
     'QuestionValue',
+    'KoboAttachment'
   ], t.name)) {
     return false;
   }
@@ -87,6 +89,14 @@ function StringLiteralType(props: { type: any, value: string }): string {
   return `<code>"${props.value}"</code>`
 }
 
+function LiteralType(props: { type: any, value: string }): string {
+  return `<code>${props.value === null ? 'undefined' : JSON.stringify(props.value)}</code>`
+}
+
+function BooleanType(props: { type: any, declaration: string }): string {
+  return `<code>boolean</code>`;
+}
+
 function UnionType(props: { type: any, name: string, types: any[] }): string {
   if (!props.types) {
     return '';
@@ -110,9 +120,11 @@ function Type(props: { object: any }): string {
     union: UnionType(props.object),
     intrinsic: IntrinsicType(props.object),
     stringLiteral: StringLiteralType(props.object),
+    literal: LiteralType(props.object),
     array: ArrayType(props.object),
     tuple: TupleType(props.object),
     reflection: ReflectionType(props.object),
+    boolean: BooleanType(props.object),
   }[props.object.type] || JSON.stringify(props.object);
 }
 

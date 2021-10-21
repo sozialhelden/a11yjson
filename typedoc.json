@@ -1,7 +1,5 @@
 {
-  "mode": "file",
-  "target": "es6",
-  "theme": "minimal",
+  "theme": "default",
   "externalPattern": "**/node_modules/**/*",
   "excludeExternals": true,
   "exclude": [

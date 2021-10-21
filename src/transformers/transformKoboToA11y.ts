@@ -234,8 +234,9 @@ export const transformKoboToA11y = (data: KoboResult) => {
     'properties.accessibility.accessibleWith.wheelchair': {
       true: true,
       false: false,
-      partially: false
-    }[data['is_wheelchair_accessible']],
+      partially: false,
+      undefined: undefined
+    }[data['is_wheelchair_accessible'] || 'undefined'],
     'properties.accessibility.partiallyAccessibleWith.wheelchair':
       data['is_wheelchair_accessible'] === 'partially' ? true : undefined,
     // entrances
