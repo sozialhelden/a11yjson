@@ -324,6 +324,42 @@ export interface EquipmentProperties {
    * IDs of this equipment in external data sources, for example in GTFS, IMDF or other sources.
    */
   ids?: ArrayLike<ExternalId>;
+
+  /**
+   * Length of a ramp.
+   */
+  rampLength?: Length;
+
+  /**
+   * Width of a ramp.
+   */
+  rampWidth?: Length;
+
+  /**
+   * The gradient of the ramp in percent (e.g. 6%).
+   */
+  rampSlope?: Length;
+
+  /**
+   * `true` if there is a handrail on the left side of the equipment, from the perspective in front of the entrance resp. the place.
+   * `false` if there is no handrail on the left side.
+   * `undefined` if there is no information about it.
+   */
+  hasHandrailLeft?: boolean;
+
+  /**
+   * `true` if there is a handrail on the right side of the equipment, from the perspective in front of the entrance resp. the place.
+   * `false` if there is no handrail on the right side.
+   * `undefined` if there is no information about it.
+   */
+  hasHandrailRight?: boolean;
+
+  /**
+   * `true` if the start and end of the ramp is colorized.
+   * `false` if the start and/or the end of the ramp is not colorized.
+   * `undefined` if there is no information about it.
+   */
+  rampStartAndEndColorized?: boolean;
 }
 
 export const EquipmentPropertiesSchema = new SimpleSchema({
@@ -617,6 +653,68 @@ export const EquipmentPropertiesSchema = new SimpleSchema({
     accessibility: {
       machineData: true,
       description: t`Reference to the place that this equipment belongs to (accessibility.cloud ID)`
+    }
+  },
+  rampLength: {
+    type: LengthSchema,
+    optional: true,
+    accessibility: {
+      componentHint: 'Unit',
+      question: t`What is the length of the ramp?`
+    }
+  },
+  rampWidth: {
+    type: LengthSchema,
+    optional: true,
+    accessibility: {
+      componentHint: 'Unit',
+      question: t`What is the width of the ramp?`
+    }
+  },
+  rampHeight: {
+    type: LengthSchema,
+    optional: true,
+    accessibility: {
+      componentHint: 'Unit',
+      question: t`What is the height of the ramp?`
+    }
+  },
+  rampGradient: {
+    type: LengthSchema,
+    optional: true,
+    accessibility: {
+      componentHint: 'Unit',
+      question: t`What is the gradient of the ramp?`
+    }
+  },
+  hasHandrailLeft: {
+    type: Boolean,
+    optional: true,
+    accessibility: {
+      question: t`Is there a handrail on the left side of the equipment, from from the perspective in front of the entrance resp. the place?`,
+      accessibility: {
+        machineData: true
+      }
+    }
+  },
+  hasHandrailRight: {
+    type: Boolean,
+    optional: true,
+    accessibility: {
+      question: t`Is there a handrail on the right side of the equipment, from from the perspective in front of the entrance resp. the place?`,
+      accessibility: {
+        machineData: true
+      }
+    }
+  },
+  rampStartAndEndColorized: {
+    type: Boolean,
+    optional: true,
+    accessibility: {
+      question: t`Is the start and end of the ramp colorized?`,
+      accessibility: {
+        machineData: true
+      }
     }
   }
 });
