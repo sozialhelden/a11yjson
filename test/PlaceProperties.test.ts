@@ -27,8 +27,6 @@ const placePropertiesWithOptionalsFixture: PlaceProperties = {
   emailAddress: 'sandy@example.com',
   description: 'Some Description',
   originalData: 'originalData',
-  eventId: 'T8j8nnnqMpbxpLxZu',
-  creatorId: 'T8j8nnnqMpbxpLxZu',
   sourceId: 'T8j8nnnqMpbxpLxZu',
   sourceImportId: 'T8j8nnnqMpbxpLxZu',
   parentPlaceInfoId: 'T8j8nnnqMpbxpLxZu',
