@@ -13,6 +13,7 @@ export interface PlaceProperties {
    * The official name of this place.
    */
   name?: LocalizedString;
+
   /**
    * The address of this place.
    * `null` indicates that this place has no address, `undefined` or missing property indicates
@@ -37,7 +38,7 @@ export interface PlaceProperties {
 
   /**
    * Category name of the place
-   * @example ‘Restaurant’
+   * @example ‘restaurant’
    */
   category: string;
 
@@ -124,7 +125,7 @@ export const PlacePropertiesSchema = new SimpleSchema({
     type: String,
     accessibility: {
       question: t`What type of place is this?`,
-      componentHint: 'Category'
+      componentHint: "Category"
     }
   },
   address: {
@@ -133,7 +134,7 @@ export const PlacePropertiesSchema = new SimpleSchema({
     label: t`Address`,
     accessibility: {
       question: t`Would you like to add the address?`,
-      componentHint: 'Address'
+      componentHint: "Address"
     }
   },
   description: {
@@ -141,7 +142,7 @@ export const PlacePropertiesSchema = new SimpleSchema({
     optional: true,
     accessibility: {
       question: t`How would you describe this place?`,
-      componentHint: 'TextArea'
+      componentHint: "TextArea"
     }
   },
   phoneNumber: {
@@ -151,7 +152,7 @@ export const PlacePropertiesSchema = new SimpleSchema({
       question: t`What is the phone number of this place?`,
       description: t`The phone number of this place, with international country code`,
       example: t`e.g. +1-555-555-90-210`,
-      componentHint: 'PhoneNumber'
+      componentHint: "PhoneNumber"
     }
   },
   emailAddress: {
@@ -203,7 +204,7 @@ export const PlacePropertiesSchema = new SimpleSchema({
       machineData: true
     }
   },
-  'sameAs.$': {
+  "sameAs.$": {
     type: String,
     accessibility: {
       machineData: true
