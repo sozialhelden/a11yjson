@@ -253,22 +253,6 @@ export const PlacePropertiesSchema = new SimpleSchema({
       machineData: true
     }
   },
-  eventId: {
-    type: String,
-    optional: true,
-    regEx: SimpleSchema.RegEx.Id,
-    accessibility: {
-      machineData: true
-    }
-  },
-  creatorId: {
-    type: String,
-    optional: true,
-    regEx: SimpleSchema.RegEx.Id,
-    accessibility: {
-      machineData: true
-    }
-  },
   sourceId: {
     type: String,
     optional: true,
