@@ -118,7 +118,7 @@ screen readers or voice assistants.</p>
 </td></tr><tr><td>hasTouchScreenInput</td><td><code>boolean</code></td><td><p><code>true</code> if the equipment has a touch screen, <code>false</code> if not.</p>
 </td></tr><tr><td>heightOfControls</td><td><a href="#Length">Length</a></td><td><p>Height of the lowest working controls that are needed to operate this equipment.
 <code>undefined</code> if the equipment needs no controls.</p>
-</td></tr><tr><td>ids</td><td><a href="#ExternalId">ExternalId</a>[]</td><td><p>IDs of this equipment in external data sources, for example in GTFS, IMDF or other sources.</p>
+</td></tr><tr><td>ids</td><td><a href="#Record">Record</a></td><td><p>IDs in other data sources that are linked to this equipment, indexed by schema/context.</p>
 </td></tr><tr><td>isEasyToUnderstand</td><td><code>boolean</code></td><td><p><code>true</code> if the equipment is easy to operate, <code>false</code> if people might face difficulties trying to understand how the equipment works, or <code>undefined</code> if this is unknown or irrelevant.</p>
 </td></tr><tr><td>isHighContrast</td><td><code>boolean</code></td><td><p><code>true</code> if the equipment’s controls or signs have high contrast, <code>false</code> if not, or <code>undefined</code> if this is unknown.</p>
 </td></tr><tr><td>isIndoors</td><td><code>boolean</code></td><td><p><code>true</code> if the equipment is indoors, <code>false</code> if it’s fully or partially outdoors, or <code>undefined</code> if this is unknown.</p>
@@ -141,6 +141,7 @@ it’s a good idea to use the operator facility management system ID here.</p>
 </td></tr><tr><td>placeInfoId</td><td><code>string</code></td><td><p>Place info ID that this equipment belongs to (accessibility.cloud ID)</p>
 </td></tr><tr><td>placeSourceId</td><td><code>string</code></td><td><p>ID of the place data source that this equipment belongs to (accessibility.cloud ID)</p>
 </td></tr><tr><td>plannedCompletionDate</td><td><a href="#Date">Date</a></td><td><p>Live status update.</p>
+</td></tr><tr><td>sameAs</td><td><code>string</code>[]</td><td><p>URLs of this equipment in external data sources, for example in GTFS, IMDF or other sources.</p>
 </td></tr><tr><td>servicePhoneNumber</td><td><a href="#LocalizedString">LocalizedString</a></td><td><p>Phone number where a service operator can be reached for help using this facility.</p>
 </td></tr><tr><td>serviceWebsiteUrl</td><td><a href="#LocalizedString">LocalizedString</a></td><td><p>URL pointing to a website that describes the equipnent or it&#39;s current operational status.</p>
 </td></tr><tr><td>shortDescription</td><td><a href="#LocalizedString">LocalizedString</a></td><td><p>Contains the same information as description, but in a shorter form, to save space on the
@@ -151,13 +152,6 @@ screen. This CAN contain Unicode characters such as ⟷ or ↘︎ as well as abb
 </td></tr><tr><td>stateExplanation</td><td><a href="#LocalizedString">LocalizedString</a></td><td><p>Live status update.</p>
 </td></tr><tr><td>stateLastUpdate</td><td><a href="#Date">Date</a></td><td><p>Live status update.</p>
 </td></tr></table>
-  
-
-### <a id="ExternalId">ExternalId</a>
-
-  
-
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>id</td><td><code>string</code></td><td></td></tr><tr><td>provider</td><td><code>string</code></td><td></td></tr><tr><td>schemaName</td><td><code>string</code></td><td></td></tr></table>
   
 
 ### <a id="GrabBars">GrabBars</a>
@@ -289,14 +283,25 @@ Not used right now, but added for future compatibility.</p>
 <code>null</code> indicates that this place has no address, <code>undefined</code> or missing property indicates
 unknown.</p>
 </td></tr><tr><td>category</td><td><code>string</code></td><td><p>Category name of the place</p>
-</td></tr><tr><td>creatorId</td><td><code>string</code></td><td></td></tr><tr><td>description</td><td><a href="#LocalizedString">LocalizedString</a></td><td><p>Text description containing helpful information for people with disabilities.</p>
+</td></tr><tr><td>description</td><td><a href="#LocalizedString">LocalizedString</a></td><td><p>Text description containing helpful information for people with disabilities.</p>
 </td></tr><tr><td>editPageUrl</td><td><a href="#LocalizedString">LocalizedString</a></td><td><p>URL of the original data source’s website on a subpage that allows to edit the original data.</p>
 </td></tr><tr><td>emailAddress</td><td><a href="#LocalizedString">LocalizedString</a></td><td><p>Email address of the place&#39;s operator where you can get accessibility relevant information.</p>
-</td></tr><tr><td>eventId</td><td><code>string</code></td><td></td></tr><tr><td>ids</td><td><a href="#ExternalId">ExternalId</a>[]</td><td></td></tr><tr><td>infoPageUrl</td><td><a href="#LocalizedString">LocalizedString</a></td><td><p>URL of the original data source’s website describing this place.</p>
+</td></tr><tr><td>ids</td><td><a href="#Record">Record</a></td><td><p>IDs in other data sources that are linked to this equipment, indexed by schema/context.</p>
+</td></tr><tr><td>infoPageUrl</td><td><a href="#LocalizedString">LocalizedString</a></td><td><p>URL of the original data source’s website describing this place.</p>
 </td></tr><tr><td>name</td><td><a href="#LocalizedString">LocalizedString</a></td><td><p>The official name of this place.</p>
-</td></tr><tr><td>originalData</td><td><code>any</code></td><td></td></tr><tr><td>originalId</td><td><code>string</code></td><td></td></tr><tr><td>parentPlaceId</td><td><code>string</code></td><td></td></tr><tr><td>phoneNumber</td><td><a href="#LocalizedString">LocalizedString</a></td><td><p>Phone number to call a representant of the place&#39;s operator.</p>
+</td></tr><tr><td>originalData</td><td><code>any</code></td><td><p>Original source data for this equipment (for easier debugging)</p>
+</td></tr><tr><td>originalId</td><td><code>string</code></td><td><p>ID of this place of interest in the original data source. To simplify communication with the
+data provider, it’s a good idea to use the provider&#39;s internal ID here.</p>
+</td></tr><tr><td>originalParentPlaceInfoId</td><td><code>string</code></td><td><p>The parent&#39;s place ID in the original dataset from the data provider.</p>
+</td></tr><tr><td>parentPlaceInfoId</td><td><code>string</code></td><td><p>ID of the parent place that this place belongs to.</p>
+</td></tr><tr><td>parentPlaceSourceId</td><td><code>string</code></td><td><p>Source ID of the parent place that this place belongs to. This is usually the same ID as
+<code>sourceId</code>, but the parent place can be from another data provider.</p>
+</td></tr><tr><td>phoneNumber</td><td><a href="#LocalizedString">LocalizedString</a></td><td><p>Phone number to call a representant of the place&#39;s operator.</p>
 </td></tr><tr><td>placeWebsiteUrl</td><td><a href="#LocalizedString">LocalizedString</a></td><td><p>URL of the place’s own website.</p>
-</td></tr><tr><td>sourceId</td><td><code>string</code></td><td></td></tr><tr><td>sourceImportId</td><td><code>string</code></td><td></td></tr></table>
+</td></tr><tr><td>sameAs</td><td><code>string</code>[]</td><td><p>URLs of this equipment in external data sources, for example in GTFS, IMDF or other sources.</p>
+</td></tr><tr><td>sourceId</td><td><code>string</code></td><td><p>ID of the data source that provided the place (accessibility.cloud ID)</p>
+</td></tr><tr><td>sourceImportId</td><td><code>string</code></td><td><p>ID of the import that created this place (accessibility.cloud ID)</p>
+</td></tr></table>
   
 
 ### <a id="PointGeometry">PointGeometry</a>
