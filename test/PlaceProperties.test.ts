@@ -1,6 +1,5 @@
 import { PlaceProperties, PlacePropertiesSchema } from '../src/PlaceProperties';
 
-import { validExternalIdWithExtendedDataFixture } from './ExternalId.test';
 import { accessibilityMinimumFixture } from './Accessibilty.test';
 import { structuredAddressMinimalFixture } from './Address.test';
 
@@ -17,7 +16,7 @@ export const placePropertiesWithNullFixture: PlaceProperties = {
 };
 
 const placePropertiesWithOptionalsFixture: PlaceProperties = {
-  ids: [validExternalIdWithExtendedDataFixture],
+  sameAs: ['https://www.wikidata.org/wiki/Q688541'],
   originalId: 'ChIJwSo_DaaHUocRFFAENf-ILl8',
   infoPageUrl: 'https://example.com/venue/ChIJwSo_DaaHUocRFFAENf-ILl8',
   editPageUrl: 'https://example.com/venue/ChIJwSo_DaaHUocRFFAENf-ILl8/edit',

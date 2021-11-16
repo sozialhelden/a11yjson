@@ -5,7 +5,6 @@ import {
   EquipmentTypes
 } from '../src/EquipmentProperties';
 import { doorMinimumFixture } from './Door.test';
-import { validExternalIdWithExtendedDataFixture } from './ExternalId.test';
 
 export const equipmentPropertiesMinimumFixture: EquipmentProperties = {};
 
@@ -45,7 +44,7 @@ const equipmentPropertiesFixture: EquipmentProperties = {
   originalPlaceInfoId: 'string',
   originalData: 'string',
   originalId: 'string',
-  ids: [validExternalIdWithExtendedDataFixture]
+  sameAs: ["https://www.wikidata.org/wiki/Q688541"]
 };
 
 const allValidFixtures = Object.freeze([

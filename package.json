@@ -35,11 +35,6 @@
     "prettier": "npx prettier --fix src/**/*.ts test/**/*.ts --write --single-quote",
     "deploy": "npm run build && npm run  test:prod && npm publish --access public"
   },
-  "lint-staged": {
-    "{src,test}/**/*.{ts,tsx}": [
-      "prettier --write --single-quote"
-    ]
-  },
   "devDependencies": {
     "@babel/plugin-transform-destructuring": "^7.5.0",
     "@babel/plugin-transform-parameters": "^7.9.3",
@@ -55,10 +50,8 @@
     "coveralls": "^3.0.0",
     "cross-env": "^5.1.1",
     "gh-pages": "^2.2.0",
-    "husky": "^1.2.1",
     "jest": "^27.3.1",
     "jest-cli": "^27.3.1",
-    "lint-staged": "^11.2.3",
     "prettier": "^1.8.2",
     "prompt": "^1.0.0",
     "prop-types": "^15.6.2",
@@ -90,10 +83,5 @@
     "react-style-tag": "^2.0.1",
     "simpl-schema": "^1.10.2",
     "ttag": "^1.7.22"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }

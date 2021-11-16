@@ -4,7 +4,6 @@ import SimpleSchema from 'simpl-schema';
 import './SimpleSchemaExtensions';
 
 import { Accessibility, AccessibilitySchema } from './Accessibility';
-import { ExternalId, ExternalIdSchema } from './ExternalId';
 import { Address, AddressSchema } from './Address';
 import { LocalizedStringSchema, LocalizedString } from './LocalizedString';
 
@@ -63,7 +62,7 @@ export interface PlaceProperties {
 
   // -- references to external services --
   originalId?: string;
-  ids?: Array<ExternalId>;
+  sameAs?: string[];
   originalData?: any;
 
   /**
@@ -166,14 +165,19 @@ export const PlacePropertiesSchema = new SimpleSchema({
     }
   },
   // machine data fields
-  ids: {
+  sameAs: {
     type: Array,
     optional: true,
     accessibility: {
       machineData: true
     }
   },
-  'ids.$': ExternalIdSchema,
+  'sameAs.$': {
+    type: String,
+    accessibility: {
+      machineData: true
+    }
+  },
   originalId: {
     type: String,
     optional: true,

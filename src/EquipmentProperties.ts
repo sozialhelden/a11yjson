@@ -5,7 +5,6 @@ import './SimpleSchemaExtensions';
 
 import { Door, DoorSchema } from './Door';
 import { Length, LengthSchema } from './Units';
-import { ExternalId, ExternalIdSchema } from './ExternalId';
 import {
   IetfLanguageTag,
   IetfLanguageTagOrSignLanguageCode,
@@ -321,17 +320,19 @@ export interface EquipmentProperties {
   originalId?: string;
 
   /**
-   * IDs of this equipment in external data sources, for example in GTFS, IMDF or other sources.
+   * URLs of this equipment in external data sources, for example in GTFS, IMDF or other sources.
    */
-  ids?: ArrayLike<ExternalId>;
+  sameAs?: string[];
 }
 
 export const EquipmentPropertiesSchema = new SimpleSchema({
-  ids: {
+  sameAs: {
     type: Array,
-    optional: true
+    optional: true,
   },
-  'ids.$': ExternalIdSchema,
+  'sameAs.$': {
+    type: String,
+  },
   originalId: {
     type: String,
     optional: true

@@ -19,5 +19,18 @@ export const RoomSchema = createSchemaInstance('Room', {
     accessibility: {
       machineData: true
     }
-  }
+  },
+  sameAs: {
+    type: Array,
+    optional: true,
+    accessibility: {
+      machineData: true
+    }
+  },
+  'sameAs.$': {
+    type: String,
+    accessibility: {
+      machineData: true
+    }
+  },
 });
