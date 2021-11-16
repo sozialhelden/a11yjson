@@ -323,6 +323,11 @@ export interface EquipmentProperties {
    * URLs of this equipment in external data sources, for example in GTFS, IMDF or other sources.
    */
   sameAs?: string[];
+
+  /**
+   * IDs in other data sources that are linked to this equipment, indexed by schema/context.
+   */
+  ids?: Record<string, string>;
 }
 
 export const EquipmentPropertiesSchema = new SimpleSchema({
@@ -332,6 +337,11 @@ export const EquipmentPropertiesSchema = new SimpleSchema({
   },
   'sameAs.$': {
     type: String,
+  },
+  ids: {
+    type: Object,
+    optional: true,
+    blackbox: true,
   },
   originalId: {
     type: String,

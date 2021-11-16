@@ -31,6 +31,13 @@ const placePropertiesWithOptionalsFixture: PlaceProperties = {
   creatorId: 'T8j8nnnqMpbxpLxZu',
   sourceId: 'T8j8nnnqMpbxpLxZu',
   sourceImportId: 'T8j8nnnqMpbxpLxZu',
+  parentPlaceInfoId: 'T8j8nnnqMpbxpLxZu',
+  originalParentPlaceInfoId: 'T8j8nnnqMpbxpLxZu',
+  parentPlaceSourceId: 'T8j8nnnqMpbxpLxZu',
+  ids: {
+    'wikidata': 'Q688541',
+    'hafas': '12345'
+  },
   accessibility: accessibilityMinimumFixture
 };
 

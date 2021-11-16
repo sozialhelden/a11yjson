@@ -44,7 +44,11 @@ const equipmentPropertiesFixture: EquipmentProperties = {
   originalPlaceInfoId: 'string',
   originalData: 'string',
   originalId: 'string',
-  sameAs: ["https://www.wikidata.org/wiki/Q688541"]
+  sameAs: ["https://www.wikidata.org/wiki/Q688541"],
+  ids: {
+    'wikidata': 'Q688541',
+    'hafas': '12345'
+  },
 };
 
 const allValidFixtures = Object.freeze([

@@ -1,11 +1,11 @@
-import { t } from 'ttag';
-import SimpleSchema from 'simpl-schema';
+import { t } from "ttag";
+import SimpleSchema from "simpl-schema";
 
-import './SimpleSchemaExtensions';
+import "./SimpleSchemaExtensions";
 
-import { Accessibility, AccessibilitySchema } from './Accessibility';
-import { Address, AddressSchema } from './Address';
-import { LocalizedStringSchema, LocalizedString } from './LocalizedString';
+import { Accessibility, AccessibilitySchema } from "./Accessibility";
+import { Address, AddressSchema } from "./Address";
+import { LocalizedStringSchema, LocalizedString } from "./LocalizedString";
 
 export interface PlaceProperties {
   // properties
@@ -49,21 +49,52 @@ export interface PlaceProperties {
 
   // - machine data fields -
 
-  // -- wheelmap.pro fields --
+  /**
+   * ID of the parent place that this place belongs to.
+   */
+  parentPlaceInfoId?: string;
 
-  eventId?: string; // only valid for mapping event
-  creatorId?: string; // only valid for mapping event
+  /**
+   * The parent's place ID in the original dataset from the data provider.
+   */
+  originalParentPlaceInfoId?: string;
 
-  // -- accessibility-cloud fields --
+  /**
+   * Source ID of the parent place that this place belongs to. This is usually the same ID as
+   * `sourceId`, but the parent place can be from another data provider.
+   */
+  parentPlaceSourceId?: string;
 
-  parentPlaceId?: string;
+  /**
+   * ID of the data source that provided the place (accessibility.cloud ID)
+   */
   sourceId?: string;
-  sourceImportId?: string; // only valid for import
 
-  // -- references to external services --
+  /**
+   * ID of the import that created this place (accessibility.cloud ID)
+   */
+  sourceImportId?: string;
+
+  /**
+   * ID of this place of interest in the original data source. To simplify communication with the
+   * data provider, it’s a good idea to use the provider's internal ID here.
+   */
   originalId?: string;
+
+  /**
+   * URLs of this equipment in external data sources, for example in GTFS, IMDF or other sources.
+   */
   sameAs?: string[];
+
+  /**
+   * Original source data for this equipment (for easier debugging)
+   */
   originalData?: any;
+
+  /**
+   * IDs in other data sources that are linked to this equipment, indexed by schema/context.
+   */
+  ids?: Record<string, string>;
 
   /**
    * URL of the original data source’s website describing this place.
@@ -178,6 +209,11 @@ export const PlacePropertiesSchema = new SimpleSchema({
       machineData: true
     }
   },
+  ids: {
+    type: Object,
+    optional: true,
+    blackbox: true
+  },
   originalId: {
     type: String,
     optional: true,
@@ -185,7 +221,23 @@ export const PlacePropertiesSchema = new SimpleSchema({
       machineData: true
     }
   },
-  parentPlaceId: {
+  parentPlaceInfoId: {
+    type: String,
+    optional: true,
+    regEx: SimpleSchema.RegEx.Id,
+    accessibility: {
+      machineData: true
+    }
+  },
+  originalParentPlaceInfoId: {
+    type: String,
+    optional: true,
+    regEx: SimpleSchema.RegEx.Id,
+    accessibility: {
+      machineData: true
+    }
+  },
+  parentPlaceSourceId: {
     type: String,
     optional: true,
     regEx: SimpleSchema.RegEx.Id,
