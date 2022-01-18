@@ -79,7 +79,7 @@
     "kind-of": "^6.0.3",
     "lodash": "^4.17.21",
     "markdown-table": "^2.0.0",
-    "marked": "^2.0.0",
+    "marked": "^4.0.10",
     "react-style-tag": "^2.0.1",
     "simpl-schema": "^1.10.2",
     "ttag": "^1.7.22"
