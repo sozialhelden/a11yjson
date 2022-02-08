@@ -14,7 +14,7 @@ Please respect our [Code of Conduct](https://github.com/sozialhelden/a11yjson/bl
 Even if you don’t have the resources to contribute code, you can help A11yJSON by spreading the word.
 
 - [Share your support on Twitter](https://twitter.com/share?text=I support A11yJSON, and you should too. RT to spread this!&url=https://a11yjson.org&hashtags=accessibility,a11y,a11yjson,sozialhelden)
-- Give the repository a Star [on GitHub](https://github.org/sozialhelden/a11yjson)
+- Give the repository a Star [on GitHub](https://github.com/sozialhelden/a11yjson)
 
 ## Pull requests
 
