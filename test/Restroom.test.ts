@@ -17,6 +17,9 @@ const restroomWithOptionalsFixture: Restroom = {
   },
   turningSpaceInside: '>150cm',
   hasSupportRails: true,
+  hasChangingTableForBabies: true,
+  hasChangingTableForAdults: true,
+  hasCeilingHoist: true,
   toilet: toiletMinimumFixture,
   hasBathTub: true,
   hasShower: true,
@@ -24,7 +27,7 @@ const restroomWithOptionalsFixture: Restroom = {
   shower: showerMinimumFixture,
   heightOfSoap: '100 .. 120cm',
   heightOfDrier: '100 .. 120cm',
-  washBasin: washBasinFixture
+  washBasin: washBasinFixture,
 };
 
 const allValidFixtures = Object.freeze([restroomMinimumFixture, restroomWithOptionalsFixture]);

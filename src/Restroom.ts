@@ -57,12 +57,26 @@ export interface Restroom extends Room {
    * `true` if there support rails on the walls
    */
   hasSupportRails?: boolean;
+
+  /**
+   * `true` if the restroom has a changing table for babies, `false` if not.
+   */
+  hasChangingTableForBabies?: boolean;
+
+  /**
+   * `true` if the restroom has a changing table for adults, `false` if not.
+   */
+  hasChangingTableForAdults?: boolean;
+
+  /**
+   * `true` if the restroom has a ceiling hoist, `false` if not.
+   */
+  hasCeilingHoist?: boolean;
+
   /**
    * Object describing a toilet inside the restroom, if existing.
    */
   toilet?: Toilet;
-
-  // QUESTION no definition of bathtub
 
   /**
    * `true` if there is a bath tub in this room, `false` if not, `undefined` if condition is
@@ -78,7 +92,7 @@ export interface Restroom extends Room {
    * `true` if the restroom has a shower, `false` if not, `undefined` if condition is unknown.
    */
   hasShower?: boolean;
-  // QUESTION is this equipment that can be broken/have disruptions?
+
   /**
    * Object describing a shower inside this restroom, if existing.
    */
@@ -132,6 +146,27 @@ export const RestroomSchema = createSchemaInstance(
       optional: true,
       accessibility: {
         question: t`Are there support rails on the walls?`
+      }
+    },
+    hasChangingTableForBabies: {
+      type: Boolean,
+      optional: true,
+      accessibility: {
+        question: t`Does the restroom have a changing table for babies?`
+      }
+    },
+    hasChangingTableForAdults: {
+      type: Boolean,
+      optional: true,
+      accessibility: {
+        question: t`Does the restroom have a changing table for adults?`
+      }
+    },
+    hasCeilingHoist: {
+      type: Boolean,
+      optional: true,
+      accessibility: {
+        question: t`Does the restroom have a ceiling hoist?`
       }
     },
     toilet: {
