@@ -32,7 +32,7 @@ Definition: <code>"bed"</code>&nbsp;|&nbsp;<code>"wardrobe"</code>&nbsp;|&nbsp;<
 
 
 
-Definition: {"type":"intersection","types":[{"type":"reflection","declaration":{"id":383,"name":"__type","kind":65536,"kindString":"Type literal","flags":{},"children":[{"id":384,"name":"__schemaType","kind":1024,"kindString":"Property","flags":{},"sources":[{"fileName":"SimpleSchemaExtensions.ts","line":155,"character":2}],"type":{"type":"intrinsic","name":"string"}},{"id":385,"name":"__schemaVersion","kind":1024,"kindString":"Property","flags":{},"sources":[{"fileName":"SimpleSchemaExtensions.ts","line":156,"character":2}],"type":{"type":"intrinsic","name":"string"}}],"groups":[{"title":"Properties","kind":1024,"children":[384,385]}],"sources":[{"fileName":"SimpleSchemaExtensions.ts","line":154,"character":29}]}},{"type":"reference","name":"SimpleSchema"}]}
+Definition: {"type":"intersection","types":[{"type":"reflection","declaration":{"id":386,"name":"__type","kind":65536,"kindString":"Type literal","flags":{},"children":[{"id":387,"name":"__schemaType","kind":1024,"kindString":"Property","flags":{},"sources":[{"fileName":"SimpleSchemaExtensions.ts","line":155,"character":2}],"type":{"type":"intrinsic","name":"string"}},{"id":388,"name":"__schemaVersion","kind":1024,"kindString":"Property","flags":{},"sources":[{"fileName":"SimpleSchemaExtensions.ts","line":156,"character":2}],"type":{"type":"intrinsic","name":"string"}}],"groups":[{"title":"Properties","kind":1024,"children":[387,388]}],"sources":[{"fileName":"SimpleSchemaExtensions.ts","line":154,"character":29}]}},{"type":"reference","name":"SimpleSchema"}]}
 
 
 
@@ -66,7 +66,7 @@ Definition: <a href="#IetfLanguageTag">IetfLanguageTag</a>&nbsp;|&nbsp;<a href="
 
 
 
-Definition: {"type":"typeOperator","operator":"keyof","target":{"type":"reference","id":525,"name":"KoboResult"}}
+Definition: {"type":"typeOperator","operator":"keyof","target":{"type":"reference","id":528,"name":"KoboResult"}}
 
 
 
@@ -75,14 +75,14 @@ Definition: {"type":"typeOperator","operator":"keyof","target":{"type":"referenc
 
 
 Definition: <pre>{
-  "id": 526,
+  "id": 529,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "children": [
     {
-      "id": 544,
+      "id": 547,
       "name": "__version__",
       "kind": 1024,
       "kindString": "Property",
@@ -100,7 +100,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 530,
+      "id": 533,
       "name": "_attachments",
       "kind": 1024,
       "kindString": "Property",
@@ -116,13 +116,13 @@ Definition: <pre>{
         "type": "array",
         "elementType": {
           "type": "reference",
-          "id": 517,
+          "id": 520,
           "name": "KoboAttachment"
         }
       }
     },
     {
-      "id": 534,
+      "id": 537,
       "name": "_bamboo_dataset_id",
       "kind": 1024,
       "kindString": "Property",
@@ -142,7 +142,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 529,
+      "id": 532,
       "name": "_geolocation",
       "kind": 1024,
       "kindString": "Property",
@@ -169,7 +169,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 527,
+      "id": 530,
       "name": "_id",
       "kind": 1024,
       "kindString": "Property",
@@ -187,7 +187,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 531,
+      "id": 534,
       "name": "_notes",
       "kind": 1024,
       "kindString": "Property",
@@ -210,7 +210,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 543,
+      "id": 546,
       "name": "_status",
       "kind": 1024,
       "kindString": "Property",
@@ -228,7 +228,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 547,
+      "id": 550,
       "name": "_submission_time",
       "kind": 1024,
       "kindString": "Property",
@@ -246,7 +246,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 548,
+      "id": 551,
       "name": "_submitted_by",
       "kind": 1024,
       "kindString": "Property",
@@ -273,7 +273,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 532,
+      "id": 535,
       "name": "_tags",
       "kind": 1024,
       "kindString": "Property",
@@ -296,7 +296,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 528,
+      "id": 531,
       "name": "_uuid",
       "kind": 1024,
       "kindString": "Property",
@@ -314,7 +314,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 546,
+      "id": 549,
       "name": "_validation_status",
       "kind": 1024,
       "kindString": "Property",
@@ -332,7 +332,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 533,
+      "id": 536,
       "name": "_xform_id_string",
       "kind": 1024,
       "kindString": "Property",
@@ -352,7 +352,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 545,
+      "id": 548,
       "name": "deviceid",
       "kind": 1024,
       "kindString": "Property",
@@ -370,7 +370,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 541,
+      "id": 544,
       "name": "end",
       "kind": 1024,
       "kindString": "Property",
@@ -388,7 +388,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 590,
+      "id": 593,
       "name": "feedback/feedback_matrix/no_interaction_problems",
       "kind": 1024,
       "kindString": "Property",
@@ -406,7 +406,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 589,
+      "id": 592,
       "name": "feedback/feedback_matrix/questions_fits_this_place",
       "kind": 1024,
       "kindString": "Property",
@@ -424,7 +424,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 539,
+      "id": 542,
       "name": "formhub/uuid",
       "kind": 1024,
       "kindString": "Property",
@@ -442,7 +442,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 593,
+      "id": 596,
       "name": "has_phone_number",
       "kind": 1024,
       "kindString": "Property",
@@ -460,7 +460,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 582,
+      "id": 585,
       "name": "inquire/are_service_animals_allowed",
       "kind": 1024,
       "kindString": "Property",
@@ -478,7 +478,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 583,
+      "id": 586,
       "name": "inquire/media/has_audio",
       "kind": 1024,
       "kindString": "Property",
@@ -496,7 +496,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 584,
+      "id": 587,
       "name": "inquire/media/has_braille",
       "kind": 1024,
       "kindString": "Property",
@@ -514,7 +514,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 585,
+      "id": 588,
       "name": "inquire/media/has_large_print",
       "kind": 1024,
       "kindString": "Property",
@@ -532,7 +532,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 586,
+      "id": 589,
       "name": "inquire/staff_can_speak_sign_lang",
       "kind": 1024,
       "kindString": "Property",
@@ -550,7 +550,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 587,
+      "id": 590,
       "name": "inquire/staff_has_disabled_training",
       "kind": 1024,
       "kindString": "Property",
@@ -568,7 +568,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 588,
+      "id": 591,
       "name": "inquire/staff_spoken_sign_langs",
       "kind": 1024,
       "kindString": "Property",
@@ -586,7 +586,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 581,
+      "id": 584,
       "name": "inside/has_wide_aisles",
       "kind": 1024,
       "kindString": "Property",
@@ -604,7 +604,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 567,
+      "id": 570,
       "name": "inside/is_quiet",
       "kind": 1024,
       "kindString": "Property",
@@ -622,7 +622,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 566,
+      "id": 569,
       "name": "inside/is_well_lit",
       "kind": 1024,
       "kindString": "Property",
@@ -640,7 +640,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 570,
+      "id": 573,
       "name": "inside/toilet/basin_inside_cabin",
       "kind": 1024,
       "kindString": "Property",
@@ -658,7 +658,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 568,
+      "id": 571,
       "name": "inside/toilet/basin_wheelchair_fits_belows",
       "kind": 1024,
       "kindString": "Property",
@@ -676,7 +676,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 569,
+      "id": 572,
       "name": "inside/toilet/basin_wheelchair_reachable",
       "kind": 1024,
       "kindString": "Property",
@@ -694,7 +694,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 571,
+      "id": 574,
       "name": "inside/toilet/door_width",
       "kind": 1024,
       "kindString": "Property",
@@ -712,7 +712,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 572,
+      "id": 575,
       "name": "inside/toilet/free_space_front",
       "kind": 1024,
       "kindString": "Property",
@@ -730,7 +730,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 573,
+      "id": 576,
       "name": "inside/toilet/free_space_left",
       "kind": 1024,
       "kindString": "Property",
@@ -748,7 +748,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 574,
+      "id": 577,
       "name": "inside/toilet/free_space_right",
       "kind": 1024,
       "kindString": "Property",
@@ -766,7 +766,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 575,
+      "id": 578,
       "name": "inside/toilet/has_arm_rests",
       "kind": 1024,
       "kindString": "Property",
@@ -784,7 +784,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 576,
+      "id": 579,
       "name": "inside/toilet/has_basin",
       "kind": 1024,
       "kindString": "Property",
@@ -802,7 +802,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 577,
+      "id": 580,
       "name": "inside/toilet/has_toilet",
       "kind": 1024,
       "kindString": "Property",
@@ -820,7 +820,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 578,
+      "id": 581,
       "name": "inside/toilet/seat_height",
       "kind": 1024,
       "kindString": "Property",
@@ -838,7 +838,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 579,
+      "id": 582,
       "name": "inside/toilet/stepless_access",
       "kind": 1024,
       "kindString": "Property",
@@ -856,7 +856,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 580,
+      "id": 583,
       "name": "inside/toilet/toilet_photo",
       "kind": 1024,
       "kindString": "Property",
@@ -874,7 +874,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 591,
+      "id": 594,
       "name": "is_wheelchair_accessible",
       "kind": 1024,
       "kindString": "Property",
@@ -892,7 +892,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 538,
+      "id": 541,
       "name": "meta/instanceID",
       "kind": 1024,
       "kindString": "Property",
@@ -910,7 +910,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 553,
+      "id": 556,
       "name": "outside/category/category_sub",
       "kind": 1024,
       "kindString": "Property",
@@ -928,7 +928,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 554,
+      "id": 557,
       "name": "outside/category/category_top",
       "kind": 1024,
       "kindString": "Property",
@@ -946,7 +946,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 556,
+      "id": 559,
       "name": "outside/entrance/has_automatic_door",
       "kind": 1024,
       "kindString": "Property",
@@ -964,7 +964,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 557,
+      "id": 560,
       "name": "outside/entrance/has_door",
       "kind": 1024,
       "kindString": "Property",
@@ -982,7 +982,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 558,
+      "id": 561,
       "name": "outside/entrance/has_entrance",
       "kind": 1024,
       "kindString": "Property",
@@ -1000,7 +1000,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 555,
+      "id": 558,
       "name": "outside/entrance/has_fixed_ramp",
       "kind": 1024,
       "kindString": "Property",
@@ -1018,7 +1018,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 559,
+      "id": 562,
       "name": "outside/entrance/has_mobile_ramp",
       "kind": 1024,
       "kindString": "Property",
@@ -1036,7 +1036,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 560,
+      "id": 563,
       "name": "outside/entrance/has_steps",
       "kind": 1024,
       "kindString": "Property",
@@ -1054,7 +1054,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 562,
+      "id": 565,
       "name": "outside/entrance/picture",
       "kind": 1024,
       "kindString": "Property",
@@ -1072,7 +1072,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 563,
+      "id": 566,
       "name": "outside/entrance/steps_count",
       "kind": 1024,
       "kindString": "Property",
@@ -1090,7 +1090,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 564,
+      "id": 567,
       "name": "outside/entrance/steps_height",
       "kind": 1024,
       "kindString": "Property",
@@ -1108,7 +1108,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 561,
+      "id": 564,
       "name": "outside/entrance/steps_low_height",
       "kind": 1024,
       "kindString": "Property",
@@ -1126,7 +1126,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 550,
+      "id": 553,
       "name": "outside/geometry_point",
       "kind": 1024,
       "kindString": "Property",
@@ -1144,7 +1144,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 565,
+      "id": 568,
       "name": "outside/name",
       "kind": 1024,
       "kindString": "Property",
@@ -1171,7 +1171,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 594,
+      "id": 597,
       "name": "phone_number",
       "kind": 1024,
       "kindString": "Property",
@@ -1191,7 +1191,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 536,
+      "id": 539,
       "name": "phonenumber",
       "kind": 1024,
       "kindString": "Property",
@@ -1211,7 +1211,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 597,
+      "id": 600,
       "name": "place_email_address",
       "kind": 1024,
       "kindString": "Property",
@@ -1229,7 +1229,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 595,
+      "id": 598,
       "name": "place_phone_number",
       "kind": 1024,
       "kindString": "Property",
@@ -1247,7 +1247,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 596,
+      "id": 599,
       "name": "place_website_url",
       "kind": 1024,
       "kindString": "Property",
@@ -1265,7 +1265,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 535,
+      "id": 538,
       "name": "simserial",
       "kind": 1024,
       "kindString": "Property",
@@ -1285,7 +1285,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 542,
+      "id": 545,
       "name": "start",
       "kind": 1024,
       "kindString": "Property",
@@ -1303,7 +1303,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 549,
+      "id": 552,
       "name": "subscriberid",
       "kind": 1024,
       "kindString": "Property",
@@ -1321,7 +1321,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 540,
+      "id": 543,
       "name": "today",
       "kind": 1024,
       "kindString": "Property",
@@ -1339,7 +1339,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 551,
+      "id": 554,
       "name": "user/user_measuring",
       "kind": 1024,
       "kindString": "Property",
@@ -1366,7 +1366,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 552,
+      "id": 555,
       "name": "user/user_record_type",
       "kind": 1024,
       "kindString": "Property",
@@ -1384,7 +1384,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 537,
+      "id": 540,
       "name": "username",
       "kind": 1024,
       "kindString": "Property",
@@ -1402,7 +1402,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 592,
+      "id": 595,
       "name": "wheelchair_comment",
       "kind": 1024,
       "kindString": "Property",
@@ -1425,41 +1425,38 @@ Definition: <pre>{
       "title": "Properties",
       "kind": 1024,
       "children": [
-        544,
+        547,
+        533,
+        537,
+        532,
         530,
         534,
-        529,
-        527,
-        531,
-        543,
-        547,
-        548,
-        532,
-        528,
         546,
-        533,
-        545,
-        541,
-        590,
-        589,
-        539,
+        550,
+        551,
+        535,
+        531,
+        549,
+        536,
+        548,
+        544,
         593,
-        582,
-        583,
-        584,
+        592,
+        542,
+        596,
         585,
         586,
         587,
         588,
-        581,
-        567,
-        566,
+        589,
+        590,
+        591,
+        584,
         570,
-        568,
         569,
+        573,
         571,
         572,
-        573,
         574,
         575,
         576,
@@ -1467,35 +1464,38 @@ Definition: <pre>{
         578,
         579,
         580,
-        591,
-        538,
-        553,
-        554,
+        581,
+        582,
+        583,
+        594,
+        541,
         556,
         557,
-        558,
-        555,
         559,
         560,
+        561,
+        558,
         562,
         563,
-        564,
-        561,
-        550,
         565,
-        594,
-        536,
+        566,
+        567,
+        564,
+        553,
+        568,
         597,
-        595,
-        596,
-        535,
-        542,
-        549,
-        540,
-        551,
+        539,
+        600,
+        598,
+        599,
+        538,
+        545,
         552,
-        537,
-        592
+        543,
+        554,
+        555,
+        540,
+        595
       ]
     }
   ],

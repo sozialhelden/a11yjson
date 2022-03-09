@@ -330,6 +330,9 @@ data provider, it’s a good idea to use the provider&#39;s internal ID here.</p
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>entrance</td><td><a href="#Entrance">Entrance</a></td><td><p>Object describing the entrance to this restroom.</p>
 </td></tr><tr><td>hasBathTub</td><td><code>boolean</code></td><td><p><code>true</code> if there is a bath tub in this room, <code>false</code> if not, <code>undefined</code> if condition is
 unknown.</p>
+</td></tr><tr><td>hasCeilingHoist</td><td><code>boolean</code></td><td><p><code>true</code> if the restroom has a ceiling hoist, <code>false</code> if not.</p>
+</td></tr><tr><td>hasChangingTableForAdults</td><td><code>boolean</code></td><td><p><code>true</code> if the restroom has a changing table for adults, <code>false</code> if not.</p>
+</td></tr><tr><td>hasChangingTableForBabies</td><td><code>boolean</code></td><td><p><code>true</code> if the restroom has a changing table for babies, <code>false</code> if not.</p>
 </td></tr><tr><td>hasMirror</td><td><code>boolean</code></td><td><p><code>true</code> if the restroom has a mirror, <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
 </td></tr><tr><td>hasShower</td><td><code>boolean</code></td><td><p><code>true</code> if the restroom has a shower, <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
 </td></tr><tr><td>hasSupportRails</td><td><code>boolean</code></td><td><p><code>true</code> if there support rails on the walls</p>
