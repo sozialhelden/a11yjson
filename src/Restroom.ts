@@ -1,7 +1,7 @@
 import { Room, getRoomSchemaDefinition } from './Room';
 import { Mirror, getMirrorSchemaDefinition } from './Mirror';
 import { WashBasin, getWashBasinSchemaDefinition } from './WashBasin';
-import { Entrance, getEntranceSchemaDefinition } from './Entrance';
+import { Entrance, getEntranceSchemaDefinition } from './EntranceProperties';
 import {
   getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition, Quantity,
 } from './Quantity';

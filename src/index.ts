@@ -14,6 +14,7 @@ export * from './AnimalPolicy';
 
 export * from './Door';
 export * from './Entrance';
+export * from './EntranceProperties';
 export * from './EquipmentInfo';
 export * from './EquipmentProperties';
 export * from './GrabBars';

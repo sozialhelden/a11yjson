@@ -1,32 +1,20 @@
 import { Entrance, getEntranceSchemaDefinition } from './Entrance';
-import doorFixture from './Door.test';
-import stairsFixture from './Stairs.test';
+import pointGeometryFixture from './Geometry.test';
+import entrancePropertiesFixture from './EntranceProperties.test';
 import { Complete } from './Complete';
 import expectValidFixture from './lib/expectValidFixture';
 
-const entranceFixture: Complete<Entrance> = {
-  name: { en: 'string' },
-  isMainEntrance: true,
-  isLevel: true,
-  slopeAngle: {
-    value: 0.05,
-  },
-  hasFixedRamp: false,
-  hasRemovableRamp: true,
-  hasSignage: false,
-  stairs: stairsFixture,
-  door: doorFixture,
-  elevatorEquipmentId: 'idHere',
-  intercomEquipmentId: 'idHere',
-  needsAppointment: true,
+const equipmentInfoFixture: Complete<Entrance> = {
+  properties: entrancePropertiesFixture,
+  geometry: pointGeometryFixture,
 };
 
-export default entranceFixture;
+export default equipmentInfoFixture;
 
 const definition = getEntranceSchemaDefinition();
 
-describe('EquipmentProperties schema', () => {
+describe('Entrance schema', () => {
   it('validates a completely specified object', () => {
-    expectValidFixture(definition, entranceFixture);
+    expectValidFixture(definition, equipmentInfoFixture);
   });
 });

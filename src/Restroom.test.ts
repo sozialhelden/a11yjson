@@ -1,7 +1,7 @@
 import { Restroom, getRestroomSchemaDefinition } from './Restroom';
 import { Complete } from './Complete';
 import expectValidFixture from './lib/expectValidFixture';
-import entranceFixture from './Entrance.test';
+import entranceFixture from './EntranceProperties.test';
 import toiletFixture from './Toilet.test';
 import showerFixture from './Shower.test';
 import washBasinFixture from './WashBasin.test';
