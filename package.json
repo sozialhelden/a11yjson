@@ -19,7 +19,7 @@
     "node": ">=6.0.0"
   },
   "scripts": {
-    "lint": "npm run eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "prebuild": "rimraf dist",
     "build": "tsc && rollup -c rollup.config.ts && rimraf compiled && typedoc src typings --options typedoc.json --out dist/docs/typescript --json dist/typedoc-output.json && npx ts-node ./tools/generate-overview.ts",
     "start": "tsc -w & rollup -c rollup.config.ts -w",
