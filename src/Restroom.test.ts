@@ -30,6 +30,10 @@ const restroomFixture: Complete<Restroom> = {
   heightOfDrier: '100 .. 120cm',
   washBasin: washBasinFixture,
   access: ['customers', 'employees'],
+  usageFee: {
+    currency: 'EUR',
+    amount: 0.5,
+  },
 };
 
 export default restroomFixture;

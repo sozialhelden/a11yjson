@@ -109,6 +109,8 @@ export interface Restroom extends Room {
    * Defines who this restroom is for. See https://wiki.openstreetmap.org/wiki/Key:access for more information.
    */
   access?: AccessType[];
+
+  usageFee?: { amount: number; currency: string };
 }
 
 export const getRestroomSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
@@ -168,5 +170,17 @@ export const getRestroomSchemaDefinition: () => Record<string, SchemaDefinition>
   'access.$': {
     type: String,
     allowedValues: accessTypes,
+  },
+  usageFee: {
+    type: String,
+    optional: true,
+  },
+  'usageFee.amount': {
+    type: Number,
+  },
+  'usageFee.currency': {
+    type: String,
+    max: 3,
+    min: 3,
   },
 });
