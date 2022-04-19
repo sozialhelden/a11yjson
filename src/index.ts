@@ -30,11 +30,10 @@ export * from './Stairs';
 export * from './Tables';
 export * from './Toilet';
 export * from './Quantity';
+export * from './QueueSystem';
 export * from './WashBasin';
 export * from './WheelchairPlaces';
 export * from './ietfLanguageTags';
 
 export * from './rules/RatingRules';
 export * from './rules/WheelmapA11yRuleset';
-
-export * from './transformers/transformKoboToA11y';
