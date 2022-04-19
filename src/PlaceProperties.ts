@@ -1,4 +1,3 @@
-import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
 import { Accessibility, getAccessibilitySchemaDefinition } from './Accessibility';
