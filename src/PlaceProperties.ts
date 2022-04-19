@@ -27,7 +27,7 @@ export interface PlaceProperties {
   /**
    * Phone number to call a representant of the place's operator.
    */
-  phoneNumber?: LocalizedString;
+  phoneNumber?: string;
 
   /**
    * Email address of the place's operator where you can get accessibility relevant information.
@@ -124,7 +124,10 @@ export const getPlacePropertiesSchemaDefinition: () => Record<string, SchemaDefi
   },
   ...getPrefixedSchemaDefinition('address', getStructuredAddressSchemaDefinition()),
   ...getLocalizedStringSchemaDefinition('description'),
-  ...getLocalizedStringSchemaDefinition('phoneNumber'),
+  phoneNumber: {
+    type: String,
+    optional: true,
+  },
   emailAddress: {
     type: String,
     regEx: SimpleSchema.RegEx.EmailWithTLD,
