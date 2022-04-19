@@ -170,7 +170,7 @@ export const getRestroomSchemaDefinition: () => Record<string, SchemaDefinition>
     allowedValues: accessTypes,
   },
   usageFee: {
-    type: String,
+    type: Object,
     optional: true,
   },
   'usageFee.amount': {
