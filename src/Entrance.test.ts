@@ -13,6 +13,7 @@ const entranceFixture: Complete<Entrance> = {
   },
   hasFixedRamp: false,
   hasRemovableRamp: true,
+  hasSignage: false,
   stairs: stairsFixture,
   door: doorFixture,
   elevatorEquipmentId: 'idHere',

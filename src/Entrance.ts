@@ -45,6 +45,12 @@ export interface Entrance {
   door?: Door | null;
 
   /**
+   * If this entrance is NOT the main entrance: Is this entrance connected to the main entrance, and
+   * is there signage that points to this entrance?
+   */
+  hasSignage?: boolean;
+
+  /**
    * `true` if you need an appointment to enter, `false` if not.
    */
   needsAppointment?: boolean;
