@@ -1,10 +1,9 @@
-import { t } from 'ttag';
-import SimpleSchema from 'simpl-schema';
-
-import './SimpleSchemaExtensions';
-
-import { PointGeometry, PointGeometrySchema } from './Geometry';
-import { EquipmentProperties, EquipmentPropertiesSchema } from './EquipmentProperties';
+import { getPointGeometrySchemaDefinition, PointGeometry } from './Geometry';
+import {
+  EquipmentProperties,
+  getEquipmentPropertiesSchemaDefinition,
+} from './EquipmentProperties';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 
 /**
  * Describes a facility equipment that is part of a place, like an elevator, an escalator, or a
@@ -12,28 +11,19 @@ import { EquipmentProperties, EquipmentPropertiesSchema } from './EquipmentPrope
  */
 
 export interface EquipmentInfo {
-  /**
-   * The format version this place info document was created with
-   * (Uses the npm module version from `package.json`)
-   * Not used right now, but added for future compatibility.
-   */
-  formatVersion?: string;
   properties?: EquipmentProperties;
   /**
-   * The physical location of the place in WGS84 coordinates. Currently only a GeoJSON `PointGeometry` is supported.
+   * The physical location of the place in WGS84 coordinates. Currently only a GeoJSON
+   * `PointGeometry` is supported.
    */
   geometry?: PointGeometry;
 }
 
-export const EquipmentInfoSchema = new SimpleSchema({
+export const getEquipmentInfoSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
   formatVersion: {
     type: String,
-    optional: true
+    optional: true,
   },
-  properties: {
-    type: EquipmentPropertiesSchema
-  },
-  geometry: {
-    type: PointGeometrySchema
-  }
+  ...getPrefixedSchemaDefinition('properties', getEquipmentPropertiesSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('geometry', getPointGeometrySchemaDefinition()),
 });

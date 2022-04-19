@@ -14,10 +14,10 @@ export const isDefinitionTypeSchema = (definition: SchemaDefinition): boolean =>
   const type = definition.type as SimpleSchemaGroup;
   // Check whether we need to handle multiple definitions & non SimpleSchemaGroups
   if (
-    type &&
-    type.definitions &&
-    type.definitions[0] &&
-    SimpleSchema.isSimpleSchema(type.definitions[0].type)
+    type
+    && type.definitions
+    && type.definitions[0]
+    && SimpleSchema.isSimpleSchema(type.definitions[0].type)
   ) {
     return true;
   }
@@ -55,7 +55,7 @@ export const forEachKeyInSchemas = (
   schema: SimpleSchema,
   callback: ForEachKeyInSchemasCallbackFunction,
   prefix: string = '',
-  rootPathPrefix: string = ''
+  rootPathPrefix: string = '',
 ): boolean => {
   const nodeNames: Array<string> = schema.objectKeys(prefix);
   let valuePrefix = '';
@@ -68,23 +68,23 @@ export const forEachKeyInSchemas = (
     rootPrefix = `${rootPathPrefix}.`;
   }
 
-  nodeNames.forEach(name => {
+  nodeNames.forEach((name) => {
     const definitionPath = `${valuePrefix}${name}`;
     const pathFromRoot = `${rootPrefix}${name}`;
     const origDefinition = schema.schema(definitionPath);
 
     let hasChildren = false;
     if (
-      !origDefinition ||
-      !origDefinition.accessibility ||
-      !origDefinition.accessibility.inseparable
+      !origDefinition
+      || !origDefinition.accessibility
+      || !origDefinition.accessibility.inseparable
     ) {
       if (isDefinitionTypeSchema(origDefinition)) {
         const subSchema = getFirstSchemaFromDefinition(origDefinition);
         hasChildren = forEachKeyInSchemas(subSchema, callback, '', pathFromRoot);
       } else if (isDefinitionTypeArray(origDefinition)) {
-        const arrayPath = definitionPath + '.$';
-        const rootArrayPath = pathFromRoot + '.$';
+        const arrayPath = `${definitionPath}.$`;
+        const rootArrayPath = `${pathFromRoot}.$`;
 
         const arrayFieldDefinition = schema.schema(arrayPath);
         if (isDefinitionTypeSchema(arrayFieldDefinition)) {

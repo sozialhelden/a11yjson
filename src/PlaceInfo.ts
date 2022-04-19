@@ -1,10 +1,6 @@
-import { t } from 'ttag';
-import SimpleSchema from 'simpl-schema';
-
-import './SimpleSchemaExtensions';
-
-import { Geometry, GeometrySchema } from './Geometry';
-import { PlaceProperties, PlacePropertiesSchema } from './PlaceProperties';
+import { PointGeometry, getPointGeometrySchemaDefinition } from './Geometry';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+import { PlaceProperties, getPlacePropertiesSchemaDefinition } from './PlaceProperties';
 
 /**
  * The PlaceInfo interface describes a physical location with added accessibility properties.
@@ -21,35 +17,20 @@ export interface PlaceInfo {
    */
   properties: PlaceProperties;
   /**
-   * The physical location of the place in WGS84 coordinates. Currently only a GeoJSON `PointGeometry` is supported.
+   * The physical location of the place in WGS84 coordinates. Currently only a GeoJSON
+   * `PointGeometry` is supported.
    */
-  geometry: Geometry;
+  geometry: PointGeometry;
 }
 
 /**
  * The PlaceInfoSchema allows easy validation, cleaning and checking of PlaceInfo objects.
  */
-export const PlaceInfoSchema = new SimpleSchema({
+export const getPlaceInfoSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
   formatVersion: {
     type: String,
     optional: true,
-    accessibility: {
-      machineData: true
-    }
   },
-  properties: {
-    type: PlacePropertiesSchema,
-    label: t`Properties`,
-    accessibility: {
-      question: t`First we need some information about the place.`
-    }
-  },
-  geometry: {
-    type: GeometrySchema,
-    label: t`Place on map`,
-    accessibility: {
-      question: t`On the map, drag the place icon to the entrance's exact position.`,
-      inseparable: true
-    }
-  }
+  ...getPrefixedSchemaDefinition('properties', getPlacePropertiesSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('geometry', getPointGeometrySchemaDefinition()),
 });

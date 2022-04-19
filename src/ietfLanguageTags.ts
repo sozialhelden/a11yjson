@@ -756,7 +756,7 @@ export const ietfLanguageTags = [
   'zh-Hant-MO',
   'zh-Hant-TW',
   'zu',
-  'zu-ZA'
+  'zu-ZA',
 ];
 
 /**
@@ -892,7 +892,7 @@ export const signLanguageCodes = [
   'sgn-jpn-JP',
   'sgn-nor-NO',
   'sgn-por-PT',
-  'sgn-swe-SE'
+  'sgn-swe-SE',
 ];
 
 export type IetfLanguageTag =

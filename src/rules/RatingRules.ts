@@ -1,5 +1,7 @@
-import { isMatch, isEqual, entries, get, intersection } from 'lodash';
-import { Quantity } from '../Units';
+import {
+  isMatch, isEqual, entries, get, intersection,
+} from 'lodash';
+import { Quantity } from '../Quantity';
 
 // rule types
 type Comparable = number | string | Quantity;
@@ -116,14 +118,14 @@ const allowedOperators: ReadonlyArray<Operators> = Object.freeze([
   '$lte',
   '$gt',
   '$gte',
-  '$ne'
+  '$ne',
 ] as Operators[]);
 
 // compare two values using an operator, if they are quantities, read the underlying value
 function compareByOperator(
   first: Comparable,
   second: Comparable,
-  operator: Operators = '$eq'
+  operator: Operators = '$eq',
 ): boolean {
   const a = getQuantityValue(first);
   const b = getQuantityValue(second);
@@ -150,7 +152,7 @@ function compareByOperator(
 
 // checks wether the given data matches the rule
 function evaluateMatchRule(data: {}, rule: MatchRule): RuleEvaluationResult {
-  let finalResult: RuleEvaluationResult | undefined = undefined;
+  let finalResult: RuleEvaluationResult | undefined;
   for (const [path, matcher] of entries(rule)) {
     const fieldData = get(data, path);
     logRule('match', path, matcher, fieldData, finalResult);
@@ -170,7 +172,7 @@ function evaluateMatchRule(data: {}, rule: MatchRule): RuleEvaluationResult {
       let matched = false;
       const foundOperators = intersection(
         allowedOperators,
-        Object.keys(matcher || {})
+        Object.keys(matcher || {}),
       ) as Operators[];
       if (foundOperators.length === 1) {
         // compare by operator
@@ -182,12 +184,12 @@ function evaluateMatchRule(data: {}, rule: MatchRule): RuleEvaluationResult {
         logRule('-match.isDefined', 'data', fieldData, 'matched', matched);
       } else if (isExistsRule) {
         // custom exists check
-        const existsValue = matcher['$exists'];
+        const existsValue = matcher.$exists;
         matched = (fieldData !== null) === existsValue;
         logRule('-match.$exists =', existsValue, 'data', fieldData, 'matched', matched);
       } else if (isUnknownOrRule) {
         // either undefined or exactly the value
-        const unknownOrValue = matcher['$unknownOr'];
+        const unknownOrValue = matcher.$unknownOr;
         matched = fieldData === unknownOrValue || typeof fieldData === 'undefined';
         logRule('-match.$unknownOr =', unknownOrValue, 'data', fieldData, 'matched', matched);
       } else {

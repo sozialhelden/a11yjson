@@ -1,65 +1,55 @@
-import { t } from 'ttag';
-import SimpleSchema from 'simpl-schema';
-import './SimpleSchemaExtensions';
-
 export interface AnimalPolicy {
   /**
-   * `true` if the place allows visitors to bring guide dogs, `false` if bringing them is explicitly prohibited, `undefined` if the policy is unknown.
+   * `true` if the place allows visitors to bring guide dogs, `false` if bringing them is
+   * explicitly prohibited, `undefined` if the policy is unknown.
    */
   allowsGuideDogs?: boolean;
   /**
-   * `true` if the place allows visitors to bring dogs in general, `false` if bringing them is explicitly prohibited (with exception of dogs specified by `allowsGuideDogs` and `allowsTherapyAnimals`), `undefined` if the policy is unknown.
+   * `true` if the place allows visitors to bring dogs in general, `false` if bringing them is
+   * explicitly prohibited (with exception of dogs specified by `allowsGuideDogs` and
+   * `allowsTherapyAnimals`), `undefined` if the policy is unknown.
    */
   allowsDogs?: boolean;
   /**
-   * `true` if the place denies entry to visitors bringing a dogs without muzzles, `false` if dogs without muzzles are explicitly allowed.
+   * `true` if the place denies entry to visitors bringing a dogs without muzzles, `false` if
+   * dogs without muzzles are explicitly allowed.
    */
   dogsNeedMuzzle?: boolean;
   /**
-   * `true` if the place allows bringing any kind of animal, `false` or `undefined` if not or if there are exceptions.
+   * `true` if the place allows bringing any kind of animal, `false` or `undefined` if not or if
+   * there are exceptions.
    */
-  allowsAnyAnimals?: boolean;
+  allowsServiceAnimals?: boolean;
   /**
-   * `true` if the place supplies water for accompanying animals, `false` if explicitly not, or `undefined` if unknown.
+   * `true` if the place supplies water for accompanying animals, `false` if explicitly not, or
+   * `undefined` if unknown.
    */
   suppliesWaterForPets?: boolean;
 }
 
-export const AnimalPolicySchema = new SimpleSchema({
+export const getAnimalPolicySchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
   allowsGuideDogs: {
     type: Boolean,
-    accessibility: {
-      question: t`Does this place allow guide dogs?`
-    }
+    optional: true,
   },
   allowsServiceAnimals: {
     type: Boolean,
-    accessibility: {
-      question: t`Does this place allow therapy animals?`
-    }
+    optional: true,
   },
   allowsDogs: {
     type: Boolean,
-    accessibility: {
-      question: t`Does this place allow visitors to bring dogs?`
-    }
+    optional: true,
   },
   dogsNeedMuzzle: {
     type: Boolean,
-    accessibility: {
-      question: t`Does this place enforce that dogs wear a muzzle?`
-    }
+    optional: true,
   },
   allowsAnyPets: {
     type: Boolean,
-    accessibility: {
-      question: t`Does this place allow any kind of pets?`
-    }
+    optional: true,
   },
   suppliesWaterForPets: {
     type: Boolean,
-    accessibility: {
-      question: t`Does this place supply water for pets?`
-    }
-  }
+    optional: true,
+  },
 });

@@ -1,6 +1,6 @@
 import { t } from 'ttag';
-import { Length, LengthSchema, quantityDefinition } from './Units';
-import { createSchemaInstance } from './SimpleSchemaExtensions';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 
 export interface WashBasin {
   /**
@@ -31,35 +31,18 @@ export interface WashBasin {
   spaceBelowDepth?: Length;
 }
 
-export const WashBasinSchema = createSchemaInstance('WashBasin', {
+export const getWashBasinSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
   isLocatedInsideRestroom: {
     type: Boolean,
     optional: true,
-    accessibility: {
-      question: t`Is the wash basin located inside the restroom cabin?`
-    }
+    label: t`Is the wash basin located inside the restroom cabin?`,
   },
-  height: quantityDefinition(LengthSchema, true, {
-    question: t`At which height is the wash basin's top?`
-  }),
   accessibleWithWheelchair: {
     type: Boolean,
     optional: true,
-    accessibility: {
-      question: t`Can a wheelchair drive under the wash basin?`
-    }
+    label: t`Can a person drive a wheelchair under the wash basin?`,
   },
-  spaceBelow: {
-    type: Object,
-    optional: true,
-    accessibility: {
-      question: t`Let’s take a look at the space below the wash basin.`
-    }
-  },
-  spaceBelowHeight: quantityDefinition(LengthSchema, true, {
-    question: t`How high is the space below the wash basin?`
-  }),
-  spaceBelowDepth: quantityDefinition(LengthSchema, true, {
-    question: t`How deep is the space below the wash basin?`
-  })
+  ...getPrefixedQuantitySchemaDefinition('height', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('spaceBelowHeight', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('spaceBelowDepth', LengthSchemaDefinition),
 });

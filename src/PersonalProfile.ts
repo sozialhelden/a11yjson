@@ -1,8 +1,3 @@
-import { t } from 'ttag';
-import SimpleSchema from 'simpl-schema';
-
-import './SimpleSchemaExtensions';
-
 /**
  * Describes a person. This exists only to transform data from sources where no physical attributes
  * of places have been captured as data directly. It's better to describe physical attributes of
@@ -30,37 +25,37 @@ export interface PersonalProfile {
   wheelchair?: boolean;
 }
 
-export const PersonalProfileSchema = new SimpleSchema({
+export const getPersonalProfileSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
   muteness: {
     type: Boolean,
-    optional: true
+    optional: true,
   },
   guideDog: {
     type: Boolean,
-    optional: true
+    optional: true,
   },
   hearingImpairment: {
     type: Boolean,
-    optional: true
+    optional: true,
   },
   learningImpairment: {
     type: Boolean,
-    optional: true
+    optional: true,
   },
   mobilityImpairment: {
     type: Boolean,
-    optional: true
+    optional: true,
   },
   visualImpairment: {
     type: Boolean,
-    optional: true
+    optional: true,
   },
   blindness: {
     type: Boolean,
-    optional: true
+    optional: true,
   },
   wheelchair: {
     type: Boolean,
-    optional: true
-  }
+    optional: true,
+  },
 });

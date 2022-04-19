@@ -1,18 +1,14 @@
-import { t } from 'ttag';
-import SimpleSchema from 'simpl-schema';
-
-import { createSchemaInstance } from './SimpleSchemaExtensions';
-import { Length, LengthSchema, quantityDefinition } from './Units';
+import {
+  Door, getDoorSchemaDefinition,
+} from './Door';
+import { getStairsSchemaDefinition, Stairs } from './Stairs';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 
 export interface Shower {
-  // QUESTION could be more than one step
-  // QUESTION stairsFormat calls this field stepHeight
-  step?: Length;
-  /**
-   * `true` if the shower is step-free and level with the space in front of it, `false` if not,
-   * `undefined` if condition is unknown.
-   */
-  isLevel?: boolean;
+  stairs?: Stairs;
+  door?: Door;
+
   /**
    * `true` if the shower has support rails, `false` if not, `undefined` if condition is unknown.
    */
@@ -21,11 +17,6 @@ export interface Shower {
    * At which height are the support rails? Measured from the top.
    */
   supportRailsHeight?: Length;
-  /**
-   * `true` if the support rails are above and below the controls, `false` if not, `undefined`
-   * if condition is unknown.
-   */
-  supportRailsAreAboveAndBelowControls?: boolean;
   /**
    * `true` if the shower has a seat, `false` if not, `undefined` if condition is unknown..
    */
@@ -46,65 +37,28 @@ export interface Shower {
   hasErgonomicHandle?: boolean;
 }
 
-export const ShowerSchema = createSchemaInstance('Shower', {
-  step: quantityDefinition(LengthSchema),
-  isLevel: {
-    type: Boolean,
-    optional: true,
-    accessibility: {
-      question: t`Is the shower step-free and level with the space in front of it?`
-    }
-  },
+export const getShowerSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+  ...getPrefixedSchemaDefinition('stairs', getStairsSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('door', getDoorSchemaDefinition()),
+  ...getPrefixedQuantitySchemaDefinition('supportRailsHeight', LengthSchemaDefinition),
   hasSupportRails: {
     type: Boolean,
     optional: true,
-    accessibility: {
-      question: t`Does the shower have support rails?`
-    }
-  },
-  supportRails: {
-    type: Object,
-    optional: true,
-    accessibility: {
-      question: t`Let’s describe the support rails further.`
-    }
-  },
-  supportRailsHeight: quantityDefinition(LengthSchema, true, {
-    question: t`At which height are the support rails?`
-  }),
-  supportRailsAreAboveAndBelowControls: {
-    type: Boolean,
-    optional: true,
-    accessibility: {
-      question: t`Are the support rails above and below the controls?`
-    }
   },
   hasShowerSeat: {
     type: Boolean,
     optional: true,
-    accessibility: {
-      question: t`Is there a shower seat?`
-    }
   },
   hasErgonomicHandle: {
     type: Boolean,
     optional: true,
-    accessibility: {
-      question: t`Is there an ergonomic handle?`
-    }
   },
   showerSeatIsRemovable: {
     type: Boolean,
     optional: true,
-    accessibility: {
-      question: t`Is the seat removable from the shower?`
-    }
   },
   showerSeatIsFolding: {
     type: Boolean,
     optional: true,
-    accessibility: {
-      question: t`Is this a folding seat?`
-    }
-  }
+  },
 });

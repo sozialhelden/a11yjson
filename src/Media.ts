@@ -1,16 +1,16 @@
 import { t } from 'ttag';
 import SimpleSchema from 'simpl-schema';
 
-import './SimpleSchemaExtensions';
-
-import { Length, LengthSchema, quantityDefinition } from './Units';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 import {
-  IetfLanguageTag,
-  ietfLanguageTags,
   ietfLanguageTagsAndSignLanguageCodes,
-  IetfLanguageTagOrSignLanguageCode
+  IetfLanguageTagOrSignLanguageCode,
 } from './ietfLanguageTags';
-import { LocalizedStringSchema, LocalizedString } from './LocalizedString';
+import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
+import { W3CAccessibilityFeature, w3cAccessibilityFeatures } from './W3CAccessibilityFeature';
+import { W3CAccessibilityHazard, w3cAccessibilityHazards } from './W3CAccessibilityHazard';
+import { W3CAccessMode, w3cAccessModes } from './W3CAccessMode';
+import { w3cAccessibilityControls, W3CAccessibilityControl } from './W3CAccessibilityControl';
 
 /**
  * Describes a media unit provided at this place, for example an exhibit at a museum or a movie in
@@ -20,7 +20,16 @@ export interface Media {
   /**
    * Type of the media unit
    */
-  type: 'document' | 'menu' | 'guide' | 'presentation' | 'exhibit' | 'movie' | 'play' | 'screen';
+  type:
+  | 'document'
+  | 'menu'
+  | 'guide'
+  | 'presentation'
+  | 'exhibit'
+  | 'movie'
+  | 'play'
+  | 'screen'
+  | 'website';
 
   /**
    * Name of the media unit (relevant if there are multiple units of the same kind)
@@ -79,9 +88,49 @@ export interface Media {
    * how much turning space there is in front of it.
    */
   turningSpaceInFront?: Length;
+
+  /**
+   * URLs that contain the media. Use this to link data, for example with [RDF](https://www.w3.org/RDF/).
+   */
+  sameAs: string[];
+
+  /**
+   * Access modes supported by this equipment.
+   *
+   * @see https://www.w3.org/2021/a11y-discov-vocab/latest/
+   */
+  accessMode?: W3CAccessMode[];
+
+  /**
+   * Access mode combinations that allow understanding and using the equipment.
+   *
+   * @see https://www.w3.org/2021/a11y-discov-vocab/latest/
+   */
+  accessModeSufficient?: W3CAccessMode[];
+
+  /**
+   * The accessibility controls that allow controlling this equipment.
+   *
+   * @see https://www.w3.org/2021/a11y-discov-vocab/latest/
+   */
+  accessibilityControl: W3CAccessibilityControl[];
+
+  /**
+   * Indicates the access mode combinations that allow understanding and using the equipment.
+   *
+   * @see https://www.w3.org/2021/a11y-discov-vocab/latest/
+   */
+  accessibilityFeature: W3CAccessibilityFeature[];
+
+  /**
+   * Indicates the access mode combinations that allow understanding and using the equipment.
+   *
+   * @see https://www.w3.org/2021/a11y-discov-vocab/latest/
+   */
+  accessibilityHazard: W3CAccessibilityHazard[];
 }
 
-export const MediaSchema = new SimpleSchema({
+export const getMediaSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
   type: {
     type: String,
     label: t`Media Type`,
@@ -93,109 +142,118 @@ export const MediaSchema = new SimpleSchema({
       'exhibit',
       'movie',
       'play',
-      'screen'
+      'screen',
+      'website',
+      'tour',
     ],
-    accessibility: {
-      question: t`What kind of media is described?`,
-      options: [
-        { value: 'document', label: t`document` },
-        { value: 'menu', label: t`menu` },
-        { value: 'guide', label: t`guide` },
-        { value: 'presentation', label: t`presentation` },
-        { value: 'exhibit', label: t`exhibit` },
-        { value: 'movie', label: t`movie` },
-        { value: 'screen', label: t`screen` }
-      ]
-    }
   },
-  name: {
-    type: LocalizedStringSchema,
+  ...getLocalizedStringSchemaDefinition('name', {
     label: t`Media Name`,
-    optional: true,
-    accessibility: {
-      question: t`What the name of the`,
-      description: t`e.g. 'daily menu' or 'park guide'`
-    }
-  },
+  }),
   isBraille: {
     type: Boolean,
     label: t`Braille`,
     optional: true,
-    accessibility: {
-      question: t`Is there a braille version available?`
-    }
   },
   isAudio: {
     type: Boolean,
     label: t`Audio`,
     optional: true,
-    accessibility: {
-      question: t`Is there an audio version available?`
-    }
   },
   isLargePrint: {
     type: Boolean,
     label: t`Large Print`,
     optional: true,
-    accessibility: {
-      question: t`Is there a large print version available?`
-    }
   },
   hasContrastingBackground: {
     type: Boolean,
     label: t`Contrasting Background`,
     optional: true,
-    accessibility: {
-      question: t`Is the print on a contrasting background?`
-    }
   },
   hasDedicatedScreenForSubtitles: {
     type: Boolean,
     label: t`Dedicated Subtitle Screen`,
     optional: true,
-    accessibility: {
-      question: t`Is there a dedicated screen for subtitles.`
-    }
   },
   hasSubtitles: {
     type: Boolean,
     label: t`Subtitles`,
     optional: true,
-    accessibility: {
-      question: t`Are there subtitles?`
-    }
   },
   hasRealTimeCaptioning: {
     type: Boolean,
     label: t`Real-time Captioning`,
     optional: true,
-    accessibility: {
-      question: t`Is there real time captioning?`
-    }
   },
-  // There are no standardized language codes for this yet, so this needs to be an extra flag for now.
   hasPlainLanguageOption: {
     type: Boolean,
     label: t`Plain Language Option`,
     optional: true,
-    accessibility: {
-      question: t`Is there a plain language option?`
-    }
   },
   languages: {
     type: Array,
     label: t`Languages`,
     optional: true,
-    accessibility: {
-      question: t`What are the available languages?`
-    }
   },
   'languages.$': {
     type: String,
     label: t`Language`,
-    allowedValues: ietfLanguageTagsAndSignLanguageCodes
+    allowedValues: ietfLanguageTagsAndSignLanguageCodes,
   },
-  turningSpaceInFront: quantityDefinition(LengthSchema, true, {
-    question: t`How much space for turning is in front of the media?`
-  })
+  accessMode: {
+    type: Array,
+    label: t`Access Modes`,
+    optional: true,
+  },
+  'accessMode.$': {
+    type: String,
+    label: t`Access Modes`,
+    allowedValues: w3cAccessModes,
+  },
+  accessModeSufficient: {
+    type: Array,
+    label: t`Sufficient Access Modes`,
+    optional: true,
+  },
+  'accessModeSufficient.$': {
+    type: String,
+    allowedValues: w3cAccessModes,
+  },
+  accessibilityControl: {
+    type: Array,
+    label: t`Accessibility Controls`,
+    optional: true,
+  },
+  'accessibilityControl.$': {
+    type: String,
+    allowedValues: w3cAccessibilityControls,
+  },
+  accessibilityFeature: {
+    type: Array,
+    label: t`Accessibility Features`,
+    optional: true,
+  },
+  'accessibilityFeature.$': {
+    type: String,
+    allowedValues: w3cAccessibilityFeatures,
+  },
+  accessibilityHazard: {
+    type: Array,
+    label: t`Accessibility Hazards`,
+    optional: true,
+  },
+  'accessibilityHazard.$': {
+    type: String,
+    allowedValues: w3cAccessibilityHazards,
+  },
+  ...getPrefixedQuantitySchemaDefinition('turningSpaceInFront', LengthSchemaDefinition),
+  sameAs: {
+    type: Array,
+    label: t`Same as (URL)`,
+    optional: true,
+  },
+  'sameAs.$': {
+    type: String,
+    regEx: SimpleSchema.RegEx.Url,
+  },
 });

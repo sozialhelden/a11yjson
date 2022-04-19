@@ -1,36 +1,73 @@
 import { t } from 'ttag';
-import SimpleSchema from 'simpl-schema';
-
-import './SimpleSchemaExtensions';
-
-import { PersonalProfile, PersonalProfileSchema } from './PersonalProfile';
-import { Entrance, EntranceSchema } from './Entrance';
-import { Restroom, RestroomSchema } from './Restroom';
-import { Staff, StaffSchema } from './Staff';
-import { WheelchairPlaces, WheelchairPlacesSchema } from './WheelchairPlaces';
-import { Media, MediaSchema } from './Media';
-import { Payment, PaymentSchema } from './Payment';
-import { AccessibleTablesPrefab, Tables, TablesSchema } from './Tables';
-import { Pathways, PathwaysSchema } from './Pathways';
-import { Parking, ParkingSchema } from './Parking';
-import { Ground, GroundSchema } from './Ground';
-import { LocalizedString, LocalizedStringSchema } from './LocalizedString';
-import { AnimalPolicySchema, AnimalPolicy } from './AnimalPolicy';
+import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
+import { PersonalProfile, getPersonalProfileSchemaDefinition } from './PersonalProfile';
+import { Entrance, getEntranceSchemaDefinition } from './Entrance';
+import { Restroom, getRestroomSchemaDefinition } from './Restroom';
+import { Staff, getStaffSchemaDefinition } from './Staff';
+import { WheelchairPlaces, getWheelchairPlacesSchemaDefinition } from './WheelchairPlaces';
+import { Media, getMediaSchemaDefinition } from './Media';
+import { Payment, getPaymentSchemaDefinition } from './Payment';
+import { Tables, getTablesSchemaDefinition } from './Tables';
+import { Pathways, getPathwaysSchemaDefinition } from './Pathways';
+import { Parking, getParkingSchemaDefinition } from './Parking';
+import { Surface, getSurfaceSchemaDefinition } from './Surface';
+import { AnimalPolicy, getAnimalPolicySchemaDefinition } from './AnimalPolicy';
 import { SmokingPolicy, smokingPolicies } from './SmokingPolicy';
-import { quantityDefinition, Volume, LengthSchema } from './Units';
-import { WifiAccessibility, WifiAccessibilitySchema } from './WifiAccessibility';
+import { getPrefixedQuantitySchemaDefinition, Volume, VolumeSchemaDefinition } from './Quantity';
+import { WifiAccessibility, getWifiAccessibilitySchemaDefinition } from './WifiAccessibility';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+
+/**
+ * Describes the general wheelchair accessibility of the place. This is a human-rated value.
+ * It SHOULD conform to the traffic light system found in OpenStreetMap and Wheelmap.org.
+ */
+
+export enum WheelchairAccessibilityGrade {
+  /**
+   * Entrance (if applicable) has no steps, and all rooms are accessible without steps. If there
+   * are no rooms, the main functionality of the place must be accessible with a wheelchair.
+   */
+  Fully = 'fully',
+  /**
+   * `"partially"`: Entrance has one step with max. 3 inches height (or a mobile ramp is
+   * available), most rooms are without steps. After passing the entrance, the main functionality
+   * of the place must be accessible with a wheelchair.
+   */
+  Partially = 'partially',
+  /**
+   * Entrance has a high step or several steps, or none of the rooms are accessible. You can't
+   * enter / use the place with a wheelchair.
+   */
+  Not = 'not',
+}
+
+export const wheelchairAccessibilityGrades = ['fully', 'partially', 'not'];
 
 /**
  * Describes the physical (and sometimes human rated) accessibility of a place.
  */
 export interface Accessibility {
-  /// @deprecated
+  /// @deprecated Use `wheelchairAccessibilityGrade`, `media`, and other properties instead.
   accessibleWith?: PersonalProfile;
-  /// @deprecated
+  /// @deprecated Use `wheelchairAccessibilityGrade`, `media`, and other properties instead.
   partiallyAccessibleWith?: PersonalProfile;
-  /// @deprecated
+  /// @deprecated Use `wheelchairAccessibilityGrade`, `media`, and other properties instead.
   offersActivitiesForPeopleWith?: PersonalProfile;
-  // areas?: Array<Area>;
+
+  /**
+   * Describes the general wheelchair accessibility of the place. This is a human-rated value.
+   * It SHOULD conform to the traffic light system found in OpenStreetMap and Wheelmap.org:
+   *
+   * - `"fully"`: Entrance (if applicable) has no steps, and all rooms are accessible without steps.
+   *   If there are no rooms, the main functionality of the place must be accessible with a
+   *   wheelchair.
+   * - `"partially"`: Entrance has one step with max. 3 inches height (or a mobile ramp is
+   *   available), most rooms are without steps. After passing the entrance, the main functionality
+   *   of the place must be accessible with a wheelchair.
+   * - `"not"`: Entrance has a high step or several steps, or none of the rooms are accessible. You
+   *   can't enter / use the place with a wheelchair.
+   */
+  wheelchairAccessibilityGrade?: WheelchairAccessibilityGrade;
 
   /**
    * Information about the service staff.
@@ -45,15 +82,20 @@ export interface Accessibility {
   parking?: Parking | null;
   // QUESTION How is this measured, should be changed to ambient.lighting
   /**
-   * Determines if the venue is well lit (subjectively, by the assessor).  Will be replaced by a measurable lumen value in the future.
+   * Determines if the venue is well lit (subjectively, by the assessor).  Will be replaced by a
+   * measurable lumen value in the future.
    */
   isWellLit?: boolean;
   /**
-   * Determines if the venue is quiet (subjectively, by the assessor). Will be replaced by a measurable ambient noise level in the future.
+   * Determines if the venue is quiet (subjectively, by the assessor). Will be replaced by a
+   * measurable ambient noise level in the future.
    */
   isQuiet?: boolean;
-  // TODO: Causes test error. Fix this!
-  // ambientNoiseLevel?: Volume; // in dB(A) relative to a reference pressure of 0.00002 Pa
+  /**
+   * Ambient noise level in dB(A) relative to a reference pressure of 0.00002 Pa. Median over a
+   * 10-second period at least.
+   */
+  ambientNoiseLevel?: Volume;
   /**
    * Object describing the owner's smoking policy.
    */
@@ -63,11 +105,13 @@ export interface Accessibility {
    */
   animalPolicy?: AnimalPolicy;
   /**
-   * `true` if the venue has tactile guide strips on the floor or at the walls, `false` if not. `undefined` or missing property indicates unknown.
+   * `true` if the venue has tactile guide strips on the floor or at the walls, `false` if not.
+   * `undefined` or missing property indicates unknown.
    */
   hasTactileGuideStrips?: boolean;
   /**
-   * `true` if the venue has induction loops installed in its functional units where this is relevant.
+   * `true` if the venue has induction loops installed in its functional units where this is
+   * relevant.
    */
   hasInductionLoop?: boolean;
   /**
@@ -75,9 +119,10 @@ export interface Accessibility {
    */
   wifi?: WifiAccessibility;
   /**
-   * Object describing the place's ground condition. If there are very different ground conditions, you can create multiple places and nest them.
+   * Object describing the place's ground condition. If there are very different ground conditions,
+   * you can create multiple places and nest them.
    */
-  ground?: Ground | null;
+  surface?: Surface | null;
   /**
    * Describes the accessibility of pathways to the place or inside the place’s boundaries.
    */
@@ -113,297 +158,67 @@ export interface Accessibility {
    * `null` indicates there is no media, `undefined` or missing property indicates unknown.
    */
   media?: ArrayLike<Media> | null;
-  /**
-   * TODO
-   */
-  sitemap?: any; // TODO define type
-  /**
-   * TODO
-   */
-  switches?: [any]; // TODO define type
-  /**
-   * TODO
-   */
-  vendingMachines?: [any]; // TODO define type
-  /**
-   * TODO
-   */
-  powerOutlets?: [any]; // TODO define type
-  /**
-   * TODO
-   */
-  beds?: [any]; // TODO define type
-  /**
-   * TODO
-   */
-  wardrobe?: any; // TODO define type
-  /**
-   * TODO
-   */
-  changingRoom?: any; // TODO define type,
-  /**
-   * TODO
-   */
-  stage?: any; // TODO define type,
-  /**
-   * TODO
-   */
-  cashRegister?: any; // TODO define type,
-  /**
-   * TODO
-   */
-  seats?: any; // TODO define type,
-  /**
-   * TODO
-   */
-  services?: any; // TODO define type,,
-  /**
-   * TODO
-   */
-  infoDesk?: any; // TODO define type,
-  /**
-   * TODO
-   */
-  signage?: any; // TODO define type,
 }
 
-export const AccessibilitySchema = new SimpleSchema({
-  accessibleWith: {
-    type: PersonalProfileSchema,
+export const getAccessibilitySchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+  ...getPrefixedSchemaDefinition('accessibleWith', getPersonalProfileSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('partiallyAccessibleWith', getPersonalProfileSchemaDefinition()),
+  ...getPrefixedSchemaDefinition(
+    'offersActivitiesForPeopleWith',
+    getPersonalProfileSchemaDefinition(),
+  ),
+  wheelchairAccessibilityGrade: {
+    type: 'string',
     optional: true,
-    accessibility: {
-      deprecated: true
-    }
+    allowedValues: wheelchairAccessibilityGrades,
   },
-  partiallyAccessibleWith: {
-    type: PersonalProfileSchema,
-    optional: true,
-    accessibility: {
-      deprecated: true
-    }
-  },
-  offersActivitiesForPeopleWith: {
-    type: PersonalProfileSchema,
-    optional: true,
-    accessibility: {
-      deprecated: true
-    }
-  },
-  staff: {
-    type: StaffSchema,
-    optional: true,
-    accessibility: {
-      question: t`Is there any staff on the premises?`
-    }
-  },
-  wheelchairPlaces: {
-    type: WheelchairPlacesSchema,
-    optional: true,
-    accessibility: {
-      question: t`Are there any spaces reserved for people in wheelchairs?`
-    }
-  },
+  ...getPrefixedSchemaDefinition('staff', getStaffSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('wheelchairPlaces', getWheelchairPlacesSchemaDefinition()),
   media: {
     type: Array,
     optional: true,
-    accessibility: {
-      question: t`Is there any media available?`,
-      questionMore: t`Is there more media available?`,
-      description: t`e.g. menus, exhibits or presentations`
-    }
   },
-  'media.$': {
-    type: MediaSchema
-  },
-  payment: {
-    type: PaymentSchema,
-    optional: true,
-    accessibility: {
-      question: t`Is there any payment possible?`
-    }
-  },
-  parking: {
-    type: ParkingSchema,
-    optional: true,
-    accessibility: {
-      question: t`Is there parking attached to this place?`
-    }
-  },
-  ground: {
-    type: GroundSchema,
-    optional: true,
-    accessibility: {
-      question: t`In which condition is the ground you have to traverse to get here?`
-    }
-  },
-  wifi: {
-    type: WifiAccessibilitySchema,
-    optional: true,
-    accessibility: {
-      question: t`Is there a local wifi?`
-    }
-  },
-  ratingSpacious: {
-    type: Number,
-    optional: true,
-    min: 0,
-    max: 1,
-    accessibility: {
-      deprecated: true,
-      question: t`How spacious is this place?`,
-      componentHint: 'StarRating'
-    }
-  },
+  ...getPrefixedSchemaDefinition('media.$', getMediaSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('payment', getPaymentSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('parking', getParkingSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('surface', getSurfaceSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('wifi', getWifiAccessibilitySchemaDefinition()),
   isWellLit: {
     type: Boolean,
     optional: true,
-    accessibility: {
-      question: t`Is the place well lit?`
-    }
   },
   isQuiet: {
     type: Boolean,
     optional: true,
-    accessibility: {
-      question: t`Is the place quiet?`
-    }
   },
   hasInductionLoop: {
     type: Boolean,
     optional: true,
-    accessibility: {
-      question: t`Does this place have induction loops?`
-    }
   },
-  // TODO: Causes test error. Fix this!
-  // ambientNoiseLevel: quantityDefinition(LengthSchema, true, {
-  //   question: t`How loud is the ambient noise here typically (A-Weighted)?`,
-  //   machineData: true
-  // }),
-
+  ...getPrefixedQuantitySchemaDefinition('ambientNoiseLevel', VolumeSchemaDefinition),
   smokingPolicy: {
     type: String,
     optional: true,
-    allowedValues: smokingPolicies.map(s => s.value),
-    accessibility: {
-      question: t`Is smoking allowed here?`,
-      options: smokingPolicies
-    }
+    allowedValues: smokingPolicies().map((s) => s.value),
   },
   hasTactileGuideStrips: {
     type: Boolean,
-    optional: true
-  },
-  animalPolicy: {
-    type: AnimalPolicySchema,
     optional: true,
-    accessibility: {
-      question: t`What is the animal policy of this place?`
-    }
   },
-  pathways: {
-    type: PathwaysSchema,
-    optional: true
-  },
+  ...getPrefixedSchemaDefinition('animalPolicy', getAnimalPolicySchemaDefinition()),
+  ...getPrefixedSchemaDefinition('pathways', getPathwaysSchemaDefinition()),
   entrances: {
     type: Array,
     optional: true,
     label: t`Entrances`,
-    accessibility: {
-      questionBlockBegin: t`Would you like to rate the first entrance?`,
-      questionMore: t`Would you like to rate another entrance?`
-    }
   },
-  'entrances.$': EntranceSchema,
+  ...getPrefixedSchemaDefinition('entrances.$', getEntranceSchemaDefinition()),
   restrooms: {
     type: Array,
     optional: true,
     label: t`Restrooms`,
-    accessibility: {
-      questionBlockBegin: t`Would you like to rate the accessibility of the restroom?`,
-      questionMore: t`Would you like to rate another restroom?`
-    }
   },
-  'restrooms.$': RestroomSchema,
-  tables: {
-    type: TablesSchema,
-    optional: true,
-    accessibility: {
-      question: t`Are there any tables here?`,
-      options: [
-        {
-          label: t`Accessible table`,
-          option: AccessibleTablesPrefab
-        }
-      ]
-    }
-  },
-  sitemap: {
-    type: Object, // TODO define type
-    optional: true
-  },
-  lifts: {
-    type: Array,
-    optional: true
-  },
-  'lifts.$': Object, // TODO define type
-  switches: {
-    type: Array,
-    optional: true
-  },
-  'switches.$': Object, // TODO define type
-  vendingMachines: {
-    type: Array,
-    optional: true
-  },
-  'vendingMachines.$': Object, // TODO define type
-  powerOutlets: {
-    type: Array,
-    optional: true
-  },
-  'powerOutlets.$': Object, // TODO define type
-  beds: {
-    type: Array,
-    optional: true
-  },
-  'beds.$': Object, // TODO define type
-  wardrobe: {
-    type: Object, // TODO define type
-    optional: true
-  },
-  changingRoom: {
-    type: Object, // TODO define type
-    optional: true
-  },
-  stage: {
-    type: Object, // TODO define type
-    optional: true
-  },
-  cashRegister: {
-    type: Object, // TODO define type
-    optional: true
-  },
-  seats: {
-    type: Object, // TODO define type
-    optional: true
-  },
-  serviceContact: {
-    type: LocalizedStringSchema,
-    optional: true,
-    accessibility: {
-      question: t`How can the service staff be reached?`
-    }
-  },
-  services: {
-    type: Object, // TODO define type
-    optional: true
-  },
-  infoDesk: {
-    type: Object, // TODO define type
-    optional: true
-  },
-  signage: {
-    type: Object, // TODO define type
-    optional: true
-  }
+  ...getPrefixedSchemaDefinition('restrooms.$', getRestroomSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('tables', getTablesSchemaDefinition()),
+  ...getLocalizedStringSchemaDefinition('serviceContact'),
 });

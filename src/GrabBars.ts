@@ -1,6 +1,6 @@
 import { t } from 'ttag';
-import { createSchemaInstance } from './SimpleSchemaExtensions';
-import { Length, LengthSchema, quantityDefinition } from './Units';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 
 export interface GrabBars {
   /**
@@ -27,32 +27,19 @@ export interface GrabBars {
   foldable?: boolean;
 }
 
-export const GrabBarsSchema = createSchemaInstance('GrabBars', {
+export const getGrabBarsSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
   onUsersLeftSide: {
     type: Boolean,
     optional: true,
-    accessibility: {
-      question: t`Is there a folding handle on left side? (from the perspective of somebody using the toilet)`
-    }
   },
   onUsersRightSide: {
     type: Boolean,
     optional: true,
-    accessibility: {
-      question: t`Is there a folding handle on right side? (from the perspective of somebody using the toilet)`
-    }
   },
-  topHeightFromFloor: quantityDefinition(LengthSchema, true, {
-    question: t`How high are the grab bars (top edge, measured from the floor)`
-  }),
-  distanceBetweenBars: quantityDefinition(LengthSchema, true, {
-    question: t`How far are the bars apart?`
-  }),
+  ...getPrefixedQuantitySchemaDefinition('topHeightFromFloor', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('distanceBetweenBars', LengthSchemaDefinition),
   foldable: {
     type: Boolean,
     optional: true,
-    accessibility: {
-      question: t`Can the grab bars be folded? If only one can be folded, answer 'No'.`
-    }
-  }
+  },
 });

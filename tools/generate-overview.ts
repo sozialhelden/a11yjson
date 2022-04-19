@@ -14,7 +14,7 @@ const interfaces = json.children
   .filter(
     (t: any) =>
       !includes(
-        ["AccessibilitySchemaExtension", "EvaluatedAccessibilitySchemaExtension", "KoboAttachment"],
+        ["KoboAttachment"],
         t.name
       )
   );

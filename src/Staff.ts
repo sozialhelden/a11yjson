@@ -1,10 +1,8 @@
 import { t } from 'ttag';
-import SimpleSchema from 'simpl-schema';
 
-import './SimpleSchemaExtensions';
 import {
   IetfLanguageTagOrSignLanguageCode,
-  ietfLanguageTagsAndSignLanguageCodes
+  ietfLanguageTagsAndSignLanguageCodes,
 } from './ietfLanguageTags';
 
 /**
@@ -13,7 +11,7 @@ import {
 export interface Staff {
   /**
    * `true` if the staff has means to see visitors from the inside at all times when the place is
-   * open (for example a window or CCTV system), `false` if not, `undefined` if unknown.
+   * open (for example a window or CCTV system), `false` if not.
    */
   canSeeVisitorsFromInside?: boolean;
   /**
@@ -23,51 +21,39 @@ export interface Staff {
 
   /**
    * `true` if there is an assistant for the duration of the visit that is free of charge, `false`
-   * if not, `undefined` if unknown.
+   * if not.
    */
-  hasFreeAssistantForVisitors?: boolean; // QUESTION: free versus paid? Why is there no hasPaidAssistantForVisitors? Unlikely?
+  hasFreeAssistantForVisitors?: boolean;
 }
 
 /**
  * The StaffSchema allows easy validation, cleaning and checking of Staff objects.
  */
-export const StaffSchema = new SimpleSchema({
+export const getStaffSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
   canSeeVisitorsFromInside: {
     type: Boolean,
-    label: t`See From Inside`,
-    accessibility: {
-      question: t`Can the staff see visitors arriving?`,
-      description: t`e.g. via a greeter or reception, a window or a always-monitored camera system`
-    },
-    optional: true
+    label: t`Can staff see visitors from inside?`,
+    optional: true,
   },
   isTrainedInSigning: {
     type: Boolean,
     label: t`Signing training`,
-    accessibility: {
-      question: t`Is the staff trained in local sign languages?`
-    },
-    optional: true
+    optional: true,
   },
   hasFreeAssistantForVisitors: {
     type: Boolean,
     label: t`Visitor Assistant`,
-    accessibility: {
-      question: t`Is there a free assistant for visitors?`
-    },
-    optional: true
+    optional: true,
   },
   spokenLanguages: {
+    label: t`Which languages do the staff speak (including sign language variants)?`,
     type: Array,
     defaultValue: [],
     optional: true,
-    accessibility: {
-      question: t`Which languages do the staff speak (including sign language variants)?`
-    }
   },
   'spokenLanguages.$': {
     type: String,
     label: t`Language`,
-    allowedValues: ietfLanguageTagsAndSignLanguageCodes
-  }
+    allowedValues: ietfLanguageTagsAndSignLanguageCodes,
+  },
 });

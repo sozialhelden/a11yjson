@@ -1,11 +1,11 @@
-import { t } from "ttag";
-import SimpleSchema from "simpl-schema";
+import { t } from 'ttag';
+import SimpleSchema from 'simpl-schema';
 
-import "./SimpleSchemaExtensions";
-
-import { Accessibility, AccessibilitySchema } from "./Accessibility";
-import { Address, AddressSchema } from "./Address";
-import { LocalizedStringSchema, LocalizedString } from "./LocalizedString";
+import { Accessibility, getAccessibilitySchemaDefinition } from './Accessibility';
+import { StructuredAddress, getStructuredAddressSchemaDefinition } from './Address';
+import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+import { AccessType, accessTypes } from './AccessType';
 
 export interface PlaceProperties {
   // properties
@@ -19,7 +19,7 @@ export interface PlaceProperties {
    * `null` indicates that this place has no address, `undefined` or missing property indicates
    * unknown.
    */
-  address?: Address | null;
+  address?: StructuredAddress | null;
 
   /**
    * Text description containing helpful information for people with disabilities.
@@ -34,7 +34,7 @@ export interface PlaceProperties {
   /**
    * Email address of the place's operator where you can get accessibility relevant information.
    */
-  emailAddress?: LocalizedString;
+  emailAddress?: string;
 
   /**
    * Category name of the place
@@ -100,173 +100,105 @@ export interface PlaceProperties {
   /**
    * URL of the original data source’s website describing this place.
    */
-  infoPageUrl?: LocalizedString;
+  infoPageUrl?: string;
 
   /**
    * URL of the original data source’s website on a subpage that allows to edit the original data.
    */
-  editPageUrl?: LocalizedString;
+  editPageUrl?: string;
 
   /**
    * URL of the place’s own website.
    */
-  placeWebsiteUrl?: LocalizedString;
+  placeWebsiteUrl?: string;
+
+  /**
+   * Defines who this restroom is for. See https://wiki.openstreetmap.org/wiki/Key:access for more information.
+   */
+  access?: AccessType[];
 }
 
-export const PlacePropertiesSchema = new SimpleSchema({
-  name: {
-    type: LocalizedStringSchema,
-    optional: true,
-    accessibility: {
-      question: t`What is the name of this place?`
-    }
-  },
+export const getPlacePropertiesSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+  ...getLocalizedStringSchemaDefinition('name'),
   category: {
     type: String,
-    accessibility: {
-      question: t`What type of place is this?`,
-      componentHint: "Category"
-    }
   },
-  address: {
-    type: AddressSchema,
-    optional: true,
-    label: t`Address`,
-    accessibility: {
-      question: t`Would you like to add the address?`,
-      componentHint: "Address"
-    }
-  },
-  description: {
-    type: LocalizedStringSchema,
-    optional: true,
-    accessibility: {
-      question: t`How would you describe this place?`,
-      componentHint: "TextArea"
-    }
-  },
-  phoneNumber: {
-    type: LocalizedStringSchema,
-    optional: true,
-    accessibility: {
-      question: t`What is the phone number of this place?`,
-      description: t`The phone number of this place, with international country code`,
-      example: t`e.g. +1-555-555-90-210`,
-      componentHint: "PhoneNumber"
-    }
-  },
+  ...getPrefixedSchemaDefinition('address', getStructuredAddressSchemaDefinition()),
+  ...getLocalizedStringSchemaDefinition('description'),
+  ...getLocalizedStringSchemaDefinition('phoneNumber'),
   emailAddress: {
-    type: LocalizedStringSchema,
+    type: String,
+    regEx: SimpleSchema.RegEx.EmailWithTLD,
     optional: true,
-    accessibility: {
-      question: t`What is the email address of this place?`,
-      description: t`An email address where visitors can get accessibility relevant information`,
-      example: t`e.g. accessibility@example.com`
-    }
   },
-  accessibility: {
-    type: AccessibilitySchema,
-    optional: true,
-    accessibility: {
-      question: t`Okay, now let\`s map the accessibility.`,
-      description: t`Describes the overall accessibility of a place.`
-    }
-  },
+  ...getPrefixedSchemaDefinition('accessibility', getAccessibilitySchemaDefinition()),
   infoPageUrl: {
-    type: LocalizedStringSchema,
+    type: String,
     regEx: SimpleSchema.RegEx.Url,
     optional: true,
-    accessibility: {
-      description: t`URL of the original data source’s website describing this place`
-    }
   },
   editPageUrl: {
-    type: LocalizedStringSchema,
+    type: String,
     regEx: SimpleSchema.RegEx.Url,
     optional: true,
-    accessibility: {
-      description: t`URL of the original data source’s website on a subpage that allows to edit the original data.`
-    }
   },
   placeWebsiteUrl: {
-    type: LocalizedStringSchema,
+    type: String,
     regEx: SimpleSchema.RegEx.Url,
     optional: true,
-    accessibility: {
-      description: t`URL of the place’s own website`
-    }
   },
   // machine data fields
   sameAs: {
     type: Array,
     optional: true,
-    accessibility: {
-      machineData: true
-    }
   },
-  "sameAs.$": {
+  'sameAs.$': {
     type: String,
-    accessibility: {
-      machineData: true
-    }
   },
   ids: {
     type: Object,
     optional: true,
-    blackbox: true
+    blackbox: true,
   },
   originalId: {
     type: String,
     optional: true,
-    accessibility: {
-      machineData: true
-    }
   },
   parentPlaceInfoId: {
     type: String,
     optional: true,
     regEx: SimpleSchema.RegEx.Id,
-    accessibility: {
-      machineData: true
-    }
   },
   originalParentPlaceInfoId: {
     type: String,
     optional: true,
     regEx: SimpleSchema.RegEx.Id,
-    accessibility: {
-      machineData: true
-    }
   },
   parentPlaceSourceId: {
     type: String,
     optional: true,
     regEx: SimpleSchema.RegEx.Id,
-    accessibility: {
-      machineData: true
-    }
   },
   originalData: {
     type: String,
     optional: true,
-    accessibility: {
-      machineData: true
-    }
   },
   sourceId: {
     type: String,
     optional: true,
     regEx: SimpleSchema.RegEx.Id,
-    accessibility: {
-      machineData: true
-    }
   },
   sourceImportId: {
     type: String,
     optional: true,
     regEx: SimpleSchema.RegEx.Id,
-    accessibility: {
-      machineData: true
-    }
-  }
+  },
+  access: {
+    type: Array,
+    optional: true,
+  },
+  'access.$': {
+    type: String,
+    allowedValues: accessTypes,
+  },
 });

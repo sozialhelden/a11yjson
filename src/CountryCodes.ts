@@ -3,7 +3,7 @@ import { t } from 'ttag';
 /**
  * All existing ISO 3166-1 alpha-3 country codes
  */
-export const isoAlphaThreeCountryCodes = [
+const getIsoAlphaThreeCountryCodes = () => [
   { value: 'ABW', label: t`Aruba` },
   { value: 'AFG', label: t`Afghanistan` },
   { value: 'AGO', label: t`Angola` },
@@ -252,5 +252,7 @@ export const isoAlphaThreeCountryCodes = [
   { value: 'YEM', label: t`Yemen` },
   { value: 'ZAF', label: t`South Africa` },
   { value: 'ZMB', label: t`Zambia` },
-  { value: 'ZWE', label: t`Zimbabwe` }
+  { value: 'ZWE', label: t`Zimbabwe` },
 ];
+
+export default getIsoAlphaThreeCountryCodes;

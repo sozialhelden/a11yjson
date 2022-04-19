@@ -2,11 +2,14 @@
 {
   // The following will hide the js and map files in the editor
   "files.exclude": {
-    "**/node_modules": true,
+    // "**/node_modules": true,
     "**/build": true
   },
   "editor.tabSize": 2,
   // ensure that a matching typescript version is used
   "typescript.tsdk": "node_modules/typescript/lib",
-  "prettier.requireConfig": false
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "eslint.validate": ["javascript", "typescript"]
 }

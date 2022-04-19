@@ -1,8 +1,6 @@
 import { t } from 'ttag';
-import SimpleSchema from 'simpl-schema';
 
-import './SimpleSchemaExtensions';
-import { LocalizedString, LocalizedStringSchema } from './LocalizedString';
+import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 
 export interface Payment {
   hasPortablePaymentSystem?: boolean;
@@ -17,70 +15,43 @@ export interface Payment {
   customPaymentMetaInfo?: Array<LocalizedString>;
 }
 
-export const PaymentSchema = new SimpleSchema({
+export const getPaymentSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
   hasPortablePaymentSystem: {
     type: Boolean,
-    label: t`Portable Payment System`,
+    label: t`Is there a portable payment system?`,
     optional: true,
-    accessibility: {
-      question: t`Is there a portable payment system?`
-    }
   },
   acceptsPaymentByMobilePhone: {
     type: Boolean,
-    label: t`Mobile Phone Payment`,
+    label: t`Is payment by mobile phone accepted?`,
     optional: true,
-    accessibility: {
-      question: t`Is payment by mobile phone accepted?`
-    }
   },
   acceptsCreditCards: {
     type: Boolean,
-    label: t`Credit Cards`,
+    label: t`Is payment by credit card accepted?`,
     optional: true,
-    accessibility: {
-      question: t`Is payment by credit card accepted?`
-    }
   },
   acceptsDebitCards: {
     type: Boolean,
-    label: t`Debit Cards`,
+    label: t`Is payment by debit card accepted?`,
     optional: true,
-    accessibility: {
-      question: t`Is payment by debit card accepted?`
-    }
   },
   acceptsCoins: {
     type: Boolean,
-    label: t`Coins`,
+    label: t`Is payment by coins accepted?`,
     optional: true,
-    accessibility: {
-      question: t`Is payment by coins accepted?`
-    }
   },
   acceptsBills: {
     type: Boolean,
-    label: t`Bills`,
+    label: t`Is payment by bills accepted?`,
     optional: true,
-    accessibility: {
-      question: t`Is payment by bills accepted?`
-    }
   },
   customPaymentMetaInfo: {
     type: Array,
     label: t`Custom Payment Information`,
     optional: true,
-    accessibility: {
-      question: t`Is there custom payment information?`,
-      questionMore: t`Is there additional custom payment information?`,
-      description: t`e.g. additional phone numbers, parking lot IDs etc.`
-    }
   },
-  'customPaymentMetaInfo.$': {
-    type: LocalizedStringSchema,
+  ...getLocalizedStringSchemaDefinition('customPaymentMetaInfo.$', {
     label: t`Custom Payment Information`,
-    accessibility: {
-      question: t`What is the custom information?`
-    }
-  }
+  }),
 });

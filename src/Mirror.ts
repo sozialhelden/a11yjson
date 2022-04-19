@@ -1,6 +1,4 @@
-import { t } from 'ttag';
-import { Length, LengthSchema, quantityDefinition } from './Units';
-import { createSchemaInstance } from './SimpleSchemaExtensions';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 
 export interface Mirror {
   /**
@@ -19,20 +17,14 @@ export interface Mirror {
   heightFromGround: Length;
 }
 
-export const MirrorSchema = createSchemaInstance('Mirror', {
+export const getMirrorSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
   isLocatedInsideRestroom: {
     type: Boolean,
     optional: true,
-    accessibility: {
-      question: t`Is the mirror inside the restroom?`
-    }
   },
   isAccessibleWhileSeated: {
     type: Boolean,
     optional: true,
-    accessibility: {
-      question: t`Can the mirror be used when sitting in a wheelchair?`
-    }
   },
-  heightFromGround: quantityDefinition(LengthSchema)
+  ...getPrefixedQuantitySchemaDefinition('heightFromGround', LengthSchemaDefinition),
 });

@@ -1,9 +1,5 @@
-import { t } from 'ttag';
-import SimpleSchema from 'simpl-schema';
-
-import './SimpleSchemaExtensions';
-
-import { Length, LengthSchema, Operator, quantityDefinition } from './Units';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 
 export interface Tables {
   /**
@@ -24,40 +20,9 @@ export interface Tables {
   spaceBelowDepth: Length;
 }
 
-export const TablesSchema = new SimpleSchema({
-  height: quantityDefinition(LengthSchema, true, {
-    question: t`How high is the table?`
-  }),
-  spaceBelowHeight: quantityDefinition(LengthSchema, false, {
-    question: t`How high is the free space below the table?`
-  }),
-  spaceBelowWidth: quantityDefinition(LengthSchema, false, {
-    question: t`How wide is the free space below the table?`
-  }),
-  spaceBelowDepth: quantityDefinition(LengthSchema, false, {
-    question: t`How deep is the free space below the table?`
-  })
+export const getTablesSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+  ...getPrefixedQuantitySchemaDefinition('height', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('spaceBelowHeight', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('spaceBelowWidth', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('spaceBelowDepth', LengthSchemaDefinition),
 });
-
-export const AccessibleTablesPrefab: Tables = {
-  height: {
-    operator: '>=',
-    value: 72,
-    unit: 'cm'
-  },
-  spaceBelowHeight: {
-    operator: '>=',
-    value: 70,
-    unit: 'cm'
-  },
-  spaceBelowWidth: {
-    operator: '>=',
-    value: 80,
-    unit: 'cm'
-  },
-  spaceBelowDepth: {
-    operator: '>=',
-    value: 50,
-    unit: 'cm'
-  }
-};
