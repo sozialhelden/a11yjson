@@ -13,7 +13,7 @@ export default equipmentInfoFixture;
 
 const definition = getEquipmentInfoSchemaDefinition();
 
-describe('EquipmentProperties schema', () => {
+describe('EquipmentInfo schema', () => {
   it('validates a completely specified object', () => {
     expectValidFixture(definition, equipmentInfoFixture);
   });
