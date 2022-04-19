@@ -1,4 +1,8 @@
-export default function getPrefixedSchemaDefinition(prefix: string, definition: Record<string, SchemaDefinition>, extendDefinition?: Partial<SchemaDefinition>): Record<string, SchemaDefinition> {
+export default function getPrefixedSchemaDefinition(
+  prefix: string,
+  definition: Record<string, SchemaDefinition>,
+  extendDefinition?: Partial<SchemaDefinition>,
+): Record<string, SchemaDefinition> {
   const prefixedDefinition: Record<string, SchemaDefinition> = {
     [prefix]: {
       type: Object,

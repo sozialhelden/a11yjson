@@ -2,7 +2,11 @@
 
 import getIsoAlphaThreeCountryCodes from './CountryCodes';
 
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+
 export { getIsoAlphaThreeCountryCodes };
+
+export { getPrefixedSchemaDefinition };
 
 export * from './Accessibility';
 export * from './Address';
