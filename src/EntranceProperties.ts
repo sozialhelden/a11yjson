@@ -114,6 +114,10 @@ SchemaDefinition
     type: Boolean,
     optional: true,
   },
+  hasSignage: {
+    type: Boolean,
+    optional: true,
+  },
   placeInfoId: {
     type: String,
     optional: true,
