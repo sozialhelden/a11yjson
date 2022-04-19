@@ -20,6 +20,15 @@ export interface Stairs {
    */
   hasAntiSlipNosing?: boolean;
   /**
+   * Do the stairs have metal grating? This is difficult to navigate for people with assistance
+   * dogs.
+   */
+  hasMetalGrating?: boolean;
+  /**
+   * Are the stairs and podests well lit?
+   */
+  isWellLit?: boolean;
+  /**
    * If there are multiple staircase, you SHOULD indicate a name for this staircase here.
    */
   name?: LocalizedString;
@@ -64,6 +73,14 @@ export const getStairsSchemaDefinition: () => Record<string, SchemaDefinition> =
     optional: true,
   },
   hasAntiSlipNosing: {
+    type: Boolean,
+    optional: true,
+  },
+  hasMetalGrating: {
+    type: Boolean,
+    optional: true,
+  },
+  isWellLit: {
     type: Boolean,
     optional: true,
   },
