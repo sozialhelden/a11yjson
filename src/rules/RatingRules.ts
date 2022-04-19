@@ -153,6 +153,7 @@ function compareByOperator(
 // checks wether the given data matches the rule
 function evaluateMatchRule(data: {}, rule: MatchRule): RuleEvaluationResult {
   let finalResult: RuleEvaluationResult | undefined;
+  // eslint-disable-next-line no-restricted-syntax
   for (const [path, matcher] of entries(rule)) {
     const fieldData = get(data, path);
     logRule('match', path, matcher, fieldData, finalResult);
