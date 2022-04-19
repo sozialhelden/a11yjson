@@ -14,13 +14,15 @@ export interface WheelchairPlaces {
    */
   hasSpaceForAssistant?: boolean;
   /**
-   * The number of people using a wheelchair that can be accomodated at the same time. Use this when there is no designated space for wheelchair users, but the number is known.
+   * The number of people using a wheelchair that can be accomodated at the same time. Use this when
+   * there is no designated space for wheelchair users, but the number is known.
    */
   wheelchairUserCapacity?: number;
 }
 
 /**
- * The WheelchairPlacesSchema allows easy validation, cleaning and checking of WheelchairPlaces objects.
+ * The WheelchairPlacesSchema allows easy validation, cleaning and checking of WheelchairPlaces
+ * objects.
  */
 export const getWheelchairPlacesSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
   count: {

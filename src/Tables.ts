@@ -1,4 +1,3 @@
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 
 export interface Tables {

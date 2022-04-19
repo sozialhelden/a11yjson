@@ -2,7 +2,9 @@ import { Room, getRoomSchemaDefinition } from './Room';
 import { Mirror, getMirrorSchemaDefinition } from './Mirror';
 import { WashBasin, getWashBasinSchemaDefinition } from './WashBasin';
 import { Entrance, getEntranceSchemaDefinition } from './Entrance';
-import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
+import {
+  getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition, Quantity,
+} from './Quantity';
 import { Toilet, getToiletSchemaDefinition } from './Toilet';
 import { Shower, getShowerSchemaDefinition } from './Shower';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
