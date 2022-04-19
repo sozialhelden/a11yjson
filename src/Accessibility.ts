@@ -109,6 +109,17 @@ export interface Accessibility {
    * `undefined` or missing property indicates unknown.
    */
   hasTactileGuideStrips?: boolean;
+
+  /**
+   * `true` if there is tactile navigation for/to this place, `false` if not.
+   */
+  hasTactileSignage?: boolean;
+
+  /**
+   * `true` if there is braille navigation for/to this place, `false` if not.
+   */
+  hasBrailleSignage?: boolean;
+
   /**
    * `true` if the venue has induction loops installed in its functional units where this is
    * relevant.
@@ -192,6 +203,14 @@ export const getAccessibilitySchemaDefinition: () => Record<string, SchemaDefini
     optional: true,
   },
   hasInductionLoop: {
+    type: Boolean,
+    optional: true,
+  },
+  hasBrailleSignage: {
+    type: Boolean,
+    optional: true,
+  },
+  hasTactileSignage: {
     type: Boolean,
     optional: true,
   },

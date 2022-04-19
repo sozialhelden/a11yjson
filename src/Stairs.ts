@@ -37,15 +37,17 @@ export interface Stairs {
    */
   stepHeight?: Length;
   /**
-   * `true` if there is a handrail covering all relevant steps, `false` if not, `undefined` if
-   * condition is unknown.
+   * `true` if there is a handrail covering all relevant steps, `false` if not.
    */
   hasHandRail?: boolean;
   /**
-   * `true` if there is braille navigation for this staircase, `false` if not, `undefined` if
-   * condition is unknown.
+   * `true` if there is tactile navigation in this staircase, `false` if not.
    */
-  hasBrailleNavigation?: boolean;
+  hasTactileSignage?: boolean;
+  /**
+   * `true` if there is braille navigation in this staircase, `false` if not.
+   */
+  hasBrailleSignage?: boolean;
   /**
    * You SHOULD reference alternative equipment IDs with this field, for example elevators,
    * escalators, or hoists.
@@ -94,7 +96,11 @@ export const getStairsSchemaDefinition: () => Record<string, SchemaDefinition> =
     type: Boolean,
     optional: true,
   },
-  hasBrailleNavigation: {
+  hasBrailleSignage: {
+    type: Boolean,
+    optional: true,
+  },
+  hasTactileSignage: {
     type: Boolean,
     optional: true,
   },
