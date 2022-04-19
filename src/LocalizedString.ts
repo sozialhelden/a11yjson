@@ -19,9 +19,9 @@ export function getLocalizedStringSchemaDefinition(key: string, definition: Omit
     [key]: {
       optional: true,
       blackbox: true,
-      custom() {
+      custom(): string | undefined {
         if (!this.isSet) {
-          return;
+          return undefined;
         }
         const { value } = this;
         if (typeof value !== 'object') {
@@ -30,9 +30,11 @@ export function getLocalizedStringSchemaDefinition(key: string, definition: Omit
         if (Object.keys(value).length === 0) {
           return 'mustHaveAtLeastOneKey';
         }
-        for (const key of Object.keys(value)) {
+        const tags = Object.keys(value);
+        for (let i = 0; i < tags.length; i += 1) {
+          const tagString = tags[i];
           // eslint-disable-next-line @typescript-eslint/no-empty-function
-          const tag = parseLanguageTag(key, true, () => {});
+          const tag = parseLanguageTag(tagString, true, () => {});
           if (!tag) {
             return 'invalidLanguageTag';
           }

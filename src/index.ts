@@ -1,9 +1,13 @@
 // re-export all library components
 
+import getIsoAlphaThreeCountryCodes from './CountryCodes';
+
+export { getIsoAlphaThreeCountryCodes };
+
 export * from './Accessibility';
 export * from './Address';
 export * from './AnimalPolicy';
-export * from './CountryCodes';
+
 export * from './Door';
 export * from './Entrance';
 export * from './EquipmentInfo';
@@ -34,3 +38,4 @@ export * from './QueueSystem';
 export * from './WashBasin';
 export * from './WheelchairPlaces';
 export * from './ietfLanguageTags';
+export * from './WifiAccessibility';

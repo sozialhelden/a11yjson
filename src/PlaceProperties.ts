@@ -15,9 +15,8 @@ export interface PlaceProperties {
   name?: LocalizedString;
 
   /**
-   * The address of this place.
-   * `null` indicates that this place has no address, `undefined` or missing property indicates
-   * unknown.
+   * The address of this place. `null` indicates that this place has no address, `undefined` or
+   * missing property indicates unknown.
    */
   address?: StructuredAddress | null;
 
@@ -43,8 +42,8 @@ export interface PlaceProperties {
   category: string;
 
   /**
-   * The accessibility of this place.
-   * `null` indicates that this place has no data, `undefined` or missing property indicates unknown.
+   * The accessibility of this place. `null` indicates that this place has no data, `undefined` or
+   * missing property indicates unknown.
    */
   accessibility?: Accessibility | null;
 
@@ -113,7 +112,8 @@ export interface PlaceProperties {
   placeWebsiteUrl?: string;
 
   /**
-   * Defines who this restroom is for. See https://wiki.openstreetmap.org/wiki/Key:access for more information.
+   * Defines who this restroom is for. See https://wiki.openstreetmap.org/wiki/Key:access for more
+   * information.
    */
   access?: AccessType[];
 }

@@ -28,15 +28,18 @@ export interface Stairs {
    */
   stepHeight?: Length;
   /**
-   * `true` if there is a handrail covering all relevant steps, `false` if not, `undefined` if condition is unknown.
+   * `true` if there is a handrail covering all relevant steps, `false` if not, `undefined` if
+   * condition is unknown.
    */
   hasHandRail?: boolean;
   /**
-   * `true` if there is braille navigation for this staircase, `false` if not, `undefined` if condition is unknown.
+   * `true` if there is braille navigation for this staircase, `false` if not, `undefined` if
+   * condition is unknown.
    */
   hasBrailleNavigation?: boolean;
   /**
-   * You SHOULD reference alternative equipment IDs with this field, for example elevators, escalators, or hoists.
+   * You SHOULD reference alternative equipment IDs with this field, for example elevators,
+   * escalators, or hoists.
    */
   alternativeMobileEquipmentIds?: Array<string>;
   /**
