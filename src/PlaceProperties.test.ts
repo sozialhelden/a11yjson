@@ -18,7 +18,7 @@ export const placePropertiesFixture: Complete<PlaceProperties> = {
   name: { en: 'T-Mobile Sandy' },
   category: 'shopping',
   address: structuredAddressFixture,
-  phoneNumber: { en: '555-SANDY' },
+  phoneNumber: '+1 555-SANDY',
   emailAddress: 'sandy@example.com',
   description: { en: 'Some Description' },
   originalData: 'originalData',
