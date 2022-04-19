@@ -34,6 +34,3 @@ export * from './QueueSystem';
 export * from './WashBasin';
 export * from './WheelchairPlaces';
 export * from './ietfLanguageTags';
-
-export * from './rules/RatingRules';
-export * from './rules/WheelmapA11yRuleset';

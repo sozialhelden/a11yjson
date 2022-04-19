@@ -8,7 +8,7 @@ import { Shower, getShowerSchemaDefinition } from './Shower';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { AccessType, accessTypes } from './AccessType';
 
-const restroomSignIcons = [
+export const restroomSignIcons = [
   'allGender',
   'female',
   'male',
