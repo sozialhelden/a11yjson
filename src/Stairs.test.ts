@@ -12,6 +12,8 @@ const stairsFixture: Complete<Stairs> = {
   hasTactileSafetyStrips: true,
   hasBrailleNavigation: true,
   alternativeMobileEquipmentIds: ['foo', 'bar'],
+  hasMetalGrating: true,
+  isWellLit: true,
 };
 
 export default stairsFixture;
