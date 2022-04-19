@@ -34,6 +34,8 @@ const accessibilityFixture: Complete<Accessibility> = {
   ambientNoiseLevel: '80dB',
   smokingPolicy: 'prohibited',
   hasTactileGuideStrips: true,
+  hasTactileSignage: true,
+  hasBrailleSignage: true,
   serviceContact: { en: 'string' },
   pathways: pathwaysFixture,
   parking: parkingFixture,
