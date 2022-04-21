@@ -34,6 +34,7 @@ const restroomFixture: Complete<Restroom> = {
     currency: 'EUR',
     amount: 0.5,
   },
+  sameAs: ['https://example.com/restrooms/1'],
 };
 
 export default restroomFixture;

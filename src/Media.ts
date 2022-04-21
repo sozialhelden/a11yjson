@@ -92,7 +92,7 @@ export interface Media {
   /**
    * URLs that contain the media. Use this to link data, for example with [RDF](https://www.w3.org/RDF/).
    */
-  sameAs: string[];
+  sameAs?: string[];
 
   /**
    * Access modes supported by this equipment.
@@ -113,21 +113,21 @@ export interface Media {
    *
    * @see https://www.w3.org/2021/a11y-discov-vocab/latest/
    */
-  accessibilityControl: W3CAccessibilityControl[];
+  accessibilityControl?: W3CAccessibilityControl[];
 
   /**
    * Indicates the access mode combinations that allow understanding and using the equipment.
    *
    * @see https://www.w3.org/2021/a11y-discov-vocab/latest/
    */
-  accessibilityFeature: W3CAccessibilityFeature[];
+  accessibilityFeature?: W3CAccessibilityFeature[];
 
   /**
    * Indicates the access mode combinations that allow understanding and using the equipment.
    *
    * @see https://www.w3.org/2021/a11y-discov-vocab/latest/
    */
-  accessibilityHazard: W3CAccessibilityHazard[];
+  accessibilityHazard?: W3CAccessibilityHazard[];
 }
 
 export const getMediaSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({

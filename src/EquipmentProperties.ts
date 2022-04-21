@@ -143,21 +143,21 @@ export interface EquipmentProperties {
    *
    * @see https://www.w3.org/2021/a11y-discov-vocab/latest/
    */
-  accessibilityControl: W3CAccessibilityControl[];
+  accessibilityControl?: W3CAccessibilityControl[];
 
   /**
    * Indicates the access mode combinations that allow understanding and using the equipment.
    *
    * @see https://www.w3.org/2021/a11y-discov-vocab/latest/
    */
-  accessibilityFeature: W3CAccessibilityFeature[];
+  accessibilityFeature?: W3CAccessibilityFeature[];
 
   /**
    * Indicates the access mode combinations that allow understanding and using the equipment.
    *
    * @see https://www.w3.org/2021/a11y-discov-vocab/latest/
    */
-  accessibilityHazard: W3CAccessibilityHazard[];
+  accessibilityHazard?: W3CAccessibilityHazard[];
 
   /**
    * `true` if the equipment’s controls or signs have raised letters, `false` if not.

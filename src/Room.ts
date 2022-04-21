@@ -5,6 +5,8 @@ export interface Room {
    * `false` if not, `undefined` if the condition is unknown or difficult to assess.
    */
   isAccessibleWithWheelchair?: boolean;
+
+  sameAs?: string[];
 }
 
 export const getRoomSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({

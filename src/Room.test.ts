@@ -4,6 +4,7 @@ import expectValidFixture from './lib/expectValidFixture';
 
 const roomFixture: Complete<Room> = {
   isAccessibleWithWheelchair: true,
+  sameAs: ['https://example.com/rooms/1'],
 };
 
 export default roomFixture;
