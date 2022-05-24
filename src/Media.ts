@@ -24,6 +24,7 @@ export interface Media {
   | 'document'
   | 'menu'
   | 'guide'
+  | 'tour'
   | 'presentation'
   | 'exhibit'
   | 'movie'
