@@ -48,6 +48,11 @@ export interface Media {
   isAudio?: boolean;
 
   /**
+   * Is the media tactile?
+   */
+  isTactile?: boolean;
+
+  /**
    * If the media unit is printed, is the print large?
    */
   isLargePrint?: boolean;
@@ -164,6 +169,11 @@ export const getMediaSchemaDefinition: () => Record<string, SchemaDefinition> = 
   isAudio: {
     type: Boolean,
     label: t`Audio`,
+    optional: true,
+  },
+  isTactile: {
+    type: Boolean,
+    label: t`Tactile`,
     optional: true,
   },
   isLargePrint: {

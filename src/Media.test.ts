@@ -8,6 +8,7 @@ const mediaFixture: Complete<Media> = {
   name: { en: 'menu' },
   isBraille: true,
   isAudio: true,
+  isTactile: true,
   isLargePrint: true,
   hasContrastingBackground: true,
   hasDedicatedScreenForSubtitles: true,
