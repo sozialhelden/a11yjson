@@ -513,6 +513,7 @@ a cinema.
 </td></tr><tr><td>accessibilityControl</td><td><code>string</code>[]</td><td><p>The accessibility controls that allow controlling this equipment.</p>
 </td></tr><tr><td>accessibilityFeature</td><td><code>string</code>[]</td><td><p>Indicates the access mode combinations that allow understanding and using the equipment.</p>
 </td></tr><tr><td>accessibilityHazard</td><td><code>string</code>[]</td><td><p>Indicates the access mode combinations that allow understanding and using the equipment.</p>
+</td></tr><tr><td>hasAudioDescription</td><td><code>boolean</code></td><td><p>Is the media unit provided with audio description?</p>
 </td></tr><tr><td>hasContrastingBackground</td><td><code>boolean</code></td><td><p>If the media unit is printed or on a screen, does it have high contrast between background and
 foreground?</p>
 </td></tr><tr><td>hasDedicatedScreenForSubtitles</td><td><code>boolean</code></td><td><p>Relevant for movies, screens and presentations: Is there a dedicated screen where subtitles can
@@ -523,6 +524,7 @@ be read?</p>
 </td></tr><tr><td>isAudio</td><td><code>boolean</code></td><td><p>Is the media unit consumable as audio-only option?</p>
 </td></tr><tr><td>isBraille</td><td><code>boolean</code></td><td><p>Is the media unit consumable or described for Braille readers?</p>
 </td></tr><tr><td>isLargePrint</td><td><code>boolean</code></td><td><p>If the media unit is printed, is the print large?</p>
+</td></tr><tr><td>isTactile</td><td><code>boolean</code></td><td><p>Is the media tactile?</p>
 </td></tr><tr><td>languages</td><td><a href="#IetfLanguageTagOrSignLanguageCode">IetfLanguageTagOrSignLanguageCode</a>[]</td><td><p>Specifies which languages (including sign languages) in which the media unit is provided</p>
 </td></tr><tr><td>name</td><td><pre>{
   "id": 294,
@@ -557,7 +559,7 @@ be read?</p>
 </td></tr><tr><td>sameAs</td><td><code>string</code>[]</td><td><p>URLs that contain the media. Use this to link data, for example with <a href="https://www.w3.org/RDF/">RDF</a>.</p>
 </td></tr><tr><td>turningSpaceInFront</td><td><a href="#Length">Length</a></td><td><p>If the media is consumed while the consumer is directly in front of it, this property specifies
 how much turning space there is in front of it.</p>
-</td></tr><tr><td>type</td><td><code>"document"</code>&nbsp;|&nbsp;<code>"menu"</code>&nbsp;|&nbsp;<code>"guide"</code>&nbsp;|&nbsp;<code>"presentation"</code>&nbsp;|&nbsp;<code>"exhibit"</code>&nbsp;|&nbsp;<code>"movie"</code>&nbsp;|&nbsp;<code>"play"</code>&nbsp;|&nbsp;<code>"screen"</code>&nbsp;|&nbsp;<code>"website"</code></td><td><p>Type of the media unit</p>
+</td></tr><tr><td>type</td><td><code>"document"</code>&nbsp;|&nbsp;<code>"menu"</code>&nbsp;|&nbsp;<code>"guide"</code>&nbsp;|&nbsp;<code>"tour"</code>&nbsp;|&nbsp;<code>"presentation"</code>&nbsp;|&nbsp;<code>"exhibit"</code>&nbsp;|&nbsp;<code>"movie"</code>&nbsp;|&nbsp;<code>"play"</code>&nbsp;|&nbsp;<code>"screen"</code>&nbsp;|&nbsp;<code>"website"</code></td><td><p>Type of the media unit</p>
 </td></tr></table>
   
 
@@ -594,20 +596,20 @@ condition is unknown.</p>
   
 
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>acceptsBills</td><td><code>boolean</code></td><td></td></tr><tr><td>acceptsCoins</td><td><code>boolean</code></td><td></td></tr><tr><td>acceptsCreditCards</td><td><code>boolean</code></td><td></td></tr><tr><td>acceptsDebitCards</td><td><code>boolean</code></td><td></td></tr><tr><td>acceptsPaymentByMobilePhone</td><td><code>boolean</code></td><td></td></tr><tr><td>customPaymentMetaInfo</td><td><pre>{
-  "id": 358,
+  "id": 360,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "indexSignature": {
-    "id": 359,
+    "id": 361,
     "name": "__index",
     "kind": 8192,
     "kindString": "Index signature",
     "flags": {},
     "parameters": [
       {
-        "id": 360,
+        "id": 362,
         "name": "key",
         "kind": 32768,
         "flags": {},
@@ -668,20 +670,20 @@ missing property indicates unknown.</p>
 missing property indicates unknown.</p>
 </td></tr><tr><td>category</td><td><code>string</code></td><td><p>Category name of the place</p>
 </td></tr><tr><td>description</td><td><pre>{
-  "id": 387,
+  "id": 389,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "indexSignature": {
-    "id": 388,
+    "id": 390,
     "name": "__index",
     "kind": 8192,
     "kindString": "Index signature",
     "flags": {},
     "parameters": [
       {
-        "id": 389,
+        "id": 391,
         "name": "key",
         "kind": 32768,
         "flags": {},
@@ -702,20 +704,20 @@ missing property indicates unknown.</p>
 </td></tr><tr><td>ids</td><td><a href="#Record">Record</a></td><td><p>IDs in other data sources that are linked to this equipment, indexed by schema/context.</p>
 </td></tr><tr><td>infoPageUrl</td><td><code>string</code></td><td><p>URL of the original data source’s website describing this place.</p>
 </td></tr><tr><td>name</td><td><pre>{
-  "id": 382,
+  "id": 384,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "indexSignature": {
-    "id": 383,
+    "id": 385,
     "name": "__index",
     "kind": 8192,
     "kindString": "Index signature",
     "flags": {},
     "parameters": [
       {
-        "id": 384,
+        "id": 386,
         "name": "key",
         "kind": 32768,
         "flags": {},
@@ -804,14 +806,14 @@ unknown.</p>
 </td></tr><tr><td>toilet</td><td><a href="#Toilet">Toilet</a></td><td><p>Object describing a toilet inside the restroom, if existing.</p>
 </td></tr><tr><td>turningSpaceInside</td><td><a href="#Length">Length</a></td><td><p>How wide is the space inside that is usable for turning?</p>
 </td></tr><tr><td>usageFee</td><td><pre>{
-  "id": 431,
+  "id": 433,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "children": [
     {
-      "id": 432,
+      "id": 434,
       "name": "amount",
       "kind": 1024,
       "kindString": "Property",
@@ -829,7 +831,7 @@ unknown.</p>
       }
     },
     {
-      "id": 433,
+      "id": 435,
       "name": "currency",
       "kind": 1024,
       "kindString": "Property",
@@ -852,8 +854,8 @@ unknown.</p>
       "title": "Properties",
       "kind": 1024,
       "children": [
-        432,
-        433
+        434,
+        435
       ]
     }
   ]
@@ -915,20 +917,20 @@ detectable with the touch of a foot or sweep of a cane.</p>
 </td></tr><tr><td>hasTactileSignage</td><td><code>boolean</code></td><td><p><code>true</code> if there is tactile navigation in this staircase, <code>false</code> if not.</p>
 </td></tr><tr><td>isWellLit</td><td><code>boolean</code></td><td><p>Are the stairs and podests well lit?</p>
 </td></tr><tr><td>name</td><td><pre>{
-  "id": 488,
+  "id": 490,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "indexSignature": {
-    "id": 489,
+    "id": 491,
     "name": "__index",
     "kind": 8192,
     "kindString": "Index signature",
     "flags": {},
     "parameters": [
       {
-        "id": 490,
+        "id": 492,
         "name": "key",
         "kind": 32768,
         "flags": {},
@@ -1449,20 +1451,20 @@ parking, <code>false</code> if not, <code>undefined</code> if this is unknown.</
 unknown.</p>
 </td></tr><tr><td>length</td><td><a href="#Length">Length</a></td><td><p>Length constraint of the parking lots.</p>
 </td></tr><tr><td>location</td><td><pre>{
-  "id": 323,
+  "id": 325,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "indexSignature": {
-    "id": 324,
+    "id": 326,
     "name": "__index",
     "kind": 8192,
     "kindString": "Index signature",
     "flags": {},
     "parameters": [
       {
-        "id": 325,
+        "id": 327,
         "name": "key",
         "kind": 32768,
         "flags": {},
@@ -1480,20 +1482,20 @@ unknown.</p>
 }</pre></td><td><p>Describes where the parking is located.</p>
 </td></tr><tr><td>maxVehicleHeight</td><td><a href="#Length">Length</a></td><td><p>Maximal allowed vehicle height for users of this parking.</p>
 </td></tr><tr><td>neededParkingPermits</td><td><pre>{
-  "id": 334,
+  "id": 336,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "indexSignature": {
-    "id": 335,
+    "id": 337,
     "name": "__index",
     "kind": 8192,
     "kindString": "Index signature",
     "flags": {},
     "parameters": [
       {
-        "id": 336,
+        "id": 338,
         "name": "key",
         "kind": 32768,
         "flags": {},
@@ -1529,20 +1531,20 @@ there is no designated space for wheelchair users, but the number is known.</p>
   Describes the presence of staff and their qualifications and/or provided services.
 
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>descriptionWhereToGetLoginData</td><td><pre>{
-  "id": 609,
+  "id": 611,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "indexSignature": {
-    "id": 610,
+    "id": 612,
     "name": "__index",
     "kind": 8192,
     "kindString": "Index signature",
     "flags": {},
     "parameters": [
       {
-        "id": 611,
+        "id": 613,
         "name": "key",
         "kind": 32768,
         "flags": {},

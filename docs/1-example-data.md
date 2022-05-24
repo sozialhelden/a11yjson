@@ -40,7 +40,7 @@ entrance (no steps), the building is only partially accessible with a wheelchair
 }
 ```
 
-A cinema that is dog-friendly and wheelchair accessible. It offers audio descriptions:
+### A cinema that is dog-friendly and wheelchair accessible, offering audio descriptions
 
 ```json
 {
@@ -61,10 +61,82 @@ A cinema that is dog-friendly and wheelchair accessible. It offers audio descrip
 }
 ```
 
+### A restaurant with a braille menu
+
+```json
+{
+  "properties": {
+    "category": "restaurant",
+    "accessibility": {
+      "media": [
+        { "type": "menu", "isBraille": true }
+      ]
+    }
+  }
+}
+```
+
+### A museum with a guided tour in German Sign Language
+
+See also ([language code `"gsg"` or `"sgn-gsg"`](https://iso639-3.sil.org/code/gsg)).
+
+```json
+{
+  "properties": {
+    "category": "museum",
+    "accessibility": {
+      "media": [
+        { "type": "tour", "languages": ["sgn-gsg"] }
+      ]
+    }
+  }
+}
+```
+
+### A museum with tactile models
+
+#### Variant 1
+
+```json
+{
+  "properties": {
+    "category": "museum",
+    "accessibility": {
+      "media": [
+        {
+          "type": "exhibit",
+          "accessMode": ["tactile"],
+          "accessModeSufficient": ["tactile"],
+          "name": { "en": "Collection of tactile models" }
+        }
+      ]
+    }
+  }
+}
+```
+
+#### Variant 2
+
+```json
+{
+  "properties": {
+    "category": "museum",
+    "accessibility": {
+      "media": [
+        {
+          "type": "exhibit",
+          "isTactile": true,
+          "name": { "en": "Collection of tactile models" }
+        }
+      ]
+    }
+  }
+}
+```
+
 ## `EquipmentInfo`
 
-An `EquipmentInfo` record for an elevator in Berlin that is in service, including realtime
-operational status information:
+### An `EquipmentInfo` record for an elevator in Berlin that is in service, including realtime operational status information
 
 ```json
 {
@@ -82,7 +154,7 @@ operational status information:
 }
 ```
 
-A elevator in Hamburg with `accessibility` features that is out of service:
+### A elevator in Hamburg with `accessibility` features that is out of service
 
 ```json
 {
