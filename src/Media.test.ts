@@ -12,6 +12,7 @@ const mediaFixture: Complete<Media> = {
   hasContrastingBackground: true,
   hasDedicatedScreenForSubtitles: true,
   hasSubtitles: true,
+  hasAudioDescription: true,
   hasRealTimeCaptioning: true,
   hasPlainLanguageOption: true,
   languages: ['en', 'de'],

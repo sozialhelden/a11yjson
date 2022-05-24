@@ -70,6 +70,11 @@ export interface Media {
   hasSubtitles?: boolean;
 
   /**
+   * Is the media unit provided with audio description?
+   */
+  hasAudioDescription?: boolean;
+
+  /**
    * Does the media unit have [real time captioning](https://www.washington.edu/doit/what-real-time-captioning)?
    */
   hasRealTimeCaptioning?: boolean;
@@ -179,6 +184,11 @@ export const getMediaSchemaDefinition: () => Record<string, SchemaDefinition> = 
   hasSubtitles: {
     type: Boolean,
     label: t`Subtitles`,
+    optional: true,
+  },
+  hasAudioDescription: {
+    type: Boolean,
+    label: t`Audio description`,
     optional: true,
   },
   hasRealTimeCaptioning: {
