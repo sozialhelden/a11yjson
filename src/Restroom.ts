@@ -23,6 +23,11 @@ export const restroomSignIcons = [
 
 export type RestroomSignIcon = typeof restroomSignIcons[number];
 
+export interface CurrencyValue {
+  amount: number;
+  currency: string
+}
+
 export interface Restroom extends Room {
   /**
    * Visible icons on the restroom’s sign
@@ -108,7 +113,7 @@ export interface Restroom extends Room {
    */
   access?: AccessType[];
 
-  usageFee?: { amount: number; currency: string };
+  usageFee?: CurrencyValue;
 }
 
 export const getRestroomSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({

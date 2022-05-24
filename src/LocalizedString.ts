@@ -9,10 +9,7 @@
 
 import { parseLanguageTag } from '@sozialhelden/ietf-language-tags';
 
-export type LocalizedString =
-  | {
-    [key: string]: string;
-  };
+export type LocalizedString = Record<string, string>;
 
 export function getLocalizedStringSchemaDefinition(key: string, definition: Omit<SchemaDefinition, 'type'> & { type?: never, optional?: false } = {}): Record<string, SchemaDefinition> {
   return {

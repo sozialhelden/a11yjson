@@ -10,14 +10,7 @@ const json = JSON.parse(fs.readFileSync("./dist/typedoc-output.json").toString()
 const interfaces = json.children
   .filter((c: any) => {
     return c.kindString === "Interface";
-  })
-  .filter(
-    (t: any) =>
-      !includes(
-        ["KoboAttachment"],
-        t.name
-      )
-  );
+  });
 
 const typeAliases = json.children
   .filter((c: any) => {
@@ -29,9 +22,6 @@ const typeAliases = json.children
         [
           "AccessibilitySchemaExtension",
           "ForEachKeyInSchemasCallbackFunction",
-          "QuestionFunction",
-          "QuestionValue",
-          "KoboAttachment"
         ],
         t.name
       )
@@ -83,6 +73,11 @@ function ReferenceType(props: {
   if (props.type === "array") {
     return ArrayType(props);
   }
+
+  if (props.name === 'LocalizedString') {
+    return `<a href="../i18n">LocalizedString</a>`;
+  }
+
   return `<a href="#${props.name}">${props.name}</a>`;
 }
 
@@ -122,7 +117,7 @@ function TupleType(props: { type: any; name: string; elements: any[] }): string 
   return elements.join(`,&nbsp;`);
 }
 
-function Type(props: { object: any }): string {
+function Type(props: { object: any, property?: any }): string {
   return (
     {
       reference: ReferenceType(props.object),
@@ -134,7 +129,7 @@ function Type(props: { object: any }): string {
       tuple: TupleType(props.object),
       reflection: ReflectionType(props.object),
       boolean: BooleanType(props.object)
-    }[props.object.type] || JSON.stringify(props.object)
+    }[props.object.type] || (props.property ? JSON.stringify(props.property) : JSON.stringify(props.object))
   );
 }
 
@@ -149,7 +144,7 @@ function Interface(i: any): string {
         .filter((property: any) => get(property, "comment.shortText") !== "TODO")
         .map((property: any) => [
           `${property.name}`,
-          `${Type({ object: property.type })}`,
+          `${Type({ object: property.type, property })}`,
           marked(get(property, "comment.shortText") || "")
         ])
     )

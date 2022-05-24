@@ -50,43 +50,7 @@ Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
 
 
 
-Definition: <pre>{
-  "id": 288,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "sources": [
-    {
-      "fileName": "LocalizedString.ts",
-      "line": 13,
-      "character": 4
-    }
-  ],
-  "indexSignature": {
-    "id": 289,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 290,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre>
+Definition: <a href="#Record">Record</a>
 
 
 
@@ -102,7 +66,7 @@ Definition: <code>"<"</code>&nbsp;|&nbsp;<code>"<="</code>&nbsp;|&nbsp;<code>"==
 
 
 
-Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":411,"name":"restroomSignIcons"}}}
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":321,"name":"restroomSignIcons"}}}
 
 
 
@@ -136,7 +100,7 @@ Definition: <code>"dedicatedToSmoking"</code>&nbsp;|&nbsp;<code>"allowedEverywhe
 
 
 
-Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":270,"name":"SmoothnessTypeValues"}}}
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":201,"name":"SmoothnessTypeValues"}}}
 
 
 
@@ -152,7 +116,7 @@ Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
 
 
 
-Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":268,"name":"SurfaceTypeValues"}}}
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":199,"name":"SurfaceTypeValues"}}}
 
 
 

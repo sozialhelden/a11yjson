@@ -32,36 +32,7 @@ measurable lumen value in the future.</p>
 <code>null</code> indicates there is no payment possible/required,
 <code>undefined</code> or missing property indicates unknown.</p>
 </td></tr><tr><td>restrooms</td><td><code>undefined</code>&nbsp;|&nbsp;<a href="#Restroom">Restroom</a>[]</td><td><p>Describes the accessibility of restrooms in the place.</p>
-</td></tr><tr><td>serviceContact</td><td><pre>{
-  "id": 41,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 42,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 43,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td></td></tr><tr><td>smokingPolicy</td><td><a href="#SmokingPolicy">SmokingPolicy</a></td><td><p>Object describing the owner&#39;s smoking policy.</p>
+</td></tr><tr><td>serviceContact</td><td><a href="../i18n">LocalizedString</a></td><td></td></tr><tr><td>smokingPolicy</td><td><a href="#SmokingPolicy">SmokingPolicy</a></td><td><p>Object describing the owner&#39;s smoking policy.</p>
 </td></tr><tr><td>staff</td><td><code>undefined</code>&nbsp;|&nbsp;<a href="#Staff">Staff</a></td><td><p>Information about the service staff.
 <code>null</code> indicates there is no staff, <code>undefined</code> or missing property indicates unknown.</p>
 </td></tr><tr><td>surface</td><td><code>undefined</code>&nbsp;|&nbsp;<a href="#Surface">Surface</a></td><td><p>Object describing the place&#39;s ground condition. If there are very different ground conditions,
@@ -92,6 +63,13 @@ dogs without muzzles are explicitly allowed.</p>
 </td></tr><tr><td>suppliesWaterForPets</td><td><code>boolean</code></td><td><p><code>true</code> if the place supplies water for accompanying animals, <code>false</code> if explicitly not, or
 <code>undefined</code> if unknown.</p>
 </td></tr></table>
+  
+
+### <a id="CurrencyValue">CurrencyValue</a>
+
+  
+
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>amount</td><td><code>number</code></td><td></td></tr><tr><td>currency</td><td><code>string</code></td><td></td></tr></table>
   
 
 ### <a id="Door">Door</a>
@@ -158,36 +136,7 @@ is there signage that points to this entrance?</p>
 </td></tr><tr><td>intercomEquipmentId</td><td><code>string</code></td><td><p>reference to the equipment id of the intercom of this entrance (on accessibility.cloud)</p>
 </td></tr><tr><td>isLevel</td><td><code>boolean</code></td><td><p><code>true</code> if this entrance has no steps and needs no ramp, <code>false</code> if there are steps or a ramp.</p>
 </td></tr><tr><td>isMainEntrance</td><td><code>boolean</code></td><td><p><code>true</code> if this is the main entrance, <code>false</code> if not.</p>
-</td></tr><tr><td>name</td><td><pre>{
-  "id": 151,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 152,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 153,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>Name of the entrance (helpful if there are multiple entrances).</p>
+</td></tr><tr><td>name</td><td><a href="../i18n">LocalizedString</a></td><td><p>Name of the entrance (helpful if there are multiple entrances).</p>
 </td></tr><tr><td>needsAppointment</td><td><code>boolean</code></td><td><p><code>true</code> if you need an appointment to enter, <code>false</code> if not.</p>
 </td></tr><tr><td>placeInfoId</td><td><code>string</code></td><td><p>reference to the place that this entrance is connected to (on accessibility.cloud)</p>
 </td></tr><tr><td>slopeAngle</td><td><a href="#Slope">Slope</a></td><td><p>How steep is the ground at the entrance?</p>
@@ -214,71 +163,13 @@ sitemap. Can contain attributes that are realtime updated to indicate operationa
 </td></tr><tr><td>accessibilityControl</td><td><code>string</code>[]</td><td><p>The accessibility controls that allow controlling this equipment.</p>
 </td></tr><tr><td>accessibilityFeature</td><td><code>string</code>[]</td><td><p>Indicates the access mode combinations that allow understanding and using the equipment.</p>
 </td></tr><tr><td>accessibilityHazard</td><td><code>string</code>[]</td><td><p>Indicates the access mode combinations that allow understanding and using the equipment.</p>
-</td></tr><tr><td>alternativeRouteInstructions</td><td><pre>{
-  "id": 234,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 235,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 236,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>Short alternative routing instructions for travelers when they cannot use this facility.</p>
+</td></tr><tr><td>alternativeRouteInstructions</td><td><a href="../i18n">LocalizedString</a></td><td><p>Short alternative routing instructions for travelers when they cannot use this facility.</p>
 </td></tr><tr><td>cabinLength</td><td><a href="#Length">Length</a></td><td><p>Length / depth of the cabin when facing the equipment’s entrance, or <code>undefined</code> if the
 equipment has no cabin. For a hoist, this refers to the hoist platform itself.</p>
 </td></tr><tr><td>cabinWidth</td><td><a href="#Length">Length</a></td><td><p>Width of the cabin when facing the equipment’s entrance, or <code>undefined</code> if the equipment has no
 cabin. For a hoist, this refers to the hoist platform itself.</p>
 </td></tr><tr><td>category</td><td><a href="#EquipmentTypes">EquipmentTypes</a></td><td><p>Type of the equipment or facility.</p>
-</td></tr><tr><td>description</td><td><pre>{
-  "id": 178,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 179,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 180,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>Describes where the equipment is located. If only one description string is technically
+</td></tr><tr><td>description</td><td><a href="../i18n">LocalizedString</a></td><td><p>Describes where the equipment is located. If only one description string is technically
 possible to maintain, it MUST not contain any abbreviations to allow being readable aloud by
 screen readers or voice assistants.</p>
 </td></tr><tr><td>disruptionSourceImportId</td><td><code>string</code></td><td><p>Data source ID of a secondary source used for realtime status info on accessibility.cloud</p>
@@ -309,67 +200,9 @@ understand how the equipment works, or <code>undefined</code> if this is unknown
 </td></tr><tr><td>isVoiceActivated</td><td><code>boolean</code></td><td><p><code>true</code> if the equipment needs to be activated by voice, <code>false</code> if not.</p>
 </td></tr><tr><td>isWorking</td><td><code>boolean</code></td><td><p>Live status update.</p>
 </td></tr><tr><td>languages</td><td><a href="#IetfLanguageTagOrSignLanguageCode">IetfLanguageTagOrSignLanguageCode</a>[]</td><td><p>Languages of the equipment’s visible controls and/or voice output.</p>
-</td></tr><tr><td>longDescription</td><td><pre>{
-  "id": 182,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 183,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 184,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>Contains the same information as description, but in a longer form which can be read out by a
+</td></tr><tr><td>longDescription</td><td><a href="../i18n">LocalizedString</a></td><td><p>Contains the same information as description, but in a longer form which can be read out by a
 screen reader or voice assistant.</p>
-</td></tr><tr><td>manufacturerName</td><td><pre>{
-  "id": 222,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 223,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 224,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>Official name of the company that manufactured the equipment.</p>
+</td></tr><tr><td>manufacturerName</td><td><a href="../i18n">LocalizedString</a></td><td><p>Official name of the company that manufactured the equipment.</p>
 </td></tr><tr><td>manufacturerSerialNumber</td><td><code>string</code></td><td><p>Manufacturer serial number of the equipment / facility.</p>
 </td></tr><tr><td>needsHapticInput</td><td><code>boolean</code></td><td><p><code>true</code> if the equipment needs users to input something using buttons or other haptic means to
 use the equipment&#39;s main function, <code>false</code> if not.</p>
@@ -385,106 +218,19 @@ if not.</p>
 </td></tr><tr><td>originalId</td><td><code>string</code></td><td><p>ID of this equipment in the original data source. To simplify communication with the operator,
 it’s a good idea to use the operator facility management system ID here.</p>
 </td></tr><tr><td>originalPlaceInfoId</td><td><code>string</code></td><td><p>ID of the place that this equipment belongs to (unique in the original data source)</p>
-</td></tr><tr><td>outOfOrderReason</td><td><pre>{
-  "id": 230,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 231,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 232,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>Live status update.</p>
+</td></tr><tr><td>outOfOrderReason</td><td><a href="../i18n">LocalizedString</a></td><td><p>Live status update.</p>
 </td></tr><tr><td>placeInfoId</td><td><code>string</code></td><td><p>Place info ID that this equipment belongs to (accessibility.cloud ID)</p>
 </td></tr><tr><td>placeSourceId</td><td><code>string</code></td><td><p>ID of the place data source that this equipment belongs to (accessibility.cloud ID)</p>
 </td></tr><tr><td>plannedCompletionDate</td><td><a href="#Date">Date</a></td><td><p>Live status update.</p>
 </td></tr><tr><td>sameAs</td><td><code>string</code>[]</td><td><p>URLs of this equipment in external data sources, for example in GTFS, IMDF or other sources.</p>
 </td></tr><tr><td>servicePhoneNumber</td><td><code>string</code></td><td><p>Phone number where a service operator can be reached for help using this facility.</p>
 </td></tr><tr><td>serviceWebsiteUrl</td><td><code>string</code></td><td><p>URL pointing to a website that describes the equipnent or it&#39;s current operational status.</p>
-</td></tr><tr><td>shortDescription</td><td><pre>{
-  "id": 186,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 187,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 188,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>Contains the same information as description, but in a shorter form, to save space on the
+</td></tr><tr><td>shortDescription</td><td><a href="../i18n">LocalizedString</a></td><td><p>Contains the same information as description, but in a shorter form, to save space on the
 screen. This CAN contain Unicode characters such as ⟷ or ↘︎ as well as abbreviations (e.g.
 ‘pl.’ instead of ‘platform’, ‘dir.’ instead of ‘direction’).</p>
 </td></tr><tr><td>sourceId</td><td><code>string</code></td><td><p>Data source ID on accessibility.cloud</p>
 </td></tr><tr><td>sourceImportId</td><td><code>string</code></td><td><p>Data import ID on accessibility.cloud</p>
-</td></tr><tr><td>stateExplanation</td><td><pre>{
-  "id": 238,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 239,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 240,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>Live status update.</p>
+</td></tr><tr><td>stateExplanation</td><td><a href="../i18n">LocalizedString</a></td><td><p>Live status update.</p>
 </td></tr><tr><td>stateLastUpdate</td><td><a href="#Date">Date</a></td><td><p>Live status update.</p>
 </td></tr></table>
   
@@ -526,36 +272,7 @@ be read?</p>
 </td></tr><tr><td>isLargePrint</td><td><code>boolean</code></td><td><p>If the media unit is printed, is the print large?</p>
 </td></tr><tr><td>isTactile</td><td><code>boolean</code></td><td><p>Is the media tactile?</p>
 </td></tr><tr><td>languages</td><td><a href="#IetfLanguageTagOrSignLanguageCode">IetfLanguageTagOrSignLanguageCode</a>[]</td><td><p>Specifies which languages (including sign languages) in which the media unit is provided</p>
-</td></tr><tr><td>name</td><td><pre>{
-  "id": 294,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 295,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 296,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>Name of the media unit (relevant if there are multiple units of the same kind)</p>
+</td></tr><tr><td>name</td><td><a href="../i18n">LocalizedString</a></td><td><p>Name of the media unit (relevant if there are multiple units of the same kind)</p>
 </td></tr><tr><td>sameAs</td><td><code>string</code>[]</td><td><p>URLs that contain the media. Use this to link data, for example with <a href="https://www.w3.org/RDF/">RDF</a>.</p>
 </td></tr><tr><td>turningSpaceInFront</td><td><a href="#Length">Length</a></td><td><p>If the media is consumed while the consumer is directly in front of it, this property specifies
 how much turning space there is in front of it.</p>
@@ -595,36 +312,7 @@ condition is unknown.</p>
 
   
 
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>acceptsBills</td><td><code>boolean</code></td><td></td></tr><tr><td>acceptsCoins</td><td><code>boolean</code></td><td></td></tr><tr><td>acceptsCreditCards</td><td><code>boolean</code></td><td></td></tr><tr><td>acceptsDebitCards</td><td><code>boolean</code></td><td></td></tr><tr><td>acceptsPaymentByMobilePhone</td><td><code>boolean</code></td><td></td></tr><tr><td>customPaymentMetaInfo</td><td><pre>{
-  "id": 360,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 361,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 362,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre>[]</td><td></td></tr><tr><td>hasPortablePaymentSystem</td><td><code>boolean</code></td><td></td></tr></table>
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>acceptsBills</td><td><code>boolean</code></td><td></td></tr><tr><td>acceptsCoins</td><td><code>boolean</code></td><td></td></tr><tr><td>acceptsCreditCards</td><td><code>boolean</code></td><td></td></tr><tr><td>acceptsDebitCards</td><td><code>boolean</code></td><td></td></tr><tr><td>acceptsPaymentByMobilePhone</td><td><code>boolean</code></td><td></td></tr><tr><td>customPaymentMetaInfo</td><td><a href="../i18n">LocalizedString</a>[]</td><td></td></tr><tr><td>hasPortablePaymentSystem</td><td><code>boolean</code></td><td></td></tr></table>
   
 
 ### <a id="PersonalProfile">PersonalProfile</a>
@@ -669,70 +357,12 @@ missing property indicates unknown.</p>
 </td></tr><tr><td>address</td><td><code>undefined</code>&nbsp;|&nbsp;<a href="#StructuredAddress">StructuredAddress</a></td><td><p>The address of this place. <code>null</code> indicates that this place has no address, <code>undefined</code> or
 missing property indicates unknown.</p>
 </td></tr><tr><td>category</td><td><code>string</code></td><td><p>Category name of the place</p>
-</td></tr><tr><td>description</td><td><pre>{
-  "id": 389,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 390,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 391,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>Text description containing helpful information for people with disabilities.</p>
+</td></tr><tr><td>description</td><td><a href="../i18n">LocalizedString</a></td><td><p>Text description containing helpful information for people with disabilities.</p>
 </td></tr><tr><td>editPageUrl</td><td><code>string</code></td><td><p>URL of the original data source’s website on a subpage that allows to edit the original data.</p>
 </td></tr><tr><td>emailAddress</td><td><code>string</code></td><td><p>Email address of the place&#39;s operator where you can get accessibility relevant information.</p>
 </td></tr><tr><td>ids</td><td><a href="#Record">Record</a></td><td><p>IDs in other data sources that are linked to this equipment, indexed by schema/context.</p>
 </td></tr><tr><td>infoPageUrl</td><td><code>string</code></td><td><p>URL of the original data source’s website describing this place.</p>
-</td></tr><tr><td>name</td><td><pre>{
-  "id": 384,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 385,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 386,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>The official name of this place.</p>
+</td></tr><tr><td>name</td><td><a href="../i18n">LocalizedString</a></td><td><p>The official name of this place.</p>
 </td></tr><tr><td>originalData</td><td><code>any</code></td><td><p>Original source data for this equipment (for easier debugging)</p>
 </td></tr><tr><td>originalId</td><td><code>string</code></td><td><p>ID of this place of interest in the original data source. To simplify communication with the
 data provider, it’s a good idea to use the provider&#39;s internal ID here.</p>
@@ -805,61 +435,7 @@ unknown.</p>
 </td></tr><tr><td>signIcons</td><td><code>"allGender"</code>&nbsp;|&nbsp;<code>"female"</code>&nbsp;|&nbsp;<code>"male"</code>&nbsp;|&nbsp;<code>"personInWheelchair"</code>&nbsp;|&nbsp;<code>"changingTable"</code>&nbsp;|&nbsp;<code>"baby"</code>&nbsp;|&nbsp;<code>"family"</code>&nbsp;|&nbsp;<code>"urinal"</code>&nbsp;|&nbsp;<code>"washBasin"</code>&nbsp;|&nbsp;<code>"toiletBowl"</code>[]</td><td><p>Visible icons on the restroom’s sign</p>
 </td></tr><tr><td>toilet</td><td><a href="#Toilet">Toilet</a></td><td><p>Object describing a toilet inside the restroom, if existing.</p>
 </td></tr><tr><td>turningSpaceInside</td><td><a href="#Length">Length</a></td><td><p>How wide is the space inside that is usable for turning?</p>
-</td></tr><tr><td>usageFee</td><td><pre>{
-  "id": 433,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "children": [
-    {
-      "id": 434,
-      "name": "amount",
-      "kind": 1024,
-      "kindString": "Property",
-      "flags": {},
-      "sources": [
-        {
-          "fileName": "Restroom.ts",
-          "line": 111,
-          "character": 15
-        }
-      ],
-      "type": {
-        "type": "intrinsic",
-        "name": "number"
-      }
-    },
-    {
-      "id": 435,
-      "name": "currency",
-      "kind": 1024,
-      "kindString": "Property",
-      "flags": {},
-      "sources": [
-        {
-          "fileName": "Restroom.ts",
-          "line": 111,
-          "character": 31
-        }
-      ],
-      "type": {
-        "type": "intrinsic",
-        "name": "string"
-      }
-    }
-  ],
-  "groups": [
-    {
-      "title": "Properties",
-      "kind": 1024,
-      "children": [
-        434,
-        435
-      ]
-    }
-  ]
-}</pre></td><td></td></tr><tr><td>washBasin</td><td><a href="#WashBasin">WashBasin</a></td><td><p>Object describing a wash basin belonging to this restroom. It can be outside of the restroom.</p>
+</td></tr><tr><td>usageFee</td><td><a href="#CurrencyValue">CurrencyValue</a></td><td></td></tr><tr><td>washBasin</td><td><a href="#WashBasin">WashBasin</a></td><td><p>Object describing a wash basin belonging to this restroom. It can be outside of the restroom.</p>
 </td></tr></table>
   
 
@@ -916,36 +492,7 @@ dogs.</p>
 detectable with the touch of a foot or sweep of a cane.</p>
 </td></tr><tr><td>hasTactileSignage</td><td><code>boolean</code></td><td><p><code>true</code> if there is tactile navigation in this staircase, <code>false</code> if not.</p>
 </td></tr><tr><td>isWellLit</td><td><code>boolean</code></td><td><p>Are the stairs and podests well lit?</p>
-</td></tr><tr><td>name</td><td><pre>{
-  "id": 490,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 491,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 492,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>If there are multiple staircase, you SHOULD indicate a name for this staircase here.</p>
+</td></tr><tr><td>name</td><td><a href="../i18n">LocalizedString</a></td><td><p>If there are multiple staircase, you SHOULD indicate a name for this staircase here.</p>
 </td></tr><tr><td>stepHeight</td><td><a href="#Length">Length</a></td><td><p>Indicates how high the steps if these stairs are (can be a range).</p>
 </td></tr></table>
   
@@ -954,438 +501,32 @@ detectable with the touch of a foot or sweep of a cane.</p>
 
   The address of a places as Address as a series of structured attributes.
 
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>areas</td><td><pre>{
-  "id": 82,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 83,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 84,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre>[]</td><td><p>An array of named areas below the district and above street.
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>areas</td><td><a href="../i18n">LocalizedString</a>[]</td><td><p>An array of named areas below the district and above street.
 In some regions such areas might also contain street names,
 when individual street segments have names separate from the name of the whole road.</p>
-</td></tr><tr><td>building</td><td><pre>{
-  "id": 66,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 67,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 68,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>Building name</p>
-</td></tr><tr><td>city</td><td><pre>{
-  "id": 90,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 91,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 92,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>The name of the primary locality of the place.</p>
+</td></tr><tr><td>building</td><td><a href="../i18n">LocalizedString</a></td><td><p>Building name</p>
+</td></tr><tr><td>city</td><td><a href="../i18n">LocalizedString</a></td><td><p>The name of the primary locality of the place.</p>
 </td></tr><tr><td>countryCode</td><td><code>string</code></td><td><p>A three-letter country code in ISO 3166-1 alpha-3, see <a href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3">https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3</a></p>
-</td></tr><tr><td>county</td><td><pre>{
-  "id": 98,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 99,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 100,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>A division of a state; typically a secondary-level administrative division of a country or
+</td></tr><tr><td>county</td><td><a href="../i18n">LocalizedString</a></td><td><p>A division of a state; typically a secondary-level administrative division of a country or
 equivalent.</p>
-</td></tr><tr><td>district</td><td><pre>{
-  "id": 86,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 87,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 88,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>A division of city; typically an administrative unit within a larger
+</td></tr><tr><td>district</td><td><a href="../i18n">LocalizedString</a></td><td><p>A division of city; typically an administrative unit within a larger
 city or a customary name of a city&#39;s neighborhood.</p>
-</td></tr><tr><td>house</td><td><pre>{
-  "id": 70,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 71,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 72,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>House or street number.</p>
+</td></tr><tr><td>house</td><td><a href="../i18n">LocalizedString</a></td><td><p>House or street number.</p>
 </td></tr><tr><td>levelIndex</td><td><code>number</code></td><td><p>Relative in relation to other levels. <code>0</code> for ground level must have index 0, <code>1</code> for first
 level, etc. You can use half numbers for levels like &quot;1.5&quot;.</p>
-</td></tr><tr><td>levelName</td><td><pre>{
-  "id": 61,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 62,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 63,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>Name of the level. Example: &quot;Floor 1&quot;, &quot;Ground level&quot;.</p>
-</td></tr><tr><td>postalCode</td><td><pre>{
-  "id": 78,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 79,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 80,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>An alphanumeric string included in a postal address to
+</td></tr><tr><td>levelName</td><td><a href="../i18n">LocalizedString</a></td><td><p>Name of the level. Example: &quot;Floor 1&quot;, &quot;Ground level&quot;.</p>
+</td></tr><tr><td>postalCode</td><td><a href="../i18n">LocalizedString</a></td><td><p>An alphanumeric string included in a postal address to
 facilitate mail sorting (a.k.a. post code, postcode, or ZIP code).</p>
-</td></tr><tr><td>regions</td><td><pre>{
-  "id": 94,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 95,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 96,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre>[]</td><td><p>For address conventions where more than to levels of named areas above the city level are in
+</td></tr><tr><td>regions</td><td><a href="../i18n">LocalizedString</a>[]</td><td><p>For address conventions where more than to levels of named areas above the city level are in
 use, the regions attribute provides an array with all additional area names, ordered by
 decreasing size (starting with the highest subdivision below state)</p>
-</td></tr><tr><td>room</td><td><pre>{
-  "id": 53,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 54,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 55,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>Room name. Example: &quot;Meeting room &#39;Rome&#39;&quot;.</p>
-</td></tr><tr><td>roomNumber</td><td><pre>{
-  "id": 57,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 58,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 59,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>Room number. Example: &quot;B-101&quot;.</p>
-</td></tr><tr><td>state</td><td><pre>{
-  "id": 102,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 103,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 104,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>A division of a country; typically a first-level administrative division of a country and/or a
+</td></tr><tr><td>room</td><td><a href="../i18n">LocalizedString</a></td><td><p>Room name. Example: &quot;Meeting room &#39;Rome&#39;&quot;.</p>
+</td></tr><tr><td>roomNumber</td><td><a href="../i18n">LocalizedString</a></td><td><p>Room number. Example: &quot;B-101&quot;.</p>
+</td></tr><tr><td>state</td><td><a href="../i18n">LocalizedString</a></td><td><p>A division of a country; typically a first-level administrative division of a country and/or a
 geographical region.</p>
 </td></tr><tr><td>stateCode</td><td><code>string</code></td><td><p>A code/abbreviation for the state division of a country.</p>
-</td></tr><tr><td>street</td><td><pre>{
-  "id": 74,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 75,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 76,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>Street name (in practice may also contain street number).</p>
-</td></tr><tr><td>text</td><td><pre>{
-  "id": 49,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 50,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 51,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>A displayable, formatted address as rich text.</p>
+</td></tr><tr><td>street</td><td><a href="../i18n">LocalizedString</a></td><td><p>Street name (in practice may also contain street number).</p>
+</td></tr><tr><td>text</td><td><a href="../i18n">LocalizedString</a></td><td><p>A displayable, formatted address as rich text.</p>
 </td></tr></table>
   
 
@@ -1450,67 +591,9 @@ parking, <code>false</code> if not, <code>undefined</code> if this is unknown.</
 </td></tr><tr><td>isLocatedInside</td><td><code>boolean</code></td><td><p><code>true</code> if the parking is inside a building or under a roof, <code>false</code> if not, <code>undefined</code> if
 unknown.</p>
 </td></tr><tr><td>length</td><td><a href="#Length">Length</a></td><td><p>Length constraint of the parking lots.</p>
-</td></tr><tr><td>location</td><td><pre>{
-  "id": 325,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 326,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 327,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>Describes where the parking is located.</p>
+</td></tr><tr><td>location</td><td><a href="../i18n">LocalizedString</a></td><td><p>Describes where the parking is located.</p>
 </td></tr><tr><td>maxVehicleHeight</td><td><a href="#Length">Length</a></td><td><p>Maximal allowed vehicle height for users of this parking.</p>
-</td></tr><tr><td>neededParkingPermits</td><td><pre>{
-  "id": 336,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 337,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 338,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre>[]</td><td><p>List of permit names that allow using this parking.</p>
+</td></tr><tr><td>neededParkingPermits</td><td><a href="../i18n">LocalizedString</a>[]</td><td><p>List of permit names that allow using this parking.</p>
 </td></tr><tr><td>width</td><td><a href="#Length">Length</a></td><td><p>Width constraint of the parking lots.</p>
 </td></tr></table>
   
@@ -1530,36 +613,7 @@ there is no designated space for wheelchair users, but the number is known.</p>
 
   Describes the presence of staff and their qualifications and/or provided services.
 
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>descriptionWhereToGetLoginData</td><td><pre>{
-  "id": 611,
-  "name": "__type",
-  "kind": 65536,
-  "kindString": "Type literal",
-  "flags": {},
-  "indexSignature": {
-    "id": 612,
-    "name": "__index",
-    "kind": 8192,
-    "kindString": "Index signature",
-    "flags": {},
-    "parameters": [
-      {
-        "id": 613,
-        "name": "key",
-        "kind": 32768,
-        "flags": {},
-        "type": {
-          "type": "intrinsic",
-          "name": "string"
-        }
-      }
-    ],
-    "type": {
-      "type": "intrinsic",
-      "name": "string"
-    }
-  }
-}</pre></td><td><p>Describes where you get the login data / guest pass.</p>
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>descriptionWhereToGetLoginData</td><td><a href="../i18n">LocalizedString</a></td><td><p>Describes where you get the login data / guest pass.</p>
 </td></tr><tr><td>hasCaptivePortal</td><td><code>boolean</code></td><td><p><code>true</code> if the wifi has a captive portal website.</p>
 </td></tr><tr><td>hasFixedPassword</td><td><code>boolean</code></td><td><p><code>true</code> if the wifi has a fixed password. Knowing this password must be enough to enter and use
 the wifi.</p>
