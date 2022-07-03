@@ -22,7 +22,7 @@ export enum UnitKind {
 export const validateUnit = function (kind: UnitKind): ValidationFunction {
   return function (this: ValidationFunctionSelf<string>) {
     try {
-      const qty = new Qty(this.value);
+      const qty = Qty(this.value);
       if (!qty || qty.scalar !== 1 || qty.kind() !== kind) {
         return 'notAllowed';
       }
