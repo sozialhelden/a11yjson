@@ -4,6 +4,7 @@ import expectValidFixture from './lib/expectValidFixture';
 
 const animalPolicyFixture: Complete<AnimalPolicy> = {
   allowsGuideDogs: true,
+  allowsAssistanceDogs: true,
   allowsDogs: true,
   dogsNeedMuzzle: true,
   allowsServiceAnimals: true,
