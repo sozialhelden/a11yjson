@@ -51,7 +51,9 @@ It SHOULD conform to the traffic light system found in OpenStreetMap and Wheelma
 
   
 
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>allowsDogs</td><td><code>boolean</code></td><td><p><code>true</code> if the place allows visitors to bring dogs in general, <code>false</code> if bringing them is
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>allowsAssistanceDogs</td><td><code>boolean</code></td><td><p><code>true</code> if the place allows visitors to bring assistance dogs, <code>false</code> if bringing them is
+explicitly prohibited, <code>undefined</code> if the policy is unknown.</p>
+</td></tr><tr><td>allowsDogs</td><td><code>boolean</code></td><td><p><code>true</code> if the place allows visitors to bring dogs in general, <code>false</code> if bringing them is
 explicitly prohibited (with exception of dogs specified by <code>allowsGuideDogs</code> and
 <code>allowsTherapyAnimals</code>), <code>undefined</code> if the policy is unknown.</p>
 </td></tr><tr><td>allowsGuideDogs</td><td><code>boolean</code></td><td><p><code>true</code> if the place allows visitors to bring guide dogs, <code>false</code> if bringing them is

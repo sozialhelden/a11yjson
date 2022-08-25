@@ -66,7 +66,7 @@ Definition: <code>"<"</code>&nbsp;|&nbsp;<code>"<="</code>&nbsp;|&nbsp;<code>"==
 
 
 
-Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":321,"name":"restroomSignIcons"}}}
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":322,"name":"restroomSignIcons"}}}
 
 
 
@@ -100,7 +100,7 @@ Definition: <code>"dedicatedToSmoking"</code>&nbsp;|&nbsp;<code>"allowedEverywhe
 
 
 
-Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":201,"name":"SmoothnessTypeValues"}}}
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":202,"name":"SmoothnessTypeValues"}}}
 
 
 
@@ -116,7 +116,7 @@ Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
 
 
 
-Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":199,"name":"SurfaceTypeValues"}}}
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":200,"name":"SurfaceTypeValues"}}}
 
 
 
