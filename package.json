@@ -40,7 +40,9 @@
     "@babel/plugin-transform-runtime": "^7.5.0",
     "@types/jest": "^27.4.1",
     "@types/js-quantities": "^1.6.3",
+    "@types/lodash": "^4.14.153",
     "@types/node": "^8.0.53",
+    "@types/prop-types": "^15.7.3",
     "@types/react": "^16.8.5",
     "@types/react-dom": "^16.8.2",
     "@typescript-eslint/eslint-plugin": "^5.20.0",
@@ -77,8 +79,6 @@
   },
   "dependencies": {
     "@sozialhelden/ietf-language-tags": "^3.2.4",
-    "@types/lodash": "^4.14.153",
-    "@types/prop-types": "^15.7.3",
     "intersperse": "^1.0.0",
     "js-quantities": "^1.7.6",
     "kind-of": "^6.0.3",
