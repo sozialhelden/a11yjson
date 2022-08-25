@@ -41,6 +41,10 @@ export const getAnimalPolicySchemaDefinition: () => Record<string, SchemaDefinit
     type: Boolean,
     optional: true,
   },
+  allowsAssistanceDogs: {
+    type: Boolean,
+    optional: true,
+  },
   allowsDogs: {
     type: Boolean,
     optional: true,
