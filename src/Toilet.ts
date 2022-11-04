@@ -1,6 +1,7 @@
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { GrabBars, getGrabBarsSchemaDefinition } from './GrabBars';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
+import { getRestroomDetailsSchemaDefinition, RestroomDetails } from './RestroomDetails';
 
 /**
  * Describes a single toilet that can be inside a restroom or cabin.
@@ -28,6 +29,11 @@ export interface Toilet {
    * Object describing the grab bars.
    */
   grabBars?: GrabBars;
+  /**
+   * Object containing additional detail about the room the toilet is in
+   */
+  restroomDetails?: RestroomDetails;
+  
 }
 
 export const getToiletSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
@@ -40,4 +46,5 @@ export const getToiletSchemaDefinition: () => Record<string, SchemaDefinition> =
   ...getPrefixedQuantitySchemaDefinition('spaceOnUsersRightSide', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('spaceInFront', LengthSchemaDefinition),
   ...getPrefixedSchemaDefinition('grabBars', getGrabBarsSchemaDefinition()),
+  ...getRestroomDetailsSchemaDefinition(),
 });

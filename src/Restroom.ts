@@ -7,6 +7,7 @@ import { Toilet, getToiletSchemaDefinition } from './Toilet';
 import { Shower, getShowerSchemaDefinition } from './Shower';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { AccessType, accessTypes } from './AccessType';
+import { getRestroomDetailsSchemaDefinition, RestroomDetails } from './RestroomDetails';
 
 export const restroomSignIcons = [
   'allGender',
@@ -75,6 +76,11 @@ export interface Restroom extends Room {
    */
   toilet?: Toilet;
 
+  /**
+   * 
+   */
+  restroomDetails?: RestroomDetails;
+  
   /**
    * `true` if there is a bath tub in this room, `false` if not, `undefined` if condition is
    * unknown.
@@ -166,6 +172,7 @@ export const getRestroomSchemaDefinition: () => Record<string, SchemaDefinition>
   ...getPrefixedQuantitySchemaDefinition('heightOfDrier', LengthSchemaDefinition),
   ...getPrefixedSchemaDefinition('washBasin', getWashBasinSchemaDefinition()),
   ...getRoomSchemaDefinition(),
+  ...getRestroomDetailsSchemaDefinition(),
   access: {
     type: Array,
     optional: true,
