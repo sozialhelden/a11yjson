@@ -15,6 +15,10 @@ export interface RestroomDetails {
    * 
    */
   hasWideTurningSpace?: boolean;
+  /**
+   * `true` if the toilet seat is higher than usual (46-48 cm), `false` if not, `undefined` if condition is unknown. 
+   */
+  hasHighToilet?: boolean;
 
 }
 
@@ -28,6 +32,10 @@ export const getRestroomDetailsSchemaDefinition: () => Record<string, SchemaDefi
     optional: true,
   },
   hasMin90cmWideDoor: {
+    type: Boolean,
+    optional: true,
+  },
+  hasHighToilet: {
     type: Boolean,
     optional: true,
   },
