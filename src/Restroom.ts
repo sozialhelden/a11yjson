@@ -7,7 +7,6 @@ import { Toilet, getToiletSchemaDefinition } from './Toilet';
 import { Shower, getShowerSchemaDefinition } from './Shower';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { AccessType, accessTypes } from './AccessType';
-import { getRestroomDetailsSchemaDefinition, RestroomDetails } from './RestroomDetails';
 
 export const restroomSignIcons = [
   'allGender',
@@ -77,9 +76,21 @@ export interface Restroom extends Room {
   toilet?: Toilet;
 
   /**
-   * 
+   * `true` if the wash basin is accessible, `false` if not, `undefined` if condition is unknown.
    */
-  restroomDetails?: RestroomDetails;
+   hasAccessibleWashBasin?: boolean;
+   /**
+    * `true` if the door is at least 90 cm wide, `false` if not, `undefined` if condition is unknown. 
+    */
+   hasMin90cmWideDoor?: boolean;
+   /**
+    * 
+    */
+   hasWideTurningSpace?: boolean;
+   /**
+    * `true` if the toilet seat is higher than usual (46-48 cm), `false` if not, `undefined` if condition is unknown. 
+    */
+   hasHighToilet?: boolean;
   
   /**
    * `true` if there is a bath tub in this room, `false` if not, `undefined` if condition is
@@ -193,4 +204,20 @@ export const getRestroomSchemaDefinition: () => Record<string, SchemaDefinition>
     max: 3,
     min: 3,
   },
+  hasAccessibleWashBasin: {
+    type: Boolean,
+    optional: true,
+  },
+  hasMin90cmWideDoor: {
+    type: Boolean,
+    optional: true,
+  },
+  hasHighToilet: {
+    type: Boolean,
+    optional: true,
+  },
+  hasWideTurningSpace: {
+    type: Boolean,
+    optional: true,
+  },  
 });
