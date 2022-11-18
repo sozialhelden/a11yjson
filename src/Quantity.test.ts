@@ -28,17 +28,17 @@ describe('QuantitativeValue', () => {
 
   it('accepts an object without unit', () => expectValidUnitFixture({ value: 10, rawValue: '10' }));
 
-  it('accepts a QuantitativeValue object with accuracy', () => expectValidUnitFixture({
+  it('accepts a QuantitativeValue object with precision', () => expectValidUnitFixture({
     value: 10,
     unit: 'kilometer',
-    accuracy: 2,
+    precision: 2,
     rawValue: '10km',
   }));
 
   it('accepts a QuantitativeValue object with a constraint operator', () => expectValidUnitFixture({
     value: 10,
     unit: 'kilometer',
-    accuracy: 2,
+    precision: 2,
     rawValue: '>= 10km',
     operator: '>=',
   }));
@@ -49,7 +49,7 @@ describe('QuantitativeValue', () => {
     {
       value: 10,
       unit: 'kilometer',
-      accuracy: 2,
+      precision: 2,
       rawValue: '@ 10km',
       operator: '@',
     },

@@ -68,8 +68,14 @@ export interface Quantity {
   unit?: string;
   /** raw, imported value, eg. '90 .. 120cm' - only required when importing */
   rawValue?: string;
-  /** ± in given units, uniform error */
+  /**
+   * ± in given units, uniform error.
+   *
+   * @deprecated Please use the `precision` property instead.
+   */
   accuracy?: number;
+  /** ± in given units, uniform error */
+  precision?: number;
 }
 
 /**
@@ -90,6 +96,10 @@ export const BaseQuantitySchemaDefinition = {
     optional: true,
   },
   accuracy: {
+    type: Number,
+    optional: true,
+  },
+  precision: {
     type: Number,
     optional: true,
   },
@@ -161,6 +171,7 @@ export function parseQuantity(unitString: string): Quantity | string {
   };
   if (isRange) {
     result.accuracy = halfDifference;
+    result.precision = halfDifference;
   }
   if (operator && operators.includes(operator as Operator)) {
     result.operator = operator as Operator;
