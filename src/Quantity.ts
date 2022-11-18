@@ -31,15 +31,16 @@ function isConstructor(f: Function): boolean {
  */
 export const validateUnit = function (kind: UnitKind): ValidationFunction {
   return function generatedUnitValidationFunction(this: ValidationFunctionSelf<string>) {
+    // Depending on the build environment and its configuration, the `Qty` constructor may be
+    // a function or a class. We need to handle both cases.
+    const QtyExport = (Qty as any).default || Qty;
     try {
-      // Depending on the build environment and its configuration, the `Qty` constructor may be
-      // a function or a class. We need to handle both cases.
-      const qty = isConstructor(Qty) ? (new Qty(this.value)) : Qty(this.value);
+      const qty = isConstructor(QtyExport) ? (new QtyExport(this.value)) : QtyExport(this.value);
       if (!qty || qty.scalar !== 1 || qty.kind() !== kind) {
         return 'notAllowed';
       }
     } catch (e) {
-      if (e instanceof Qty.Error) {
+      if (e instanceof QtyExport.Error) {
         return 'notAllowed';
       }
       throw e;
