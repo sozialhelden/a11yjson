@@ -21,11 +21,12 @@
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "prebuild": "rimraf dist",
-    "build": "tsc && rollup -c rollup.config.ts && rimraf compiled && typedoc src typings --options typedoc.json --out dist/docs/typescript --json dist/typedoc-output.json && npx ts-node ./tools/generate-overview.ts",
+    "build": "tsc && rollup -c rollup.config.ts && rimraf compiled && npm run docs:build",
     "start": "tsc -w & rollup -c rollup.config.ts -w",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:prod": "npm run test -- --coverage --no-cache",
+    "docs:build": "typedoc src typings --options typedoc.json --out dist/docs/typescript --json dist/typedoc-output.json && npx ts-node ./tools/generate-overview.ts",
     "docs:install": "docker pull squidfunk/mkdocs-material",
     "docs:deploy": "(docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material build) && gh-pages --dist site",
     "docs:live": "docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material",
