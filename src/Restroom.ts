@@ -7,6 +7,7 @@ import { Toilet, getToiletSchemaDefinition } from './Toilet';
 import { Shower, getShowerSchemaDefinition } from './Shower';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { AccessType, accessTypes } from './AccessType';
+import { CurrencyValue, getCurrencyValueSchemaDefinition } from './CurrencyValue';
 
 export const restroomSignIcons = [
   'allGender',
@@ -22,11 +23,6 @@ export const restroomSignIcons = [
 ] as const;
 
 export type RestroomSignIcon = typeof restroomSignIcons[number];
-
-export interface CurrencyValue {
-  amount: number;
-  currency: string
-}
 
 export interface Restroom extends Room {
   /**
@@ -113,7 +109,11 @@ export interface Restroom extends Room {
    */
   access?: AccessType[];
 
-  usageFee?: CurrencyValue;
+  /**
+   * Defines how much you have to pay to use this restroom. There might be multiple fee amounts,
+   * e.g. for different access types or usage times.
+   */
+  usageFee?: CurrencyValue[];
 }
 
 export const getRestroomSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
@@ -175,15 +175,8 @@ export const getRestroomSchemaDefinition: () => Record<string, SchemaDefinition>
     allowedValues: accessTypes,
   },
   usageFee: {
-    type: Object,
+    type: Array,
     optional: true,
   },
-  'usageFee.amount': {
-    type: Number,
-  },
-  'usageFee.currency': {
-    type: String,
-    max: 3,
-    min: 3,
-  },
+  ...getPrefixedSchemaDefinition('usageFee.$', getCurrencyValueSchemaDefinition()),
 });

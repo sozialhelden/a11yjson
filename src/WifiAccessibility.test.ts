@@ -15,6 +15,15 @@ const wifiAccessibilityFixture: Complete<WifiAccessibility> = {
   descriptionWhereToGetLoginData: {
     en: 'Get a guest pass at the cash register.',
   },
+  usageFee: [{
+    amount: 1,
+    currency: 'USD',
+    per: {
+      value: 1,
+      unit: 'hour',
+    },
+    access: ['customers'],
+  }],
 };
 
 export default wifiAccessibilityFixture;

@@ -1,4 +1,5 @@
 import { t } from 'ttag';
+import { CurrencyValue } from './CurrencyValue';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 
 /**
@@ -33,8 +34,7 @@ export interface WifiAccessibility {
    */
   password?: string;
   /**
-   * `true` if the wifi has a fixed password. Knowing this password must be enough to enter and use
-   * the wifi.
+   * `true` if you need a personalized guest pass / code / password to use the wifi, `false` if not.
    */
   needsGuestPass?: boolean;
   /**
@@ -49,6 +49,10 @@ export interface WifiAccessibility {
    * `true` if the wifi captive portal is accessible (WAI/ARIA).
    */
   isCaptivePortalAccessible?: boolean;
+  /**
+   * Describes if you need to pay a usage fee to use the wifi, or if no fee is needed.
+   */
+  usageFee?: CurrencyValue[];
 }
 
 export const getWifiAccessibilitySchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
@@ -90,7 +94,7 @@ export const getWifiAccessibilitySchemaDefinition: () => Record<string, SchemaDe
   ssid: {
     type: String,
     optional: true,
-    label: t`What is the name/SSID of this wifi? Only enter this if it's okay to publish this information publicly.`,
+    label: t`What is the name/SSID of this wifi? Only enter this if it's okay to publish this information publicly and if it can be assumed that the information is not ephemeral.`,
   },
   password: {
     type: String,
@@ -99,5 +103,13 @@ export const getWifiAccessibilitySchemaDefinition: () => Record<string, SchemaDe
   },
   ...getLocalizedStringSchemaDefinition('descriptionWhereToGetLoginData', {
     label: t`Where can you find the login data for this wifi, or get a guest pass?`,
+  }),
+  usageFee: {
+    type: Array,
+    optional: true,
+    label: t`What are the usage fees for this wifi?`,
+  },
+  ...getLocalizedStringSchemaDefinition('usageFee.$', {
+    label: t`How much does it cost to use this wifi?`,
   }),
 });
