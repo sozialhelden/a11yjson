@@ -2,6 +2,7 @@ import SimpleSchema from 'simpl-schema';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+import { getStructuredAddressSchemaDefinition } from './Address';
 
 /**
  * Describes one or more wheelchair parking lots.
@@ -96,4 +97,5 @@ export const getParkingSchemaDefinition: () => Record<string, SchemaDefinition> 
     optional: true,
     min: 0,
   },
+  ...getPrefixedSchemaDefinition('address', getStructuredAddressSchemaDefinition()),
 });

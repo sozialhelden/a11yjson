@@ -5,6 +5,16 @@ import expectValidFixture from './lib/expectValidFixture';
 const roomFixture: Complete<Room> = {
   isAccessibleWithWheelchair: true,
   sameAs: ['https://example.com/rooms/1'],
+  address: {
+    roomNumber: { en: '201', zh: '二百一' },
+    room: { en: 'Waiting room', zh: '候诊室' },
+    levelName: { en: '2', zh: '二' },
+    levelIndex: 2,
+  },
+  description: {
+    en: 'A room with a view.',
+    zh: '有景观的房间。',
+  },
 };
 
 export default roomFixture;

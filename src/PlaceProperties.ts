@@ -7,7 +7,6 @@ import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { AccessType, accessTypes } from './AccessType';
 
 export interface PlaceProperties {
-  // properties
   /**
    * The official name of this place.
    */

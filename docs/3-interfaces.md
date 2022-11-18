@@ -535,7 +535,7 @@ data provider, it’s a good idea to use the provider&#39;s internal ID here.</p
   
 
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>access</td><td><code>"private"</code>&nbsp;|&nbsp;<code>"public"</code>&nbsp;|&nbsp;<code>"customers"</code>&nbsp;|&nbsp;<code>"permissive"</code>&nbsp;|&nbsp;<code>"yes"</code>&nbsp;|&nbsp;<code>"no"</code>&nbsp;|&nbsp;<code>"permit"</code>&nbsp;|&nbsp;<code>"designated"</code>&nbsp;|&nbsp;<code>"delivery"</code>&nbsp;|&nbsp;<code>"emergency"</code>&nbsp;|&nbsp;<code>"residents"</code>&nbsp;|&nbsp;<code>"employees"</code>&nbsp;|&nbsp;<code>"disabled"</code>[]</td><td><p>Defines who this restroom is for. See <a href="https://wiki.openstreetmap.org/wiki/Key:access">https://wiki.openstreetmap.org/wiki/Key:access</a> for more information.</p>
-</td></tr><tr><td>entrance</td><td><a href="#Entrance">Entrance</a></td><td><p>Object describing the entrance to this restroom.</p>
+</td></tr><tr><td>address</td><td><a href="#StructuredAddress">StructuredAddress</a></td><td></td></tr><tr><td>description</td><td><a href="../i18n">LocalizedString</a></td><td></td></tr><tr><td>entrance</td><td><a href="#Entrance">Entrance</a></td><td><p>Object describing the entrance to this restroom.</p>
 </td></tr><tr><td>hasBathTub</td><td><code>boolean</code></td><td><p><code>true</code> if there is a bath tub in this room, <code>false</code> if not, <code>undefined</code> if condition is
 unknown.</p>
 </td></tr><tr><td>hasCeilingHoist</td><td><code>boolean</code></td><td><p><code>true</code> if the restroom has a ceiling hoist, <code>false</code> if not.</p>
@@ -564,7 +564,7 @@ e.g. for different access types or usage times.</p>
 
   
 
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>isAccessibleWithWheelchair</td><td><code>boolean</code></td><td><p><code>true</code> if the room&#39;s relevant facilities are completely accessible while using a wheelchair,
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>address</td><td><a href="#StructuredAddress">StructuredAddress</a></td><td></td></tr><tr><td>description</td><td><a href="../i18n">LocalizedString</a></td><td></td></tr><tr><td>isAccessibleWithWheelchair</td><td><code>boolean</code></td><td><p><code>true</code> if the room&#39;s relevant facilities are completely accessible while using a wheelchair,
 <code>false</code> if not, <code>undefined</code> if the condition is unknown or difficult to assess.</p>
 </td></tr><tr><td>sameAs</td><td><code>string</code>[]</td><td></td></tr></table>
   

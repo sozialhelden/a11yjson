@@ -5,8 +5,10 @@ import entranceFixture from './Entrance.test';
 import toiletFixture from './Toilet.test';
 import showerFixture from './Shower.test';
 import washBasinFixture from './WashBasin.test';
+import roomFixture from './Room.test';
 
 const restroomFixture: Complete<Restroom> = {
+  ...roomFixture,
   isAccessibleWithWheelchair: true,
   signIcons: ['female', 'personInWheelchair'],
   hasMirror: true,

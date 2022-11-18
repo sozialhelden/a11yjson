@@ -8,6 +8,7 @@ import { Shower, getShowerSchemaDefinition } from './Shower';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { AccessType, accessTypes } from './AccessType';
 import { CurrencyValue, getCurrencyValueSchemaDefinition } from './CurrencyValue';
+import { getStructuredAddressSchemaDefinition } from './Address';
 
 export const restroomSignIcons = [
   'allGender',
@@ -117,6 +118,7 @@ export interface Restroom extends Room {
 }
 
 export const getRestroomSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+  ...getRoomSchemaDefinition(),
   signIcons: {
     type: Array,
     optional: true,
@@ -179,4 +181,5 @@ export const getRestroomSchemaDefinition: () => Record<string, SchemaDefinition>
     optional: true,
   },
   ...getPrefixedSchemaDefinition('usageFee.$', getCurrencyValueSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('address', getStructuredAddressSchemaDefinition()),
 });
