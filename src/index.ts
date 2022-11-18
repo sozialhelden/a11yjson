@@ -11,7 +11,7 @@ export { getPrefixedSchemaDefinition };
 export * from './Accessibility';
 export * from './Address';
 export * from './AnimalPolicy';
-
+export * from './CurrencyValue';
 export * from './Door';
 export * from './Entrance';
 export * from './EntranceProperties';
