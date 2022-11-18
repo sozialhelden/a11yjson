@@ -10,6 +10,16 @@ export enum UnitKind {
   Force = 'force',
 }
 
+// https://stackoverflow.com/a/46759625/387719
+function isConstructor(f: Function): boolean {
+  try {
+    Reflect.construct(String, [], f);
+  } catch (e) {
+    return false;
+  }
+  return true;
+}
+
 /**
  * Builds a custom validation function that ensures that the value of the field is a unit of the
  * kind passed to `validateUnit`
@@ -20,9 +30,11 @@ export enum UnitKind {
  * @returns {ValidationFunction} A custom SimpleSchema Validation function
  */
 export const validateUnit = function (kind: UnitKind): ValidationFunction {
-  return function (this: ValidationFunctionSelf<string>) {
+  return function generatedUnitValidationFunction(this: ValidationFunctionSelf<string>) {
     try {
-      const qty = Qty(this.value);
+      // Depending on the build environment and its configuration, the `Qty` constructor may be
+      // a function or a class. We need to handle both cases.
+      const qty = isConstructor(Qty) ? (new Qty(this.value)) : Qty(this.value);
       if (!qty || qty.scalar !== 1 || qty.kind() !== kind) {
         return 'notAllowed';
       }
