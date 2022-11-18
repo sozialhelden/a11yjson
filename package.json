@@ -1,6 +1,6 @@
 {
   "name": "@sozialhelden/a11yjson",
-  "version": "15.8.1",
+  "version": "16.0.0",
   "description": "A harmonized data schema for describing the accessibility of physical places",
   "keywords": [],
   "main": "dist/index.umd.js",
