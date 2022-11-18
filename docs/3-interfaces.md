@@ -67,6 +67,17 @@ dogs without muzzles are explicitly allowed.</p>
 </td></tr></table>
   
 
+### <a id="CurrencyValue">CurrencyValue</a>
+
+  
+
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>access</td><td><code>"private"</code>&nbsp;|&nbsp;<code>"public"</code>&nbsp;|&nbsp;<code>"customers"</code>&nbsp;|&nbsp;<code>"permissive"</code>&nbsp;|&nbsp;<code>"yes"</code>&nbsp;|&nbsp;<code>"no"</code>&nbsp;|&nbsp;<code>"permit"</code>&nbsp;|&nbsp;<code>"designated"</code>&nbsp;|&nbsp;<code>"delivery"</code>&nbsp;|&nbsp;<code>"emergency"</code>&nbsp;|&nbsp;<code>"residents"</code>&nbsp;|&nbsp;<code>"employees"</code>&nbsp;|&nbsp;<code>"disabled"</code>[]</td><td><p>For whom is this amount of money paid?</p>
+</td></tr><tr><td>amount</td><td><code>number</code></td><td><p>The amount of money.</p>
+</td></tr><tr><td>currency</td><td><code>string</code></td><td><p>The currency in which the amount is specified, as three-letter acronym.</p>
+</td></tr><tr><td>paymentTypes</td><td><a href="#Payment">Payment</a>[]</td><td></td></tr><tr><td>per</td><td><a href="#Quantity">Quantity</a></td><td><p>Unit that is paid with the amount of money, e.g. &quot;minute&quot;, &quot;hour&quot;, &#39;GB&#39;, &#39;piece&#39;</p>
+</td></tr></table>
+  
+
 ### <a id="Door">Door</a>
 
   Describes the door of a place's entrance or to one of its facilities (e.g. to a shower, or to
@@ -384,8 +395,9 @@ data provider, it’s a good idea to use the provider&#39;s internal ID here.</p
 
   Describes a quantity of a unit type.
 
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>accuracy</td><td><code>number</code></td><td><p>± in given units, uniform error</p>
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>accuracy</td><td><code>number</code></td><td><p>± in given units, uniform error.</p>
 </td></tr><tr><td>operator</td><td><a href="#Operator">Operator</a></td><td><p>the operator, indicating the value is not an absolute value</p>
+</td></tr><tr><td>precision</td><td><code>number</code></td><td><p>± in given units, uniform error</p>
 </td></tr><tr><td>rawValue</td><td><code>string</code></td><td><p>raw, imported value, eg. &#39;90 .. 120cm&#39; - only required when importing</p>
 </td></tr><tr><td>unit</td><td><code>string</code></td><td><p>one of the length units in js-quantities</p>
 </td></tr><tr><td>value</td><td><code>number</code></td><td><p>the value in the specified unit</p>

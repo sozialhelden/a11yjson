@@ -28,6 +28,9 @@ export interface CurrencyValue {
    * @see {@link AccessType}
    */
   access?: AccessType[];
+  /**
+   * The payment method that is used to pay the amount of money.
+   */
   paymentTypes?: Payment[];
 }
 
