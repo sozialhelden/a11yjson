@@ -76,8 +76,6 @@ dogs without muzzles are explicitly allowed.</p>
 
 <div class="admonition warning">
   <p class="admonition-title">Deprecated</p>
-
-  
   
 </div>
   </td></tr><tr><td>amount</td><td><code>number</code></td><td><p>The amount of money.</p>
@@ -109,9 +107,6 @@ defined in other attributes.</p>
 
 <div class="admonition warning">
   <p class="admonition-title">Deprecated</p>
-
-  
-
   
 </div>
   </td></tr><tr><td>{--isAutomaticOrAlwaysOpen--}</td><td><code>boolean</code></td><td><p><code>true</code> if the door is always open or automatic, <code>false</code> if it has to be opened manually.</p>
@@ -119,10 +114,8 @@ defined in other attributes.</p>
 
 <div class="admonition warning">
   <p class="admonition-title">Deprecated</p>
+  <p>Use <code>isAutomatic</code>, <code>isAlwaysOpen</code> or <code>isManual</code> instead.</p>
 
-  Use `isAutomatic`, `isAlwaysOpen` or `isManual` instead.
-
-  
 </div>
   </td></tr><tr><td>isEasyToHoldOpen</td><td><code>boolean</code></td><td><p><code>true</code> if the door is easy to hold open (subjectively by the assessor), <code>false</code> if not.</p>
 </td></tr><tr><td>isGlassDoor</td><td><code>boolean</code></td><td><p><code>true</code> if the door is a glass door, <code>false</code> if not.</p>
@@ -196,8 +189,6 @@ sitemap. Can contain attributes that are realtime updated to indicate operationa
 
 <div class="admonition warning">
   <p class="admonition-title">Deprecated</p>
-
-  
   
 </div>
   </td></tr><tr><td>accessModeSufficient</td><td><code>string</code>[]</td><td><p>Access mode combinations that allow understanding and using the equipment.</p>
@@ -205,8 +196,6 @@ sitemap. Can contain attributes that are realtime updated to indicate operationa
 
 <div class="admonition warning">
   <p class="admonition-title">Deprecated</p>
-
-  
   
 </div>
   </td></tr><tr><td>accessibilityControl</td><td><code>string</code>[]</td><td><p>The accessibility controls that allow controlling this equipment.</p>
@@ -214,8 +203,6 @@ sitemap. Can contain attributes that are realtime updated to indicate operationa
 
 <div class="admonition warning">
   <p class="admonition-title">Deprecated</p>
-
-  
   
 </div>
   </td></tr><tr><td>accessibilityFeature</td><td><code>string</code>[]</td><td><p>Indicates the access mode combinations that allow understanding and using the equipment.</p>
@@ -223,8 +210,6 @@ sitemap. Can contain attributes that are realtime updated to indicate operationa
 
 <div class="admonition warning">
   <p class="admonition-title">Deprecated</p>
-
-  
   
 </div>
   </td></tr><tr><td>accessibilityHazard</td><td><code>string</code>[]</td><td><p>Indicates the access mode combinations that allow understanding and using the equipment.</p>
@@ -232,8 +217,6 @@ sitemap. Can contain attributes that are realtime updated to indicate operationa
 
 <div class="admonition warning">
   <p class="admonition-title">Deprecated</p>
-
-  
   
 </div>
   </td></tr><tr><td>alternativeRouteInstructions</td><td><a href="../i18n">LocalizedString</a></td><td><p>Short alternative routing instructions for travelers when they cannot use this facility.</p>
@@ -241,8 +224,6 @@ sitemap. Can contain attributes that are realtime updated to indicate operationa
 
 <div class="admonition warning">
   <p class="admonition-title">Deprecated</p>
-
-  
   
 </div>
   </td></tr><tr><td>cabinLength</td><td><a href="#Length">Length</a></td><td><p>Length / depth of the cabin when facing the equipment’s entrance, or <code>undefined</code> if the
@@ -257,8 +238,6 @@ screen readers or voice assistants.</p>
 
 <div class="admonition warning">
   <p class="admonition-title">Deprecated</p>
-
-  
   
 </div>
   </td></tr><tr><td>disruptionSourceImportId</td><td><code>string</code></td><td><p>Data source ID of a secondary source used for realtime status info on accessibility.cloud</p>
@@ -312,8 +291,6 @@ it’s a good idea to use the operator facility management system ID here.</p>
 
 <div class="admonition warning">
   <p class="admonition-title">Deprecated</p>
-
-  
   
 </div>
   </td></tr><tr><td>placeInfoId</td><td><code>string</code></td><td><p>Place info ID that this equipment belongs to (accessibility.cloud ID)</p>
@@ -356,8 +333,6 @@ a cinema.
 
 <div class="admonition warning">
   <p class="admonition-title">Deprecated</p>
-
-  
   
 </div>
   </td></tr><tr><td>accessModeSufficient</td><td><code>string</code>[]</td><td><p>Access mode combinations that allow understanding and using the equipment.</p>
@@ -365,8 +340,6 @@ a cinema.
 
 <div class="admonition warning">
   <p class="admonition-title">Deprecated</p>
-
-  
   
 </div>
   </td></tr><tr><td>accessibilityControl</td><td><code>string</code>[]</td><td><p>The accessibility controls that allow controlling this equipment.</p>
@@ -374,8 +347,6 @@ a cinema.
 
 <div class="admonition warning">
   <p class="admonition-title">Deprecated</p>
-
-  
   
 </div>
   </td></tr><tr><td>accessibilityFeature</td><td><code>string</code>[]</td><td><p>Indicates the access mode combinations that allow understanding and using the equipment.</p>
@@ -383,8 +354,6 @@ a cinema.
 
 <div class="admonition warning">
   <p class="admonition-title">Deprecated</p>
-
-  
   
 </div>
   </td></tr><tr><td>accessibilityHazard</td><td><code>string</code>[]</td><td><p>Indicates the access mode combinations that allow understanding and using the equipment.</p>
@@ -392,8 +361,6 @@ a cinema.
 
 <div class="admonition warning">
   <p class="admonition-title">Deprecated</p>
-
-  
   
 </div>
   </td></tr><tr><td>hasAudioDescription</td><td><code>boolean</code></td><td><p>Is the media unit provided with audio description?</p>
@@ -498,8 +465,6 @@ missing property indicates unknown.</p>
 
 <div class="admonition warning">
   <p class="admonition-title">Deprecated</p>
-
-  
   
 </div>
   </td></tr><tr><td>description</td><td><a href="../i18n">LocalizedString</a></td><td><p>Text description containing helpful information for people with disabilities.</p>
@@ -534,13 +499,13 @@ data provider, it’s a good idea to use the provider&#39;s internal ID here.</p
 
   Describes a quantity of a unit type.
 
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>{--accuracy--}</td><td><code>number</code></td><td>
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>{--accuracy--}</td><td><code>number</code></td><td><p>± in given units, uniform error.</p>
+
+
 <div class="admonition warning">
   <p class="admonition-title">Deprecated</p>
+  <p>Please use the <code>precision</code> property instead.</p>
 
-  Please use the `precision` property instead.
-
-  
 </div>
   </td></tr><tr><td>operator</td><td><a href="#Operator">Operator</a></td><td><p>the operator, indicating the value is not an absolute value</p>
 </td></tr><tr><td>precision</td><td><code>number</code></td><td><p>± in given units, uniform error</p>
@@ -753,8 +718,6 @@ unknown.</p>
 
 <div class="admonition warning">
   <p class="admonition-title">Deprecated</p>
-
-  
   
 </div>
   </td></tr><tr><td>width</td><td><a href="#Length">Length</a></td><td><p>Width constraint of the parking lots.</p>
