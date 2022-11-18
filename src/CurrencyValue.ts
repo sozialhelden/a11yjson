@@ -6,6 +6,8 @@
  */
 
 import { AccessType, accessTypes } from './AccessType';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+import { getPaymentSchemaDefinition, Payment } from './Payment';
 import { BaseQuantitySchemaDefinition, getPrefixedQuantitySchemaDefinition, Quantity } from './Quantity';
 
 export interface CurrencyValue {
@@ -26,6 +28,7 @@ export interface CurrencyValue {
    * @see {@link AccessType}
    */
   access?: AccessType[];
+  paymentTypes?: Payment[];
 }
 
 export const getCurrencyValueSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
@@ -46,4 +49,9 @@ export const getCurrencyValueSchemaDefinition: () => Record<string, SchemaDefini
     type: String,
     allowedValues: accessTypes,
   },
+  paymentTypes: {
+    type: Array,
+    optional: true,
+  },
+  ...getPrefixedSchemaDefinition('paymentTypes.$', getPaymentSchemaDefinition()),
 });
