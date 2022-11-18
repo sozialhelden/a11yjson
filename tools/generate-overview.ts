@@ -133,6 +133,27 @@ function Type(props: { object: any, property?: any }): string {
   );
 }
 
+function getDeprecationText(property: any) {
+
+}
+
+function PropertyName(property: any) {
+  const firstDeprecationTag = get(property, "comment.tags")?.find((t: any) => t.tag === "deprecated");
+  return firstDeprecationTag ? `{--${property.name}--}` : `${property.name}`;
+}
+
+function PropertyDescription(property: any) {
+  const shortText = get(property, "comment.shortText");
+  const deprecationWarnings = get(property, "comment.tags")?.filter((t: any) => t.tag === "deprecated")?.map((t: any) => t.text);
+  const deprecationWarningBoxMarkdown = deprecationWarnings && `
+<div class="admonition warning">
+  <p class="admonition-title">Deprecated</p>
+  ${marked(deprecationWarnings.join(`\n\n`))}
+</div>
+  `;
+  return [shortText && marked(shortText), deprecationWarningBoxMarkdown].filter(Boolean).join(`\n`);
+}
+
 function Interface(i: any): string {
   return `### <a id="${i.name}">${i.name}</a>
 
@@ -143,9 +164,9 @@ function Interface(i: any): string {
       i.children
         .filter((property: any) => get(property, "comment.shortText") !== "TODO")
         .map((property: any) => [
-          `${property.name}`,
+          PropertyName(property),
           `${Type({ object: property.type, property })}`,
-          marked(get(property, "comment.shortText") || "")
+          PropertyDescription(property)
         ])
     )
   )}

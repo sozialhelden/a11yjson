@@ -72,9 +72,18 @@ dogs without muzzles are explicitly allowed.</p>
   
 
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>access</td><td><code>"private"</code>&nbsp;|&nbsp;<code>"public"</code>&nbsp;|&nbsp;<code>"customers"</code>&nbsp;|&nbsp;<code>"permissive"</code>&nbsp;|&nbsp;<code>"yes"</code>&nbsp;|&nbsp;<code>"no"</code>&nbsp;|&nbsp;<code>"permit"</code>&nbsp;|&nbsp;<code>"designated"</code>&nbsp;|&nbsp;<code>"delivery"</code>&nbsp;|&nbsp;<code>"emergency"</code>&nbsp;|&nbsp;<code>"residents"</code>&nbsp;|&nbsp;<code>"employees"</code>&nbsp;|&nbsp;<code>"disabled"</code>[]</td><td><p>For whom is this amount of money paid?</p>
-</td></tr><tr><td>amount</td><td><code>number</code></td><td><p>The amount of money.</p>
+
+
+<div class="admonition warning">
+  <p class="admonition-title">Deprecated</p>
+
+  
+  
+</div>
+  </td></tr><tr><td>amount</td><td><code>number</code></td><td><p>The amount of money.</p>
 </td></tr><tr><td>currency</td><td><code>string</code></td><td><p>The currency in which the amount is specified, as three-letter acronym.</p>
-</td></tr><tr><td>paymentTypes</td><td><a href="#Payment">Payment</a>[]</td><td></td></tr><tr><td>per</td><td><a href="#Quantity">Quantity</a></td><td><p>Unit that is paid with the amount of money, e.g. &quot;minute&quot;, &quot;hour&quot;, &#39;GB&#39;, &#39;piece&#39;</p>
+</td></tr><tr><td>paymentTypes</td><td><a href="#Payment">Payment</a>[]</td><td><p>The payment method that is used to pay the amount of money.</p>
+</td></tr><tr><td>per</td><td><a href="#Quantity">Quantity</a></td><td><p>Unit that is paid with the amount of money, e.g. &quot;minute&quot;, &quot;hour&quot;, &#39;GB&#39;, &#39;piece&#39;</p>
 </td></tr></table>
   
 
@@ -94,10 +103,28 @@ door, <code>undefined</code> if it is no glass door or the condition is unknown.
 </td></tr><tr><td>hasIntercom</td><td><code>boolean</code></td><td><p><code>true</code> if the door has an intercom system, <code>false</code> if not.</p>
 </td></tr><tr><td>hasProximitySensor</td><td><code>boolean</code></td><td><p><code>true</code> if the door has a proximity sensor that triggers the opening mechanism, <code>false</code> if not.</p>
 </td></tr><tr><td>hasSwitch</td><td><code>boolean</code></td><td><p><code>true</code> if the door has a switch that triggers the opening mechanism, <code>false</code> if not.</p>
-</td></tr><tr><td>isAutomatic</td><td><code>boolean</code></td><td><p><code>true</code> if the door opens automatically, <code>false</code> if not. The mechanism for opening the door is
+</td></tr><tr><td>{--isAutomatic--}</td><td><code>boolean</code></td><td><p><code>true</code> if the door opens automatically, <code>false</code> if not. The mechanism for opening the door is
 defined in other attributes.</p>
-</td></tr><tr><td>isAutomaticOrAlwaysOpen</td><td><code>boolean</code></td><td><p><code>true</code> if the door is always open or automatic, <code>false</code> if it has to be opened manually.</p>
-</td></tr><tr><td>isEasyToHoldOpen</td><td><code>boolean</code></td><td><p><code>true</code> if the door is easy to hold open (subjectively by the assessor), <code>false</code> if not.</p>
+
+
+<div class="admonition warning">
+  <p class="admonition-title">Deprecated</p>
+
+  
+
+  
+</div>
+  </td></tr><tr><td>{--isAutomaticOrAlwaysOpen--}</td><td><code>boolean</code></td><td><p><code>true</code> if the door is always open or automatic, <code>false</code> if it has to be opened manually.</p>
+
+
+<div class="admonition warning">
+  <p class="admonition-title">Deprecated</p>
+
+  Use `isAutomatic`, `isAlwaysOpen` or `isManual` instead.
+
+  
+</div>
+  </td></tr><tr><td>isEasyToHoldOpen</td><td><code>boolean</code></td><td><p><code>true</code> if the door is easy to hold open (subjectively by the assessor), <code>false</code> if not.</p>
 </td></tr><tr><td>isGlassDoor</td><td><code>boolean</code></td><td><p><code>true</code> if the door is a glass door, <code>false</code> if not.</p>
 </td></tr><tr><td>isRevolving</td><td><code>boolean</code></td><td><p><code>true</code> if the door is revolving (like a carousel), <code>false</code> if not.</p>
 </td></tr><tr><td>isSliding</td><td><code>boolean</code></td><td><p><code>true</code> if the door is a sliding door, <code>false</code> if not.</p>
@@ -165,12 +192,60 @@ sitemap. Can contain attributes that are realtime updated to indicate operationa
   
 
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>accessMode</td><td><code>string</code>[]</td><td><p>Access modes supported by this equipment.</p>
-</td></tr><tr><td>accessModeSufficient</td><td><code>string</code>[]</td><td><p>Access mode combinations that allow understanding and using the equipment.</p>
-</td></tr><tr><td>accessibilityControl</td><td><code>string</code>[]</td><td><p>The accessibility controls that allow controlling this equipment.</p>
-</td></tr><tr><td>accessibilityFeature</td><td><code>string</code>[]</td><td><p>Indicates the access mode combinations that allow understanding and using the equipment.</p>
-</td></tr><tr><td>accessibilityHazard</td><td><code>string</code>[]</td><td><p>Indicates the access mode combinations that allow understanding and using the equipment.</p>
-</td></tr><tr><td>alternativeRouteInstructions</td><td><a href="../i18n">LocalizedString</a></td><td><p>Short alternative routing instructions for travelers when they cannot use this facility.</p>
-</td></tr><tr><td>cabinLength</td><td><a href="#Length">Length</a></td><td><p>Length / depth of the cabin when facing the equipment’s entrance, or <code>undefined</code> if the
+
+
+<div class="admonition warning">
+  <p class="admonition-title">Deprecated</p>
+
+  
+  
+</div>
+  </td></tr><tr><td>accessModeSufficient</td><td><code>string</code>[]</td><td><p>Access mode combinations that allow understanding and using the equipment.</p>
+
+
+<div class="admonition warning">
+  <p class="admonition-title">Deprecated</p>
+
+  
+  
+</div>
+  </td></tr><tr><td>accessibilityControl</td><td><code>string</code>[]</td><td><p>The accessibility controls that allow controlling this equipment.</p>
+
+
+<div class="admonition warning">
+  <p class="admonition-title">Deprecated</p>
+
+  
+  
+</div>
+  </td></tr><tr><td>accessibilityFeature</td><td><code>string</code>[]</td><td><p>Indicates the access mode combinations that allow understanding and using the equipment.</p>
+
+
+<div class="admonition warning">
+  <p class="admonition-title">Deprecated</p>
+
+  
+  
+</div>
+  </td></tr><tr><td>accessibilityHazard</td><td><code>string</code>[]</td><td><p>Indicates the access mode combinations that allow understanding and using the equipment.</p>
+
+
+<div class="admonition warning">
+  <p class="admonition-title">Deprecated</p>
+
+  
+  
+</div>
+  </td></tr><tr><td>alternativeRouteInstructions</td><td><a href="../i18n">LocalizedString</a></td><td><p>Short alternative routing instructions for travelers when they cannot use this facility.</p>
+
+
+<div class="admonition warning">
+  <p class="admonition-title">Deprecated</p>
+
+  
+  
+</div>
+  </td></tr><tr><td>cabinLength</td><td><a href="#Length">Length</a></td><td><p>Length / depth of the cabin when facing the equipment’s entrance, or <code>undefined</code> if the
 equipment has no cabin. For a hoist, this refers to the hoist platform itself.</p>
 </td></tr><tr><td>cabinWidth</td><td><a href="#Length">Length</a></td><td><p>Width of the cabin when facing the equipment’s entrance, or <code>undefined</code> if the equipment has no
 cabin. For a hoist, this refers to the hoist platform itself.</p>
@@ -178,7 +253,15 @@ cabin. For a hoist, this refers to the hoist platform itself.</p>
 </td></tr><tr><td>description</td><td><a href="../i18n">LocalizedString</a></td><td><p>Describes where the equipment is located. If only one description string is technically
 possible to maintain, it MUST not contain any abbreviations to allow being readable aloud by
 screen readers or voice assistants.</p>
-</td></tr><tr><td>disruptionSourceImportId</td><td><code>string</code></td><td><p>Data source ID of a secondary source used for realtime status info on accessibility.cloud</p>
+
+
+<div class="admonition warning">
+  <p class="admonition-title">Deprecated</p>
+
+  
+  
+</div>
+  </td></tr><tr><td>disruptionSourceImportId</td><td><code>string</code></td><td><p>Data source ID of a secondary source used for realtime status info on accessibility.cloud</p>
 </td></tr><tr><td>door</td><td><a href="#Door">Door</a></td><td><p>Object describing the door to the equipment, or <code>undefined</code> if there is no door.</p>
 </td></tr><tr><td>hasBrailleText</td><td><code>boolean</code></td><td><p><code>true</code> if the equipment’s controls or signs are printed in braille letters, <code>false</code> if not.</p>
 </td></tr><tr><td>hasDoorsInBothDirections</td><td><code>boolean</code></td><td><p><code>true</code> if the equipment has doors in two directions, so wheelchair, rollator, bike or pushchair
@@ -225,7 +308,15 @@ if not.</p>
 it’s a good idea to use the operator facility management system ID here.</p>
 </td></tr><tr><td>originalPlaceInfoId</td><td><code>string</code></td><td><p>ID of the place that this equipment belongs to (unique in the original data source)</p>
 </td></tr><tr><td>outOfOrderReason</td><td><a href="../i18n">LocalizedString</a></td><td><p>Live status update.</p>
-</td></tr><tr><td>placeInfoId</td><td><code>string</code></td><td><p>Place info ID that this equipment belongs to (accessibility.cloud ID)</p>
+
+
+<div class="admonition warning">
+  <p class="admonition-title">Deprecated</p>
+
+  
+  
+</div>
+  </td></tr><tr><td>placeInfoId</td><td><code>string</code></td><td><p>Place info ID that this equipment belongs to (accessibility.cloud ID)</p>
 </td></tr><tr><td>placeSourceId</td><td><code>string</code></td><td><p>ID of the place data source that this equipment belongs to (accessibility.cloud ID)</p>
 </td></tr><tr><td>plannedCompletionDate</td><td><a href="#Date">Date</a></td><td><p>Live status update.</p>
 </td></tr><tr><td>sameAs</td><td><code>string</code>[]</td><td><p>URLs of this equipment in external data sources, for example in GTFS, IMDF or other sources.</p>
@@ -261,11 +352,51 @@ toilet), <code>false</code> if not, <code>undefined</code> if condition is unkno
 a cinema.
 
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>accessMode</td><td><code>string</code>[]</td><td><p>Access modes supported by this equipment.</p>
-</td></tr><tr><td>accessModeSufficient</td><td><code>string</code>[]</td><td><p>Access mode combinations that allow understanding and using the equipment.</p>
-</td></tr><tr><td>accessibilityControl</td><td><code>string</code>[]</td><td><p>The accessibility controls that allow controlling this equipment.</p>
-</td></tr><tr><td>accessibilityFeature</td><td><code>string</code>[]</td><td><p>Indicates the access mode combinations that allow understanding and using the equipment.</p>
-</td></tr><tr><td>accessibilityHazard</td><td><code>string</code>[]</td><td><p>Indicates the access mode combinations that allow understanding and using the equipment.</p>
-</td></tr><tr><td>hasAudioDescription</td><td><code>boolean</code></td><td><p>Is the media unit provided with audio description?</p>
+
+
+<div class="admonition warning">
+  <p class="admonition-title">Deprecated</p>
+
+  
+  
+</div>
+  </td></tr><tr><td>accessModeSufficient</td><td><code>string</code>[]</td><td><p>Access mode combinations that allow understanding and using the equipment.</p>
+
+
+<div class="admonition warning">
+  <p class="admonition-title">Deprecated</p>
+
+  
+  
+</div>
+  </td></tr><tr><td>accessibilityControl</td><td><code>string</code>[]</td><td><p>The accessibility controls that allow controlling this equipment.</p>
+
+
+<div class="admonition warning">
+  <p class="admonition-title">Deprecated</p>
+
+  
+  
+</div>
+  </td></tr><tr><td>accessibilityFeature</td><td><code>string</code>[]</td><td><p>Indicates the access mode combinations that allow understanding and using the equipment.</p>
+
+
+<div class="admonition warning">
+  <p class="admonition-title">Deprecated</p>
+
+  
+  
+</div>
+  </td></tr><tr><td>accessibilityHazard</td><td><code>string</code>[]</td><td><p>Indicates the access mode combinations that allow understanding and using the equipment.</p>
+
+
+<div class="admonition warning">
+  <p class="admonition-title">Deprecated</p>
+
+  
+  
+</div>
+  </td></tr><tr><td>hasAudioDescription</td><td><code>boolean</code></td><td><p>Is the media unit provided with audio description?</p>
 </td></tr><tr><td>hasContrastingBackground</td><td><code>boolean</code></td><td><p>If the media unit is printed or on a screen, does it have high contrast between background and
 foreground?</p>
 </td></tr><tr><td>hasDedicatedScreenForSubtitles</td><td><code>boolean</code></td><td><p>Relevant for movies, screens and presentations: Is there a dedicated screen where subtitles can
@@ -363,7 +494,15 @@ missing property indicates unknown.</p>
 </td></tr><tr><td>address</td><td><code>undefined</code>&nbsp;|&nbsp;<a href="#StructuredAddress">StructuredAddress</a></td><td><p>The address of this place. <code>null</code> indicates that this place has no address, <code>undefined</code> or
 missing property indicates unknown.</p>
 </td></tr><tr><td>category</td><td><code>string</code></td><td><p>Category name of the place</p>
-</td></tr><tr><td>description</td><td><a href="../i18n">LocalizedString</a></td><td><p>Text description containing helpful information for people with disabilities.</p>
+
+
+<div class="admonition warning">
+  <p class="admonition-title">Deprecated</p>
+
+  
+  
+</div>
+  </td></tr><tr><td>description</td><td><a href="../i18n">LocalizedString</a></td><td><p>Text description containing helpful information for people with disabilities.</p>
 </td></tr><tr><td>editPageUrl</td><td><code>string</code></td><td><p>URL of the original data source’s website on a subpage that allows to edit the original data.</p>
 </td></tr><tr><td>emailAddress</td><td><code>string</code></td><td><p>Email address of the place&#39;s operator where you can get accessibility relevant information.</p>
 </td></tr><tr><td>ids</td><td><a href="#Record">Record</a></td><td><p>IDs in other data sources that are linked to this equipment, indexed by schema/context.</p>
@@ -395,8 +534,15 @@ data provider, it’s a good idea to use the provider&#39;s internal ID here.</p
 
   Describes a quantity of a unit type.
 
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>accuracy</td><td><code>number</code></td><td><p>± in given units, uniform error.</p>
-</td></tr><tr><td>operator</td><td><a href="#Operator">Operator</a></td><td><p>the operator, indicating the value is not an absolute value</p>
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>{--accuracy--}</td><td><code>number</code></td><td>
+<div class="admonition warning">
+  <p class="admonition-title">Deprecated</p>
+
+  Please use the `precision` property instead.
+
+  
+</div>
+  </td></tr><tr><td>operator</td><td><a href="#Operator">Operator</a></td><td><p>the operator, indicating the value is not an absolute value</p>
 </td></tr><tr><td>precision</td><td><code>number</code></td><td><p>± in given units, uniform error</p>
 </td></tr><tr><td>rawValue</td><td><code>string</code></td><td><p>raw, imported value, eg. &#39;90 .. 120cm&#39; - only required when importing</p>
 </td></tr><tr><td>unit</td><td><code>string</code></td><td><p>one of the length units in js-quantities</p>
@@ -603,7 +749,15 @@ unknown.</p>
 </td></tr><tr><td>location</td><td><a href="../i18n">LocalizedString</a></td><td><p>Describes where the parking is located.</p>
 </td></tr><tr><td>maxVehicleHeight</td><td><a href="#Length">Length</a></td><td><p>Maximal allowed vehicle height for users of this parking.</p>
 </td></tr><tr><td>neededParkingPermits</td><td><a href="../i18n">LocalizedString</a>[]</td><td><p>List of permit names that allow using this parking.</p>
-</td></tr><tr><td>width</td><td><a href="#Length">Length</a></td><td><p>Width constraint of the parking lots.</p>
+
+
+<div class="admonition warning">
+  <p class="admonition-title">Deprecated</p>
+
+  
+  
+</div>
+  </td></tr><tr><td>width</td><td><a href="#Length">Length</a></td><td><p>Width constraint of the parking lots.</p>
 </td></tr></table>
   
 
