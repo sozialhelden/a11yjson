@@ -67,13 +67,6 @@ dogs without muzzles are explicitly allowed.</p>
 </td></tr></table>
   
 
-### <a id="CurrencyValue">CurrencyValue</a>
-
-  
-
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>amount</td><td><code>number</code></td><td></td></tr><tr><td>currency</td><td><code>string</code></td><td></td></tr></table>
-  
-
 ### <a id="Door">Door</a>
 
   Describes the door of a place's entrance or to one of its facilities (e.g. to a shower, or to
@@ -437,7 +430,9 @@ unknown.</p>
 </td></tr><tr><td>signIcons</td><td><code>"allGender"</code>&nbsp;|&nbsp;<code>"female"</code>&nbsp;|&nbsp;<code>"male"</code>&nbsp;|&nbsp;<code>"personInWheelchair"</code>&nbsp;|&nbsp;<code>"changingTable"</code>&nbsp;|&nbsp;<code>"baby"</code>&nbsp;|&nbsp;<code>"family"</code>&nbsp;|&nbsp;<code>"urinal"</code>&nbsp;|&nbsp;<code>"washBasin"</code>&nbsp;|&nbsp;<code>"toiletBowl"</code>[]</td><td><p>Visible icons on the restroom’s sign</p>
 </td></tr><tr><td>toilet</td><td><a href="#Toilet">Toilet</a></td><td><p>Object describing a toilet inside the restroom, if existing.</p>
 </td></tr><tr><td>turningSpaceInside</td><td><a href="#Length">Length</a></td><td><p>How wide is the space inside that is usable for turning?</p>
-</td></tr><tr><td>usageFee</td><td><a href="#CurrencyValue">CurrencyValue</a></td><td></td></tr><tr><td>washBasin</td><td><a href="#WashBasin">WashBasin</a></td><td><p>Object describing a wash basin belonging to this restroom. It can be outside of the restroom.</p>
+</td></tr><tr><td>usageFee</td><td><a href="#CurrencyValue">CurrencyValue</a>[]</td><td><p>Defines how much you have to pay to use this restroom. There might be multiple fee amounts,
+e.g. for different access types or usage times.</p>
+</td></tr><tr><td>washBasin</td><td><a href="#WashBasin">WashBasin</a></td><td><p>Object describing a wash basin belonging to this restroom. It can be outside of the restroom.</p>
 </td></tr></table>
   
 
@@ -623,11 +618,11 @@ the wifi.</p>
 </td></tr><tr><td>isOpenToEveryone</td><td><code>boolean</code></td><td><p><code>true</code> if the wifi is open to everyone, <code>false</code> if it is explicitly not.</p>
 </td></tr><tr><td>isOpenToStaff</td><td><code>boolean</code></td><td><p><code>true</code> if the wifi is open to explicit place staff, <code>false</code> if explicitly not.</p>
 </td></tr><tr><td>isOpenToVisitors</td><td><code>boolean</code></td><td><p><code>true</code> if the wifi is open to explicit place visitors, <code>false</code> if explicitly not.</p>
-</td></tr><tr><td>needsGuestPass</td><td><code>boolean</code></td><td><p><code>true</code> if the wifi has a fixed password. Knowing this password must be enough to enter and use
-the wifi.</p>
+</td></tr><tr><td>needsGuestPass</td><td><code>boolean</code></td><td><p><code>true</code> if you need a personalized guest pass / code / password to use the wifi, <code>false</code> if not.</p>
 </td></tr><tr><td>password</td><td><code>string</code></td><td><p>A string with the Wifi password. Only use this attribute if security allows to publish this
 info online publicly.</p>
 </td></tr><tr><td>ssid</td><td><code>string</code></td><td><p>A string with the Wifi name (SSID). Only use this attribute if security allows to publish this
 info online publicly.</p>
+</td></tr><tr><td>usageFee</td><td><a href="#CurrencyValue">CurrencyValue</a>[]</td><td><p>Describes if you need to pay a usage fee to use the wifi, or if no fee is needed.</p>
 </td></tr></table>
   
