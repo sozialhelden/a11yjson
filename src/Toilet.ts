@@ -1,6 +1,11 @@
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { GrabBars, getGrabBarsSchemaDefinition } from './GrabBars';
-import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
+import {
+  getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition,
+} from './Quantity';
+import BooleanField from './BooleanField';
+import { EquipmentProperties } from './EquipmentProperties';
+import { getEquipmentInfoSchemaDefinition } from './EquipmentInfo';
 
 /**
  * Describes a single toilet that can be inside a restroom or cabin.
@@ -28,16 +33,59 @@ export interface Toilet {
    * Object describing the grab bars.
    */
   grabBars?: GrabBars;
+
+  /**
+   * Indicates whether the toilet is a squat toilet.
+   */
+  isSquatToilet?: boolean;
+
+  /**
+   * Indicates whether the toilet is a urinal.
+   */
+  isUrinal?: boolean;
+
+  /**
+   * `true` if the toilet is automatically flushing after use.
+   */
+  hasAutomaticFlush?: boolean;
+
+  /**
+   * Describes the flush mechanism as equipment. Use `actionMode` and/or `perceptionMode` on the
+   * properties to describe the mechanism.
+   */
+  flushMechanism?: EquipmentProperties;
+
+  /**
+   * Indicates how far the flush mechanism is from the toilet, from the perspective of a the floor
+   * plan. If the flush mechanism is right behind the toilet, this is a 0 length.
+   */
+  flushMechanismDistanceFromToilet?: Length;
+
+  /**
+   * Describes the secondary flush mechanism as equipment. Use `actionMode` and/or `perceptionMode`
+   * on the properties to describe the mechanism.
+   */
+  secondaryFlushMechanism?: EquipmentProperties;
+
+  /**
+   * Indicates how far the flush mechanism is from the toilet, from the perspective of a the floor
+   * plan. If the flush mechanism is right behind the toilet, this is a 0 length.
+   */
+  secondaryFlushMechanismDistanceFromToilet?: Length;
 }
 
 export const getToiletSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
-  hasGrabBars: {
-    type: Boolean,
-    optional: true,
-  },
+  hasGrabBars: BooleanField,
   ...getPrefixedQuantitySchemaDefinition('heightOfBase', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('spaceOnUsersLeftSide', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('spaceOnUsersRightSide', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('spaceInFront', LengthSchemaDefinition),
   ...getPrefixedSchemaDefinition('grabBars', getGrabBarsSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('flushMechanism', getEquipmentInfoSchemaDefinition()),
+  ...getPrefixedQuantitySchemaDefinition('flushMechanismDistanceFromToilet', LengthSchemaDefinition),
+  ...getPrefixedSchemaDefinition('secondaryFlushMechanism', getEquipmentInfoSchemaDefinition()),
+  ...getPrefixedQuantitySchemaDefinition('secondaryFlushMechanismDistanceFromToilet', LengthSchemaDefinition),
+  isSquatToilet: BooleanField,
+  isUrinal: BooleanField,
+  hasAutomaticFlush: BooleanField,
 });
