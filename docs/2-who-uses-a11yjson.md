@@ -2,6 +2,7 @@
 
 The following organizations / products use A11yJSON.
 
+- Several cities in Germany, for example [Karlsruhe](https://karlsruhe.de), [Potsdam](https://potsdam.de), and [Augsburg](https://augsburg.de), use A11yJSON to collect data about the accessibility of their buildings.
 - [Wheelmap.org](https://wheelmap.org), world's biggest open online map for accessible places.
 - [accessibility.cloud](https://accessibility.cloud), an A11yJSON-based accessibility data exchange.
   Apps can consume existing A11yJSON datasets from
