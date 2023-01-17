@@ -1,3 +1,4 @@
+import BooleanField from './BooleanField';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 
 export interface Mirror {
@@ -18,13 +19,8 @@ export interface Mirror {
 }
 
 export const getMirrorSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
-  isLocatedInsideRestroom: {
-    type: Boolean,
-    optional: true,
-  },
-  isAccessibleWhileSeated: {
-    type: Boolean,
-    optional: true,
-  },
+  isLocatedInsideRestroom: BooleanField,
+  isAccessibleWhileSeated: BooleanField,
   ...getPrefixedQuantitySchemaDefinition('heightFromGround', LengthSchemaDefinition),
+
 });

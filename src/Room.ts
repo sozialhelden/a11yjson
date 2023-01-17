@@ -1,7 +1,8 @@
 import { getStructuredAddressSchemaDefinition, StructuredAddress } from './Address';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+import BooleanField from './BooleanField';
 import { Interactable } from './Interactable';
 import { getInteractionModeSchemaDefinition } from './InteractionMode';
+import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 
 export interface Room extends Interactable {
@@ -17,10 +18,7 @@ export interface Room extends Interactable {
 }
 
 export const getRoomSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
-  isAccessibleWithWheelchair: {
-    type: Boolean,
-    optional: true,
-  },
+  isAccessibleWithWheelchair: BooleanField,
   sameAs: {
     type: Array,
     optional: true,

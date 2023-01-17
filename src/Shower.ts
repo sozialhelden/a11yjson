@@ -4,6 +4,7 @@ import {
 import { getStairsSchemaDefinition, Stairs } from './Stairs';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
+import BooleanField from './BooleanField';
 
 export interface Shower {
   stairs?: Stairs;
@@ -41,24 +42,9 @@ export const getShowerSchemaDefinition: () => Record<string, SchemaDefinition> =
   ...getPrefixedSchemaDefinition('stairs', getStairsSchemaDefinition()),
   ...getPrefixedSchemaDefinition('door', getDoorSchemaDefinition()),
   ...getPrefixedQuantitySchemaDefinition('supportRailsHeight', LengthSchemaDefinition),
-  hasSupportRails: {
-    type: Boolean,
-    optional: true,
-  },
-  hasShowerSeat: {
-    type: Boolean,
-    optional: true,
-  },
-  hasErgonomicHandle: {
-    type: Boolean,
-    optional: true,
-  },
-  showerSeatIsRemovable: {
-    type: Boolean,
-    optional: true,
-  },
-  showerSeatIsFolding: {
-    type: Boolean,
-    optional: true,
-  },
+  hasSupportRails: BooleanField,
+  hasShowerSeat: BooleanField,
+  hasErgonomicHandle: BooleanField,
+  showerSeatIsRemovable: BooleanField,
+  showerSeatIsFolding: BooleanField,
 });

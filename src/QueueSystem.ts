@@ -1,4 +1,5 @@
 import SimpleSchema from 'simpl-schema';
+import BooleanField from './BooleanField';
 import { EquipmentInfo, getEquipmentInfoSchemaDefinition } from './EquipmentInfo';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { getInteractionModeSchemaDefinition, InteractionMode } from './InteractionMode';
@@ -46,27 +47,15 @@ export interface QueueSystem extends Interactable {
 }
 
 export const getQueueSystemSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
-  isAccessibleWithWheelchair: {
-    type: Boolean,
-    optional: true,
-  },
-  usesCattleBars: {
-    type: Boolean,
-    optional: true,
-  },
-  needsTickets: {
-    type: Boolean,
-    optional: true,
-  },
+  isAccessibleWithWheelchair: BooleanField,
+  usesCattleBars: BooleanField,
+  needsTickets: BooleanField,
   ...getPrefixedSchemaDefinition('ticketEquipment', getEquipmentInfoSchemaDefinition()),
   ticketEquipmentId: {
     type: String,
     optional: true,
   },
-  canSkipQueueWithDisability: {
-    type: Boolean,
-    optional: true,
-  },
+  canSkipQueueWithDisability: BooleanField,
   numberOfSeats: {
     type: SimpleSchema.Integer,
     optional: true,

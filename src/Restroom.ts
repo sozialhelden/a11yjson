@@ -9,6 +9,7 @@ import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { AccessType, accessTypes } from './AccessType';
 import { CurrencyValue, getCurrencyValueSchemaDefinition } from './CurrencyValue';
 import { getStructuredAddressSchemaDefinition } from './Address';
+import BooleanField from './BooleanField';
 
 export const restroomSignIcons = [
   'allGender',
@@ -127,38 +128,14 @@ export const getRestroomSchemaDefinition: () => Record<string, SchemaDefinition>
     type: String,
     allowedValues: restroomSignIcons,
   },
-  hasMirror: {
-    type: Boolean,
-    optional: true,
-  },
-  hasSupportRails: {
-    type: Boolean,
-    optional: true,
-  },
-  hasChangingTableForBabies: {
-    type: Boolean,
-    optional: true,
-  },
-  hasChangingTableForAdults: {
-    type: Boolean,
-    optional: true,
-  },
-  hasCeilingHoist: {
-    type: Boolean,
-    optional: true,
-  },
-  hasEmergencyPullstring: {
-    type: Boolean,
-    optional: true,
-  },
-  hasShower: {
-    type: Boolean,
-    optional: true,
-  },
-  hasBathTub: {
-    type: Boolean,
-    optional: true,
-  },
+  hasMirror: BooleanField,
+  hasSupportRails: BooleanField,
+  hasChangingTableForBabies: BooleanField,
+  hasChangingTableForAdults: BooleanField,
+  hasCeilingHoist: BooleanField,
+  hasEmergencyPullstring: BooleanField,
+  hasShower: BooleanField,
+  hasBathTub: BooleanField,
   ...getPrefixedSchemaDefinition('mirror', getMirrorSchemaDefinition()),
   ...getPrefixedQuantitySchemaDefinition('turningSpaceInside', LengthSchemaDefinition),
   ...getPrefixedSchemaDefinition('toilet', getToiletSchemaDefinition()),

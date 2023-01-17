@@ -3,6 +3,7 @@ import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } f
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { getStructuredAddressSchemaDefinition } from './Address';
+import BooleanField from './BooleanField';
 
 /**
  * Describes one or more wheelchair parking lots.
@@ -67,17 +68,11 @@ export const getWheelchairParkingSchemaDefinition: () => Record<string, SchemaDe
     optional: true,
     min: 0,
   },
-  isLocatedInside: {
-    type: Boolean,
-    optional: true,
-  },
+  isLocatedInside: BooleanField,
   ...getPrefixedQuantitySchemaDefinition('width', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('length', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('maxVehicleHeight', LengthSchemaDefinition),
-  hasDedicatedSignage: {
-    type: Boolean,
-    optional: true,
-  },
+  hasDedicatedSignage: BooleanField,
   neededParkingPermits: {
     type: Array,
     optional: true,

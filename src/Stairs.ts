@@ -2,6 +2,7 @@ import SimpleSchema from 'simpl-schema';
 import { t } from 'ttag';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
+import BooleanField from './BooleanField';
 
 /**
  * The `Stairs` interface describes one or more walkable stairs.
@@ -70,16 +71,9 @@ export const getStairsSchemaDefinition: () => Record<string, SchemaDefinition> =
     type: Object,
     optional: true,
   },
-  hasHighContrastNosing: {
-    type: Boolean,
-    optional: true,
-  },
-  hasAntiSlipNosing: {
-    type: Boolean,
-    optional: true,
-  },
-  hasMetalGrating: {
-    type: Boolean,
+  hasHighContrastNosing: BooleanField,
+  hasAntiSlipNosing: BooleanField,
+  hasMetalGrating: BooleanField,
     optional: true,
   },
   isWellLit: {
@@ -88,22 +82,10 @@ export const getStairsSchemaDefinition: () => Record<string, SchemaDefinition> =
   },
   ...getLocalizedStringSchemaDefinition('name'),
   ...getPrefixedQuantitySchemaDefinition('stepHeight', LengthSchemaDefinition),
-  hasHandRail: {
-    type: Boolean,
-    optional: true,
-  },
-  hasTactileSafetyStrips: {
-    type: Boolean,
-    optional: true,
-  },
-  hasBrailleSignage: {
-    type: Boolean,
-    optional: true,
-  },
-  hasTactileSignage: {
-    type: Boolean,
-    optional: true,
-  },
+  hasHandRail: BooleanField,
+  hasTactileSafetyStrips: BooleanField,
+  hasBrailleSignage: BooleanField,
+  hasTactileSignage: BooleanField,
   alternativeMobileEquipmentIds: {
     type: Array,
     optional: true,

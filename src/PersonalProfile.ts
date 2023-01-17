@@ -1,3 +1,5 @@
+import BooleanField from './BooleanField';
+
 /**
  * Describes a person. This exists only to transform data from sources where no physical attributes
  * of places have been captured as data directly. It's better to describe physical attributes of
@@ -26,36 +28,12 @@ export interface PersonalProfile {
 }
 
 export const getPersonalProfileSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
-  muteness: {
-    type: Boolean,
-    optional: true,
-  },
-  guideDog: {
-    type: Boolean,
-    optional: true,
-  },
-  hearingImpairment: {
-    type: Boolean,
-    optional: true,
-  },
-  learningImpairment: {
-    type: Boolean,
-    optional: true,
-  },
-  mobilityImpairment: {
-    type: Boolean,
-    optional: true,
-  },
-  visualImpairment: {
-    type: Boolean,
-    optional: true,
-  },
-  blindness: {
-    type: Boolean,
-    optional: true,
-  },
-  wheelchair: {
-    type: Boolean,
-    optional: true,
-  },
+  muteness: BooleanField,
+  guideDog: BooleanField,
+  hearingImpairment: BooleanField,
+  learningImpairment: BooleanField,
+  mobilityImpairment: BooleanField,
+  visualImpairment: BooleanField,
+  blindness: BooleanField,
+  wheelchair: BooleanField,
 });
