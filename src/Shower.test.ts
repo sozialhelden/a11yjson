@@ -1,11 +1,12 @@
 import { Shower, getShowerSchemaDefinition } from './Shower';
 import expectValidFixture from './lib/expectValidFixture';
+import grabBarsFixture from './GrabBars.test';
 
 const showerFixture: Shower = {
   hasSupportRails: true,
   supportRailsHeight: '85 .. 107cm',
   hasShowerSeat: true,
-  hasErgonomicHandle: true,
+  grabBars: grabBarsFixture,
   showerSeatIsRemovable: true,
   showerSeatIsFolding: false,
 };
