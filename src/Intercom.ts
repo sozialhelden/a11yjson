@@ -10,8 +10,7 @@ import {
 } from './Quantity';
 
 /**
- * Describes the door of a place's entrance or to one of its facilities (e.g. to a shower, or to
- * an elevator)
+ * Describes a system to communicate over distance, e.g. a door intercom next to a doorbell.
  */
 export interface Intercom extends Interactable {
   description?: LocalizedString;

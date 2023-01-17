@@ -7,6 +7,10 @@ import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } f
 import BooleanField from './BooleanField';
 import { getGrabBarsSchemaDefinition, GrabBars } from './GrabBars';
 
+/**
+ * Describes a shower.
+ */
+
 export interface Shower {
   stairs?: Stairs;
   door?: Door;

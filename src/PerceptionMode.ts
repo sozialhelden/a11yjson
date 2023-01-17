@@ -23,7 +23,8 @@ import {
 import { getTechCombinationSchemaDefinition, TechCombination } from './TechCombination';
 
 /**
- * Describes necessary abilities and modes for information output.
+ * Describes necessary abilities and modes for interpreting information output, signals, or
+ * content.
  */
 export type PerceptionMode = {
   /**

@@ -5,6 +5,9 @@ import { getInteractionModeSchemaDefinition } from './InteractionMode';
 import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 
+/**
+ * Describes a room inside a structure.
+ */
 export interface Room extends Interactable {
   /**
    * `true` if the room's relevant facilities are completely accessible while using a wheelchair,

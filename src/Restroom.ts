@@ -26,6 +26,9 @@ export const restroomSignIcons = [
 
 export type RestroomSignIcon = typeof restroomSignIcons[number];
 
+/**
+ * Describes a `Room` that contains one or more `Toilet`s or `Shower`s.
+ */
 export interface Restroom extends Room {
   /**
    * Visible icons on the restroom’s sign

@@ -1,6 +1,9 @@
 import { t } from 'ttag';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 
+/**
+ * Describes a wash basin.
+ */
 export interface WashBasin {
   /**
    * `true` if the restroom's wash basin is inside the cabin, `false` if not, `undefined`

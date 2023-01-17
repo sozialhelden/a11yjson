@@ -1,6 +1,9 @@
 import BooleanField from './BooleanField';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 
+/**
+ * Describes a mirror.
+ */
 export interface Mirror {
   /**
    * `true` if the mirror is located inside the restroom, `false` if not, `undefined` if

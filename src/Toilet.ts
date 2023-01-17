@@ -5,7 +5,6 @@ import {
 } from './Quantity';
 import BooleanField from './BooleanField';
 import { EquipmentProperties, getEquipmentPropertiesSchemaDefinition } from './EquipmentProperties';
-import { getEquipmentInfoSchemaDefinition } from './EquipmentInfo';
 
 /**
  * Describes a single toilet that can be inside a restroom or cabin.

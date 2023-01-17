@@ -2,6 +2,9 @@ import { t } from 'ttag';
 
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 
+/**
+ * The `Payment` interface describes the payment options at a location.
+ */
 export interface Payment {
   hasPortablePaymentSystem?: boolean;
   // QUESTION: which standard?

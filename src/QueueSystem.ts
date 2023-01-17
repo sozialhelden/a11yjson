@@ -6,6 +6,9 @@ import { Interactable } from './Interactable';
 import { getInteractionModeSchemaDefinition } from './InteractionMode';
 import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition';
 
+/**
+ * Describes a system that encourages or forces people to queue up.
+ */
 export interface QueueSystem extends Interactable {
   /**
    * `true` if the queueing uses rails / cattle bars, `false` if not.

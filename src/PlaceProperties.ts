@@ -6,6 +6,9 @@ import { getLocalizedStringSchemaDefinition, LocalizedString } from './Localized
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { AccessType, accessTypes } from './AccessType';
 
+/**
+ * Properties of a place of interest.
+ */
 export interface PlaceProperties {
   /**
    * The official name of this place.

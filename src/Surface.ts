@@ -179,6 +179,9 @@ export const SmoothnessTypeValues = [
 
 export type SmoothnessType = typeof SmoothnessTypeValues[number];
 
+/**
+ * Describes the surface of a ground or path.
+ */
 export interface Surface {
   longitudinalSlope?: Slope;
   lateralSlope?: Slope;

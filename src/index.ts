@@ -44,7 +44,6 @@ export * from './SmokingPolicy';
 export * from './Staff';
 export * from './Stairs';
 export * from './Surface';
-export * from './Tables';
 export * from './TechCombination';
 export * from './Toilet';
 export * from './Quantity';

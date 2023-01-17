@@ -6,8 +6,7 @@ import { getLocalizedStringSchemaDefinition, LocalizedString } from './Localized
 import { getPerceptionModeSchemaDefinition, PerceptionMode } from './PerceptionMode';
 
 /**
- * Describes the door of a place's entrance or to one of its facilities (e.g. to a shower, or to
- * an elevator)
+ * Describes how you can interact with a thing and which abilities you need to do so.
  */
 export interface InteractionMode {
   /**
