@@ -3,6 +3,8 @@ import { t } from 'ttag';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import BooleanField from './BooleanField';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+import { getGrabBarsSchemaDefinition, GrabBars } from './GrabBars';
 
 /**
  * The `Stairs` interface describes one or more walkable stairs.
@@ -12,6 +14,15 @@ export interface Stairs {
    * Number of steps.
    */
   count?: number;
+
+  /**
+   * Floor numbers that are accessible via these stairs.
+   */
+  floors?: string[];
+  /**
+   * `true` if the stairs are spiral, `false` if not.
+   */
+  isSpiral?: boolean;
   /**
    * `true` if all relevant steps have a high contrast nosing.
    */
@@ -59,6 +70,10 @@ export interface Stairs {
    * detectable with the touch of a foot or sweep of a cane.
    */
   hasTactileSafetyStrips?: boolean;
+  /**
+   * Grab bars belonging to the stairs.
+   */
+  grabBars?: GrabBars;
 }
 
 export const getStairsSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
@@ -74,11 +89,14 @@ export const getStairsSchemaDefinition: () => Record<string, SchemaDefinition> =
   hasHighContrastNosing: BooleanField,
   hasAntiSlipNosing: BooleanField,
   hasMetalGrating: BooleanField,
+  isWellLit: BooleanField,
+  isSpiral: BooleanField,
+  floors: {
+    type: Array,
     optional: true,
   },
-  isWellLit: {
-    type: Boolean,
-    optional: true,
+  'floors.$': {
+    type: String,
   },
   ...getLocalizedStringSchemaDefinition('name'),
   ...getPrefixedQuantitySchemaDefinition('stepHeight', LengthSchemaDefinition),
@@ -94,4 +112,5 @@ export const getStairsSchemaDefinition: () => Record<string, SchemaDefinition> =
     type: String,
     label: t`accessibility.cloud Equipment ID`,
   },
+  ...getPrefixedSchemaDefinition('grabBars', getGrabBarsSchemaDefinition()),
 });

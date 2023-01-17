@@ -1,6 +1,7 @@
 import { Stairs, getStairsSchemaDefinition } from './Stairs';
 import { Complete } from './Complete';
 import expectValidFixture from './lib/expectValidFixture';
+import grabBarsFixture from './GrabBars.test';
 
 const stairsFixture: Complete<Stairs> = {
   count: 123,
@@ -15,6 +16,9 @@ const stairsFixture: Complete<Stairs> = {
   alternativeMobileEquipmentIds: ['foo', 'bar'],
   hasMetalGrating: true,
   isWellLit: true,
+  grabBars: grabBarsFixture,
+  isSpiral: false,
+  floors: ['1', '2'],
 };
 
 export default stairsFixture;
