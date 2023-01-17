@@ -6,7 +6,6 @@ import wheelchairPlacesFixture from './WheelchairPlaces.test';
 import mediaFixture from './Media.test';
 import staffFixture from './Staff.test';
 import paymentFixture from './Payment.test';
-import tablesFixture from './Tables.test';
 import pathwaysFixture from './Pathways.test';
 import parkingFixture from './Parking.test';
 import surfaceFixture from './Surface.test';
@@ -15,6 +14,9 @@ import { Accessibility, WheelchairAccessibilityGrade } from '.';
 import { Complete } from './Complete';
 import animalPolicyFixture from './AnimalPolicy.test';
 import wifiAccessibilityFixture from './WifiAccessibility.test';
+import deskFixture from './Desk.test';
+import signageFixture from './Signage.test';
+import interactionModeFixture from './InteractionMode.test';
 
 const accessibilityFixture: Complete<Accessibility> = {
   accessibleWith: personalProfileFixture,
@@ -23,25 +25,32 @@ const accessibilityFixture: Complete<Accessibility> = {
   wheelchairAccessibilityGrade: WheelchairAccessibilityGrade.Fully,
   staff: staffFixture,
   wheelchairPlaces: wheelchairPlacesFixture,
-  media: [mediaFixture],
-  payment: paymentFixture,
-  entrances: [entranceFixture, entranceFixture],
-  restrooms: [restroomFixture, restroomFixture],
-  tables: tablesFixture,
   isWellLit: true,
   isQuiet: true,
+  hasSoundAbsorption: true,
+  hasAirConditioning: true,
   hasInductionLoop: false,
-  ambientNoiseLevel: '80dB',
+  ambientNoiseLevel: '20dB',
   smokingPolicy: 'prohibited',
   hasTactileGuideStrips: true,
   hasTactileSignage: true,
   hasBrailleSignage: true,
   serviceContact: { en: 'string' },
+  media: [mediaFixture],
+  desks: [deskFixture],
+  tables: [deskFixture],
+  payment: paymentFixture,
+  entrances: [entranceFixture, entranceFixture],
+  restrooms: [restroomFixture, restroomFixture],
+  signageSystems: [signageFixture],
   pathways: pathwaysFixture,
+  pathwaysInside: pathwaysFixture,
+  pathwaysFromEntrance: pathwaysFixture,
   parking: parkingFixture,
   surface: surfaceFixture,
   animalPolicy: animalPolicyFixture,
   wifi: wifiAccessibilityFixture,
+  interactions: [interactionModeFixture],
 };
 
 export default accessibilityFixture;

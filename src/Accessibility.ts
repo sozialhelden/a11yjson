@@ -1,4 +1,3 @@
-import { t } from 'ttag';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import { PersonalProfile, getPersonalProfileSchemaDefinition } from './PersonalProfile';
 import { Entrance, getEntranceSchemaDefinition } from './Entrance';
@@ -7,7 +6,6 @@ import { Staff, getStaffSchemaDefinition } from './Staff';
 import { WheelchairPlaces, getWheelchairPlacesSchemaDefinition } from './WheelchairPlaces';
 import { Media, getMediaSchemaDefinition } from './Media';
 import { Payment, getPaymentSchemaDefinition } from './Payment';
-import { Tables, getTablesSchemaDefinition } from './Tables';
 import { Pathways, getPathwaysSchemaDefinition } from './Pathways';
 import { Parking, getParkingSchemaDefinition } from './Parking';
 import { Surface, getSurfaceSchemaDefinition } from './Surface';
@@ -15,7 +13,10 @@ import { AnimalPolicy, getAnimalPolicySchemaDefinition } from './AnimalPolicy';
 import { SmokingPolicy, smokingPolicies } from './SmokingPolicy';
 import { getPrefixedQuantitySchemaDefinition, Volume, VolumeSchemaDefinition } from './Quantity';
 import { WifiAccessibility, getWifiAccessibilitySchemaDefinition } from './WifiAccessibility';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition';
+import { Desk, getDeskSchemaDefinition } from './Desk';
+import BooleanField from './BooleanField';
+import { getSignageSchemaDefinition, Signage } from './Signage';
 import { InteractionMode } from './InteractionMode';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 
@@ -82,22 +83,40 @@ export interface Accessibility extends Interactable {
    * `null` indicates there is no parking, `undefined` or missing property indicates unknown.
    */
   parking?: Parking | null;
-  // QUESTION How is this measured, should be changed to ambient.lighting
+
   /**
    * Determines if the venue is well lit (subjectively, by the assessor).  Will be replaced by a
    * measurable lumen value in the future.
    */
   isWellLit?: boolean;
+
   /**
-   * Determines if the venue is quiet (subjectively, by the assessor). Will be replaced by a
-   * measurable ambient noise level in the future.
+   * Determines if the venue is quiet (subjectively, by the assessor). If possible, use the
+   * `ambientNoiseLevel` property instead.
    */
   isQuiet?: boolean;
+
+  /**
+   * Determines if there is sound absorption installed.
+   */
+  hasSoundAbsorption?: boolean;
+
+  /**
+   * Determines if there is air conditioning installed and actively used.
+   */
+  hasAirConditioning?: boolean;
+
   /**
    * Ambient noise level in dB(A) relative to a reference pressure of 0.00002 Pa. Median over a
    * 10-second period at least.
    */
   ambientNoiseLevel?: Volume;
+
+  /**
+   * Typical interactions at this venue.
+   */
+  interactions: InteractionMode[];
+
   /**
    * Object describing the owner's smoking policy.
    */
@@ -109,18 +128,29 @@ export interface Accessibility extends Interactable {
   /**
    * `true` if the venue has tactile guide strips on the floor or at the walls, `false` if not.
    * `undefined` or missing property indicates unknown.
+   *
+   * @deprecated Use `signageSystems` instead.
    */
   hasTactileGuideStrips?: boolean;
 
   /**
    * `true` if there is tactile navigation for/to this place, `false` if not.
+   *
+   * @deprecated Use `signageSystems` instead.
    */
   hasTactileSignage?: boolean;
 
   /**
    * `true` if there is braille navigation for/to this place, `false` if not.
+   *
+   * @deprecated Use `signageSystems` instead.
    */
   hasBrailleSignage?: boolean;
+
+  /**
+   * Describes local signage systems. If multiple different systems are used, describe them all.
+   */
+  signageSystems?: Signage[];
 
   /**
    * `true` if the venue has induction loops installed in its functional units where this is
@@ -137,13 +167,31 @@ export interface Accessibility extends Interactable {
    */
   surface?: Surface | null;
   /**
-   * Describes the accessibility of pathways to the place or inside the place’s boundaries.
+   * Describes the accessibility of pathways to the place or inside the place’s boundaries (mixed)
    */
   pathways?: Pathways | null;
+  /**
+   * For places inside other places (e.g. a room inside a building).
+   *
+   * Describes the accessibility of pathways to the place. If an extra accessible entrance exists,
+   * describe pathways from there to this place.
+   */
+  pathwaysFromEntrance?: Pathways | null;
+  /**
+   * Describes the accessibility of pathways to the place or inside the place’s boundaries (mixed)
+   */
+  pathwaysInside?: Pathways | null;
   /**
    * Describes the accessibility of entrances to the place.
    */
   entrances?: ArrayLike<Entrance> | null;
+
+  /**
+   * Describes the accessibility of desks in the place.
+   * `null` indicates there are no desks, `undefined` or missing property indicates unknown.
+   */
+  desks?: ArrayLike<Desk> | null;
+
   /**
    * Describes the accessibility of restrooms in the place.
    */
@@ -161,10 +209,11 @@ export interface Accessibility extends Interactable {
    */
   wheelchairPlaces?: WheelchairPlaces | null;
   /**
-   * Information about tables.
+   * Information about tables (for example in a restaurant).
    * `null` indicates there are no tables, `undefined` or missing property indicates unknown.
    */
-  tables?: Tables | null;
+  tables?: ArrayLike<Desk> | null;
+
   serviceContact?: LocalizedString;
   /**
    * Information about media.
@@ -185,62 +234,36 @@ export const getAccessibilitySchemaDefinition: () => Record<string, SchemaDefini
     optional: true,
     allowedValues: wheelchairAccessibilityGrades,
   },
-  ...getPrefixedSchemaDefinition('staff', getStaffSchemaDefinition()),
-  ...getPrefixedSchemaDefinition('wheelchairPlaces', getWheelchairPlacesSchemaDefinition()),
-  media: {
-    type: Array,
-    optional: true,
-  },
-  ...getPrefixedSchemaDefinition('media.$', getMediaSchemaDefinition()),
-  ...getPrefixedSchemaDefinition('payment', getPaymentSchemaDefinition()),
-  ...getPrefixedSchemaDefinition('parking', getParkingSchemaDefinition()),
-  ...getPrefixedSchemaDefinition('surface', getSurfaceSchemaDefinition()),
-  ...getPrefixedSchemaDefinition('wifi', getWifiAccessibilitySchemaDefinition()),
-  isWellLit: {
-    type: Boolean,
-    optional: true,
-  },
-  isQuiet: {
-    type: Boolean,
-    optional: true,
-  },
-  hasInductionLoop: {
-    type: Boolean,
-    optional: true,
-  },
-  hasBrailleSignage: {
-    type: Boolean,
-    optional: true,
-  },
-  hasTactileSignage: {
-    type: Boolean,
-    optional: true,
-  },
-  ...getPrefixedQuantitySchemaDefinition('ambientNoiseLevel', VolumeSchemaDefinition),
   smokingPolicy: {
     type: String,
     optional: true,
     allowedValues: smokingPolicies().map((s) => s.value),
   },
-  hasTactileGuideStrips: {
-    type: Boolean,
-    optional: true,
-  },
+  isWellLit: BooleanField,
+  isQuiet: BooleanField,
+  hasSoundAbsorption: BooleanField,
+  hasAirConditioning: BooleanField,
+  hasInductionLoop: BooleanField,
+  hasBrailleSignage: BooleanField,
+  hasTactileSignage: BooleanField,
+  hasTactileGuideStrips: BooleanField,
+  ...getPrefixedSchemaDefinition('staff', getStaffSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('wheelchairPlaces', getWheelchairPlacesSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('payment', getPaymentSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('parking', getParkingSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('surface', getSurfaceSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('wifi', getWifiAccessibilitySchemaDefinition()),
   ...getPrefixedSchemaDefinition('animalPolicy', getAnimalPolicySchemaDefinition()),
   ...getPrefixedSchemaDefinition('pathways', getPathwaysSchemaDefinition()),
-  entrances: {
-    type: Array,
-    optional: true,
-    label: t`Entrances`,
-  },
-  ...getPrefixedSchemaDefinition('entrances.$', getEntranceSchemaDefinition()),
-  restrooms: {
-    type: Array,
-    optional: true,
-    label: t`Restrooms`,
-  },
-  ...getPrefixedSchemaDefinition('restrooms.$', getRestroomSchemaDefinition()),
-  ...getPrefixedSchemaDefinition('tables', getTablesSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('pathwaysInside', getPathwaysSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('pathwaysFromEntrance', getPathwaysSchemaDefinition()),
+  ...getPrefixedArraySchemaDefinition('media', getMediaSchemaDefinition()),
+  ...getPrefixedArraySchemaDefinition('desks', getDeskSchemaDefinition()),
+  ...getPrefixedArraySchemaDefinition('tables', getDeskSchemaDefinition()),
+  ...getPrefixedArraySchemaDefinition('signageSystems', getSignageSchemaDefinition()),
+  ...getPrefixedArraySchemaDefinition('entrances', getEntranceSchemaDefinition()),
+  ...getPrefixedArraySchemaDefinition('restrooms', getRestroomSchemaDefinition()),
+  ...getPrefixedQuantitySchemaDefinition('ambientNoiseLevel', VolumeSchemaDefinition),
   ...getLocalizedStringSchemaDefinition('serviceContact'),
   ...getInteractableSchemaDefinition(),
 });
