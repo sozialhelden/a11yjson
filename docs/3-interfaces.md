@@ -392,8 +392,7 @@ screen. This CAN contain Unicode characters such as ⟷ or ↘︎ as well as abb
 
 ### <a id="InteractionMode">InteractionMode</a>
 
-  Describes the door of a place's entrance or to one of its facilities (e.g. to a shower, or to
-an elevator)
+  Describes how you can interact with a thing and which abilities you need to do so.
 
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>action</td><td><a href="#ActionMode">ActionMode</a>[]</td><td><p>Action modes that are absolutely necessary to facilitate the interaction, e.g. ‘pushing a
 button’.</p>
@@ -408,8 +407,7 @@ button’.</p>
 
 ### <a id="Intercom">Intercom</a>
 
-  Describes the door of a place's entrance or to one of its facilities (e.g. to a shower, or to
-an elevator)
+  Describes a system to communicate over distance, e.g. a door intercom next to a doorbell.
 
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>ambientNoiseLevel</td><td><a href="#Volume">Volume</a></td><td><p>The ambient noise level when using the intercom.</p>
 </td></tr><tr><td>audioIsComprehensible</td><td><code>boolean</code></td><td><p><code>true</code> if intercom system’s audio quality is good enough for understanding speech, <code>false</code>
@@ -487,7 +485,7 @@ how much turning space there is in front of it.</p>
 
 ### <a id="Mirror">Mirror</a>
 
-  
+  Describes a mirror.
 
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>heightFromGround</td><td><a href="#Length">Length</a></td><td><p>How far is the mirror&#39;s bottom from the ground?</p>
 </td></tr><tr><td>isAccessibleWhileSeated</td><td><code>boolean</code></td><td><p><code>true</code> if the mirror is accessible while sitting in a wheelchair, <code>false</code> if not, <code>undefined</code>
@@ -516,7 +514,7 @@ condition is unknown.</p>
 
 ### <a id="Payment">Payment</a>
 
-  
+  The `Payment` interface describes the payment options at a location.
 
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>acceptsBills</td><td><code>boolean</code></td><td></td></tr><tr><td>acceptsCoins</td><td><code>boolean</code></td><td></td></tr><tr><td>acceptsCreditCards</td><td><code>boolean</code></td><td></td></tr><tr><td>acceptsDebitCards</td><td><code>boolean</code></td><td></td></tr><tr><td>acceptsPaymentByMobilePhone</td><td><code>boolean</code></td><td></td></tr><tr><td>customPaymentMetaInfo</td><td><a href="../i18n">LocalizedString</a>[]</td><td></td></tr><tr><td>hasPortablePaymentSystem</td><td><code>boolean</code></td><td></td></tr></table>
   
@@ -554,7 +552,7 @@ Not used right now, but added for future compatibility.</p>
 
 ### <a id="PlaceProperties">PlaceProperties</a>
 
-  
+  Properties of a place of interest.
 
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>access</td><td><code>"private"</code>&nbsp;|&nbsp;<code>"public"</code>&nbsp;|&nbsp;<code>"customers"</code>&nbsp;|&nbsp;<code>"permissive"</code>&nbsp;|&nbsp;<code>"yes"</code>&nbsp;|&nbsp;<code>"no"</code>&nbsp;|&nbsp;<code>"permit"</code>&nbsp;|&nbsp;<code>"designated"</code>&nbsp;|&nbsp;<code>"delivery"</code>&nbsp;|&nbsp;<code>"emergency"</code>&nbsp;|&nbsp;<code>"residents"</code>&nbsp;|&nbsp;<code>"employees"</code>&nbsp;|&nbsp;<code>"disabled"</code>[]</td><td><p>Defines who this restroom is for. See <a href="https://wiki.openstreetmap.org/wiki/Key:access">https://wiki.openstreetmap.org/wiki/Key:access</a> for more
 information.</p>
@@ -620,7 +618,7 @@ data provider, it’s a good idea to use the provider&#39;s internal ID here.</p
 
 ### <a id="QueueSystem">QueueSystem</a>
 
-  
+  Describes a system that encourages or forces people to queue up.
 
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>canSkipQueueWithDisability</td><td><code>boolean</code></td><td><p><code>true</code> if you can skip the queue with a disability, <code>false</code> if not.</p>
 </td></tr><tr><td>grabBars</td><td><a href="#GrabBars">GrabBars</a></td><td><p>Grab bars inside the queueing system, if applicable.</p>
@@ -636,7 +634,7 @@ data provider, it’s a good idea to use the provider&#39;s internal ID here.</p
 
 ### <a id="Restroom">Restroom</a>
 
-  
+  Describes a `Room` that contains one or more `Toilet`s or `Shower`s.
 
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>access</td><td><code>"private"</code>&nbsp;|&nbsp;<code>"public"</code>&nbsp;|&nbsp;<code>"customers"</code>&nbsp;|&nbsp;<code>"permissive"</code>&nbsp;|&nbsp;<code>"yes"</code>&nbsp;|&nbsp;<code>"no"</code>&nbsp;|&nbsp;<code>"permit"</code>&nbsp;|&nbsp;<code>"designated"</code>&nbsp;|&nbsp;<code>"delivery"</code>&nbsp;|&nbsp;<code>"emergency"</code>&nbsp;|&nbsp;<code>"residents"</code>&nbsp;|&nbsp;<code>"employees"</code>&nbsp;|&nbsp;<code>"disabled"</code>[]</td><td><p>Defines who this restroom is for. See <a href="https://wiki.openstreetmap.org/wiki/Key:access">https://wiki.openstreetmap.org/wiki/Key:access</a> for more information.</p>
 </td></tr><tr><td>address</td><td><a href="#StructuredAddress">StructuredAddress</a></td><td></td></tr><tr><td>description</td><td><a href="../i18n">LocalizedString</a></td><td></td></tr><tr><td>entrance</td><td><a href="#Entrance">Entrance</a></td><td><p>Object describing the entrance to this restroom.</p>
@@ -667,7 +665,7 @@ e.g. for different access types or usage times.</p>
 
 ### <a id="Room">Room</a>
 
-  
+  Describes a room inside a structure.
 
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>address</td><td><a href="#StructuredAddress">StructuredAddress</a></td><td></td></tr><tr><td>description</td><td><a href="../i18n">LocalizedString</a></td><td></td></tr><tr><td>interactions</td><td><a href="#InteractionMode">InteractionMode</a>[]</td><td><p>Indicates how the object can be interacted with.</p>
 </td></tr><tr><td>isAccessibleWithWheelchair</td><td><code>boolean</code></td><td><p><code>true</code> if the room&#39;s relevant facilities are completely accessible while using a wheelchair,
@@ -711,7 +709,7 @@ This can be used to determine if a wheelchair user can sit at the desk.</p>
 
 ### <a id="Shower">Shower</a>
 
-  
+  Describes a shower.
 
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>door</td><td><a href="#Door">Door</a></td><td></td></tr><tr><td>grabBars</td><td><a href="#GrabBars">GrabBars</a></td><td><p>Ergonomic handles inside the shower.</p>
 </td></tr><tr><td>hasShowerSeat</td><td><code>boolean</code></td><td><p><code>true</code> if the shower has a seat, <code>false</code> if not, <code>undefined</code> if condition is unknown..</p>
@@ -725,9 +723,35 @@ if condition is unknown.</p>
 
 ### <a id="Signage">Signage</a>
 
-  
+  Describes a signage / physical navigation system belonging to a location.
 
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>description</td><td><a href="../i18n">LocalizedString</a></td><td></td></tr><tr><td>fontHeight</td><td><a href="#Length">Length</a></td><td></td></tr><tr><td>hasAudio</td><td><code>boolean</code></td><td></td></tr><tr><td>hasBraille</td><td><code>boolean</code></td><td></td></tr><tr><td>hasNumbers</td><td><code>boolean</code></td><td></td></tr><tr><td>hasPictograms</td><td><code>boolean</code></td><td></td></tr><tr><td>hasRaisedLetters</td><td><code>boolean</code></td><td></td></tr><tr><td>hasSearch</td><td><code>boolean</code></td><td></td></tr><tr><td>hasTactileGuideStrips</td><td><code>boolean</code></td><td></td></tr><tr><td>hasTactileHandRails</td><td><code>boolean</code></td><td></td></tr><tr><td>hasTactileMap</td><td><code>boolean</code></td><td></td></tr><tr><td>hasTactileNorthMarkers</td><td><code>boolean</code></td><td></td></tr><tr><td>hasTactilePaving</td><td><code>boolean</code></td><td></td></tr><tr><td>hasTactileRoomNames</td><td><code>boolean</code></td><td></td></tr><tr><td>hasText</td><td><code>boolean</code></td><td></td></tr><tr><td>hasVideo</td><td><code>boolean</code></td><td></td></tr><tr><td>hasVirtualMap</td><td><code>boolean</code></td><td></td></tr><tr><td>highLegibility</td><td><code>boolean</code></td><td></td></tr><tr><td>isHighContrast</td><td><code>boolean</code></td><td></td></tr><tr><td>sitemap</td><td><a href="#EquipmentInfo">EquipmentInfo</a></td><td></td></tr></table>
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>description</td><td><a href="../i18n">LocalizedString</a></td><td><p>A description of the signage.</p>
+</td></tr><tr><td>fontHeight</td><td><a href="#Length">Length</a></td><td><p>The height of the font used on the signage. Most likely in millimeters, using a range.</p>
+</td></tr><tr><td>hasAudio</td><td><code>boolean</code></td><td><p><code>true</code> if the signage has audio, <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
+</td></tr><tr><td>hasBraille</td><td><code>boolean</code></td><td><p><code>true</code> if the signage has braille, <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
+</td></tr><tr><td>hasNumbers</td><td><code>boolean</code></td><td><p><code>true</code> if the signage uses a numbering scheme, <code>false</code> if not, <code>undefined</code> if condition is
+unknown.</p>
+</td></tr><tr><td>hasPictograms</td><td><code>boolean</code></td><td><p><code>true</code> if the signage has pictograms, <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
+</td></tr><tr><td>hasRaisedLetters</td><td><code>boolean</code></td><td><p><code>true</code> if the signage has raised letters, <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
+</td></tr><tr><td>hasSearch</td><td><code>boolean</code></td><td><p><code>true</code> if the signage has a search function, <code>false</code> if not, <code>undefined</code> if condition is
+unknown.</p>
+</td></tr><tr><td>hasTactileGuideStrips</td><td><code>boolean</code></td><td><p><code>true</code> if the signage has tactile guide strips, <code>false</code> if not, <code>undefined</code> if condition is
+nknown.</p>
+</td></tr><tr><td>hasTactileHandRails</td><td><code>boolean</code></td><td><p><code>true</code> if the signage has tactile hand rails, <code>false</code> if not, <code>undefined</code> if condition is
+unknown.</p>
+</td></tr><tr><td>hasTactileMap</td><td><code>boolean</code></td><td><p><code>true</code> if the signage has a tactile map, <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
+</td></tr><tr><td>hasTactileNorthMarkers</td><td><code>boolean</code></td><td><p><code>true</code> if the signage has tactile north markers, <code>false</code> if not, <code>undefined</code> if condition is
+unknown.</p>
+</td></tr><tr><td>hasTactilePaving</td><td><code>boolean</code></td><td><p><code>true</code> if the signage has tactile paving, <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
+</td></tr><tr><td>hasTactileRoomNames</td><td><code>boolean</code></td><td><p><code>true</code> if the signage has tactile room names, <code>false</code> if not, <code>undefined</code> if condition is
+unknown.</p>
+</td></tr><tr><td>hasText</td><td><code>boolean</code></td><td><p><code>true</code> if the signage has text features, <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
+</td></tr><tr><td>hasVideo</td><td><code>boolean</code></td><td><p><code>true</code> if the signage has video, <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
+</td></tr><tr><td>hasVirtualMap</td><td><code>boolean</code></td><td><p><code>true</code> if the signage has a virtual map, <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
+</td></tr><tr><td>highLegibility</td><td><code>boolean</code></td><td><p><code>true</code> if the signage has high legibility, <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
+</td></tr><tr><td>isHighContrast</td><td><code>boolean</code></td><td><p><code>true</code> if the signage has high contrast, <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
+</td></tr><tr><td>sitemap</td><td><a href="#EquipmentInfo">EquipmentInfo</a></td><td><p>Information about the sitemap.</p>
+</td></tr></table>
   
 
 ### <a id="Staff">Staff</a>
@@ -802,22 +826,11 @@ geographical region.</p>
 
 ### <a id="Surface">Surface</a>
 
-  
+  Describes the surface of a ground or path.
 
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>lateralSlope</td><td><a href="#Slope">Slope</a></td><td></td></tr><tr><td>longitudinalSlope</td><td><a href="#Slope">Slope</a></td><td></td></tr><tr><td>smoothness</td><td><code>"excellent"</code>&nbsp;|&nbsp;<code>"good"</code>&nbsp;|&nbsp;<code>"intermediate"</code>&nbsp;|&nbsp;<code>"bad"</code>&nbsp;|&nbsp;<code>"horrible"</code>&nbsp;|&nbsp;<code>"impassable"</code>&nbsp;|&nbsp;<code>"very_bad"</code>&nbsp;|&nbsp;<code>"very_horrible"</code>&nbsp;|&nbsp;<code>"very_good"</code></td><td><p>According to <a href="https://wiki.openstreetmap.org/wiki/Key:smoothness">https://wiki.openstreetmap.org/wiki/Key:smoothness</a></p>
 </td></tr><tr><td>turningSpace</td><td><a href="#Length">Length</a></td><td><p>Turning space that this ground provides to people.</p>
 </td></tr><tr><td>types</td><td><code>"undefined"</code>&nbsp;|&nbsp;<code>"none"</code>&nbsp;|&nbsp;<code>"acrylic"</code>&nbsp;|&nbsp;<code>"aluminium"</code>&nbsp;|&nbsp;<code>"anti-slip"</code>&nbsp;|&nbsp;<code>"artificial"</code>&nbsp;|&nbsp;<code>"artificial_grass"</code>&nbsp;|&nbsp;<code>"artificial_turf"</code>&nbsp;|&nbsp;<code>"asfalto"</code>&nbsp;|&nbsp;<code>"ash"</code>&nbsp;|&nbsp;<code>"asphalt"</code>&nbsp;|&nbsp;<code>"astroturf"</code>&nbsp;|&nbsp;<code>"bamboo"</code>&nbsp;|&nbsp;<code>"bare_rock"</code>&nbsp;|&nbsp;<code>"bark"</code>&nbsp;|&nbsp;<code>"barkchips"</code>&nbsp;|&nbsp;<code>"bedrock"</code>&nbsp;|&nbsp;<code>"bitumen"</code>&nbsp;|&nbsp;<code>"bituminous"</code>&nbsp;|&nbsp;<code>"block"</code>&nbsp;|&nbsp;<code>"boardwalk"</code>&nbsp;|&nbsp;<code>"boulders"</code>&nbsp;|&nbsp;<code>"brick"</code>&nbsp;|&nbsp;<code>"brick_weave"</code>&nbsp;|&nbsp;<code>"bricks"</code>&nbsp;|&nbsp;<code>"bushes"</code>&nbsp;|&nbsp;<code>"carpet"</code>&nbsp;|&nbsp;<code>"cement"</code>&nbsp;|&nbsp;<code>"chalk"</code>&nbsp;|&nbsp;<code>"chipseal"</code>&nbsp;|&nbsp;<code>"cinder"</code>&nbsp;|&nbsp;<code>"clay"</code>&nbsp;|&nbsp;<code>"cobblestone"</code>&nbsp;|&nbsp;<code>"compacted"</code>&nbsp;|&nbsp;<code>"compacted_gravel"</code>&nbsp;|&nbsp;<code>"composite"</code>&nbsp;|&nbsp;<code>"con"</code>&nbsp;|&nbsp;<code>"concrete"</code>&nbsp;|&nbsp;<code>"concrete_slab"</code>&nbsp;|&nbsp;<code>"concrete_slabs"</code>&nbsp;|&nbsp;<code>"construction"</code>&nbsp;|&nbsp;<code>"coral"</code>&nbsp;|&nbsp;<code>"coral_sand"</code>&nbsp;|&nbsp;<code>"crushed_limestone"</code>&nbsp;|&nbsp;<code>"crushed_shells"</code>&nbsp;|&nbsp;<code>"debris"</code>&nbsp;|&nbsp;<code>"decoturf"</code>&nbsp;|&nbsp;<code>"dirt"</code>&nbsp;|&nbsp;<code>"earth"</code>&nbsp;|&nbsp;<code>"enrobé"</code>&nbsp;|&nbsp;<code>"fine_gravel"</code>&nbsp;|&nbsp;<code>"fine_sand"</code>&nbsp;|&nbsp;<code>"flagstone"</code>&nbsp;|&nbsp;<code>"footway"</code>&nbsp;|&nbsp;<code>"glass"</code>&nbsp;|&nbsp;<code>"goudron"</code>&nbsp;|&nbsp;<code>"granite"</code>&nbsp;|&nbsp;<code>"grass"</code>&nbsp;|&nbsp;<code>"grass_paver"</code>&nbsp;|&nbsp;<code>"grass_scrub"</code>&nbsp;|&nbsp;<code>"grassland"</code>&nbsp;|&nbsp;<code>"grating"</code>&nbsp;|&nbsp;<code>"gravel"</code>&nbsp;|&nbsp;<code>"green"</code>&nbsp;|&nbsp;<code>"grit"</code>&nbsp;|&nbsp;<code>"ground"</code>&nbsp;|&nbsp;<code>"hardcore"</code>&nbsp;|&nbsp;<code>"ice"</code>&nbsp;|&nbsp;<code>"ice_road"</code>&nbsp;|&nbsp;<code>"interlock"</code>&nbsp;|&nbsp;<code>"iron"</code>&nbsp;|&nbsp;<code>"laterite"</code>&nbsp;|&nbsp;<code>"lawn"</code>&nbsp;|&nbsp;<code>"leaves"</code>&nbsp;|&nbsp;<code>"limerock"</code>&nbsp;|&nbsp;<code>"limestone"</code>&nbsp;|&nbsp;<code>"linoleum"</code>&nbsp;|&nbsp;<code>"loose_gravel"</code>&nbsp;|&nbsp;<code>"marble"</code>&nbsp;|&nbsp;<code>"marble_plate"</code>&nbsp;|&nbsp;<code>"meadow"</code>&nbsp;|&nbsp;<code>"metal"</code>&nbsp;|&nbsp;<code>"metal_grid"</code>&nbsp;|&nbsp;<code>"mixed"</code>&nbsp;|&nbsp;<code>"moss"</code>&nbsp;|&nbsp;<code>"mud"</code>&nbsp;|&nbsp;<code>"mulch"</code>&nbsp;|&nbsp;<code>"native"</code>&nbsp;|&nbsp;<code>"natural"</code>&nbsp;|&nbsp;<code>"oil"</code>&nbsp;|&nbsp;<code>"overgrown"</code>&nbsp;|&nbsp;<code>"path"</code>&nbsp;|&nbsp;<code>"paved"</code>&nbsp;|&nbsp;<code>"pavement"</code>&nbsp;|&nbsp;<code>"paving"</code>&nbsp;|&nbsp;<code>"paving_stone"</code>&nbsp;|&nbsp;<code>"paving_stones"</code>&nbsp;|&nbsp;<code>"peat"</code>&nbsp;|&nbsp;<code>"pebbles"</code>&nbsp;|&nbsp;<code>"pebblestone"</code>&nbsp;|&nbsp;<code>"plank"</code>&nbsp;|&nbsp;<code>"plastic"</code>&nbsp;|&nbsp;<code>"plates"</code>&nbsp;|&nbsp;<code>"rasin"</code>&nbsp;|&nbsp;<code>"residential"</code>&nbsp;|&nbsp;<code>"rock"</code>&nbsp;|&nbsp;<code>"rocks"</code>&nbsp;|&nbsp;<code>"rocky"</code>&nbsp;|&nbsp;<code>"roman_paving"</code>&nbsp;|&nbsp;<code>"rubber"</code>&nbsp;|&nbsp;<code>"rubbercrumb"</code>&nbsp;|&nbsp;<code>"rubble"</code>&nbsp;|&nbsp;<code>"salt"</code>&nbsp;|&nbsp;<code>"sand"</code>&nbsp;|&nbsp;<code>"sandstone"</code>&nbsp;|&nbsp;<code>"sawdust"</code>&nbsp;|&nbsp;<code>"scree"</code>&nbsp;|&nbsp;<code>"scrub"</code>&nbsp;|&nbsp;<code>"sealed"</code>&nbsp;|&nbsp;<code>"sett"</code>&nbsp;|&nbsp;<code>"shell"</code>&nbsp;|&nbsp;<code>"shells"</code>&nbsp;|&nbsp;<code>"shingle"</code>&nbsp;|&nbsp;<code>"slabs"</code>&nbsp;|&nbsp;<code>"snow"</code>&nbsp;|&nbsp;<code>"soil"</code>&nbsp;|&nbsp;<code>"spur"</code>&nbsp;|&nbsp;<code>"steel"</code>&nbsp;|&nbsp;<code>"stepping_stones"</code>&nbsp;|&nbsp;<code>"stone"</code>&nbsp;|&nbsp;<code>"stones"</code>&nbsp;|&nbsp;<code>"synthetic"</code>&nbsp;|&nbsp;<code>"tactile_paving"</code>&nbsp;|&nbsp;<code>"tar"</code>&nbsp;|&nbsp;<code>"tared"</code>&nbsp;|&nbsp;<code>"tarmac"</code>&nbsp;|&nbsp;<code>"tartan"</code>&nbsp;|&nbsp;<code>"terra"</code>&nbsp;|&nbsp;<code>"terre"</code>&nbsp;|&nbsp;<code>"tile"</code>&nbsp;|&nbsp;<code>"tiles"</code>&nbsp;|&nbsp;<code>"timber"</code>&nbsp;|&nbsp;<code>"track"</code>&nbsp;|&nbsp;<code>"trail"</code>&nbsp;|&nbsp;<code>"trees"</code>&nbsp;|&nbsp;<code>"tuff"</code>&nbsp;|&nbsp;<code>"turf"</code>&nbsp;|&nbsp;<code>"unhewn_cobblestone"</code>&nbsp;|&nbsp;<code>"unpaved"</code>&nbsp;|&nbsp;<code>"unpaved2"</code>&nbsp;|&nbsp;<code>"unpaved33"</code>&nbsp;|&nbsp;<code>"unpaved_minor"</code>&nbsp;|&nbsp;<code>"unsealed"</code>&nbsp;|&nbsp;<code>"water"</code>&nbsp;|&nbsp;<code>"wood"</code>&nbsp;|&nbsp;<code>"wood_chips"</code>&nbsp;|&nbsp;<code>"woodchips"</code>&nbsp;|&nbsp;<code>"zebra"</code>[]</td><td><p>According to <a href="https://wiki.openstreetmap.org/wiki/Key:surface">https://wiki.openstreetmap.org/wiki/Key:surface</a></p>
-</td></tr></table>
-  
-
-### <a id="Tables">Tables</a>
-
-  
-
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>height</td><td><a href="#Length">Length</a></td><td><p>Height or heights of the tables at this place, measured from the top of the table surface.</p>
-</td></tr><tr><td>spaceBelowDepth</td><td><a href="#Length">Length</a></td><td><p>Indicates how deep the space below a table is for each user.</p>
-</td></tr><tr><td>spaceBelowHeight</td><td><a href="#Length">Length</a></td><td><p>Indicates how high the space below a table is.</p>
-</td></tr><tr><td>spaceBelowWidth</td><td><a href="#Length">Length</a></td><td><p>Indicates how wide the space below a table is for each user.</p>
 </td></tr></table>
   
 
@@ -861,7 +874,7 @@ toilet)</p>
 
 ### <a id="WashBasin">WashBasin</a>
 
-  
+  Describes a wash basin.
 
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>accessibleWithWheelchair</td><td><code>boolean</code></td><td><p><code>true</code> if the wash basin is accessible with wheelchairs, <code>false</code> if not, <code>undefined</code>
 if condition is unknown.</p>

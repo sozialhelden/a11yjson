@@ -43,7 +43,7 @@ Definition: <pre>{
       ],
       "type": {
         "type": "reference",
-        "id": 808,
+        "id": 801,
         "name": "Force"
       }
     },
@@ -67,7 +67,7 @@ Definition: <pre>{
       ],
       "type": {
         "type": "reference",
-        "id": 807,
+        "id": 800,
         "name": "TimeInterval"
       }
     },
@@ -115,7 +115,7 @@ Definition: <pre>{
       ],
       "type": {
         "type": "reference",
-        "id": 807,
+        "id": 800,
         "name": "TimeInterval"
       }
     },
@@ -699,7 +699,7 @@ Definition: <pre>{
         "type": "array",
         "elementType": {
           "type": "reference",
-          "id": 840,
+          "id": 833,
           "name": "IetfLanguageTag"
         }
       }
@@ -863,7 +863,7 @@ Definition: <pre>{
       ],
       "type": {
         "type": "reference",
-        "id": 803,
+        "id": 796,
         "name": "Length"
       }
     },
@@ -887,7 +887,7 @@ Definition: <pre>{
       ],
       "type": {
         "type": "reference",
-        "id": 803,
+        "id": 796,
         "name": "Length"
       }
     },
@@ -1672,7 +1672,7 @@ Definition: <pre>{
         "type": "array",
         "elementType": {
           "type": "reference",
-          "id": 715,
+          "id": 708,
           "name": "TechCombination"
         }
       }
@@ -1699,7 +1699,7 @@ Definition: <pre>{
         "type": "array",
         "elementType": {
           "type": "reference",
-          "id": 715,
+          "id": 708,
           "name": "TechCombination"
         }
       }
@@ -2257,7 +2257,8 @@ Definition: <code>"<"</code>&nbsp;|&nbsp;<code>"<="</code>&nbsp;|&nbsp;<code>"==
 
 ### <a id="PerceptionMode">PerceptionMode</a>
 
-Describes necessary abilities and modes for information output.
+Describes necessary abilities and modes for interpreting information output, signals, or
+content.
 
 Definition: <pre>{
   "id": 434,
@@ -2280,13 +2281,13 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 108,
+          "line": 109,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 810,
+        "id": 803,
         "name": "Acceleration"
       }
     },
@@ -2304,7 +2305,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 63,
+          "line": 64,
           "character": 2
         }
       ],
@@ -2327,7 +2328,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 78,
+          "line": 79,
           "character": 2
         }
       ],
@@ -2350,13 +2351,13 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 144,
+          "line": 145,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 804,
+        "id": 797,
         "name": "Volume"
       }
     },
@@ -2374,7 +2375,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 288,
+          "line": 289,
           "character": 2
         }
       ],
@@ -2397,7 +2398,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 413,
+          "line": 414,
           "character": 2
         }
       ],
@@ -2420,13 +2421,13 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 200,
+          "line": 201,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 807,
+        "id": 800,
         "name": "TimeInterval"
       }
     },
@@ -2444,7 +2445,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 154,
+          "line": 155,
           "character": 2
         }
       ],
@@ -2467,7 +2468,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 220,
+          "line": 221,
           "character": 2
         }
       ],
@@ -2490,7 +2491,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 435,
+          "line": 436,
           "character": 2
         }
       ],
@@ -2513,7 +2514,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 363,
+          "line": 364,
           "character": 2
         }
       ],
@@ -2539,7 +2540,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 164,
+          "line": 165,
           "character": 2
         }
       ],
@@ -2562,7 +2563,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 169,
+          "line": 170,
           "character": 2
         }
       ],
@@ -2585,7 +2586,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 343,
+          "line": 344,
           "character": 2
         }
       ],
@@ -2608,7 +2609,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 313,
+          "line": 314,
           "character": 2
         }
       ],
@@ -2631,7 +2632,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 133,
+          "line": 134,
           "character": 2
         }
       ],
@@ -2654,13 +2655,13 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 138,
+          "line": 139,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 805,
+        "id": 798,
         "name": "Brightness"
       }
     },
@@ -2678,7 +2679,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 388,
+          "line": 389,
           "character": 2
         }
       ],
@@ -2701,7 +2702,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 378,
+          "line": 379,
           "character": 2
         }
       ],
@@ -2724,7 +2725,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 328,
+          "line": 329,
           "character": 2
         }
       ],
@@ -2747,7 +2748,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 348,
+          "line": 349,
           "character": 2
         }
       ],
@@ -2770,7 +2771,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 353,
+          "line": 354,
           "character": 2
         }
       ],
@@ -2793,7 +2794,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 441,
+          "line": 442,
           "character": 2
         }
       ],
@@ -2817,7 +2818,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 210,
+          "line": 211,
           "character": 2
         }
       ],
@@ -2840,7 +2841,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 38,
+          "line": 39,
           "character": 2
         }
       ],
@@ -2864,13 +2865,13 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 195,
+          "line": 196,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 807,
+        "id": 800,
         "name": "TimeInterval"
       }
     },
@@ -2889,7 +2890,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 247,
+          "line": 248,
           "character": 2
         }
       ],
@@ -2914,7 +2915,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 257,
+          "line": 258,
           "character": 2
         }
       ],
@@ -2937,7 +2938,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 263,
+          "line": 264,
           "character": 2
         }
       ],
@@ -2960,13 +2961,13 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 338,
+          "line": 339,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 803,
+        "id": 796,
         "name": "Length"
       }
     },
@@ -2984,13 +2985,13 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 103,
+          "line": 104,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 808,
+        "id": 801,
         "name": "Force"
       }
     },
@@ -3008,7 +3009,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 98,
+          "line": 99,
           "character": 2
         }
       ],
@@ -3031,7 +3032,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 358,
+          "line": 359,
           "character": 2
         }
       ],
@@ -3057,13 +3058,13 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 293,
+          "line": 294,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 811,
+        "id": 804,
         "name": "Hertz"
       }
     },
@@ -3081,13 +3082,13 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 268,
+          "line": 269,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 811,
+        "id": 804,
         "name": "Hertz"
       }
     },
@@ -3105,7 +3106,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 123,
+          "line": 124,
           "character": 2
         }
       ],
@@ -3128,7 +3129,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 252,
+          "line": 253,
           "character": 2
         }
       ],
@@ -3151,7 +3152,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 179,
+          "line": 180,
           "character": 2
         }
       ],
@@ -3174,7 +3175,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 149,
+          "line": 150,
           "character": 2
         }
       ],
@@ -3197,7 +3198,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 373,
+          "line": 374,
           "character": 2
         }
       ],
@@ -3220,7 +3221,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 333,
+          "line": 334,
           "character": 2
         }
       ],
@@ -3243,7 +3244,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 73,
+          "line": 74,
           "character": 2
         }
       ],
@@ -3266,7 +3267,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 408,
+          "line": 409,
           "character": 2
         }
       ],
@@ -3290,7 +3291,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 419,
+          "line": 420,
           "character": 2
         }
       ],
@@ -3313,7 +3314,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 43,
+          "line": 44,
           "character": 2
         }
       ],
@@ -3321,7 +3322,7 @@ Definition: <pre>{
         "type": "array",
         "elementType": {
           "type": "reference",
-          "id": 840,
+          "id": 833,
           "name": "IetfLanguageTag"
         }
       }
@@ -3340,7 +3341,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 128,
+          "line": 129,
           "character": 2
         }
       ],
@@ -3363,7 +3364,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 88,
+          "line": 89,
           "character": 2
         }
       ],
@@ -3386,7 +3387,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 273,
+          "line": 274,
           "character": 2
         }
       ],
@@ -3409,7 +3410,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 159,
+          "line": 160,
           "character": 2
         }
       ],
@@ -3432,7 +3433,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 33,
+          "line": 34,
           "character": 2
         }
       ],
@@ -3456,13 +3457,13 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 429,
+          "line": 430,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 803,
+        "id": 796,
         "name": "Length"
       }
     },
@@ -3480,13 +3481,13 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 424,
+          "line": 425,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 803,
+        "id": 796,
         "name": "Length"
       }
     },
@@ -3504,7 +3505,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 205,
+          "line": 206,
           "character": 2
         }
       ],
@@ -3527,7 +3528,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 283,
+          "line": 284,
           "character": 2
         }
       ],
@@ -3550,7 +3551,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 48,
+          "line": 49,
           "character": 2
         }
       ],
@@ -3573,7 +3574,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 278,
+          "line": 279,
           "character": 2
         }
       ],
@@ -3596,7 +3597,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 174,
+          "line": 175,
           "character": 2
         }
       ],
@@ -3619,7 +3620,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 230,
+          "line": 231,
           "character": 2
         }
       ],
@@ -3642,7 +3643,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 368,
+          "line": 369,
           "character": 2
         }
       ],
@@ -3665,7 +3666,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 383,
+          "line": 384,
           "character": 2
         }
       ],
@@ -3688,7 +3689,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 93,
+          "line": 94,
           "character": 2
         }
       ],
@@ -3711,7 +3712,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 225,
+          "line": 226,
           "character": 2
         }
       ],
@@ -3734,7 +3735,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 53,
+          "line": 54,
           "character": 2
         }
       ],
@@ -3757,7 +3758,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 184,
+          "line": 185,
           "character": 2
         }
       ],
@@ -3780,7 +3781,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 323,
+          "line": 324,
           "character": 2
         }
       ],
@@ -3803,7 +3804,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 303,
+          "line": 304,
           "character": 2
         }
       ],
@@ -3826,7 +3827,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 298,
+          "line": 299,
           "character": 2
         }
       ],
@@ -3849,13 +3850,13 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 118,
+          "line": 119,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 804,
+        "id": 797,
         "name": "Volume"
       }
     },
@@ -3873,7 +3874,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 58,
+          "line": 59,
           "character": 2
         }
       ],
@@ -3896,7 +3897,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 190,
+          "line": 191,
           "character": 2
         }
       ],
@@ -3919,7 +3920,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 215,
+          "line": 216,
           "character": 2
         }
       ],
@@ -3942,7 +3943,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 308,
+          "line": 309,
           "character": 2
         }
       ],
@@ -3965,7 +3966,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 318,
+          "line": 319,
           "character": 2
         }
       ],
@@ -3988,7 +3989,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 393,
+          "line": 394,
           "character": 2
         }
       ],
@@ -3996,7 +3997,7 @@ Definition: <pre>{
         "type": "array",
         "elementType": {
           "type": "reference",
-          "id": 715,
+          "id": 708,
           "name": "TechCombination"
         }
       }
@@ -4015,7 +4016,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 398,
+          "line": 399,
           "character": 2
         }
       ],
@@ -4023,7 +4024,7 @@ Definition: <pre>{
         "type": "array",
         "elementType": {
           "type": "reference",
-          "id": 715,
+          "id": 708,
           "name": "TechCombination"
         }
       }
@@ -4042,7 +4043,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 68,
+          "line": 69,
           "character": 2
         }
       ],
@@ -4065,7 +4066,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 403,
+          "line": 404,
           "character": 2
         }
       ],
@@ -4089,7 +4090,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 113,
+          "line": 114,
           "character": 2
         }
       ],
@@ -4112,7 +4113,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 83,
+          "line": 84,
           "character": 2
         }
       ],
@@ -4212,7 +4213,7 @@ Definition: <pre>{
   "sources": [
     {
       "fileName": "PerceptionMode.ts",
-      "line": 28,
+      "line": 29,
       "character": 29
     }
   ]
