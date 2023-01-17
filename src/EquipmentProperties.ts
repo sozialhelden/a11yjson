@@ -7,11 +7,13 @@ import {
   ietfLanguageTagsAndSignLanguageCodes,
 } from './ietfLanguageTags';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition';
 import { W3CAccessMode, w3cAccessModes } from './W3CAccessMode';
 import { W3CAccessibilityFeature, w3cAccessibilityFeatures } from './W3CAccessibilityFeature';
 import { W3CAccessibilityHazard, w3cAccessibilityHazards } from './W3CAccessibilityHazard';
 import { w3cAccessibilityControls, W3CAccessibilityControl } from './W3CAccessibilityControl';
+import BooleanField from './BooleanField';
+import { getIntercomSchemaDefinition, Intercom } from './Intercom';
 import { getInteractionModeSchemaDefinition } from './InteractionMode';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 
@@ -28,7 +30,10 @@ export type EquipmentTypes =
   | 'sitemap'
   | 'vendingMachine'
   | 'intercom'
-  | 'powerOutlet';
+  | 'powerOutlet'
+  | 'flushMechanism'
+  | 'bodyScanner'
+  | 'luggageScanner';
 
 export const AllowedEquipmentTypes = Object.freeze([
   'bed',
@@ -44,9 +49,12 @@ export const AllowedEquipmentTypes = Object.freeze([
   'vendingMachine',
   'intercom',
   'powerOutlet',
+  'flushMechanism',
+  'bodyScanner',
+  'luggageScanner',
 ]) as ReadonlyArray<EquipmentTypes>;
 
-export interface EquipmentProperties {
+export interface EquipmentProperties extends Interactable {
   /**
    * Describes where the equipment is located. If only one description string is technically
    * possible to maintain, it MUST not contain any abbreviations to allow being readable aloud by
@@ -117,6 +125,16 @@ export interface EquipmentProperties {
   hasDoorsInBothDirections?: boolean;
 
   /**
+   * `true` if the equipment has doors at right angles to each other.
+   */
+  hasDoorsAtRightAnglesToEachOther?: boolean;
+
+  /**
+   * `true` if the equipment has a landing platform, `false` if not. Helpful for escalators.
+   */
+  hasLandings?: boolean;
+
+  /**
    * Languages of the equipment’s visible controls and/or voice output.
    */
   languages?: ArrayLike<IetfLanguageTagOrSignLanguageCode>;
@@ -148,110 +166,45 @@ export interface EquipmentProperties {
   accessibilityControl?: W3CAccessibilityControl[];
 
   /**
-   * Indicates the access mode combinations that allow understanding and using the equipment.
+   * Indicates features that allow understanding or using the equipment.
    *
    * @see https://www.w3.org/2021/a11y-discov-vocab/latest/
    */
   accessibilityFeature?: W3CAccessibilityFeature[];
 
   /**
-   * Indicates the access mode combinations that allow understanding and using the equipment.
+   * Indicates hazards that may be an obstacle to understanding or using the equipment.
    *
    * @see https://www.w3.org/2021/a11y-discov-vocab/latest/
    */
   accessibilityHazard?: W3CAccessibilityHazard[];
 
   /**
-   * `true` if the equipment’s controls or signs have raised letters, `false` if not.
+   * `true` if the equipment has a visual emergency alarm, `false` if not (for example, inside
+   * elevators).
    */
-  hasRaisedText?: boolean;
+  hasVisualEmergencyAlarm?: boolean;
 
   /**
-   * `true` if the equipment’s controls or signs are printed in braille letters, `false` if not.
+   * Describes the intercom system for emergency calls.
    */
-  hasBrailleText?: boolean;
+  emergencyIntercom?: Intercom;
 
-  /**
-   * `true` if the equipment has speech output, `false` if not.
-   */
-  hasSpeech?: boolean;
-
-  /**
-   * `true` if the equipment’s controls or signs have high contrast, `false` if not.
-   */
-  isHighContrast?: boolean;
-
-  /**
-   * `true` if the equipment’s controls or signs do not use small fonts, `false` if they do.
-   */
-  hasLargePrint?: boolean;
-
-  /**
-   * `true` if the equipment needs to be activated by voice, `false` if not.
-   */
-  isVoiceActivated?: boolean;
-  /**
-   * `true` if the equipment needs users to use headphones, `false` if not. If headphones are
-   * optional, use `hasHeadPhoneJack`.
-   */
-  needsHeadPhone?: boolean;
-  /**
-   * `true` if the equipment has a headphone jack for speech output (common for ATMs), `false` if
-   * not.
-   */
-  hasHeadPhoneJack?: boolean;
-  /**
-   * `true` if the equipment needs users to touch a screen for the equipment's main function. If the
-   * touch screen is optional, use `hasTouchScreenInput`.
-   */
-  needsTouchScreenInput?: boolean;
-  /**
-   * `true` if the equipment has a touch screen, `false` if not.
-   */
-  hasTouchScreenInput?: boolean;
   /**
    * For elevators. `true` if the elevator needs a command to be entered outside the elevator,
    * `false` if not.
    */
   hasExternalFloorSelection?: boolean;
+
   /**
    * For elevators. `true` if the elevator can carry a bicycle, `false` if not.
    */
   isSuitableForBicycles?: boolean;
+
   /**
    * For elevators. `true` if the elevator has a mirror, `false` if not.
    */
   hasMirror?: boolean;
-  /**
-   * `true` if the equipment needs users to use a QR code to use the equipment's main function,
-   * `false` if not.
-   */
-  needsQRCodeScan?: boolean;
-  /**
-   * `true` if the equipment offers users to use a QR code to use the equipment's main function,
-   * `false` if not.
-   */
-  hasQRCode?: boolean;
-  /**
-   * `true` if the equipment needs users to input something using buttons or other haptic means to
-   * use the equipment's main function, `false` if not.
-   */
-  needsHapticInput?: boolean;
-  /**
-   * `true` if the equipment's user interface has haptic input elements, `false` if not.
-   */
-  hasHapticInput?: boolean;
-  /**
-   * `true` if the equipment's user interface forces users to recognize elements visually, `false`
-   * if not.
-   */
-  needsVisualRecognition?: boolean;
-
-  /**
-   * `true` if the equipment is easy to operate, `false` if people might face difficulties trying to
-   * understand how the equipment works, or `undefined` if this is unknown or irrelevant.
-   */
-  isEasyToUnderstand?: boolean;
 
   /**
    * Official name of the company that manufactured the equipment.
@@ -434,10 +387,6 @@ SchemaDefinition
   ...getLocalizedStringSchemaDefinition('shortDescription'),
   ...getPrefixedQuantitySchemaDefinition('heightOfControls', LengthSchemaDefinition),
   ...getPrefixedSchemaDefinition('door', getDoorSchemaDefinition()),
-  hasDoorsInBothDirections: {
-    type: Boolean,
-    optional: true,
-  },
   ...getPrefixedQuantitySchemaDefinition('cabinWidth', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('cabinLength', LengthSchemaDefinition),
   languages: {
@@ -450,95 +399,35 @@ SchemaDefinition
     label: t`Language`,
     allowedValues: ietfLanguageTagsAndSignLanguageCodes,
   },
-  hasRaisedText: {
-    type: Boolean,
-    optional: true,
-  },
-  hasBrailleText: {
-    type: Boolean,
-    optional: true,
-  },
-  hasSpeech: {
-    type: Boolean,
-    optional: true,
-  },
-  isHighContrast: {
-    type: Boolean,
-    optional: true,
-  },
-  hasLargePrint: {
-    type: Boolean,
-    optional: true,
-  },
-  isVoiceActivated: {
-    type: Boolean,
-    optional: true,
-  },
-  needsHeadPhone: {
-    type: Boolean,
-    optional: true,
-  },
-  hasHeadPhoneJack: {
-    type: Boolean,
-    optional: true,
-  },
-  needsHapticInput: {
-    type: Boolean,
-    optional: true,
-  },
-  hasHapticInput: {
-    type: Boolean,
-    optional: true,
-  },
-  needsVisualRecognition: {
-    type: Boolean,
-    optional: true,
-  },
-  isEasyToUnderstand: {
-    type: Boolean,
-    optional: true,
-  },
-  needsTouchScreenInput: {
-    type: Boolean,
-    optional: true,
-  },
-  hasTouchScreenInput: {
-    type: Boolean,
-    optional: true,
-  },
-  needsQRCodeScan: {
-    type: Boolean,
-    optional: true,
-  },
-  hasQRCode: {
-    type: Boolean,
-    optional: true,
-  },
-  isIndoors: {
-    type: Boolean,
-    optional: true,
-  },
-  isAccessibleWithWheelchair: {
-    type: Boolean,
-    optional: true,
-  },
-  isSuitableForBicycles: {
-    type: Boolean,
-    optional: true,
-  },
-  hasExternalFloorSelection: {
-    type: Boolean,
-    optional: true,
-  },
-  hasMirror: {
-    type: Boolean,
-    optional: true,
-  },
+  hasDoorsAtRightAnglesToEachOther: BooleanField,
+  hasDoorsInBothDirections: BooleanField,
+  hasRaisedText: BooleanField,
+  hasBrailleText: BooleanField,
+  hasVisualEmergencyAlarm: BooleanField,
+  hasSpeech: BooleanField,
+  isHighContrast: BooleanField,
+  hasLargePrint: BooleanField,
+  isVoiceActivated: BooleanField,
+  needsHeadPhone: BooleanField,
+  hasHeadPhoneJack: BooleanField,
+  needsHapticInput: BooleanField,
+  hasHapticInput: BooleanField,
+  needsVisualRecognition: BooleanField,
+  isEasyToUnderstand: BooleanField,
+  needsTouchScreenInput: BooleanField,
+  hasTouchScreenInput: BooleanField,
+  needsQRCodeScan: BooleanField,
+  hasQRCode: BooleanField,
+  isIndoors: BooleanField,
+  hasLandings: BooleanField,
+  isAccessibleWithWheelchair: BooleanField,
+  isSuitableForBicycles: BooleanField,
+  hasExternalFloorSelection: BooleanField,
+  hasMirror: BooleanField,
+  ...getPrefixedSchemaDefinition('emergencyIntercom', getIntercomSchemaDefinition()),
+  ...getPrefixedArraySchemaDefinition('interactions', getInteractionModeSchemaDefinition()),
   ...getLocalizedStringSchemaDefinition('alternativeRouteInstructions'),
-  isWorking: {
-    type: Boolean,
-    optional: true,
-  },
+  isWorking: BooleanField,
   ...getLocalizedStringSchemaDefinition('outOfOrderReason'),
   stateLastUpdate: {
     type: Date,

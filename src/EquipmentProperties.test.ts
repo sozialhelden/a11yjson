@@ -5,6 +5,7 @@ import {
 import { Complete } from './Complete';
 import doorFixture from './Door.test';
 import expectValidFixture from './lib/expectValidFixture';
+import intercomFixture from './Intercom.test';
 
 const equipmentPropertiesFixture: Complete<EquipmentProperties> = {
   description: { en: 'string' },
@@ -16,28 +17,15 @@ const equipmentPropertiesFixture: Complete<EquipmentProperties> = {
   cabinWidth: '100cm',
   cabinLength: '120cm',
   languages: ['en', 'de'],
-  hasRaisedText: true,
-  hasBrailleText: true,
-  hasSpeech: true,
-  isHighContrast: true,
-  hasLargePrint: true,
-  isVoiceActivated: true,
-  needsHeadPhone: true,
-  hasHeadPhoneJack: true,
-  isEasyToUnderstand: true,
   isWorking: true,
-  needsTouchScreenInput: true,
-  hasTouchScreenInput: true,
-  needsQRCodeScan: true,
-  hasQRCode: true,
-  needsHapticInput: true,
-  hasHapticInput: true,
-  needsVisualRecognition: true,
+  hasVisualEmergencyAlarm: true,
   hasDoorsInBothDirections: true,
+  hasDoorsAtRightAnglesToEachOther: false,
   hasMirror: true,
   hasExternalFloorSelection: true,
   isSuitableForBicycles: true,
   isIndoors: true,
+  emergencyIntercom: intercomFixture,
   manufacturerName: { 'de-DE': 'Sandler' },
   manufacturerSerialNumber: 'S-1234',
   sourceId: 'string',
@@ -65,6 +53,7 @@ const equipmentPropertiesFixture: Complete<EquipmentProperties> = {
   accessibilityControl: ['fullSwitchControl'],
   accessibilityFeature: ['braille'],
   accessibilityHazard: ['noFlashingHazard'],
+  hasLandings: true,
   interactions: [
     {
       name: { en: 'On reaching a floor' },
