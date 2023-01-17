@@ -1,10 +1,10 @@
 import SimpleSchema from 'simpl-schema';
 import BooleanField from './BooleanField';
 import { EquipmentInfo, getEquipmentInfoSchemaDefinition } from './EquipmentInfo';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
-import { getInteractionModeSchemaDefinition, InteractionMode } from './InteractionMode';
+import { getGrabBarsSchemaDefinition, GrabBars } from './GrabBars';
 import { Interactable } from './Interactable';
 import { getInteractionModeSchemaDefinition } from './InteractionMode';
+import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition';
 
 export interface QueueSystem extends Interactable {
   /**
@@ -44,6 +44,11 @@ export interface QueueSystem extends Interactable {
    */
 
   numberOfQueueServerPoints?: number;
+
+  /**
+   * Grab bars inside the queueing system, if applicable.
+   */
+  grabBars?: GrabBars;
 }
 
 export const getQueueSystemSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
@@ -51,6 +56,7 @@ export const getQueueSystemSchemaDefinition: () => Record<string, SchemaDefiniti
   usesCattleBars: BooleanField,
   needsTickets: BooleanField,
   ...getPrefixedSchemaDefinition('ticketEquipment', getEquipmentInfoSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('grabBars', getGrabBarsSchemaDefinition()),
   ticketEquipmentId: {
     type: String,
     optional: true,
