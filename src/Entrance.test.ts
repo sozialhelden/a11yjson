@@ -4,17 +4,17 @@ import entrancePropertiesFixture from './EntranceProperties.test';
 import { Complete } from './Complete';
 import expectValidFixture from './lib/expectValidFixture';
 
-const equipmentInfoFixture: Complete<Entrance> = {
+const entranceFixture: Complete<Entrance> = {
   properties: entrancePropertiesFixture,
   geometry: pointGeometryFixture,
 };
 
-export default equipmentInfoFixture;
+export default entranceFixture;
 
 const definition = getEntranceSchemaDefinition();
 
 describe('Entrance schema', () => {
   it('validates a completely specified object', () => {
-    expectValidFixture(definition, equipmentInfoFixture);
+    expectValidFixture(definition, entranceFixture);
   });
 });

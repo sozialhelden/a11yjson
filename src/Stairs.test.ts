@@ -21,7 +21,7 @@ export default stairsFixture;
 
 const definition = getStairsSchemaDefinition();
 
-describe('Surface schema', () => {
+describe('Stairs schema', () => {
   it('validates a completely specified object', () => {
     expectValidFixture(definition, stairsFixture);
   });

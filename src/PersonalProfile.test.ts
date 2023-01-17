@@ -17,7 +17,7 @@ export default personalProfileFixture;
 
 const definition = getPersonalProfileSchemaDefinition();
 
-describe('PlaceInfo schema', () => {
+describe('PersonalProfile schema', () => {
   it('validates a completely specified object', () => {
     expectValidFixture(definition, personalProfileFixture);
   });

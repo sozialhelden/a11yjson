@@ -13,7 +13,7 @@ export default pathwaysFixture;
 
 const definition = getPathwaysSchemaDefinition();
 
-describe('PlaceInfo schema', () => {
+describe('Pathways schema', () => {
   it('validates a completely specified object', () => {
     expectValidFixture(definition, pathwaysFixture);
   });

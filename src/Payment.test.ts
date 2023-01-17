@@ -16,7 +16,7 @@ export default paymentFixture;
 
 const definition = getPaymentSchemaDefinition();
 
-describe('PlaceInfo schema', () => {
+describe('Payment schema', () => {
   it('validates a completely specified object', () => {
     expectValidFixture(definition, paymentFixture);
   });
