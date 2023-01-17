@@ -17,3 +17,18 @@ export default function getPrefixedSchemaDefinition(
 
   return prefixedDefinition;
 }
+
+export function getPrefixedArraySchemaDefinition(
+  prefix: string,
+  definition: Record<string, SchemaDefinition>,
+  extendElementDefinition?: Partial<SchemaDefinition>,
+) {
+  const prefixedDefinition: Record<string, SchemaDefinition> = {
+    [prefix]: {
+      type: Array,
+      optional: true,
+    },
+    ...getPrefixedSchemaDefinition(`${prefix}.$`, definition, extendElementDefinition),
+  };
+  return prefixedDefinition;
+}
