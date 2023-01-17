@@ -8,6 +8,8 @@ export enum UnitKind {
   Unitless = 'unitless',
   Speed = 'speed',
   Force = 'force',
+  Time = 'time',
+  Acceleration = 'acceleration',
 }
 
 // https://stackoverflow.com/a/46759625/387719
@@ -77,6 +79,8 @@ export interface Quantity {
   accuracy?: number;
   /** ± in given units, uniform error */
   precision?: number;
+  /** ± in given units, inclusive range */
+  rangeInclusive?: number;
 }
 
 /**
@@ -101,6 +105,10 @@ export const BaseQuantitySchemaDefinition = {
     optional: true,
   },
   precision: {
+    type: Number,
+    optional: true,
+  },
+  rangeInclusive: {
     type: Number,
     optional: true,
   },
@@ -133,15 +141,23 @@ const createQuantitySchemaDefinition = (
  */
 export const LengthSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Length, 'meter');
 export const SpeedSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Speed, 'meter/second');
+export const AccelerationSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Acceleration, 'g');
 export const ForceSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Force, 'Newton');
+export const TimeIntervalSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Time, 's');
 export const VolumeSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Unitless, 'dB');
+export const HertzSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Unitless, 'Hz');
 export const SlopeSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Unitless);
+export const BrightnessSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Unitless, 'nits');
 
 export type Length = Quantity | string;
 export type Volume = Quantity | string;
+export type Brightness = Quantity | string;
 export type Slope = Quantity | string;
+export type TimeInterval = Quantity | string;
 export type Force = Quantity | string;
 export type Speed = Quantity | string;
+export type Acceleration = Quantity | string;
+export type Hertz = Quantity | string;
 
 export function parseQuantity(unitString: string): Quantity | string {
   const matches = unitString.match(
