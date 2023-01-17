@@ -1,6 +1,7 @@
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { getSurfaceSchemaDefinition, Surface } from './Surface';
+import BooleanField from './BooleanField';
 
 /**
  * Describes one or multiple pathways inside a place.
@@ -9,7 +10,7 @@ export interface Pathways {
   /**
    * Width constraints of all pathways inside a place relevant for consumers.
    */
-  width: Length;
+  width?: Length;
 
   /**
    * Width constraints of all pathways inside a place relevant for consumers.
@@ -17,6 +18,11 @@ export interface Pathways {
   widthAtObstacles?: Length;
 
   surface?: Surface;
+
+  /**
+   * `true` if the pathway is kerbstone-free, `false` if not, `undefined` if condition is unknown.
+   */
+  isKerbstoneFree?: boolean;
 }
 
 // TODO: Harmonize this with:
@@ -28,4 +34,5 @@ export const getPathwaysSchemaDefinition: () => Record<string, SchemaDefinition>
   ...getPrefixedQuantitySchemaDefinition('width', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('widthAtObstacles', LengthSchemaDefinition),
   ...getPrefixedSchemaDefinition('surface', getSurfaceSchemaDefinition()),
+  isKerbstoneFree: BooleanField,
 });
