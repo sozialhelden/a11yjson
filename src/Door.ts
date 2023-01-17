@@ -1,6 +1,9 @@
 import { AccessType, accessTypes } from './AccessType';
 import BooleanField from './BooleanField';
+import { getGrabBarsSchemaDefinition, GrabBars } from './GrabBars';
+import htmlColorSchemaDefinition from './htmlColorSchemaDefinition';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
+import { getIntercomSchemaDefinition, Intercom } from './Intercom';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import {
   ForceSchemaDefinition,
@@ -32,9 +35,13 @@ export interface Door extends Interactable {
   /**
    * `true` if the door opens automatically, `false` if not. The mechanism for opening the door is
    * defined in other attributes.
-   * @deprecated
    */
   isAutomatic?: boolean;
+
+  /**
+   * `true` if the door is there, but always open, `false` if not.
+   */
+  isAlwaysOpen?: boolean;
 
   /**
    * `true` if the door has a proximity sensor that triggers the opening mechanism, `false` if not.
@@ -55,6 +62,12 @@ export interface Door extends Interactable {
    * Width of the door.
    */
   width?: Length;
+
+  /**
+   * Height of the door’s threshold / sill / step inside the door frame.
+   */
+  thresholdHeight?: Length;
+  thresholdIsRounded?: boolean;
 
   /**
    * `true` if the door is a sliding door, `false` if not.
@@ -114,6 +127,7 @@ export interface Door extends Interactable {
    * a wheelchair user symbol), use the height of this one's top button.
    */
   doorbellTopButtonHeight?: Length;
+
   /**
    * `true` if the door has an intercom system, `false` if not.
    */
@@ -122,97 +136,153 @@ export interface Door extends Interactable {
    * `true` if you need to use the intercom to pass this door, `false` if not.
    */
   needsIntercom?: boolean;
+
+  /**
+   * `true` if the door has visual feedback when opening, `false` if not.
+   */
+  hasVisualFeedbackForOpening?: boolean;
+
+  /**
+   * `true` if the door has visual feedback when it can be opened, `false` if not.
+   */
+  hasVisualFeedbackWhenOpenable?: boolean;
+
+  /**
+   * `true` if the door has visual feedback when closing, `false` if not.
+   */
+  hasVisualFeedbackForClosing?: boolean;
+
+  /**
+   * `true` if the door makes a sound when opening, `false` if not.
+   */
+  hasAcousticFeedbackForOpening?: boolean;
+
+  /**
+   * `true` if the door makes a sound when closing, `false` if not.
+   */
+  hasAcousticFeedbackForClosing?: boolean;
+
+  /**
+   * `true` if the door makes a sound when it can be opened, `false` if not.
+   */
+  hasAcousticFeedbackWhenOpenable?: boolean;
+
+  /**
+   * Describes the intercom system of the door.
+   */
+  intercom?: Intercom;
+
+  /**
+   * Describes grab bars in front of the door.
+   */
+  grabBars?: GrabBars;
+
   /**
    * Defines who this door is for. See https://wiki.openstreetmap.org/wiki/Key:access for more
    * information.
    */
   access?: AccessType[];
+
+  /**
+   * `true` if the door is visually contrasted to its surrounding wall, `false` if not.
+   */
+  isVisuallyContrasted?: boolean;
+
+  /**
+   * `true` if the door frame is visually contrasted to its surrounding wall, `false` if not.
+   */
+  hasVisuallyContrastedFrame?: boolean;
+
+  /**
+   * Describes the colors of the door itself, as HTML color strings. Don't include the door frame or
+   * door marking colors in this attribute, but use `markingColors` and `doorFrameColors` instead.
+   *
+   * This can make the door easier to find.
+   *
+   * If there are multiple colors, it might be enough to describe the most dominant one.
+   *
+   * If there are multiple colors, but there is no predominant color, describe all of them.
+   *
+   * This allows to determine the contrast to the wall and the door frame.
+   *
+   * Its best to determine the color at daylight.
+   *
+   * For glass doors, you can use 'transparent' as color.
+   */
+  colors?: string[];
+
+  /**
+   * Describes the colors of a door marking, if existent, as HTML color strings.
+   *
+   * This can make the door easier to find.
+   *
+   * If there are multiple colors, it might be enough to describe the most dominant one.
+   *
+   * If there are multiple colors, but there is no predominant color, describe all of them.
+   *
+   * Its best to determine the color at daylight.
+   *
+   */
+  markingColors?: string[];
+
+  /**
+   * Describes the colors of the door frame, if existent. If they are similar, describe only one
+   * color. Use HTML color strings here.
+   *
+   * This can make the door easier to find, and allows to determine the contrast to the door and
+   * the wall.
+   *
+   * If there are multiple colors, it might be enough to describe the most dominant one.
+   *
+   * If there are multiple colors, but there is no predominant color, describe all of them.
+   *
+   * Its best to determine the color at daylight.
+   */
+  doorFrameColors?: string[];
+
+  /**
+   * Describes the colors of the walls right next the door. Use HTML color strings here.
+   *
+   * This can make the door easier to find, and allows to determine the contrast to the door frame
+   * and the door.
+   *
+   * - If there are multiple colors, it might be enough to describe the most dominant one.
+   * - If there are multiple colors, but there is no predominant color, describe all of them.
+   *
+   * Its best to determine the color at daylight.
+   */
+  nearbyWallColors?: string[];
 }
 
 export const getDoorSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
-  doorOpensToOutside: {
-    type: Boolean,
-    optional: true,
-  },
-  isAutomaticOrAlwaysOpen: {
-    type: Boolean,
-    optional: true,
-  },
-  isAutomatic: {
-    type: Boolean,
-    optional: true,
-  },
-  hasProximitySensor: {
-    type: Boolean,
-    optional: true,
-  },
-  hasSwitch: {
-    type: Boolean,
-    optional: true,
-  },
-  needsSwitchToOpen: {
-    type: Boolean,
-    optional: true,
-  },
-  isTurnstile: {
-    type: Boolean,
-    optional: true,
-  },
+  doorOpensToOutside: BooleanField,
+  isAutomaticOrAlwaysOpen: BooleanField,
+  isAutomatic: BooleanField,
+  isAlwaysOpen: BooleanField,
+  hasProximitySensor: BooleanField,
+  hasSwitch: BooleanField,
+  needsSwitchToOpen: BooleanField,
+  isTurnstile: BooleanField,
   ...getPrefixedQuantitySchemaDefinition('width', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('thresholdHeight', LengthSchemaDefinition),
+  thresholdIsRounded: BooleanField,
   ...getPrefixedQuantitySchemaDefinition('turningSpaceInFront', LengthSchemaDefinition),
-  hasClearMarkingOnGlassDoor: {
-    type: Boolean,
-    optional: true,
-  },
-  isEasyToHoldOpen: {
-    type: Boolean,
-    optional: true,
-  },
-  hasErgonomicDoorHandle: {
-    type: Boolean,
-    optional: true,
-  },
-  isRevolving: {
-    type: Boolean,
-    optional: true,
-  },
-  needsRadarKey: {
-    type: Boolean,
-    optional: true,
-  },
-  needsEuroKey: {
-    type: Boolean,
-    optional: true,
-  },
-  isSliding: {
-    type: Boolean,
-    optional: true,
-  },
-  isGlassDoor: {
-    type: Boolean,
-    optional: true,
-  },
-  needsKeyCard: {
-    type: Boolean,
-    optional: true,
-  },
-  needsKeyPad: {
-    type: Boolean,
-    optional: true,
-  },
-  needsDoorbell: {
-    type: Boolean,
-    optional: true,
-  },
+  hasClearMarkingOnGlassDoor: BooleanField,
+  isEasyToHoldOpen: BooleanField,
+  hasErgonomicDoorHandle: BooleanField,
+  isRevolving: BooleanField,
+  needsRadarKey: BooleanField,
+  needsEuroKey: BooleanField,
+  isSliding: BooleanField,
+  isGlassDoor: BooleanField,
+  needsKeyCard: BooleanField,
+  needsKeyPad: BooleanField,
+  needsDoorbell: BooleanField,
   ...getPrefixedQuantitySchemaDefinition('doorbellTopButtonHeight', LengthSchemaDefinition),
-  hasIntercom: {
-    type: Boolean,
-    optional: true,
-  },
-  needsIntercom: {
-    type: Boolean,
-    optional: true,
-  },
+  hasIntercom: BooleanField,
+  needsIntercom: BooleanField,
+  ...getPrefixedSchemaDefinition('intercom', getIntercomSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('grabBars', getGrabBarsSchemaDefinition()),
   access: {
     type: Array,
     optional: true,
@@ -224,5 +294,35 @@ export const getDoorSchemaDefinition: () => Record<string, SchemaDefinition> = (
   ...getPrefixedQuantitySchemaDefinition('openingForce', ForceSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('closingSpeed', SpeedSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('latchingSpeed', SpeedSchemaDefinition),
+  isVisuallyContrasted: BooleanField,
+  hasVisuallyContrastedFrame: BooleanField,
+  hasVisualFeedbackForOpening: BooleanField,
+  hasVisualFeedbackWhenOpenable: BooleanField,
+  hasVisualFeedbackForClosing: BooleanField,
+  hasAcousticFeedbackForOpening: BooleanField,
+  hasAcousticFeedbackForClosing: BooleanField,
+  hasAcousticFeedbackWhenOpenable: BooleanField,
+  colors: {
+    type: Array,
+    optional: true,
+  },
+  'colors.$': {
+    type: String,
+  },
+  markingColors: {
+    type: Array,
+    optional: true,
+  },
+  'markingColors.$': htmlColorSchemaDefinition,
+  doorFrameColors: {
+    type: Array,
+    optional: true,
+  },
+  'doorFrameColors.$': htmlColorSchemaDefinition,
+  nearbyWallColors: {
+    type: Array,
+    optional: true,
+  },
+  'nearbyWallColors.$': htmlColorSchemaDefinition,
   ...getInteractableSchemaDefinition(),
 });
