@@ -4,15 +4,2208 @@ Besides [interfaces](./3-interfaces.md], A11yJSON defines the following bare typ
 
 Some lack proper formatting in the documentation. Fixes in [`tools/generate-overview.ts`](https://github.com/sozialhelden/a11yjson/blob/master/tools/generate-overview.ts) are welcome!
 
+### <a id="Acceleration">Acceleration</a>
+
+
+
+Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
+
+
+
+### <a id="ActionMode">ActionMode</a>
+
+Describes necessary abilities and modes inputting information.
+
+Definition: <pre>{
+  "id": 52,
+  "name": "__type",
+  "kind": 65536,
+  "kindString": "Type literal",
+  "flags": {},
+  "children": [
+    {
+      "id": 58,
+      "name": "activationForce",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Force needed for the described input method."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 50,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 808,
+        "name": "Force"
+      }
+    },
+    {
+      "id": 59,
+      "name": "activationTimeInterval",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Time interval needed for activation/engagement."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 55,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 807,
+        "name": "TimeInterval"
+      }
+    },
+    {
+      "id": 137,
+      "name": "apiDocumentationUrl",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The input API documentation URL."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 445,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 369,
+        "name": "LocalizedString"
+      }
+    },
+    {
+      "id": 60,
+      "name": "attentionSpan",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Attention time needed for activation/engagement."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 60,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 807,
+        "name": "TimeInterval"
+      }
+    },
+    {
+      "id": 75,
+      "name": "brailleKeyboard",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to write textual content with a braille keyboard is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 135,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 74,
+      "name": "brailleText",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to read braille is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 130,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 69,
+      "name": "cable",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "A cable is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 105,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 64,
+      "name": "clap",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Clapping your hands is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 80,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 84,
+      "name": "click",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to click a button with a finger is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 180,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 54,
+      "name": "description",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Describes the output as human-readable text."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 30,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 369,
+        "name": "LocalizedString"
+      }
+    },
+    {
+      "id": 85,
+      "name": "doubleClick",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to click a button with a finger is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 185,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 103,
+      "name": "drag",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to drag an object is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 275,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 116,
+      "name": "dragAndDropGesture",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to do a virtual drag-and-drop finger/mouse gesture is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 340,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 123,
+      "name": "eyeTracker",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to use an eye tracker is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 375,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 129,
+      "name": "faceRecognition",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The input uses face recognition."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 405,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 61,
+      "name": "feedback",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "How is feedback given for an input?"
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 65,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "array",
+        "elementType": {
+          "type": "reference",
+          "id": 433,
+          "name": "PerceptionMode"
+        }
+      }
+    },
+    {
+      "id": 130,
+      "name": "fingerprintScan",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The input uses a fingerprint scanner."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 410,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 80,
+      "name": "handwriting",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to write textual content by hand is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 160,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 73,
+      "name": "haptic",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Haptic input is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 125,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 122,
+      "name": "headPointer",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to use a head pointer is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 370,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 68,
+      "name": "headphone",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Headphones are supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 100,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 96,
+      "name": "highContrast",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The input has high contrast elements, for example around buttons."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 240,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 71,
+      "name": "instructionsUrl",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "URL describing how to use the input mechanism."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 115,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 369,
+        "name": "LocalizedString"
+      }
+    },
+    {
+      "id": 131,
+      "name": "irisScan",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The input uses an iris scanner."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 415,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 138,
+      "name": "isEasyToUnderstand",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "`true` if the input is easy to understand, `false` if people might face difficulties trying to\nunderstand how the input works, or `undefined` if this is unknown or irrelevant."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 451,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 101,
+      "name": "joystick",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to use a joystick is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 265,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 81,
+      "name": "keyboard",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to write textual content by typing on a keyboard is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 165,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 82,
+      "name": "keypad",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to write numbers by typing on a keypad is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 170,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 55,
+      "name": "languages",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Input languages supported."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 35,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "array",
+        "elementType": {
+          "type": "reference",
+          "id": 840,
+          "name": "IetfLanguageTag"
+        }
+      }
+    },
+    {
+      "id": 78,
+      "name": "leftHanded",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "You can or must give input with your left hand."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 150,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 111,
+      "name": "lick",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to lick an object with your tongue is supported or needed (e.g. a lollipop)"
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 315,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 63,
+      "name": "morseCode",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Morse code input is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 75,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 83,
+      "name": "mouse",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to use a mouse is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 175,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 109,
+      "name": "move",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to move an object is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 305,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 53,
+      "name": "name",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Describes which output is meant. Helpful if there are multiple outputs."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 25,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 369,
+        "name": "LocalizedString"
+      }
+    },
+    {
+      "id": 136,
+      "name": "necessaryEyeHeight",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "How tall do you have to be to perceive the content/output/signal."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 440,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 803,
+        "name": "Length"
+      }
+    },
+    {
+      "id": 135,
+      "name": "necessaryGripHeight",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The height you need to grip to perceive the content/output/signal."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 435,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 803,
+        "name": "Length"
+      }
+    },
+    {
+      "id": 56,
+      "name": "optional",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "`true` if the action is optional, `false` if it is required."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 40,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 92,
+      "name": "pedal",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to use a pedal is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 220,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 126,
+      "name": "photo",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The input makes a photo."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 390,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 105,
+      "name": "pinch",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to pinch an object is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 285,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 115,
+      "name": "pinchFingerGesture",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to use a pinch finger gesture is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 335,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 99,
+      "name": "press",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to apply force to an object is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 255,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 93,
+      "name": "pullSwitch",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to use a pull switch is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 225,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 94,
+      "name": "pullstring",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to use a pullstring is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 230,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 90,
+      "name": "pushButton",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to use a push button is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 210,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 89,
+      "name": "pushSwitch",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to use a push switch is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 205,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 67,
+      "name": "qrCode",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "A QR code is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 95,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 132,
+      "name": "raisedText",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "`true` if the controls or signs have raised letters, `false` if not."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 420,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 57,
+      "name": "required",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "`false` if the action is optional, `true` if it is required."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 45,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 121,
+      "name": "rhythm",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to use rhythm input is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 365,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 79,
+      "name": "rightHanded",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "You can or must give input with your right hand."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 155,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 107,
+      "name": "rotate",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to rotate an object is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 295,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 117,
+      "name": "rotateTwoFingersGesture",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to use a two-finger rotation gesture is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 345,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 113,
+      "name": "scratch",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to scratch is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 325,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 66,
+      "name": "signLanguage",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to use sign language is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 90,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 77,
+      "name": "singleHanded",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "You can or must give input with one hand."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 145,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 114,
+      "name": "sipAndPuff",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to use a sip and puff switch is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 330,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 112,
+      "name": "smell",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to smell is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 320,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 128,
+      "name": "soundRecording",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The input makes a sound recording."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 400,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 62,
+      "name": "speak",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to speak is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 70,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 106,
+      "name": "squeeze",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to squeeze an object is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 290,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 91,
+      "name": "stateCount",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "State count for a button or switch, for example 2 for a toggle button, 3 for a 3-way button."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 215,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "number"
+      }
+    },
+    {
+      "id": 118,
+      "name": "swipeFingerGesture",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to use a swipe finger gesture is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 350,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 120,
+      "name": "swipeThreeFingersGesture",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to use a three-finger swipe gesture is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 360,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 119,
+      "name": "swipeTwoFingersGesture",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to use a three-finger swipe gesture is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 355,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 72,
+      "name": "tactile",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Tactile input is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 120,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 95,
+      "name": "tactileGuides",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The input has tactile guides, for example around buttons."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 235,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 87,
+      "name": "tap",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to tap an element with a finger is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 195,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 100,
+      "name": "tearApart",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to tear something apart is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 260,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 139,
+      "name": "techSufficient",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Technology combinations that are sufficient to make use of the output."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 456,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "array",
+        "elementType": {
+          "type": "reference",
+          "id": 715,
+          "name": "TechCombination"
+        }
+      }
+    },
+    {
+      "id": 140,
+      "name": "techSupported",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Technologies that are sufficient to make use of the output."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 461,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "array",
+        "elementType": {
+          "type": "reference",
+          "id": 715,
+          "name": "TechCombination"
+        }
+      }
+    },
+    {
+      "id": 108,
+      "name": "tilt",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to tilt an object is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 300,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 110,
+      "name": "tongue",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to move an object with your tongue is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 310,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 98,
+      "name": "touch",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Touch input is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 250,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 97,
+      "name": "touchscreen",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Touchscreen input is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 245,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 88,
+      "name": "trackball",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to use a trackball is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 200,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 86,
+      "name": "tripleClick",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to click a button with a finger is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 190,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 104,
+      "name": "turn",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to turn an object is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 280,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 102,
+      "name": "turnKnob",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to turn a knob is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 270,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 76,
+      "name": "twoHanded",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "You can or must give input with both hands."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 140,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 70,
+      "name": "url",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "URL where you can use the input mechanism, e.g. on your phone."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 110,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 369,
+        "name": "LocalizedString"
+      }
+    },
+    {
+      "id": 127,
+      "name": "video",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The input makes a video."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 395,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 134,
+      "name": "visualRecognition",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "`true` if the input user interface needs or supports visual input, `false` if not."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 430,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 133,
+      "name": "voiceActivation",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "`true` if the control is activated by voice, `false` if not."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 425,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 65,
+      "name": "wave",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Waving your hands is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 85,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 124,
+      "name": "wheel",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The input features a wheel."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 380,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 125,
+      "name": "wireless",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The input is wireless."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 385,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "title": "Properties",
+      "kind": 1024,
+      "children": [
+        58,
+        59,
+        137,
+        60,
+        75,
+        74,
+        69,
+        64,
+        84,
+        54,
+        85,
+        103,
+        116,
+        123,
+        129,
+        61,
+        130,
+        80,
+        73,
+        122,
+        68,
+        96,
+        71,
+        131,
+        138,
+        101,
+        81,
+        82,
+        55,
+        78,
+        111,
+        63,
+        83,
+        109,
+        53,
+        136,
+        135,
+        56,
+        92,
+        126,
+        105,
+        115,
+        99,
+        93,
+        94,
+        90,
+        89,
+        67,
+        132,
+        57,
+        121,
+        79,
+        107,
+        117,
+        113,
+        66,
+        77,
+        114,
+        112,
+        128,
+        62,
+        106,
+        91,
+        118,
+        120,
+        119,
+        72,
+        95,
+        87,
+        100,
+        139,
+        140,
+        108,
+        110,
+        98,
+        97,
+        88,
+        86,
+        104,
+        102,
+        76,
+        70,
+        127,
+        134,
+        133,
+        65,
+        124,
+        125
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "fileName": "ActionMode.ts",
+      "line": 21,
+      "character": 25
+    }
+  ]
+}</pre>
+
+
+
+### <a id="Brightness">Brightness</a>
+
+
+
+Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
+
+
+
 ### <a id="EquipmentTypes">EquipmentTypes</a>
 
 
 
-Definition: <code>"bed"</code>&nbsp;|&nbsp;<code>"wardrobe"</code>&nbsp;|&nbsp;<code>"elevator"</code>&nbsp;|&nbsp;<code>"escalator"</code>&nbsp;|&nbsp;<code>"movingWalkway"</code>&nbsp;|&nbsp;<code>"ramp"</code>&nbsp;|&nbsp;<code>"hoist"</code>&nbsp;|&nbsp;<code>"stairLift"</code>&nbsp;|&nbsp;<code>"switch"</code>&nbsp;|&nbsp;<code>"sitemap"</code>&nbsp;|&nbsp;<code>"vendingMachine"</code>&nbsp;|&nbsp;<code>"intercom"</code>&nbsp;|&nbsp;<code>"powerOutlet"</code>
+Definition: <code>"bed"</code>&nbsp;|&nbsp;<code>"wardrobe"</code>&nbsp;|&nbsp;<code>"elevator"</code>&nbsp;|&nbsp;<code>"escalator"</code>&nbsp;|&nbsp;<code>"movingWalkway"</code>&nbsp;|&nbsp;<code>"ramp"</code>&nbsp;|&nbsp;<code>"hoist"</code>&nbsp;|&nbsp;<code>"stairLift"</code>&nbsp;|&nbsp;<code>"switch"</code>&nbsp;|&nbsp;<code>"sitemap"</code>&nbsp;|&nbsp;<code>"vendingMachine"</code>&nbsp;|&nbsp;<code>"intercom"</code>&nbsp;|&nbsp;<code>"powerOutlet"</code>&nbsp;|&nbsp;<code>"flushMechanism"</code>&nbsp;|&nbsp;<code>"bodyScanner"</code>&nbsp;|&nbsp;<code>"luggageScanner"</code>
 
 
 
 ### <a id="Force">Force</a>
+
+
+
+Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
+
+
+
+### <a id="Hertz">Hertz</a>
 
 
 
@@ -62,11 +2255,1976 @@ Definition: <code>"<"</code>&nbsp;|&nbsp;<code>"<="</code>&nbsp;|&nbsp;<code>"==
 
 
 
+### <a id="PerceptionMode">PerceptionMode</a>
+
+Describes necessary abilities and modes for information output.
+
+Definition: <pre>{
+  "id": 434,
+  "name": "__type",
+  "kind": 65536,
+  "kindString": "Type literal",
+  "flags": {},
+  "children": [
+    {
+      "id": 450,
+      "name": "acceleration",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Feedback force applied to the user."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 108,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 810,
+        "name": "Acceleration"
+      }
+    },
+    {
+      "id": 441,
+      "name": "activationSignal",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output is an activation/engagement signal."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 63,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 444,
+      "name": "alarm",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output is an alarm."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 78,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 457,
+      "name": "ambientNoiseLevel",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Ambient noise level in dB(A) relative to a reference pressure of 0.00002 Pa. Median over a\n10-second period at least."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 144,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 804,
+        "name": "Volume"
+      }
+    },
+    {
+      "id": 483,
+      "name": "animation",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output is animated."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 288,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 508,
+      "name": "apiDocumentationUrl",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The input API documentation URL."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 413,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "string"
+      }
+    },
+    {
+      "id": 468,
+      "name": "attentionSpan",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Attention time span needed to understand the output."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 200,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 807,
+        "name": "TimeInterval"
+      }
+    },
+    {
+      "id": 459,
+      "name": "audibleClick",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output has an acoustic click feedback."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 154,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 472,
+      "name": "audioDescription",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output has  audio description."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 220,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 512,
+      "name": "audioIsComprehensible",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "`true` if the system’s audio quality is good enough for understanding speech, `false` if it is\ndifficult."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 435,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 498,
+      "name": "backgroundColors",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Background output HTML colors (for example, the background behind a text or icon)."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 363,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "array",
+        "elementType": {
+          "type": "intrinsic",
+          "name": "string"
+        }
+      }
+    },
+    {
+      "id": 461,
+      "name": "beep",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output uses one or more beeps as signal."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 164,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 462,
+      "name": "bing",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output uses one or more bing-like signals."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 169,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 494,
+      "name": "blackAndWhite",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output uses black and white colors."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 343,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 488,
+      "name": "braille",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to read braille is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 313,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 455,
+      "name": "breathing",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The light looks like it is breathing."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 133,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 456,
+      "name": "brightness",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output's brightness."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 138,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 805,
+        "name": "Brightness"
+      }
+    },
+    {
+      "id": 503,
+      "name": "byod",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "`true` if you can or have to perceive the content with a device that you own."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 388,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 501,
+      "name": "cable",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "A cable is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 378,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 491,
+      "name": "chart",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output uses one or more charts."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 328,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 495,
+      "name": "colorCode",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output uses a discrete color code."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 348,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 496,
+      "name": "colorGradient",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output uses a color gradient."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 353,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 513,
+      "name": "contentWarning",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Lists potential content warnings you have to expect here. User interfaces should not show the\ncontent warning directly, but should instead show a button to show the content warning."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 441,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 369,
+        "name": "LocalizedString"
+      }
+    },
+    {
+      "id": 470,
+      "name": "dedicatedScreenForSubtitles",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output has a dedicated screen for subtitles."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 210,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 436,
+      "name": "description",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Describes the content/output/signal as human-readable text."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 38,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 369,
+        "name": "LocalizedString"
+      }
+    },
+    {
+      "id": 467,
+      "name": "duration",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Time interval in which the output is active."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 195,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 807,
+        "name": "TimeInterval"
+      }
+    },
+    {
+      "id": 475,
+      "name": "educationLevel",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Education level needed to understand the output.",
+        "text": "http://www.ibe.unesco.org/en/glossary-curriculum-terminology/l/levels-education\n\n- early childhood education (level 0)\n- primary education (level 1)\n- lower secondary education (level 2)\n- upper secondary education (level 3)\n- postsecondary non-tertiary education (level 4)\n- short-cycle tertiary education (level 5)\n- bachelor’s or equivalent level (level 6)\n- master’s or equivalent level (level 7)\n- doctor or equivalent level (level 8).\n"
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 247,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "qualifiedName": "Number",
+        "package": "typescript",
+        "name": "Number"
+      }
+    },
+    {
+      "id": 477,
+      "name": "flash",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output is a flashing light."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 257,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 478,
+      "name": "flashingHazard",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "`true` if the output is a flashing hazard, `false` if there is explicitly no flashing hazard\nand someone / something ensures this. This can be relevant for people with epilepsy."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 263,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 493,
+      "name": "fontSize",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Font size used in the output."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 338,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 803,
+        "name": "Length"
+      }
+    },
+    {
+      "id": 449,
+      "name": "force",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Feedback force applied to the user."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 103,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 808,
+        "name": "Force"
+      }
+    },
+    {
+      "id": 448,
+      "name": "forceFeedback",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The content/output/signal has active force feedback."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 98,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 497,
+      "name": "foregroundColors",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Foreground output HTML colors (for example, the text or icon color)."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 358,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "array",
+        "elementType": {
+          "type": "intrinsic",
+          "name": "string"
+        }
+      }
+    },
+    {
+      "id": 484,
+      "name": "framerate",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The framerate of animations."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 293,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 811,
+        "name": "Hertz"
+      }
+    },
+    {
+      "id": 479,
+      "name": "frequency",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The frequency of the output, for tones or flashes."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 268,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 811,
+        "name": "Hertz"
+      }
+    },
+    {
+      "id": 453,
+      "name": "fullBody",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The content/output/signal affects your full body."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 123,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 476,
+      "name": "handwritten",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The content is handwritten."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 252,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 464,
+      "name": "haptic",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output is haptic."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 179,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 458,
+      "name": "hapticClick",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output has a haptic click feedback."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 149,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 500,
+      "name": "headphone",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Headphones are supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 373,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 492,
+      "name": "highContrast",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output is displayed in high contrast."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 333,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 443,
+      "name": "info",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output is an information without high urgency."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 73,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 507,
+      "name": "instructionsUrl",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "URL describing how to make use of the content/output/signal."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 408,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 369,
+        "name": "LocalizedString"
+      }
+    },
+    {
+      "id": 509,
+      "name": "isEasyToUnderstand",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "`true` if the input is easy to understand, `false` if people might face difficulties trying to\nunderstand how the input works, or `undefined` if this is unknown or irrelevant."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 419,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 437,
+      "name": "languages",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Content languages supported."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 43,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "array",
+        "elementType": {
+          "type": "reference",
+          "id": 840,
+          "name": "IetfLanguageTag"
+        }
+      }
+    },
+    {
+      "id": 454,
+      "name": "led",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output is an LED."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 128,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 446,
+      "name": "light",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output is a light."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 88,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 480,
+      "name": "morse",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output uses morse code."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 273,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 460,
+      "name": "music",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output uses music."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 159,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 435,
+      "name": "name",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Describes which output is meant. Helpful if there are multiple signals/outputs/content\nlements."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 33,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 369,
+        "name": "LocalizedString"
+      }
+    },
+    {
+      "id": 511,
+      "name": "necessaryEyeHeight",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "How tall do you have to be to perceive the content/output/signal."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 429,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 803,
+        "name": "Length"
+      }
+    },
+    {
+      "id": 510,
+      "name": "necessaryGripHeight",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The height you need to grip to perceive the content/output/signal."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 424,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 803,
+        "name": "Length"
+      }
+    },
+    {
+      "id": 469,
+      "name": "needsHighConcentration",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output needs high concentration to understand."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 205,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 482,
+      "name": "numbers",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output uses one or more numbers."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 283,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 438,
+      "name": "optional",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "`true` if the perception is optional, `false` if it is required."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 48,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 481,
+      "name": "pictograms",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output uses one or more pictograms."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 278,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 463,
+      "name": "pitchedTone",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output uses a pitched tone as signal."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 174,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 474,
+      "name": "plainLanguageOption",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output has a plain language option."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 230,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 499,
+      "name": "qrCode",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "A QR code is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 368,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 502,
+      "name": "radio",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "A radio connection is supported or needed (e.g. WiFi, Bluetooth, NFC, etc.)"
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 383,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 447,
+      "name": "read",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to read is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 93,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 473,
+      "name": "realTimeCaptioning",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output has realtime captioning."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 225,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 439,
+      "name": "required",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "`false` if the perception is optional, `true` if it is required."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 53,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 465,
+      "name": "rhythmic",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output is rhythmic."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 184,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 490,
+      "name": "screen",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output is displayed on a screen."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 323,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 486,
+      "name": "signLanguage",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to understand sign language is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 303,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 485,
+      "name": "sound",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output is acoustic."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 298,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 452,
+      "name": "soundVolume",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The content/output/signal has active vibration feedback."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 118,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 804,
+        "name": "Volume"
+      }
+    },
+    {
+      "id": 440,
+      "name": "speech",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to understand speech is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 58,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 466,
+      "name": "static",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "`true` if the output is usually static and does not change over time, `false` if it is dynamic\nand changes over time."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 190,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 471,
+      "name": "subtitles",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output has subtitles."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 215,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 487,
+      "name": "tactile",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output is tactile."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 308,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 489,
+      "name": "tactileGuides",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output has tactile guides, for example around buttons."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 318,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 504,
+      "name": "techSufficient",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Technology combinations that are sufficient to make use of the content/output/signal."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 393,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "array",
+        "elementType": {
+          "type": "reference",
+          "id": 715,
+          "name": "TechCombination"
+        }
+      }
+    },
+    {
+      "id": 505,
+      "name": "techSupported",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Technologies that are sufficient to make use of the content/output/signal."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 398,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "array",
+        "elementType": {
+          "type": "reference",
+          "id": 715,
+          "name": "TechCombination"
+        }
+      }
+    },
+    {
+      "id": 442,
+      "name": "urgent",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output is urgent."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 68,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 506,
+      "name": "url",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "URL where you can see or make use of the content/output/signal, e.g. on your phone."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 403,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 369,
+        "name": "LocalizedString"
+      }
+    },
+    {
+      "id": 451,
+      "name": "vibration",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The content/output/signal has active vibration feedback."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 113,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 445,
+      "name": "warning",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output is a warning."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 83,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    }
+  ],
+  "groups": [
+    {
+      "title": "Properties",
+      "kind": 1024,
+      "children": [
+        450,
+        441,
+        444,
+        457,
+        483,
+        508,
+        468,
+        459,
+        472,
+        512,
+        498,
+        461,
+        462,
+        494,
+        488,
+        455,
+        456,
+        503,
+        501,
+        491,
+        495,
+        496,
+        513,
+        470,
+        436,
+        467,
+        475,
+        477,
+        478,
+        493,
+        449,
+        448,
+        497,
+        484,
+        479,
+        453,
+        476,
+        464,
+        458,
+        500,
+        492,
+        443,
+        507,
+        509,
+        437,
+        454,
+        446,
+        480,
+        460,
+        435,
+        511,
+        510,
+        469,
+        482,
+        438,
+        481,
+        463,
+        474,
+        499,
+        502,
+        447,
+        473,
+        439,
+        465,
+        490,
+        486,
+        485,
+        452,
+        440,
+        466,
+        471,
+        487,
+        489,
+        504,
+        505,
+        442,
+        506,
+        451,
+        445
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "fileName": "PerceptionMode.ts",
+      "line": 28,
+      "character": 29
+    }
+  ]
+}</pre>
+
+
+
 ### <a id="RestroomSignIcon">RestroomSignIcon</a>
 
 
 
-Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":330,"name":"restroomSignIcons"}}}
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":556,"name":"restroomSignIcons"}}}
 
 
 
@@ -100,7 +4258,7 @@ Definition: <code>"dedicatedToSmoking"</code>&nbsp;|&nbsp;<code>"allowedEverywhe
 
 
 
-Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":210,"name":"SmoothnessTypeValues"}}}
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":698,"name":"SmoothnessTypeValues"}}}
 
 
 
@@ -116,7 +4274,15 @@ Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
 
 
 
-Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":208,"name":"SurfaceTypeValues"}}}
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":696,"name":"SurfaceTypeValues"}}}
+
+
+
+### <a id="TimeInterval">TimeInterval</a>
+
+
+
+Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
 
 
 
