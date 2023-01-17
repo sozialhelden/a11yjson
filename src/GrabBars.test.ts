@@ -6,10 +6,12 @@ import interactionModeFixture from './InteractionMode.test';
 const grabBarsFixture: Complete<GrabBars> = {
   onUsersLeftSide: true,
   onUsersRightSide: true,
+  inFrontOfTheUser: false,
   topHeightFromFloor: '80cm',
   distanceBetweenBars: '80cm',
   foldable: true,
   interactions: [interactionModeFixture],
+  continuous: true,
 };
 
 export default grabBarsFixture;

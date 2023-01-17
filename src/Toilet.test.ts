@@ -12,6 +12,7 @@ const toiletFixture: Complete<Toilet> = {
     onUsersRightSide: true,
     topHeightFromFloor: '>85cm',
     distanceBetweenBars: '60 .. 65cm',
+    continuous: false,
   },
   isSquatToilet: false,
   isUrinal: false,
