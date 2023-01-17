@@ -12,6 +12,8 @@ import { W3CAccessMode, w3cAccessModes } from './W3CAccessMode';
 import { W3CAccessibilityFeature, w3cAccessibilityFeatures } from './W3CAccessibilityFeature';
 import { W3CAccessibilityHazard, w3cAccessibilityHazards } from './W3CAccessibilityHazard';
 import { w3cAccessibilityControls, W3CAccessibilityControl } from './W3CAccessibilityControl';
+import { getInteractionModeSchemaDefinition } from './InteractionMode';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 
 export type EquipmentTypes =
   | 'bed'
@@ -629,4 +631,5 @@ SchemaDefinition
     type: String,
     allowedValues: w3cAccessibilityHazards,
   },
+  ...getInteractableSchemaDefinition(),
 });

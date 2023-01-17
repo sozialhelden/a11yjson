@@ -1,4 +1,7 @@
 import { AccessType, accessTypes } from './AccessType';
+import BooleanField from './BooleanField';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import {
   ForceSchemaDefinition,
   getPrefixedQuantitySchemaDefinition,
@@ -11,7 +14,7 @@ import {
  * Describes the door of a place's entrance or to one of its facilities (e.g. to a shower, or to
  * an elevator)
  */
-export interface Door {
+export interface Door extends Interactable {
   /**
    * Turning space in front of the door.
    */
@@ -221,4 +224,5 @@ export const getDoorSchemaDefinition: () => Record<string, SchemaDefinition> = (
   ...getPrefixedQuantitySchemaDefinition('openingForce', ForceSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('closingSpeed', SpeedSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('latchingSpeed', SpeedSchemaDefinition),
+  ...getInteractableSchemaDefinition(),
 });

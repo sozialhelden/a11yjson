@@ -1,0 +1,116 @@
+import { Complete } from './Complete';
+import expectValidFixture from './lib/expectValidFixture';
+import { getActionModeSchemaDefinition, ActionMode } from './ActionMode';
+
+const actionModeFixture: Complete<ActionMode> = {
+  name: { en: 'Reaction test' },
+  description: { en: 'Listen to a tone while watching a chart on a screen' },
+  languages: ['en'],
+  optional: false,
+  required: true,
+  speak: false,
+  morseCode: false,
+  clap: false,
+  wave: false,
+  signLanguage: false,
+  qrCode: false,
+  headphone: false,
+  cable: false,
+  tactile: false,
+  brailleText: false,
+  brailleKeyboard: false,
+  twoHanded: false,
+  singleHanded: false,
+  leftHanded: false,
+  rightHanded: false,
+  handwriting: false,
+  keyboard: false,
+  keypad: false,
+  mouse: false,
+  click: false,
+  doubleClick: false,
+  tripleClick: false,
+  tap: false,
+  trackball: false,
+  pushSwitch: false,
+  pedal: false,
+  pullSwitch: false,
+  pullstring: false,
+  tactileGuides: false,
+  highContrast: false,
+  touchscreen: false,
+  touch: false,
+  press: false,
+  drag: false,
+  dragAndDropGesture: false,
+  activationTimeInterval: { value: 0.5, unit: 's' },
+  attentionSpan: { value: 5, unit: 's' },
+  pushButton: false,
+  stateCount: 1,
+  joystick: true,
+  turn: false,
+  turnKnob: false,
+  pinch: false,
+  tearApart: false,
+  squeeze: false,
+  rotate: false,
+  tilt: false,
+  move: false,
+  tongue: false,
+  lick: false,
+  smell: false,
+  scratch: false,
+  sipAndPuff: false,
+  pinchFingerGesture: false,
+  rotateTwoFingersGesture: false,
+  swipeFingerGesture: false,
+  swipeTwoFingersGesture: false,
+  swipeThreeFingersGesture: false,
+  rhythm: false,
+  headPointer: false,
+  eyeTracker: false,
+  wheel: false,
+  wireless: false,
+  photo: false,
+  video: false,
+  soundRecording: false,
+  faceRecognition: false,
+  fingerprintScan: false,
+  irisScan: false,
+  haptic: false,
+  raisedText: false,
+  voiceActivation: false,
+  visualRecognition: false,
+  isEasyToUnderstand: true,
+  necessaryGripHeight: { value: 1, unit: 'm' },
+  necessaryEyeHeight: { value: 0.8, unit: 'm' },
+  activationForce: { value: 0.1, unit: 'N' },
+  feedback: [{
+    vibration: true,
+  }],
+  techSufficient: [{
+    uris: ['https://example.com/tech/1'],
+  }],
+  techSupported: [{
+    uris: ['https://example.com/tech/1'],
+  }],
+  url: {
+    en: 'https://example.com/devices/42/input',
+  },
+  instructionsUrl: {
+    en: 'https://example.com/devices/42/input/howto',
+  },
+  apiDocumentationUrl: {
+    en: 'https://example.com/api/documentation',
+  },
+};
+
+export default actionModeFixture;
+
+const definition = getActionModeSchemaDefinition();
+
+describe('ActionMode schema', () => {
+  it('validates a completely specified object', () => {
+    expectValidFixture(definition, actionModeFixture);
+  });
+});

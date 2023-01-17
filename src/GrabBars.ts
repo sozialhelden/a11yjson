@@ -1,8 +1,9 @@
 import { t } from 'ttag';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 
-export interface GrabBars {
+export interface GrabBars extends Interactable {
   /**
    * `true` if there is a folding handle on left side (from the perspective of somebody using the
    * toilet), `false` if not, `undefined` if condition is unknown.
@@ -42,4 +43,5 @@ export const getGrabBarsSchemaDefinition: () => Record<string, SchemaDefinition>
     type: Boolean,
     optional: true,
   },
+  ...getInteractableSchemaDefinition(),
 });

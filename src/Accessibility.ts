@@ -16,6 +16,8 @@ import { SmokingPolicy, smokingPolicies } from './SmokingPolicy';
 import { getPrefixedQuantitySchemaDefinition, Volume, VolumeSchemaDefinition } from './Quantity';
 import { WifiAccessibility, getWifiAccessibilitySchemaDefinition } from './WifiAccessibility';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+import { InteractionMode } from './InteractionMode';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 
 /**
  * Describes the general wheelchair accessibility of the place. This is a human-rated value.
@@ -46,7 +48,7 @@ export const wheelchairAccessibilityGrades = ['fully', 'partially', 'not'];
 /**
  * Describes the physical (and sometimes human rated) accessibility of a place.
  */
-export interface Accessibility {
+export interface Accessibility extends Interactable {
   /// @deprecated Use `wheelchairAccessibilityGrade`, `media`, and other properties instead.
   accessibleWith?: PersonalProfile;
   /// @deprecated Use `wheelchairAccessibilityGrade`, `media`, and other properties instead.
@@ -240,4 +242,5 @@ export const getAccessibilitySchemaDefinition: () => Record<string, SchemaDefini
   ...getPrefixedSchemaDefinition('restrooms.$', getRestroomSchemaDefinition()),
   ...getPrefixedSchemaDefinition('tables', getTablesSchemaDefinition()),
   ...getLocalizedStringSchemaDefinition('serviceContact'),
+  ...getInteractableSchemaDefinition(),
 });

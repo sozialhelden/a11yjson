@@ -3,6 +3,7 @@ import doorFixture from './Door.test';
 import stairsFixture from './Stairs.test';
 import { Complete } from './Complete';
 import expectValidFixture from './lib/expectValidFixture';
+import interactionModeFixture from './InteractionMode.test';
 
 const entrancePropertiesFixture: Complete<EntranceProperties> = {
   name: { en: 'string' },
@@ -21,6 +22,7 @@ const entrancePropertiesFixture: Complete<EntranceProperties> = {
   intercomEquipmentId: 'idHere',
   needsAppointment: true,
   placeInfoId: '1234',
+  interactions: [interactionModeFixture],
 };
 
 export default entrancePropertiesFixture;

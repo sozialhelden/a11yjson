@@ -1,8 +1,11 @@
 import SimpleSchema from 'simpl-schema';
 import { EquipmentInfo, getEquipmentInfoSchemaDefinition } from './EquipmentInfo';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+import { getInteractionModeSchemaDefinition, InteractionMode } from './InteractionMode';
+import { Interactable } from './Interactable';
+import { getInteractionModeSchemaDefinition } from './InteractionMode';
 
-export interface QueueSystem {
+export interface QueueSystem extends Interactable {
   /**
    * `true` if the queueing uses rails / cattle bars, `false` if not.
    */
@@ -72,4 +75,5 @@ export const getQueueSystemSchemaDefinition: () => Record<string, SchemaDefiniti
     type: SimpleSchema.Integer,
     optional: true,
   },
+  ...getPrefixedArraySchemaDefinition('interactions', getInteractionModeSchemaDefinition()),
 });

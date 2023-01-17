@@ -1,6 +1,7 @@
 import { Door, getDoorSchemaDefinition } from './Door';
 import { Complete } from './Complete';
 import expectValidFixture from './lib/expectValidFixture';
+import interactionModeFixture from './InteractionMode.test';
 
 const doorFixture: Complete<Door> = {
   turningSpaceInFront: '<90cm',
@@ -27,6 +28,7 @@ const doorFixture: Complete<Door> = {
   hasIntercom: false,
   needsIntercom: false,
   access: ['private'],
+  interactions: [interactionModeFixture],
 };
 
 export default doorFixture;

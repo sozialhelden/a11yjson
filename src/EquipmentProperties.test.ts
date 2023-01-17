@@ -65,6 +65,36 @@ const equipmentPropertiesFixture: Complete<EquipmentProperties> = {
   accessibilityControl: ['fullSwitchControl'],
   accessibilityFeature: ['braille'],
   accessibilityHazard: ['noFlashingHazard'],
+  interactions: [
+    {
+      name: { en: 'On reaching a floor' },
+      optional: true,
+      perception: [{
+        speech: true,
+      }],
+    },
+    {
+      name: { en: 'Selecting a floor' },
+      required: true,
+      action: [{
+        pushButton: true,
+        activationForce: '0.1N',
+        activationTimeInterval: '0.2s',
+        feedback: [{
+          hapticClick: true,
+          beep: true,
+        }],
+      }],
+    },
+    {
+      name: { en: 'Elevator movement' },
+      required: true,
+      perception: [{
+        vibration: true,
+        acceleration: '1m/s^2',
+      }],
+    },
+  ],
 };
 
 export default equipmentPropertiesFixture;

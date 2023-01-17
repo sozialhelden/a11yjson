@@ -3,11 +3,12 @@ import { Stairs, getStairsSchemaDefinition } from './Stairs';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import { getPrefixedQuantitySchemaDefinition, Slope, SlopeSchemaDefinition } from './Quantity';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 
 /**
  * Describes an entrance to a place.
  */
-export interface EntranceProperties {
+export interface EntranceProperties extends Interactable {
   /**
    * Name of the entrance (helpful if there are multiple entrances).
    */
@@ -122,4 +123,5 @@ SchemaDefinition
     type: String,
     optional: true,
   },
+  ...getInteractableSchemaDefinition(),
 });
