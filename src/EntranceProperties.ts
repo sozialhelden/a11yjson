@@ -3,6 +3,7 @@ import { Stairs, getStairsSchemaDefinition } from './Stairs';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import { getPrefixedQuantitySchemaDefinition, Slope, SlopeSchemaDefinition } from './Quantity';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+import BooleanField from './BooleanField';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 
 /**
@@ -80,27 +81,12 @@ string,
 SchemaDefinition
 > = () => ({
   ...getLocalizedStringSchemaDefinition('name'),
-  isMainEntrance: {
-    type: Boolean,
-    optional: true,
-  },
-  isLevel: {
-    type: Boolean,
-    optional: true,
-  },
+  isMainEntrance: BooleanField,
+  isLevel: BooleanField,
   ...getPrefixedQuantitySchemaDefinition('slopeAngle', SlopeSchemaDefinition),
-  hasFixedRamp: {
-    type: Boolean,
-    optional: true,
-  },
-  hasRemovableRamp: {
-    type: Boolean,
-    optional: true,
-  },
-  hasHoist: {
-    type: Boolean,
-    optional: true,
-  },
+  hasFixedRamp: BooleanField,
+  hasRemovableRamp: BooleanField,
+  hasHoist: BooleanField,
   ...getPrefixedSchemaDefinition('stairs', getStairsSchemaDefinition()),
   ...getPrefixedSchemaDefinition('door', getDoorSchemaDefinition()),
   elevatorEquipmentId: {
@@ -111,14 +97,8 @@ SchemaDefinition
     type: String,
     optional: true,
   },
-  needsAppointment: {
-    type: Boolean,
-    optional: true,
-  },
-  hasSignage: {
-    type: Boolean,
-    optional: true,
-  },
+  needsAppointment: BooleanField,
+  hasSignage: BooleanField,
   placeInfoId: {
     type: String,
     optional: true,
