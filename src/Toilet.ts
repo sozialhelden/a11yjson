@@ -4,7 +4,7 @@ import {
   getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition,
 } from './Quantity';
 import BooleanField from './BooleanField';
-import { EquipmentProperties } from './EquipmentProperties';
+import { EquipmentProperties, getEquipmentPropertiesSchemaDefinition } from './EquipmentProperties';
 import { getEquipmentInfoSchemaDefinition } from './EquipmentInfo';
 
 /**
@@ -81,9 +81,9 @@ export const getToiletSchemaDefinition: () => Record<string, SchemaDefinition> =
   ...getPrefixedQuantitySchemaDefinition('spaceOnUsersRightSide', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('spaceInFront', LengthSchemaDefinition),
   ...getPrefixedSchemaDefinition('grabBars', getGrabBarsSchemaDefinition()),
-  ...getPrefixedSchemaDefinition('flushMechanism', getEquipmentInfoSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('flushMechanism', getEquipmentPropertiesSchemaDefinition()),
   ...getPrefixedQuantitySchemaDefinition('flushMechanismDistanceFromToilet', LengthSchemaDefinition),
-  ...getPrefixedSchemaDefinition('secondaryFlushMechanism', getEquipmentInfoSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('secondaryFlushMechanism', getEquipmentPropertiesSchemaDefinition()),
   ...getPrefixedQuantitySchemaDefinition('secondaryFlushMechanismDistanceFromToilet', LengthSchemaDefinition),
   isSquatToilet: BooleanField,
   isUrinal: BooleanField,
