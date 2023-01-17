@@ -1,3 +1,5 @@
+import BooleanField from './BooleanField';
+
 export interface AnimalPolicy {
   /**
    * `true` if the place allows visitors to bring guide dogs, `false` if bringing them is
@@ -33,32 +35,11 @@ export interface AnimalPolicy {
 }
 
 export const getAnimalPolicySchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
-  allowsGuideDogs: {
-    type: Boolean,
-    optional: true,
-  },
-  allowsServiceAnimals: {
-    type: Boolean,
-    optional: true,
-  },
-  allowsAssistanceDogs: {
-    type: Boolean,
-    optional: true,
-  },
-  allowsDogs: {
-    type: Boolean,
-    optional: true,
-  },
-  dogsNeedMuzzle: {
-    type: Boolean,
-    optional: true,
-  },
-  allowsAnyPets: {
-    type: Boolean,
-    optional: true,
-  },
-  suppliesWaterForPets: {
-    type: Boolean,
-    optional: true,
-  },
+  allowsGuideDogs: BooleanField,
+  allowsServiceAnimals: BooleanField,
+  allowsAssistanceDogs: BooleanField,
+  allowsDogs: BooleanField,
+  dogsNeedMuzzle: BooleanField,
+  allowsAnyPets: BooleanField,
+  suppliesWaterForPets: BooleanField,
 });
