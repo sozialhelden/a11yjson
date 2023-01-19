@@ -12,7 +12,7 @@ import { SchemaDefinition, SchemaKeyDefinition } from 'simpl-schema/dist/esm/typ
 
 export type LocalizedString = Record<string, string>;
 
-export function getLocalizedStringSchemaDefinition(key: string, definition: Omit<SchemaKeyDefinition, 'type'> & { type?: never, optional?: false } = {}): SchemaDefinition {
+export function getLocalizedStringSchemaDefinition(key: string, definition: Omit<SchemaKeyDefinition, 'type'> & { type?: never, optional?: false } = {}, childDefinition: Omit<SchemaKeyDefinition, 'type'> & { type?: never, optional?: false } = {}): SchemaDefinition {
   return {
     [key]: {
       optional: true,
@@ -43,6 +43,7 @@ export function getLocalizedStringSchemaDefinition(key: string, definition: Omit
       type: Object,
     },
     [`${key}.$`]: {
+      ...childDefinition,
       type: String,
     },
   };

@@ -580,7 +580,6 @@ export type ActionMode = {
    * - doctor or equivalent level (level 8).
    */
   educationLevel?: Number;
-
 };
 
 export const getActionModeSchemaDefinition: () => SchemaDefinition = () => ({
@@ -589,10 +588,10 @@ export const getActionModeSchemaDefinition: () => SchemaDefinition = () => ({
   ...getLocalizedStringSchemaDefinition('name'),
   ...getLocalizedStringSchemaDefinition('description'),
   ...getLocalizedStringSchemaDefinition('url'),
-  ...getLocalizedStringSchemaDefinition('instructionsUrl', {
+  ...getLocalizedStringSchemaDefinition('instructionsUrl', {}, {
     custom: validateUrl,
   }),
-  ...getLocalizedStringSchemaDefinition('apiDocumentationUrl', {
+  ...getLocalizedStringSchemaDefinition('apiDocumentationUrl', {}, {
     custom: validateUrl,
   }),
   languages: {
