@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { t } from 'ttag';
 import getIsoAlphaThreeCountryCodes from './CountryCodes';
 import { LocalizedString, getLocalizedStringSchemaDefinition } from './LocalizedString';
@@ -89,7 +90,7 @@ export interface StructuredAddress {
  * The StructuredAddressSchema allows easy validation, cleaning and checking of structured address
  * objects.
  */
-export const getStructuredAddressSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getStructuredAddressSchemaDefinition: () => SchemaDefinition = () => ({
   ...getLocalizedStringSchemaDefinition('text', {
     label: t`Text`,
   }),

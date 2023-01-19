@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { getSurfaceSchemaDefinition, Surface } from './Surface';
@@ -30,7 +31,7 @@ export interface Pathways {
 // and
 // https://docs.google.com/document/d/1qJOTe4m_a4dcJnvXYt4smYj4QQ1ejZ8CvLBYzDM5IyM
 
-export const getPathwaysSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getPathwaysSchemaDefinition: () => SchemaDefinition = () => ({
   ...getPrefixedQuantitySchemaDefinition('width', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('widthAtObstacles', LengthSchemaDefinition),
   ...getPrefixedSchemaDefinition('surface', getSurfaceSchemaDefinition()),

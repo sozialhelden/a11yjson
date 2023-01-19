@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { t } from 'ttag';
 
 import {
@@ -29,7 +30,7 @@ export interface Staff {
 /**
  * The StaffSchema allows easy validation, cleaning and checking of Staff objects.
  */
-export const getStaffSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getStaffSchemaDefinition: () => SchemaDefinition = () => ({
   canSeeVisitorsFromInside: {
     type: Boolean,
     label: t`Can staff see visitors from inside?`,

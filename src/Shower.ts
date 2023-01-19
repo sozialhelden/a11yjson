@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import {
   Door, getDoorSchemaDefinition,
 } from './Door';
@@ -47,7 +48,7 @@ export interface Shower extends Interactable<ShowerInteraction> {
   seat?: Seat;
 }
 
-export const getShowerSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getShowerSchemaDefinition: () => SchemaDefinition = () => ({
   ...getPrefixedSchemaDefinition('stairs', getStairsSchemaDefinition()),
   ...getPrefixedSchemaDefinition('door', getDoorSchemaDefinition()),
   ...getPrefixedSchemaDefinition('grabBars', getGrabBarsSchemaDefinition()),

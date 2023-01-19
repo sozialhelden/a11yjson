@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import BooleanField from './BooleanField';
 import htmlColorSchemaDefinition from './htmlColorSchemaDefinition';
 import { IetfLanguageTag, ietfLanguageTagsAndSignLanguageCodes } from './ietfLanguageTags';
@@ -489,7 +490,7 @@ export type PerceptionMode = {
   contentWarning?: LocalizedString;
 };
 
-export const getPerceptionModeSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getPerceptionModeSchemaDefinition: () => SchemaDefinition = () => ({
   languages: {
     type: Array,
     defaultValue: [],

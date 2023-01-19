@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import BooleanField from './BooleanField';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 import { getIntercomSchemaDefinition, Intercom } from './Intercom';
@@ -104,7 +105,7 @@ export interface Desk extends Interactable<DeskInteraction> {
   intercom?: Intercom | null;
 }
 
-export const getDeskSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getDeskSchemaDefinition: () => SchemaDefinition = () => ({
   ...getLocalizedStringSchemaDefinition('name'),
   isRollUnder: BooleanField,
   ...getPrefixedQuantitySchemaDefinition('widthBelow', LengthSchemaDefinition),

@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { getStructuredAddressSchemaDefinition, StructuredAddress } from './Address';
 import BooleanField from './BooleanField';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
@@ -14,6 +15,9 @@ export const RoomInteractions = [
   'play',
   'wait',
   'storeThings',
+  'lookAround',
+  'openWindow',
+  'closeWindow',
 ] as const;
 export type RoomInteraction = typeof RoomInteractions[number];
 
@@ -32,7 +36,7 @@ export interface Room extends Interactable<RoomInteraction> {
   description?: LocalizedString;
 }
 
-export const getRoomSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getRoomSchemaDefinition: () => SchemaDefinition = () => ({
   isAccessibleWithWheelchair: BooleanField,
   sameAs: {
     type: Array,

@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import BooleanField from './BooleanField';
 
 /**
@@ -27,7 +28,7 @@ export interface PersonalProfile {
   wheelchair?: boolean;
 }
 
-export const getPersonalProfileSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getPersonalProfileSchemaDefinition: () => SchemaDefinition = () => ({
   muteness: BooleanField,
   guideDog: BooleanField,
   hearingImpairment: BooleanField,

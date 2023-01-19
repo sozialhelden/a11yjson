@@ -1,9 +1,10 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { AccessType, accessTypes } from './AccessType';
 import BooleanField from './BooleanField';
 import { getGrabBarsSchemaDefinition, GrabBars } from './GrabBars';
 import htmlColorSchemaDefinition from './htmlColorSchemaDefinition';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
-import { getInteractionModeSchemaDefinition, InteractionMode } from './InteractionMode';
+import { getInteractionModeSchemaDefinition } from './InteractionMode';
 import { getIntercomSchemaDefinition, Intercom } from './Intercom';
 import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition';
 import {
@@ -229,7 +230,7 @@ export interface Door extends Interactable<DoorInteraction> {
   nearbyWallColors?: string[];
 }
 
-export const getDoorSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getDoorSchemaDefinition: () => SchemaDefinition = () => ({
   doorOpensToOutside: BooleanField,
   isAutomaticOrAlwaysOpen: BooleanField,
   isAutomatic: BooleanField,
@@ -262,7 +263,7 @@ export const getDoorSchemaDefinition: () => Record<string, SchemaDefinition> = (
   },
   'access.$': {
     type: String,
-    allowedValues: accessTypes,
+    allowedValues: (accessTypes as any) as any[],
   },
   ...getPrefixedSchemaDefinition('intercom', getIntercomSchemaDefinition()),
   ...getPrefixedSchemaDefinition('grabBars', getGrabBarsSchemaDefinition()),

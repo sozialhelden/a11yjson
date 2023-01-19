@@ -1,17 +1,6 @@
-import { AnimalPolicy, getAnimalPolicySchemaDefinition } from './AnimalPolicy';
-import { Complete } from './Complete';
+import { getAnimalPolicySchemaDefinition } from './AnimalPolicy';
+import { animalPolicyFixture } from './animalPolicyFixture';
 import expectValidFixture from './lib/expectValidFixture';
-
-const animalPolicyFixture: Complete<AnimalPolicy> = {
-  allowsGuideDogs: true,
-  allowsAssistanceDogs: true,
-  allowsDogs: true,
-  dogsNeedMuzzle: true,
-  allowsServiceAnimals: true,
-  suppliesWaterForPets: true,
-};
-
-export default animalPolicyFixture;
 
 const definition = getAnimalPolicySchemaDefinition();
 

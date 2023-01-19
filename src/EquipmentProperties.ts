@@ -1,7 +1,9 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { t } from 'ttag';
-import SimpleSchema from 'simpl-schema';
 import { Door, getDoorSchemaDefinition } from './Door';
-import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
+import {
+  getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition,
+} from './Quantity';
 import {
   IetfLanguageTagOrSignLanguageCode,
   ietfLanguageTagsAndSignLanguageCodes,
@@ -15,6 +17,7 @@ import { w3cAccessibilityControls, W3CAccessibilityControl } from './W3CAccessib
 import BooleanField from './BooleanField';
 import { getIntercomSchemaDefinition, Intercom } from './Intercom';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
+import validateUrl from './validateUrl';
 
 export type EquipmentTypes =
   | 'bed'
@@ -376,10 +379,7 @@ export interface EquipmentProperties extends Interactable<EquipmentInteraction> 
   ids?: Record<string, string>;
 }
 
-export const getEquipmentPropertiesSchemaDefinition: () => Record<
-string,
-SchemaDefinition
-> = () => ({
+export const getEquipmentPropertiesSchemaDefinition: () => SchemaDefinition = () => ({
   sameAs: {
     type: Array,
     optional: true,
@@ -472,7 +472,7 @@ SchemaDefinition
   serviceWebsiteUrl: {
     type: String,
     optional: true,
-    regEx: SimpleSchema.RegEx.Url,
+    custom: validateUrl,
   },
   ...getLocalizedStringSchemaDefinition('stateExplanation'),
   sourceId: {

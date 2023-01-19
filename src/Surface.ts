@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import {
   getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition, Slope, SlopeSchemaDefinition,
 } from './Quantity';
@@ -202,14 +203,14 @@ export interface Surface {
   types: SurfaceType[];
 }
 
-export const getSurfaceSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getSurfaceSchemaDefinition: () => SchemaDefinition = () => ({
   ...getPrefixedQuantitySchemaDefinition('longitudinalSlope', SlopeSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('lateralSlope', SlopeSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('turningSpace', LengthSchemaDefinition),
   smoothness: {
     type: String,
     optional: true,
-    allowedValues: SmoothnessTypeValues,
+    allowedValues: (SmoothnessTypeValues as any) as any[],
   },
   types: {
     type: Array,
@@ -219,6 +220,6 @@ export const getSurfaceSchemaDefinition: () => Record<string, SchemaDefinition> 
   'types.$': {
     type: String,
     optional: true,
-    allowedValues: SurfaceTypeValues,
+    allowedValues: (SurfaceTypeValues as any) as any[],
   },
 });

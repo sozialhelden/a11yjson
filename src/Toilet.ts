@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { GrabBars, getGrabBarsSchemaDefinition } from './GrabBars';
 import {
@@ -9,6 +10,7 @@ import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 export const ToiletInteractions = [
   'use',
   'flush',
+  'secondaryFlush',
   'spray',
   'washHands',
 ] as const;
@@ -63,7 +65,7 @@ export interface Toilet extends Interactable<ToiletInteraction> {
   flushMechanismDistanceFromToilet?: Length;
 }
 
-export const getToiletSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getToiletSchemaDefinition: () => SchemaDefinition = () => ({
   hasGrabBars: BooleanField,
   isSquatToilet: BooleanField,
   isUrinal: BooleanField,

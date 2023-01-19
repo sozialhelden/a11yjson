@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { PointGeometry, getPointGeometrySchemaDefinition } from './Geometry';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { PlaceProperties, getPlacePropertiesSchemaDefinition } from './PlaceProperties';
@@ -26,7 +27,7 @@ export interface PlaceInfo {
 /**
  * The PlaceInfoSchema allows easy validation, cleaning and checking of PlaceInfo objects.
  */
-export const getPlaceInfoSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getPlaceInfoSchemaDefinition: () => SchemaDefinition = () => ({
   formatVersion: {
     type: String,
     optional: true,

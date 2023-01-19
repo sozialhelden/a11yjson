@@ -1,5 +1,5 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { t } from 'ttag';
-import SimpleSchema from 'simpl-schema';
 
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 import {
@@ -11,6 +11,7 @@ import { W3CAccessibilityFeature, w3cAccessibilityFeatures } from './W3CAccessib
 import { W3CAccessibilityHazard, w3cAccessibilityHazards } from './W3CAccessibilityHazard';
 import { W3CAccessMode, w3cAccessModes } from './W3CAccessMode';
 import { w3cAccessibilityControls, W3CAccessibilityControl } from './W3CAccessibilityControl';
+import validateUrl from './validateUrl';
 
 export const MediaInteractions = [
   '',
@@ -146,7 +147,7 @@ export interface Media {
   accessibilityHazard?: W3CAccessibilityHazard[];
 }
 
-export const getMediaSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getMediaSchemaDefinition: () => SchemaDefinition = () => ({
   type: {
     type: String,
     label: t`Media Type`,
@@ -280,6 +281,6 @@ export const getMediaSchemaDefinition: () => Record<string, SchemaDefinition> = 
   },
   'sameAs.$': {
     type: String,
-    regEx: SimpleSchema.RegEx.Url,
+    custom: validateUrl,
   },
 });

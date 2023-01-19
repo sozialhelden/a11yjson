@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { getPointGeometrySchemaDefinition, PointGeometry } from './Geometry';
 import {
   EntranceProperties,
@@ -18,7 +19,7 @@ export interface Entrance {
   geometry?: PointGeometry;
 }
 
-export const getEntranceSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getEntranceSchemaDefinition: () => SchemaDefinition = () => ({
   formatVersion: {
     type: String,
     optional: true,

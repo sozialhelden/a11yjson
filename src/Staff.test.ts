@@ -1,14 +1,6 @@
-import { Staff, getStaffSchemaDefinition } from './Staff';
-import { Complete } from './Complete';
+import { getStaffSchemaDefinition } from './Staff';
 import expectValidFixture from './lib/expectValidFixture';
-
-const staffFixture: Complete<Staff> = {
-  canSeeVisitorsFromInside: true,
-  hasFreeAssistantForVisitors: true,
-  spokenLanguages: ['es', 'en', 'sgn-ase'],
-};
-
-export default staffFixture;
+import { staffFixture } from './staffFixture';
 
 const definition = getStaffSchemaDefinition();
 

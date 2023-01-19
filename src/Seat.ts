@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import {
   Direction, DirectionAxes, DirectionAxis, Directions,
 } from './ActionMode';
@@ -164,10 +165,7 @@ export interface Seat extends Interactable<SeatInteraction> {
   reservedForPersonsWith?: PersonalProfile;
 }
 
-export const getSeatSchemaDefinition: () => Record<
-string,
-SchemaDefinition
-> = () => ({
+export const getSeatSchemaDefinition: () => SchemaDefinition = () => ({
   ...getLocalizedStringSchemaDefinition('name'),
   ...getLocalizedStringSchemaDefinition('description'),
   isFrontRow: BooleanField,
@@ -186,7 +184,7 @@ SchemaDefinition
   },
   'adjustmentAxes.$': {
     type: String,
-    allowedValues: DirectionAxes,
+    allowedValues: (DirectionAxes as any) as any[],
   },
   adjustmentDirections: {
     type: Array,
@@ -194,7 +192,7 @@ SchemaDefinition
   },
   'adjustmentDirections.$': {
     type: String,
-    allowedValues: Directions,
+    allowedValues: (Directions as any) as any[],
   },
   seatbeltPoints: {
     type: Number,

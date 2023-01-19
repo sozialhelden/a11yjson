@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import BooleanField from './BooleanField';
 
 export interface AnimalPolicy {
@@ -34,7 +35,7 @@ export interface AnimalPolicy {
   suppliesWaterForPets?: boolean;
 }
 
-export const getAnimalPolicySchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getAnimalPolicySchemaDefinition: () => SchemaDefinition = () => ({
   allowsGuideDogs: BooleanField,
   allowsServiceAnimals: BooleanField,
   allowsAssistanceDogs: BooleanField,

@@ -1,5 +1,5 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { t } from 'ttag';
-import SimpleSchema from 'simpl-schema';
 
 /**
  * The WheelchairPlaces interface describes the presence of reserved spots for wheelchairs.
@@ -24,9 +24,9 @@ export interface WheelchairPlaces {
  * The WheelchairPlacesSchema allows easy validation, cleaning and checking of WheelchairPlaces
  * objects.
  */
-export const getWheelchairPlacesSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getWheelchairPlacesSchemaDefinition: () => SchemaDefinition = () => ({
   count: {
-    type: SimpleSchema.Integer,
+    type: 'SimpleSchema.Integer',
     label: t`Number Of Places`,
     min: 0,
   },
@@ -36,7 +36,7 @@ export const getWheelchairPlacesSchemaDefinition: () => Record<string, SchemaDef
     optional: true,
   },
   wheelchairUserCapacity: {
-    type: SimpleSchema.Integer,
+    type: 'SimpleSchema.Integer',
     label: t`Wheelchair User Capacity`,
     optional: true,
   },

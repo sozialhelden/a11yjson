@@ -1,4 +1,8 @@
+import {
+  SchemaDefinition, SchemaKeyDefinitionWithOneType, ValidatorContext, ValidatorFunction,
+} from 'simpl-schema/dist/esm/types';
 import * as Qty from 'js-quantities';
+import { memoize } from 'lodash';
 
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 
@@ -23,6 +27,11 @@ function isConstructor(f: Function): boolean {
   return true;
 }
 
+// Depending on the build environment and its configuration, the `Qty` constructor may be
+// a function or a class. We need to handle both cases.
+const QtyExport = (Qty as any).default || Qty;
+const qtyIsConstructor = isConstructor(QtyExport);
+
 /**
  * Builds a custom validation function that ensures that the value of the field is a unit of the
  * kind passed to `validateUnit`
@@ -32,13 +41,10 @@ function isConstructor(f: Function): boolean {
  * @param {string} kind One of js-quantities unit kinds, e.g. length, mass, etc.
  * @returns {ValidationFunction} A custom SimpleSchema Validation function
  */
-export const validateUnit = function (kind: UnitKind): ValidationFunction {
-  return function generatedUnitValidationFunction(this: ValidationFunctionSelf<string>) {
-    // Depending on the build environment and its configuration, the `Qty` constructor may be
-    // a function or a class. We need to handle both cases.
-    const QtyExport = (Qty as any).default || Qty;
+export const validateUnit = function (kind: UnitKind): ValidatorFunction {
+  return function generatedUnitValidationFunction(this: ValidatorContext) {
     try {
-      const qty = isConstructor(QtyExport) ? new QtyExport(this.value) : QtyExport(this.value);
+      const qty = qtyIsConstructor ? new QtyExport(this.value) : QtyExport(this.value);
       if (!qty || qty.scalar !== 1 || qty.kind() !== kind) {
         return 'notAllowed';
       }
@@ -52,6 +58,8 @@ export const validateUnit = function (kind: UnitKind): ValidationFunction {
     return undefined;
   };
 };
+
+const memoizedValidateUnit = memoize(validateUnit);
 
 /**
  * The allowed operators for comparison quantities
@@ -99,13 +107,6 @@ export const BaseQuantitySchemaDefinition = {
   value: {
     type: Number,
     optional: true,
-    // allow empty value if min or max are defined
-    custom(this: ValidationFunctionSelf<number>) {
-      if (!this.isSet && !this.siblingField('min').isSet && !this.siblingField('max').isSet) {
-        return 'required';
-      }
-      return undefined;
-    },
   },
   unit: {
     type: String,
@@ -137,13 +138,13 @@ export const BaseQuantitySchemaDefinition = {
 const createQuantitySchemaDefinition = (
   kind: UnitKind,
   defaultUnit?: string,
-): Record<string, SchemaDefinition> => ({
+): SchemaDefinition => ({
   ...BaseQuantitySchemaDefinition,
   ...(kind !== UnitKind.Unitless
     ? {
       unit: {
         type: String,
-        custom: validateUnit(kind),
+        custom: memoizedValidateUnit(kind),
         defaultValue: defaultUnit,
       },
     }
@@ -227,9 +228,9 @@ export function parseQuantity(unitString: string): Quantity | string {
 
 export function getPrefixedQuantitySchemaDefinition(
   prefix: string,
-  definition: Record<string, SchemaDefinition>,
-): Record<string, SchemaDefinition> {
-  const extension: Partial<SchemaDefinition> = {
+  definition: SchemaDefinition,
+): SchemaDefinition {
+  const extension: Partial<SchemaKeyDefinitionWithOneType> = {
     autoValue() {
       if (this.isSet && typeof this.value === 'string') {
         return parseQuantity(this.value);

@@ -1,22 +1,6 @@
-import { Mirror, getMirrorSchemaDefinition } from './Mirror';
-import { Complete } from './Complete';
+import { getMirrorSchemaDefinition } from './Mirror';
 import expectValidFixture from './lib/expectValidFixture';
-
-const mirrorFixture: Complete<Mirror> = {
-  isLocatedInsideRestroom: true,
-  isAccessibleWhileSeated: true,
-  heightFromGround: '>100cm',
-  interactions: {
-    adjust: [{
-      action: [{
-        necessaryClimbHeight: '3cm', // there is a step
-        necessaryGripHeight: '50cm',
-      }],
-    }],
-  },
-};
-
-export default mirrorFixture;
+import { mirrorFixture } from './mirrorFixture';
 
 const definition = getMirrorSchemaDefinition();
 

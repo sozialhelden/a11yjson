@@ -1,36 +1,9 @@
-import { CurrencyValue, getCurrencyValueSchemaDefinition } from './CurrencyValue';
-import { Complete } from './Complete';
+import { getCurrencyValueSchemaDefinition } from './CurrencyValue';
 import expectValidFixture from './lib/expectValidFixture';
-import paymentFixture from './Payment.test';
 import expectInvalidFixture from './lib/expectInvalidFixture';
-
-const currencyValueFixture: Complete<CurrencyValue> = {
-  amount: 0.5,
-  currency: 'EUR',
-  per: {
-    value: 1,
-    unit: 'hour',
-  },
-  access: ['customers'],
-  paymentTypes: [
-    paymentFixture,
-  ],
-};
-
-const forFreeFixture: CurrencyValue = {
-  amount: 0,
-};
-
-const negativeAmountFixture: CurrencyValue = {
-  amount: -1,
-  currency: 'USD',
-};
-
-const nonFreeFixtureWithoutCurrency: CurrencyValue = {
-  amount: 1,
-};
-
-export default currencyValueFixture;
+import {
+  currencyValueFixture, forFreeFixture, nonFreeFixtureWithoutCurrency, negativeAmountFixture,
+} from './currencyValueFixture';
 
 const definition = getCurrencyValueSchemaDefinition();
 

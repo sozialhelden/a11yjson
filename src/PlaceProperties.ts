@@ -1,10 +1,11 @@
-import SimpleSchema from 'simpl-schema';
-
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { Accessibility, getAccessibilitySchemaDefinition } from './Accessibility';
 import { StructuredAddress, getStructuredAddressSchemaDefinition } from './Address';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { AccessType, accessTypes } from './AccessType';
+import validateEmail from './validateEmail';
+import validateUrl from './validateUrl';
 
 /**
  * Properties of a place of interest.
@@ -119,7 +120,7 @@ export interface PlaceProperties {
   access?: AccessType[];
 }
 
-export const getPlacePropertiesSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getPlacePropertiesSchemaDefinition: () => SchemaDefinition = () => ({
   ...getLocalizedStringSchemaDefinition('name'),
   category: {
     type: String,
@@ -132,23 +133,23 @@ export const getPlacePropertiesSchemaDefinition: () => Record<string, SchemaDefi
   },
   emailAddress: {
     type: String,
-    regEx: SimpleSchema.RegEx.EmailWithTLD,
+    custom: validateEmail,
     optional: true,
   },
   ...getPrefixedSchemaDefinition('accessibility', getAccessibilitySchemaDefinition()),
   infoPageUrl: {
     type: String,
-    regEx: SimpleSchema.RegEx.Url,
+    custom: validateUrl,
     optional: true,
   },
   editPageUrl: {
     type: String,
-    regEx: SimpleSchema.RegEx.Url,
+    custom: validateUrl,
     optional: true,
   },
   placeWebsiteUrl: {
     type: String,
-    regEx: SimpleSchema.RegEx.Url,
+    custom: validateUrl,
     optional: true,
   },
   // machine data fields
@@ -171,17 +172,14 @@ export const getPlacePropertiesSchemaDefinition: () => Record<string, SchemaDefi
   parentPlaceInfoId: {
     type: String,
     optional: true,
-    regEx: SimpleSchema.RegEx.Id,
   },
   originalParentPlaceInfoId: {
     type: String,
     optional: true,
-    regEx: SimpleSchema.RegEx.Id,
   },
   parentPlaceSourceId: {
     type: String,
     optional: true,
-    regEx: SimpleSchema.RegEx.Id,
   },
   originalData: {
     type: String,
@@ -190,12 +188,10 @@ export const getPlacePropertiesSchemaDefinition: () => Record<string, SchemaDefi
   sourceId: {
     type: String,
     optional: true,
-    regEx: SimpleSchema.RegEx.Id,
   },
   sourceImportId: {
     type: String,
     optional: true,
-    regEx: SimpleSchema.RegEx.Id,
   },
   access: {
     type: Array,
@@ -203,6 +199,6 @@ export const getPlacePropertiesSchemaDefinition: () => Record<string, SchemaDefi
   },
   'access.$': {
     type: String,
-    allowedValues: accessTypes,
+    allowedValues: (accessTypes as any) as any[],
   },
 });

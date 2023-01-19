@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { t } from 'ttag';
 
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
@@ -27,7 +28,7 @@ export interface Payment {
   customPaymentMetaInfo?: Array<LocalizedString>;
 }
 
-export const getPaymentSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getPaymentSchemaDefinition: () => SchemaDefinition = () => ({
   hasPortablePaymentSystem: {
     type: Boolean,
     label: t`Is there a portable payment system?`,

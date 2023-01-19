@@ -1,13 +1,7 @@
-import { getPointGeometrySchemaDefinition, PointGeometry } from './Geometry';
+import { getPointGeometrySchemaDefinition } from './Geometry';
 import expectInvalidFixture from './lib/expectInvalidFixture';
 import expectValidFixture from './lib/expectValidFixture';
-
-const pointGeometryFixture: PointGeometry = {
-  type: 'Point',
-  coordinates: [53.12, 14.02],
-};
-
-export default pointGeometryFixture;
+import { pointGeometryFixture } from './pointGeometryFixture';
 
 const definition = getPointGeometrySchemaDefinition();
 

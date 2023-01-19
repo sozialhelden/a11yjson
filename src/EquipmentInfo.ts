@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { getPointGeometrySchemaDefinition, PointGeometry } from './Geometry';
 import {
   EquipmentProperties,
@@ -19,7 +20,7 @@ export interface EquipmentInfo {
   geometry?: PointGeometry;
 }
 
-export const getEquipmentInfoSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getEquipmentInfoSchemaDefinition: () => SchemaDefinition = () => ({
   formatVersion: {
     type: String,
     optional: true,

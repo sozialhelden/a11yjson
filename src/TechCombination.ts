@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 
 /**
@@ -32,7 +33,7 @@ export interface TechCombination {
   uris: string[];
 }
 
-export const getTechCombinationSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getTechCombinationSchemaDefinition: () => SchemaDefinition = () => ({
   ...getLocalizedStringSchemaDefinition('name'),
   ...getLocalizedStringSchemaDefinition('description'),
   uris: {

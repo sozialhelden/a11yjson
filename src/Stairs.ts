@@ -1,4 +1,4 @@
-import SimpleSchema from 'simpl-schema';
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { t } from 'ttag';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
@@ -76,10 +76,10 @@ export interface Stairs {
   grabBars?: GrabBars;
 }
 
-export const getStairsSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getStairsSchemaDefinition: () => SchemaDefinition = () => ({
   /// number of steps
   count: {
-    type: SimpleSchema.Integer,
+    type: 'SimpleSchema.Integer',
     optional: true,
   },
   nosing: {

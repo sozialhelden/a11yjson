@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { Room, getRoomSchemaDefinition } from './Room';
 import { Mirror, getMirrorSchemaDefinition } from './Mirror';
 import { WashBasin, getWashBasinSchemaDefinition } from './WashBasin';
@@ -121,7 +122,7 @@ export interface Restroom extends Room {
   usageFee?: CurrencyValue[];
 }
 
-export const getRestroomSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getRestroomSchemaDefinition: () => SchemaDefinition = () => ({
   ...getRoomSchemaDefinition(),
   signIcons: {
     type: Array,
@@ -129,7 +130,7 @@ export const getRestroomSchemaDefinition: () => Record<string, SchemaDefinition>
   },
   'signIcons.$': {
     type: String,
-    allowedValues: restroomSignIcons,
+    allowedValues: (restroomSignIcons as any) as any[],
   },
   hasMirror: BooleanField,
   hasSupportRails: BooleanField,
@@ -154,7 +155,7 @@ export const getRestroomSchemaDefinition: () => Record<string, SchemaDefinition>
   },
   'access.$': {
     type: String,
-    allowedValues: accessTypes,
+    allowedValues: (accessTypes as any) as any[],
   },
   usageFee: {
     type: Array,

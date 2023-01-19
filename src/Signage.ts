@@ -1,13 +1,13 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 import BooleanField from './BooleanField';
-import { EquipmentInfo, getEquipmentInfoSchemaDefinition } from './EquipmentInfo';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 
 export const SignageInteractions = [
   'locateYourself',
   'findYourDestination',
+  'useSitemap',
 ] as const;
 export type SignageInteraction = typeof SignageInteractions[number];
 
@@ -117,14 +117,9 @@ export interface Signage extends Interactable<SignageInteraction> {
    * The height of the font used on the signage. Most likely in millimeters, using a range.
    */
   fontHeight?: Length;
-
-  /**
-   * Information about the sitemap.
-   */
-  sitemap?: EquipmentInfo;
 }
 
-export const getSignageSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getSignageSchemaDefinition: () => SchemaDefinition = () => ({
   ...getLocalizedStringSchemaDefinition('description'),
   hasPictograms: BooleanField,
   hasBraille: BooleanField,
@@ -144,6 +139,5 @@ export const getSignageSchemaDefinition: () => Record<string, SchemaDefinition> 
   isHighContrast: BooleanField,
   highLegibility: BooleanField,
   ...getPrefixedQuantitySchemaDefinition('fontHeight', LengthSchemaDefinition),
-  ...getPrefixedSchemaDefinition('sitemap', getEquipmentInfoSchemaDefinition()),
   ...getInteractableSchemaDefinition(SignageInteractions),
 });

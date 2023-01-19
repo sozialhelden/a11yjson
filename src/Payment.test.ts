@@ -1,18 +1,6 @@
-import { Payment, getPaymentSchemaDefinition } from './Payment';
-import { Complete } from './Complete';
+import { getPaymentSchemaDefinition } from './Payment';
 import expectValidFixture from './lib/expectValidFixture';
-
-const paymentFixture: Complete<Payment> = {
-  hasPortablePaymentSystem: true,
-  acceptsPaymentByMobilePhone: true,
-  acceptsCreditCards: true,
-  acceptsDebitCards: true,
-  acceptsCoins: true,
-  acceptsBills: true,
-  customPaymentMetaInfo: [{ en: 'SMS to +49 123…' }], // e.g. for phone numbers, parking lot IDs etc.
-};
-
-export default paymentFixture;
+import { paymentFixture } from './paymentFixture';
 
 const definition = getPaymentSchemaDefinition();
 

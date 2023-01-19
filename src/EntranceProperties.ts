@@ -1,10 +1,10 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { Door, getDoorSchemaDefinition } from './Door';
 import { Stairs, getStairsSchemaDefinition } from './Stairs';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import { getPrefixedQuantitySchemaDefinition, Slope, SlopeSchemaDefinition } from './Quantity';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import BooleanField from './BooleanField';
-import { getInteractableSchemaDefinition } from './Interactable';
 
 /**
  * Describes an entrance to a place.
@@ -76,10 +76,7 @@ export interface EntranceProperties {
   placeInfoId?: string;
 }
 
-export const getEntrancePropertiesSchemaDefinition: () => Record<
-string,
-SchemaDefinition
-> = () => ({
+export const getEntrancePropertiesSchemaDefinition: () => SchemaDefinition = () => ({
   ...getLocalizedStringSchemaDefinition('name'),
   isMainEntrance: BooleanField,
   isLevel: BooleanField,

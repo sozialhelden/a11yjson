@@ -1,15 +1,6 @@
-import { EquipmentInfo, getEquipmentInfoSchemaDefinition } from './EquipmentInfo';
-import pointGeometryFixture from './Geometry.test';
-import equipmentPropertiesFixture from './EquipmentProperties.test';
-import { Complete } from './Complete';
+import { getEquipmentInfoSchemaDefinition } from './EquipmentInfo';
 import expectValidFixture from './lib/expectValidFixture';
-
-const equipmentInfoFixture: Complete<EquipmentInfo> = {
-  properties: equipmentPropertiesFixture,
-  geometry: pointGeometryFixture,
-};
-
-export default equipmentInfoFixture;
+import { equipmentInfoFixture } from './equipmentInfoFixture';
 
 const definition = getEquipmentInfoSchemaDefinition();
 

@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import BooleanField from './BooleanField';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
@@ -31,7 +32,7 @@ export interface Mirror extends Interactable<MirrorInteraction> {
   heightFromGround: Length;
 }
 
-export const getMirrorSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getMirrorSchemaDefinition: () => SchemaDefinition = () => ({
   isLocatedInsideRestroom: BooleanField,
   isAccessibleWhileSeated: BooleanField,
   ...getPrefixedQuantitySchemaDefinition('heightFromGround', LengthSchemaDefinition),

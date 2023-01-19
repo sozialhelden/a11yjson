@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import BooleanField from './BooleanField';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
@@ -58,7 +59,7 @@ export interface GrabBars extends Interactable<GrabBarsInteraction> {
   continuous: boolean;
 }
 
-export const getGrabBarsSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getGrabBarsSchemaDefinition: () => SchemaDefinition = () => ({
   onUsersLeftSide: BooleanField,
   onUsersRightSide: BooleanField,
   inFrontOfTheUser: BooleanField,

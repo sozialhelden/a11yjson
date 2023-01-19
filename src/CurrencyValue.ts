@@ -1,9 +1,4 @@
-/**
- * Describes an amount of paid money in a specific currency.
- *
- * Don't use this for very small amounts of money (like sub-cent dollar amounts) as this uses no
- * BigDecimal arithmetic.
- */
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 
 import { AccessType, accessTypes } from './AccessType';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
@@ -15,6 +10,9 @@ import { BaseQuantitySchemaDefinition, getPrefixedQuantitySchemaDefinition, Quan
  * of access to a service or product.
  *
  * Can represent free availability, by setting `amount` to 0, and not defining `currency`.
+ *
+ * Don't use this for very small amounts of money (like sub-cent dollar amounts) as this uses no
+ * BigDecimal arithmetic.
  */
 export interface CurrencyValue {
   /**
@@ -42,7 +40,7 @@ export interface CurrencyValue {
   paymentTypes?: Payment[];
 }
 
-export const getCurrencyValueSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getCurrencyValueSchemaDefinition: () => SchemaDefinition = () => ({
   amount: {
     type: Number,
     min: 0,
@@ -71,7 +69,7 @@ export const getCurrencyValueSchemaDefinition: () => Record<string, SchemaDefini
   },
   'access.$': {
     type: String,
-    allowedValues: accessTypes,
+    allowedValues: (accessTypes as any) as any[],
   },
   paymentTypes: {
     type: Array,

@@ -1,30 +1,6 @@
-import { EntranceProperties, getEntrancePropertiesSchemaDefinition } from './EntranceProperties';
-import doorFixture from './Door.test';
-import stairsFixture from './Stairs.test';
-import { Complete } from './Complete';
+import { getEntrancePropertiesSchemaDefinition } from './EntranceProperties';
 import expectValidFixture from './lib/expectValidFixture';
-import interactionModeFixture from './InteractionMode.test';
-
-const entrancePropertiesFixture: Complete<EntranceProperties> = {
-  name: { en: 'string' },
-  isMainEntrance: true,
-  isLevel: true,
-  slopeAngle: {
-    value: 0.05,
-  },
-  hasFixedRamp: false,
-  hasRemovableRamp: true,
-  hasSignage: false,
-  hasHoist: false,
-  stairs: stairsFixture,
-  door: doorFixture,
-  elevatorEquipmentId: 'idHere',
-  intercomEquipmentId: 'idHere',
-  needsAppointment: true,
-  placeInfoId: '1234',
-};
-
-export default entrancePropertiesFixture;
+import { entrancePropertiesFixture } from './entrancePropertiesFixture';
 
 const definition = getEntrancePropertiesSchemaDefinition();
 

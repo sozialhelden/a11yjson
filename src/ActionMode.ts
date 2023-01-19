@@ -1,8 +1,8 @@
-import SimpleSchema from 'simpl-schema';
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { AccessType, accessTypes } from './AccessType';
 import BooleanField from './BooleanField';
 import { IetfLanguageTag, ietfLanguageTagsAndSignLanguageCodes } from './ietfLanguageTags';
-import { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition';
+import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import { getPerceptionModeSchemaDefinition, PerceptionMode } from './PerceptionMode';
 import {
@@ -17,6 +17,7 @@ import {
   MassSchemaDefinition,
 } from './Quantity';
 import { getTechCombinationSchemaDefinition, TechCombination } from './TechCombination';
+import validateUrl from './validateUrl';
 
 /**
  * https://wisc.pb.unizin.org/app/uploads/sites/123/2018/10/Anatomical-Planes-and-Axes.jpg
@@ -114,7 +115,7 @@ export type ActionMode = {
   /**
    * How is feedback given for an input?
    */
-  feedback?: PerceptionMode[];
+  feedback?: PerceptionMode;
 
   /**
    * The ability to speak is supported or needed.
@@ -582,17 +583,17 @@ export type ActionMode = {
 
 };
 
-export const getActionModeSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getActionModeSchemaDefinition: () => SchemaDefinition = () => ({
   optional: BooleanField,
   required: BooleanField,
   ...getLocalizedStringSchemaDefinition('name'),
   ...getLocalizedStringSchemaDefinition('description'),
   ...getLocalizedStringSchemaDefinition('url'),
   ...getLocalizedStringSchemaDefinition('instructionsUrl', {
-    regEx: SimpleSchema.RegEx.Url,
+    custom: validateUrl,
   }),
   ...getLocalizedStringSchemaDefinition('apiDocumentationUrl', {
-    regEx: SimpleSchema.RegEx.Url,
+    custom: validateUrl,
   }),
   languages: {
     type: Array,
@@ -639,12 +640,12 @@ export const getActionModeSchemaDefinition: () => Record<string, SchemaDefinitio
   burnHazard: BooleanField,
   direction: {
     type: String,
-    allowedValues: Directions,
+    allowedValues: (Directions as any) as any[],
     optional: true,
   },
   directionAxis: {
     type: String,
-    allowedValues: DirectionAxes,
+    allowedValues: (DirectionAxes as any) as any[],
     optional: true,
   },
   pinchFingerGesture: BooleanField,
@@ -711,7 +712,7 @@ export const getActionModeSchemaDefinition: () => Record<string, SchemaDefinitio
   ...getPrefixedQuantitySchemaDefinition('bodyHeight', LengthSchemaDefinition),
   ...getPrefixedArraySchemaDefinition('techSufficient', getTechCombinationSchemaDefinition()),
   ...getPrefixedArraySchemaDefinition('techSupported', getTechCombinationSchemaDefinition()),
-  ...getPrefixedArraySchemaDefinition('feedback', getPerceptionModeSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('feedback', getPerceptionModeSchemaDefinition()),
   raisedText: BooleanField,
   voiceActivation: BooleanField,
   visualRecognition: BooleanField,
@@ -722,6 +723,6 @@ export const getActionModeSchemaDefinition: () => Record<string, SchemaDefinitio
   },
   'access.$': {
     type: String,
-    allowedValues: accessTypes,
+    allowedValues: (accessTypes as any) as any,
   },
 });

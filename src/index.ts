@@ -37,7 +37,6 @@ export * from './PlaceInfo';
 export * from './PlaceProperties';
 export * from './Restroom';
 export * from './Room';
-export * from './SchemaHelpers';
 export * from './Seat';
 export * from './Signage';
 export * from './Shower';

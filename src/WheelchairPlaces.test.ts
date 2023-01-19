@@ -1,15 +1,7 @@
-import { WheelchairPlaces, getWheelchairPlacesSchemaDefinition } from './WheelchairPlaces';
-import { Complete } from './Complete';
+import { getWheelchairPlacesSchemaDefinition } from './WheelchairPlaces';
 import expectInvalidFixture from './lib/expectInvalidFixture';
 import expectValidFixture from './lib/expectValidFixture';
-
-const wheelchairPlacesFixture: Complete<WheelchairPlaces> = {
-  count: 200,
-  hasSpaceForAssistant: true,
-  wheelchairUserCapacity: 200,
-};
-
-export default wheelchairPlacesFixture;
+import { wheelchairPlacesFixture } from './wheelchairPlacesFixture';
 
 const definition = getWheelchairPlacesSchemaDefinition();
 

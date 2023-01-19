@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import BooleanField from './BooleanField';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
@@ -56,7 +57,7 @@ export interface Intercom extends Interactable<IntercomInteraction> {
   needsKeyPad?: boolean;
 }
 
-export const getIntercomSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getIntercomSchemaDefinition: () => SchemaDefinition = () => ({
   ...getLocalizedStringSchemaDefinition('description'),
   ...getPrefixedQuantitySchemaDefinition('ambientNoiseLevel', VolumeSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('necessaryGripHeight', LengthSchemaDefinition),

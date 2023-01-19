@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import SimpleSchema from 'simpl-schema';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
@@ -69,7 +70,7 @@ export interface WheelchairParking extends Interactable<ParkingInteraction> {
   neededParkingPermits?: ArrayLike<LocalizedString>;
 }
 
-export const getWheelchairParkingSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getWheelchairParkingSchemaDefinition: () => SchemaDefinition = () => ({
   ...getLocalizedStringSchemaDefinition('location'),
   ...getPrefixedQuantitySchemaDefinition('distanceToEntrance', LengthSchemaDefinition),
   count: {
@@ -95,7 +96,7 @@ export interface Parking extends Interactable<ParkingInteraction> {
   forWheelchairUsers?: WheelchairParking | null;
 }
 
-export const getParkingSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getParkingSchemaDefinition: () => SchemaDefinition = () => ({
   ...getPrefixedSchemaDefinition('forWheelchairUsers', getWheelchairParkingSchemaDefinition()),
   count: {
     type: SimpleSchema.Integer,

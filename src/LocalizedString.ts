@@ -8,10 +8,11 @@
  */
 
 import { parseLanguageTag } from '@sozialhelden/ietf-language-tags';
+import { SchemaDefinition, SchemaKeyDefinition } from 'simpl-schema/dist/esm/types';
 
 export type LocalizedString = Record<string, string>;
 
-export function getLocalizedStringSchemaDefinition(key: string, definition: Omit<SchemaDefinition, 'type'> & { type?: never, optional?: false } = {}): Record<string, SchemaDefinition> {
+export function getLocalizedStringSchemaDefinition(key: string, definition: Omit<SchemaKeyDefinition, 'type'> & { type?: never, optional?: false } = {}): SchemaDefinition {
   return {
     [key]: {
       optional: true,

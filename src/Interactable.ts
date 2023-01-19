@@ -1,16 +1,17 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { getInteractionModeSchemaDefinition, InteractionMode } from './InteractionMode';
-import { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 
 export interface Interactable<InteractionType extends string> {
   /**
    * Indicates how the object can be interacted with.
    */
-  interactions?: Partial<Record<InteractionType, InteractionMode[]>>;
+  interactions?: Partial<Record<InteractionType, InteractionMode>>;
 }
 
 export const getInteractableSchemaDefinition: (
   interactionTypes: readonly string[]
-) => Record<string, SchemaDefinition> = (interactionTypes) => ({
+) => SchemaDefinition = (interactionTypes) => ({
   interactions: {
     type: Object,
     optional: true,
@@ -18,7 +19,7 @@ export const getInteractableSchemaDefinition: (
   ...interactionTypes.reduce(
     (acc, interactionType) => ({
       ...acc,
-      ...getPrefixedArraySchemaDefinition(`interactions.${interactionType}`, getInteractionModeSchemaDefinition()),
+      ...getPrefixedSchemaDefinition(`interactions.${interactionType}`, getInteractionModeSchemaDefinition()),
     }),
     {},
   ),

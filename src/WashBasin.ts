@@ -1,4 +1,4 @@
-import { t } from 'ttag';
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 
@@ -51,16 +51,14 @@ export interface WashBasin extends Interactable<WashBashinInteraction> {
   spaceBelowDepth?: Length;
 }
 
-export const getWashBasinSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getWashBasinSchemaDefinition: () => SchemaDefinition = () => ({
   isLocatedInsideRestroom: {
     type: Boolean,
     optional: true,
-    label: t`Is the wash basin located inside the restroom cabin?`,
   },
   accessibleWithWheelchair: {
     type: Boolean,
     optional: true,
-    label: t`Can a person drive a wheelchair under the wash basin?`,
   },
   ...getPrefixedQuantitySchemaDefinition('height', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('spaceBelowHeight', LengthSchemaDefinition),

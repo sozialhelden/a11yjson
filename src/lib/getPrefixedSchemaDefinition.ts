@@ -1,9 +1,11 @@
+import { SchemaDefinition, SchemaKeyDefinition, SchemaKeyDefinitionWithOneType } from 'simpl-schema/dist/esm/types';
+
 export default function getPrefixedSchemaDefinition(
   prefix: string,
-  definition: Record<string, SchemaDefinition>,
-  extendDefinition?: Partial<SchemaDefinition>,
-): Record<string, SchemaDefinition> {
-  const prefixedDefinition: Record<string, SchemaDefinition> = {
+  definition: SchemaDefinition,
+  extendDefinition?: Partial<SchemaKeyDefinitionWithOneType>,
+): SchemaDefinition {
+  const prefixedDefinition: Record<string, SchemaKeyDefinition> = {
     [prefix]: {
       type: Object,
       optional: true,
@@ -20,10 +22,10 @@ export default function getPrefixedSchemaDefinition(
 
 export function getPrefixedArraySchemaDefinition(
   prefix: string,
-  definition: Record<string, SchemaDefinition>,
-  extendElementDefinition?: Partial<SchemaDefinition>,
+  definition: SchemaDefinition,
+  extendElementDefinition?: Partial<SchemaKeyDefinitionWithOneType>,
 ) {
-  const prefixedDefinition: Record<string, SchemaDefinition> = {
+  const prefixedDefinition: SchemaDefinition = {
     [prefix]: {
       type: Array,
       optional: true,

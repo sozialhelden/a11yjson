@@ -1,16 +1,6 @@
-import { Pathways, getPathwaysSchemaDefinition } from './Pathways';
-import { Complete } from './Complete';
+import { getPathwaysSchemaDefinition } from './Pathways';
 import expectValidFixture from './lib/expectValidFixture';
-import surfaceFixture from './Surface.test';
-
-const pathwaysFixture: Complete<Pathways> = {
-  width: '>150cm',
-  widthAtObstacles: '>90cm',
-  surface: surfaceFixture,
-  isKerbstoneFree: true,
-};
-
-export default pathwaysFixture;
+import { pathwaysFixture } from './pathwaysFixture';
 
 const definition = getPathwaysSchemaDefinition();
 

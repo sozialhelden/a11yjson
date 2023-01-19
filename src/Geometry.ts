@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 /**
  * [GeoJSON](https://tools.ietf.org/html/rfc7946) `Point` object.
  */
@@ -6,7 +7,7 @@ export interface PointGeometry {
   coordinates: [number, number];
 }
 
-export const getPointGeometrySchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getPointGeometrySchemaDefinition: () => SchemaDefinition = () => ({
   type: {
     type: String,
     allowedValues: ['Point'],

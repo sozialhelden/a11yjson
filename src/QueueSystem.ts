@@ -1,6 +1,6 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import SimpleSchema from 'simpl-schema';
 import BooleanField from './BooleanField';
-import { EquipmentInfo, getEquipmentInfoSchemaDefinition } from './EquipmentInfo';
 import { getGrabBarsSchemaDefinition, GrabBars } from './GrabBars';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
@@ -22,16 +22,6 @@ export interface QueueSystem extends Interactable<QueueSystemInteraction> {
    */
 
   needsTickets?: boolean;
-
-  /**
-   * The ticket printer, if existing.
-   */
-  ticketEquipment?: EquipmentInfo;
-
-  /**
-   * The ticket printer's ID on accessibility.cloud, if existing.
-   */
-  ticketEquipmentId?: string;
 
   /**
    * `true` if you can skip the queue with a disability, `false` if not.
@@ -56,11 +46,10 @@ export interface QueueSystem extends Interactable<QueueSystemInteraction> {
   grabBars?: GrabBars;
 }
 
-export const getQueueSystemSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getQueueSystemSchemaDefinition: () => SchemaDefinition = () => ({
   isAccessibleWithWheelchair: BooleanField,
   usesCattleBars: BooleanField,
   needsTickets: BooleanField,
-  ...getPrefixedSchemaDefinition('ticketEquipment', getEquipmentInfoSchemaDefinition()),
   ...getPrefixedSchemaDefinition('grabBars', getGrabBarsSchemaDefinition()),
   ticketEquipmentId: {
     type: String,

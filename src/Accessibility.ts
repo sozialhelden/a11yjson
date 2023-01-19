@@ -1,3 +1,4 @@
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import { PersonalProfile, getPersonalProfileSchemaDefinition } from './PersonalProfile';
 import { Entrance, getEntranceSchemaDefinition } from './Entrance';
@@ -244,7 +245,7 @@ export interface Accessibility extends Interactable<GenericInteraction> {
   media?: ArrayLike<Media> | null;
 }
 
-export const getAccessibilitySchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getAccessibilitySchemaDefinition: () => SchemaDefinition = () => ({
   ...getPrefixedSchemaDefinition('accessibleWith', getPersonalProfileSchemaDefinition()),
   ...getPrefixedSchemaDefinition('partiallyAccessibleWith', getPersonalProfileSchemaDefinition()),
   ...getPrefixedSchemaDefinition(

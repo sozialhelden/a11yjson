@@ -1,4 +1,4 @@
-import { t } from 'ttag';
+import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { AccessType, accessTypes } from './AccessType';
 import { CurrencyValue } from './CurrencyValue';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
@@ -71,59 +71,48 @@ export interface WifiAccessibility {
   access?: AccessType[];
 }
 
-export const getWifiAccessibilitySchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
+export const getWifiAccessibilitySchemaDefinition: () => SchemaDefinition = () => ({
   isOpenToEveryone: {
     type: Boolean,
     optional: true,
-    label: t`Is this wifi open to everyone?`,
   },
   isOpenToVisitors: {
     type: Boolean,
     optional: true,
-    label: t`Is this wifi open to visitors?`,
   },
   isOpenToStaff: {
     type: Boolean,
     optional: true,
-    label: t`Is this wifi open to staff?`,
   },
   hasFixedPassword: {
     type: Boolean,
     optional: true,
-    label: t`Does this wifi have a fixed password?`,
   },
   needsGuestPass: {
     type: Boolean,
     optional: true,
-    label: t`Do you need a guest pass to use this wifi?`,
   },
   hasCaptivePortal: {
     type: Boolean,
     optional: true,
-    label: t`Do you need to pass a captive portal to use this wifi?`,
   },
   isCaptivePortalAccessible: {
     type: Boolean,
     optional: true,
-    label: t`If there is a captive portal, is the captive portal website accessible (WAI/ARIA)?`,
   },
   ssid: {
     type: String,
     optional: true,
-    label: t`What is the name/SSID of this wifi? Only enter this if it's okay to publish this information publicly and if it can be assumed that the information is not ephemeral.`,
   },
   password: {
     type: String,
     optional: true,
-    label: t`What is the password of this wifi? Only enter this if it's okay to publish this information publicly.`,
   },
   ...getLocalizedStringSchemaDefinition('descriptionWhereToGetLoginData', {
-    label: t`Where can you find the login data for this wifi, or get a guest pass?`,
   }),
   usageFee: {
     type: Array,
     optional: true,
-    label: t`What are the usage fees for this wifi?`,
   },
   access: {
     type: Array,
@@ -131,9 +120,8 @@ export const getWifiAccessibilitySchemaDefinition: () => Record<string, SchemaDe
   },
   'access.$': {
     type: String,
-    allowedValues: accessTypes,
+    allowedValues: (accessTypes as any) as any[],
   },
   ...getLocalizedStringSchemaDefinition('usageFee.$', {
-    label: t`How much does it cost to use this wifi?`,
   }),
 });
