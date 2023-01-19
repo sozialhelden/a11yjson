@@ -28,7 +28,7 @@ describe('QuantitativeValue', () => {
 
   it('accepts an object without unit', () => expectValidUnitFixture({ value: 10, rawValue: '10' }));
 
-  it('accepts a QuantitativeValue object with precision', () => expectValidUnitFixture({
+  it('accepts a QuantitativeValue object with accuracy', () => expectValidUnitFixture({
     value: 10,
     unit: 'kilometer',
     precision: 2,
@@ -66,6 +66,17 @@ describe('parseQuantity', () => {
       value: 10,
       unit: 'cm',
       rawValue: '10cm',
+    };
+    expect(parseQuantity(lengthString)).toEqual(quantity);
+  });
+
+  it('parses a string with a range', () => {
+    const lengthString = '10 ... 20 cm';
+    const quantity = {
+      min: 10,
+      max: 20,
+      unit: 'cm',
+      rawValue: '10 ... 20 cm',
     };
     expect(parseQuantity(lengthString)).toEqual(quantity);
   });

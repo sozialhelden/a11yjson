@@ -10,6 +10,7 @@ export enum UnitKind {
   Force = 'force',
   Time = 'time',
   Acceleration = 'acceleration',
+  Mass = 'mass',
 }
 
 // https://stackoverflow.com/a/46759625/387719
@@ -37,7 +38,7 @@ export const validateUnit = function (kind: UnitKind): ValidationFunction {
     // a function or a class. We need to handle both cases.
     const QtyExport = (Qty as any).default || Qty;
     try {
-      const qty = isConstructor(QtyExport) ? (new QtyExport(this.value)) : QtyExport(this.value);
+      const qty = isConstructor(QtyExport) ? new QtyExport(this.value) : QtyExport(this.value);
       if (!qty || qty.scalar !== 1 || qty.kind() !== kind) {
         return 'notAllowed';
       }
@@ -66,7 +67,7 @@ export interface Quantity {
   /** the operator, indicating the value is not an absolute value */
   operator?: Operator;
   /** the value in the specified unit */
-  value: number;
+  value?: number;
   /** one of the length units in js-quantities */
   unit?: string;
   /** raw, imported value, eg. '90 .. 120cm' - only required when importing */
@@ -79,8 +80,10 @@ export interface Quantity {
   accuracy?: number;
   /** ± in given units, uniform error */
   precision?: number;
-  /** ± in given units, inclusive range */
-  rangeInclusive?: number;
+  /** minimal value (inclusive) */
+  min?: number;
+  /** maximal value (inclusive) */
+  max?: number;
 }
 
 /**
@@ -95,6 +98,14 @@ export const BaseQuantitySchemaDefinition = {
   },
   value: {
     type: Number,
+    optional: true,
+    // allow empty value if min or max are defined
+    custom(this: ValidationFunctionSelf<number>) {
+      if (!this.isSet && !this.siblingField('min').isSet && !this.siblingField('max').isSet) {
+        return 'required';
+      }
+      return undefined;
+    },
   },
   unit: {
     type: String,
@@ -108,7 +119,11 @@ export const BaseQuantitySchemaDefinition = {
     type: Number,
     optional: true,
   },
-  rangeInclusive: {
+  min: {
+    type: Number,
+    optional: true,
+  },
+  max: {
     type: Number,
     optional: true,
   },
@@ -141,16 +156,25 @@ const createQuantitySchemaDefinition = (
  */
 export const LengthSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Length, 'meter');
 export const SpeedSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Speed, 'meter/second');
-export const AccelerationSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Acceleration, 'g');
+export const AccelerationSchemaDefinition = createQuantitySchemaDefinition(
+  UnitKind.Acceleration,
+  'g',
+);
 export const ForceSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Force, 'Newton');
 export const TimeIntervalSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Time, 's');
+export const MassSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Mass, 's');
 export const VolumeSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Unitless, 'dB');
 export const HertzSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Unitless, 'Hz');
-export const SlopeSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Unitless);
+export const SlopeSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Unitless, 'deg');
 export const BrightnessSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Unitless, 'nits');
+export const TemperatureSchemaDefinition = createQuantitySchemaDefinition(
+  UnitKind.Unitless,
+  'degC',
+);
 
 export type Length = Quantity | string;
 export type Volume = Quantity | string;
+export type Mass = Quantity | string;
 export type Brightness = Quantity | string;
 export type Slope = Quantity | string;
 export type TimeInterval = Quantity | string;
@@ -158,13 +182,14 @@ export type Force = Quantity | string;
 export type Speed = Quantity | string;
 export type Acceleration = Quantity | string;
 export type Hertz = Quantity | string;
+export type Temperature = Quantity | string;
 
 export function parseQuantity(unitString: string): Quantity | string {
   const matches = unitString.match(
-    /^(>|<|<=|>=|=|==|~|~=|!=)? *([+-])? *(\d+(?:\.\d+)?)(?: *.. *([+-])? *(\d+(?:\.\d+)?))? *(.+)?$/,
+    /^(>|<|<=|>=|=|==|~|~=|!=)? *([+-])? *(\d+(?:\.\d+)?)(?: *(\.\.\.?) *([+-])? *(\d+(?:\.\d+)?))? *(.+)?$/,
   ) || [];
 
-  const [, operator, valuePrefix1, value1, valuePrefix2, value2, unit] = matches;
+  const [, operator, valuePrefix1, value1, dotOperator, valuePrefix2, value2, unit] = matches;
   const valueAsNumber1 = parseFloat(value1);
   const valueAsNumber2 = parseFloat(value2);
 
@@ -178,15 +203,18 @@ export function parseQuantity(unitString: string): Quantity | string {
     interpretedValue2 = valuePrefix2 === '-' ? -valueAsNumber2 : valueAsNumber2;
   }
 
-  const isRange = typeof value2 !== 'undefined';
-  const halfDifference = isRange ? 0.5 * (interpretedValue2 - interpretedValue1) : NaN;
+  const isAccuracyRange = typeof value2 !== 'undefined' && dotOperator === '..';
+  const isRange = typeof value2 !== 'undefined' && dotOperator === '...';
+  const halfDifference = isAccuracyRange ? 0.5 * (interpretedValue2 - interpretedValue1) : NaN;
 
   const result: Quantity = {
-    value: isRange ? interpretedValue1 + halfDifference : interpretedValue1,
+    ...(isRange
+      ? { min: interpretedValue1, max: interpretedValue2 }
+      : { value: isAccuracyRange ? interpretedValue1 + halfDifference : interpretedValue1 }),
     unit,
     rawValue: unitString,
   };
-  if (isRange) {
+  if (isAccuracyRange) {
     result.accuracy = halfDifference;
     result.precision = halfDifference;
   }
