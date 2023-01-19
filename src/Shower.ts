@@ -8,7 +8,7 @@ import { getGrabBarsSchemaDefinition, GrabBars } from './GrabBars';
 import { getSeatSchemaDefinition, Seat } from './Seat';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 
-const ShowerInteractions = [
+export const ShowerInteractions = [
   'transfer',
   'wash',
   'useShampoo',

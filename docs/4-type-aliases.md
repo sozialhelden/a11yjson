@@ -12,19 +12,54 @@ Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
 
 
 
+### <a id="AccessType">AccessType</a>
+
+
+
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":53,"name":"accessTypes"}}}
+
+
+
 ### <a id="ActionMode">ActionMode</a>
 
 Describes necessary abilities and modes inputting information.
 
 Definition: <pre>{
-  "id": 52,
+  "id": 60,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "children": [
     {
-      "id": 58,
+      "id": 64,
+      "name": "access",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Who has access to this action?"
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 67,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "array",
+        "elementType": {
+          "type": "reference",
+          "id": 54,
+          "name": "AccessType"
+        }
+      }
+    },
+    {
+      "id": 67,
       "name": "activationForce",
       "kind": 1024,
       "kindString": "Property",
@@ -37,18 +72,18 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 50,
+          "line": 82,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 801,
+        "id": 872,
         "name": "Force"
       }
     },
     {
-      "id": 59,
+      "id": 68,
       "name": "activationTimeInterval",
       "kind": 1024,
       "kindString": "Property",
@@ -61,18 +96,18 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 55,
+          "line": 87,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 800,
+        "id": 871,
         "name": "TimeInterval"
       }
     },
     {
-      "id": 137,
+      "id": 159,
       "name": "apiDocumentationUrl",
       "kind": 1024,
       "kindString": "Property",
@@ -85,18 +120,18 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 445,
+          "line": 542,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 369,
+        "id": 396,
         "name": "LocalizedString"
       }
     },
     {
-      "id": 60,
+      "id": 73,
       "name": "attentionSpan",
       "kind": 1024,
       "kindString": "Property",
@@ -109,18 +144,66 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 60,
+          "line": 112,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 800,
+        "id": 871,
         "name": "TimeInterval"
       }
     },
     {
-      "id": 75,
+      "id": 71,
+      "name": "bodyHeight",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "A supported body height."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 102,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 866,
+        "name": "Length"
+      }
+    },
+    {
+      "id": 70,
+      "name": "bodyMass",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "A supported body weight."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 97,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 868,
+        "name": "Mass"
+      }
+    },
+    {
+      "id": 89,
       "name": "brailleKeyboard",
       "kind": 1024,
       "kindString": "Property",
@@ -133,7 +216,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 135,
+          "line": 192,
           "character": 2
         }
       ],
@@ -143,7 +226,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 74,
+      "id": 88,
       "name": "brailleText",
       "kind": 1024,
       "kindString": "Property",
@@ -156,7 +239,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 130,
+          "line": 187,
           "character": 2
         }
       ],
@@ -166,7 +249,30 @@ Definition: <pre>{
       }
     },
     {
-      "id": 69,
+      "id": 117,
+      "name": "burnHazard",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "There is a burn hazard."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 332,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 83,
       "name": "cable",
       "kind": 1024,
       "kindString": "Property",
@@ -179,7 +285,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 105,
+          "line": 162,
           "character": 2
         }
       ],
@@ -189,7 +295,30 @@ Definition: <pre>{
       }
     },
     {
-      "id": 64,
+      "id": 105,
+      "name": "capacitive",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The action uses a capacity sensor, for example a touch sensor."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 272,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 77,
       "name": "clap",
       "kind": 1024,
       "kindString": "Property",
@@ -202,7 +331,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 80,
+          "line": 132,
           "character": 2
         }
       ],
@@ -212,7 +341,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 84,
+      "id": 98,
       "name": "click",
       "kind": 1024,
       "kindString": "Property",
@@ -225,7 +354,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 180,
+          "line": 237,
           "character": 2
         }
       ],
@@ -235,7 +364,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 54,
+      "id": 62,
       "name": "description",
       "kind": 1024,
       "kindString": "Property",
@@ -248,18 +377,66 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 30,
+          "line": 57,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 369,
+        "id": 396,
         "name": "LocalizedString"
       }
     },
     {
-      "id": 85,
+      "id": 125,
+      "name": "direction",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The direction of the action, relative to the body."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 372,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 58,
+        "name": "Direction"
+      }
+    },
+    {
+      "id": 126,
+      "name": "directionAxis",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The direction axis of the action, relative to the body."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 377,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 56,
+        "name": "DirectionAxis"
+      }
+    },
+    {
+      "id": 99,
       "name": "doubleClick",
       "kind": 1024,
       "kindString": "Property",
@@ -272,7 +449,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 185,
+          "line": 242,
           "character": 2
         }
       ],
@@ -282,7 +459,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 103,
+      "id": 123,
       "name": "drag",
       "kind": 1024,
       "kindString": "Property",
@@ -295,7 +472,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 275,
+          "line": 362,
           "character": 2
         }
       ],
@@ -305,7 +482,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 116,
+      "id": 138,
       "name": "dragAndDropGesture",
       "kind": 1024,
       "kindString": "Property",
@@ -318,7 +495,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 340,
+          "line": 437,
           "character": 2
         }
       ],
@@ -328,7 +505,33 @@ Definition: <pre>{
       }
     },
     {
-      "id": 123,
+      "id": 164,
+      "name": "educationLevel",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Education level needed to understand the action.",
+        "text": "http://www.ibe.unesco.org/en/glossary-curriculum-terminology/l/levels-education\n\n- early childhood education (level 0)\n- primary education (level 1)\n- lower secondary education (level 2)\n- upper secondary education (level 3)\n- postsecondary non-tertiary education (level 4)\n- short-cycle tertiary education (level 5)\n- bachelor’s or equivalent level (level 6)\n- master’s or equivalent level (level 7)\n- doctor or equivalent level (level 8).\n"
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 581,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "qualifiedName": "Number",
+        "package": "typescript",
+        "name": "Number"
+      }
+    },
+    {
+      "id": 145,
       "name": "eyeTracker",
       "kind": 1024,
       "kindString": "Property",
@@ -341,7 +544,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 375,
+          "line": 472,
           "character": 2
         }
       ],
@@ -351,7 +554,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 129,
+      "id": 151,
       "name": "faceRecognition",
       "kind": 1024,
       "kindString": "Property",
@@ -364,7 +567,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 405,
+          "line": 502,
           "character": 2
         }
       ],
@@ -374,7 +577,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 61,
+      "id": 74,
       "name": "feedback",
       "kind": 1024,
       "kindString": "Property",
@@ -387,7 +590,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 65,
+          "line": 117,
           "character": 2
         }
       ],
@@ -395,13 +598,13 @@ Definition: <pre>{
         "type": "array",
         "elementType": {
           "type": "reference",
-          "id": 433,
+          "id": 471,
           "name": "PerceptionMode"
         }
       }
     },
     {
-      "id": 130,
+      "id": 152,
       "name": "fingerprintScan",
       "kind": 1024,
       "kindString": "Property",
@@ -414,7 +617,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 410,
+          "line": 507,
           "character": 2
         }
       ],
@@ -424,7 +627,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 80,
+      "id": 94,
       "name": "handwriting",
       "kind": 1024,
       "kindString": "Property",
@@ -437,7 +640,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 160,
+          "line": 217,
           "character": 2
         }
       ],
@@ -447,7 +650,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 73,
+      "id": 87,
       "name": "haptic",
       "kind": 1024,
       "kindString": "Property",
@@ -460,7 +663,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 125,
+          "line": 182,
           "character": 2
         }
       ],
@@ -470,7 +673,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 122,
+      "id": 144,
       "name": "headPointer",
       "kind": 1024,
       "kindString": "Property",
@@ -483,7 +686,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 370,
+          "line": 467,
           "character": 2
         }
       ],
@@ -493,7 +696,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 68,
+      "id": 82,
       "name": "headphone",
       "kind": 1024,
       "kindString": "Property",
@@ -506,7 +709,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 100,
+          "line": 157,
           "character": 2
         }
       ],
@@ -516,7 +719,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 96,
+      "id": 112,
       "name": "highContrast",
       "kind": 1024,
       "kindString": "Property",
@@ -529,7 +732,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 240,
+          "line": 307,
           "character": 2
         }
       ],
@@ -539,7 +742,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 71,
+      "id": 85,
       "name": "instructionsUrl",
       "kind": 1024,
       "kindString": "Property",
@@ -552,18 +755,18 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 115,
+          "line": 172,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 369,
+        "id": 396,
         "name": "LocalizedString"
       }
     },
     {
-      "id": 131,
+      "id": 153,
       "name": "irisScan",
       "kind": 1024,
       "kindString": "Property",
@@ -576,7 +779,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 415,
+          "line": 512,
           "character": 2
         }
       ],
@@ -586,7 +789,30 @@ Definition: <pre>{
       }
     },
     {
-      "id": 138,
+      "id": 161,
+      "name": "isEasyToFind",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "`true` if the item is easy to find, `false` if people might face difficulties trying to\nfind the item, or `undefined` if this is unknown or irrelevant."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 554,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 160,
       "name": "isEasyToUnderstand",
       "kind": 1024,
       "kindString": "Property",
@@ -599,7 +825,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 451,
+          "line": 548,
           "character": 2
         }
       ],
@@ -609,7 +835,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 101,
+      "id": 120,
       "name": "joystick",
       "kind": 1024,
       "kindString": "Property",
@@ -622,7 +848,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 265,
+          "line": 347,
           "character": 2
         }
       ],
@@ -632,7 +858,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 81,
+      "id": 95,
       "name": "keyboard",
       "kind": 1024,
       "kindString": "Property",
@@ -645,7 +871,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 165,
+          "line": 222,
           "character": 2
         }
       ],
@@ -655,7 +881,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 82,
+      "id": 96,
       "name": "keypad",
       "kind": 1024,
       "kindString": "Property",
@@ -668,7 +894,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 170,
+          "line": 227,
           "character": 2
         }
       ],
@@ -678,7 +904,53 @@ Definition: <pre>{
       }
     },
     {
-      "id": 55,
+      "id": 122,
+      "name": "knob",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The action uses a knob."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 357,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 111,
+      "name": "knurled",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The input has a knurled surface, for example around buttons."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 302,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 63,
       "name": "languages",
       "kind": 1024,
       "kindString": "Property",
@@ -691,7 +963,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 35,
+          "line": 62,
           "character": 2
         }
       ],
@@ -699,13 +971,13 @@ Definition: <pre>{
         "type": "array",
         "elementType": {
           "type": "reference",
-          "id": 833,
+          "id": 910,
           "name": "IetfLanguageTag"
         }
       }
     },
     {
-      "id": 78,
+      "id": 92,
       "name": "leftHanded",
       "kind": 1024,
       "kindString": "Property",
@@ -718,7 +990,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 150,
+          "line": 207,
           "character": 2
         }
       ],
@@ -728,7 +1000,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 111,
+      "id": 133,
       "name": "lick",
       "kind": 1024,
       "kindString": "Property",
@@ -741,7 +1013,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 315,
+          "line": 412,
           "character": 2
         }
       ],
@@ -751,7 +1023,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 63,
+      "id": 76,
       "name": "morseCode",
       "kind": 1024,
       "kindString": "Property",
@@ -764,7 +1036,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 75,
+          "line": 127,
           "character": 2
         }
       ],
@@ -774,7 +1046,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 83,
+      "id": 97,
       "name": "mouse",
       "kind": 1024,
       "kindString": "Property",
@@ -787,7 +1059,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 175,
+          "line": 232,
           "character": 2
         }
       ],
@@ -797,7 +1069,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 109,
+      "id": 131,
       "name": "move",
       "kind": 1024,
       "kindString": "Property",
@@ -810,7 +1082,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 305,
+          "line": 402,
           "character": 2
         }
       ],
@@ -820,7 +1092,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 53,
+      "id": 61,
       "name": "name",
       "kind": 1024,
       "kindString": "Property",
@@ -833,18 +1105,42 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 25,
+          "line": 52,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 369,
+        "id": 396,
         "name": "LocalizedString"
       }
     },
     {
-      "id": 136,
+      "id": 72,
+      "name": "necessaryClimbHeight",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Height you need to be able to climb over (for obstacles)"
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 107,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 866,
+        "name": "Length"
+      }
+    },
+    {
+      "id": 158,
       "name": "necessaryEyeHeight",
       "kind": 1024,
       "kindString": "Property",
@@ -857,18 +1153,18 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 440,
+          "line": 537,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 796,
+        "id": 866,
         "name": "Length"
       }
     },
     {
-      "id": 135,
+      "id": 157,
       "name": "necessaryGripHeight",
       "kind": 1024,
       "kindString": "Property",
@@ -881,18 +1177,18 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 435,
+          "line": 532,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 796,
+        "id": 866,
         "name": "Length"
       }
     },
     {
-      "id": 56,
+      "id": 65,
       "name": "optional",
       "kind": 1024,
       "kindString": "Property",
@@ -905,7 +1201,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 40,
+          "line": 72,
           "character": 2
         }
       ],
@@ -915,7 +1211,30 @@ Definition: <pre>{
       }
     },
     {
-      "id": 92,
+      "id": 115,
+      "name": "paper",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Handling paper is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 322,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 107,
       "name": "pedal",
       "kind": 1024,
       "kindString": "Property",
@@ -928,7 +1247,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 220,
+          "line": 282,
           "character": 2
         }
       ],
@@ -938,7 +1257,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 126,
+      "id": 148,
       "name": "photo",
       "kind": 1024,
       "kindString": "Property",
@@ -951,7 +1270,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 390,
+          "line": 487,
           "character": 2
         }
       ],
@@ -961,7 +1280,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 105,
+      "id": 127,
       "name": "pinch",
       "kind": 1024,
       "kindString": "Property",
@@ -974,7 +1293,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 285,
+          "line": 382,
           "character": 2
         }
       ],
@@ -984,7 +1303,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 115,
+      "id": 137,
       "name": "pinchFingerGesture",
       "kind": 1024,
       "kindString": "Property",
@@ -997,7 +1316,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 335,
+          "line": 432,
           "character": 2
         }
       ],
@@ -1007,7 +1326,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 99,
+      "id": 118,
       "name": "press",
       "kind": 1024,
       "kindString": "Property",
@@ -1020,7 +1339,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 255,
+          "line": 337,
           "character": 2
         }
       ],
@@ -1030,7 +1349,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 93,
+      "id": 108,
       "name": "pullSwitch",
       "kind": 1024,
       "kindString": "Property",
@@ -1043,7 +1362,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 225,
+          "line": 287,
           "character": 2
         }
       ],
@@ -1053,7 +1372,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 94,
+      "id": 109,
       "name": "pullstring",
       "kind": 1024,
       "kindString": "Property",
@@ -1066,7 +1385,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 230,
+          "line": 292,
           "character": 2
         }
       ],
@@ -1076,7 +1395,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 90,
+      "id": 104,
       "name": "pushButton",
       "kind": 1024,
       "kindString": "Property",
@@ -1089,7 +1408,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 210,
+          "line": 267,
           "character": 2
         }
       ],
@@ -1099,7 +1418,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 89,
+      "id": 103,
       "name": "pushSwitch",
       "kind": 1024,
       "kindString": "Property",
@@ -1112,7 +1431,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 205,
+          "line": 262,
           "character": 2
         }
       ],
@@ -1122,7 +1441,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 67,
+      "id": 81,
       "name": "qrCode",
       "kind": 1024,
       "kindString": "Property",
@@ -1135,7 +1454,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 95,
+          "line": 152,
           "character": 2
         }
       ],
@@ -1145,7 +1464,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 132,
+      "id": 154,
       "name": "raisedText",
       "kind": 1024,
       "kindString": "Property",
@@ -1158,7 +1477,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 420,
+          "line": 517,
           "character": 2
         }
       ],
@@ -1168,7 +1487,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 57,
+      "id": 66,
       "name": "required",
       "kind": 1024,
       "kindString": "Property",
@@ -1181,7 +1500,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 45,
+          "line": 77,
           "character": 2
         }
       ],
@@ -1191,7 +1510,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 121,
+      "id": 143,
       "name": "rhythm",
       "kind": 1024,
       "kindString": "Property",
@@ -1204,7 +1523,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 365,
+          "line": 462,
           "character": 2
         }
       ],
@@ -1214,7 +1533,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 79,
+      "id": 93,
       "name": "rightHanded",
       "kind": 1024,
       "kindString": "Property",
@@ -1227,7 +1546,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 155,
+          "line": 212,
           "character": 2
         }
       ],
@@ -1237,7 +1556,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 107,
+      "id": 129,
       "name": "rotate",
       "kind": 1024,
       "kindString": "Property",
@@ -1250,7 +1569,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 295,
+          "line": 392,
           "character": 2
         }
       ],
@@ -1260,7 +1579,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 117,
+      "id": 139,
       "name": "rotateTwoFingersGesture",
       "kind": 1024,
       "kindString": "Property",
@@ -1273,7 +1592,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 345,
+          "line": 442,
           "character": 2
         }
       ],
@@ -1283,7 +1602,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 113,
+      "id": 135,
       "name": "scratch",
       "kind": 1024,
       "kindString": "Property",
@@ -1296,7 +1615,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 325,
+          "line": 422,
           "character": 2
         }
       ],
@@ -1306,7 +1625,30 @@ Definition: <pre>{
       }
     },
     {
-      "id": 66,
+      "id": 114,
+      "name": "screen",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "A screen is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 317,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 80,
       "name": "signLanguage",
       "kind": 1024,
       "kindString": "Property",
@@ -1319,7 +1661,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 90,
+          "line": 147,
           "character": 2
         }
       ],
@@ -1329,7 +1671,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 77,
+      "id": 91,
       "name": "singleHanded",
       "kind": 1024,
       "kindString": "Property",
@@ -1342,7 +1684,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 145,
+          "line": 202,
           "character": 2
         }
       ],
@@ -1352,7 +1694,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 114,
+      "id": 136,
       "name": "sipAndPuff",
       "kind": 1024,
       "kindString": "Property",
@@ -1365,7 +1707,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 330,
+          "line": 427,
           "character": 2
         }
       ],
@@ -1375,7 +1717,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 112,
+      "id": 134,
       "name": "smell",
       "kind": 1024,
       "kindString": "Property",
@@ -1388,7 +1730,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 320,
+          "line": 417,
           "character": 2
         }
       ],
@@ -1398,7 +1740,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 128,
+      "id": 150,
       "name": "soundRecording",
       "kind": 1024,
       "kindString": "Property",
@@ -1411,7 +1753,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 400,
+          "line": 497,
           "character": 2
         }
       ],
@@ -1421,7 +1763,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 62,
+      "id": 75,
       "name": "speak",
       "kind": 1024,
       "kindString": "Property",
@@ -1434,7 +1776,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 70,
+          "line": 122,
           "character": 2
         }
       ],
@@ -1444,7 +1786,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 106,
+      "id": 128,
       "name": "squeeze",
       "kind": 1024,
       "kindString": "Property",
@@ -1457,7 +1799,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 290,
+          "line": 387,
           "character": 2
         }
       ],
@@ -1467,7 +1809,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 91,
+      "id": 106,
       "name": "stateCount",
       "kind": 1024,
       "kindString": "Property",
@@ -1480,7 +1822,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 215,
+          "line": 277,
           "character": 2
         }
       ],
@@ -1490,7 +1832,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 118,
+      "id": 140,
       "name": "swipeFingerGesture",
       "kind": 1024,
       "kindString": "Property",
@@ -1503,7 +1845,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 350,
+          "line": 447,
           "character": 2
         }
       ],
@@ -1513,7 +1855,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 120,
+      "id": 142,
       "name": "swipeThreeFingersGesture",
       "kind": 1024,
       "kindString": "Property",
@@ -1526,7 +1868,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 360,
+          "line": 457,
           "character": 2
         }
       ],
@@ -1536,7 +1878,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 119,
+      "id": 141,
       "name": "swipeTwoFingersGesture",
       "kind": 1024,
       "kindString": "Property",
@@ -1549,7 +1891,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 355,
+          "line": 452,
           "character": 2
         }
       ],
@@ -1559,7 +1901,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 72,
+      "id": 86,
       "name": "tactile",
       "kind": 1024,
       "kindString": "Property",
@@ -1572,7 +1914,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 120,
+          "line": 177,
           "character": 2
         }
       ],
@@ -1582,7 +1924,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 95,
+      "id": 110,
       "name": "tactileGuides",
       "kind": 1024,
       "kindString": "Property",
@@ -1595,7 +1937,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 235,
+          "line": 297,
           "character": 2
         }
       ],
@@ -1605,7 +1947,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 87,
+      "id": 101,
       "name": "tap",
       "kind": 1024,
       "kindString": "Property",
@@ -1618,7 +1960,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 195,
+          "line": 252,
           "character": 2
         }
       ],
@@ -1628,7 +1970,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 100,
+      "id": 119,
       "name": "tearApart",
       "kind": 1024,
       "kindString": "Property",
@@ -1641,7 +1983,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 260,
+          "line": 342,
           "character": 2
         }
       ],
@@ -1651,7 +1993,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 139,
+      "id": 162,
       "name": "techSufficient",
       "kind": 1024,
       "kindString": "Property",
@@ -1664,7 +2006,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 456,
+          "line": 559,
           "character": 2
         }
       ],
@@ -1672,13 +2014,13 @@ Definition: <pre>{
         "type": "array",
         "elementType": {
           "type": "reference",
-          "id": 708,
+          "id": 766,
           "name": "TechCombination"
         }
       }
     },
     {
-      "id": 140,
+      "id": 163,
       "name": "techSupported",
       "kind": 1024,
       "kindString": "Property",
@@ -1691,7 +2033,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 461,
+          "line": 564,
           "character": 2
         }
       ],
@@ -1699,13 +2041,13 @@ Definition: <pre>{
         "type": "array",
         "elementType": {
           "type": "reference",
-          "id": 708,
+          "id": 766,
           "name": "TechCombination"
         }
       }
     },
     {
-      "id": 108,
+      "id": 130,
       "name": "tilt",
       "kind": 1024,
       "kindString": "Property",
@@ -1718,7 +2060,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 300,
+          "line": 397,
           "character": 2
         }
       ],
@@ -1728,7 +2070,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 110,
+      "id": 132,
       "name": "tongue",
       "kind": 1024,
       "kindString": "Property",
@@ -1741,7 +2083,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 310,
+          "line": 407,
           "character": 2
         }
       ],
@@ -1751,7 +2093,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 98,
+      "id": 116,
       "name": "touch",
       "kind": 1024,
       "kindString": "Property",
@@ -1764,7 +2106,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 250,
+          "line": 327,
           "character": 2
         }
       ],
@@ -1774,7 +2116,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 97,
+      "id": 113,
       "name": "touchscreen",
       "kind": 1024,
       "kindString": "Property",
@@ -1787,7 +2129,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 245,
+          "line": 312,
           "character": 2
         }
       ],
@@ -1797,7 +2139,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 88,
+      "id": 102,
       "name": "trackball",
       "kind": 1024,
       "kindString": "Property",
@@ -1810,7 +2152,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 200,
+          "line": 257,
           "character": 2
         }
       ],
@@ -1820,7 +2162,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 86,
+      "id": 100,
       "name": "tripleClick",
       "kind": 1024,
       "kindString": "Property",
@@ -1833,7 +2175,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 190,
+          "line": 247,
           "character": 2
         }
       ],
@@ -1843,7 +2185,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 104,
+      "id": 124,
       "name": "turn",
       "kind": 1024,
       "kindString": "Property",
@@ -1856,7 +2198,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 280,
+          "line": 367,
           "character": 2
         }
       ],
@@ -1866,7 +2208,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 102,
+      "id": 121,
       "name": "turnKnob",
       "kind": 1024,
       "kindString": "Property",
@@ -1879,7 +2221,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 270,
+          "line": 352,
           "character": 2
         }
       ],
@@ -1889,7 +2231,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 76,
+      "id": 90,
       "name": "twoHanded",
       "kind": 1024,
       "kindString": "Property",
@@ -1902,7 +2244,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 140,
+          "line": 197,
           "character": 2
         }
       ],
@@ -1912,7 +2254,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 70,
+      "id": 84,
       "name": "url",
       "kind": 1024,
       "kindString": "Property",
@@ -1925,18 +2267,18 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 110,
+          "line": 167,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 369,
+        "id": 396,
         "name": "LocalizedString"
       }
     },
     {
-      "id": 127,
+      "id": 149,
       "name": "video",
       "kind": 1024,
       "kindString": "Property",
@@ -1949,7 +2291,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 395,
+          "line": 492,
           "character": 2
         }
       ],
@@ -1959,7 +2301,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 134,
+      "id": 156,
       "name": "visualRecognition",
       "kind": 1024,
       "kindString": "Property",
@@ -1972,7 +2314,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 430,
+          "line": 527,
           "character": 2
         }
       ],
@@ -1982,7 +2324,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 133,
+      "id": 155,
       "name": "voiceActivation",
       "kind": 1024,
       "kindString": "Property",
@@ -1995,7 +2337,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 425,
+          "line": 522,
           "character": 2
         }
       ],
@@ -2005,7 +2347,30 @@ Definition: <pre>{
       }
     },
     {
-      "id": 65,
+      "id": 79,
+      "name": "walk",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Walking is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 142,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 78,
       "name": "wave",
       "kind": 1024,
       "kindString": "Property",
@@ -2018,7 +2383,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 85,
+          "line": 137,
           "character": 2
         }
       ],
@@ -2028,7 +2393,31 @@ Definition: <pre>{
       }
     },
     {
-      "id": 124,
+      "id": 69,
+      "name": "weight",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "A weight you need to be able to lift."
+      },
+      "sources": [
+        {
+          "fileName": "ActionMode.ts",
+          "line": 92,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 868,
+        "name": "Mass"
+      }
+    },
+    {
+      "id": 146,
       "name": "wheel",
       "kind": 1024,
       "kindString": "Property",
@@ -2041,7 +2430,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 380,
+          "line": 477,
           "character": 2
         }
       ],
@@ -2051,7 +2440,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 125,
+      "id": 147,
       "name": "wireless",
       "kind": 1024,
       "kindString": "Property",
@@ -2064,7 +2453,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "ActionMode.ts",
-          "line": 385,
+          "line": 482,
           "character": 2
         }
       ],
@@ -2079,101 +2468,117 @@ Definition: <pre>{
       "title": "Properties",
       "kind": 1024,
       "children": [
-        58,
-        59,
-        137,
-        60,
-        75,
-        74,
-        69,
         64,
-        84,
-        54,
-        85,
-        103,
-        116,
-        123,
-        129,
-        61,
-        130,
-        80,
-        73,
-        122,
+        67,
         68,
-        96,
+        159,
+        73,
         71,
-        131,
+        70,
+        89,
+        88,
+        117,
+        83,
+        105,
+        77,
+        98,
+        62,
+        125,
+        126,
+        99,
+        123,
         138,
-        101,
-        81,
+        164,
+        145,
+        151,
+        74,
+        152,
+        94,
+        87,
+        144,
         82,
-        55,
-        78,
+        112,
+        85,
+        153,
+        161,
+        160,
+        120,
+        95,
+        96,
+        122,
         111,
         63,
-        83,
-        109,
-        53,
-        136,
-        135,
-        56,
         92,
-        126,
-        105,
-        115,
-        99,
-        93,
-        94,
-        90,
-        89,
-        67,
-        132,
-        57,
-        121,
-        79,
-        107,
-        117,
-        113,
-        66,
-        77,
-        114,
-        112,
-        128,
-        62,
-        106,
-        91,
-        118,
-        120,
-        119,
-        72,
-        95,
-        87,
-        100,
-        139,
-        140,
-        108,
-        110,
-        98,
-        97,
-        88,
-        86,
-        104,
-        102,
-        76,
-        70,
-        127,
-        134,
         133,
+        76,
+        97,
+        131,
+        61,
+        72,
+        158,
+        157,
         65,
+        115,
+        107,
+        148,
+        127,
+        137,
+        118,
+        108,
+        109,
+        104,
+        103,
+        81,
+        154,
+        66,
+        143,
+        93,
+        129,
+        139,
+        135,
+        114,
+        80,
+        91,
+        136,
+        134,
+        150,
+        75,
+        128,
+        106,
+        140,
+        142,
+        141,
+        86,
+        110,
+        101,
+        119,
+        162,
+        163,
+        130,
+        132,
+        116,
+        113,
+        102,
+        100,
         124,
-        125
+        121,
+        90,
+        84,
+        149,
+        156,
+        155,
+        79,
+        78,
+        69,
+        146,
+        147
       ]
     }
   ],
   "sources": [
     {
       "fileName": "ActionMode.ts",
-      "line": 21,
+      "line": 48,
       "character": 25
     }
   ]
@@ -2186,6 +2591,46 @@ Definition: <pre>{
 
 
 Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
+
+
+
+### <a id="DeskInteraction">DeskInteraction</a>
+
+
+
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":204,"name":"DeskInteractions"}}}
+
+
+
+### <a id="Direction">Direction</a>
+
+
+
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":57,"name":"Directions"}}}
+
+
+
+### <a id="DirectionAxis">DirectionAxis</a>
+
+
+
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":55,"name":"DirectionAxes"}}}
+
+
+
+### <a id="DoorInteraction">DoorInteraction</a>
+
+
+
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":222,"name":"DoorInteractions"}}}
+
+
+
+### <a id="EquipmentInteraction">EquipmentInteraction</a>
+
+
+
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":292,"name":"EquipmentInteractions"}}}
 
 
 
@@ -2202,6 +2647,22 @@ Definition: <code>"bed"</code>&nbsp;|&nbsp;<code>"wardrobe"</code>&nbsp;|&nbsp;<
 
 
 Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
+
+
+
+### <a id="GenericInteraction">GenericInteraction</a>
+
+
+
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":16,"name":"GenericInteractions"}}}
+
+
+
+### <a id="GrabBarsInteraction">GrabBarsInteraction</a>
+
+
+
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":341,"name":"GrabBarsInteractions"}}}
 
 
 
@@ -2231,6 +2692,14 @@ Definition: <a href="#IetfLanguageTag">IetfLanguageTag</a>&nbsp;|&nbsp;<a href="
 
 
 
+### <a id="IntercomInteraction">IntercomInteraction</a>
+
+
+
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":375,"name":"IntercomInteractions"}}}
+
+
+
 ### <a id="Length">Length</a>
 
 
@@ -2247,11 +2716,51 @@ Definition: <a href="#Record">Record</a>
 
 
 
+### <a id="Mass">Mass</a>
+
+
+
+Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
+
+
+
+### <a id="MediaInteraction">MediaInteraction</a>
+
+
+
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":397,"name":"MediaInteractions"}}}
+
+
+
+### <a id="MirrorInteraction">MirrorInteraction</a>
+
+
+
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":422,"name":"MirrorInteractions"}}}
+
+
+
 ### <a id="Operator">Operator</a>
 
 The allowed operators for comparison quantities
 
 Definition: <code>"<"</code>&nbsp;|&nbsp;<code>"<="</code>&nbsp;|&nbsp;<code>"=="</code>&nbsp;|&nbsp;<code>">="</code>&nbsp;|&nbsp;<code>">"</code>&nbsp;|&nbsp;<code>"="</code>&nbsp;|&nbsp;<code>"~"</code>&nbsp;|&nbsp;<code>"~="</code>&nbsp;|&nbsp;<code>"!="</code>
+
+
+
+### <a id="ParkingInteraction">ParkingInteraction</a>
+
+
+
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":431,"name":"ParkingInteractions"}}}
+
+
+
+### <a id="Paymentnteraction">Paymentnteraction</a>
+
+
+
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":459,"name":"PaymentInteractions"}}}
 
 
 
@@ -2261,14 +2770,14 @@ Describes necessary abilities and modes for interpreting information output, sig
 content.
 
 Definition: <pre>{
-  "id": 434,
+  "id": 472,
   "name": "__type",
   "kind": 65536,
   "kindString": "Type literal",
   "flags": {},
   "children": [
     {
-      "id": 450,
+      "id": 489,
       "name": "acceleration",
       "kind": 1024,
       "kindString": "Property",
@@ -2281,18 +2790,18 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 109,
+          "line": 116,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 803,
+        "id": 874,
         "name": "Acceleration"
       }
     },
     {
-      "id": 441,
+      "id": 479,
       "name": "activationSignal",
       "kind": 1024,
       "kindString": "Property",
@@ -2305,7 +2814,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 64,
+          "line": 66,
           "character": 2
         }
       ],
@@ -2315,7 +2824,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 444,
+      "id": 482,
       "name": "alarm",
       "kind": 1024,
       "kindString": "Property",
@@ -2328,7 +2837,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 79,
+          "line": 81,
           "character": 2
         }
       ],
@@ -2338,7 +2847,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 457,
+      "id": 496,
       "name": "ambientNoiseLevel",
       "kind": 1024,
       "kindString": "Property",
@@ -2351,18 +2860,42 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 145,
+          "line": 152,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 797,
+        "id": 867,
         "name": "Volume"
       }
     },
     {
-      "id": 483,
+      "id": 536,
+      "name": "ambientTemperature",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ambient temperature around the output."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 366,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 876,
+        "name": "Temperature"
+      }
+    },
+    {
+      "id": 524,
       "name": "animation",
       "kind": 1024,
       "kindString": "Property",
@@ -2375,7 +2908,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 289,
+          "line": 306,
           "character": 2
         }
       ],
@@ -2385,7 +2918,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 508,
+      "id": 554,
       "name": "apiDocumentationUrl",
       "kind": 1024,
       "kindString": "Property",
@@ -2398,7 +2931,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 414,
+          "line": 456,
           "character": 2
         }
       ],
@@ -2408,7 +2941,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 468,
+      "id": 508,
       "name": "attentionSpan",
       "kind": 1024,
       "kindString": "Property",
@@ -2421,18 +2954,18 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 201,
+          "line": 213,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 800,
+        "id": 871,
         "name": "TimeInterval"
       }
     },
     {
-      "id": 459,
+      "id": 498,
       "name": "audibleClick",
       "kind": 1024,
       "kindString": "Property",
@@ -2445,7 +2978,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 155,
+          "line": 162,
           "character": 2
         }
       ],
@@ -2455,7 +2988,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 472,
+      "id": 513,
       "name": "audioDescription",
       "kind": 1024,
       "kindString": "Property",
@@ -2468,7 +3001,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 221,
+          "line": 238,
           "character": 2
         }
       ],
@@ -2478,7 +3011,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 512,
+      "id": 559,
       "name": "audioIsComprehensible",
       "kind": 1024,
       "kindString": "Property",
@@ -2491,7 +3024,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 436,
+          "line": 483,
           "character": 2
         }
       ],
@@ -2501,7 +3034,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 498,
+      "id": 544,
       "name": "backgroundColors",
       "kind": 1024,
       "kindString": "Property",
@@ -2514,7 +3047,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 364,
+          "line": 406,
           "character": 2
         }
       ],
@@ -2527,7 +3060,30 @@ Definition: <pre>{
       }
     },
     {
-      "id": 461,
+      "id": 499,
+      "name": "backgroundMusic",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "There is background music playing."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 167,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 501,
       "name": "beep",
       "kind": 1024,
       "kindString": "Property",
@@ -2540,7 +3096,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 165,
+          "line": 177,
           "character": 2
         }
       ],
@@ -2550,7 +3106,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 462,
+      "id": 502,
       "name": "bing",
       "kind": 1024,
       "kindString": "Property",
@@ -2563,7 +3119,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 170,
+          "line": 182,
           "character": 2
         }
       ],
@@ -2573,7 +3129,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 494,
+      "id": 540,
       "name": "blackAndWhite",
       "kind": 1024,
       "kindString": "Property",
@@ -2586,7 +3142,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 344,
+          "line": 386,
           "character": 2
         }
       ],
@@ -2596,7 +3152,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 488,
+      "id": 529,
       "name": "braille",
       "kind": 1024,
       "kindString": "Property",
@@ -2609,7 +3165,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 314,
+          "line": 331,
           "character": 2
         }
       ],
@@ -2619,7 +3175,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 455,
+      "id": 494,
       "name": "breathing",
       "kind": 1024,
       "kindString": "Property",
@@ -2632,7 +3188,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 134,
+          "line": 141,
           "character": 2
         }
       ],
@@ -2642,7 +3198,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 456,
+      "id": 495,
       "name": "brightness",
       "kind": 1024,
       "kindString": "Property",
@@ -2655,18 +3211,18 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 139,
+          "line": 146,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 798,
+        "id": 869,
         "name": "Brightness"
       }
     },
     {
-      "id": 503,
+      "id": 549,
       "name": "byod",
       "kind": 1024,
       "kindString": "Property",
@@ -2679,7 +3235,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 389,
+          "line": 431,
           "character": 2
         }
       ],
@@ -2689,7 +3245,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 501,
+      "id": 547,
       "name": "cable",
       "kind": 1024,
       "kindString": "Property",
@@ -2702,7 +3258,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 379,
+          "line": 421,
           "character": 2
         }
       ],
@@ -2712,7 +3268,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 491,
+      "id": 537,
       "name": "chart",
       "kind": 1024,
       "kindString": "Property",
@@ -2725,7 +3281,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 329,
+          "line": 371,
           "character": 2
         }
       ],
@@ -2735,7 +3291,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 495,
+      "id": 541,
       "name": "colorCode",
       "kind": 1024,
       "kindString": "Property",
@@ -2748,7 +3304,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 349,
+          "line": 391,
           "character": 2
         }
       ],
@@ -2758,7 +3314,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 496,
+      "id": 542,
       "name": "colorGradient",
       "kind": 1024,
       "kindString": "Property",
@@ -2771,7 +3327,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 354,
+          "line": 396,
           "character": 2
         }
       ],
@@ -2781,7 +3337,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 513,
+      "id": 560,
       "name": "contentWarning",
       "kind": 1024,
       "kindString": "Property",
@@ -2794,18 +3350,18 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 442,
+          "line": 489,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 369,
+        "id": 396,
         "name": "LocalizedString"
       }
     },
     {
-      "id": 470,
+      "id": 511,
       "name": "dedicatedScreenForSubtitles",
       "kind": 1024,
       "kindString": "Property",
@@ -2818,7 +3374,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 211,
+          "line": 228,
           "character": 2
         }
       ],
@@ -2828,7 +3384,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 436,
+      "id": 474,
       "name": "description",
       "kind": 1024,
       "kindString": "Property",
@@ -2841,18 +3397,18 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 39,
+          "line": 41,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 369,
+        "id": 396,
         "name": "LocalizedString"
       }
     },
     {
-      "id": 467,
+      "id": 507,
       "name": "duration",
       "kind": 1024,
       "kindString": "Property",
@@ -2865,18 +3421,18 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 196,
+          "line": 208,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 800,
+        "id": 871,
         "name": "TimeInterval"
       }
     },
     {
-      "id": 475,
+      "id": 516,
       "name": "educationLevel",
       "kind": 1024,
       "kindString": "Property",
@@ -2890,7 +3446,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 248,
+          "line": 265,
           "character": 2
         }
       ],
@@ -2902,7 +3458,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 477,
+      "id": 518,
       "name": "flash",
       "kind": 1024,
       "kindString": "Property",
@@ -2915,7 +3471,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 258,
+          "line": 275,
           "character": 2
         }
       ],
@@ -2925,7 +3481,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 478,
+      "id": 519,
       "name": "flashingHazard",
       "kind": 1024,
       "kindString": "Property",
@@ -2938,7 +3494,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 264,
+          "line": 281,
           "character": 2
         }
       ],
@@ -2948,7 +3504,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 493,
+      "id": 539,
       "name": "fontSize",
       "kind": 1024,
       "kindString": "Property",
@@ -2961,18 +3517,18 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 339,
+          "line": 381,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 796,
+        "id": 866,
         "name": "Length"
       }
     },
     {
-      "id": 449,
+      "id": 488,
       "name": "force",
       "kind": 1024,
       "kindString": "Property",
@@ -2985,18 +3541,18 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 104,
+          "line": 111,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 801,
+        "id": 872,
         "name": "Force"
       }
     },
     {
-      "id": 448,
+      "id": 487,
       "name": "forceFeedback",
       "kind": 1024,
       "kindString": "Property",
@@ -3009,7 +3565,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 99,
+          "line": 106,
           "character": 2
         }
       ],
@@ -3019,7 +3575,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 497,
+      "id": 543,
       "name": "foregroundColors",
       "kind": 1024,
       "kindString": "Property",
@@ -3032,7 +3588,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 359,
+          "line": 401,
           "character": 2
         }
       ],
@@ -3045,7 +3601,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 484,
+      "id": 525,
       "name": "framerate",
       "kind": 1024,
       "kindString": "Property",
@@ -3058,18 +3614,18 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 294,
+          "line": 311,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 804,
+        "id": 875,
         "name": "Hertz"
       }
     },
     {
-      "id": 479,
+      "id": 520,
       "name": "frequency",
       "kind": 1024,
       "kindString": "Property",
@@ -3082,18 +3638,18 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 269,
+          "line": 286,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 804,
+        "id": 875,
         "name": "Hertz"
       }
     },
     {
-      "id": 453,
+      "id": 492,
       "name": "fullBody",
       "kind": 1024,
       "kindString": "Property",
@@ -3106,7 +3662,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 124,
+          "line": 131,
           "character": 2
         }
       ],
@@ -3116,7 +3672,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 476,
+      "id": 517,
       "name": "handwritten",
       "kind": 1024,
       "kindString": "Property",
@@ -3129,7 +3685,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 253,
+          "line": 270,
           "character": 2
         }
       ],
@@ -3139,7 +3695,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 464,
+      "id": 504,
       "name": "haptic",
       "kind": 1024,
       "kindString": "Property",
@@ -3152,7 +3708,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 180,
+          "line": 192,
           "character": 2
         }
       ],
@@ -3162,7 +3718,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 458,
+      "id": 497,
       "name": "hapticClick",
       "kind": 1024,
       "kindString": "Property",
@@ -3175,7 +3731,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 150,
+          "line": 157,
           "character": 2
         }
       ],
@@ -3185,7 +3741,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 500,
+      "id": 546,
       "name": "headphone",
       "kind": 1024,
       "kindString": "Property",
@@ -3198,7 +3754,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 374,
+          "line": 416,
           "character": 2
         }
       ],
@@ -3208,7 +3764,30 @@ Definition: <pre>{
       }
     },
     {
-      "id": 492,
+      "id": 534,
+      "name": "heat",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "Heat perception is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 356,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 538,
       "name": "highContrast",
       "kind": 1024,
       "kindString": "Property",
@@ -3221,7 +3800,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 334,
+          "line": 376,
           "character": 2
         }
       ],
@@ -3231,7 +3810,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 443,
+      "id": 481,
       "name": "info",
       "kind": 1024,
       "kindString": "Property",
@@ -3244,7 +3823,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 74,
+          "line": 76,
           "character": 2
         }
       ],
@@ -3254,7 +3833,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 507,
+      "id": 553,
       "name": "instructionsUrl",
       "kind": 1024,
       "kindString": "Property",
@@ -3267,18 +3846,41 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 409,
+          "line": 451,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 369,
+        "id": 396,
         "name": "LocalizedString"
       }
     },
     {
-      "id": 509,
+      "id": 556,
+      "name": "isEasyToFind",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "`true` if the input is easy to find."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 467,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 555,
       "name": "isEasyToUnderstand",
       "kind": 1024,
       "kindString": "Property",
@@ -3291,7 +3893,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 420,
+          "line": 462,
           "character": 2
         }
       ],
@@ -3301,7 +3903,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 437,
+      "id": 475,
       "name": "languages",
       "kind": 1024,
       "kindString": "Property",
@@ -3314,7 +3916,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 44,
+          "line": 46,
           "character": 2
         }
       ],
@@ -3322,13 +3924,13 @@ Definition: <pre>{
         "type": "array",
         "elementType": {
           "type": "reference",
-          "id": 833,
+          "id": 910,
           "name": "IetfLanguageTag"
         }
       }
     },
     {
-      "id": 454,
+      "id": 493,
       "name": "led",
       "kind": 1024,
       "kindString": "Property",
@@ -3341,7 +3943,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 129,
+          "line": 136,
           "character": 2
         }
       ],
@@ -3351,7 +3953,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 446,
+      "id": 484,
       "name": "light",
       "kind": 1024,
       "kindString": "Property",
@@ -3364,7 +3966,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 89,
+          "line": 91,
           "character": 2
         }
       ],
@@ -3374,7 +3976,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 480,
+      "id": 521,
       "name": "morse",
       "kind": 1024,
       "kindString": "Property",
@@ -3387,7 +3989,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 274,
+          "line": 291,
           "character": 2
         }
       ],
@@ -3397,7 +3999,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 460,
+      "id": 500,
       "name": "music",
       "kind": 1024,
       "kindString": "Property",
@@ -3410,7 +4012,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 160,
+          "line": 172,
           "character": 2
         }
       ],
@@ -3420,7 +4022,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 435,
+      "id": 473,
       "name": "name",
       "kind": 1024,
       "kindString": "Property",
@@ -3433,18 +4035,18 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 34,
+          "line": 36,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 369,
+        "id": 396,
         "name": "LocalizedString"
       }
     },
     {
-      "id": 511,
+      "id": 558,
       "name": "necessaryEyeHeight",
       "kind": 1024,
       "kindString": "Property",
@@ -3457,18 +4059,18 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 430,
+          "line": 477,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 796,
+        "id": 866,
         "name": "Length"
       }
     },
     {
-      "id": 510,
+      "id": 557,
       "name": "necessaryGripHeight",
       "kind": 1024,
       "kindString": "Property",
@@ -3481,18 +4083,18 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 425,
+          "line": 472,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 796,
+        "id": 866,
         "name": "Length"
       }
     },
     {
-      "id": 469,
+      "id": 510,
       "name": "needsHighConcentration",
       "kind": 1024,
       "kindString": "Property",
@@ -3505,7 +4107,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 206,
+          "line": 223,
           "character": 2
         }
       ],
@@ -3515,7 +4117,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 482,
+      "id": 523,
       "name": "numbers",
       "kind": 1024,
       "kindString": "Property",
@@ -3528,7 +4130,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 284,
+          "line": 301,
           "character": 2
         }
       ],
@@ -3538,7 +4140,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 438,
+      "id": 476,
       "name": "optional",
       "kind": 1024,
       "kindString": "Property",
@@ -3551,7 +4153,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 49,
+          "line": 51,
           "character": 2
         }
       ],
@@ -3561,7 +4163,30 @@ Definition: <pre>{
       }
     },
     {
-      "id": 481,
+      "id": 532,
+      "name": "paper",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output is displayed on a paper."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 346,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 522,
       "name": "pictograms",
       "kind": 1024,
       "kindString": "Property",
@@ -3574,7 +4199,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 279,
+          "line": 296,
           "character": 2
         }
       ],
@@ -3584,7 +4209,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 463,
+      "id": 503,
       "name": "pitchedTone",
       "kind": 1024,
       "kindString": "Property",
@@ -3597,7 +4222,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 175,
+          "line": 187,
           "character": 2
         }
       ],
@@ -3607,7 +4232,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 474,
+      "id": 515,
       "name": "plainLanguageOption",
       "kind": 1024,
       "kindString": "Property",
@@ -3620,7 +4245,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 231,
+          "line": 248,
           "character": 2
         }
       ],
@@ -3630,7 +4255,30 @@ Definition: <pre>{
       }
     },
     {
-      "id": 499,
+      "id": 533,
+      "name": "printer",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output is from a printer."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 351,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 545,
       "name": "qrCode",
       "kind": 1024,
       "kindString": "Property",
@@ -3643,7 +4291,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 369,
+          "line": 411,
           "character": 2
         }
       ],
@@ -3653,7 +4301,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 502,
+      "id": 548,
       "name": "radio",
       "kind": 1024,
       "kindString": "Property",
@@ -3666,7 +4314,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 384,
+          "line": 426,
           "character": 2
         }
       ],
@@ -3676,7 +4324,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 447,
+      "id": 486,
       "name": "read",
       "kind": 1024,
       "kindString": "Property",
@@ -3689,7 +4337,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 94,
+          "line": 101,
           "character": 2
         }
       ],
@@ -3699,7 +4347,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 473,
+      "id": 514,
       "name": "realTimeCaptioning",
       "kind": 1024,
       "kindString": "Property",
@@ -3712,7 +4360,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 226,
+          "line": 243,
           "character": 2
         }
       ],
@@ -3722,7 +4370,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 439,
+      "id": 477,
       "name": "required",
       "kind": 1024,
       "kindString": "Property",
@@ -3735,7 +4383,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 54,
+          "line": 56,
           "character": 2
         }
       ],
@@ -3745,7 +4393,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 465,
+      "id": 505,
       "name": "rhythmic",
       "kind": 1024,
       "kindString": "Property",
@@ -3758,7 +4406,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 185,
+          "line": 197,
           "character": 2
         }
       ],
@@ -3768,7 +4416,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 490,
+      "id": 531,
       "name": "screen",
       "kind": 1024,
       "kindString": "Property",
@@ -3781,7 +4429,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 324,
+          "line": 341,
           "character": 2
         }
       ],
@@ -3791,7 +4439,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 486,
+      "id": 527,
       "name": "signLanguage",
       "kind": 1024,
       "kindString": "Property",
@@ -3804,7 +4452,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 304,
+          "line": 321,
           "character": 2
         }
       ],
@@ -3814,7 +4462,30 @@ Definition: <pre>{
       }
     },
     {
-      "id": 485,
+      "id": 509,
+      "name": "smell",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The ability to smell is supported or needed."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 218,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 526,
       "name": "sound",
       "kind": 1024,
       "kindString": "Property",
@@ -3827,7 +4498,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 299,
+          "line": 316,
           "character": 2
         }
       ],
@@ -3837,7 +4508,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 452,
+      "id": 491,
       "name": "soundVolume",
       "kind": 1024,
       "kindString": "Property",
@@ -3850,18 +4521,18 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 119,
+          "line": 126,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 797,
+        "id": 867,
         "name": "Volume"
       }
     },
     {
-      "id": 440,
+      "id": 478,
       "name": "speech",
       "kind": 1024,
       "kindString": "Property",
@@ -3874,7 +4545,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 59,
+          "line": 61,
           "character": 2
         }
       ],
@@ -3884,7 +4555,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 466,
+      "id": 506,
       "name": "static",
       "kind": 1024,
       "kindString": "Property",
@@ -3897,7 +4568,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 191,
+          "line": 203,
           "character": 2
         }
       ],
@@ -3907,7 +4578,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 471,
+      "id": 512,
       "name": "subtitles",
       "kind": 1024,
       "kindString": "Property",
@@ -3920,7 +4591,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 216,
+          "line": 233,
           "character": 2
         }
       ],
@@ -3930,7 +4601,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 487,
+      "id": 528,
       "name": "tactile",
       "kind": 1024,
       "kindString": "Property",
@@ -3943,7 +4614,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 309,
+          "line": 326,
           "character": 2
         }
       ],
@@ -3953,7 +4624,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 489,
+      "id": 530,
       "name": "tactileGuides",
       "kind": 1024,
       "kindString": "Property",
@@ -3966,7 +4637,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 319,
+          "line": 336,
           "character": 2
         }
       ],
@@ -3976,7 +4647,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 504,
+      "id": 550,
       "name": "techSufficient",
       "kind": 1024,
       "kindString": "Property",
@@ -3989,7 +4660,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 394,
+          "line": 436,
           "character": 2
         }
       ],
@@ -3997,13 +4668,13 @@ Definition: <pre>{
         "type": "array",
         "elementType": {
           "type": "reference",
-          "id": 708,
+          "id": 766,
           "name": "TechCombination"
         }
       }
     },
     {
-      "id": 505,
+      "id": 551,
       "name": "techSupported",
       "kind": 1024,
       "kindString": "Property",
@@ -4016,7 +4687,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 399,
+          "line": 441,
           "character": 2
         }
       ],
@@ -4024,13 +4695,37 @@ Definition: <pre>{
         "type": "array",
         "elementType": {
           "type": "reference",
-          "id": 708,
+          "id": 766,
           "name": "TechCombination"
         }
       }
     },
     {
-      "id": 442,
+      "id": 535,
+      "name": "temperature",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The temperature of the output."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 361,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "reference",
+        "id": 876,
+        "name": "Temperature"
+      }
+    },
+    {
+      "id": 480,
       "name": "urgent",
       "kind": 1024,
       "kindString": "Property",
@@ -4043,7 +4738,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 69,
+          "line": 71,
           "character": 2
         }
       ],
@@ -4053,7 +4748,7 @@ Definition: <pre>{
       }
     },
     {
-      "id": 506,
+      "id": 552,
       "name": "url",
       "kind": 1024,
       "kindString": "Property",
@@ -4066,18 +4761,18 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 404,
+          "line": 446,
           "character": 2
         }
       ],
       "type": {
         "type": "reference",
-        "id": 369,
+        "id": 396,
         "name": "LocalizedString"
       }
     },
     {
-      "id": 451,
+      "id": 490,
       "name": "vibration",
       "kind": 1024,
       "kindString": "Property",
@@ -4090,7 +4785,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 114,
+          "line": 121,
           "character": 2
         }
       ],
@@ -4100,7 +4795,30 @@ Definition: <pre>{
       }
     },
     {
-      "id": 445,
+      "id": 485,
+      "name": "visual",
+      "kind": 1024,
+      "kindString": "Property",
+      "flags": {
+        "isOptional": true
+      },
+      "comment": {
+        "shortText": "The output is visual."
+      },
+      "sources": [
+        {
+          "fileName": "PerceptionMode.ts",
+          "line": 96,
+          "character": 2
+        }
+      ],
+      "type": {
+        "type": "intrinsic",
+        "name": "boolean"
+      }
+    },
+    {
+      "id": 483,
       "name": "warning",
       "kind": 1024,
       "kindString": "Property",
@@ -4113,7 +4831,7 @@ Definition: <pre>{
       "sources": [
         {
           "fileName": "PerceptionMode.ts",
-          "line": 84,
+          "line": 86,
           "character": 2
         }
       ],
@@ -4128,92 +4846,101 @@ Definition: <pre>{
       "title": "Properties",
       "kind": 1024,
       "children": [
-        450,
-        441,
-        444,
-        457,
-        483,
-        508,
-        468,
-        459,
-        472,
-        512,
-        498,
-        461,
-        462,
-        494,
-        488,
-        455,
-        456,
-        503,
-        501,
-        491,
-        495,
-        496,
-        513,
-        470,
-        436,
-        467,
-        475,
-        477,
-        478,
-        493,
-        449,
-        448,
-        497,
-        484,
-        479,
-        453,
-        476,
-        464,
-        458,
-        500,
-        492,
-        443,
-        507,
-        509,
-        437,
-        454,
-        446,
-        480,
-        460,
-        435,
-        511,
-        510,
-        469,
-        482,
-        438,
-        481,
-        463,
-        474,
-        499,
-        502,
-        447,
-        473,
-        439,
-        465,
-        490,
-        486,
-        485,
-        452,
-        440,
-        466,
-        471,
-        487,
         489,
+        479,
+        482,
+        496,
+        536,
+        524,
+        554,
+        508,
+        498,
+        513,
+        559,
+        544,
+        499,
+        501,
+        502,
+        540,
+        529,
+        494,
+        495,
+        549,
+        547,
+        537,
+        541,
+        542,
+        560,
+        511,
+        474,
+        507,
+        516,
+        518,
+        519,
+        539,
+        488,
+        487,
+        543,
+        525,
+        520,
+        492,
+        517,
         504,
+        497,
+        546,
+        534,
+        538,
+        481,
+        553,
+        556,
+        555,
+        475,
+        493,
+        484,
+        521,
+        500,
+        473,
+        558,
+        557,
+        510,
+        523,
+        476,
+        532,
+        522,
+        503,
+        515,
+        533,
+        545,
+        548,
+        486,
+        514,
+        477,
         505,
-        442,
+        531,
+        527,
+        509,
+        526,
+        491,
+        478,
         506,
-        451,
-        445
+        512,
+        528,
+        530,
+        550,
+        551,
+        535,
+        480,
+        552,
+        490,
+        485,
+        483
       ]
     }
   ],
   "sources": [
     {
       "fileName": "PerceptionMode.ts",
-      "line": 29,
+      "line": 31,
       "character": 29
     }
   ]
@@ -4221,11 +4948,43 @@ Definition: <pre>{
 
 
 
+### <a id="QueueSystemInteraction">QueueSystemInteraction</a>
+
+
+
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":877,"name":"QueueSystemInteractions"}}}
+
+
+
 ### <a id="RestroomSignIcon">RestroomSignIcon</a>
 
 
 
-Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":556,"name":"restroomSignIcons"}}}
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":603,"name":"restroomSignIcons"}}}
+
+
+
+### <a id="RoomInteraction">RoomInteraction</a>
+
+
+
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":632,"name":"RoomInteractions"}}}
+
+
+
+### <a id="SeatInteraction">SeatInteraction</a>
+
+
+
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":657,"name":"SeatInteractions"}}}
+
+
+
+### <a id="ShowerInteraction">ShowerInteraction</a>
+
+
+
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":712,"name":"ShowerInteractions"}}}
 
 
 
@@ -4236,6 +4995,14 @@ http://www.evertype.com/standards/iso639/sign-language.html) eventually, so our 
 support them already.
 
 Definition: <code>"ase"</code>&nbsp;|&nbsp;<code>"sgn-ase"</code>&nbsp;|&nbsp;<code>"sgn-ase-US"</code>&nbsp;|&nbsp;<code>"sgn-GH-EP"</code>&nbsp;|&nbsp;<code>"sgn-DZ"</code>&nbsp;|&nbsp;<code>"sgn-US"</code>&nbsp;|&nbsp;<code>"sgn-AR"</code>&nbsp;|&nbsp;<code>"sgn-AM"</code>&nbsp;|&nbsp;<code>"sgn-AU-NT"</code>&nbsp;|&nbsp;<code>"sgn-AU"</code>&nbsp;|&nbsp;<code>"sgn-AT"</code>&nbsp;|&nbsp;<code>"sgn-ID-BA"</code>&nbsp;|&nbsp;<code>"sgn-BE-VLG"</code>&nbsp;|&nbsp;<code>"sgn-BE-WAL"</code>&nbsp;|&nbsp;<code>"sgn-BO"</code>&nbsp;|&nbsp;<code>"sgn-BR"</code>&nbsp;|&nbsp;<code>"sgn-GB"</code>&nbsp;|&nbsp;<code>"sgn-BG"</code>&nbsp;|&nbsp;<code>"sgn-ES-CT"</code>&nbsp;|&nbsp;<code>"sgn-TD"</code>&nbsp;|&nbsp;<code>"sgn-CL"</code>&nbsp;|&nbsp;<code>"sgn-CN"</code>&nbsp;|&nbsp;<code>"sgn-CO"</code>&nbsp;|&nbsp;<code>"sgn-CR"</code>&nbsp;|&nbsp;<code>"sgn-CZ"</code>&nbsp;|&nbsp;<code>"sgn-DK"</code>&nbsp;|&nbsp;<code>"sgn-NL"</code>&nbsp;|&nbsp;<code>"sgn-EC"</code>&nbsp;|&nbsp;<code>"sgn-SV"</code>&nbsp;|&nbsp;<code>"sgn-CA-NU"</code>&nbsp;|&nbsp;<code>"sgn-ET"</code>&nbsp;|&nbsp;<code>"sgn-FI"</code>&nbsp;|&nbsp;<code>"sgn-CA-QC"</code>&nbsp;|&nbsp;<code>"sgn-FR"</code>&nbsp;|&nbsp;<code>"sgn-DE"</code>&nbsp;|&nbsp;<code>"sgn-GH"</code>&nbsp;|&nbsp;<code>"sgn-GR"</code>&nbsp;|&nbsp;<code>"sgn-GT"</code>&nbsp;|&nbsp;<code>"sgn-US-HI"</code>&nbsp;|&nbsp;<code>"sgn-HK"</code>&nbsp;|&nbsp;<code>"sgn-IS"</code>&nbsp;|&nbsp;<code>"sgn-ID"</code>&nbsp;|&nbsp;<code>"sgn-IN"</code>&nbsp;|&nbsp;<code>"sgn-IE"</code>&nbsp;|&nbsp;<code>"sgn-IL"</code>&nbsp;|&nbsp;<code>"sgn-IT"</code>&nbsp;|&nbsp;<code>"sgn-JM"</code>&nbsp;|&nbsp;<code>"sgn-JP"</code>&nbsp;|&nbsp;<code>"sgn-JO"</code>&nbsp;|&nbsp;<code>"sgn-KE"</code>&nbsp;|&nbsp;<code>"sgn-KR"</code>&nbsp;|&nbsp;<code>"sgn-MY-B"</code>&nbsp;|&nbsp;<code>"sgn-LV"</code>&nbsp;|&nbsp;<code>"sgn-LY"</code>&nbsp;|&nbsp;<code>"sgn-LT"</code>&nbsp;|&nbsp;<code>"sgn-FR-69"</code>&nbsp;|&nbsp;<code>"sgn-MY"</code>&nbsp;|&nbsp;<code>"sgn-MT"</code>&nbsp;|&nbsp;<code>"sgn-US-MA"</code>&nbsp;|&nbsp;<code>"sgn-MX-YUC"</code>&nbsp;|&nbsp;<code>"sgn-MX"</code>&nbsp;|&nbsp;<code>"sgn-VA"</code>&nbsp;|&nbsp;<code>"sgn-MN"</code>&nbsp;|&nbsp;<code>"sgn-MA"</code>&nbsp;|&nbsp;<code>"sgn-NA"</code>&nbsp;|&nbsp;<code>"sgn-NP"</code>&nbsp;|&nbsp;<code>"sgn-NZ"</code>&nbsp;|&nbsp;<code>"sgn-NI"</code>&nbsp;|&nbsp;<code>"sgn-NG"</code>&nbsp;|&nbsp;<code>"sgn-NO"</code>&nbsp;|&nbsp;<code>"sgn-CA-NS"</code>&nbsp;|&nbsp;<code>"sgn-GB-KEN"</code>&nbsp;|&nbsp;<code>"sgn-MY-P"</code>&nbsp;|&nbsp;<code>"sgn-IR"</code>&nbsp;|&nbsp;<code>"sgn-PE"</code>&nbsp;|&nbsp;<code>"sgn-PH"</code>&nbsp;|&nbsp;<code>"sgn-US-SD"</code>&nbsp;|&nbsp;<code>"sgn-PL"</code>&nbsp;|&nbsp;<code>"sgn-PT"</code>&nbsp;|&nbsp;<code>"sgn-CO-SAP"</code>&nbsp;|&nbsp;<code>"sgn-PR"</code>&nbsp;|&nbsp;<code>"sgn-SB"</code>&nbsp;|&nbsp;<code>"sgn-RO"</code>&nbsp;|&nbsp;<code>"sgn-RU"</code>&nbsp;|&nbsp;<code>"sgn-SA"</code>&nbsp;|&nbsp;<code>"sgn-SE-crp"</code>&nbsp;|&nbsp;<code>"sgn-SG"</code>&nbsp;|&nbsp;<code>"sgn-SK"</code>&nbsp;|&nbsp;<code>"sgn-ZA"</code>&nbsp;|&nbsp;<code>"sgn-ES"</code>&nbsp;|&nbsp;<code>"sgn-LK"</code>&nbsp;|&nbsp;<code>"sgn-SE"</code>&nbsp;|&nbsp;<code>"sgn-CH-GE"</code>&nbsp;|&nbsp;<code>"sgn-CH-ZH"</code>&nbsp;|&nbsp;<code>"sgn-CH-TI"</code>&nbsp;|&nbsp;<code>"sgn-TW"</code>&nbsp;|&nbsp;<code>"sgn-TZ"</code>&nbsp;|&nbsp;<code>"sgn-TH"</code>&nbsp;|&nbsp;<code>"sgn-TN"</code>&nbsp;|&nbsp;<code>"sgn-TR"</code>&nbsp;|&nbsp;<code>"sgn-UG"</code>&nbsp;|&nbsp;<code>"sgn-UA"</code>&nbsp;|&nbsp;<code>"sgn-BR-MA"</code>&nbsp;|&nbsp;<code>"sgn-UY"</code>&nbsp;|&nbsp;<code>"sgn-VE"</code>&nbsp;|&nbsp;<code>"sgn-IL-yid"</code>&nbsp;|&nbsp;<code>"sgn-YU"</code>&nbsp;|&nbsp;<code>"sgn-ZM"</code>&nbsp;|&nbsp;<code>"sgn-ZW"</code>&nbsp;|&nbsp;<code>"sgn-afr-ZA"</code>&nbsp;|&nbsp;<code>"sgn-chi-TW"</code>&nbsp;|&nbsp;<code>"sgn-dan-DK"</code>&nbsp;|&nbsp;<code>"sgn-dut-BE"</code>&nbsp;|&nbsp;<code>"sgn-dut-NL"</code>&nbsp;|&nbsp;<code>"sgn-eng-GB"</code>&nbsp;|&nbsp;<code>"sgn-eng-IE"</code>&nbsp;|&nbsp;<code>"sgn-eng-US"</code>&nbsp;|&nbsp;<code>"sgn-fin-FI"</code>&nbsp;|&nbsp;<code>"sgn-fre-BE"</code>&nbsp;|&nbsp;<code>"sgn-fre-CA"</code>&nbsp;|&nbsp;<code>"sgn-fre-FR"</code>&nbsp;|&nbsp;<code>"sgn-jpn-JP"</code>&nbsp;|&nbsp;<code>"sgn-nor-NO"</code>&nbsp;|&nbsp;<code>"sgn-por-PT"</code>&nbsp;|&nbsp;<code>"sgn-swe-SE"</code>
+
+
+
+### <a id="SignageInteraction">SignageInteraction</a>
+
+
+
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":686,"name":"SignageInteractions"}}}
 
 
 
@@ -4259,7 +5026,7 @@ Definition: <code>"dedicatedToSmoking"</code>&nbsp;|&nbsp;<code>"allowedEverywhe
 
 
 
-Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":698,"name":"SmoothnessTypeValues"}}}
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":756,"name":"SmoothnessTypeValues"}}}
 
 
 
@@ -4275,7 +5042,15 @@ Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
 
 
 
-Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":696,"name":"SurfaceTypeValues"}}}
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":754,"name":"SurfaceTypeValues"}}}
+
+
+
+### <a id="Temperature">Temperature</a>
+
+
+
+Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
 
 
 
@@ -4287,9 +5062,33 @@ Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
 
 
 
+### <a id="ToiletInteraction">ToiletInteraction</a>
+
+
+
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":772,"name":"ToiletInteractions"}}}
+
+
+
 ### <a id="Volume">Volume</a>
 
 
 
 Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
+
+
+
+### <a id="WashBashinInteraction">WashBashinInteraction</a>
+
+
+
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":891,"name":"WashBashinInteractions"}}}
+
+
+
+### <a id="WifiInteraction">WifiInteraction</a>
+
+
+
+Definition: {"type":"indexedAccess","indexType":{"type":"intrinsic","name":"number"},"objectType":{"type":"query","queryType":{"type":"reference","id":914,"name":"WifiInteractions"}}}
 

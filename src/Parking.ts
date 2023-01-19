@@ -6,7 +6,7 @@ import { getStructuredAddressSchemaDefinition } from './Address';
 import BooleanField from './BooleanField';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 
-const ParkingInteractions = [
+export const ParkingInteractions = [
   'park',
   'enterVehicle',
   'exitVehicle',

@@ -3,7 +3,7 @@ import { AccessType, accessTypes } from './AccessType';
 import { CurrencyValue } from './CurrencyValue';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 
-const WifiAccessibilityInteractions = [
+export const WifiInteractions = [
   'login',
   'register',
   'getPassword',
@@ -11,7 +11,7 @@ const WifiAccessibilityInteractions = [
   'getTerms',
   'acceptTerms',
 ] as const;
-export type WifiAccessibilityInteraction = typeof WifiAccessibilityInteractions[number];
+export type WifiInteraction = typeof WifiInteractions[number];
 
 /**
  * Describes the presence of staff and their qualifications and/or provided services.

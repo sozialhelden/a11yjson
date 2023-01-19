@@ -2,7 +2,7 @@ import { t } from 'ttag';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 
-const WashBashinInteractions = [
+export const WashBashinInteractions = [
   'changeTemperature',
   'changeWaterPressure',
   'useWater',

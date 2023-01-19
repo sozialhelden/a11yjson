@@ -12,7 +12,7 @@ import {
   getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition,
 } from './Quantity';
 
-const SeatInteractions = [
+export const SeatInteractions = [
   'sit',
   'fold',
   'unfold',

@@ -9,6 +9,7 @@ export { getIsoAlphaThreeCountryCodes };
 export { getPrefixedSchemaDefinition };
 
 export * from './Accessibility';
+export * from './AccessType';
 export * from './ActionMode';
 export * from './Address';
 export * from './AnimalPolicy';

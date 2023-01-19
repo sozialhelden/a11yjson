@@ -4,10 +4,9 @@ import {
   getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition,
 } from './Quantity';
 import BooleanField from './BooleanField';
-import { EquipmentProperties, getEquipmentPropertiesSchemaDefinition } from './EquipmentProperties';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 
-const ToiletInteractions = [
+export const ToiletInteractions = [
   'use',
   'flush',
   'spray',

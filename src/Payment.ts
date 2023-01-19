@@ -2,7 +2,7 @@ import { t } from 'ttag';
 
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 
-const PaymentInteractions = [
+export const PaymentInteractions = [
   'pay',
   'checkIn',
   'logIn',

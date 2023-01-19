@@ -2,7 +2,7 @@ import BooleanField from './BooleanField';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 
-const MirrorInteractions = [
+export const MirrorInteractions = [
   'turn',
   'adjust',
   'move',

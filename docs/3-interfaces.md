@@ -44,7 +44,7 @@ relevant.</p>
   <p>Use <code>signageSystems</code> instead.</p>
 
 </div>
-  </td></tr><tr><td>interactions</td><td><a href="#InteractionMode">InteractionMode</a>[]</td><td><p>Typical interactions at this venue.</p>
+  </td></tr><tr><td>interactions</td><td><a href="#Partial">Partial</a></td><td><p>Indicates how the object can be interacted with.</p>
 </td></tr><tr><td>isQuiet</td><td><code>boolean</code></td><td><p>Determines if the venue is quiet (subjectively, by the assessor). If possible, use the
 <code>ambientNoiseLevel</code> property instead.</p>
 </td></tr><tr><td>isWellLit</td><td><code>boolean</code></td><td><p>Determines if the venue is well lit (subjectively, by the assessor).  Will be replaced by a
@@ -119,15 +119,13 @@ of access to a service or product.
 
   Describes a desk / table / cash desk / reception counter.
 
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>controlledBySwitch</td><td><a href="#EquipmentProperties">EquipmentProperties</a></td><td><p>Describes an associated switch.</p>
-</td></tr><tr><td>controlledBySwitchId</td><td><code>string</code></td><td><p>References a switch (<code>EquipmentInfo</code>) by its ID.</p>
-</td></tr><tr><td>depthBelow</td><td><a href="#Length">Length</a></td><td><p>How much space is there under the desk?
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>depthBelow</td><td><a href="#Length">Length</a></td><td><p>How much space is there under the desk?
 This can be used to determine if a wheelchair user can sit at the desk.</p>
 </td></tr><tr><td>fixedHeight</td><td><a href="#Length">Length</a></td><td><p>How high is the desk? For variable-height desks, use <code>minimalHeight</code> and <code>maximalHeight</code>
 instead.</p>
 </td></tr><tr><td>fixedHeightBelow</td><td><a href="#Length">Length</a></td><td><p>How much space is there below the desk?
 This can be used to determine if a wheelchair user can sit at the desk.</p>
-</td></tr><tr><td>interactions</td><td><a href="#InteractionMode">InteractionMode</a>[]</td><td><p>Indicates how the object can be interacted with.</p>
+</td></tr><tr><td>interactions</td><td><a href="#Partial">Partial</a></td><td><p>Indicates how the object can be interacted with.</p>
 </td></tr><tr><td>intercom</td><td><code>undefined</code>&nbsp;|&nbsp;<a href="#Intercom">Intercom</a></td><td><p>Information about an intercom at this desk, if applicable.</p>
 </td></tr><tr><td>isRollUnder</td><td><code>boolean</code></td><td><p><code>true</code> if the desk can be rolled under, <code>false</code> if not.
 This can be used to determine if a wheelchair user can sit at the desk.</p>
@@ -162,20 +160,14 @@ color. Use HTML color strings here.</p>
 </td></tr><tr><td>doorbellTopButtonHeight</td><td><a href="#Length">Length</a></td><td><p>Height of the door bell&#39;s top button. If there is a lowered extra door bell (often marked with
 a wheelchair user symbol), use the height of this one&#39;s top button.</p>
 </td></tr><tr><td>grabBars</td><td><a href="#GrabBars">GrabBars</a></td><td><p>Describes grab bars in front of the door.</p>
-</td></tr><tr><td>hasAcousticFeedbackForClosing</td><td><code>boolean</code></td><td><p><code>true</code> if the door makes a sound when closing, <code>false</code> if not.</p>
-</td></tr><tr><td>hasAcousticFeedbackForOpening</td><td><code>boolean</code></td><td><p><code>true</code> if the door makes a sound when opening, <code>false</code> if not.</p>
-</td></tr><tr><td>hasAcousticFeedbackWhenOpenable</td><td><code>boolean</code></td><td><p><code>true</code> if the door makes a sound when it can be opened, <code>false</code> if not.</p>
 </td></tr><tr><td>hasClearMarkingOnGlassDoor</td><td><code>boolean</code></td><td><p><code>true</code> if the door is a glass door, but is marked, <code>false</code> if the door is an unmarked glass
 door, <code>undefined</code> if it is no glass door or the condition is unknown.</p>
 </td></tr><tr><td>hasErgonomicDoorHandle</td><td><code>boolean</code></td><td><p><code>true</code> if the door&#39;s handle is easy to use (subjectively by the assessor), <code>false</code> if not.</p>
 </td></tr><tr><td>hasIntercom</td><td><code>boolean</code></td><td><p><code>true</code> if the door has an intercom system, <code>false</code> if not.</p>
 </td></tr><tr><td>hasProximitySensor</td><td><code>boolean</code></td><td><p><code>true</code> if the door has a proximity sensor that triggers the opening mechanism, <code>false</code> if not.</p>
 </td></tr><tr><td>hasSwitch</td><td><code>boolean</code></td><td><p><code>true</code> if the door has a switch that triggers the opening mechanism, <code>false</code> if not.</p>
-</td></tr><tr><td>hasVisualFeedbackForClosing</td><td><code>boolean</code></td><td><p><code>true</code> if the door has visual feedback when closing, <code>false</code> if not.</p>
-</td></tr><tr><td>hasVisualFeedbackForOpening</td><td><code>boolean</code></td><td><p><code>true</code> if the door has visual feedback when opening, <code>false</code> if not.</p>
-</td></tr><tr><td>hasVisualFeedbackWhenOpenable</td><td><code>boolean</code></td><td><p><code>true</code> if the door has visual feedback when it can be opened, <code>false</code> if not.</p>
 </td></tr><tr><td>hasVisuallyContrastedFrame</td><td><code>boolean</code></td><td><p><code>true</code> if the door frame is visually contrasted to its surrounding wall, <code>false</code> if not.</p>
-</td></tr><tr><td>interactions</td><td><a href="#InteractionMode">InteractionMode</a>[]</td><td><p>Indicates how the object can be interacted with.</p>
+</td></tr><tr><td>interactions</td><td><a href="#Partial">Partial</a></td><td><p>Indicates how the object can be interacted with.</p>
 </td></tr><tr><td>intercom</td><td><a href="#Intercom">Intercom</a></td><td><p>Describes the intercom system of the door.</p>
 </td></tr><tr><td>isAlwaysOpen</td><td><code>boolean</code></td><td><p><code>true</code> if the door is there, but always open, <code>false</code> if not.</p>
 </td></tr><tr><td>isAutomatic</td><td><code>boolean</code></td><td><p><code>true</code> if the door opens automatically, <code>false</code> if not. The mechanism for opening the door is
@@ -234,7 +226,6 @@ or needs a different key.</p>
 this property MUST be <code>undefined</code>.</p>
 </td></tr><tr><td>hasSignage</td><td><code>boolean</code></td><td><p>If this entrance is NOT the main entrance: Is this entrance connected to the main entrance, and
 is there signage that points to this entrance?</p>
-</td></tr><tr><td>interactions</td><td><a href="#InteractionMode">InteractionMode</a>[]</td><td><p>Indicates how the object can be interacted with.</p>
 </td></tr><tr><td>intercomEquipmentId</td><td><code>string</code></td><td><p>reference to the equipment id of the intercom of this entrance (on accessibility.cloud)</p>
 </td></tr><tr><td>isLevel</td><td><code>boolean</code></td><td><p><code>true</code> if this entrance has no steps and needs no ramp, <code>false</code> if there are steps or a ramp.</p>
 </td></tr><tr><td>isMainEntrance</td><td><code>boolean</code></td><td><p><code>true</code> if this is the main entrance, <code>false</code> if not.</p>
@@ -331,7 +322,7 @@ elevators).</p>
 </td></tr><tr><td>heightOfControls</td><td><a href="#Length">Length</a></td><td><p>Height of the lowest working controls that are needed to operate this equipment. <code>undefined</code> if
 the equipment needs no controls.</p>
 </td></tr><tr><td>ids</td><td><a href="#Record">Record</a></td><td><p>IDs in other data sources that are linked to this equipment, indexed by schema/context.</p>
-</td></tr><tr><td>interactions</td><td><a href="#InteractionMode">InteractionMode</a>[]</td><td><p>Indicates how the object can be interacted with.</p>
+</td></tr><tr><td>interactions</td><td><a href="#Partial">Partial</a></td><td><p>Indicates how the object can be interacted with.</p>
 </td></tr><tr><td>isIndoors</td><td><code>boolean</code></td><td><p><code>true</code> if the equipment is indoors, <code>false</code> if it’s fully or partially outdoors.</p>
 </td></tr><tr><td>isSuitableForBicycles</td><td><code>boolean</code></td><td><p>For elevators. <code>true</code> if the elevator can carry a bicycle, <code>false</code> if not.</p>
 </td></tr><tr><td>isWorking</td><td><code>boolean</code></td><td><p>Live status update.</p>
@@ -375,7 +366,7 @@ screen. This CAN contain Unicode characters such as ⟷ or ↘︎ as well as abb
 </td></tr><tr><td>distanceBetweenBars</td><td><a href="#Length">Length</a></td><td><p>Indicates how far the bars are apart.</p>
 </td></tr><tr><td>foldable</td><td><code>boolean</code></td><td><p><code>true</code> if the grab bars can be folded, <code>false</code> if not..</p>
 </td></tr><tr><td>inFrontOfTheUser</td><td><code>boolean</code></td><td><p><code>true</code> if there is a folding handle in front of the user, <code>false</code> if not.</p>
-</td></tr><tr><td>interactions</td><td><a href="#InteractionMode">InteractionMode</a>[]</td><td><p>Indicates how the object can be interacted with.</p>
+</td></tr><tr><td>interactions</td><td><a href="#Partial">Partial</a></td><td><p>Indicates how the object can be interacted with.</p>
 </td></tr><tr><td>onUsersLeftSide</td><td><code>boolean</code></td><td><p><code>true</code> if there is a folding handle on left side, <code>false</code> if not.</p>
 </td></tr><tr><td>onUsersRightSide</td><td><code>boolean</code></td><td><p><code>true</code> if there is a folding handle on right side, <code>false</code> if not.</p>
 </td></tr><tr><td>topHeightFromFloor</td><td><a href="#Length">Length</a></td><td><p>Indicates how high the grab bars are (top edge, measured from the floor).</p>
@@ -386,7 +377,7 @@ screen. This CAN contain Unicode characters such as ⟷ or ↘︎ as well as abb
 
   
 
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>interactions</td><td><a href="#InteractionMode">InteractionMode</a>[]</td><td><p>Indicates how the object can be interacted with.</p>
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>interactions</td><td><a href="#Partial">Partial</a></td><td><p>Indicates how the object can be interacted with.</p>
 </td></tr></table>
   
 
@@ -416,7 +407,7 @@ if not.</p>
 </td></tr><tr><td>hasVideoCamera</td><td><code>boolean</code></td><td><p><code>true</code> if the door has a video intercom system, <code>false</code> if not.</p>
 </td></tr><tr><td>hasVisualFeedbackOnConnection</td><td><code>boolean</code></td><td><p><code>true</code> if the intercom system has a visual feedback, <code>false</code> if not. Visual feedback might be
 a screen or light that displays if a connection is established.</p>
-</td></tr><tr><td>interactions</td><td><a href="#InteractionMode">InteractionMode</a>[]</td><td><p>Indicates how the object can be interacted with.</p>
+</td></tr><tr><td>interactions</td><td><a href="#Partial">Partial</a></td><td><p>Indicates how the object can be interacted with.</p>
 </td></tr><tr><td>necessaryGripHeight</td><td><a href="#Length">Length</a></td><td><p>The height of the top control element of the intercom system.</p>
 </td></tr><tr><td>needsKeyPad</td><td><code>boolean</code></td><td><p><code>true</code> if you need to use a key pad to pass this door, <code>false</code> if not.</p>
 </td></tr></table>
@@ -479,7 +470,7 @@ be read?</p>
 </td></tr><tr><td>sameAs</td><td><code>string</code>[]</td><td><p>URLs that contain the media. Use this to link data, for example with <a href="https://www.w3.org/RDF/">RDF</a>.</p>
 </td></tr><tr><td>turningSpaceInFront</td><td><a href="#Length">Length</a></td><td><p>If the media is consumed while the consumer is directly in front of it, this property specifies
 how much turning space there is in front of it.</p>
-</td></tr><tr><td>type</td><td><code>"document"</code>&nbsp;|&nbsp;<code>"menu"</code>&nbsp;|&nbsp;<code>"guide"</code>&nbsp;|&nbsp;<code>"tour"</code>&nbsp;|&nbsp;<code>"presentation"</code>&nbsp;|&nbsp;<code>"exhibit"</code>&nbsp;|&nbsp;<code>"movie"</code>&nbsp;|&nbsp;<code>"play"</code>&nbsp;|&nbsp;<code>"screen"</code>&nbsp;|&nbsp;<code>"website"</code></td><td><p>Type of the media unit</p>
+</td></tr><tr><td>type</td><td><code>"play"</code>&nbsp;|&nbsp;<code>"document"</code>&nbsp;|&nbsp;<code>"menu"</code>&nbsp;|&nbsp;<code>"guide"</code>&nbsp;|&nbsp;<code>"tour"</code>&nbsp;|&nbsp;<code>"presentation"</code>&nbsp;|&nbsp;<code>"exhibit"</code>&nbsp;|&nbsp;<code>"movie"</code>&nbsp;|&nbsp;<code>"screen"</code>&nbsp;|&nbsp;<code>"website"</code></td><td><p>Type of the media unit</p>
 </td></tr></table>
   
 
@@ -488,6 +479,7 @@ how much turning space there is in front of it.</p>
   Describes a mirror.
 
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>heightFromGround</td><td><a href="#Length">Length</a></td><td><p>How far is the mirror&#39;s bottom from the ground?</p>
+</td></tr><tr><td>interactions</td><td><a href="#Partial">Partial</a></td><td><p>Indicates how the object can be interacted with.</p>
 </td></tr><tr><td>isAccessibleWhileSeated</td><td><code>boolean</code></td><td><p><code>true</code> if the mirror is accessible while sitting in a wheelchair, <code>false</code> if not, <code>undefined</code>
 if condition is unknown.</p>
 </td></tr><tr><td>isLocatedInsideRestroom</td><td><code>boolean</code></td><td><p><code>true</code> if the mirror is located inside the restroom, <code>false</code> if not, <code>undefined</code> if
@@ -499,7 +491,8 @@ condition is unknown.</p>
 
   
 
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>count</td><td><code>number</code></td><td></td></tr><tr><td>forWheelchairUsers</td><td><code>undefined</code>&nbsp;|&nbsp;<a href="#WheelchairParking">WheelchairParking</a></td><td></td></tr></table>
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>count</td><td><code>number</code></td><td></td></tr><tr><td>forWheelchairUsers</td><td><code>undefined</code>&nbsp;|&nbsp;<a href="#WheelchairParking">WheelchairParking</a></td><td></td></tr><tr><td>interactions</td><td><a href="#Partial">Partial</a></td><td><p>Indicates how the object can be interacted with.</p>
+</td></tr></table>
   
 
 ### <a id="Pathways">Pathways</a>
@@ -607,9 +600,10 @@ data provider, it’s a good idea to use the provider&#39;s internal ID here.</p
   <p>Please use the <code>precision</code> property instead.</p>
 
 </div>
-  </td></tr><tr><td>operator</td><td><a href="#Operator">Operator</a></td><td><p>the operator, indicating the value is not an absolute value</p>
+  </td></tr><tr><td>max</td><td><code>number</code></td><td><p>maximal value (inclusive)</p>
+</td></tr><tr><td>min</td><td><code>number</code></td><td><p>minimal value (inclusive)</p>
+</td></tr><tr><td>operator</td><td><a href="#Operator">Operator</a></td><td><p>the operator, indicating the value is not an absolute value</p>
 </td></tr><tr><td>precision</td><td><code>number</code></td><td><p>± in given units, uniform error</p>
-</td></tr><tr><td>rangeInclusive</td><td><code>number</code></td><td><p>± in given units, inclusive range</p>
 </td></tr><tr><td>rawValue</td><td><code>string</code></td><td><p>raw, imported value, eg. &#39;90 .. 120cm&#39; - only required when importing</p>
 </td></tr><tr><td>unit</td><td><code>string</code></td><td><p>one of the length units in js-quantities</p>
 </td></tr><tr><td>value</td><td><code>number</code></td><td><p>the value in the specified unit</p>
@@ -622,7 +616,7 @@ data provider, it’s a good idea to use the provider&#39;s internal ID here.</p
 
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>canSkipQueueWithDisability</td><td><code>boolean</code></td><td><p><code>true</code> if you can skip the queue with a disability, <code>false</code> if not.</p>
 </td></tr><tr><td>grabBars</td><td><a href="#GrabBars">GrabBars</a></td><td><p>Grab bars inside the queueing system, if applicable.</p>
-</td></tr><tr><td>interactions</td><td><a href="#InteractionMode">InteractionMode</a>[]</td><td><p>Indicates how the object can be interacted with.</p>
+</td></tr><tr><td>interactions</td><td><a href="#Partial">Partial</a></td><td><p>Indicates how the object can be interacted with.</p>
 </td></tr><tr><td>needsTickets</td><td><code>boolean</code></td><td><p><code>true</code> if the queueing uses tickets (usually numbered), <code>false</code> if not.</p>
 </td></tr><tr><td>numberOfQueueServerPoints</td><td><code>number</code></td><td><p>Number of queue server points.</p>
 </td></tr><tr><td>numberOfSeats</td><td><code>number</code></td><td><p>Number of seats that can be used by people while waiting in the queue.</p>
@@ -649,7 +643,7 @@ unknown.</p>
 </td></tr><tr><td>hasSupportRails</td><td><code>boolean</code></td><td><p><code>true</code> if there support rails on the walls</p>
 </td></tr><tr><td>heightOfDrier</td><td><a href="#Length">Length</a></td><td><p>At which height from the floor is the drier or towel?</p>
 </td></tr><tr><td>heightOfSoap</td><td><a href="#Length">Length</a></td><td><p>At which height from the floor is the soap?</p>
-</td></tr><tr><td>interactions</td><td><a href="#InteractionMode">InteractionMode</a>[]</td><td><p>Indicates how the object can be interacted with.</p>
+</td></tr><tr><td>interactions</td><td><a href="#Partial">Partial</a></td><td><p>Indicates how the object can be interacted with.</p>
 </td></tr><tr><td>isAccessibleWithWheelchair</td><td><code>boolean</code></td><td><p><code>true</code> if the room&#39;s relevant facilities are completely accessible while using a wheelchair,
 <code>false</code> if not, <code>undefined</code> if the condition is unknown or difficult to assess.</p>
 </td></tr><tr><td>mirror</td><td><a href="#Mirror">Mirror</a></td><td><p>Describes a mirror, if existing.</p>
@@ -667,7 +661,7 @@ e.g. for different access types or usage times.</p>
 
   Describes a room inside a structure.
 
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>address</td><td><a href="#StructuredAddress">StructuredAddress</a></td><td></td></tr><tr><td>description</td><td><a href="../i18n">LocalizedString</a></td><td></td></tr><tr><td>interactions</td><td><a href="#InteractionMode">InteractionMode</a>[]</td><td><p>Indicates how the object can be interacted with.</p>
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>address</td><td><a href="#StructuredAddress">StructuredAddress</a></td><td></td></tr><tr><td>description</td><td><a href="../i18n">LocalizedString</a></td><td></td></tr><tr><td>interactions</td><td><a href="#Partial">Partial</a></td><td><p>Indicates how the object can be interacted with.</p>
 </td></tr><tr><td>isAccessibleWithWheelchair</td><td><code>boolean</code></td><td><p><code>true</code> if the room&#39;s relevant facilities are completely accessible while using a wheelchair,
 <code>false</code> if not, <code>undefined</code> if the condition is unknown or difficult to assess.</p>
 </td></tr><tr><td>sameAs</td><td><code>string</code>[]</td><td></td></tr></table>
@@ -677,13 +671,15 @@ e.g. for different access types or usage times.</p>
 
   Describes one or multiple seats / chairs / benches / stools / couches / sofas / armchairs / ...
 
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>columns</td><td><code>number</code>[]</td><td><p>The seat column numbers. This is only for seats in a fixed seating arrangement.</p>
-</td></tr><tr><td>controlledBySwitch</td><td><a href="#EquipmentProperties">EquipmentProperties</a></td><td><p>Describes an associated switch.</p>
-</td></tr><tr><td>controlledBySwitchId</td><td><code>string</code></td><td><p>References a switch (<code>EquipmentInfo</code>) by its ID.</p>
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>adjustmentAxes</td><td><code>"sagittal"</code>&nbsp;|&nbsp;<code>"coronal"</code>&nbsp;|&nbsp;<code>"axial"</code>[]</td><td><p>The seat can be adjusted in the following axes.</p>
+</td></tr><tr><td>adjustmentDirections</td><td><code>"up"</code>&nbsp;|&nbsp;<code>"down"</code>&nbsp;|&nbsp;<code>"left"</code>&nbsp;|&nbsp;<code>"right"</code>&nbsp;|&nbsp;<code>"forward"</code>&nbsp;|&nbsp;<code>"backward"</code>&nbsp;|&nbsp;<code>"clockwise"</code>&nbsp;|&nbsp;<code>"counterclockwise"</code>[]</td><td><p>The seat can be adjusted in the following directions.</p>
+</td></tr><tr><td>columns</td><td><code>number</code>[]</td><td><p>The seat column numbers. This is only for seats in a fixed seating arrangement.</p>
 </td></tr><tr><td>description</td><td><a href="../i18n">LocalizedString</a></td><td><p>Name of the entrance (helpful if there are multiple entrances).</p>
 </td></tr><tr><td>fixedHeight</td><td><a href="#Length">Length</a></td><td><p>How high is the desk? For variable-height desks, use <code>minimalHeight</code> and <code>maximalHeight</code>
 instead.</p>
-</td></tr><tr><td>interactions</td><td><a href="#InteractionMode">InteractionMode</a>[]</td><td><p>How can you interact with something at this seat?</p>
+</td></tr><tr><td>hasHeadRest</td><td><code>boolean</code></td><td><p>The seat has a headrest.</p>
+</td></tr><tr><td>hasSeatbelt</td><td><code>boolean</code></td><td><p>The seat has a seatbelt.</p>
+</td></tr><tr><td>interactions</td><td><a href="#Partial">Partial</a></td><td><p>Indicates how the object can be interacted with.</p>
 </td></tr><tr><td>intercom</td><td><code>undefined</code>&nbsp;|&nbsp;<a href="#Intercom">Intercom</a></td><td><p>Information about an intercom at this seat, if applicable.</p>
 </td></tr><tr><td>isCenterColumn</td><td><code>boolean</code></td><td><p>The seat is located at the center of the seating arrangement, laterally.</p>
 </td></tr><tr><td>isFixed</td><td><code>boolean</code></td><td><p>The seat is fixed.</p>
@@ -702,6 +698,7 @@ This can be used to determine if a wheelchair user can sit at the desk.</p>
 </td></tr><tr><td>payment</td><td><code>undefined</code>&nbsp;|&nbsp;<a href="#Payment">Payment</a></td><td><p>Information about payment at this seat or the cost of using this seat.</p>
 </td></tr><tr><td>reservedForPersonsWith</td><td><a href="#PersonalProfile">PersonalProfile</a></td><td><p>The seat is reserved for persons with the given profile.</p>
 </td></tr><tr><td>rows</td><td><code>number</code>[]</td><td><p>The seat row numbers. This is only for seats in a fixed seating arrangement.</p>
+</td></tr><tr><td>seatbeltPoints</td><td><code>number</code></td><td><p>The number of seatbelt points.</p>
 </td></tr><tr><td>turningSpaceInFront</td><td><a href="#Length">Length</a></td><td><p>How much space is there in front of the desk?
 This can be used to determine if a wheelchair user can sit at the desk.</p>
 </td></tr></table>
@@ -714,11 +711,9 @@ This can be used to determine if a wheelchair user can sit at the desk.</p>
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>door</td><td><a href="#Door">Door</a></td><td></td></tr><tr><td>grabBars</td><td><a href="#GrabBars">GrabBars</a></td><td><p>Ergonomic handles inside the shower.</p>
 </td></tr><tr><td>hasShowerSeat</td><td><code>boolean</code></td><td><p><code>true</code> if the shower has a seat, <code>false</code> if not, <code>undefined</code> if condition is unknown..</p>
 </td></tr><tr><td>hasSupportRails</td><td><code>boolean</code></td><td><p><code>true</code> if the shower has support rails, <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
-</td></tr><tr><td>showerSeatIsFolding</td><td><code>boolean</code></td><td><p><code>true</code> if the shower seat can be folded, <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
-</td></tr><tr><td>showerSeatIsRemovable</td><td><code>boolean</code></td><td><p><code>true</code> if the shower seat can be removed from the shower easily, <code>false</code> if not, <code>undefined</code>
-if condition is unknown.</p>
-</td></tr><tr><td>stairs</td><td><a href="#Stairs">Stairs</a></td><td></td></tr><tr><td>supportRailsHeight</td><td><a href="#Length">Length</a></td><td><p>At which height are the support rails? Measured from the top.</p>
-</td></tr></table>
+</td></tr><tr><td>interactions</td><td><a href="#Partial">Partial</a></td><td><p>Indicates how the object can be interacted with.</p>
+</td></tr><tr><td>seat</td><td><a href="#Seat">Seat</a></td><td><p>Describes the shower seat, if existing.</p>
+</td></tr><tr><td>stairs</td><td><a href="#Stairs">Stairs</a></td><td></td></tr></table>
   
 
 ### <a id="Signage">Signage</a>
@@ -749,6 +744,7 @@ unknown.</p>
 </td></tr><tr><td>hasVideo</td><td><code>boolean</code></td><td><p><code>true</code> if the signage has video, <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
 </td></tr><tr><td>hasVirtualMap</td><td><code>boolean</code></td><td><p><code>true</code> if the signage has a virtual map, <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
 </td></tr><tr><td>highLegibility</td><td><code>boolean</code></td><td><p><code>true</code> if the signage has high legibility, <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
+</td></tr><tr><td>interactions</td><td><a href="#Partial">Partial</a></td><td><p>Indicates how the object can be interacted with.</p>
 </td></tr><tr><td>isHighContrast</td><td><code>boolean</code></td><td><p><code>true</code> if the signage has high contrast, <code>false</code> if not, <code>undefined</code> if condition is unknown.</p>
 </td></tr><tr><td>sitemap</td><td><a href="#EquipmentInfo">EquipmentInfo</a></td><td><p>Information about the sitemap.</p>
 </td></tr></table>
@@ -851,19 +847,14 @@ possible.</p>
 
   Describes a single toilet that can be inside a restroom or cabin.
 
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>flushMechanism</td><td><a href="#EquipmentProperties">EquipmentProperties</a></td><td><p>Describes the flush mechanism as equipment. Use <code>actionMode</code> and/or <code>perceptionMode</code> on the
-properties to describe the mechanism.</p>
-</td></tr><tr><td>flushMechanismDistanceFromToilet</td><td><a href="#Length">Length</a></td><td><p>Indicates how far the flush mechanism is from the toilet, from the perspective of a the floor
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>flushMechanismDistanceFromToilet</td><td><a href="#Length">Length</a></td><td><p>Indicates how far the flush mechanism(s) from the toilet, from the perspective of a the floor
 plan. If the flush mechanism is right behind the toilet, this is a 0 length.</p>
 </td></tr><tr><td>grabBars</td><td><a href="#GrabBars">GrabBars</a></td><td><p>Object describing the grab bars.</p>
 </td></tr><tr><td>hasAutomaticFlush</td><td><code>boolean</code></td><td><p><code>true</code> if the toilet is automatically flushing after use.</p>
 </td></tr><tr><td>heightOfBase</td><td><a href="#Length">Length</a></td><td><p>Indicates the height of the toilet’s base.</p>
+</td></tr><tr><td>interactions</td><td><a href="#Partial">Partial</a></td><td><p>Indicates how the object can be interacted with.</p>
 </td></tr><tr><td>isSquatToilet</td><td><code>boolean</code></td><td><p>Indicates whether the toilet is a squat toilet.</p>
 </td></tr><tr><td>isUrinal</td><td><code>boolean</code></td><td><p>Indicates whether the toilet is a urinal.</p>
-</td></tr><tr><td>secondaryFlushMechanism</td><td><a href="#EquipmentProperties">EquipmentProperties</a></td><td><p>Describes the secondary flush mechanism as equipment. Use <code>actionMode</code> and/or <code>perceptionMode</code>
-on the properties to describe the mechanism.</p>
-</td></tr><tr><td>secondaryFlushMechanismDistanceFromToilet</td><td><a href="#Length">Length</a></td><td><p>Indicates how far the flush mechanism is from the toilet, from the perspective of a the floor
-plan. If the flush mechanism is right behind the toilet, this is a 0 length.</p>
 </td></tr><tr><td>spaceInFront</td><td><a href="#Length">Length</a></td><td><p>How much space is in front of the toilet?</p>
 </td></tr><tr><td>spaceOnUsersLeftSide</td><td><a href="#Length">Length</a></td><td><p>How much space is on the left side of the toilet? (from the perspective of somebody using the
 toilet)</p>
@@ -879,6 +870,7 @@ toilet)</p>
   <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>accessibleWithWheelchair</td><td><code>boolean</code></td><td><p><code>true</code> if the wash basin is accessible with wheelchairs, <code>false</code> if not, <code>undefined</code>
 if condition is unknown.</p>
 </td></tr><tr><td>height</td><td><a href="#Length">Length</a></td><td><p>Defines at which height is the wash basin&#39;s top</p>
+</td></tr><tr><td>interactions</td><td><a href="#Partial">Partial</a></td><td><p>Indicates how the object can be interacted with.</p>
 </td></tr><tr><td>isLocatedInsideRestroom</td><td><code>boolean</code></td><td><p><code>true</code> if the restroom&#39;s wash basin is inside the cabin, <code>false</code> if not, <code>undefined</code>
 if condition is unknown.</p>
 </td></tr><tr><td>spaceBelowDepth</td><td><a href="#Length">Length</a></td><td><p>How deep is the space below the wash basin?</p>
@@ -895,6 +887,7 @@ if condition is unknown.</p>
 the distance to this entrance MUST be used.</p>
 </td></tr><tr><td>hasDedicatedSignage</td><td><code>boolean</code></td><td><p><code>true</code> if there is dedicated signage at all relevant turning points from the street to the
 parking, <code>false</code> if not, <code>undefined</code> if this is unknown.</p>
+</td></tr><tr><td>interactions</td><td><a href="#Partial">Partial</a></td><td><p>Indicates how the object can be interacted with.</p>
 </td></tr><tr><td>isLocatedInside</td><td><code>boolean</code></td><td><p><code>true</code> if the parking is inside a building or under a roof, <code>false</code> if not, <code>undefined</code> if
 unknown.</p>
 </td></tr><tr><td>length</td><td><a href="#Length">Length</a></td><td><p>Length constraint of the parking lots.</p>
@@ -926,7 +919,8 @@ there is no designated space for wheelchair users, but the number is known.</p>
 
   Describes the presence of staff and their qualifications and/or provided services.
 
-  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>descriptionWhereToGetLoginData</td><td><a href="../i18n">LocalizedString</a></td><td><p>Describes where you get the login data / guest pass.</p>
+  <table><tr><td>Name</td><td>Type</td><td></td></tr><tr><td>access</td><td><code>"private"</code>&nbsp;|&nbsp;<code>"public"</code>&nbsp;|&nbsp;<code>"customers"</code>&nbsp;|&nbsp;<code>"permissive"</code>&nbsp;|&nbsp;<code>"yes"</code>&nbsp;|&nbsp;<code>"no"</code>&nbsp;|&nbsp;<code>"permit"</code>&nbsp;|&nbsp;<code>"designated"</code>&nbsp;|&nbsp;<code>"delivery"</code>&nbsp;|&nbsp;<code>"emergency"</code>&nbsp;|&nbsp;<code>"residents"</code>&nbsp;|&nbsp;<code>"employees"</code>&nbsp;|&nbsp;<code>"disabled"</code>[]</td><td><p>Describes who can access the wifi.</p>
+</td></tr><tr><td>descriptionWhereToGetLoginData</td><td><a href="../i18n">LocalizedString</a></td><td><p>Describes where you get the login data / guest pass.</p>
 </td></tr><tr><td>hasCaptivePortal</td><td><code>boolean</code></td><td><p><code>true</code> if the wifi has a captive portal website.</p>
 </td></tr><tr><td>hasFixedPassword</td><td><code>boolean</code></td><td><p><code>true</code> if the wifi has a fixed password. Knowing this password must be enough to enter and use
 the wifi.</p>

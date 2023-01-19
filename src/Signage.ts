@@ -5,7 +5,7 @@ import { getLocalizedStringSchemaDefinition, LocalizedString } from './Localized
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 
-const SignageInteractions = [
+export const SignageInteractions = [
   'locateYourself',
   'findYourDestination',
 ] as const;

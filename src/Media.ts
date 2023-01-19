@@ -12,7 +12,7 @@ import { W3CAccessibilityHazard, w3cAccessibilityHazards } from './W3CAccessibil
 import { W3CAccessMode, w3cAccessModes } from './W3CAccessMode';
 import { w3cAccessibilityControls, W3CAccessibilityControl } from './W3CAccessibilityControl';
 
-const MediaInteractions = [
+export const MediaInteractions = [
   '',
 ] as const;
 export type MediaInteraction = typeof MediaInteractions[number];
