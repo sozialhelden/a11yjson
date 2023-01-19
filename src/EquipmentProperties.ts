@@ -7,14 +7,13 @@ import {
   ietfLanguageTagsAndSignLanguageCodes,
 } from './ietfLanguageTags';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
-import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { W3CAccessMode, w3cAccessModes } from './W3CAccessMode';
 import { W3CAccessibilityFeature, w3cAccessibilityFeatures } from './W3CAccessibilityFeature';
 import { W3CAccessibilityHazard, w3cAccessibilityHazards } from './W3CAccessibilityHazard';
 import { w3cAccessibilityControls, W3CAccessibilityControl } from './W3CAccessibilityControl';
 import BooleanField from './BooleanField';
 import { getIntercomSchemaDefinition, Intercom } from './Intercom';
-import { getInteractionModeSchemaDefinition } from './InteractionMode';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 
 export type EquipmentTypes =
@@ -54,7 +53,32 @@ export const AllowedEquipmentTypes = Object.freeze([
   'luggageScanner',
 ]) as ReadonlyArray<EquipmentTypes>;
 
-export interface EquipmentProperties extends Interactable {
+export const EquipmentInteractions = [
+  'use',
+  'selectFloor',
+  'arriveAtFloor',
+  'callEmergency',
+  'ride',
+  'travel',
+  'buy',
+  'sell',
+  'call',
+  'understand',
+  'sleep',
+  'toggle',
+  'engage',
+  'flush',
+  'scan',
+  'handover',
+  'enable',
+  'disable',
+  'locateYourself',
+  'findYourDestination',
+] as const;
+
+export type EquipmentInteraction = typeof EquipmentInteractions[number];
+
+export interface EquipmentProperties extends Interactable<EquipmentInteraction> {
   /**
    * Describes where the equipment is located. If only one description string is technically
    * possible to maintain, it MUST not contain any abbreviations to allow being readable aloud by
@@ -425,7 +449,6 @@ SchemaDefinition
   hasExternalFloorSelection: BooleanField,
   hasMirror: BooleanField,
   ...getPrefixedSchemaDefinition('emergencyIntercom', getIntercomSchemaDefinition()),
-  ...getPrefixedArraySchemaDefinition('interactions', getInteractionModeSchemaDefinition()),
   ...getLocalizedStringSchemaDefinition('alternativeRouteInstructions'),
   isWorking: BooleanField,
   ...getLocalizedStringSchemaDefinition('outOfOrderReason'),
@@ -520,5 +543,5 @@ SchemaDefinition
     type: String,
     allowedValues: w3cAccessibilityHazards,
   },
-  ...getInteractableSchemaDefinition(),
+  ...getInteractableSchemaDefinition(EquipmentInteractions),
 });

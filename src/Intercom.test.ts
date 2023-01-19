@@ -1,6 +1,7 @@
 import { Intercom, getIntercomSchemaDefinition } from './Intercom';
 import { Complete } from './Complete';
 import expectValidFixture from './lib/expectValidFixture';
+import interactionModeFixture from './InteractionMode.test';
 
 const intercomFixture: Complete<Intercom> = {
   description: { en: 'doorbell' },
@@ -11,7 +12,9 @@ const intercomFixture: Complete<Intercom> = {
   hasVideoCamera: true,
   hasVisualFeedbackOnConnection: true,
   needsKeyPad: true,
-  interactions: [],
+  interactions: {
+    // call: [interactionModeFixture],
+  },
 };
 
 export default intercomFixture;

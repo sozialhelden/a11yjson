@@ -1,14 +1,26 @@
 import { getStructuredAddressSchemaDefinition, StructuredAddress } from './Address';
 import BooleanField from './BooleanField';
-import { Interactable } from './Interactable';
-import { getInteractionModeSchemaDefinition } from './InteractionMode';
-import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
+
+export const RoomInteractions = [
+  'enter',
+  'exit',
+  'stand',
+  'sit',
+  'see',
+  'sleep',
+  'play',
+  'wait',
+  'storeThings',
+] as const;
+export type RoomInteraction = typeof RoomInteractions[number];
 
 /**
  * Describes a room inside a structure.
  */
-export interface Room extends Interactable {
+export interface Room extends Interactable<RoomInteraction> {
   /**
    * `true` if the room's relevant facilities are completely accessible while using a wheelchair,
    * `false` if not, `undefined` if the condition is unknown or difficult to assess.
@@ -31,5 +43,5 @@ export const getRoomSchemaDefinition: () => Record<string, SchemaDefinition> = (
   },
   ...getPrefixedSchemaDefinition('address', getStructuredAddressSchemaDefinition()),
   ...getLocalizedStringSchemaDefinition('description'),
-  ...getPrefixedArraySchemaDefinition('interactions', getInteractionModeSchemaDefinition()),
+  ...getInteractableSchemaDefinition(RoomInteractions),
 });

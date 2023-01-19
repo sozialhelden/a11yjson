@@ -5,11 +5,20 @@ import {
 } from './Quantity';
 import BooleanField from './BooleanField';
 import { EquipmentProperties, getEquipmentPropertiesSchemaDefinition } from './EquipmentProperties';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable';
+
+const ToiletInteractions = [
+  'use',
+  'flush',
+  'spray',
+  'washHands',
+] as const;
+export type ToiletInteraction = typeof ToiletInteractions[number];
 
 /**
  * Describes a single toilet that can be inside a restroom or cabin.
  */
-export interface Toilet {
+export interface Toilet extends Interactable<ToiletInteraction> {
   /**
    * Indicates the height of the toilet’s base.
    */
@@ -49,42 +58,22 @@ export interface Toilet {
   hasAutomaticFlush?: boolean;
 
   /**
-   * Describes the flush mechanism as equipment. Use `actionMode` and/or `perceptionMode` on the
-   * properties to describe the mechanism.
-   */
-  flushMechanism?: EquipmentProperties;
-
-  /**
-   * Indicates how far the flush mechanism is from the toilet, from the perspective of a the floor
+   * Indicates how far the flush mechanism(s) from the toilet, from the perspective of a the floor
    * plan. If the flush mechanism is right behind the toilet, this is a 0 length.
    */
   flushMechanismDistanceFromToilet?: Length;
-
-  /**
-   * Describes the secondary flush mechanism as equipment. Use `actionMode` and/or `perceptionMode`
-   * on the properties to describe the mechanism.
-   */
-  secondaryFlushMechanism?: EquipmentProperties;
-
-  /**
-   * Indicates how far the flush mechanism is from the toilet, from the perspective of a the floor
-   * plan. If the flush mechanism is right behind the toilet, this is a 0 length.
-   */
-  secondaryFlushMechanismDistanceFromToilet?: Length;
 }
 
 export const getToiletSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
   hasGrabBars: BooleanField,
+  isSquatToilet: BooleanField,
+  isUrinal: BooleanField,
+  hasAutomaticFlush: BooleanField,
   ...getPrefixedQuantitySchemaDefinition('heightOfBase', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('spaceOnUsersLeftSide', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('spaceOnUsersRightSide', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('spaceInFront', LengthSchemaDefinition),
   ...getPrefixedSchemaDefinition('grabBars', getGrabBarsSchemaDefinition()),
-  ...getPrefixedSchemaDefinition('flushMechanism', getEquipmentPropertiesSchemaDefinition()),
   ...getPrefixedQuantitySchemaDefinition('flushMechanismDistanceFromToilet', LengthSchemaDefinition),
-  ...getPrefixedSchemaDefinition('secondaryFlushMechanism', getEquipmentPropertiesSchemaDefinition()),
-  ...getPrefixedQuantitySchemaDefinition('secondaryFlushMechanismDistanceFromToilet', LengthSchemaDefinition),
-  isSquatToilet: BooleanField,
-  isUrinal: BooleanField,
-  hasAutomaticFlush: BooleanField,
+  ...getInteractableSchemaDefinition(ToiletInteractions),
 });

@@ -17,19 +17,30 @@ const deskFixture: Complete<Desk> = {
   depthBelow: { value: 120, unit: 'cm' },
   turningSpaceInFront: { value: 120, unit: 'cm' },
   queueSystem: queueSystemFixture,
-  controlledBySwitch: {
-    category: 'switch',
-    description: { en: 'Height buttons' },
-    interactions: [{
-      action: [{
-        touch: true,
-      }],
-    }],
-  },
-  controlledBySwitchId: 'SWITCH-12345',
   payment: paymentFixture,
   intercom: intercomFixture,
-  interactions: [interactionModeFixture],
+  interactions: {
+    changeHeight: [interactionModeFixture],
+    savePreset: [interactionModeFixture],
+    enqueue: [interactionModeFixture],
+    checkIn: [interactionModeFixture],
+    checkOut: [interactionModeFixture],
+    ringBell: [interactionModeFixture],
+    pay: [interactionModeFixture],
+    handoverLuggage: [interactionModeFixture],
+    handover: [interactionModeFixture],
+    getReturn: [interactionModeFixture],
+    getFood: [interactionModeFixture],
+    getShoppingBag: [interactionModeFixture],
+    scan: [interactionModeFixture],
+    selfCheckout: [interactionModeFixture],
+    open: [interactionModeFixture],
+    close: [interactionModeFixture],
+    unlock: [interactionModeFixture],
+    lock: [interactionModeFixture],
+    unlockAndLock: [interactionModeFixture],
+    openAndClose: [interactionModeFixture],
+  },
 };
 
 export default deskFixture;

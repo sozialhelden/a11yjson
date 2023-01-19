@@ -2,10 +2,13 @@ import BooleanField from './BooleanField';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 
+export const GrabBarsInteractions = ['localizeYourself', 'findYourDestination'] as const;
+export type GrabBarsInteraction = typeof GrabBarsInteractions[number];
+
 /**
  * Describes grab bars or hand rails.
  */
-export interface GrabBars extends Interactable {
+export interface GrabBars extends Interactable<GrabBarsInteraction> {
   /**
    * `true` if there is a folding handle on left side, `false` if not.
    *
@@ -63,5 +66,5 @@ export const getGrabBarsSchemaDefinition: () => Record<string, SchemaDefinition>
   ...getPrefixedQuantitySchemaDefinition('distanceBetweenBars', LengthSchemaDefinition),
   foldable: BooleanField,
   continuous: BooleanField,
-  ...getInteractableSchemaDefinition(),
+  ...getInteractableSchemaDefinition(GrabBarsInteractions),
 });

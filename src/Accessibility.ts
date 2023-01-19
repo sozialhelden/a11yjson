@@ -17,7 +17,6 @@ import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from '.
 import { Desk, getDeskSchemaDefinition } from './Desk';
 import BooleanField from './BooleanField';
 import { getSignageSchemaDefinition, Signage } from './Signage';
-import { InteractionMode } from './InteractionMode';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 
 /**
@@ -46,10 +45,38 @@ export enum WheelchairAccessibilityGrade {
 
 export const wheelchairAccessibilityGrades = ['fully', 'partially', 'not'];
 
+export const GenericInteractions = [
+  'watchMovies',
+  'watchPlays',
+  'explore',
+  'visit',
+  'roam',
+  'read',
+  'rent',
+  'watch',
+  'see',
+  'listen',
+  'getFood',
+  'eat',
+  'pay',
+  'buy',
+  'sell',
+  'workHere',
+  'arrive',
+  'checkIn',
+  'checkOut',
+  'useLockers',
+  'change',
+  'use',
+  'book',
+  'play',
+] as const;
+export type GenericInteraction = typeof GenericInteractions[number];
+
 /**
  * Describes the physical (and sometimes human rated) accessibility of a place.
  */
-export interface Accessibility extends Interactable {
+export interface Accessibility extends Interactable<GenericInteraction> {
   /// @deprecated Use `wheelchairAccessibilityGrade`, `media`, and other properties instead.
   accessibleWith?: PersonalProfile;
   /// @deprecated Use `wheelchairAccessibilityGrade`, `media`, and other properties instead.
@@ -111,11 +138,6 @@ export interface Accessibility extends Interactable {
    * 10-second period at least.
    */
   ambientNoiseLevel?: Volume;
-
-  /**
-   * Typical interactions at this venue.
-   */
-  interactions: InteractionMode[];
 
   /**
    * Object describing the owner's smoking policy.
@@ -265,5 +287,5 @@ export const getAccessibilitySchemaDefinition: () => Record<string, SchemaDefini
   ...getPrefixedArraySchemaDefinition('restrooms', getRestroomSchemaDefinition()),
   ...getPrefixedQuantitySchemaDefinition('ambientNoiseLevel', VolumeSchemaDefinition),
   ...getLocalizedStringSchemaDefinition('serviceContact'),
-  ...getInteractableSchemaDefinition(),
+  ...getInteractableSchemaDefinition(GenericInteractions),
 });

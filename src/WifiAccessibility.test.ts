@@ -3,6 +3,7 @@ import { Complete } from './Complete';
 import expectValidFixture from './lib/expectValidFixture';
 
 const wifiAccessibilityFixture: Complete<WifiAccessibility> = {
+  access: ['public'],
   isOpenToEveryone: true,
   isOpenToVisitors: true,
   isOpenToStaff: true,

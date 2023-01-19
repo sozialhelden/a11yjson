@@ -17,17 +17,17 @@ const toiletFixture: Complete<Toilet> = {
   isSquatToilet: false,
   isUrinal: false,
   hasAutomaticFlush: false,
-  flushMechanism: {
-    interactions: [
+  flushMechanismDistanceFromToilet: '0 .. 100cm',
+  interactions: {
+    flush: [
       {
         action: [{ pullstring: true }],
       },
-    ],
-  },
-  flushMechanismDistanceFromToilet: '0 .. 1m',
-  secondaryFlushMechanism: { // a secondary button that you can use instead of the pullstring
-    interactions: [
       {
+        action: [{ pedal: true, activationForce: '10N' }],
+      },
+      {
+        name: { en: 'Flush with a secondary button at low height' },
         action: [
           {
             pushButton: true,
@@ -40,7 +40,6 @@ const toiletFixture: Complete<Toilet> = {
       },
     ],
   },
-  secondaryFlushMechanismDistanceFromToilet: '0 .. 1m',
 };
 
 export default toiletFixture;

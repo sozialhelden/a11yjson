@@ -19,6 +19,8 @@ import {
   TimeInterval,
   Acceleration,
   AccelerationSchemaDefinition,
+  Temperature,
+  TemperatureSchemaDefinition,
 } from './Quantity';
 import { getTechCombinationSchemaDefinition, TechCombination } from './TechCombination';
 
@@ -89,6 +91,11 @@ export type PerceptionMode = {
   light?: boolean;
 
   /**
+   * The output is visual.
+   */
+  visual?: boolean;
+
+  /**
    * The ability to read is supported or needed.
    */
   read?: boolean;
@@ -155,6 +162,11 @@ export type PerceptionMode = {
   audibleClick?: boolean;
 
   /**
+   * There is background music playing.
+   */
+  backgroundMusic?: boolean;
+
+  /**
    * The output uses music.
    */
   music?: boolean;
@@ -199,6 +211,11 @@ export type PerceptionMode = {
    * Attention time span needed to understand the output.
    */
   attentionSpan?: TimeInterval;
+
+  /**
+   * The ability to smell is supported or needed.
+   */
+  smell?: boolean;
 
   /**
    * The output needs high concentration to understand.
@@ -324,6 +341,31 @@ export type PerceptionMode = {
   screen?: boolean;
 
   /**
+   * The output is displayed on a paper.
+   */
+  paper?: boolean;
+
+  /**
+   * The output is from a printer.
+   */
+  printer?: boolean;
+
+  /**
+   * Heat perception is supported or needed.
+   */
+  heat?: boolean;
+
+  /**
+   * The temperature of the output.
+   */
+  temperature?: Temperature;
+
+  /**
+   * The ambient temperature around the output.
+   */
+  ambientTemperature?: Temperature;
+
+  /**
    * The output uses one or more charts.
    */
   chart?: boolean;
@@ -420,6 +462,11 @@ export type PerceptionMode = {
   isEasyToUnderstand?: boolean;
 
   /**
+   * `true` if the input is easy to find.
+   */
+  isEasyToFind?: boolean;
+
+  /**
    * The height you need to grip to perceive the content/output/signal.
    */
   necessaryGripHeight?: Length;
@@ -489,6 +536,7 @@ export const getPerceptionModeSchemaDefinition: () => Record<string, SchemaDefin
   blackAndWhite: BooleanField,
   braille: BooleanField,
   breathing: BooleanField,
+  smell: BooleanField,
   button: BooleanField,
   cable: BooleanField,
   radio: BooleanField,
@@ -505,6 +553,7 @@ export const getPerceptionModeSchemaDefinition: () => Record<string, SchemaDefin
   headphone: BooleanField,
   highContrast: BooleanField,
   isEasyToUnderstand: BooleanField,
+  isEasyToFind: BooleanField,
   dedicatedScreenForSubtitles: BooleanField,
   subtitles: BooleanField,
   audioDescription: BooleanField,
@@ -512,7 +561,9 @@ export const getPerceptionModeSchemaDefinition: () => Record<string, SchemaDefin
   plainLanguageOption: BooleanField,
   led: BooleanField,
   morse: BooleanField,
+  heat: BooleanField,
   music: BooleanField,
+  backgroundMusic: BooleanField,
   numbers: BooleanField,
   pictograms: BooleanField,
   pitchedTone: BooleanField,
@@ -520,10 +571,13 @@ export const getPerceptionModeSchemaDefinition: () => Record<string, SchemaDefin
   read: BooleanField,
   rhythmic: BooleanField,
   screen: BooleanField,
+  printer: BooleanField,
+  paper: BooleanField,
   signLanguage: BooleanField,
   sound: BooleanField,
   speech: BooleanField,
   tactile: BooleanField,
+  visual: BooleanField,
   tactileGuides: BooleanField,
   vibration: BooleanField,
   fullBody: BooleanField,
@@ -547,6 +601,8 @@ export const getPerceptionModeSchemaDefinition: () => Record<string, SchemaDefin
   ...getPrefixedQuantitySchemaDefinition('necessaryEyeHeight', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('antentionSpan', TimeIntervalSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('duration', TimeIntervalSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('temperature', TemperatureSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('ambientTemperature', TemperatureSchemaDefinition),
   ...getPrefixedArraySchemaDefinition('techSufficient', getTechCombinationSchemaDefinition()),
   ...getPrefixedArraySchemaDefinition('techSupported', getTechCombinationSchemaDefinition()),
 });

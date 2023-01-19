@@ -1,4 +1,5 @@
 import SimpleSchema from 'simpl-schema';
+import { AccessType, accessTypes } from './AccessType';
 import BooleanField from './BooleanField';
 import { IetfLanguageTag, ietfLanguageTagsAndSignLanguageCodes } from './ietfLanguageTags';
 import { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition';
@@ -12,8 +13,34 @@ import {
   LengthSchemaDefinition,
   TimeInterval,
   TimeIntervalSchemaDefinition,
+  Mass,
+  MassSchemaDefinition,
 } from './Quantity';
 import { getTechCombinationSchemaDefinition, TechCombination } from './TechCombination';
+
+/**
+ * https://wisc.pb.unizin.org/app/uploads/sites/123/2018/10/Anatomical-Planes-and-Axes.jpg
+ */
+export const DirectionAxes = [
+  'sagittal',
+  'coronal',
+  'axial',
+] as const;
+
+export type DirectionAxis = typeof DirectionAxes[number];
+
+export const Directions = [
+  'up',
+  'down',
+  'left',
+  'right',
+  'forward',
+  'backward',
+  'clockwise',
+  'counterclockwise',
+] as const;
+
+export type Direction = typeof Directions[number];
 
 /**
  * Describes necessary abilities and modes inputting information.
@@ -35,6 +62,11 @@ export type ActionMode = {
   languages?: IetfLanguageTag[];
 
   /**
+   * Who has access to this action?
+   */
+  access?: AccessType[];
+
+  /**
    * `true` if the action is optional, `false` if it is required.
    */
   optional?: boolean;
@@ -53,6 +85,26 @@ export type ActionMode = {
    * Time interval needed for activation/engagement.
    */
   activationTimeInterval?: TimeInterval;
+
+  /**
+   * A weight you need to be able to lift.
+   */
+  weight?: Mass;
+
+  /**
+   * A supported body weight.
+   */
+  bodyMass?: Mass;
+
+  /**
+   * A supported body height.
+   */
+  bodyHeight?: Length;
+
+  /**
+   * Height you need to be able to climb over (for obstacles)
+   */
+  necessaryClimbHeight?: Length;
 
   /**
    * Attention time needed for activation/engagement.
@@ -83,6 +135,11 @@ export type ActionMode = {
    * Waving your hands is supported or needed.
    */
   wave?: boolean;
+
+  /**
+   * Walking is supported or needed.
+   */
+  walk?: boolean;
 
   /**
    * The ability to use sign language is supported or needed.
@@ -210,6 +267,11 @@ export type ActionMode = {
   pushButton?: boolean;
 
   /**
+   * The action uses a capacity sensor, for example a touch sensor.
+   */
+  capacitive?: boolean;
+
+  /**
    * State count for a button or switch, for example 2 for a toggle button, 3 for a 3-way button.
    */
   stateCount?: number;
@@ -235,6 +297,11 @@ export type ActionMode = {
   tactileGuides?: boolean;
 
   /**
+   * The input has a knurled surface, for example around buttons.
+   */
+  knurled?: boolean;
+
+  /**
    * The input has high contrast elements, for example around buttons.
    */
   highContrast?: boolean;
@@ -245,9 +312,24 @@ export type ActionMode = {
   touchscreen?: boolean;
 
   /**
+   * A screen is supported or needed.
+   */
+  screen?: boolean;
+
+  /**
+   * Handling paper is supported or needed.
+   */
+  paper?: boolean;
+
+  /**
    * Touch input is supported or needed.
    */
   touch?: boolean;
+
+  /**
+   * There is a burn hazard.
+   */
+  burnHazard?: boolean;
 
   /**
    * The ability to apply force to an object is supported or needed.
@@ -270,6 +352,11 @@ export type ActionMode = {
   turnKnob?: boolean;
 
   /**
+   * The action uses a knob.
+   */
+  knob?: boolean;
+
+  /**
    * The ability to drag an object is supported or needed.
    */
   drag?: boolean;
@@ -278,6 +365,16 @@ export type ActionMode = {
    * The ability to turn an object is supported or needed.
    */
   turn?: boolean;
+
+  /**
+   * The direction of the action, relative to the body.
+   */
+  direction?: Direction;
+
+  /**
+   * The direction axis of the action, relative to the body.
+   */
+  directionAxis?: DirectionAxis;
 
   /**
    * The ability to pinch an object is supported or needed.
@@ -451,6 +548,12 @@ export type ActionMode = {
   isEasyToUnderstand?: boolean;
 
   /**
+   * `true` if the item is easy to find, `false` if people might face difficulties trying to
+   * find the item, or `undefined` if this is unknown or irrelevant.
+   */
+  isEasyToFind?: boolean;
+
+  /**
    * Technology combinations that are sufficient to make use of the output.
    */
   techSufficient?: TechCombination[];
@@ -459,6 +562,24 @@ export type ActionMode = {
    * Technologies that are sufficient to make use of the output.
    */
   techSupported?: TechCombination[];
+
+  /**
+   * Education level needed to understand the action.
+   *
+   * http://www.ibe.unesco.org/en/glossary-curriculum-terminology/l/levels-education
+   *
+   * - early childhood education (level 0)
+   * - primary education (level 1)
+   * - lower secondary education (level 2)
+   * - upper secondary education (level 3)
+   * - postsecondary non-tertiary education (level 4)
+   * - short-cycle tertiary education (level 5)
+   * - bachelor’s or equivalent level (level 6)
+   * - master’s or equivalent level (level 7)
+   * - doctor or equivalent level (level 8).
+   */
+  educationLevel?: Number;
+
 };
 
 export const getActionModeSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
@@ -510,6 +631,22 @@ export const getActionModeSchemaDefinition: () => Record<string, SchemaDefinitio
   tilt: BooleanField,
   move: BooleanField,
   tongue: BooleanField,
+  walk: BooleanField,
+  knurled: BooleanField,
+  capacitive: BooleanField,
+  screen: BooleanField,
+  paper: BooleanField,
+  burnHazard: BooleanField,
+  direction: {
+    type: String,
+    allowedValues: Directions,
+    optional: true,
+  },
+  directionAxis: {
+    type: String,
+    allowedValues: DirectionAxes,
+    optional: true,
+  },
   pinchFingerGesture: BooleanField,
   rotateTwoFingersGesture: BooleanField,
   swipeFingerGesture: BooleanField,
@@ -557,11 +694,21 @@ export const getActionModeSchemaDefinition: () => Record<string, SchemaDefinitio
   fingerprintScan: BooleanField,
   irisScan: BooleanField,
   isEasyToUnderstand: BooleanField,
+  isEasyToFind: BooleanField,
+  educationLevel: {
+    type: Number,
+    optional: true,
+    allowedValues: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+  },
   ...getPrefixedQuantitySchemaDefinition('heightFromFloor', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('necessaryGripHeight', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('necessaryClimbHeight', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('necessaryEyeHeight', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('activationForce', ForceSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('activationTimeInterval', TimeIntervalSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('weight', MassSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('bodyMass', MassSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('bodyHeight', LengthSchemaDefinition),
   ...getPrefixedArraySchemaDefinition('techSufficient', getTechCombinationSchemaDefinition()),
   ...getPrefixedArraySchemaDefinition('techSupported', getTechCombinationSchemaDefinition()),
   ...getPrefixedArraySchemaDefinition('feedback', getPerceptionModeSchemaDefinition()),
@@ -569,4 +716,12 @@ export const getActionModeSchemaDefinition: () => Record<string, SchemaDefinitio
   voiceActivation: BooleanField,
   visualRecognition: BooleanField,
   ...getPrefixedQuantitySchemaDefinition('attentionSpan', TimeIntervalSchemaDefinition),
+  access: {
+    type: Array,
+    optional: true,
+  },
+  'access.$': {
+    type: String,
+    allowedValues: accessTypes,
+  },
 });

@@ -1,6 +1,17 @@
 import { t } from 'ttag';
+import { AccessType, accessTypes } from './AccessType';
 import { CurrencyValue } from './CurrencyValue';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
+
+const WifiAccessibilityInteractions = [
+  'login',
+  'register',
+  'getPassword',
+  'getGuestPass',
+  'getTerms',
+  'acceptTerms',
+] as const;
+export type WifiAccessibilityInteraction = typeof WifiAccessibilityInteractions[number];
 
 /**
  * Describes the presence of staff and their qualifications and/or provided services.
@@ -53,6 +64,11 @@ export interface WifiAccessibility {
    * Describes if you need to pay a usage fee to use the wifi, or if no fee is needed.
    */
   usageFee?: CurrencyValue[];
+
+  /**
+   * Describes who can access the wifi.
+   */
+  access?: AccessType[];
 }
 
 export const getWifiAccessibilitySchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
@@ -108,6 +124,14 @@ export const getWifiAccessibilitySchemaDefinition: () => Record<string, SchemaDe
     type: Array,
     optional: true,
     label: t`What are the usage fees for this wifi?`,
+  },
+  access: {
+    type: Array,
+    optional: true,
+  },
+  'access.$': {
+    type: String,
+    allowedValues: accessTypes,
   },
   ...getLocalizedStringSchemaDefinition('usageFee.$', {
     label: t`How much does it cost to use this wifi?`,

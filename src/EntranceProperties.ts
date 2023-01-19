@@ -4,12 +4,12 @@ import { getLocalizedStringSchemaDefinition, LocalizedString } from './Localized
 import { getPrefixedQuantitySchemaDefinition, Slope, SlopeSchemaDefinition } from './Quantity';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import BooleanField from './BooleanField';
-import { getInteractableSchemaDefinition, Interactable } from './Interactable';
+import { getInteractableSchemaDefinition } from './Interactable';
 
 /**
  * Describes an entrance to a place.
  */
-export interface EntranceProperties extends Interactable {
+export interface EntranceProperties {
   /**
    * Name of the entrance (helpful if there are multiple entrances).
    */
@@ -103,5 +103,4 @@ SchemaDefinition
     type: String,
     optional: true,
   },
-  ...getInteractableSchemaDefinition(),
 });

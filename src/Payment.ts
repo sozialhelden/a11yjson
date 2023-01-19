@@ -2,6 +2,15 @@ import { t } from 'ttag';
 
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 
+const PaymentInteractions = [
+  'pay',
+  'checkIn',
+  'logIn',
+  'logOut',
+  'register',
+] as const;
+export type Paymentnteraction = typeof PaymentInteractions[number];
+
 /**
  * The `Payment` interface describes the payment options at a location.
  */

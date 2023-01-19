@@ -4,11 +4,20 @@ import { getLocalizedStringSchemaDefinition, LocalizedString } from './Localized
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { getStructuredAddressSchemaDefinition } from './Address';
 import BooleanField from './BooleanField';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable';
+
+const ParkingInteractions = [
+  'park',
+  'enterVehicle',
+  'exitVehicle',
+  'arrive',
+] as const;
+export type ParkingInteraction = typeof ParkingInteractions[number];
 
 /**
  * Describes one or more wheelchair parking lots.
  */
-export interface WheelchairParking {
+export interface WheelchairParking extends Interactable<ParkingInteraction> {
   /**
    * Describes where the parking is located.
    */
@@ -78,9 +87,10 @@ export const getWheelchairParkingSchemaDefinition: () => Record<string, SchemaDe
     optional: true,
   },
   ...getLocalizedStringSchemaDefinition('neededParkingPermits.$', {}),
+  ...getInteractableSchemaDefinition(ParkingInteractions),
 });
 
-export interface Parking {
+export interface Parking extends Interactable<ParkingInteraction> {
   count?: number;
   forWheelchairUsers?: WheelchairParking | null;
 }
@@ -93,4 +103,5 @@ export const getParkingSchemaDefinition: () => Record<string, SchemaDefinition> 
     min: 0,
   },
   ...getPrefixedSchemaDefinition('address', getStructuredAddressSchemaDefinition()),
+  ...getInteractableSchemaDefinition(ParkingInteractions),
 });

@@ -15,4 +15,5 @@ export const accessTypes = [
   'yes',
   'no',
 ] as const;
+
 export type AccessType = typeof accessTypes[number];

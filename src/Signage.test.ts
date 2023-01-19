@@ -24,8 +24,13 @@ const signageFixture: Signage = {
   sitemap: {
     properties: {
       description: { en: 'Sitemap at the main entrance' },
-      interactions: [{ action: [{ touchscreen: true }], perception: [{ screen: true }] }],
+      interactions: {
+        locateYourself: [{ action: [{ touchscreen: true }], perception: [{ screen: true }] }],
+      },
     },
+  },
+  interactions: {
+    locateYourself: [{ action: [{ touchscreen: true }], perception: [{ screen: true }] }],
   },
 };
 

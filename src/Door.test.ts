@@ -11,17 +11,11 @@ const doorFixture: Complete<Door> = {
   thresholdHeight: '2cm',
   doorbellTopButtonHeight: '<100cm',
   doorOpensToOutside: true,
-  hasAcousticFeedbackForClosing: true,
-  hasAcousticFeedbackForOpening: true,
-  hasAcousticFeedbackWhenOpenable: true,
   hasClearMarkingOnGlassDoor: true,
   hasErgonomicDoorHandle: true,
   hasIntercom: false,
   hasProximitySensor: true,
   hasSwitch: true,
-  hasVisualFeedbackForClosing: true,
-  hasVisualFeedbackForOpening: true,
-  hasVisualFeedbackWhenOpenable: true,
   hasVisuallyContrastedFrame: false,
   isAutomatic: true,
   isAutomaticOrAlwaysOpen: true,
@@ -47,7 +41,14 @@ const doorFixture: Complete<Door> = {
   access: ['private'],
   intercom: intercomFixture,
   grabBars: grabBarsFixture,
-  interactions: [interactionModeFixture],
+  interactions: {
+    ringDoorbell: [interactionModeFixture],
+    unlock: [interactionModeFixture],
+    lock: [interactionModeFixture],
+    unlockAndLock: [interactionModeFixture],
+    open: [interactionModeFixture],
+    close: [interactionModeFixture],
+  },
 };
 
 export default doorFixture;

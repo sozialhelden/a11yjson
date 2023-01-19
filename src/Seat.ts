@@ -1,7 +1,8 @@
+import {
+  Direction, DirectionAxes, DirectionAxis, Directions,
+} from './ActionMode';
 import BooleanField from './BooleanField';
-import { EquipmentProperties, getEquipmentPropertiesSchemaDefinition } from './EquipmentProperties';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
-import { InteractionMode } from './InteractionMode';
 import { getIntercomSchemaDefinition, Intercom } from './Intercom';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
@@ -11,10 +12,35 @@ import {
   getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition,
 } from './Quantity';
 
+const SeatInteractions = [
+  'sit',
+  'fold',
+  'unfold',
+  'move',
+  'adjust',
+  'adjustHeight',
+  'adjustSeatingSurface',
+  'adjustSeatingAngle',
+  'adjustArmRests',
+  'adjustHeadRest',
+  'adjustLegRest',
+  'adjustBackRest',
+  'adjustFootRest',
+  'adjustSeatBelt',
+  'adjustSeatBeltLength',
+  'adjustSeatBeltHeight',
+  'adjustSeatBeltAngle',
+  'adjustSeatBeltPosition',
+  'adjustSeatBeltTension',
+  'adjustSeatBeltLock',
+  'connectSeatbelt',
+] as const;
+export type SeatInteraction = typeof SeatInteractions[number];
+
 /**
  * Describes one or multiple seats / chairs / benches / stools / couches / sofas / armchairs / ...
  */
-export interface Seat extends Interactable {
+export interface Seat extends Interactable<SeatInteraction> {
   /**
    * Name of the entrance (helpful if there are multiple entrances).
    */
@@ -71,6 +97,31 @@ export interface Seat extends Interactable {
   isFixed?: boolean;
 
   /**
+   * The seat has a seatbelt.
+   */
+  hasSeatbelt?: boolean;
+
+  /**
+   * The number of seatbelt points.
+   */
+  seatbeltPoints?: number;
+
+  /**
+   * The seat has a headrest.
+   */
+  hasHeadRest?: boolean;
+
+  /**
+   * The seat can be adjusted in the following axes.
+   */
+  adjustmentAxes?: DirectionAxis[];
+
+  /**
+   * The seat can be adjusted in the following directions.
+   */
+  adjustmentDirections?: Direction[];
+
+  /**
    * How high is the desk? For variable-height desks, use `minimalHeight` and `maximalHeight`
    * instead.
    *
@@ -95,14 +146,6 @@ export interface Seat extends Interactable {
    */
   turningSpaceInFront?: Length;
   /**
-   * Describes an associated switch.
-   */
-  controlledBySwitch?: EquipmentProperties;
-  /**
-   * References a switch (`EquipmentInfo`) by its ID.
-   */
-  controlledBySwitchId?: string;
-  /**
    * Information about payment at this seat or the cost of using this seat.
    *
    * `null` indicates there is no payment possible/required.
@@ -114,10 +157,6 @@ export interface Seat extends Interactable {
    * `null` indicates there is no intercom.
    */
   intercom?: Intercom | null;
-  /**
-   * How can you interact with something at this seat?
-   */
-  interactions?: InteractionMode[];
 
   /**
    * The seat is reserved for persons with the given profile.
@@ -139,14 +178,39 @@ SchemaDefinition
   isFoldable: BooleanField,
   isMobile: BooleanField,
   isFixed: BooleanField,
+  hasHeadRest: BooleanField,
+  hasSeatbelt: BooleanField,
+  adjustmentAxes: {
+    type: Array,
+    optional: true,
+  },
+  'adjustmentAxes.$': {
+    type: String,
+    allowedValues: DirectionAxes,
+  },
+  adjustmentDirections: {
+    type: Array,
+    optional: true,
+  },
+  'adjustmentDirections.$': {
+    type: String,
+    allowedValues: Directions,
+  },
+  seatbeltPoints: {
+    type: Number,
+    optional: true,
+    min: 1,
+  },
   rows: {
     type: Array,
+    optional: true,
   },
   'rows.$': {
     type: String,
   },
   columns: {
     type: Array,
+    optional: true,
   },
   'columns.$': {
     type: String,
@@ -155,12 +219,7 @@ SchemaDefinition
   ...getPrefixedQuantitySchemaDefinition('minimalHeight', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('maximalHeight', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('turningSpaceInFront', LengthSchemaDefinition),
-  controlledBySwitchId: {
-    type: String,
-    optional: true,
-  },
-  ...getPrefixedSchemaDefinition('controlledBySwitch', getEquipmentPropertiesSchemaDefinition()),
   ...getPrefixedSchemaDefinition('payment', getPaymentSchemaDefinition()),
   ...getPrefixedSchemaDefinition('intercom', getIntercomSchemaDefinition()),
-  ...getInteractableSchemaDefinition(),
+  ...getInteractableSchemaDefinition(SeatInteractions),
 });

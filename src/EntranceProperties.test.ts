@@ -22,7 +22,6 @@ const entrancePropertiesFixture: Complete<EntranceProperties> = {
   intercomEquipmentId: 'idHere',
   needsAppointment: true,
   placeInfoId: '1234',
-  interactions: [interactionModeFixture],
 };
 
 export default entrancePropertiesFixture;

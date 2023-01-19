@@ -1,13 +1,25 @@
 import { getInteractionModeSchemaDefinition, InteractionMode } from './InteractionMode';
 import { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition';
 
-export interface Interactable {
+export interface Interactable<InteractionType extends string> {
   /**
    * Indicates how the object can be interacted with.
    */
-  interactions?: InteractionMode[];
+  interactions?: Partial<Record<InteractionType, InteractionMode[]>>;
 }
 
-export const getInteractableSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
-  ...getPrefixedArraySchemaDefinition('interactions', getInteractionModeSchemaDefinition()),
+export const getInteractableSchemaDefinition: (
+  interactionTypes: readonly string[]
+) => Record<string, SchemaDefinition> = (interactionTypes) => ({
+  interactions: {
+    type: Object,
+    optional: true,
+  },
+  ...interactionTypes.reduce(
+    (acc, interactionType) => ({
+      ...acc,
+      ...getPrefixedArraySchemaDefinition(`interactions.${interactionType}`, getInteractionModeSchemaDefinition()),
+    }),
+    {},
+  ),
 });

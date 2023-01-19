@@ -10,7 +10,10 @@ const grabBarsFixture: Complete<GrabBars> = {
   topHeightFromFloor: '80cm',
   distanceBetweenBars: '80cm',
   foldable: true,
-  interactions: [interactionModeFixture],
+  interactions: {
+    localizeYourself: [interactionModeFixture],
+    findYourDestination: [interactionModeFixture],
+  },
   continuous: true,
 };
 

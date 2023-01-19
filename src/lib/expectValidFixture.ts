@@ -5,6 +5,9 @@ export default function expectValidFixture(definition: Record<string, any>, valu
   const schema = new SimpleSchema(definition);
   const context = schema.newContext();
   context.validate(schema.clean(value, { getAutoValues: true, filter: false }));
+  if (!context.isValid()) {
+    console.log('Invalid fixture:', value);
+  }
   expect(context.validationErrors()).toHaveLength(0);
   expect(context.isValid()).toBeTruthy();
 }

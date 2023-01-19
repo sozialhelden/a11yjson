@@ -14,6 +14,13 @@ const parkingFixture: Complete<Parking> = {
     hasDedicatedSignage: true,
     neededParkingPermits: [{ en: 'Blue Badge' }],
   },
+  interactions: {
+    exitVehicle: [{
+      action: [{
+        necessaryClimbHeight: '3cm', // there is a step
+      }],
+    }],
+  },
 };
 
 export default parkingFixture;

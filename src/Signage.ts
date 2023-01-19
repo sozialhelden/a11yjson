@@ -3,11 +3,18 @@ import BooleanField from './BooleanField';
 import { EquipmentInfo, getEquipmentInfoSchemaDefinition } from './EquipmentInfo';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable';
+
+const SignageInteractions = [
+  'locateYourself',
+  'findYourDestination',
+] as const;
+export type SignageInteraction = typeof SignageInteractions[number];
 
 /**
  * Describes a signage / physical navigation system belonging to a location.
  */
-export interface Signage {
+export interface Signage extends Interactable<SignageInteraction> {
   /**
    * A description of the signage.
    */
@@ -138,4 +145,5 @@ export const getSignageSchemaDefinition: () => Record<string, SchemaDefinition> 
   highLegibility: BooleanField,
   ...getPrefixedQuantitySchemaDefinition('fontHeight', LengthSchemaDefinition),
   ...getPrefixedSchemaDefinition('sitemap', getEquipmentInfoSchemaDefinition()),
+  ...getInteractableSchemaDefinition(SignageInteractions),
 });

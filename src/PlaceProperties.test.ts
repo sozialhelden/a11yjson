@@ -1,5 +1,5 @@
 import { PlaceProperties, getPlacePropertiesSchemaDefinition } from './PlaceProperties';
-import accessibilityFixture from './Accessibilty.test';
+import accessibilityFixture from './Accessibility.test';
 import structuredAddressFixture from './Address.test';
 import { Complete } from './Complete';
 import expectInvalidFixture from './lib/expectInvalidFixture';

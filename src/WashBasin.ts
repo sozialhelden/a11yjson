@@ -1,10 +1,28 @@
 import { t } from 'ttag';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
+
+const WashBashinInteractions = [
+  'changeTemperature',
+  'changeWaterPressure',
+  'useWater',
+  'getHotWater',
+  'getColdWater',
+  'getCarbonizedWater',
+  'useWaterJet',
+  'useWaterSpray',
+  'useSoap',
+  'getTowel',
+  'getPaperTowel',
+  'useAirDryer',
+  'sanitizeHands',
+] as const;
+export type WashBashinInteraction = typeof WashBashinInteractions[number];
 
 /**
  * Describes a wash basin.
  */
-export interface WashBasin {
+export interface WashBasin extends Interactable<WashBashinInteraction> {
   /**
    * `true` if the restroom's wash basin is inside the cabin, `false` if not, `undefined`
    * if condition is unknown.
@@ -47,4 +65,5 @@ export const getWashBasinSchemaDefinition: () => Record<string, SchemaDefinition
   ...getPrefixedQuantitySchemaDefinition('height', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('spaceBelowHeight', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('spaceBelowDepth', LengthSchemaDefinition),
+  ...getInteractableSchemaDefinition(WashBashinInteractions),
 });

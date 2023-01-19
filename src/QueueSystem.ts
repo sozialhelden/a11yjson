@@ -2,14 +2,16 @@ import SimpleSchema from 'simpl-schema';
 import BooleanField from './BooleanField';
 import { EquipmentInfo, getEquipmentInfoSchemaDefinition } from './EquipmentInfo';
 import { getGrabBarsSchemaDefinition, GrabBars } from './GrabBars';
-import { Interactable } from './Interactable';
-import { getInteractionModeSchemaDefinition } from './InteractionMode';
-import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+
+export const QueueSystemInteractions = ['enqueue', 'skipQueue', 'wait', 'leaveQueue', 'arrive', 'checkIn', 'checkOut', 'getTicket', 'getOnesTurn'] as const;
+export type QueueSystemInteraction = typeof QueueSystemInteractions[number];
 
 /**
  * Describes a system that encourages or forces people to queue up.
  */
-export interface QueueSystem extends Interactable {
+export interface QueueSystem extends Interactable<QueueSystemInteraction> {
   /**
    * `true` if the queueing uses rails / cattle bars, `false` if not.
    */
@@ -73,5 +75,5 @@ export const getQueueSystemSchemaDefinition: () => Record<string, SchemaDefiniti
     type: SimpleSchema.Integer,
     optional: true,
   },
-  ...getPrefixedArraySchemaDefinition('interactions', getInteractionModeSchemaDefinition()),
+  ...getInteractableSchemaDefinition(QueueSystemInteractions),
 });

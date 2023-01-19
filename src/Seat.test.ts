@@ -3,8 +3,6 @@ import { Complete } from './Complete';
 import expectValidFixture from './lib/expectValidFixture';
 import paymentFixture from './Payment.test';
 import intercomFixture from './Intercom.test';
-import equipmentPropertiesFixture from './EquipmentProperties.test';
-import interactionModeFixture from './InteractionMode.test';
 
 const seatFixture: Complete<Seat> = {
   name: { en: 'Front seats in a cinema' },
@@ -14,6 +12,11 @@ const seatFixture: Complete<Seat> = {
   isFoldable: true,
   isMobile: false,
   isFixed: true,
+  hasHeadRest: true,
+  hasSeatbelt: true,
+  seatbeltPoints: 3,
+  adjustmentAxes: ['axial', 'sagittal'],
+  adjustmentDirections: ['up', 'down'],
   isCenterColumn: false,
   isLastRow: false,
   rows: [1, 2, 3],
@@ -22,11 +25,39 @@ const seatFixture: Complete<Seat> = {
   minimalHeight: { value: 40, unit: 'cm' },
   maximalHeight: { value: 40, unit: 'cm' },
   turningSpaceInFront: { value: 145, unit: 'cm' },
-  controlledBySwitch: equipmentPropertiesFixture,
-  controlledBySwitchId: 'SWITCH-12345',
   payment: paymentFixture,
   intercom: intercomFixture,
-  interactions: [interactionModeFixture],
+  interactions: {
+    sit: [{
+      action: [{
+        bodyMass: { max: 150, unit: 'kg' },
+      }],
+    }],
+    fold: [],
+    unfold: [],
+    move: [{
+      action: [{
+        weight: { value: 5, unit: 'kg' },
+      }],
+    }],
+    adjust: [],
+    adjustHeight: [],
+    adjustSeatingSurface: [],
+    adjustSeatingAngle: [],
+    adjustArmRests: [],
+    adjustHeadRest: [],
+    adjustLegRest: [],
+    adjustBackRest: [],
+    adjustFootRest: [],
+    adjustSeatBelt: [],
+    adjustSeatBeltLength: [],
+    adjustSeatBeltHeight: [],
+    adjustSeatBeltAngle: [],
+    adjustSeatBeltPosition: [],
+    adjustSeatBeltTension: [],
+    adjustSeatBeltLock: [],
+    connectSeatbelt: [],
+  },
   reservedForPersonsWith: {
     hearingImpairment: true,
   },

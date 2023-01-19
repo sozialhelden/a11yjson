@@ -15,12 +15,17 @@ const roomFixture: Complete<Room> = {
     en: 'A room with a view.',
     zh: '有景观的房间。',
   },
-  interactions: [{
-    name: { en: 'Looking through the window' },
-    action: [{
-      necessaryEyeHeight: '100cm',
+  interactions: {
+    see: [{
+      name: {
+        en: 'Looking through the window',
+        zh: '从窗户看外面',
+      },
+      action: [{
+        necessaryEyeHeight: '100cm',
+      }],
     }],
-  }],
+  },
 };
 
 export default roomFixture;

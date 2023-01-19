@@ -3,8 +3,9 @@ import BooleanField from './BooleanField';
 import { getGrabBarsSchemaDefinition, GrabBars } from './GrabBars';
 import htmlColorSchemaDefinition from './htmlColorSchemaDefinition';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
+import { getInteractionModeSchemaDefinition, InteractionMode } from './InteractionMode';
 import { getIntercomSchemaDefinition, Intercom } from './Intercom';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition';
 import {
   ForceSchemaDefinition,
   getPrefixedQuantitySchemaDefinition,
@@ -13,11 +14,15 @@ import {
   SpeedSchemaDefinition,
 } from './Quantity';
 
+export const DoorInteractions = ['ringDoorbell', 'open', 'close', 'unlock', 'lock', 'unlockAndLock', 'openAndClose'] as const;
+
+export type DoorInteraction = typeof DoorInteractions[number];
+
 /**
  * Describes the door of a place's entrance or to one of its facilities (e.g. to a shower, or to
  * an elevator)
  */
-export interface Door extends Interactable {
+export interface Door extends Interactable<DoorInteraction> {
   /**
    * Turning space in front of the door.
    */
@@ -138,36 +143,6 @@ export interface Door extends Interactable {
   needsIntercom?: boolean;
 
   /**
-   * `true` if the door has visual feedback when opening, `false` if not.
-   */
-  hasVisualFeedbackForOpening?: boolean;
-
-  /**
-   * `true` if the door has visual feedback when it can be opened, `false` if not.
-   */
-  hasVisualFeedbackWhenOpenable?: boolean;
-
-  /**
-   * `true` if the door has visual feedback when closing, `false` if not.
-   */
-  hasVisualFeedbackForClosing?: boolean;
-
-  /**
-   * `true` if the door makes a sound when opening, `false` if not.
-   */
-  hasAcousticFeedbackForOpening?: boolean;
-
-  /**
-   * `true` if the door makes a sound when closing, `false` if not.
-   */
-  hasAcousticFeedbackForClosing?: boolean;
-
-  /**
-   * `true` if the door makes a sound when it can be opened, `false` if not.
-   */
-  hasAcousticFeedbackWhenOpenable?: boolean;
-
-  /**
    * Describes the intercom system of the door.
    */
   intercom?: Intercom;
@@ -281,8 +256,6 @@ export const getDoorSchemaDefinition: () => Record<string, SchemaDefinition> = (
   ...getPrefixedQuantitySchemaDefinition('doorbellTopButtonHeight', LengthSchemaDefinition),
   hasIntercom: BooleanField,
   needsIntercom: BooleanField,
-  ...getPrefixedSchemaDefinition('intercom', getIntercomSchemaDefinition()),
-  ...getPrefixedSchemaDefinition('grabBars', getGrabBarsSchemaDefinition()),
   access: {
     type: Array,
     optional: true,
@@ -291,17 +264,17 @@ export const getDoorSchemaDefinition: () => Record<string, SchemaDefinition> = (
     type: String,
     allowedValues: accessTypes,
   },
+  ...getPrefixedSchemaDefinition('intercom', getIntercomSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('grabBars', getGrabBarsSchemaDefinition()),
+  ...getPrefixedArraySchemaDefinition('interactions.doorbell', getInteractionModeSchemaDefinition()),
+  ...getPrefixedArraySchemaDefinition('interactions.unlock', getInteractionModeSchemaDefinition()),
+  ...getPrefixedArraySchemaDefinition('interactions.open', getInteractionModeSchemaDefinition()),
+  ...getPrefixedArraySchemaDefinition('interactions.close', getInteractionModeSchemaDefinition()),
   ...getPrefixedQuantitySchemaDefinition('openingForce', ForceSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('closingSpeed', SpeedSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('latchingSpeed', SpeedSchemaDefinition),
   isVisuallyContrasted: BooleanField,
   hasVisuallyContrastedFrame: BooleanField,
-  hasVisualFeedbackForOpening: BooleanField,
-  hasVisualFeedbackWhenOpenable: BooleanField,
-  hasVisualFeedbackForClosing: BooleanField,
-  hasAcousticFeedbackForOpening: BooleanField,
-  hasAcousticFeedbackForClosing: BooleanField,
-  hasAcousticFeedbackWhenOpenable: BooleanField,
   colors: {
     type: Array,
     optional: true,
@@ -324,5 +297,5 @@ export const getDoorSchemaDefinition: () => Record<string, SchemaDefinition> = (
     optional: true,
   },
   'nearbyWallColors.$': htmlColorSchemaDefinition,
-  ...getInteractableSchemaDefinition(),
+  ...getInteractableSchemaDefinition(DoorInteractions),
 });

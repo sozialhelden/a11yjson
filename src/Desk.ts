@@ -1,19 +1,41 @@
 import BooleanField from './BooleanField';
-import { EquipmentProperties, getEquipmentPropertiesSchemaDefinition } from './EquipmentProperties';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 import { getIntercomSchemaDefinition, Intercom } from './Intercom';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import { getPaymentSchemaDefinition, Payment } from './Payment';
-import {
-  getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition,
-} from './Quantity';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 import { getQueueSystemSchemaDefinition, QueueSystem } from './QueueSystem';
+
+export const DeskInteractions = [
+  'changeHeight',
+  'savePreset',
+  'enqueue',
+  'checkIn',
+  'checkOut',
+  'ringBell',
+  'pay',
+  'handoverLuggage',
+  'handover',
+  'getReturn',
+  'getFood',
+  'getShoppingBag',
+  'scan',
+  'selfCheckout',
+  'open',
+  'close',
+  'unlock',
+  'lock',
+  'unlockAndLock',
+  'openAndClose',
+] as const;
+
+export type DeskInteraction = typeof DeskInteractions[number];
 
 /**
  * Describes a desk / table / cash desk / reception counter.
  */
-export interface Desk extends Interactable {
+export interface Desk extends Interactable<DeskInteraction> {
   /**
    * Name of the entrance (helpful if there are multiple entrances).
    */
@@ -66,14 +88,7 @@ export interface Desk extends Interactable {
    * Describes an associated queue system.
    */
   queueSystem?: QueueSystem;
-  /**
-   * Describes an associated switch.
-   */
-  controlledBySwitch?: EquipmentProperties;
-  /**
-   * References a switch (`EquipmentInfo`) by its ID.
-   */
-  controlledBySwitchId?: string;
+
   /**
    * Information about payment at this desk.
    *
@@ -89,10 +104,7 @@ export interface Desk extends Interactable {
   intercom?: Intercom | null;
 }
 
-export const getDeskSchemaDefinition: () => Record<
-string,
-SchemaDefinition
-> = () => ({
+export const getDeskSchemaDefinition: () => Record<string, SchemaDefinition> = () => ({
   ...getLocalizedStringSchemaDefinition('name'),
   isRollUnder: BooleanField,
   ...getPrefixedQuantitySchemaDefinition('widthBelow', LengthSchemaDefinition),
@@ -102,13 +114,8 @@ SchemaDefinition
   ...getPrefixedQuantitySchemaDefinition('fixedHeight', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('minimalHeight', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('maximalHeight', LengthSchemaDefinition),
-  ...getPrefixedSchemaDefinition('controlledBySwitch', getEquipmentPropertiesSchemaDefinition()),
   ...getPrefixedSchemaDefinition('queueSystem', getQueueSystemSchemaDefinition()),
   ...getPrefixedSchemaDefinition('payment', getPaymentSchemaDefinition()),
   ...getPrefixedSchemaDefinition('intercom', getIntercomSchemaDefinition()),
-  controlledBySwitchId: {
-    type: String,
-    optional: true,
-  },
-  ...getInteractableSchemaDefinition(),
+  ...getInteractableSchemaDefinition(DeskInteractions),
 });

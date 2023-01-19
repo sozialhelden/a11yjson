@@ -9,10 +9,13 @@ import {
   VolumeSchemaDefinition,
 } from './Quantity';
 
+export const IntercomInteractions = ['ring', 'call', 'hangUp', 'open', 'close', 'identify'] as const;
+export type IntercomInteraction = typeof IntercomInteractions[number];
+
 /**
  * Describes a system to communicate over distance, e.g. a door intercom next to a doorbell.
  */
-export interface Intercom extends Interactable {
+export interface Intercom extends Interactable<IntercomInteraction> {
   description?: LocalizedString;
 
   /**
@@ -62,5 +65,5 @@ export const getIntercomSchemaDefinition: () => Record<string, SchemaDefinition>
   hasVideoCamera: BooleanField,
   hasVisualFeedbackOnConnection: BooleanField,
   needsKeyPad: BooleanField,
-  ...getInteractableSchemaDefinition(),
+  ...getInteractableSchemaDefinition(IntercomInteractions),
 });
