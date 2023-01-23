@@ -3,9 +3,21 @@
   "version": "18.1.1",
   "description": "A harmonized data schema for describing the accessibility of physical places",
   "keywords": [],
-  "main": "dist/index.umd.js",
-  "module": "dist/index.es5.js",
-  "typings": "dist/types/index.d.ts",
+  "module": "dist/mjs/index.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/esm/index.d.ts",
+        "default": "./dist/esm/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.ts",
+        "default": "./dist/cjs/index.js"
+      }
+    }
+  },
+  "types": "./types/index.d.ts",
+  "main": "./cjs/index.cjs",
   "files": [
     "dist"
   ],
@@ -21,19 +33,21 @@
   "scripts": {
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "prebuild": "rimraf dist",
-    "build": "tsc && rollup -c rollup.config.ts && rimraf compiled && npm run docs:build",
+    "build": "npm run build:cjs && npm run build:esm && npm run docs:build",
+    "build:esm": "tsc -m es2020 --target esnext --outDir dist/esm && echo '{ \"type\": \"module\" }' > dist/esm/package.json",
+    "build:cjs": "tsc -m commonjs --target esnext --outDir dist/cjs && echo '{ \"type\": \"commonjs\" }' > dist/cjs/package.json",
     "start": "tsc -w & rollup -c rollup.config.ts -w",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:prod": "npm run test -- --coverage --no-cache",
-    "docs:build": "typedoc src typings --options typedoc.json --out dist/docs/typescript --json dist/typedoc-output.json && npx ts-node ./tools/generate-overview.ts",
+    "docs:build": "typedoc src --options typedoc.json --out dist/docs/typescript --json dist/typedoc-output.json && npx ts-node ./tools/generate-overview.ts",
     "docs:install": "docker pull squidfunk/mkdocs-material",
     "docs:deploy": "(docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material build) && gh-pages --dist site",
     "docs:live": "docker run --rm -it -p 8000:8000 -v ${PWD}:/docs squidfunk/mkdocs-material",
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
     "commit": "git-cz",
     "prettier": "npx prettier --fix src/**/*.ts test/**/*.ts --write --single-quote",
-    "deploy": "npm run build && npm run  test:prod && npm publish --access public"
+    "deploy": "npm run build && npm run test:prod && npm publish --access public && npm run docs:deploy"
   },
   "devDependencies": {
     "@babel/plugin-transform-destructuring": "^7.5.0",
