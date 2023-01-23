@@ -35,7 +35,7 @@ a-word, though, so our hunch is that it’s here to stay.
 
 ## I can't use JavaScript/SimpleSchema. Can I still use A11yJSON?
 
-Of course! Just integrate its [documented interfaces](./3-interfaces.md) into your own data types.
+Of course! Just integrate its [documented interfaces](./describing-objects/interfaces.md) into your own data types.
 
 A11yJSON’s TypeScript schema comes with runtime-types in [`SimpleSchema`](https://github.com/aldeed/simple-schema-js). This allows to auto-generate schemas in other description languages. We’d love to see your contributions as npm modules or libraries for other ecosystems and languages, such as:
 

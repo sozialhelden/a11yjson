@@ -2,7 +2,7 @@
 
 Accessibility survey data often contains unclear or aggregated definitions of quantities.
 
-A11yJSON represents quantities either as string or as [`Quantity`](./3-interfaces.md#quantity)
+A11yJSON represents quantities either as string or as [`Quantity`](./interfaces.md#quantity)
 object with separate properties for `value` and `unit`. Both of the following definitions are valid and have the same meaning:
 
 ```json

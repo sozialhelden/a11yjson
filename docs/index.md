@@ -28,7 +28,7 @@ This is a valid A11yJSON data snippet:
 }
 ```
 
-See the [examples](1-example-data.md) for more complex definitions, or the [list of accessibility criteria](3-interfaces.md) to see the format's extent.
+See the [examples](1-example-data.md) for more complex definitions, or the [list of accessibility criteria](describing-objects/interfaces.md) to see the format's extent.
 
 ## Is this for me?
 
@@ -48,7 +48,7 @@ Here is a [list of projects using A11yJSON](./2-who-uses-a11yjson.md).
 
 ## Technically…
 
-A11yJSON provides a collection of [documented interfaces](./3-interfaces.md) for structuring data in your projects – no matter which language you use.
+A11yJSON provides a collection of [documented interfaces](./describing-objects/interfaces.md) for structuring data in your projects – no matter which language you use.
 
 It comes with a TypeScript library to check your data structures at compile-time.
 
