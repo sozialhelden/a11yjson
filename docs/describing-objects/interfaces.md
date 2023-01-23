@@ -2413,6 +2413,7 @@ Object with one or more of these keys:
 
 Values must be of type <a href="#InteractionMode">InteractionMode</a>.
 </td><td class="property-docs"><p>An object that indicates how the object can be interacted with.</p>
+</td></tr><tr><td class="property-name">isLatrine</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>Indicates whether the toilet is a latrine.</p>
 </td></tr><tr><td class="property-name">isSquatToilet</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>Indicates whether the toilet is a squat toilet.</p>
 </td></tr><tr><td class="property-name">isUrinal</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>Indicates whether the toilet is a urinal.</p>
 </td></tr><tr><td class="property-name">spaceInFront</td><td class="property-type"><a href="#Length">Length</a></td><td class="property-docs"><p>How much space is in front of the toilet?</p>
