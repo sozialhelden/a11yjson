@@ -1,21 +1,24 @@
-import { SchemaDefinition, SchemaKeyDefinition, SchemaKeyDefinitionWithOneType } from 'simpl-schema/dist/esm/types';
+import { SchemaDefinition, SchemaKeyDefinition, SchemaKeyDefinitionWithOneType } from '../../node_modules/simpl-schema/dist/esm/types.js';
+import { SimpleSchema } from '../../node_modules/simpl-schema/dist/esm/SimpleSchema.js';
 
 export default function getPrefixedSchemaDefinition(
   prefix: string,
-  definition: SchemaDefinition,
+  definition: SchemaDefinition | SimpleSchema,
   extendDefinition?: Partial<SchemaKeyDefinitionWithOneType>,
 ): SchemaDefinition {
   const prefixedDefinition: Record<string, SchemaKeyDefinition> = {
     [prefix]: {
-      type: Object,
+      type: definition instanceof SimpleSchema ? definition : Object,
       optional: true,
       ...(extendDefinition || {}),
     },
   };
 
-  Object.keys(definition).forEach((key) => {
-    prefixedDefinition[`${prefix}.${key}`] = definition[key];
-  });
+  if (!(definition instanceof SimpleSchema)) {
+    Object.keys(definition).forEach((key) => {
+      prefixedDefinition[`${prefix}.${key}`] = definition[key];
+    });
+  }
 
   return prefixedDefinition;
 }

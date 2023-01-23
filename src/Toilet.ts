@@ -1,4 +1,4 @@
-import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
+import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { GrabBars, getGrabBarsSchemaDefinition } from './GrabBars';
 import {

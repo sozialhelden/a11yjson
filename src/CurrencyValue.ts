@@ -1,4 +1,4 @@
-import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
+import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 
 import { AccessType, AccessTypes } from './AccessType';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';

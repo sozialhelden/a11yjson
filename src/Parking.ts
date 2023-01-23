@@ -1,5 +1,4 @@
-import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
-import SimpleSchema from 'simpl-schema';
+import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
@@ -99,7 +98,7 @@ export interface Parking extends Interactable<ParkingInteraction> {
 export const getParkingSchemaDefinition: () => SchemaDefinition = () => ({
   ...getPrefixedSchemaDefinition('forWheelchairUsers', getWheelchairParkingSchemaDefinition()),
   count: {
-    type: SimpleSchema.Integer,
+    type: 'SimpleSchema.Integer',
     optional: true,
     min: 0,
   },

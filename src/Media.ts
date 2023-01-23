@@ -1,5 +1,4 @@
-import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
-import { t } from 'ttag';
+import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
@@ -161,82 +160,66 @@ export interface Media {
 export const getMediaSchemaDefinition: () => SchemaDefinition = () => ({
   type: {
     type: String,
-    label: t`Media Type`,
     optional: true,
     allowedValues: (MediaTypes as any) as any[],
   },
   ...getLocalizedStringSchemaDefinition('name', {
-    label: t`Media Name`,
   }),
   isBraille: {
     type: Boolean,
-    label: t`Braille`,
     optional: true,
   },
   isAudio: {
     type: Boolean,
-    label: t`Audio`,
     optional: true,
   },
   isTactile: {
     type: Boolean,
-    label: t`Tactile`,
     optional: true,
   },
   isLargePrint: {
     type: Boolean,
-    label: t`Large Print`,
     optional: true,
   },
   hasContrastingBackground: {
     type: Boolean,
-    label: t`Contrasting Background`,
     optional: true,
   },
   hasDedicatedScreenForSubtitles: {
     type: Boolean,
-    label: t`Dedicated Subtitle Screen`,
     optional: true,
   },
   hasSubtitles: {
     type: Boolean,
-    label: t`Subtitles`,
     optional: true,
   },
   hasAudioDescription: {
     type: Boolean,
-    label: t`Audio description`,
     optional: true,
   },
   hasRealTimeCaptioning: {
     type: Boolean,
-    label: t`Real-time Captioning`,
     optional: true,
   },
   hasPlainLanguageOption: {
     type: Boolean,
-    label: t`Plain Language Option`,
     optional: true,
   },
   languages: {
     type: Array,
-    label: t`Languages`,
     optional: true,
   },
   'languages.$': IETFLanguageCodeSchemaKeyDefinition,
   accessMode: {
     type: Array,
-    label: t`Access Modes`,
     optional: true,
   },
   'accessMode.$': {
     type: String,
-    label: t`Access Modes`,
     allowedValues: w3cAccessModes,
   },
   accessModeSufficient: {
     type: Array,
-    label: t`Sufficient Access Modes`,
     optional: true,
   },
   'accessModeSufficient.$': {
@@ -245,7 +228,6 @@ export const getMediaSchemaDefinition: () => SchemaDefinition = () => ({
   },
   accessibilityControl: {
     type: Array,
-    label: t`Accessibility Controls`,
     optional: true,
   },
   'accessibilityControl.$': {
@@ -254,7 +236,6 @@ export const getMediaSchemaDefinition: () => SchemaDefinition = () => ({
   },
   accessibilityFeature: {
     type: Array,
-    label: t`Accessibility Features`,
     optional: true,
   },
   'accessibilityFeature.$': {
@@ -263,7 +244,6 @@ export const getMediaSchemaDefinition: () => SchemaDefinition = () => ({
   },
   accessibilityHazard: {
     type: Array,
-    label: t`Accessibility Hazards`,
     optional: true,
   },
   'accessibilityHazard.$': {
@@ -273,7 +253,6 @@ export const getMediaSchemaDefinition: () => SchemaDefinition = () => ({
   ...getPrefixedQuantitySchemaDefinition('turningSpaceInFront', LengthSchemaDefinition),
   sameAs: {
     type: Array,
-    label: t`Same as (URL)`,
     optional: true,
   },
   'sameAs.$': {

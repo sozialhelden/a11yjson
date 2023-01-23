@@ -1,4 +1,3 @@
-import SimpleSchema from 'simpl-schema';
 import {
   getPrefixedQuantitySchemaDefinition,
   LengthSchemaDefinition,
@@ -6,9 +5,10 @@ import {
 } from './Quantity';
 import expectInvalidFixture from './lib/expectInvalidFixture';
 import expectValidFixture from './lib/expectValidFixture';
+import * as FasterSchema from 'faster-schema';
 
 const definition = getPrefixedQuantitySchemaDefinition('field', LengthSchemaDefinition);
-const schema = new SimpleSchema(definition);
+const schema = new FasterSchema(definition);
 
 function expectValidUnitFixture(value: any) {
   expectValidFixture(definition, schema.clean({ field: value }));

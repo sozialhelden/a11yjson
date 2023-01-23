@@ -1,5 +1,4 @@
-import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
-import { t } from 'ttag';
+import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import BooleanField from './BooleanField';
@@ -110,7 +109,6 @@ export const getStairsSchemaDefinition: () => SchemaDefinition = () => ({
   },
   'alternativeMobileEquipmentIds.$': {
     type: String,
-    label: t`accessibility.cloud Equipment ID`,
   },
   ...getPrefixedSchemaDefinition('grabBars', getGrabBarsSchemaDefinition()),
 });

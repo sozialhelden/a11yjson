@@ -1,5 +1,4 @@
-import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
-import { t } from 'ttag';
+import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import getIsoAlphaThreeCountryCodes from './CountryCodes';
 import { LocalizedString, getLocalizedStringSchemaDefinition } from './LocalizedString';
 
@@ -91,68 +90,39 @@ export interface StructuredAddress {
  * objects.
  */
 export const getStructuredAddressSchemaDefinition: () => SchemaDefinition = () => ({
-  ...getLocalizedStringSchemaDefinition('text', {
-    label: t`Text`,
-  }),
-  ...getLocalizedStringSchemaDefinition('room', {
-    label: t`Room`,
-  }),
-  ...getLocalizedStringSchemaDefinition('roomNumber', {
-    label: t`Room number`,
-  }),
-  ...getLocalizedStringSchemaDefinition('levelName', {
-    label: t`Level name`,
-  }),
+  ...getLocalizedStringSchemaDefinition('text'),
+  ...getLocalizedStringSchemaDefinition('room'),
+  ...getLocalizedStringSchemaDefinition('roomNumber'),
+  ...getLocalizedStringSchemaDefinition('levelName'),
   levelIndex: {
-    label: t`Level index`,
     type: Number,
     optional: true,
   },
-  ...getLocalizedStringSchemaDefinition('building', {
-    label: t`Building`,
-  }),
-  ...getLocalizedStringSchemaDefinition('house', {
-    label: t`House`,
-  }),
-  ...getLocalizedStringSchemaDefinition('street', {
-    label: t`Street`,
-  }),
-  ...getLocalizedStringSchemaDefinition('postalCode', {
-    label: t`Postal Code`,
-  }),
+  ...getLocalizedStringSchemaDefinition('building'),
+  ...getLocalizedStringSchemaDefinition('house'),
+  ...getLocalizedStringSchemaDefinition('street'),
+  ...getLocalizedStringSchemaDefinition('postalCode'),
   areas: {
-    label: t`Areas`,
     type: Array,
     optional: true,
   },
   ...getLocalizedStringSchemaDefinition('areas.$'),
-  ...getLocalizedStringSchemaDefinition('district', {
-    label: t`District`,
-  }),
-  ...getLocalizedStringSchemaDefinition('city', {
-    label: t`City`,
-  }),
+  ...getLocalizedStringSchemaDefinition('district'),
+  ...getLocalizedStringSchemaDefinition('city'),
   regions: {
-    label: t`Regions`,
     type: Array,
     optional: true,
   },
   ...getLocalizedStringSchemaDefinition('regions.$'),
-  ...getLocalizedStringSchemaDefinition('county', {
-    label: t`County`,
-  }),
-  ...getLocalizedStringSchemaDefinition('state', {
-    label: t`State`,
-  }),
+  ...getLocalizedStringSchemaDefinition('county'),
+  ...getLocalizedStringSchemaDefinition('state'),
   stateCode: {
     type: String,
     optional: true,
-    label: t`State Code`,
   },
   countryCode: {
     type: String,
     optional: true,
-    label: t`Country Code`,
     allowedValues: getIsoAlphaThreeCountryCodes().map((c) => c.value),
   },
 });

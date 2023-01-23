@@ -1,4 +1,4 @@
-import { SchemaKeyDefinition } from 'simpl-schema/dist/esm/types';
+import { SchemaKeyDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 
 const BooleanField: SchemaKeyDefinition = {
   type: Boolean,

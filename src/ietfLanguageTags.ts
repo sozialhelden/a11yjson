@@ -1,5 +1,5 @@
 import { parseLanguageTag } from '@sozialhelden/ietf-language-tags';
-import { SchemaKeyDefinition } from 'simpl-schema/dist/esm/types';
+import { SchemaKeyDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 
 /**
  * Defines a spoken or written language in [IETF language tag format](https://github.com/sozialhelden/ietf-language-tags).
@@ -13,7 +13,7 @@ const IETFLanguageCodeSchemaKeyDefinition: SchemaKeyDefinition = {
     if (value === undefined) {
       return undefined;
     }
-    const parsedTag = parseLanguageTag(value, true);
+    const parsedTag = parseLanguageTag(value, false);
     if (parsedTag === undefined) {
       return 'notAllowed';
     }

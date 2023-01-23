@@ -1,4 +1,4 @@
-import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
+import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 /**
  * [GeoJSON](https://tools.ietf.org/html/rfc7946) `Point` object.
  */

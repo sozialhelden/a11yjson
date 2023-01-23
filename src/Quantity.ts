@@ -1,8 +1,9 @@
+import * as Qty from 'js-quantities';
+import memoize from 'lodash.memoize';
+import { SimpleSchema } from '../node_modules/simpl-schema/dist/esm/SimpleSchema.js';
 import {
   SchemaDefinition, SchemaKeyDefinitionWithOneType, ValidatorContext, ValidatorFunction,
-} from 'simpl-schema/dist/esm/types';
-import * as Qty from 'js-quantities';
-import { memoize } from 'lodash';
+} from '../node_modules/simpl-schema/dist/esm/types.js';
 
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 
@@ -158,12 +159,14 @@ const createQuantitySchemaDefinition = (
  * inch.
  */
 export const LengthSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Length, 'meter');
+export const LengthSchema = new SimpleSchema(LengthSchemaDefinition)
 
 /**
  * Validates a speed quantity object and will only accept speed units, eg. meter/second, miles/hour
  * or similar.
  */
 export const SpeedSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Speed, 'meter/second');
+export const SpeedSchema = new SimpleSchema(SpeedSchemaDefinition)
 
 /**
  * Validates a acceleration quantity object and will only accept acceleration units, eg.
@@ -173,44 +176,52 @@ export const SpeedSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Spe
 export const AccelerationSchemaDefinition = createQuantitySchemaDefinition(
   UnitKind.Acceleration,
   'g',
-);
+  );
+export const AccelerationSchema = new SimpleSchema(AccelerationSchemaDefinition)
 
 /**
  * Validates a force quantity object and will only accept force units, eg. newton, or
  * kilogram*meter/second^2.
  */
 export const ForceSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Force, 'Newton');
+export const ForceSchema = new SimpleSchema(ForceSchemaDefinition)
 
 /**
  * Validates a timer interval object and will only accept time units, eg. seconds, minutes or hours.
  */
 export const TimeIntervalSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Time, 's');
+export const TimeInterval = new SimpleSchema(TimeIntervalSchemaDefinition)
 
 /**
  * Validates a mass quantity object and will only accept mass/weight units, eg. kilogram, gram or
  * pound.
  */
 export const MassSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Mass, 's');
+export const MassSchema = new SimpleSchema(MassSchemaDefinition)
 
 /**
  * Validates a sound volume quantity object and will only accept sound volume units, eg. decibel.
  */
 export const VolumeSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Unitless, 'dB');
+export const VolumeSchema = new SimpleSchema(VolumeSchemaDefinition)
 
 /**
  * Validates a frequency quantity object and will only accept frequency units, eg. hertz.
  */
 export const HertzSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Unitless, 'Hz');
+export const HertzSchema = new SimpleSchema(HertzSchemaDefinition)
 
 /**
  * Validates a slope quantity object and will only accept units to descrie a slope, eg. degrees.
  */
 export const SlopeSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Unitless, 'deg');
+export const SlopeSchema = new SimpleSchema(SlopeSchemaDefinition)
 
 /**
  * Validates a brightness descriptor and will only accept brightness units, eg. nits or lumens.
  */
 export const BrightnessSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Unitless, 'nits');
+export const BrightnessSchema = new SimpleSchema(BrightnessSchemaDefinition)
 
 /**
  * Validates a temperature quantity object and will only accept temperature units, eg. degrees
@@ -219,7 +230,8 @@ export const BrightnessSchemaDefinition = createQuantitySchemaDefinition(UnitKin
 export const TemperatureSchemaDefinition = createQuantitySchemaDefinition(
   UnitKind.Unitless,
   'degC',
-);
+  );
+export const TemperatureSchema = new SimpleSchema(TemperatureSchemaDefinition)
 
 export type Length = Quantity | string;
 export type Volume = Quantity | string;
@@ -276,7 +288,7 @@ export function parseQuantity(unitString: string): Quantity | string {
 
 export function getPrefixedQuantitySchemaDefinition(
   prefix: string,
-  definition: SchemaDefinition,
+  definition: SchemaDefinition | SimpleSchema,
 ): SchemaDefinition {
   const extension: Partial<SchemaKeyDefinitionWithOneType> = {
     autoValue() {

@@ -1,4 +1,4 @@
-import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
+import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
 

@@ -1,5 +1,4 @@
-import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
-import { t } from 'ttag';
+import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 
@@ -31,40 +30,32 @@ export interface Payment {
 export const getPaymentSchemaDefinition: () => SchemaDefinition = () => ({
   hasPortablePaymentSystem: {
     type: Boolean,
-    label: t`Is there a portable payment system?`,
     optional: true,
   },
   acceptsPaymentByMobilePhone: {
     type: Boolean,
-    label: t`Is payment by mobile phone accepted?`,
     optional: true,
   },
   acceptsCreditCards: {
     type: Boolean,
-    label: t`Is payment by credit card accepted?`,
     optional: true,
   },
   acceptsDebitCards: {
     type: Boolean,
-    label: t`Is payment by debit card accepted?`,
     optional: true,
   },
   acceptsCoins: {
     type: Boolean,
-    label: t`Is payment by coins accepted?`,
     optional: true,
   },
   acceptsBills: {
     type: Boolean,
-    label: t`Is payment by bills accepted?`,
     optional: true,
   },
   customPaymentMetaInfo: {
     type: Array,
-    label: t`Custom Payment Information`,
     optional: true,
   },
   ...getLocalizedStringSchemaDefinition('customPaymentMetaInfo.$', {
-    label: t`Custom Payment Information`,
   }),
 });

@@ -1,5 +1,4 @@
-import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
-import SimpleSchema from 'simpl-schema';
+import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import BooleanField from './BooleanField';
 import { getGrabBarsSchemaDefinition, GrabBars } from './GrabBars';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
@@ -57,11 +56,11 @@ export const getQueueSystemSchemaDefinition: () => SchemaDefinition = () => ({
   },
   canSkipQueueWithDisability: BooleanField,
   numberOfSeats: {
-    type: SimpleSchema.Integer,
+    type: 'SimpleSchema.Integer',
     optional: true,
   },
   numberOfQueueServerPoints: {
-    type: SimpleSchema.Integer,
+    type: 'SimpleSchema.Integer',
     optional: true,
   },
   ...getInteractableSchemaDefinition(QueueSystemInteractions),

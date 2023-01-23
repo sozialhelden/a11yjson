@@ -1,4 +1,4 @@
-import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
+import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import { PointGeometry, getPointGeometrySchemaDefinition } from './Geometry';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { PlaceProperties, getPlacePropertiesSchemaDefinition } from './PlaceProperties';

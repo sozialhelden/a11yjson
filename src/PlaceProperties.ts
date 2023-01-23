@@ -1,4 +1,4 @@
-import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
+import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import { Accessibility, getAccessibilitySchemaDefinition } from './Accessibility';
 import { StructuredAddress, getStructuredAddressSchemaDefinition } from './Address';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
@@ -6,6 +6,7 @@ import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { AccessType, AccessTypes } from './AccessType';
 import validateEmail from './validateEmail';
 import validateUrl from './validateUrl';
+
 
 /**
  * Properties of a place of interest.

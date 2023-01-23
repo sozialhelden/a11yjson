@@ -1,4 +1,4 @@
-import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
+import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import { Door, getDoorSchemaDefinition } from './Door';
 import {
   getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition,

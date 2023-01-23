@@ -1,4 +1,3 @@
-import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import { PersonalProfile, getPersonalProfileSchemaDefinition } from './PersonalProfile';
 import { Entrance, getEntranceSchemaDefinition } from './Entrance';
@@ -19,6 +18,7 @@ import { Desk, getDeskSchemaDefinition } from './Desk';
 import BooleanField from './BooleanField';
 import { getSignageSchemaDefinition, Signage } from './Signage';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
+import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 
 /**
  * Describes the general wheelchair accessibility of the place. This is a human-rated value.
