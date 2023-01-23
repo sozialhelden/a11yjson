@@ -1,6 +1,6 @@
 import { getEntranceSchemaDefinition } from './Entrance';
 import expectValidFixture from './lib/expectValidFixture';
-import { entranceFixture } from './entranceFixture';
+import entranceFixture from './entranceFixture';
 
 const definition = getEntranceSchemaDefinition();
 

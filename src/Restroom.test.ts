@@ -1,6 +1,6 @@
 import { getRestroomSchemaDefinition } from './Restroom';
 import expectValidFixture from './lib/expectValidFixture';
-import { restroomFixture } from './restroomFixture';
+import restroomFixture from './restroomFixture';
 
 const definition = getRestroomSchemaDefinition();
 

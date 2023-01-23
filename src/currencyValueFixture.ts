@@ -2,7 +2,7 @@ import { CurrencyValue } from './CurrencyValue';
 import { Complete } from './Complete';
 import paymentFixture from './paymentFixture';
 
-export const currencyValueFixture: Complete<CurrencyValue> = {
+const currencyValueFixture: Complete<CurrencyValue> = {
   amount: 0.5,
   currency: 'EUR',
   per: {

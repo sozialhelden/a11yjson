@@ -2,7 +2,7 @@ import { Stairs } from './Stairs';
 import { Complete } from './Complete';
 import grabBarsFixture from './grabBarsFixture';
 
-export const stairsFixture: Complete<Stairs> = {
+const stairsFixture: Complete<Stairs> = {
   count: 123,
   hasHighContrastNosing: false,
   hasAntiSlipNosing: true,

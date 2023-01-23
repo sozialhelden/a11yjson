@@ -21,27 +21,27 @@ export interface Signage extends Interactable<SignageInteraction> {
   description?: LocalizedString;
 
   /**
-   * `true` if the signage has pictograms, `false` if not, `undefined` if condition is unknown.
+   * `true` if the signage has pictograms, `false` if not.
    */
   hasPictograms?: boolean;
 
   /**
-   * `true` if the signage has braille, `false` if not, `undefined` if condition is unknown.
+   * `true` if the signage has braille, `false` if not.
    */
   hasBraille?: boolean;
 
   /**
-   * `true` if the signage has raised letters, `false` if not, `undefined` if condition is unknown.
+   * `true` if the signage has raised letters, `false` if not.
    */
   hasRaisedLetters?: boolean;
 
   /**
-   * `true` if the signage has audio, `false` if not, `undefined` if condition is unknown.
+   * `true` if the signage has audio, `false` if not.
    */
   hasAudio?: boolean;
 
   /**
-   * `true` if the signage has video, `false` if not, `undefined` if condition is unknown.
+   * `true` if the signage has video, `false` if not.
    */
   hasVideo?: boolean;
 
@@ -72,17 +72,17 @@ export interface Signage extends Interactable<SignageInteraction> {
   hasTactileGuideStrips?: boolean;
 
   /**
-   * `true` if the signage has tactile paving, `false` if not, `undefined` if condition is unknown.
+   * `true` if the signage has tactile paving, `false` if not.
    */
   hasTactilePaving?: boolean;
 
   /**
-   * `true` if the signage has a virtual map, `false` if not, `undefined` if condition is unknown.
+   * `true` if the signage has a virtual map, `false` if not.
    */
   hasVirtualMap?: boolean;
 
   /**
-   * `true` if the signage has a tactile map, `false` if not, `undefined` if condition is unknown.
+   * `true` if the signage has a tactile map, `false` if not.
    */
   hasTactileMap?: boolean;
 
@@ -99,17 +99,17 @@ export interface Signage extends Interactable<SignageInteraction> {
   hasNumbers?: boolean;
 
   /**
-   * `true` if the signage has text features, `false` if not, `undefined` if condition is unknown.
+   * `true` if the signage has text features, `false` if not.
    */
   hasText?: boolean;
 
   /**
-   * `true` if the signage has high contrast, `false` if not, `undefined` if condition is unknown.
+   * `true` if the signage has high contrast, `false` if not.
    */
   isHighContrast?: boolean;
 
   /**
-   * `true` if the signage has high legibility, `false` if not, `undefined` if condition is unknown.
+   * `true` if the signage has high legibility, `false` if not.
    */
   highLegibility?: boolean;
 

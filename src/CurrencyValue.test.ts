@@ -1,8 +1,8 @@
 import { getCurrencyValueSchemaDefinition } from './CurrencyValue';
 import expectValidFixture from './lib/expectValidFixture';
 import expectInvalidFixture from './lib/expectInvalidFixture';
-import {
-  currencyValueFixture, forFreeFixture, nonFreeFixtureWithoutCurrency, negativeAmountFixture,
+import currencyValueFixture, {
+  forFreeFixture, nonFreeFixtureWithoutCurrency, negativeAmountFixture,
 } from './currencyValueFixture';
 
 const definition = getCurrencyValueSchemaDefinition();

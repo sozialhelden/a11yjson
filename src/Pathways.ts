@@ -21,7 +21,7 @@ export interface Pathways {
   surface?: Surface;
 
   /**
-   * `true` if the pathway is kerbstone-free, `false` if not, `undefined` if condition is unknown.
+   * `true` if the pathway is kerbstone-free, `false` if not.
    */
   isKerbstoneFree?: boolean;
 }

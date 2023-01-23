@@ -5,7 +5,7 @@ import intercomFixture from './intercomFixture';
 import interactionModeFixture from './interactionModeFixture';
 import queueSystemFixture from './queueSystemFixture';
 
-export const deskFixture: Complete<Desk> = {
+const deskFixture: Complete<Desk> = {
   name: { en: 'string' },
   isRollUnder: true,
   fixedHeight: { value: 90, unit: 'cm' },

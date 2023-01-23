@@ -7,7 +7,7 @@ export const minimalPlaceProperties: PlaceProperties = {
   category: 'biergarten',
 };
 
-export const placePropertiesFixture: Complete<PlaceProperties> = {
+const placePropertiesFixture: Complete<PlaceProperties> = {
   sameAs: ['https://www.wikidata.org/wiki/Q688541'],
   originalId: 'ChIJwSo_DaaHUocRFFAENf-ILl8',
   infoPageUrl: 'https://example.com/venue/ChIJwSo_DaaHUocRFFAENf-ILl8',
@@ -32,3 +32,5 @@ export const placePropertiesFixture: Complete<PlaceProperties> = {
   accessibility: accessibilityFixture,
   access: ['designated'],
 };
+
+export default placePropertiesFixture;

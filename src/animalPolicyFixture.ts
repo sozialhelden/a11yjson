@@ -1,7 +1,7 @@
 import { AnimalPolicy } from './AnimalPolicy';
 import { Complete } from './Complete';
 
-export const animalPolicyFixture: Complete<AnimalPolicy> = {
+const animalPolicyFixture: Complete<AnimalPolicy> = {
   allowsGuideDogs: true,
   allowsAssistanceDogs: true,
   allowsDogs: true,

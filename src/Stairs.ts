@@ -64,7 +64,7 @@ export interface Stairs {
    * You SHOULD reference alternative equipment IDs with this field, for example elevators,
    * escalators, or hoists.
    */
-  alternativeMobileEquipmentIds?: Array<string>;
+  alternativeMobileEquipmentIds?: string[];
   /**
    * `true` if all relevant steps have tactile safety surfaces, used as warnings, implying textures
    * detectable with the touch of a foot or sweep of a cane.

@@ -1,6 +1,6 @@
 import { getToiletSchemaDefinition } from './Toilet';
 import expectValidFixture from './lib/expectValidFixture';
-import { toiletFixture } from './toiletFixture';
+import toiletFixture from './toiletFixture';
 
 const definition = getToiletSchemaDefinition();
 

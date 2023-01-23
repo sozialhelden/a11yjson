@@ -1,10 +1,6 @@
 import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { t } from 'ttag';
-
-import {
-  IetfLanguageTagOrSignLanguageCode,
-  ietfLanguageTagsAndSignLanguageCodes,
-} from './ietfLanguageTags';
+import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags';
 
 /**
  * Describes the presence of staff and their qualifications and/or provided services.
@@ -17,8 +13,10 @@ export interface Staff {
   canSeeVisitorsFromInside?: boolean;
   /**
    * Languages that the staff speaks, including sign language variants.
+   *
+   * Uses [IETF language codes](https://github.com/sozialhelden/ietf-language-tags).
    */
-  spokenLanguages?: ArrayLike<IetfLanguageTagOrSignLanguageCode>;
+  spokenLanguages?: IETFLanguageTag[];
 
   /**
    * `true` if there is an assistant for the duration of the visit that is free of charge, `false`
@@ -52,9 +50,5 @@ export const getStaffSchemaDefinition: () => SchemaDefinition = () => ({
     defaultValue: [],
     optional: true,
   },
-  'spokenLanguages.$': {
-    type: String,
-    label: t`Language`,
-    allowedValues: ietfLanguageTagsAndSignLanguageCodes,
-  },
+  'spokenLanguages.$': IETFLanguageCodeSchemaKeyDefinition,
 });

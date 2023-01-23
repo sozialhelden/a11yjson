@@ -1,3 +1,5 @@
+import { SchemaKeyDefinition } from 'simpl-schema/dist/esm/types';
+
 /**
  * regex that matches any HTML color including the following formats:
  * - #rgb
@@ -26,7 +28,7 @@ const threeDimensionalColorRegexString = `(${colorSpace3})\\(${decimalRegex},${d
  * - rgba(r, g, b, a)
  * - hsla(h, s, l, a)
  * - cmyk(c, m, y, k)
-*/
+ */
 const fourDimensionalColorRegexString = `(${colorSpace4})\\(${decimalRegex},${decimalRegex},${decimalRegex},${decimalRegex}\\)`;
 
 /**
@@ -48,7 +50,7 @@ const colorRegexStrings = [
 const colorRegexString = colorRegexStrings.join('|');
 const colorRegex = new RegExp(`^(${colorRegexString})|\\w+$`, 'i');
 
-const htmlColorSchemaDefinition: SchemaDefinition = {
+const htmlColorSchemaDefinition: SchemaKeyDefinition = {
   type: String,
   optional: true,
   regEx: colorRegex,

@@ -1,7 +1,7 @@
 import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { ActionMode, getActionModeSchemaDefinition } from './ActionMode';
 import BooleanField from './BooleanField';
-import { IetfLanguageTag, ietfLanguageTagsAndSignLanguageCodes } from './ietfLanguageTags';
+import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import { getPerceptionModeSchemaDefinition, PerceptionMode } from './PerceptionMode';
@@ -23,7 +23,7 @@ export interface InteractionMode {
   /**
    * Input languages supported.
    */
-  languages?: IetfLanguageTag[];
+  languages?: IETFLanguageTag[];
 
   /**
    * Perception modes supported to facilitate the interaction.
@@ -56,10 +56,7 @@ export const getInteractionModeSchemaDefinition: () => SchemaDefinition = () => 
     type: Array,
     optional: true,
   },
-  'languages.$': {
-    type: String,
-    allowedValues: ietfLanguageTagsAndSignLanguageCodes,
-  },
+  'languages.$': IETFLanguageCodeSchemaKeyDefinition,
   optional: BooleanField,
   required: BooleanField,
 });

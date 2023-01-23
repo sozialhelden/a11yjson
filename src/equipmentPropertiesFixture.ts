@@ -3,7 +3,7 @@ import { Complete } from './Complete';
 import doorFixture from './doorFixture';
 import intercomFixture from './intercomFixture';
 
-export const equipmentPropertiesFixture: Complete<EquipmentProperties> = {
+const equipmentPropertiesFixture: Complete<EquipmentProperties> = {
   description: { en: 'string' },
   longDescription: { en: 'long string' },
   shortDescription: { en: 's.' },
@@ -16,7 +16,7 @@ export const equipmentPropertiesFixture: Complete<EquipmentProperties> = {
   isWorking: true,
   hasVisualEmergencyAlarm: true,
   hasDoorsInBothDirections: true,
-  hasDoorsAtRightAnglesToEachOther: false,
+  hasDoorsAtRightAngles: false,
   hasMirror: true,
   hasExternalFloorSelection: true,
   isSuitableForBicycles: true,
@@ -92,6 +92,8 @@ export const equipmentPropertiesFixture: Complete<EquipmentProperties> = {
     handover: {},
     enable: {},
     disable: {},
+    findYourDestination: {},
+    locateYourself: {},
   },
 };
 export default equipmentPropertiesFixture;

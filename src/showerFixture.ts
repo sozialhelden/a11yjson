@@ -2,7 +2,7 @@ import { Shower } from './Shower';
 import grabBarsFixture from './grabBarsFixture';
 import { Complete } from './Complete';
 
-export const showerFixture: Complete<Shower> = {
+const showerFixture: Complete<Shower> = {
   hasSupportRails: true,
   hasShowerSeat: true,
   grabBars: grabBarsFixture,

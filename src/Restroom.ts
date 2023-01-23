@@ -7,12 +7,12 @@ import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } f
 import { Toilet, getToiletSchemaDefinition } from './Toilet';
 import { Shower, getShowerSchemaDefinition } from './Shower';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
-import { AccessType, accessTypes } from './AccessType';
+import { AccessType, AccessTypes } from './AccessType';
 import { CurrencyValue, getCurrencyValueSchemaDefinition } from './CurrencyValue';
 import { getStructuredAddressSchemaDefinition } from './Address';
 import BooleanField from './BooleanField';
 
-export const restroomSignIcons = [
+export const RestroomSignIcons = [
   'allGender',
   'female',
   'male',
@@ -25,7 +25,7 @@ export const restroomSignIcons = [
   'toiletBowl',
 ] as const;
 
-export type RestroomSignIcon = typeof restroomSignIcons[number];
+export type RestroomSignIcon = typeof RestroomSignIcons[number];
 
 /**
  * Describes a `Room` that contains one or more `Toilet`s or `Shower`s.
@@ -34,9 +34,9 @@ export interface Restroom extends Room {
   /**
    * Visible icons on the restroom’s sign
    */
-  signIcons?: Array<RestroomSignIcon>;
+  signIcons?: RestroomSignIcon[];
   /**
-   * `true` if the restroom has a mirror, `false` if not, `undefined` if condition is unknown.
+   * `true` if the restroom has a mirror, `false` if not.
    */
   hasMirror?: boolean;
   /**
@@ -88,7 +88,7 @@ export interface Restroom extends Room {
    */
   entrance?: Entrance;
   /**
-   * `true` if the restroom has a shower, `false` if not, `undefined` if condition is unknown.
+   * `true` if the restroom has a shower, `false` if not.
    */
   hasShower?: boolean;
 
@@ -130,7 +130,7 @@ export const getRestroomSchemaDefinition: () => SchemaDefinition = () => ({
   },
   'signIcons.$': {
     type: String,
-    allowedValues: (restroomSignIcons as any) as any[],
+    allowedValues: (RestroomSignIcons as any) as any[],
   },
   hasMirror: BooleanField,
   hasSupportRails: BooleanField,
@@ -155,7 +155,7 @@ export const getRestroomSchemaDefinition: () => SchemaDefinition = () => ({
   },
   'access.$': {
     type: String,
-    allowedValues: (accessTypes as any) as any[],
+    allowedValues: (AccessTypes as any) as any[],
   },
   usageFee: {
     type: Array,

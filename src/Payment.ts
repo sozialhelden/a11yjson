@@ -25,7 +25,7 @@ export interface Payment {
   acceptsCoins?: boolean;
   acceptsBills?: boolean;
   // e.g. for phone numbers, parking lot IDs etc.
-  customPaymentMetaInfo?: Array<LocalizedString>;
+  customPaymentMetaInfo?: LocalizedString[];
 }
 
 export const getPaymentSchemaDefinition: () => SchemaDefinition = () => ({

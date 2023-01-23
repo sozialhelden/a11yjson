@@ -25,26 +25,26 @@ import { getInteractableSchemaDefinition, Interactable } from './Interactable';
  * It SHOULD conform to the traffic light system found in OpenStreetMap and Wheelmap.org.
  */
 
-export enum WheelchairAccessibilityGrade {
+export const WheelchairAccessibilityGrades = [
   /**
    * Entrance (if applicable) has no steps, and all rooms are accessible without steps. If there
    * are no rooms, the main functionality of the place must be accessible with a wheelchair.
    */
-  Fully = 'fully',
+  'fully',
   /**
    * `"partially"`: Entrance has one step with max. 3 inches height (or a mobile ramp is
    * available), most rooms are without steps. After passing the entrance, the main functionality
    * of the place must be accessible with a wheelchair.
    */
-  Partially = 'partially',
+  'partially',
   /**
    * Entrance has a high step or several steps, or none of the rooms are accessible. You can't
    * enter / use the place with a wheelchair.
    */
-  Not = 'not',
-}
+  'not',
+] as const;
 
-export const wheelchairAccessibilityGrades = ['fully', 'partially', 'not'];
+export type WheelchairAccessibilityGrade = typeof WheelchairAccessibilityGrades[number];
 
 export const GenericInteractions = [
   'watchMovies',
@@ -87,16 +87,6 @@ export interface Accessibility extends Interactable<GenericInteraction> {
 
   /**
    * Describes the general wheelchair accessibility of the place. This is a human-rated value.
-   * It SHOULD conform to the traffic light system found in OpenStreetMap and Wheelmap.org:
-   *
-   * - `"fully"`: Entrance (if applicable) has no steps, and all rooms are accessible without steps.
-   *   If there are no rooms, the main functionality of the place must be accessible with a
-   *   wheelchair.
-   * - `"partially"`: Entrance has one step with max. 3 inches height (or a mobile ramp is
-   *   available), most rooms are without steps. After passing the entrance, the main functionality
-   *   of the place must be accessible with a wheelchair.
-   * - `"not"`: Entrance has a high step or several steps, or none of the rooms are accessible. You
-   *   can't enter / use the place with a wheelchair.
    */
   wheelchairAccessibilityGrade?: WheelchairAccessibilityGrade;
 
@@ -207,18 +197,18 @@ export interface Accessibility extends Interactable<GenericInteraction> {
   /**
    * Describes the accessibility of entrances to the place.
    */
-  entrances?: ArrayLike<Entrance> | null;
+  entrances?: Entrance[] | null;
 
   /**
    * Describes the accessibility of desks in the place.
    * `null` indicates there are no desks, `undefined` or missing property indicates unknown.
    */
-  desks?: ArrayLike<Desk> | null;
+  desks?: Desk[] | null;
 
   /**
    * Describes the accessibility of restrooms in the place.
    */
-  restrooms?: ArrayLike<Restroom> | null;
+  restrooms?: Restroom[] | null;
 
   /**
    * Information about payment at the place.
@@ -235,14 +225,14 @@ export interface Accessibility extends Interactable<GenericInteraction> {
    * Information about tables (for example in a restaurant).
    * `null` indicates there are no tables, `undefined` or missing property indicates unknown.
    */
-  tables?: ArrayLike<Desk> | null;
+  tables?: Desk[] | null;
 
   serviceContact?: LocalizedString;
   /**
    * Information about media.
    * `null` indicates there is no media, `undefined` or missing property indicates unknown.
    */
-  media?: ArrayLike<Media> | null;
+  media?: Media[] | null;
 }
 
 export const getAccessibilitySchemaDefinition: () => SchemaDefinition = () => ({
@@ -255,7 +245,7 @@ export const getAccessibilitySchemaDefinition: () => SchemaDefinition = () => ({
   wheelchairAccessibilityGrade: {
     type: 'string',
     optional: true,
-    allowedValues: wheelchairAccessibilityGrades,
+    allowedValues: (WheelchairAccessibilityGrades as any) as any[],
   },
   smokingPolicy: {
     type: String,

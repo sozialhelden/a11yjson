@@ -2,21 +2,42 @@ import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import { t } from 'ttag';
 
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
-import {
-  ietfLanguageTagsAndSignLanguageCodes,
-  IetfLanguageTagOrSignLanguageCode,
-} from './ietfLanguageTags';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import { W3CAccessibilityFeature, w3cAccessibilityFeatures } from './W3CAccessibilityFeature';
 import { W3CAccessibilityHazard, w3cAccessibilityHazards } from './W3CAccessibilityHazard';
 import { W3CAccessMode, w3cAccessModes } from './W3CAccessMode';
 import { w3cAccessibilityControls, W3CAccessibilityControl } from './W3CAccessibilityControl';
 import validateUrl from './validateUrl';
+import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags';
 
 export const MediaInteractions = [
-  '',
+  'watch',
+  'listen',
+  'feel',
+  'discover',
+  'open',
+  'close',
+  'rent',
+  'recognize',
+  'browse',
+  'read',
+  'interact',
 ] as const;
 export type MediaInteraction = typeof MediaInteractions[number];
+
+export const MediaTypes = [
+  'document',
+  'menu',
+  'guide',
+  'tour',
+  'presentation',
+  'exhibit',
+  'movie',
+  'play',
+  'screen',
+  'website',
+] as const;
+export type MediaType = typeof MediaTypes[number];
 
 /**
  * Describes a media unit provided at this place, for example an exhibit at a museum or a movie in
@@ -26,17 +47,7 @@ export interface Media {
   /**
    * Type of the media unit
    */
-  type:
-  | 'document'
-  | 'menu'
-  | 'guide'
-  | 'tour'
-  | 'presentation'
-  | 'exhibit'
-  | 'movie'
-  | 'play'
-  | 'screen'
-  | 'website';
+  type?: MediaType;
 
   /**
    * Name of the media unit (relevant if there are multiple units of the same kind)
@@ -98,7 +109,7 @@ export interface Media {
   /**
    * Specifies which languages (including sign languages) in which the media unit is provided
    */
-  languages?: ArrayLike<IetfLanguageTagOrSignLanguageCode>;
+  languages?: IETFLanguageTag[];
 
   /**
    * If the media is consumed while the consumer is directly in front of it, this property specifies
@@ -151,18 +162,8 @@ export const getMediaSchemaDefinition: () => SchemaDefinition = () => ({
   type: {
     type: String,
     label: t`Media Type`,
-    allowedValues: [
-      'document',
-      'menu',
-      'guide',
-      'presentation',
-      'exhibit',
-      'movie',
-      'play',
-      'screen',
-      'website',
-      'tour',
-    ],
+    optional: true,
+    allowedValues: (MediaTypes as any) as any[],
   },
   ...getLocalizedStringSchemaDefinition('name', {
     label: t`Media Name`,
@@ -222,11 +223,7 @@ export const getMediaSchemaDefinition: () => SchemaDefinition = () => ({
     label: t`Languages`,
     optional: true,
   },
-  'languages.$': {
-    type: String,
-    label: t`Language`,
-    allowedValues: ietfLanguageTagsAndSignLanguageCodes,
-  },
+  'languages.$': IETFLanguageCodeSchemaKeyDefinition,
   accessMode: {
     type: Array,
     label: t`Access Modes`,

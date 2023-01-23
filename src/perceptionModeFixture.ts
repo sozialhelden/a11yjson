@@ -1,7 +1,7 @@
 import { Complete } from './Complete';
 import { PerceptionMode } from './PerceptionMode';
 
-export const perceptionModeFixture: Complete<PerceptionMode> = {
+const perceptionModeFixture: Complete<PerceptionMode> = {
   speech: false,
   activationSignal: false,
   alarm: false,
@@ -25,6 +25,7 @@ export const perceptionModeFixture: Complete<PerceptionMode> = {
   flash: false,
   morse: false,
   smell: false,
+  taste: false,
   pictograms: false,
   numbers: false,
   animation: false,

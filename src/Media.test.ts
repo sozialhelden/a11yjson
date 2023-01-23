@@ -1,7 +1,7 @@
 import { getMediaSchemaDefinition } from './Media';
 import expectInvalidFixture from './lib/expectInvalidFixture';
 import expectValidFixture from './lib/expectValidFixture';
-import { mediaFixture } from './mediaFixture';
+import mediaFixture from './mediaFixture';
 
 const definition = getMediaSchemaDefinition();
 

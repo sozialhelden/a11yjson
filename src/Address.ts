@@ -12,20 +12,20 @@ export interface StructuredAddress {
    */
   text?: LocalizedString;
   /**
-   * Room name. Example: "Meeting room 'Rome'".
+   * Room name. Example: `{ en: "Meeting room ‘Rome’" }`.
    */
   room?: LocalizedString;
   /**
-   * Room number. Example: "B-101".
+   * Room number. Example: `{ en: "B-101" }`.
    */
   roomNumber?: LocalizedString;
   /**
-   * Name of the level. Example: "Floor 1", "Ground level".
+   * Name of the level. Example: `{ en: "Floor 1" }`, `{ en: "Ground level" }`.
    */
   levelName?: LocalizedString;
   /**
    * Relative in relation to other levels. `0` for ground level must have index 0, `1` for first
-   * level, etc. You can use half numbers for levels like "1.5".
+   * level, etc. You can use half numbers for levels like `1.5`.
    */
   levelIndex?: number;
   /**

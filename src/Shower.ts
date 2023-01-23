@@ -31,11 +31,11 @@ export interface Shower extends Interactable<ShowerInteraction> {
   door?: Door;
 
   /**
-   * `true` if the shower has support rails, `false` if not, `undefined` if condition is unknown.
+   * `true` if the shower has support rails, `false` if not.
    */
   hasSupportRails?: boolean;
   /**
-   * `true` if the shower has a seat, `false` if not, `undefined` if condition is unknown..
+   * `true` if the shower has a seat, `false` if not..
    */
   hasShowerSeat?: boolean;
   /**

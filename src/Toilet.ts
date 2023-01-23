@@ -54,6 +54,11 @@ export interface Toilet extends Interactable<ToiletInteraction> {
   isUrinal?: boolean;
 
   /**
+   * Indicates whether the toilet is a latrine.
+   */
+  isLatrine?: boolean;
+
+  /**
    * `true` if the toilet is automatically flushing after use.
    */
   hasAutomaticFlush?: boolean;
@@ -69,6 +74,7 @@ export const getToiletSchemaDefinition: () => SchemaDefinition = () => ({
   hasGrabBars: BooleanField,
   isSquatToilet: BooleanField,
   isUrinal: BooleanField,
+  isLatrine: BooleanField,
   hasAutomaticFlush: BooleanField,
   ...getPrefixedQuantitySchemaDefinition('heightOfBase', LengthSchemaDefinition),
   ...getPrefixedQuantitySchemaDefinition('spaceOnUsersLeftSide', LengthSchemaDefinition),

@@ -1,6 +1,6 @@
 import { getSeatSchemaDefinition } from './Seat';
 import expectValidFixture from './lib/expectValidFixture';
-import { seatFixture } from './seatFixture';
+import seatFixture from './seatFixture';
 
 const definition = getSeatSchemaDefinition();
 

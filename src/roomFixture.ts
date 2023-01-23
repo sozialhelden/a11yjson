@@ -1,7 +1,7 @@
 import { Room } from './Room';
 import { Complete } from './Complete';
 
-export const roomFixture: Complete<Room> = {
+const roomFixture: Complete<Room> = {
   isAccessibleWithWheelchair: true,
   sameAs: ['https://example.com/rooms/1'],
   address: {

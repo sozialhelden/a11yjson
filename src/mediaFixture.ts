@@ -1,7 +1,7 @@
 import { Media } from './Media';
 import { Complete } from './Complete';
 
-export const mediaFixture: Complete<Media> = {
+const mediaFixture: Complete<Media> = {
   type: 'document',
   name: { en: 'menu' },
   isBraille: true,

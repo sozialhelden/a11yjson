@@ -1,6 +1,6 @@
 import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 
-import { AccessType, accessTypes } from './AccessType';
+import { AccessType, AccessTypes } from './AccessType';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { getPaymentSchemaDefinition, Payment } from './Payment';
 import { BaseQuantitySchemaDefinition, getPrefixedQuantitySchemaDefinition, Quantity } from './Quantity';
@@ -69,7 +69,7 @@ export const getCurrencyValueSchemaDefinition: () => SchemaDefinition = () => ({
   },
   'access.$': {
     type: String,
-    allowedValues: (accessTypes as any) as any[],
+    allowedValues: (AccessTypes as any) as any[],
   },
   paymentTypes: {
     type: Array,

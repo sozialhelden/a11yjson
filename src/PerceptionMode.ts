@@ -1,7 +1,7 @@
 import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
 import BooleanField from './BooleanField';
 import htmlColorSchemaDefinition from './htmlColorSchemaDefinition';
-import { IetfLanguageTag, ietfLanguageTagsAndSignLanguageCodes } from './ietfLanguageTags';
+import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags';
 import { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import {
@@ -29,7 +29,7 @@ import { getTechCombinationSchemaDefinition, TechCombination } from './TechCombi
  * Describes necessary abilities and modes for interpreting information output, signals, or
  * content.
  */
-export type PerceptionMode = {
+export interface PerceptionMode {
   /**
    * Describes which output is meant. Helpful if there are multiple signals/outputs/content
    * lements.
@@ -44,7 +44,7 @@ export type PerceptionMode = {
   /**
    * Content languages supported.
    */
-  languages?: IetfLanguageTag[];
+  languages?: IETFLanguageTag[];
 
   /**
    * `true` if the perception is optional, `false` if it is required.
@@ -217,6 +217,11 @@ export type PerceptionMode = {
    * The ability to smell is supported or needed.
    */
   smell?: boolean;
+
+  /**
+   * Tasting something is supported or needed.
+   */
+  taste?: boolean;
 
   /**
    * The output needs high concentration to understand.
@@ -488,7 +493,7 @@ export type PerceptionMode = {
    * content warning directly, but should instead show a button to show the content warning.
    */
   contentWarning?: LocalizedString;
-};
+}
 
 export const getPerceptionModeSchemaDefinition: () => SchemaDefinition = () => ({
   languages: {
@@ -496,10 +501,7 @@ export const getPerceptionModeSchemaDefinition: () => SchemaDefinition = () => (
     defaultValue: [],
     optional: true,
   },
-  'languages.$': {
-    type: String,
-    allowedValues: ietfLanguageTagsAndSignLanguageCodes,
-  },
+  'languages.$': IETFLanguageCodeSchemaKeyDefinition,
   backgroundColors: {
     type: Array,
     optional: true,
@@ -538,6 +540,7 @@ export const getPerceptionModeSchemaDefinition: () => SchemaDefinition = () => (
   braille: BooleanField,
   breathing: BooleanField,
   smell: BooleanField,
+  taste: BooleanField,
   button: BooleanField,
   cable: BooleanField,
   radio: BooleanField,

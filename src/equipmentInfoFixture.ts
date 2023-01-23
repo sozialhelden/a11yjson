@@ -3,7 +3,7 @@ import pointGeometryFixture from './pointGeometryFixture';
 import equipmentPropertiesFixture from './equipmentPropertiesFixture';
 import { Complete } from './Complete';
 
-export const equipmentInfoFixture: Complete<EquipmentInfo> = {
+const equipmentInfoFixture: Complete<EquipmentInfo> = {
   properties: equipmentPropertiesFixture,
   geometry: pointGeometryFixture,
 };

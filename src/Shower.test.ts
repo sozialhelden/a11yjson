@@ -1,6 +1,6 @@
 import { getShowerSchemaDefinition } from './Shower';
 import expectValidFixture from './lib/expectValidFixture';
-import { showerFixture } from './showerFixture';
+import showerFixture from './showerFixture';
 
 const definition = getShowerSchemaDefinition();
 

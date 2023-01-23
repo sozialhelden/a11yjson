@@ -1,6 +1,6 @@
 import { getMirrorSchemaDefinition } from './Mirror';
 import expectValidFixture from './lib/expectValidFixture';
-import { mirrorFixture } from './mirrorFixture';
+import mirrorFixture from './mirrorFixture';
 
 const definition = getMirrorSchemaDefinition();
 

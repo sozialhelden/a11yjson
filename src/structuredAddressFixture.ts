@@ -1,7 +1,7 @@
 import { StructuredAddress } from './Address';
 import { Complete } from './Complete';
 
-export const structuredAddressFixture: Complete<StructuredAddress> = {
+const structuredAddressFixture: Complete<StructuredAddress> = {
   text: { en: 'Testweg 12, Berlin' },
   room: { en: 'Room 123' },
   roomNumber: { en: '123' },

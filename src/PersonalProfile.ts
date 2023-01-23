@@ -22,7 +22,7 @@ export interface PersonalProfile {
   mobilityImpairment?: boolean;
   /** `true` for a person that has a visual impairment. */
   visualImpairment?: boolean;
-  /** `true` for a person that has is blind. */
+  /** `true` for a person that is blind. */
   blindness?: boolean;
   /** `true` for a person that uses a wheelchair. */
   wheelchair?: boolean;

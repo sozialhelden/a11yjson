@@ -17,13 +17,11 @@ export type MirrorInteraction = typeof MirrorInteractions[number];
  */
 export interface Mirror extends Interactable<MirrorInteraction> {
   /**
-   * `true` if the mirror is located inside the restroom, `false` if not, `undefined` if
-   * condition is unknown.
+   * `true` if the mirror is located inside the restroom, `false` if not.
    */
   isLocatedInsideRestroom?: boolean;
   /**
-   * `true` if the mirror is accessible while sitting in a wheelchair, `false` if not, `undefined`
-   * if condition is unknown.
+   * `true` if the mirror is accessible while sitting in a wheelchair, `false` if not.
    */
   isAccessibleWhileSeated: boolean;
   /**

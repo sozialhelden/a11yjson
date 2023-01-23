@@ -1,6 +1,6 @@
 import { getDeskSchemaDefinition } from './Desk';
 import expectValidFixture from './lib/expectValidFixture';
-import { deskFixture } from './deskFixture';
+import deskFixture from './deskFixture';
 
 const definition = getDeskSchemaDefinition();
 

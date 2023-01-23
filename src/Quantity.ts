@@ -64,9 +64,9 @@ const memoizedValidateUnit = memoize(validateUnit);
 /**
  * The allowed operators for comparison quantities
  */
-export type Operator = '<' | '<=' | '==' | '>=' | '>' | '=' | '~' | '~=' | '!=';
 
-export const operators: Operator[] = ['<', '<=', '==', '>=', '>', '=', '~', '~=', '!='];
+export const Operators = ['<', '<=', '==', '>=', '>', '=', '~', '~=', '!='] as const;
+export type Operator = typeof Operators[number];
 
 /**
  * Describes a quantity of a unit type.
@@ -97,6 +97,8 @@ export interface Quantity {
 /**
  * The BaseQuantitySchema allows easy validation, cleaning and checking of quantity objects. It does
  * not define a unit kind, and will not validate the unit.
+ *
+ * @hidden
  */
 export const BaseQuantitySchemaDefinition = {
   operator: {
@@ -152,22 +154,68 @@ const createQuantitySchemaDefinition = (
 });
 
 /**
- * The LengthQuantitySchema allows easy validation, cleaning and checking of length quantity
- * objects. It validates the unit and will only accept length units, eg. meter, centimeter or inch.
+ * Validates a length quantity object and will only accept length units, eg. meter, centimeter or
+ * inch.
  */
 export const LengthSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Length, 'meter');
+
+/**
+ * Validates a speed quantity object and will only accept speed units, eg. meter/second, miles/hour
+ * or similar.
+ */
 export const SpeedSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Speed, 'meter/second');
+
+/**
+ * Validates a acceleration quantity object and will only accept acceleration units, eg.
+ * meter/second^2, miles/hour^2. Useful to describe the acceleration of a vehicle, or the
+ * acceleration that a person is subjected to.
+ */
 export const AccelerationSchemaDefinition = createQuantitySchemaDefinition(
   UnitKind.Acceleration,
   'g',
 );
+
+/**
+ * Validates a force quantity object and will only accept force units, eg. newton, or
+ * kilogram*meter/second^2.
+ */
 export const ForceSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Force, 'Newton');
+
+/**
+ * Validates a timer interval object and will only accept time units, eg. seconds, minutes or hours.
+ */
 export const TimeIntervalSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Time, 's');
+
+/**
+ * Validates a mass quantity object and will only accept mass/weight units, eg. kilogram, gram or
+ * pound.
+ */
 export const MassSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Mass, 's');
+
+/**
+ * Validates a sound volume quantity object and will only accept sound volume units, eg. decibel.
+ */
 export const VolumeSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Unitless, 'dB');
+
+/**
+ * Validates a frequency quantity object and will only accept frequency units, eg. hertz.
+ */
 export const HertzSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Unitless, 'Hz');
+
+/**
+ * Validates a slope quantity object and will only accept units to descrie a slope, eg. degrees.
+ */
 export const SlopeSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Unitless, 'deg');
+
+/**
+ * Validates a brightness descriptor and will only accept brightness units, eg. nits or lumens.
+ */
 export const BrightnessSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Unitless, 'nits');
+
+/**
+ * Validates a temperature quantity object and will only accept temperature units, eg. degrees
+ * celsius (`degC`), degrees Fahrenheit (`degF`) or kelvin (`K`).
+ */
 export const TemperatureSchemaDefinition = createQuantitySchemaDefinition(
   UnitKind.Unitless,
   'degC',
@@ -219,7 +267,7 @@ export function parseQuantity(unitString: string): Quantity | string {
     result.accuracy = halfDifference;
     result.precision = halfDifference;
   }
-  if (operator && operators.includes(operator as Operator)) {
+  if (operator && Operators.includes(operator as Operator)) {
     result.operator = operator as Operator;
   }
 

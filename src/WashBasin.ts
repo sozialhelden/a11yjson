@@ -24,14 +24,12 @@ export type WashBashinInteraction = typeof WashBashinInteractions[number];
  */
 export interface WashBasin extends Interactable<WashBashinInteraction> {
   /**
-   * `true` if the restroom's wash basin is inside the cabin, `false` if not, `undefined`
-   * if condition is unknown.
+   * `true` if the restroom's wash basin is inside the cabin, `false` if not.
    */
   isLocatedInsideRestroom?: boolean;
 
   /**
-   * `true` if the wash basin is accessible with wheelchairs, `false` if not, `undefined`
-   * if condition is unknown.
+   * `true` if the wash basin is accessible with wheelchairs, `false` if not.
    */
   accessibleWithWheelchair?: boolean;
 

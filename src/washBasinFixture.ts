@@ -1,7 +1,7 @@
 import { Complete } from './Complete';
 import { WashBasin } from './WashBasin';
 
-export const washBasinFixture: Complete<WashBasin> = {
+const washBasinFixture: Complete<WashBasin> = {
   isLocatedInsideRestroom: true,
   accessibleWithWheelchair: false,
   height: '79cm',

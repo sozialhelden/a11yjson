@@ -1,7 +1,7 @@
 import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
-import { AccessType, accessTypes } from './AccessType';
+import { AccessType, AccessTypes } from './AccessType';
 import BooleanField from './BooleanField';
-import { IetfLanguageTag, ietfLanguageTagsAndSignLanguageCodes } from './ietfLanguageTags';
+import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags';
 import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import { getPerceptionModeSchemaDefinition, PerceptionMode } from './PerceptionMode';
@@ -20,7 +20,9 @@ import { getTechCombinationSchemaDefinition, TechCombination } from './TechCombi
 import validateUrl from './validateUrl';
 
 /**
- * https://wisc.pb.unizin.org/app/uploads/sites/123/2018/10/Anatomical-Planes-and-Axes.jpg
+ * Describes a physical direction axis relative to a person’s body.
+ *
+ * @see https://wisc.pb.unizin.org/app/uploads/sites/123/2018/10/Anatomical-Planes-and-Axes.jpg
  */
 export const DirectionAxes = [
   'sagittal',
@@ -28,8 +30,16 @@ export const DirectionAxes = [
   'axial',
 ] as const;
 
+/**
+ * Describes a physical direction axis relative to a person’s body.
+ *
+ * @see https://wisc.pb.unizin.org/app/uploads/sites/123/2018/10/Anatomical-Planes-and-Axes.jpg
+ */
 export type DirectionAxis = typeof DirectionAxes[number];
 
+/**
+ * Describes physical directions, from the perspective of a person facing forward.
+ */
 export const Directions = [
   'up',
   'down',
@@ -41,12 +51,15 @@ export const Directions = [
   'counterclockwise',
 ] as const;
 
+/**
+ * Describes a physical direction, from the perspective of a person facing forward.
+ */
 export type Direction = typeof Directions[number];
 
 /**
  * Describes necessary abilities and modes inputting information.
  */
-export type ActionMode = {
+export interface ActionMode {
   /**
    * Describes which output is meant. Helpful if there are multiple outputs.
    */
@@ -60,7 +73,7 @@ export type ActionMode = {
   /**
    * Input languages supported.
    */
-  languages?: IetfLanguageTag[];
+  languages?: IETFLanguageTag[];
 
   /**
    * Who has access to this action?
@@ -580,7 +593,7 @@ export type ActionMode = {
    * - doctor or equivalent level (level 8).
    */
   educationLevel?: Number;
-};
+}
 
 export const getActionModeSchemaDefinition: () => SchemaDefinition = () => ({
   optional: BooleanField,
@@ -599,10 +612,7 @@ export const getActionModeSchemaDefinition: () => SchemaDefinition = () => ({
     defaultValue: [],
     optional: true,
   },
-  'languages.$': {
-    type: String,
-    allowedValues: ietfLanguageTagsAndSignLanguageCodes,
-  },
+  'languages.$': IETFLanguageCodeSchemaKeyDefinition,
   speak: BooleanField,
   morseCode: BooleanField,
   signLanguage: BooleanField,
@@ -722,6 +732,6 @@ export const getActionModeSchemaDefinition: () => SchemaDefinition = () => ({
   },
   'access.$': {
     type: String,
-    allowedValues: (accessTypes as any) as any,
+    allowedValues: (AccessTypes as any) as any,
   },
 });

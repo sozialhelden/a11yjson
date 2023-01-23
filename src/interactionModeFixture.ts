@@ -1,7 +1,7 @@
 import { Complete } from './Complete';
 import { InteractionMode } from './InteractionMode';
 
-export const interactionModeFixture: Complete<InteractionMode> = {
+const interactionModeFixture: Complete<InteractionMode> = {
   name: { en: 'Reaction test' },
   description: { en: 'A test to see how fast you can react' },
   action: {

@@ -1,7 +1,7 @@
 import { Parking } from './Parking';
 import { Complete } from './Complete';
 
-export const parkingFixture: Complete<Parking> = {
+const parkingFixture: Complete<Parking> = {
   count: 14,
   forWheelchairUsers: {
     location: { en: '2nd floor' },

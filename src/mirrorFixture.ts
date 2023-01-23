@@ -1,7 +1,7 @@
 import { Mirror } from './Mirror';
 import { Complete } from './Complete';
 
-export const mirrorFixture: Complete<Mirror> = {
+const mirrorFixture: Complete<Mirror> = {
   isLocatedInsideRestroom: true,
   isAccessibleWhileSeated: true,
   heightFromGround: '>100cm',

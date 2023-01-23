@@ -1,6 +1,6 @@
 import { getDoorSchemaDefinition } from './Door';
 import expectValidFixture from './lib/expectValidFixture';
-import { doorFixture } from './doorFixture';
+import doorFixture from './doorFixture';
 
 const definition = getDoorSchemaDefinition();
 

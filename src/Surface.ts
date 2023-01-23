@@ -200,7 +200,7 @@ export interface Surface {
   /**
    * According to https://wiki.openstreetmap.org/wiki/Key:surface
    */
-  types: SurfaceType[];
+  types?: SurfaceType[];
 }
 
 export const getSurfaceSchemaDefinition: () => SchemaDefinition = () => ({

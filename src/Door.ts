@@ -1,5 +1,5 @@
 import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
-import { AccessType, accessTypes } from './AccessType';
+import { AccessType, AccessTypes } from './AccessType';
 import BooleanField from './BooleanField';
 import { getGrabBarsSchemaDefinition, GrabBars } from './GrabBars';
 import htmlColorSchemaDefinition from './htmlColorSchemaDefinition';
@@ -73,6 +73,10 @@ export interface Door extends Interactable<DoorInteraction> {
    * Height of the door’s threshold / sill / step inside the door frame.
    */
   thresholdHeight?: Length;
+
+  /**
+   * `true` if the threshold has rounded edges, `false` if not.
+   */
   thresholdIsRounded?: boolean;
 
   /**
@@ -263,7 +267,7 @@ export const getDoorSchemaDefinition: () => SchemaDefinition = () => ({
   },
   'access.$': {
     type: String,
-    allowedValues: (accessTypes as any) as any[],
+    allowedValues: (AccessTypes as any) as any[],
   },
   ...getPrefixedSchemaDefinition('intercom', getIntercomSchemaDefinition()),
   ...getPrefixedSchemaDefinition('grabBars', getGrabBarsSchemaDefinition()),

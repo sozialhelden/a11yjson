@@ -1,6 +1,6 @@
 import expectValidFixture from './lib/expectValidFixture';
 import { getInteractionModeSchemaDefinition } from './InteractionMode';
-import { interactionModeFixture } from './interactionModeFixture';
+import interactionModeFixture from './interactionModeFixture';
 
 const definition = getInteractionModeSchemaDefinition();
 

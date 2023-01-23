@@ -1,5 +1,5 @@
 import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
-import { AccessType, accessTypes } from './AccessType';
+import { AccessType, AccessTypes } from './AccessType';
 import { CurrencyValue } from './CurrencyValue';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 
@@ -120,7 +120,7 @@ export const getWifiAccessibilitySchemaDefinition: () => SchemaDefinition = () =
   },
   'access.$': {
     type: String,
-    allowedValues: (accessTypes as any) as any[],
+    allowedValues: (AccessTypes as any) as any[],
   },
   ...getLocalizedStringSchemaDefinition('usageFee.$', {
   }),

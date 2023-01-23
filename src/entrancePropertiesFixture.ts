@@ -1,9 +1,9 @@
 import { EntranceProperties } from './EntranceProperties';
-import doorFixture from "./doorFixture";
-import stairsFixture from "./stairsFixture";
+import doorFixture from './doorFixture';
+import stairsFixture from './stairsFixture';
 import { Complete } from './Complete';
 
-export const entrancePropertiesFixture: Complete<EntranceProperties> = {
+const entrancePropertiesFixture: Complete<EntranceProperties> = {
   name: { en: 'string' },
   isMainEntrance: true,
   isLevel: true,

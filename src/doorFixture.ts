@@ -4,7 +4,7 @@ import intercomFixture from './intercomFixture';
 import grabBarsFixture from './grabBarsFixture';
 import interactionModeFixture from './interactionModeFixture';
 
-export const doorFixture: Complete<Door> = {
+const doorFixture: Complete<Door> = {
   turningSpaceInFront: '<120cm',
   width: '>250cm',
   thresholdHeight: '2cm',

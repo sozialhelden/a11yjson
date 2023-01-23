@@ -1,6 +1,6 @@
 import expectValidFixture from './lib/expectValidFixture';
 import { getQueueSystemSchemaDefinition } from './QueueSystem';
-import { queueSystemFixture } from './queueSystemFixture';
+import queueSystemFixture from './queueSystemFixture';
 
 const definition = getQueueSystemSchemaDefinition();
 

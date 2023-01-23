@@ -65,9 +65,9 @@ export interface WheelchairParking extends Interactable<ParkingInteraction> {
   /**
    * List of permit names that allow using this parking.
    *
-   * @example `['Blue Badge', 'Red badge', 'Turqouise badge']
+   * @example <code>[{ en: 'Blue Badge' }, { en: 'Red badge' }, { en: 'Turqouise badge' }]</code>
    */
-  neededParkingPermits?: ArrayLike<LocalizedString>;
+  neededParkingPermits?: LocalizedString[];
 }
 
 export const getWheelchairParkingSchemaDefinition: () => SchemaDefinition = () => ({

@@ -1,6 +1,6 @@
 import { Signage } from './Signage';
 
-export const signageFixture: Signage = {
+const signageFixture: Signage = {
   description: { en: 'Building navigation system' },
   hasPictograms: true,
   hasBraille: true,

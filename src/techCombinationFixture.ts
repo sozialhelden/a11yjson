@@ -1,7 +1,7 @@
 import { TechCombination } from './TechCombination';
 import { Complete } from './Complete';
 
-export const techCombinationFixture: Complete<TechCombination> = {
+const techCombinationFixture: Complete<TechCombination> = {
   uris: [
     'wikidata:Q117266',
     'openstreetmap:way/123',

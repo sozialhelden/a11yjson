@@ -1,6 +1,6 @@
 import { getPlaceInfoSchemaDefinition } from './PlaceInfo';
 import expectValidFixture from './lib/expectValidFixture';
-import { placeInfoFixture } from './placeInfoFixture';
+import placeInfoFixture from './placeInfoFixture';
 
 const definition = getPlaceInfoSchemaDefinition();
 

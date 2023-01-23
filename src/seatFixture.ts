@@ -3,7 +3,7 @@ import { Complete } from './Complete';
 import paymentFixture from './paymentFixture';
 import intercomFixture from './intercomFixture';
 
-export const seatFixture: Complete<Seat> = {
+const seatFixture: Complete<Seat> = {
   name: { en: 'Front seats in a cinema' },
   description: { en: 'The front row features seats are wheelchair accessible, and reserved for people with hearing disabilities.' },
   isFrontRow: true,

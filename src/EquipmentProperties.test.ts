@@ -2,7 +2,7 @@ import {
   getEquipmentPropertiesSchemaDefinition,
 } from './EquipmentProperties';
 import expectValidFixture from './lib/expectValidFixture';
-import { equipmentPropertiesFixture } from './equipmentPropertiesFixture';
+import equipmentPropertiesFixture from './equipmentPropertiesFixture';
 
 const definition = getEquipmentPropertiesSchemaDefinition();
 

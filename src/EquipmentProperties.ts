@@ -1,13 +1,8 @@
 import { SchemaDefinition } from 'simpl-schema/dist/esm/types';
-import { t } from 'ttag';
 import { Door, getDoorSchemaDefinition } from './Door';
 import {
   getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition,
 } from './Quantity';
-import {
-  IetfLanguageTagOrSignLanguageCode,
-  ietfLanguageTagsAndSignLanguageCodes,
-} from './ietfLanguageTags';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { W3CAccessMode, w3cAccessModes } from './W3CAccessMode';
@@ -18,26 +13,9 @@ import BooleanField from './BooleanField';
 import { getIntercomSchemaDefinition, Intercom } from './Intercom';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
 import validateUrl from './validateUrl';
+import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags';
 
-export type EquipmentTypes =
-  | 'bed'
-  | 'wardrobe'
-  | 'elevator'
-  | 'escalator'
-  | 'movingWalkway'
-  | 'ramp'
-  | 'hoist'
-  | 'stairLift'
-  | 'switch'
-  | 'sitemap'
-  | 'vendingMachine'
-  | 'intercom'
-  | 'powerOutlet'
-  | 'flushMechanism'
-  | 'bodyScanner'
-  | 'luggageScanner';
-
-export const AllowedEquipmentTypes = Object.freeze([
+export const EquipmentTypes = [
   'bed',
   'wardrobe',
   'elevator',
@@ -54,7 +32,9 @@ export const AllowedEquipmentTypes = Object.freeze([
   'flushMechanism',
   'bodyScanner',
   'luggageScanner',
-]) as ReadonlyArray<EquipmentTypes>;
+] as const;
+
+export type EquipmentType = typeof EquipmentTypes[number];
 
 export const EquipmentInteractions = [
   'use',
@@ -120,7 +100,7 @@ export interface EquipmentProperties extends Interactable<EquipmentInteraction> 
   /**
    * Type of the equipment or facility.
    */
-  category?: EquipmentTypes;
+  category?: EquipmentType;
 
   /**
    * Height of the lowest working controls that are needed to operate this equipment. `undefined` if
@@ -154,7 +134,7 @@ export interface EquipmentProperties extends Interactable<EquipmentInteraction> 
   /**
    * `true` if the equipment has doors at right angles to each other.
    */
-  hasDoorsAtRightAnglesToEachOther?: boolean;
+  hasDoorsAtRightAngles?: boolean;
 
   /**
    * `true` if the equipment has a landing platform, `false` if not. Helpful for escalators.
@@ -164,7 +144,7 @@ export interface EquipmentProperties extends Interactable<EquipmentInteraction> 
   /**
    * Languages of the equipment’s visible controls and/or voice output.
    */
-  languages?: ArrayLike<IetfLanguageTagOrSignLanguageCode>;
+  languages?: IETFLanguageTag[];
 
   /**
    * `true` if the equipment is indoors, `false` if it’s fully or partially outdoors.
@@ -402,7 +382,7 @@ export const getEquipmentPropertiesSchemaDefinition: () => SchemaDefinition = ()
   category: {
     type: String,
     optional: true,
-    allowedValues: AllowedEquipmentTypes.map((s) => s),
+    allowedValues: EquipmentTypes.map((s) => s),
   },
   ...getLocalizedStringSchemaDefinition('description'),
   // Alternative description that is screen-reader compatible and replaces abbreviations / symbols
@@ -418,12 +398,8 @@ export const getEquipmentPropertiesSchemaDefinition: () => SchemaDefinition = ()
     defaultValue: [],
     optional: true,
   },
-  'languages.$': {
-    type: String,
-    label: t`Language`,
-    allowedValues: ietfLanguageTagsAndSignLanguageCodes,
-  },
-  hasDoorsAtRightAnglesToEachOther: BooleanField,
+  'languages.$': IETFLanguageCodeSchemaKeyDefinition,
+  hasDoorsAtRightAngles: BooleanField,
   hasDoorsInBothDirections: BooleanField,
   hasRaisedText: BooleanField,
   hasBrailleText: BooleanField,

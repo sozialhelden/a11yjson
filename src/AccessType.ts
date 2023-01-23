@@ -1,4 +1,5 @@
-export const accessTypes = [
+export const AccessTypes = [
+  /** Access is private. */
   'private',
   'public',
   'customers',
@@ -16,4 +17,4 @@ export const accessTypes = [
   'no',
 ] as const;
 
-export type AccessType = typeof accessTypes[number];
+export type AccessType = typeof AccessTypes[number];

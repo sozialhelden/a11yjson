@@ -1,7 +1,7 @@
 import { Surface } from './Surface';
 import { Complete } from './Complete';
 
-export const surfaceFixture: Complete<Surface> = {
+const surfaceFixture: Complete<Surface> = {
   lateralSlope: {
     value: 6,
     unit: 'percent',

@@ -1,6 +1,6 @@
 import { getSurfaceSchemaDefinition } from './Surface';
 import expectValidFixture from './lib/expectValidFixture';
-import { surfaceFixture } from './surfaceFixture';
+import surfaceFixture from './surfaceFixture';
 
 const definition = getSurfaceSchemaDefinition();
 

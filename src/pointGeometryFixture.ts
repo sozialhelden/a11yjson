@@ -1,6 +1,6 @@
 import { PointGeometry } from './Geometry';
 
-export const pointGeometryFixture: PointGeometry = {
+const pointGeometryFixture: PointGeometry = {
   type: 'Point',
   coordinates: [53.12, 14.02],
 };

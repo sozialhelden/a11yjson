@@ -1,7 +1,7 @@
 import { PersonalProfile } from './PersonalProfile';
 import { Complete } from './Complete';
 
-export const personalProfileFixture: Complete<PersonalProfile> = {
+const personalProfileFixture: Complete<PersonalProfile> = {
   muteness: true,
   guideDog: true,
   hearingImpairment: true,

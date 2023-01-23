@@ -1,7 +1,7 @@
 import { Toilet } from './Toilet';
 import { Complete } from './Complete';
 
-export const toiletFixture: Complete<Toilet> = {
+const toiletFixture: Complete<Toilet> = {
   heightOfBase: '40 .. 45cm',
   spaceOnUsersLeftSide: '>70cm',
   spaceOnUsersRightSide: '>70cm',
@@ -15,6 +15,7 @@ export const toiletFixture: Complete<Toilet> = {
   },
   isSquatToilet: false,
   isUrinal: false,
+  isLatrine: false,
   hasAutomaticFlush: false,
   flushMechanismDistanceFromToilet: '0 .. 100cm',
   interactions: {

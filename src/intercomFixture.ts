@@ -1,7 +1,7 @@
 import { Intercom } from './Intercom';
 import { Complete } from './Complete';
 
-export const intercomFixture: Complete<Intercom> = {
+const intercomFixture: Complete<Intercom> = {
   description: { en: 'doorbell' },
   hasAudio: true,
   ambientNoiseLevel: '< 50dBa',

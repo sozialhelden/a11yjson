@@ -1,6 +1,6 @@
 import { getIntercomSchemaDefinition } from './Intercom';
 import expectValidFixture from './lib/expectValidFixture';
-import { intercomFixture } from './intercomFixture';
+import intercomFixture from './intercomFixture';
 
 const definition = getIntercomSchemaDefinition();
 

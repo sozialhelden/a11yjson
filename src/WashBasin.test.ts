@@ -1,6 +1,6 @@
 import expectValidFixture from './lib/expectValidFixture';
 import { getWashBasinSchemaDefinition } from './WashBasin';
-import { washBasinFixture } from './washBasinFixture';
+import washBasinFixture from './washBasinFixture';
 
 const definition = getWashBasinSchemaDefinition();
 

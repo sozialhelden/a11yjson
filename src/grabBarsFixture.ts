@@ -1,8 +1,8 @@
 import { GrabBars } from './GrabBars';
 import { Complete } from './Complete';
-import interactionModeFixture from "./interactionModeFixture";
+import interactionModeFixture from './interactionModeFixture';
 
-export const grabBarsFixture: Complete<GrabBars> = {
+const grabBarsFixture: Complete<GrabBars> = {
   onUsersLeftSide: true,
   onUsersRightSide: true,
   inFrontOfTheUser: false,
@@ -15,4 +15,5 @@ export const grabBarsFixture: Complete<GrabBars> = {
   },
   continuous: true,
 };
+
 export default grabBarsFixture;

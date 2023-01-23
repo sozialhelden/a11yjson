@@ -1,7 +1,7 @@
 import { WifiAccessibility } from './WifiAccessibility';
 import { Complete } from './Complete';
 
-export const wifiAccessibilityFixture: Complete<WifiAccessibility> = {
+const wifiAccessibilityFixture: Complete<WifiAccessibility> = {
   access: ['public'],
   isOpenToEveryone: true,
   isOpenToVisitors: true,

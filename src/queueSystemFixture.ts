@@ -2,7 +2,7 @@ import { Complete } from './Complete';
 import grabBarsFixture from './grabBarsFixture';
 import { QueueSystem } from './QueueSystem';
 
-export const queueSystemFixture: Complete<QueueSystem> = {
+const queueSystemFixture: Complete<QueueSystem> = {
   usesCattleBars: true,
   needsTickets: true,
   canSkipQueueWithDisability: true,

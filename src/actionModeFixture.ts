@@ -1,7 +1,7 @@
 import { Complete } from './Complete';
 import { ActionMode } from './ActionMode';
 
-export const actionModeFixture: Complete<ActionMode> = {
+const actionModeFixture: Complete<ActionMode> = {
   name: { en: 'Reaction test' },
   description: { en: 'Listen to a tone while watching a chart on a screen' },
   languages: ['en'],

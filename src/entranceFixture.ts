@@ -3,7 +3,7 @@ import pointGeometryFixture from './pointGeometryFixture';
 import entrancePropertiesFixture from './entrancePropertiesFixture';
 import { Complete } from './Complete';
 
-export const entranceFixture: Complete<Entrance> = {
+const entranceFixture: Complete<Entrance> = {
   properties: entrancePropertiesFixture,
   geometry: pointGeometryFixture,
 };

@@ -1,26 +1,26 @@
-import personalProfileFixture from "./personalProfileFixture";
-import restroomFixture from "./restroomFixture";
+import personalProfileFixture from './personalProfileFixture';
+import restroomFixture from './restroomFixture';
 import entranceFixture from './entranceFixture';
-import wheelchairPlacesFixture from "./wheelchairPlacesFixture";
+import wheelchairPlacesFixture from './wheelchairPlacesFixture';
 import mediaFixture from './mediaFixture';
-import staffFixture from "./staffFixture";
+import staffFixture from './staffFixture';
 import paymentFixture from './paymentFixture';
 import pathwaysFixture from './pathwaysFixture';
 import parkingFixture from './parkingFixture';
-import surfaceFixture from "./surfaceFixture";
-import { Accessibility, WheelchairAccessibilityGrade } from '.';
+import surfaceFixture from './surfaceFixture';
+import { Accessibility } from '.';
 import { Complete } from './Complete';
 import animalPolicyFixture from './animalPolicyFixture';
-import wifiAccessibilityFixture from "./wifiAccessibilityFixture";
+import wifiAccessibilityFixture from './wifiAccessibilityFixture';
 import deskFixture from './deskFixture';
-import signageFixture from "./signageFixture";
+import signageFixture from './signageFixture';
 import interactionModeFixture from './interactionModeFixture';
 
-export const accessibilityFixture: Complete<Accessibility> = {
+const accessibilityFixture: Complete<Accessibility> = {
   accessibleWith: personalProfileFixture,
   partiallyAccessibleWith: personalProfileFixture,
   offersActivitiesForPeopleWith: personalProfileFixture,
-  wheelchairAccessibilityGrade: WheelchairAccessibilityGrade.Fully,
+  wheelchairAccessibilityGrade: 'fully',
   staff: staffFixture,
   wheelchairPlaces: wheelchairPlacesFixture,
   isWellLit: true,

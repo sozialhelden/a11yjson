@@ -1,6 +1,6 @@
 import { getParkingSchemaDefinition } from './Parking';
 import expectValidFixture from './lib/expectValidFixture';
-import { parkingFixture } from './parkingFixture';
+import parkingFixture from './parkingFixture';
 
 const definition = getParkingSchemaDefinition();
 

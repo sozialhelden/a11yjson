@@ -1,12 +1,12 @@
 import { Restroom } from './Restroom';
 import { Complete } from './Complete';
 import entranceFixture from './entranceFixture';
-import toiletFixture from "./toiletFixture";
-import showerFixture from "./showerFixture";
-import washBasinFixture from "./washBasinFixture";
-import roomFixture from "./roomFixture";
+import toiletFixture from './toiletFixture';
+import showerFixture from './showerFixture';
+import washBasinFixture from './washBasinFixture';
+import roomFixture from './roomFixture';
 
-export const restroomFixture: Complete<Restroom> = {
+const restroomFixture: Complete<Restroom> = {
   ...roomFixture,
   isAccessibleWithWheelchair: true,
   signIcons: ['female', 'personInWheelchair'],

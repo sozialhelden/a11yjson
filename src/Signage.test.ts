@@ -1,6 +1,6 @@
 import expectValidFixture from './lib/expectValidFixture';
 import { getSignageSchemaDefinition } from './Signage';
-import { signageFixture } from './signageFixture';
+import signageFixture from './signageFixture';
 
 const definition = getSignageSchemaDefinition();
 
