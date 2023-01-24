@@ -13,7 +13,7 @@ const IETFLanguageCodeSchemaKeyDefinition: SchemaKeyDefinition = {
     if (value === undefined) {
       return undefined;
     }
-    if (value !== 'string') {
+    if (typeof value !== 'string') {
       return 'expectedType';
     }
     const parsedTag = getTag(value);

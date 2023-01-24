@@ -12,7 +12,7 @@ Some lack proper formatting in the documentation. Fixes in [`tools/generate-over
 
 ### <a id="Acceleration">Acceleration</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L246)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L249)</span>
 
 
 
@@ -62,7 +62,7 @@ Definition: one of the following strings:
 
 ### <a id="Brightness">Brightness</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L241)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L244)</span>
 
 
 
@@ -280,7 +280,7 @@ Definition: one of the following strings:
 
 ### <a id="Force">Force</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L244)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L247)</span>
 
 
 
@@ -362,7 +362,7 @@ Definition: one of the following strings:
 
 ### <a id="Hertz">Hertz</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L247)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L250)</span>
 
 
 
@@ -404,7 +404,7 @@ Definition: one of the following strings:
 
 ### <a id="Length">Length</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L238)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L241)</span>
 
 
 
@@ -432,7 +432,7 @@ Values must be of type <code>string</code>.
 
 ### <a id="Mass">Mass</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L240)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L243)</span>
 
 
 
@@ -778,7 +778,7 @@ Definition: one of the following strings:
 
 ### <a id="Slope">Slope</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L242)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L245)</span>
 
 
 
@@ -841,7 +841,7 @@ Definition: one of the following strings:
 
 ### <a id="Speed">Speed</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L245)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L248)</span>
 
 
 
@@ -1177,7 +1177,7 @@ Definition: one of the following strings:
 
 ### <a id="Temperature">Temperature</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L248)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L251)</span>
 
 
 
@@ -1187,7 +1187,7 @@ Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
 
 ### <a id="TimeInterval">TimeInterval</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L243)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L246)</span>
 
 
 
@@ -1235,7 +1235,7 @@ Definition: one of the following strings:
 
 ### <a id="Volume">Volume</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L239)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L242)</span>
 
 
 

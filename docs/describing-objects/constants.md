@@ -12,7 +12,7 @@ Some lack proper formatting in the documentation. Fixes in [`tools/generate-over
 
 ### <a id="AccelerationSchema">AccelerationSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L182)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L185)</span>
 
 
 
@@ -21,7 +21,7 @@ Some lack proper formatting in the documentation. Fixes in [`tools/generate-over
 <summary>JSON</summary>
 ```json
 {
-  "id": 844,
+  "id": 846,
   "name": "AccelerationSchema",
   "kind": 32,
   "kindString": "Variable",
@@ -31,9 +31,9 @@ Some lack proper formatting in the documentation. Fixes in [`tools/generate-over
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 182,
+      "line": 185,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L182"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L185"
     }
   ],
   "type": {
@@ -53,7 +53,7 @@ Some lack proper formatting in the documentation. Fixes in [`tools/generate-over
 
 ### <a id="AccelerationSchemaDefinition">AccelerationSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L178)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L181)</span>
 
 
 
@@ -62,7 +62,7 @@ Some lack proper formatting in the documentation. Fixes in [`tools/generate-over
 <summary>JSON</summary>
 ```json
 {
-  "id": 843,
+  "id": 845,
   "name": "AccelerationSchemaDefinition",
   "kind": 32,
   "kindString": "Variable",
@@ -80,9 +80,9 @@ Some lack proper formatting in the documentation. Fixes in [`tools/generate-over
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 178,
+      "line": 181,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L178"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L181"
     }
   ],
   "type": {
@@ -123,7 +123,7 @@ Some lack proper formatting in the documentation. Fixes in [`tools/generate-over
       "fileName": "AccessType.ts",
       "line": 1,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/AccessType.ts#L1"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/AccessType.ts#L1"
     }
   ],
   "type": {
@@ -259,7 +259,7 @@ Read-only tuple with 15 strings:
       "fileName": "Quantity.ts",
       "line": 140,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L140"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L140"
     }
   ],
   "type": {
@@ -279,7 +279,7 @@ Read-only tuple with 15 strings:
 
 ### <a id="BrightnessSchema">BrightnessSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L226)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L229)</span>
 
 
 
@@ -288,7 +288,7 @@ Read-only tuple with 15 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 858,
+  "id": 860,
   "name": "BrightnessSchema",
   "kind": 32,
   "kindString": "Variable",
@@ -298,9 +298,9 @@ Read-only tuple with 15 strings:
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 226,
+      "line": 229,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L226"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L229"
     }
   ],
   "type": {
@@ -320,7 +320,7 @@ Read-only tuple with 15 strings:
 
 ### <a id="BrightnessSchemaDefinition">BrightnessSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L225)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L228)</span>
 
 
 
@@ -329,7 +329,7 @@ Read-only tuple with 15 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 857,
+  "id": 859,
   "name": "BrightnessSchemaDefinition",
   "kind": 32,
   "kindString": "Variable",
@@ -347,9 +347,9 @@ Read-only tuple with 15 strings:
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 225,
+      "line": 228,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L225"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L228"
     }
   ],
   "type": {
@@ -390,7 +390,7 @@ Read-only tuple with 15 strings:
       "fileName": "Desk.ts",
       "line": 11,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Desk.ts#L11"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Desk.ts#L11"
     }
   ],
   "type": {
@@ -575,7 +575,7 @@ Read-only tuple with 20 strings:
       "fileName": "ActionMode.ts",
       "line": 27,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/ActionMode.ts#L27"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/ActionMode.ts#L27"
     }
   ],
   "type": {
@@ -647,7 +647,7 @@ Read-only tuple with 3 strings:
       "fileName": "ActionMode.ts",
       "line": 43,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/ActionMode.ts#L43"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/ActionMode.ts#L43"
     }
   ],
   "type": {
@@ -741,7 +741,7 @@ Read-only tuple with 8 strings:
       "fileName": "Door.ts",
       "line": 18,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Door.ts#L18"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Door.ts#L18"
     }
   ],
   "type": {
@@ -829,7 +829,7 @@ Read-only tuple with 7 strings:
       "fileName": "EquipmentProperties.ts",
       "line": 39,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/EquipmentProperties.ts#L39"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/EquipmentProperties.ts#L39"
     }
   ],
   "type": {
@@ -995,7 +995,7 @@ Read-only tuple with 20 strings:
       "fileName": "EquipmentProperties.ts",
       "line": 18,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/EquipmentProperties.ts#L18"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/EquipmentProperties.ts#L18"
     }
   ],
   "type": {
@@ -1116,7 +1116,7 @@ Read-only tuple with 16 strings:
 
 ### <a id="ForceSchema">ForceSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L189)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L192)</span>
 
 
 
@@ -1125,7 +1125,7 @@ Read-only tuple with 16 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 846,
+  "id": 848,
   "name": "ForceSchema",
   "kind": 32,
   "kindString": "Variable",
@@ -1135,9 +1135,9 @@ Read-only tuple with 16 strings:
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 189,
+      "line": 192,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L189"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L192"
     }
   ],
   "type": {
@@ -1157,7 +1157,7 @@ Read-only tuple with 16 strings:
 
 ### <a id="ForceSchemaDefinition">ForceSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L188)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L191)</span>
 
 
 
@@ -1166,7 +1166,7 @@ Read-only tuple with 16 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 845,
+  "id": 847,
   "name": "ForceSchemaDefinition",
   "kind": 32,
   "kindString": "Variable",
@@ -1184,9 +1184,9 @@ Read-only tuple with 16 strings:
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 188,
+      "line": 191,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L188"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L191"
     }
   ],
   "type": {
@@ -1227,7 +1227,7 @@ Read-only tuple with 16 strings:
       "fileName": "Accessibility.ts",
       "line": 49,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Accessibility.ts#L49"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Accessibility.ts#L49"
     }
   ],
   "type": {
@@ -1417,7 +1417,7 @@ Read-only tuple with 24 strings:
       "fileName": "GrabBars.ts",
       "line": 6,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/GrabBars.ts#L6"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/GrabBars.ts#L6"
     }
   ],
   "type": {
@@ -1454,7 +1454,7 @@ Read-only tuple with 2 strings:
 
 ### <a id="HertzSchema">HertzSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L214)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L217)</span>
 
 
 
@@ -1463,7 +1463,7 @@ Read-only tuple with 2 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 854,
+  "id": 856,
   "name": "HertzSchema",
   "kind": 32,
   "kindString": "Variable",
@@ -1473,9 +1473,9 @@ Read-only tuple with 2 strings:
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 214,
+      "line": 217,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L214"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L217"
     }
   ],
   "type": {
@@ -1495,7 +1495,7 @@ Read-only tuple with 2 strings:
 
 ### <a id="HertzSchemaDefinition">HertzSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L213)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L216)</span>
 
 
 
@@ -1504,7 +1504,7 @@ Read-only tuple with 2 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 853,
+  "id": 855,
   "name": "HertzSchemaDefinition",
   "kind": 32,
   "kindString": "Variable",
@@ -1522,9 +1522,9 @@ Read-only tuple with 2 strings:
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 213,
+      "line": 216,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L213"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L216"
     }
   ],
   "type": {
@@ -1565,7 +1565,7 @@ Read-only tuple with 2 strings:
       "fileName": "Intercom.ts",
       "line": 13,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Intercom.ts#L13"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Intercom.ts#L13"
     }
   ],
   "type": {
@@ -1626,7 +1626,7 @@ Read-only tuple with 6 strings:
 
 ### <a id="LengthSchema">LengthSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L164)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L167)</span>
 
 
 
@@ -1635,7 +1635,7 @@ Read-only tuple with 6 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 840,
+  "id": 842,
   "name": "LengthSchema",
   "kind": 32,
   "kindString": "Variable",
@@ -1645,9 +1645,9 @@ Read-only tuple with 6 strings:
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 164,
+      "line": 167,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L164"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L167"
     }
   ],
   "type": {
@@ -1667,7 +1667,7 @@ Read-only tuple with 6 strings:
 
 ### <a id="LengthSchemaDefinition">LengthSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L163)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L166)</span>
 
 
 
@@ -1676,7 +1676,7 @@ Read-only tuple with 6 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 839,
+  "id": 841,
   "name": "LengthSchemaDefinition",
   "kind": 32,
   "kindString": "Variable",
@@ -1694,9 +1694,9 @@ Read-only tuple with 6 strings:
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 163,
+      "line": 166,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L163"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L166"
     }
   ],
   "type": {
@@ -1716,7 +1716,7 @@ Read-only tuple with 6 strings:
 
 ### <a id="MassSchema">MassSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L202)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L205)</span>
 
 
 
@@ -1725,7 +1725,7 @@ Read-only tuple with 6 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 850,
+  "id": 852,
   "name": "MassSchema",
   "kind": 32,
   "kindString": "Variable",
@@ -1735,9 +1735,9 @@ Read-only tuple with 6 strings:
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 202,
+      "line": 205,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L202"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L205"
     }
   ],
   "type": {
@@ -1757,7 +1757,7 @@ Read-only tuple with 6 strings:
 
 ### <a id="MassSchemaDefinition">MassSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L201)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L204)</span>
 
 
 
@@ -1766,7 +1766,7 @@ Read-only tuple with 6 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 849,
+  "id": 851,
   "name": "MassSchemaDefinition",
   "kind": 32,
   "kindString": "Variable",
@@ -1784,9 +1784,9 @@ Read-only tuple with 6 strings:
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 201,
+      "line": 204,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L201"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L204"
     }
   ],
   "type": {
@@ -1827,7 +1827,7 @@ Read-only tuple with 6 strings:
       "fileName": "Media.ts",
       "line": 12,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Media.ts#L12"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Media.ts#L12"
     }
   ],
   "type": {
@@ -1939,7 +1939,7 @@ Read-only tuple with 11 strings:
       "fileName": "Media.ts",
       "line": 27,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Media.ts#L27"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Media.ts#L27"
     }
   ],
   "type": {
@@ -2045,7 +2045,7 @@ Read-only tuple with 10 strings:
       "fileName": "Mirror.ts",
       "line": 6,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Mirror.ts#L6"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Mirror.ts#L6"
     }
   ],
   "type": {
@@ -2129,7 +2129,7 @@ Read-only tuple with 5 strings:
       "fileName": "Quantity.ts",
       "line": 69,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L69"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L69"
     }
   ],
   "type": {
@@ -2229,7 +2229,7 @@ Read-only tuple with 9 strings:
       "fileName": "Parking.ts",
       "line": 9,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Parking.ts#L9"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Parking.ts#L9"
     }
   ],
   "type": {
@@ -2299,7 +2299,7 @@ Read-only tuple with 4 strings:
       "fileName": "Payment.ts",
       "line": 5,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Payment.ts#L5"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Payment.ts#L5"
     }
   ],
   "type": {
@@ -2363,7 +2363,7 @@ Read-only tuple with 5 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 872,
+  "id": 874,
   "name": "QueueSystemInteractions",
   "kind": 32,
   "kindString": "Variable",
@@ -2375,7 +2375,7 @@ Read-only tuple with 5 strings:
       "fileName": "QueueSystem.ts",
       "line": 7,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/QueueSystem.ts#L7"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/QueueSystem.ts#L7"
     }
   ],
   "type": {
@@ -2475,7 +2475,7 @@ Read-only tuple with 9 strings:
       "fileName": "Restroom.ts",
       "line": 15,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Restroom.ts#L15"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Restroom.ts#L15"
     }
   ],
   "type": {
@@ -2581,7 +2581,7 @@ Read-only tuple with 10 strings:
       "fileName": "Room.ts",
       "line": 8,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Room.ts#L8"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Room.ts#L8"
     }
   ],
   "type": {
@@ -2699,7 +2699,7 @@ Read-only tuple with 12 strings:
       "fileName": "Seat.ts",
       "line": 16,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Seat.ts#L16"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Seat.ts#L16"
     }
   ],
   "type": {
@@ -2871,7 +2871,7 @@ Read-only tuple with 21 strings:
       "fileName": "Shower.ts",
       "line": 12,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Shower.ts#L12"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Shower.ts#L12"
     }
   ],
   "type": {
@@ -2971,7 +2971,7 @@ Read-only tuple with 9 strings:
       "fileName": "Signage.ts",
       "line": 7,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Signage.ts#L7"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Signage.ts#L7"
     }
   ],
   "type": {
@@ -3014,7 +3014,7 @@ Read-only tuple with 3 strings:
 
 ### <a id="SlopeSchema">SlopeSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L220)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L223)</span>
 
 
 
@@ -3023,7 +3023,7 @@ Read-only tuple with 3 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 856,
+  "id": 858,
   "name": "SlopeSchema",
   "kind": 32,
   "kindString": "Variable",
@@ -3033,9 +3033,9 @@ Read-only tuple with 3 strings:
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 220,
+      "line": 223,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L220"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L223"
     }
   ],
   "type": {
@@ -3055,7 +3055,7 @@ Read-only tuple with 3 strings:
 
 ### <a id="SlopeSchemaDefinition">SlopeSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L219)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L222)</span>
 
 
 
@@ -3064,7 +3064,7 @@ Read-only tuple with 3 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 855,
+  "id": 857,
   "name": "SlopeSchemaDefinition",
   "kind": 32,
   "kindString": "Variable",
@@ -3082,9 +3082,9 @@ Read-only tuple with 3 strings:
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 219,
+      "line": 222,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L219"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L222"
     }
   ],
   "type": {
@@ -3125,7 +3125,7 @@ Read-only tuple with 3 strings:
       "fileName": "Surface.ts",
       "line": 169,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Surface.ts#L169"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Surface.ts#L169"
     }
   ],
   "type": {
@@ -3204,7 +3204,7 @@ Read-only tuple with 9 strings:
 
 ### <a id="SpeedSchema">SpeedSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L171)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L174)</span>
 
 
 
@@ -3213,7 +3213,7 @@ Read-only tuple with 9 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 842,
+  "id": 844,
   "name": "SpeedSchema",
   "kind": 32,
   "kindString": "Variable",
@@ -3223,9 +3223,9 @@ Read-only tuple with 9 strings:
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 171,
+      "line": 174,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L171"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L174"
     }
   ],
   "type": {
@@ -3245,7 +3245,7 @@ Read-only tuple with 9 strings:
 
 ### <a id="SpeedSchemaDefinition">SpeedSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L170)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L173)</span>
 
 
 
@@ -3254,7 +3254,7 @@ Read-only tuple with 9 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 841,
+  "id": 843,
   "name": "SpeedSchemaDefinition",
   "kind": 32,
   "kindString": "Variable",
@@ -3272,9 +3272,9 @@ Read-only tuple with 9 strings:
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 170,
+      "line": 173,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L170"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L173"
     }
   ],
   "type": {
@@ -3315,7 +3315,7 @@ Read-only tuple with 9 strings:
       "fileName": "Surface.ts",
       "line": 6,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Surface.ts#L6"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Surface.ts#L6"
     }
   ],
   "type": {
@@ -4288,7 +4288,7 @@ Read-only tuple with 158 strings:
 
 ### <a id="TemperatureSchema">TemperatureSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L236)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L239)</span>
 
 
 
@@ -4297,7 +4297,7 @@ Read-only tuple with 158 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 860,
+  "id": 862,
   "name": "TemperatureSchema",
   "kind": 32,
   "kindString": "Variable",
@@ -4307,9 +4307,9 @@ Read-only tuple with 158 strings:
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 236,
+      "line": 239,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L236"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L239"
     }
   ],
   "type": {
@@ -4329,7 +4329,7 @@ Read-only tuple with 158 strings:
 
 ### <a id="TemperatureSchemaDefinition">TemperatureSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L232)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L235)</span>
 
 
 
@@ -4338,7 +4338,7 @@ Read-only tuple with 158 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 859,
+  "id": 861,
   "name": "TemperatureSchemaDefinition",
   "kind": 32,
   "kindString": "Variable",
@@ -4380,9 +4380,9 @@ Read-only tuple with 158 strings:
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 232,
+      "line": 235,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L232"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L235"
     }
   ],
   "type": {
@@ -4402,7 +4402,7 @@ Read-only tuple with 158 strings:
 
 ### <a id="TimeIntervalSchema">TimeIntervalSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L195)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L198)</span>
 
 
 
@@ -4411,7 +4411,7 @@ Read-only tuple with 158 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 848,
+  "id": 850,
   "name": "TimeIntervalSchema",
   "kind": 32,
   "kindString": "Variable",
@@ -4421,9 +4421,9 @@ Read-only tuple with 158 strings:
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 195,
+      "line": 198,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L195"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L198"
     }
   ],
   "type": {
@@ -4443,7 +4443,7 @@ Read-only tuple with 158 strings:
 
 ### <a id="TimeIntervalSchemaDefinition">TimeIntervalSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L194)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L197)</span>
 
 
 
@@ -4452,7 +4452,7 @@ Read-only tuple with 158 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 847,
+  "id": 849,
   "name": "TimeIntervalSchemaDefinition",
   "kind": 32,
   "kindString": "Variable",
@@ -4470,9 +4470,9 @@ Read-only tuple with 158 strings:
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 194,
+      "line": 197,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L194"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L197"
     }
   ],
   "type": {
@@ -4513,7 +4513,7 @@ Read-only tuple with 158 strings:
       "fileName": "Toilet.ts",
       "line": 10,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Toilet.ts#L10"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Toilet.ts#L10"
     }
   ],
   "type": {
@@ -4560,6 +4560,88 @@ Read-only tuple with 4 strings:
 
 
 
+### <a id="UnitlessSchema">UnitlessSchema</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L160)</span>
+
+
+
+
+<details>
+<summary>JSON</summary>
+```json
+{
+  "id": 840,
+  "name": "UnitlessSchema",
+  "kind": 32,
+  "kindString": "Variable",
+  "flags": {
+    "isConst": true
+  },
+  "sources": [
+    {
+      "fileName": "Quantity.ts",
+      "line": 160,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L160"
+    }
+  ],
+  "type": {
+    "type": "reference",
+    "name": "SimpleSchema",
+    "qualifiedName": "SimpleSchema",
+    "package": "simpl-schema"
+  },
+  "defaultValue": "..."
+}
+```
+</details>
+
+
+`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+
+
+### <a id="UnitlessSchemaDefinition">UnitlessSchemaDefinition</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L159)</span>
+
+
+
+
+<details>
+<summary>JSON</summary>
+```json
+{
+  "id": 839,
+  "name": "UnitlessSchemaDefinition",
+  "kind": 32,
+  "kindString": "Variable",
+  "flags": {
+    "isConst": true
+  },
+  "sources": [
+    {
+      "fileName": "Quantity.ts",
+      "line": 159,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L159"
+    }
+  ],
+  "type": {
+    "type": "reference",
+    "name": "SchemaDefinition",
+    "qualifiedName": "SchemaDefinition",
+    "package": "simpl-schema"
+  },
+  "defaultValue": "..."
+}
+```
+</details>
+
+
+`SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+
+
 ### <a id="Urgencies">Urgencies</a>
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/PerceptionMode.ts#L28)</span>
@@ -4583,7 +4665,7 @@ Read-only tuple with 4 strings:
       "fileName": "PerceptionMode.ts",
       "line": 28,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/PerceptionMode.ts#L28"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/PerceptionMode.ts#L28"
     }
   ],
   "type": {
@@ -4638,7 +4720,7 @@ Read-only tuple with 5 strings:
 
 ### <a id="VolumeSchema">VolumeSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L208)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L211)</span>
 
 
 
@@ -4647,7 +4729,7 @@ Read-only tuple with 5 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 852,
+  "id": 854,
   "name": "VolumeSchema",
   "kind": 32,
   "kindString": "Variable",
@@ -4657,9 +4739,9 @@ Read-only tuple with 5 strings:
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 208,
+      "line": 211,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L208"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L211"
     }
   ],
   "type": {
@@ -4679,7 +4761,7 @@ Read-only tuple with 5 strings:
 
 ### <a id="VolumeSchemaDefinition">VolumeSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L207)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L210)</span>
 
 
 
@@ -4688,7 +4770,7 @@ Read-only tuple with 5 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 851,
+  "id": 853,
   "name": "VolumeSchemaDefinition",
   "kind": 32,
   "kindString": "Variable",
@@ -4706,9 +4788,9 @@ Read-only tuple with 5 strings:
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 207,
+      "line": 210,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L207"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L210"
     }
   ],
   "type": {
@@ -4737,7 +4819,7 @@ Read-only tuple with 5 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 884,
+  "id": 886,
   "name": "WashBashinInteractions",
   "kind": 32,
   "kindString": "Variable",
@@ -4749,7 +4831,7 @@ Read-only tuple with 5 strings:
       "fileName": "WashBasin.ts",
       "line": 5,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/WashBasin.ts#L5"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/WashBasin.ts#L5"
     }
   ],
   "type": {
@@ -4881,7 +4963,7 @@ Read-only tuple with 13 strings:
       "fileName": "Accessibility.ts",
       "line": 28,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Accessibility.ts#L28"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Accessibility.ts#L28"
     }
   ],
   "type": {
@@ -4933,7 +5015,7 @@ Read-only tuple with 3 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 902,
+  "id": 904,
   "name": "WifiInteractions",
   "kind": 32,
   "kindString": "Variable",
@@ -4945,7 +5027,7 @@ Read-only tuple with 3 strings:
       "fileName": "WifiAccessibility.ts",
       "line": 6,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/WifiAccessibility.ts#L6"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/WifiAccessibility.ts#L6"
     }
   ],
   "type": {
