@@ -124,6 +124,7 @@ Definition: one of the following strings:
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L57)</span>
 
+<p>Describes a physical direction, from the perspective of a person facing forward.</p>
 
 
 Definition: one of the following strings:
@@ -150,6 +151,7 @@ Definition: one of the following strings:
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L38)</span>
 
+<p>Describes a physical direction axis relative to a person’s body.</p>
 
 
 Definition: one of the following strings:
@@ -374,6 +376,7 @@ Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ietfLanguageTags.ts#L7)</span>
 
+<p>Defines a spoken or written language in <a href="https://github.com/sozialhelden/ietf-language-tags">IETF language tag format</a>.</p>
 
 
 Definition: <code>string</code>
@@ -790,6 +793,7 @@ Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/SmokingPolicy.ts#L4)</span>
 
+<p>Describes the smoking policy for visitors of a place.</p>
 
 
 Definition: One of the following strings:

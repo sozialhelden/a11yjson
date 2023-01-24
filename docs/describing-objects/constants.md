@@ -16,38 +16,6 @@ Some lack proper formatting in the documentation. Fixes in [`tools/generate-over
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 846,
-  "name": "AccelerationSchema",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 185,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L185"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SimpleSchema",
-    "qualifiedName": "SimpleSchema",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 `SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
 
 
@@ -55,46 +23,9 @@ Some lack proper formatting in the documentation. Fixes in [`tools/generate-over
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L181)</span>
 
-
-
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 845,
-  "name": "AccelerationSchemaDefinition",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "comment": {
-    "summary": [
-      {
-        "kind": "text",
-        "text": "Validates a acceleration quantity object and will only accept acceleration units, eg.\nmeter/second^2, miles/hour^2. Useful to describe the acceleration of a vehicle, or the\nacceleration that a person is subjected to."
-      }
-    ]
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 181,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L181"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SchemaDefinition",
-    "qualifiedName": "SchemaDefinition",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
+<p>Validates a acceleration quantity object and will only accept acceleration units, eg.
+meter/second^2, miles/hour^2. Useful to describe the acceleration of a vehicle, or the
+acceleration that a person is subjected to.</p>
 
 
 `SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
@@ -106,132 +37,37 @@ Some lack proper formatting in the documentation. Fixes in [`tools/generate-over
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 50,
-  "name": "AccessTypes",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "AccessType.ts",
-      "line": 1,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/AccessType.ts#L1"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "private"
-        },
-        {
-          "type": "literal",
-          "value": "public"
-        },
-        {
-          "type": "literal",
-          "value": "customers"
-        },
-        {
-          "type": "literal",
-          "value": "permissive"
-        },
-        {
-          "type": "literal",
-          "value": "yes"
-        },
-        {
-          "type": "literal",
-          "value": "no"
-        },
-        {
-          "type": "literal",
-          "value": "permit"
-        },
-        {
-          "type": "literal",
-          "value": "designated"
-        },
-        {
-          "type": "literal",
-          "value": "delivery"
-        },
-        {
-          "type": "literal",
-          "value": "emergency"
-        },
-        {
-          "type": "literal",
-          "value": "residents"
-        },
-        {
-          "type": "literal",
-          "value": "employees"
-        },
-        {
-          "type": "literal",
-          "value": "disabled"
-        },
-        {
-          "type": "literal",
-          "value": "yes"
-        },
-        {
-          "type": "literal",
-          "value": "no"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 15 strings:
 <ul>
-<li>`private`</li>
+<li><code>private</code></li>
 
-<li>`public`</li>
+<li><code>public</code></li>
 
-<li>`customers`</li>
+<li><code>customers</code></li>
 
-<li>`permissive`</li>
+<li><code>permissive</code></li>
 
-<li>`yes`</li>
+<li><code>yes</code></li>
 
-<li>`no`</li>
+<li><code>no</code></li>
 
-<li>`permit`</li>
+<li><code>permit</code></li>
 
-<li>`designated`</li>
+<li><code>designated</code></li>
 
-<li>`delivery`</li>
+<li><code>delivery</code></li>
 
-<li>`emergency`</li>
+<li><code>emergency</code></li>
 
-<li>`residents`</li>
+<li><code>residents</code></li>
 
-<li>`employees`</li>
+<li><code>employees</code></li>
 
-<li>`disabled`</li>
+<li><code>disabled</code></li>
 
-<li>`yes`</li>
+<li><code>yes</code></li>
 
-<li>`no`</li>
+<li><code>no</code></li>
 </ul>
 
 
@@ -240,38 +76,6 @@ Read-only tuple with 15 strings:
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L140)</span>
 
-
-
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 838,
-  "name": "BaseQuantitySchema",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 140,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L140"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SimpleSchema",
-    "qualifiedName": "SimpleSchema",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
 
 
 `SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
@@ -283,38 +87,6 @@ Read-only tuple with 15 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 860,
-  "name": "BrightnessSchema",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 229,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L229"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SimpleSchema",
-    "qualifiedName": "SimpleSchema",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 `SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
 
 
@@ -322,46 +94,7 @@ Read-only tuple with 15 strings:
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L228)</span>
 
-
-
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 859,
-  "name": "BrightnessSchemaDefinition",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "comment": {
-    "summary": [
-      {
-        "kind": "text",
-        "text": "Validates a brightness descriptor and will only accept brightness units, eg. nits or lumens."
-      }
-    ]
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 228,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L228"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SchemaDefinition",
-    "qualifiedName": "SchemaDefinition",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
+<p>Validates a brightness descriptor and will only accept brightness units, eg. nits or lumens.</p>
 
 
 `SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
@@ -373,162 +106,47 @@ Read-only tuple with 15 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 200,
-  "name": "DeskInteractions",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Desk.ts",
-      "line": 11,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Desk.ts#L11"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "changeHeight"
-        },
-        {
-          "type": "literal",
-          "value": "savePreset"
-        },
-        {
-          "type": "literal",
-          "value": "enqueue"
-        },
-        {
-          "type": "literal",
-          "value": "checkIn"
-        },
-        {
-          "type": "literal",
-          "value": "checkOut"
-        },
-        {
-          "type": "literal",
-          "value": "ringBell"
-        },
-        {
-          "type": "literal",
-          "value": "pay"
-        },
-        {
-          "type": "literal",
-          "value": "handoverLuggage"
-        },
-        {
-          "type": "literal",
-          "value": "handover"
-        },
-        {
-          "type": "literal",
-          "value": "getReturn"
-        },
-        {
-          "type": "literal",
-          "value": "getFood"
-        },
-        {
-          "type": "literal",
-          "value": "getShoppingBag"
-        },
-        {
-          "type": "literal",
-          "value": "scan"
-        },
-        {
-          "type": "literal",
-          "value": "selfCheckout"
-        },
-        {
-          "type": "literal",
-          "value": "open"
-        },
-        {
-          "type": "literal",
-          "value": "close"
-        },
-        {
-          "type": "literal",
-          "value": "unlock"
-        },
-        {
-          "type": "literal",
-          "value": "lock"
-        },
-        {
-          "type": "literal",
-          "value": "unlockAndLock"
-        },
-        {
-          "type": "literal",
-          "value": "openAndClose"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 20 strings:
 <ul>
-<li>`changeHeight`</li>
+<li><code>changeHeight</code></li>
 
-<li>`savePreset`</li>
+<li><code>savePreset</code></li>
 
-<li>`enqueue`</li>
+<li><code>enqueue</code></li>
 
-<li>`checkIn`</li>
+<li><code>checkIn</code></li>
 
-<li>`checkOut`</li>
+<li><code>checkOut</code></li>
 
-<li>`ringBell`</li>
+<li><code>ringBell</code></li>
 
-<li>`pay`</li>
+<li><code>pay</code></li>
 
-<li>`handoverLuggage`</li>
+<li><code>handoverLuggage</code></li>
 
-<li>`handover`</li>
+<li><code>handover</code></li>
 
-<li>`getReturn`</li>
+<li><code>getReturn</code></li>
 
-<li>`getFood`</li>
+<li><code>getFood</code></li>
 
-<li>`getShoppingBag`</li>
+<li><code>getShoppingBag</code></li>
 
-<li>`scan`</li>
+<li><code>scan</code></li>
 
-<li>`selfCheckout`</li>
+<li><code>selfCheckout</code></li>
 
-<li>`open`</li>
+<li><code>open</code></li>
 
-<li>`close`</li>
+<li><code>close</code></li>
 
-<li>`unlock`</li>
+<li><code>unlock</code></li>
 
-<li>`lock`</li>
+<li><code>lock</code></li>
 
-<li>`unlockAndLock`</li>
+<li><code>unlockAndLock</code></li>
 
-<li>`openAndClose`</li>
+<li><code>openAndClose</code></li>
 </ul>
 
 
@@ -537,81 +155,16 @@ Read-only tuple with 20 strings:
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L27)</span>
 
-
-
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 52,
-  "name": "DirectionAxes",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "comment": {
-    "summary": [
-      {
-        "kind": "text",
-        "text": "Describes a physical direction axis relative to a person’s body."
-      }
-    ],
-    "blockTags": [
-      {
-        "tag": "@see",
-        "content": [
-          {
-            "kind": "text",
-            "text": "https://wisc.pb.unizin.org/app/uploads/sites/123/2018/10/Anatomical-Planes-and-Axes.jpg"
-          }
-        ]
-      }
-    ]
-  },
-  "sources": [
-    {
-      "fileName": "ActionMode.ts",
-      "line": 27,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/ActionMode.ts#L27"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "sagittal"
-        },
-        {
-          "type": "literal",
-          "value": "coronal"
-        },
-        {
-          "type": "literal",
-          "value": "axial"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
+<p>Describes a physical direction axis relative to a person’s body.</p>
 
 
 Read-only tuple with 3 strings:
 <ul>
-<li>`sagittal`</li>
+<li><code>sagittal</code></li>
 
-<li>`coronal`</li>
+<li><code>coronal</code></li>
 
-<li>`axial`</li>
+<li><code>axial</code></li>
 </ul>
 
 
@@ -620,100 +173,26 @@ Read-only tuple with 3 strings:
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L43)</span>
 
-
-
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 54,
-  "name": "Directions",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "comment": {
-    "summary": [
-      {
-        "kind": "text",
-        "text": "Describes physical directions, from the perspective of a person facing forward."
-      }
-    ]
-  },
-  "sources": [
-    {
-      "fileName": "ActionMode.ts",
-      "line": 43,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/ActionMode.ts#L43"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "up"
-        },
-        {
-          "type": "literal",
-          "value": "down"
-        },
-        {
-          "type": "literal",
-          "value": "left"
-        },
-        {
-          "type": "literal",
-          "value": "right"
-        },
-        {
-          "type": "literal",
-          "value": "forward"
-        },
-        {
-          "type": "literal",
-          "value": "backward"
-        },
-        {
-          "type": "literal",
-          "value": "clockwise"
-        },
-        {
-          "type": "literal",
-          "value": "counterclockwise"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
+<p>Describes physical directions, from the perspective of a person facing forward.</p>
 
 
 Read-only tuple with 8 strings:
 <ul>
-<li>`up`</li>
+<li><code>up</code></li>
 
-<li>`down`</li>
+<li><code>down</code></li>
 
-<li>`left`</li>
+<li><code>left</code></li>
 
-<li>`right`</li>
+<li><code>right</code></li>
 
-<li>`forward`</li>
+<li><code>forward</code></li>
 
-<li>`backward`</li>
+<li><code>backward</code></li>
 
-<li>`clockwise`</li>
+<li><code>clockwise</code></li>
 
-<li>`counterclockwise`</li>
+<li><code>counterclockwise</code></li>
 </ul>
 
 
@@ -724,84 +203,21 @@ Read-only tuple with 8 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 218,
-  "name": "DoorInteractions",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Door.ts",
-      "line": 18,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Door.ts#L18"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "ringDoorbell"
-        },
-        {
-          "type": "literal",
-          "value": "open"
-        },
-        {
-          "type": "literal",
-          "value": "close"
-        },
-        {
-          "type": "literal",
-          "value": "unlock"
-        },
-        {
-          "type": "literal",
-          "value": "lock"
-        },
-        {
-          "type": "literal",
-          "value": "unlockAndLock"
-        },
-        {
-          "type": "literal",
-          "value": "openAndClose"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 7 strings:
 <ul>
-<li>`ringDoorbell`</li>
+<li><code>ringDoorbell</code></li>
 
-<li>`open`</li>
+<li><code>open</code></li>
 
-<li>`close`</li>
+<li><code>close</code></li>
 
-<li>`unlock`</li>
+<li><code>unlock</code></li>
 
-<li>`lock`</li>
+<li><code>lock</code></li>
 
-<li>`unlockAndLock`</li>
+<li><code>unlockAndLock</code></li>
 
-<li>`openAndClose`</li>
+<li><code>openAndClose</code></li>
 </ul>
 
 
@@ -812,162 +228,47 @@ Read-only tuple with 7 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 288,
-  "name": "EquipmentInteractions",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "EquipmentProperties.ts",
-      "line": 39,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/EquipmentProperties.ts#L39"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "use"
-        },
-        {
-          "type": "literal",
-          "value": "selectFloor"
-        },
-        {
-          "type": "literal",
-          "value": "arriveAtFloor"
-        },
-        {
-          "type": "literal",
-          "value": "callEmergency"
-        },
-        {
-          "type": "literal",
-          "value": "ride"
-        },
-        {
-          "type": "literal",
-          "value": "travel"
-        },
-        {
-          "type": "literal",
-          "value": "buy"
-        },
-        {
-          "type": "literal",
-          "value": "sell"
-        },
-        {
-          "type": "literal",
-          "value": "call"
-        },
-        {
-          "type": "literal",
-          "value": "understand"
-        },
-        {
-          "type": "literal",
-          "value": "sleep"
-        },
-        {
-          "type": "literal",
-          "value": "toggle"
-        },
-        {
-          "type": "literal",
-          "value": "engage"
-        },
-        {
-          "type": "literal",
-          "value": "flush"
-        },
-        {
-          "type": "literal",
-          "value": "scan"
-        },
-        {
-          "type": "literal",
-          "value": "handover"
-        },
-        {
-          "type": "literal",
-          "value": "enable"
-        },
-        {
-          "type": "literal",
-          "value": "disable"
-        },
-        {
-          "type": "literal",
-          "value": "locateYourself"
-        },
-        {
-          "type": "literal",
-          "value": "findYourDestination"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 20 strings:
 <ul>
-<li>`use`</li>
+<li><code>use</code></li>
 
-<li>`selectFloor`</li>
+<li><code>selectFloor</code></li>
 
-<li>`arriveAtFloor`</li>
+<li><code>arriveAtFloor</code></li>
 
-<li>`callEmergency`</li>
+<li><code>callEmergency</code></li>
 
-<li>`ride`</li>
+<li><code>ride</code></li>
 
-<li>`travel`</li>
+<li><code>travel</code></li>
 
-<li>`buy`</li>
+<li><code>buy</code></li>
 
-<li>`sell`</li>
+<li><code>sell</code></li>
 
-<li>`call`</li>
+<li><code>call</code></li>
 
-<li>`understand`</li>
+<li><code>understand</code></li>
 
-<li>`sleep`</li>
+<li><code>sleep</code></li>
 
-<li>`toggle`</li>
+<li><code>toggle</code></li>
 
-<li>`engage`</li>
+<li><code>engage</code></li>
 
-<li>`flush`</li>
+<li><code>flush</code></li>
 
-<li>`scan`</li>
+<li><code>scan</code></li>
 
-<li>`handover`</li>
+<li><code>handover</code></li>
 
-<li>`enable`</li>
+<li><code>enable</code></li>
 
-<li>`disable`</li>
+<li><code>disable</code></li>
 
-<li>`locateYourself`</li>
+<li><code>locateYourself</code></li>
 
-<li>`findYourDestination`</li>
+<li><code>findYourDestination</code></li>
 </ul>
 
 
@@ -978,138 +279,39 @@ Read-only tuple with 20 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 286,
-  "name": "EquipmentTypes",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "EquipmentProperties.ts",
-      "line": 18,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/EquipmentProperties.ts#L18"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "bed"
-        },
-        {
-          "type": "literal",
-          "value": "wardrobe"
-        },
-        {
-          "type": "literal",
-          "value": "elevator"
-        },
-        {
-          "type": "literal",
-          "value": "escalator"
-        },
-        {
-          "type": "literal",
-          "value": "movingWalkway"
-        },
-        {
-          "type": "literal",
-          "value": "ramp"
-        },
-        {
-          "type": "literal",
-          "value": "hoist"
-        },
-        {
-          "type": "literal",
-          "value": "stairLift"
-        },
-        {
-          "type": "literal",
-          "value": "switch"
-        },
-        {
-          "type": "literal",
-          "value": "sitemap"
-        },
-        {
-          "type": "literal",
-          "value": "vendingMachine"
-        },
-        {
-          "type": "literal",
-          "value": "intercom"
-        },
-        {
-          "type": "literal",
-          "value": "powerOutlet"
-        },
-        {
-          "type": "literal",
-          "value": "flushMechanism"
-        },
-        {
-          "type": "literal",
-          "value": "bodyScanner"
-        },
-        {
-          "type": "literal",
-          "value": "luggageScanner"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 16 strings:
 <ul>
-<li>`bed`</li>
+<li><code>bed</code></li>
 
-<li>`wardrobe`</li>
+<li><code>wardrobe</code></li>
 
-<li>`elevator`</li>
+<li><code>elevator</code></li>
 
-<li>`escalator`</li>
+<li><code>escalator</code></li>
 
-<li>`movingWalkway`</li>
+<li><code>movingWalkway</code></li>
 
-<li>`ramp`</li>
+<li><code>ramp</code></li>
 
-<li>`hoist`</li>
+<li><code>hoist</code></li>
 
-<li>`stairLift`</li>
+<li><code>stairLift</code></li>
 
-<li>`switch`</li>
+<li><code>switch</code></li>
 
-<li>`sitemap`</li>
+<li><code>sitemap</code></li>
 
-<li>`vendingMachine`</li>
+<li><code>vendingMachine</code></li>
 
-<li>`intercom`</li>
+<li><code>intercom</code></li>
 
-<li>`powerOutlet`</li>
+<li><code>powerOutlet</code></li>
 
-<li>`flushMechanism`</li>
+<li><code>flushMechanism</code></li>
 
-<li>`bodyScanner`</li>
+<li><code>bodyScanner</code></li>
 
-<li>`luggageScanner`</li>
+<li><code>luggageScanner</code></li>
 </ul>
 
 
@@ -1120,38 +322,6 @@ Read-only tuple with 16 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 848,
-  "name": "ForceSchema",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 192,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L192"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SimpleSchema",
-    "qualifiedName": "SimpleSchema",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 `SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
 
 
@@ -1159,46 +329,8 @@ Read-only tuple with 16 strings:
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L191)</span>
 
-
-
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 847,
-  "name": "ForceSchemaDefinition",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "comment": {
-    "summary": [
-      {
-        "kind": "text",
-        "text": "Validates a force quantity object and will only accept force units, eg. newton, or\nkilogram*meter/second^2."
-      }
-    ]
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 191,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L191"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SchemaDefinition",
-    "qualifiedName": "SchemaDefinition",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
+<p>Validates a force quantity object and will only accept force units, eg. newton, or
+kilogram*meter/second^2.</p>
 
 
 `SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
@@ -1210,186 +342,55 @@ Read-only tuple with 16 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 13,
-  "name": "GenericInteractions",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Accessibility.ts",
-      "line": 49,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Accessibility.ts#L49"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "watchMovies"
-        },
-        {
-          "type": "literal",
-          "value": "watchPlays"
-        },
-        {
-          "type": "literal",
-          "value": "explore"
-        },
-        {
-          "type": "literal",
-          "value": "visit"
-        },
-        {
-          "type": "literal",
-          "value": "roam"
-        },
-        {
-          "type": "literal",
-          "value": "read"
-        },
-        {
-          "type": "literal",
-          "value": "rent"
-        },
-        {
-          "type": "literal",
-          "value": "watch"
-        },
-        {
-          "type": "literal",
-          "value": "see"
-        },
-        {
-          "type": "literal",
-          "value": "listen"
-        },
-        {
-          "type": "literal",
-          "value": "getFood"
-        },
-        {
-          "type": "literal",
-          "value": "eat"
-        },
-        {
-          "type": "literal",
-          "value": "pay"
-        },
-        {
-          "type": "literal",
-          "value": "buy"
-        },
-        {
-          "type": "literal",
-          "value": "sell"
-        },
-        {
-          "type": "literal",
-          "value": "workHere"
-        },
-        {
-          "type": "literal",
-          "value": "arrive"
-        },
-        {
-          "type": "literal",
-          "value": "checkIn"
-        },
-        {
-          "type": "literal",
-          "value": "checkOut"
-        },
-        {
-          "type": "literal",
-          "value": "useLockers"
-        },
-        {
-          "type": "literal",
-          "value": "change"
-        },
-        {
-          "type": "literal",
-          "value": "use"
-        },
-        {
-          "type": "literal",
-          "value": "book"
-        },
-        {
-          "type": "literal",
-          "value": "play"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 24 strings:
 <ul>
-<li>`watchMovies`</li>
+<li><code>watchMovies</code></li>
 
-<li>`watchPlays`</li>
+<li><code>watchPlays</code></li>
 
-<li>`explore`</li>
+<li><code>explore</code></li>
 
-<li>`visit`</li>
+<li><code>visit</code></li>
 
-<li>`roam`</li>
+<li><code>roam</code></li>
 
-<li>`read`</li>
+<li><code>read</code></li>
 
-<li>`rent`</li>
+<li><code>rent</code></li>
 
-<li>`watch`</li>
+<li><code>watch</code></li>
 
-<li>`see`</li>
+<li><code>see</code></li>
 
-<li>`listen`</li>
+<li><code>listen</code></li>
 
-<li>`getFood`</li>
+<li><code>getFood</code></li>
 
-<li>`eat`</li>
+<li><code>eat</code></li>
 
-<li>`pay`</li>
+<li><code>pay</code></li>
 
-<li>`buy`</li>
+<li><code>buy</code></li>
 
-<li>`sell`</li>
+<li><code>sell</code></li>
 
-<li>`workHere`</li>
+<li><code>workHere</code></li>
 
-<li>`arrive`</li>
+<li><code>arrive</code></li>
 
-<li>`checkIn`</li>
+<li><code>checkIn</code></li>
 
-<li>`checkOut`</li>
+<li><code>checkOut</code></li>
 
-<li>`useLockers`</li>
+<li><code>useLockers</code></li>
 
-<li>`change`</li>
+<li><code>change</code></li>
 
-<li>`use`</li>
+<li><code>use</code></li>
 
-<li>`book`</li>
+<li><code>book</code></li>
 
-<li>`play`</li>
+<li><code>play</code></li>
 </ul>
 
 
@@ -1400,54 +401,11 @@ Read-only tuple with 24 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 337,
-  "name": "GrabBarsInteractions",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "GrabBars.ts",
-      "line": 6,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/GrabBars.ts#L6"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "localizeYourself"
-        },
-        {
-          "type": "literal",
-          "value": "findYourDestination"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 2 strings:
 <ul>
-<li>`localizeYourself`</li>
+<li><code>localizeYourself</code></li>
 
-<li>`findYourDestination`</li>
+<li><code>findYourDestination</code></li>
 </ul>
 
 
@@ -1458,38 +416,6 @@ Read-only tuple with 2 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 856,
-  "name": "HertzSchema",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 217,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L217"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SimpleSchema",
-    "qualifiedName": "SimpleSchema",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 `SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
 
 
@@ -1497,46 +423,7 @@ Read-only tuple with 2 strings:
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L216)</span>
 
-
-
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 855,
-  "name": "HertzSchemaDefinition",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "comment": {
-    "summary": [
-      {
-        "kind": "text",
-        "text": "Validates a frequency quantity object and will only accept frequency units, eg. hertz."
-      }
-    ]
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 216,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L216"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SchemaDefinition",
-    "qualifiedName": "SchemaDefinition",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
+<p>Validates a frequency quantity object and will only accept frequency units, eg. hertz.</p>
 
 
 `SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
@@ -1548,78 +435,19 @@ Read-only tuple with 2 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 371,
-  "name": "IntercomInteractions",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Intercom.ts",
-      "line": 13,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Intercom.ts#L13"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "ring"
-        },
-        {
-          "type": "literal",
-          "value": "call"
-        },
-        {
-          "type": "literal",
-          "value": "hangUp"
-        },
-        {
-          "type": "literal",
-          "value": "open"
-        },
-        {
-          "type": "literal",
-          "value": "close"
-        },
-        {
-          "type": "literal",
-          "value": "identify"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 6 strings:
 <ul>
-<li>`ring`</li>
+<li><code>ring</code></li>
 
-<li>`call`</li>
+<li><code>call</code></li>
 
-<li>`hangUp`</li>
+<li><code>hangUp</code></li>
 
-<li>`open`</li>
+<li><code>open</code></li>
 
-<li>`close`</li>
+<li><code>close</code></li>
 
-<li>`identify`</li>
+<li><code>identify</code></li>
 </ul>
 
 
@@ -1630,38 +458,6 @@ Read-only tuple with 6 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 842,
-  "name": "LengthSchema",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 167,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L167"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SimpleSchema",
-    "qualifiedName": "SimpleSchema",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 `SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
 
 
@@ -1669,46 +465,8 @@ Read-only tuple with 6 strings:
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L166)</span>
 
-
-
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 841,
-  "name": "LengthSchemaDefinition",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "comment": {
-    "summary": [
-      {
-        "kind": "text",
-        "text": "Validates a length quantity object and will only accept length units, eg. meter, centimeter or\ninch."
-      }
-    ]
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 166,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L166"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SchemaDefinition",
-    "qualifiedName": "SchemaDefinition",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
+<p>Validates a length quantity object and will only accept length units, eg. meter, centimeter or
+inch.</p>
 
 
 `SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
@@ -1720,38 +478,6 @@ Read-only tuple with 6 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 852,
-  "name": "MassSchema",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 205,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L205"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SimpleSchema",
-    "qualifiedName": "SimpleSchema",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 `SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
 
 
@@ -1759,46 +485,8 @@ Read-only tuple with 6 strings:
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L204)</span>
 
-
-
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 851,
-  "name": "MassSchemaDefinition",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "comment": {
-    "summary": [
-      {
-        "kind": "text",
-        "text": "Validates a mass quantity object and will only accept mass/weight units, eg. kilogram, gram or\npound."
-      }
-    ]
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 204,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L204"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SchemaDefinition",
-    "qualifiedName": "SchemaDefinition",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
+<p>Validates a mass quantity object and will only accept mass/weight units, eg. kilogram, gram or
+pound.</p>
 
 
 `SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
@@ -1810,108 +498,29 @@ Read-only tuple with 6 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 397,
-  "name": "MediaInteractions",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Media.ts",
-      "line": 12,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Media.ts#L12"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "watch"
-        },
-        {
-          "type": "literal",
-          "value": "listen"
-        },
-        {
-          "type": "literal",
-          "value": "feel"
-        },
-        {
-          "type": "literal",
-          "value": "discover"
-        },
-        {
-          "type": "literal",
-          "value": "open"
-        },
-        {
-          "type": "literal",
-          "value": "close"
-        },
-        {
-          "type": "literal",
-          "value": "rent"
-        },
-        {
-          "type": "literal",
-          "value": "recognize"
-        },
-        {
-          "type": "literal",
-          "value": "browse"
-        },
-        {
-          "type": "literal",
-          "value": "read"
-        },
-        {
-          "type": "literal",
-          "value": "interact"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 11 strings:
 <ul>
-<li>`watch`</li>
+<li><code>watch</code></li>
 
-<li>`listen`</li>
+<li><code>listen</code></li>
 
-<li>`feel`</li>
+<li><code>feel</code></li>
 
-<li>`discover`</li>
+<li><code>discover</code></li>
 
-<li>`open`</li>
+<li><code>open</code></li>
 
-<li>`close`</li>
+<li><code>close</code></li>
 
-<li>`rent`</li>
+<li><code>rent</code></li>
 
-<li>`recognize`</li>
+<li><code>recognize</code></li>
 
-<li>`browse`</li>
+<li><code>browse</code></li>
 
-<li>`read`</li>
+<li><code>read</code></li>
 
-<li>`interact`</li>
+<li><code>interact</code></li>
 </ul>
 
 
@@ -1922,102 +531,27 @@ Read-only tuple with 11 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 399,
-  "name": "MediaTypes",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Media.ts",
-      "line": 27,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Media.ts#L27"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "document"
-        },
-        {
-          "type": "literal",
-          "value": "menu"
-        },
-        {
-          "type": "literal",
-          "value": "guide"
-        },
-        {
-          "type": "literal",
-          "value": "tour"
-        },
-        {
-          "type": "literal",
-          "value": "presentation"
-        },
-        {
-          "type": "literal",
-          "value": "exhibit"
-        },
-        {
-          "type": "literal",
-          "value": "movie"
-        },
-        {
-          "type": "literal",
-          "value": "play"
-        },
-        {
-          "type": "literal",
-          "value": "screen"
-        },
-        {
-          "type": "literal",
-          "value": "website"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 10 strings:
 <ul>
-<li>`document`</li>
+<li><code>document</code></li>
 
-<li>`menu`</li>
+<li><code>menu</code></li>
 
-<li>`guide`</li>
+<li><code>guide</code></li>
 
-<li>`tour`</li>
+<li><code>tour</code></li>
 
-<li>`presentation`</li>
+<li><code>presentation</code></li>
 
-<li>`exhibit`</li>
+<li><code>exhibit</code></li>
 
-<li>`movie`</li>
+<li><code>movie</code></li>
 
-<li>`play`</li>
+<li><code>play</code></li>
 
-<li>`screen`</li>
+<li><code>screen</code></li>
 
-<li>`website`</li>
+<li><code>website</code></li>
 </ul>
 
 
@@ -2028,72 +562,17 @@ Read-only tuple with 10 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 424,
-  "name": "MirrorInteractions",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Mirror.ts",
-      "line": 6,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Mirror.ts#L6"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "turn"
-        },
-        {
-          "type": "literal",
-          "value": "adjust"
-        },
-        {
-          "type": "literal",
-          "value": "move"
-        },
-        {
-          "type": "literal",
-          "value": "clean"
-        },
-        {
-          "type": "literal",
-          "value": "use"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 5 strings:
 <ul>
-<li>`turn`</li>
+<li><code>turn</code></li>
 
-<li>`adjust`</li>
+<li><code>adjust</code></li>
 
-<li>`move`</li>
+<li><code>move</code></li>
 
-<li>`clean`</li>
+<li><code>clean</code></li>
 
-<li>`use`</li>
+<li><code>use</code></li>
 </ul>
 
 
@@ -2102,106 +581,28 @@ Read-only tuple with 5 strings:
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L69)</span>
 
-
-
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 792,
-  "name": "Operators",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "comment": {
-    "summary": [
-      {
-        "kind": "text",
-        "text": "The allowed operators for comparison quantities"
-      }
-    ]
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 69,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L69"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "<"
-        },
-        {
-          "type": "literal",
-          "value": "<="
-        },
-        {
-          "type": "literal",
-          "value": "=="
-        },
-        {
-          "type": "literal",
-          "value": ">="
-        },
-        {
-          "type": "literal",
-          "value": ">"
-        },
-        {
-          "type": "literal",
-          "value": "="
-        },
-        {
-          "type": "literal",
-          "value": "~"
-        },
-        {
-          "type": "literal",
-          "value": "~="
-        },
-        {
-          "type": "literal",
-          "value": "!="
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
+<p>The allowed operators for comparison quantities</p>
 
 
 Read-only tuple with 9 strings:
 <ul>
-<li>`<`</li>
+<li><code><</code></li>
 
-<li>`<=`</li>
+<li><code><=</code></li>
 
-<li>`==`</li>
+<li><code>==</code></li>
 
-<li>`>=`</li>
+<li><code>>=</code></li>
 
-<li>`>`</li>
+<li><code>></code></li>
 
-<li>`=`</li>
+<li><code>=</code></li>
 
-<li>`~`</li>
+<li><code>~</code></li>
 
-<li>`~=`</li>
+<li><code>~=</code></li>
 
-<li>`!=`</li>
+<li><code>!=</code></li>
 </ul>
 
 
@@ -2212,66 +613,15 @@ Read-only tuple with 9 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 433,
-  "name": "ParkingInteractions",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Parking.ts",
-      "line": 9,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Parking.ts#L9"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "park"
-        },
-        {
-          "type": "literal",
-          "value": "enterVehicle"
-        },
-        {
-          "type": "literal",
-          "value": "exitVehicle"
-        },
-        {
-          "type": "literal",
-          "value": "arrive"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 4 strings:
 <ul>
-<li>`park`</li>
+<li><code>park</code></li>
 
-<li>`enterVehicle`</li>
+<li><code>enterVehicle</code></li>
 
-<li>`exitVehicle`</li>
+<li><code>exitVehicle</code></li>
 
-<li>`arrive`</li>
+<li><code>arrive</code></li>
 </ul>
 
 
@@ -2282,72 +632,17 @@ Read-only tuple with 4 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 461,
-  "name": "PaymentInteractions",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Payment.ts",
-      "line": 5,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Payment.ts#L5"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "pay"
-        },
-        {
-          "type": "literal",
-          "value": "checkIn"
-        },
-        {
-          "type": "literal",
-          "value": "logIn"
-        },
-        {
-          "type": "literal",
-          "value": "logOut"
-        },
-        {
-          "type": "literal",
-          "value": "register"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 5 strings:
 <ul>
-<li>`pay`</li>
+<li><code>pay</code></li>
 
-<li>`checkIn`</li>
+<li><code>checkIn</code></li>
 
-<li>`logIn`</li>
+<li><code>logIn</code></li>
 
-<li>`logOut`</li>
+<li><code>logOut</code></li>
 
-<li>`register`</li>
+<li><code>register</code></li>
 </ul>
 
 
@@ -2358,96 +653,25 @@ Read-only tuple with 5 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 874,
-  "name": "QueueSystemInteractions",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "QueueSystem.ts",
-      "line": 7,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/QueueSystem.ts#L7"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "enqueue"
-        },
-        {
-          "type": "literal",
-          "value": "skipQueue"
-        },
-        {
-          "type": "literal",
-          "value": "wait"
-        },
-        {
-          "type": "literal",
-          "value": "leaveQueue"
-        },
-        {
-          "type": "literal",
-          "value": "arrive"
-        },
-        {
-          "type": "literal",
-          "value": "checkIn"
-        },
-        {
-          "type": "literal",
-          "value": "checkOut"
-        },
-        {
-          "type": "literal",
-          "value": "getTicket"
-        },
-        {
-          "type": "literal",
-          "value": "getOnesTurn"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 9 strings:
 <ul>
-<li>`enqueue`</li>
+<li><code>enqueue</code></li>
 
-<li>`skipQueue`</li>
+<li><code>skipQueue</code></li>
 
-<li>`wait`</li>
+<li><code>wait</code></li>
 
-<li>`leaveQueue`</li>
+<li><code>leaveQueue</code></li>
 
-<li>`arrive`</li>
+<li><code>arrive</code></li>
 
-<li>`checkIn`</li>
+<li><code>checkIn</code></li>
 
-<li>`checkOut`</li>
+<li><code>checkOut</code></li>
 
-<li>`getTicket`</li>
+<li><code>getTicket</code></li>
 
-<li>`getOnesTurn`</li>
+<li><code>getOnesTurn</code></li>
 </ul>
 
 
@@ -2458,102 +682,27 @@ Read-only tuple with 9 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 604,
-  "name": "RestroomSignIcons",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Restroom.ts",
-      "line": 15,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Restroom.ts#L15"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "allGender"
-        },
-        {
-          "type": "literal",
-          "value": "female"
-        },
-        {
-          "type": "literal",
-          "value": "male"
-        },
-        {
-          "type": "literal",
-          "value": "personInWheelchair"
-        },
-        {
-          "type": "literal",
-          "value": "changingTable"
-        },
-        {
-          "type": "literal",
-          "value": "baby"
-        },
-        {
-          "type": "literal",
-          "value": "family"
-        },
-        {
-          "type": "literal",
-          "value": "urinal"
-        },
-        {
-          "type": "literal",
-          "value": "washBasin"
-        },
-        {
-          "type": "literal",
-          "value": "toiletBowl"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 10 strings:
 <ul>
-<li>`allGender`</li>
+<li><code>allGender</code></li>
 
-<li>`female`</li>
+<li><code>female</code></li>
 
-<li>`male`</li>
+<li><code>male</code></li>
 
-<li>`personInWheelchair`</li>
+<li><code>personInWheelchair</code></li>
 
-<li>`changingTable`</li>
+<li><code>changingTable</code></li>
 
-<li>`baby`</li>
+<li><code>baby</code></li>
 
-<li>`family`</li>
+<li><code>family</code></li>
 
-<li>`urinal`</li>
+<li><code>urinal</code></li>
 
-<li>`washBasin`</li>
+<li><code>washBasin</code></li>
 
-<li>`toiletBowl`</li>
+<li><code>toiletBowl</code></li>
 </ul>
 
 
@@ -2564,114 +713,31 @@ Read-only tuple with 10 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 633,
-  "name": "RoomInteractions",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Room.ts",
-      "line": 8,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Room.ts#L8"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "enter"
-        },
-        {
-          "type": "literal",
-          "value": "exit"
-        },
-        {
-          "type": "literal",
-          "value": "stand"
-        },
-        {
-          "type": "literal",
-          "value": "sit"
-        },
-        {
-          "type": "literal",
-          "value": "see"
-        },
-        {
-          "type": "literal",
-          "value": "sleep"
-        },
-        {
-          "type": "literal",
-          "value": "play"
-        },
-        {
-          "type": "literal",
-          "value": "wait"
-        },
-        {
-          "type": "literal",
-          "value": "storeThings"
-        },
-        {
-          "type": "literal",
-          "value": "lookAround"
-        },
-        {
-          "type": "literal",
-          "value": "openWindow"
-        },
-        {
-          "type": "literal",
-          "value": "closeWindow"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 12 strings:
 <ul>
-<li>`enter`</li>
+<li><code>enter</code></li>
 
-<li>`exit`</li>
+<li><code>exit</code></li>
 
-<li>`stand`</li>
+<li><code>stand</code></li>
 
-<li>`sit`</li>
+<li><code>sit</code></li>
 
-<li>`see`</li>
+<li><code>see</code></li>
 
-<li>`sleep`</li>
+<li><code>sleep</code></li>
 
-<li>`play`</li>
+<li><code>play</code></li>
 
-<li>`wait`</li>
+<li><code>wait</code></li>
 
-<li>`storeThings`</li>
+<li><code>storeThings</code></li>
 
-<li>`lookAround`</li>
+<li><code>lookAround</code></li>
 
-<li>`openWindow`</li>
+<li><code>openWindow</code></li>
 
-<li>`closeWindow`</li>
+<li><code>closeWindow</code></li>
 </ul>
 
 
@@ -2682,168 +748,49 @@ Read-only tuple with 12 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 643,
-  "name": "SeatInteractions",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Seat.ts",
-      "line": 16,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Seat.ts#L16"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "sit"
-        },
-        {
-          "type": "literal",
-          "value": "fold"
-        },
-        {
-          "type": "literal",
-          "value": "unfold"
-        },
-        {
-          "type": "literal",
-          "value": "move"
-        },
-        {
-          "type": "literal",
-          "value": "adjust"
-        },
-        {
-          "type": "literal",
-          "value": "adjustHeight"
-        },
-        {
-          "type": "literal",
-          "value": "adjustSeatingSurface"
-        },
-        {
-          "type": "literal",
-          "value": "adjustSeatingAngle"
-        },
-        {
-          "type": "literal",
-          "value": "adjustArmRests"
-        },
-        {
-          "type": "literal",
-          "value": "adjustHeadRest"
-        },
-        {
-          "type": "literal",
-          "value": "adjustLegRest"
-        },
-        {
-          "type": "literal",
-          "value": "adjustBackRest"
-        },
-        {
-          "type": "literal",
-          "value": "adjustFootRest"
-        },
-        {
-          "type": "literal",
-          "value": "adjustSeatBelt"
-        },
-        {
-          "type": "literal",
-          "value": "adjustSeatBeltLength"
-        },
-        {
-          "type": "literal",
-          "value": "adjustSeatBeltHeight"
-        },
-        {
-          "type": "literal",
-          "value": "adjustSeatBeltAngle"
-        },
-        {
-          "type": "literal",
-          "value": "adjustSeatBeltPosition"
-        },
-        {
-          "type": "literal",
-          "value": "adjustSeatBeltTension"
-        },
-        {
-          "type": "literal",
-          "value": "adjustSeatBeltLock"
-        },
-        {
-          "type": "literal",
-          "value": "connectSeatbelt"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 21 strings:
 <ul>
-<li>`sit`</li>
+<li><code>sit</code></li>
 
-<li>`fold`</li>
+<li><code>fold</code></li>
 
-<li>`unfold`</li>
+<li><code>unfold</code></li>
 
-<li>`move`</li>
+<li><code>move</code></li>
 
-<li>`adjust`</li>
+<li><code>adjust</code></li>
 
-<li>`adjustHeight`</li>
+<li><code>adjustHeight</code></li>
 
-<li>`adjustSeatingSurface`</li>
+<li><code>adjustSeatingSurface</code></li>
 
-<li>`adjustSeatingAngle`</li>
+<li><code>adjustSeatingAngle</code></li>
 
-<li>`adjustArmRests`</li>
+<li><code>adjustArmRests</code></li>
 
-<li>`adjustHeadRest`</li>
+<li><code>adjustHeadRest</code></li>
 
-<li>`adjustLegRest`</li>
+<li><code>adjustLegRest</code></li>
 
-<li>`adjustBackRest`</li>
+<li><code>adjustBackRest</code></li>
 
-<li>`adjustFootRest`</li>
+<li><code>adjustFootRest</code></li>
 
-<li>`adjustSeatBelt`</li>
+<li><code>adjustSeatBelt</code></li>
 
-<li>`adjustSeatBeltLength`</li>
+<li><code>adjustSeatBeltLength</code></li>
 
-<li>`adjustSeatBeltHeight`</li>
+<li><code>adjustSeatBeltHeight</code></li>
 
-<li>`adjustSeatBeltAngle`</li>
+<li><code>adjustSeatBeltAngle</code></li>
 
-<li>`adjustSeatBeltPosition`</li>
+<li><code>adjustSeatBeltPosition</code></li>
 
-<li>`adjustSeatBeltTension`</li>
+<li><code>adjustSeatBeltTension</code></li>
 
-<li>`adjustSeatBeltLock`</li>
+<li><code>adjustSeatBeltLock</code></li>
 
-<li>`connectSeatbelt`</li>
+<li><code>connectSeatbelt</code></li>
 </ul>
 
 
@@ -2854,96 +801,25 @@ Read-only tuple with 21 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 697,
-  "name": "ShowerInteractions",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Shower.ts",
-      "line": 12,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Shower.ts#L12"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "transfer"
-        },
-        {
-          "type": "literal",
-          "value": "wash"
-        },
-        {
-          "type": "literal",
-          "value": "useShampoo"
-        },
-        {
-          "type": "literal",
-          "value": "useShowerGel"
-        },
-        {
-          "type": "literal",
-          "value": "useSoap"
-        },
-        {
-          "type": "literal",
-          "value": "useConditioner"
-        },
-        {
-          "type": "literal",
-          "value": "useShowerCurtain"
-        },
-        {
-          "type": "literal",
-          "value": "useShowerHead"
-        },
-        {
-          "type": "literal",
-          "value": "useSupport"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 9 strings:
 <ul>
-<li>`transfer`</li>
+<li><code>transfer</code></li>
 
-<li>`wash`</li>
+<li><code>wash</code></li>
 
-<li>`useShampoo`</li>
+<li><code>useShampoo</code></li>
 
-<li>`useShowerGel`</li>
+<li><code>useShowerGel</code></li>
 
-<li>`useSoap`</li>
+<li><code>useSoap</code></li>
 
-<li>`useConditioner`</li>
+<li><code>useConditioner</code></li>
 
-<li>`useShowerCurtain`</li>
+<li><code>useShowerCurtain</code></li>
 
-<li>`useShowerHead`</li>
+<li><code>useShowerHead</code></li>
 
-<li>`useSupport`</li>
+<li><code>useSupport</code></li>
 </ul>
 
 
@@ -2954,60 +830,13 @@ Read-only tuple with 9 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 672,
-  "name": "SignageInteractions",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Signage.ts",
-      "line": 7,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Signage.ts#L7"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "locateYourself"
-        },
-        {
-          "type": "literal",
-          "value": "findYourDestination"
-        },
-        {
-          "type": "literal",
-          "value": "useSitemap"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 3 strings:
 <ul>
-<li>`locateYourself`</li>
+<li><code>locateYourself</code></li>
 
-<li>`findYourDestination`</li>
+<li><code>findYourDestination</code></li>
 
-<li>`useSitemap`</li>
+<li><code>useSitemap</code></li>
 </ul>
 
 
@@ -3018,38 +847,6 @@ Read-only tuple with 3 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 858,
-  "name": "SlopeSchema",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 223,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L223"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SimpleSchema",
-    "qualifiedName": "SimpleSchema",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 `SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
 
 
@@ -3057,46 +854,7 @@ Read-only tuple with 3 strings:
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L222)</span>
 
-
-
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 857,
-  "name": "SlopeSchemaDefinition",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "comment": {
-    "summary": [
-      {
-        "kind": "text",
-        "text": "Validates a slope quantity object and will only accept units to descrie a slope, eg. degrees."
-      }
-    ]
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 222,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L222"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SchemaDefinition",
-    "qualifiedName": "SchemaDefinition",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
+<p>Validates a slope quantity object and will only accept units to descrie a slope, eg. degrees.</p>
 
 
 `SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
@@ -3108,96 +866,25 @@ Read-only tuple with 3 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 741,
-  "name": "SmoothnessTypeValues",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Surface.ts",
-      "line": 169,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Surface.ts#L169"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "excellent"
-        },
-        {
-          "type": "literal",
-          "value": "good"
-        },
-        {
-          "type": "literal",
-          "value": "intermediate"
-        },
-        {
-          "type": "literal",
-          "value": "bad"
-        },
-        {
-          "type": "literal",
-          "value": "horrible"
-        },
-        {
-          "type": "literal",
-          "value": "impassable"
-        },
-        {
-          "type": "literal",
-          "value": "very_bad"
-        },
-        {
-          "type": "literal",
-          "value": "very_horrible"
-        },
-        {
-          "type": "literal",
-          "value": "very_good"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 9 strings:
 <ul>
-<li>`excellent`</li>
+<li><code>excellent</code></li>
 
-<li>`good`</li>
+<li><code>good</code></li>
 
-<li>`intermediate`</li>
+<li><code>intermediate</code></li>
 
-<li>`bad`</li>
+<li><code>bad</code></li>
 
-<li>`horrible`</li>
+<li><code>horrible</code></li>
 
-<li>`impassable`</li>
+<li><code>impassable</code></li>
 
-<li>`very_bad`</li>
+<li><code>very_bad</code></li>
 
-<li>`very_horrible`</li>
+<li><code>very_horrible</code></li>
 
-<li>`very_good`</li>
+<li><code>very_good</code></li>
 </ul>
 
 
@@ -3208,38 +895,6 @@ Read-only tuple with 9 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 844,
-  "name": "SpeedSchema",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 174,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L174"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SimpleSchema",
-    "qualifiedName": "SimpleSchema",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 `SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
 
 
@@ -3247,46 +902,8 @@ Read-only tuple with 9 strings:
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L173)</span>
 
-
-
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 843,
-  "name": "SpeedSchemaDefinition",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "comment": {
-    "summary": [
-      {
-        "kind": "text",
-        "text": "Validates a speed quantity object and will only accept speed units, eg. meter/second, miles/hour\nor similar."
-      }
-    ]
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 173,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L173"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SchemaDefinition",
-    "qualifiedName": "SchemaDefinition",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
+<p>Validates a speed quantity object and will only accept speed units, eg. meter/second, miles/hour
+or similar.</p>
 
 
 `SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
@@ -3298,990 +915,323 @@ Read-only tuple with 9 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 739,
-  "name": "SurfaceTypeValues",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Surface.ts",
-      "line": 6,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Surface.ts#L6"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "acrylic"
-        },
-        {
-          "type": "literal",
-          "value": "aluminium"
-        },
-        {
-          "type": "literal",
-          "value": "anti-slip"
-        },
-        {
-          "type": "literal",
-          "value": "artificial"
-        },
-        {
-          "type": "literal",
-          "value": "artificial_grass"
-        },
-        {
-          "type": "literal",
-          "value": "artificial_turf"
-        },
-        {
-          "type": "literal",
-          "value": "asfalto"
-        },
-        {
-          "type": "literal",
-          "value": "ash"
-        },
-        {
-          "type": "literal",
-          "value": "asphalt"
-        },
-        {
-          "type": "literal",
-          "value": "astroturf"
-        },
-        {
-          "type": "literal",
-          "value": "bamboo"
-        },
-        {
-          "type": "literal",
-          "value": "bare_rock"
-        },
-        {
-          "type": "literal",
-          "value": "bark"
-        },
-        {
-          "type": "literal",
-          "value": "barkchips"
-        },
-        {
-          "type": "literal",
-          "value": "bedrock"
-        },
-        {
-          "type": "literal",
-          "value": "bitumen"
-        },
-        {
-          "type": "literal",
-          "value": "bituminous"
-        },
-        {
-          "type": "literal",
-          "value": "block"
-        },
-        {
-          "type": "literal",
-          "value": "boardwalk"
-        },
-        {
-          "type": "literal",
-          "value": "boulders"
-        },
-        {
-          "type": "literal",
-          "value": "brick"
-        },
-        {
-          "type": "literal",
-          "value": "brick_weave"
-        },
-        {
-          "type": "literal",
-          "value": "bricks"
-        },
-        {
-          "type": "literal",
-          "value": "bushes"
-        },
-        {
-          "type": "literal",
-          "value": "carpet"
-        },
-        {
-          "type": "literal",
-          "value": "cement"
-        },
-        {
-          "type": "literal",
-          "value": "chalk"
-        },
-        {
-          "type": "literal",
-          "value": "chipseal"
-        },
-        {
-          "type": "literal",
-          "value": "cinder"
-        },
-        {
-          "type": "literal",
-          "value": "clay"
-        },
-        {
-          "type": "literal",
-          "value": "cobblestone"
-        },
-        {
-          "type": "literal",
-          "value": "compacted"
-        },
-        {
-          "type": "literal",
-          "value": "compacted_gravel"
-        },
-        {
-          "type": "literal",
-          "value": "composite"
-        },
-        {
-          "type": "literal",
-          "value": "con"
-        },
-        {
-          "type": "literal",
-          "value": "concrete"
-        },
-        {
-          "type": "literal",
-          "value": "concrete_slab"
-        },
-        {
-          "type": "literal",
-          "value": "concrete_slabs"
-        },
-        {
-          "type": "literal",
-          "value": "construction"
-        },
-        {
-          "type": "literal",
-          "value": "coral"
-        },
-        {
-          "type": "literal",
-          "value": "coral_sand"
-        },
-        {
-          "type": "literal",
-          "value": "crushed_limestone"
-        },
-        {
-          "type": "literal",
-          "value": "crushed_shells"
-        },
-        {
-          "type": "literal",
-          "value": "debris"
-        },
-        {
-          "type": "literal",
-          "value": "decoturf"
-        },
-        {
-          "type": "literal",
-          "value": "dirt"
-        },
-        {
-          "type": "literal",
-          "value": "earth"
-        },
-        {
-          "type": "literal",
-          "value": "enrobé"
-        },
-        {
-          "type": "literal",
-          "value": "fine_gravel"
-        },
-        {
-          "type": "literal",
-          "value": "fine_sand"
-        },
-        {
-          "type": "literal",
-          "value": "flagstone"
-        },
-        {
-          "type": "literal",
-          "value": "footway"
-        },
-        {
-          "type": "literal",
-          "value": "glass"
-        },
-        {
-          "type": "literal",
-          "value": "goudron"
-        },
-        {
-          "type": "literal",
-          "value": "granite"
-        },
-        {
-          "type": "literal",
-          "value": "grass"
-        },
-        {
-          "type": "literal",
-          "value": "grass_paver"
-        },
-        {
-          "type": "literal",
-          "value": "grass_scrub"
-        },
-        {
-          "type": "literal",
-          "value": "grassland"
-        },
-        {
-          "type": "literal",
-          "value": "grating"
-        },
-        {
-          "type": "literal",
-          "value": "gravel"
-        },
-        {
-          "type": "literal",
-          "value": "green"
-        },
-        {
-          "type": "literal",
-          "value": "grit"
-        },
-        {
-          "type": "literal",
-          "value": "ground"
-        },
-        {
-          "type": "literal",
-          "value": "hardcore"
-        },
-        {
-          "type": "literal",
-          "value": "ice"
-        },
-        {
-          "type": "literal",
-          "value": "ice_road"
-        },
-        {
-          "type": "literal",
-          "value": "interlock"
-        },
-        {
-          "type": "literal",
-          "value": "iron"
-        },
-        {
-          "type": "literal",
-          "value": "laterite"
-        },
-        {
-          "type": "literal",
-          "value": "lawn"
-        },
-        {
-          "type": "literal",
-          "value": "leaves"
-        },
-        {
-          "type": "literal",
-          "value": "limerock"
-        },
-        {
-          "type": "literal",
-          "value": "limestone"
-        },
-        {
-          "type": "literal",
-          "value": "linoleum"
-        },
-        {
-          "type": "literal",
-          "value": "loose_gravel"
-        },
-        {
-          "type": "literal",
-          "value": "marble"
-        },
-        {
-          "type": "literal",
-          "value": "marble_plate"
-        },
-        {
-          "type": "literal",
-          "value": "meadow"
-        },
-        {
-          "type": "literal",
-          "value": "metal"
-        },
-        {
-          "type": "literal",
-          "value": "metal_grid"
-        },
-        {
-          "type": "literal",
-          "value": "mixed"
-        },
-        {
-          "type": "literal",
-          "value": "moss"
-        },
-        {
-          "type": "literal",
-          "value": "mud"
-        },
-        {
-          "type": "literal",
-          "value": "mulch"
-        },
-        {
-          "type": "literal",
-          "value": "native"
-        },
-        {
-          "type": "literal",
-          "value": "natural"
-        },
-        {
-          "type": "literal",
-          "value": "none"
-        },
-        {
-          "type": "literal",
-          "value": "oil"
-        },
-        {
-          "type": "literal",
-          "value": "overgrown"
-        },
-        {
-          "type": "literal",
-          "value": "path"
-        },
-        {
-          "type": "literal",
-          "value": "paved"
-        },
-        {
-          "type": "literal",
-          "value": "pavement"
-        },
-        {
-          "type": "literal",
-          "value": "paving"
-        },
-        {
-          "type": "literal",
-          "value": "paving_stone"
-        },
-        {
-          "type": "literal",
-          "value": "paving_stones"
-        },
-        {
-          "type": "literal",
-          "value": "peat"
-        },
-        {
-          "type": "literal",
-          "value": "pebbles"
-        },
-        {
-          "type": "literal",
-          "value": "pebblestone"
-        },
-        {
-          "type": "literal",
-          "value": "plank"
-        },
-        {
-          "type": "literal",
-          "value": "plastic"
-        },
-        {
-          "type": "literal",
-          "value": "plates"
-        },
-        {
-          "type": "literal",
-          "value": "rasin"
-        },
-        {
-          "type": "literal",
-          "value": "residential"
-        },
-        {
-          "type": "literal",
-          "value": "rock"
-        },
-        {
-          "type": "literal",
-          "value": "rocks"
-        },
-        {
-          "type": "literal",
-          "value": "rocky"
-        },
-        {
-          "type": "literal",
-          "value": "roman_paving"
-        },
-        {
-          "type": "literal",
-          "value": "rubber"
-        },
-        {
-          "type": "literal",
-          "value": "rubbercrumb"
-        },
-        {
-          "type": "literal",
-          "value": "rubble"
-        },
-        {
-          "type": "literal",
-          "value": "salt"
-        },
-        {
-          "type": "literal",
-          "value": "sand"
-        },
-        {
-          "type": "literal",
-          "value": "sandstone"
-        },
-        {
-          "type": "literal",
-          "value": "sawdust"
-        },
-        {
-          "type": "literal",
-          "value": "scree"
-        },
-        {
-          "type": "literal",
-          "value": "scrub"
-        },
-        {
-          "type": "literal",
-          "value": "sealed"
-        },
-        {
-          "type": "literal",
-          "value": "sett"
-        },
-        {
-          "type": "literal",
-          "value": "shell"
-        },
-        {
-          "type": "literal",
-          "value": "shells"
-        },
-        {
-          "type": "literal",
-          "value": "shingle"
-        },
-        {
-          "type": "literal",
-          "value": "slabs"
-        },
-        {
-          "type": "literal",
-          "value": "snow"
-        },
-        {
-          "type": "literal",
-          "value": "soil"
-        },
-        {
-          "type": "literal",
-          "value": "spur"
-        },
-        {
-          "type": "literal",
-          "value": "steel"
-        },
-        {
-          "type": "literal",
-          "value": "stepping_stones"
-        },
-        {
-          "type": "literal",
-          "value": "stone"
-        },
-        {
-          "type": "literal",
-          "value": "stones"
-        },
-        {
-          "type": "literal",
-          "value": "synthetic"
-        },
-        {
-          "type": "literal",
-          "value": "tactile_paving"
-        },
-        {
-          "type": "literal",
-          "value": "tar"
-        },
-        {
-          "type": "literal",
-          "value": "tared"
-        },
-        {
-          "type": "literal",
-          "value": "tarmac"
-        },
-        {
-          "type": "literal",
-          "value": "tartan"
-        },
-        {
-          "type": "literal",
-          "value": "terra"
-        },
-        {
-          "type": "literal",
-          "value": "terre"
-        },
-        {
-          "type": "literal",
-          "value": "tile"
-        },
-        {
-          "type": "literal",
-          "value": "tiles"
-        },
-        {
-          "type": "literal",
-          "value": "timber"
-        },
-        {
-          "type": "literal",
-          "value": "track"
-        },
-        {
-          "type": "literal",
-          "value": "trail"
-        },
-        {
-          "type": "literal",
-          "value": "trees"
-        },
-        {
-          "type": "literal",
-          "value": "tuff"
-        },
-        {
-          "type": "literal",
-          "value": "turf"
-        },
-        {
-          "type": "literal",
-          "value": "undefined"
-        },
-        {
-          "type": "literal",
-          "value": "unhewn_cobblestone"
-        },
-        {
-          "type": "literal",
-          "value": "unpaved"
-        },
-        {
-          "type": "literal",
-          "value": "unpaved2"
-        },
-        {
-          "type": "literal",
-          "value": "unpaved33"
-        },
-        {
-          "type": "literal",
-          "value": "unpaved_minor"
-        },
-        {
-          "type": "literal",
-          "value": "unsealed"
-        },
-        {
-          "type": "literal",
-          "value": "water"
-        },
-        {
-          "type": "literal",
-          "value": "wood"
-        },
-        {
-          "type": "literal",
-          "value": "wood_chips"
-        },
-        {
-          "type": "literal",
-          "value": "woodchips"
-        },
-        {
-          "type": "literal",
-          "value": "zebra"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 158 strings:
 <ul>
-<li>`acrylic`</li>
+<li><code>acrylic</code></li>
 
-<li>`aluminium`</li>
+<li><code>aluminium</code></li>
 
-<li>`anti-slip`</li>
+<li><code>anti-slip</code></li>
 
-<li>`artificial`</li>
+<li><code>artificial</code></li>
 
-<li>`artificial_grass`</li>
+<li><code>artificial_grass</code></li>
 
-<li>`artificial_turf`</li>
+<li><code>artificial_turf</code></li>
 
-<li>`asfalto`</li>
+<li><code>asfalto</code></li>
 
-<li>`ash`</li>
+<li><code>ash</code></li>
 
-<li>`asphalt`</li>
+<li><code>asphalt</code></li>
 
-<li>`astroturf`</li>
+<li><code>astroturf</code></li>
 
-<li>`bamboo`</li>
+<li><code>bamboo</code></li>
 
-<li>`bare_rock`</li>
+<li><code>bare_rock</code></li>
 
-<li>`bark`</li>
+<li><code>bark</code></li>
 
-<li>`barkchips`</li>
+<li><code>barkchips</code></li>
 
-<li>`bedrock`</li>
+<li><code>bedrock</code></li>
 
-<li>`bitumen`</li>
+<li><code>bitumen</code></li>
 
-<li>`bituminous`</li>
+<li><code>bituminous</code></li>
 
-<li>`block`</li>
+<li><code>block</code></li>
 
-<li>`boardwalk`</li>
+<li><code>boardwalk</code></li>
 
-<li>`boulders`</li>
+<li><code>boulders</code></li>
 
-<li>`brick`</li>
+<li><code>brick</code></li>
 
-<li>`brick_weave`</li>
+<li><code>brick_weave</code></li>
 
-<li>`bricks`</li>
+<li><code>bricks</code></li>
 
-<li>`bushes`</li>
+<li><code>bushes</code></li>
 
-<li>`carpet`</li>
+<li><code>carpet</code></li>
 
-<li>`cement`</li>
+<li><code>cement</code></li>
 
-<li>`chalk`</li>
+<li><code>chalk</code></li>
 
-<li>`chipseal`</li>
+<li><code>chipseal</code></li>
 
-<li>`cinder`</li>
+<li><code>cinder</code></li>
 
-<li>`clay`</li>
+<li><code>clay</code></li>
 
-<li>`cobblestone`</li>
+<li><code>cobblestone</code></li>
 
-<li>`compacted`</li>
+<li><code>compacted</code></li>
 
-<li>`compacted_gravel`</li>
+<li><code>compacted_gravel</code></li>
 
-<li>`composite`</li>
+<li><code>composite</code></li>
 
-<li>`con`</li>
+<li><code>con</code></li>
 
-<li>`concrete`</li>
+<li><code>concrete</code></li>
 
-<li>`concrete_slab`</li>
+<li><code>concrete_slab</code></li>
 
-<li>`concrete_slabs`</li>
+<li><code>concrete_slabs</code></li>
 
-<li>`construction`</li>
+<li><code>construction</code></li>
 
-<li>`coral`</li>
+<li><code>coral</code></li>
 
-<li>`coral_sand`</li>
+<li><code>coral_sand</code></li>
 
-<li>`crushed_limestone`</li>
+<li><code>crushed_limestone</code></li>
 
-<li>`crushed_shells`</li>
+<li><code>crushed_shells</code></li>
 
-<li>`debris`</li>
+<li><code>debris</code></li>
 
-<li>`decoturf`</li>
+<li><code>decoturf</code></li>
 
-<li>`dirt`</li>
+<li><code>dirt</code></li>
 
-<li>`earth`</li>
+<li><code>earth</code></li>
 
-<li>`enrobé`</li>
+<li><code>enrobé</code></li>
 
-<li>`fine_gravel`</li>
+<li><code>fine_gravel</code></li>
 
-<li>`fine_sand`</li>
+<li><code>fine_sand</code></li>
 
-<li>`flagstone`</li>
+<li><code>flagstone</code></li>
 
-<li>`footway`</li>
+<li><code>footway</code></li>
 
-<li>`glass`</li>
+<li><code>glass</code></li>
 
-<li>`goudron`</li>
+<li><code>goudron</code></li>
 
-<li>`granite`</li>
+<li><code>granite</code></li>
 
-<li>`grass`</li>
+<li><code>grass</code></li>
 
-<li>`grass_paver`</li>
+<li><code>grass_paver</code></li>
 
-<li>`grass_scrub`</li>
+<li><code>grass_scrub</code></li>
 
-<li>`grassland`</li>
+<li><code>grassland</code></li>
 
-<li>`grating`</li>
+<li><code>grating</code></li>
 
-<li>`gravel`</li>
+<li><code>gravel</code></li>
 
-<li>`green`</li>
+<li><code>green</code></li>
 
-<li>`grit`</li>
+<li><code>grit</code></li>
 
-<li>`ground`</li>
+<li><code>ground</code></li>
 
-<li>`hardcore`</li>
+<li><code>hardcore</code></li>
 
-<li>`ice`</li>
+<li><code>ice</code></li>
 
-<li>`ice_road`</li>
+<li><code>ice_road</code></li>
 
-<li>`interlock`</li>
+<li><code>interlock</code></li>
 
-<li>`iron`</li>
+<li><code>iron</code></li>
 
-<li>`laterite`</li>
+<li><code>laterite</code></li>
 
-<li>`lawn`</li>
+<li><code>lawn</code></li>
 
-<li>`leaves`</li>
+<li><code>leaves</code></li>
 
-<li>`limerock`</li>
+<li><code>limerock</code></li>
 
-<li>`limestone`</li>
+<li><code>limestone</code></li>
 
-<li>`linoleum`</li>
+<li><code>linoleum</code></li>
 
-<li>`loose_gravel`</li>
+<li><code>loose_gravel</code></li>
 
-<li>`marble`</li>
+<li><code>marble</code></li>
 
-<li>`marble_plate`</li>
+<li><code>marble_plate</code></li>
 
-<li>`meadow`</li>
+<li><code>meadow</code></li>
 
-<li>`metal`</li>
+<li><code>metal</code></li>
 
-<li>`metal_grid`</li>
+<li><code>metal_grid</code></li>
 
-<li>`mixed`</li>
+<li><code>mixed</code></li>
 
-<li>`moss`</li>
+<li><code>moss</code></li>
 
-<li>`mud`</li>
+<li><code>mud</code></li>
 
-<li>`mulch`</li>
+<li><code>mulch</code></li>
 
-<li>`native`</li>
+<li><code>native</code></li>
 
-<li>`natural`</li>
+<li><code>natural</code></li>
 
-<li>`none`</li>
+<li><code>none</code></li>
 
-<li>`oil`</li>
+<li><code>oil</code></li>
 
-<li>`overgrown`</li>
+<li><code>overgrown</code></li>
 
-<li>`path`</li>
+<li><code>path</code></li>
 
-<li>`paved`</li>
+<li><code>paved</code></li>
 
-<li>`pavement`</li>
+<li><code>pavement</code></li>
 
-<li>`paving`</li>
+<li><code>paving</code></li>
 
-<li>`paving_stone`</li>
+<li><code>paving_stone</code></li>
 
-<li>`paving_stones`</li>
+<li><code>paving_stones</code></li>
 
-<li>`peat`</li>
+<li><code>peat</code></li>
 
-<li>`pebbles`</li>
+<li><code>pebbles</code></li>
 
-<li>`pebblestone`</li>
+<li><code>pebblestone</code></li>
 
-<li>`plank`</li>
+<li><code>plank</code></li>
 
-<li>`plastic`</li>
+<li><code>plastic</code></li>
 
-<li>`plates`</li>
+<li><code>plates</code></li>
 
-<li>`rasin`</li>
+<li><code>rasin</code></li>
 
-<li>`residential`</li>
+<li><code>residential</code></li>
 
-<li>`rock`</li>
+<li><code>rock</code></li>
 
-<li>`rocks`</li>
+<li><code>rocks</code></li>
 
-<li>`rocky`</li>
+<li><code>rocky</code></li>
 
-<li>`roman_paving`</li>
+<li><code>roman_paving</code></li>
 
-<li>`rubber`</li>
+<li><code>rubber</code></li>
 
-<li>`rubbercrumb`</li>
+<li><code>rubbercrumb</code></li>
 
-<li>`rubble`</li>
+<li><code>rubble</code></li>
 
-<li>`salt`</li>
+<li><code>salt</code></li>
 
-<li>`sand`</li>
+<li><code>sand</code></li>
 
-<li>`sandstone`</li>
+<li><code>sandstone</code></li>
 
-<li>`sawdust`</li>
+<li><code>sawdust</code></li>
 
-<li>`scree`</li>
+<li><code>scree</code></li>
 
-<li>`scrub`</li>
+<li><code>scrub</code></li>
 
-<li>`sealed`</li>
+<li><code>sealed</code></li>
 
-<li>`sett`</li>
+<li><code>sett</code></li>
 
-<li>`shell`</li>
+<li><code>shell</code></li>
 
-<li>`shells`</li>
+<li><code>shells</code></li>
 
-<li>`shingle`</li>
+<li><code>shingle</code></li>
 
-<li>`slabs`</li>
+<li><code>slabs</code></li>
 
-<li>`snow`</li>
+<li><code>snow</code></li>
 
-<li>`soil`</li>
+<li><code>soil</code></li>
 
-<li>`spur`</li>
+<li><code>spur</code></li>
 
-<li>`steel`</li>
+<li><code>steel</code></li>
 
-<li>`stepping_stones`</li>
+<li><code>stepping_stones</code></li>
 
-<li>`stone`</li>
+<li><code>stone</code></li>
 
-<li>`stones`</li>
+<li><code>stones</code></li>
 
-<li>`synthetic`</li>
+<li><code>synthetic</code></li>
 
-<li>`tactile_paving`</li>
+<li><code>tactile_paving</code></li>
 
-<li>`tar`</li>
+<li><code>tar</code></li>
 
-<li>`tared`</li>
+<li><code>tared</code></li>
 
-<li>`tarmac`</li>
+<li><code>tarmac</code></li>
 
-<li>`tartan`</li>
+<li><code>tartan</code></li>
 
-<li>`terra`</li>
+<li><code>terra</code></li>
 
-<li>`terre`</li>
+<li><code>terre</code></li>
 
-<li>`tile`</li>
+<li><code>tile</code></li>
 
-<li>`tiles`</li>
+<li><code>tiles</code></li>
 
-<li>`timber`</li>
+<li><code>timber</code></li>
 
-<li>`track`</li>
+<li><code>track</code></li>
 
-<li>`trail`</li>
+<li><code>trail</code></li>
 
-<li>`trees`</li>
+<li><code>trees</code></li>
 
-<li>`tuff`</li>
+<li><code>tuff</code></li>
 
-<li>`turf`</li>
+<li><code>turf</code></li>
 
-<li>`undefined`</li>
+<li><code>undefined</code></li>
 
-<li>`unhewn_cobblestone`</li>
+<li><code>unhewn_cobblestone</code></li>
 
-<li>`unpaved`</li>
+<li><code>unpaved</code></li>
 
-<li>`unpaved2`</li>
+<li><code>unpaved2</code></li>
 
-<li>`unpaved33`</li>
+<li><code>unpaved33</code></li>
 
-<li>`unpaved_minor`</li>
+<li><code>unpaved_minor</code></li>
 
-<li>`unsealed`</li>
+<li><code>unsealed</code></li>
 
-<li>`water`</li>
+<li><code>water</code></li>
 
-<li>`wood`</li>
+<li><code>wood</code></li>
 
-<li>`wood_chips`</li>
+<li><code>wood_chips</code></li>
 
-<li>`woodchips`</li>
+<li><code>woodchips</code></li>
 
-<li>`zebra`</li>
+<li><code>zebra</code></li>
 </ul>
 
 
@@ -4292,38 +1242,6 @@ Read-only tuple with 158 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 862,
-  "name": "TemperatureSchema",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 239,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L239"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SimpleSchema",
-    "qualifiedName": "SimpleSchema",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 `SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
 
 
@@ -4331,70 +1249,8 @@ Read-only tuple with 158 strings:
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L235)</span>
 
-
-
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 861,
-  "name": "TemperatureSchemaDefinition",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "comment": {
-    "summary": [
-      {
-        "kind": "text",
-        "text": "Validates a temperature quantity object and will only accept temperature units, eg. degrees\ncelsius ("
-      },
-      {
-        "kind": "code",
-        "text": "`degC`"
-      },
-      {
-        "kind": "text",
-        "text": "), degrees Fahrenheit ("
-      },
-      {
-        "kind": "code",
-        "text": "`degF`"
-      },
-      {
-        "kind": "text",
-        "text": ") or kelvin ("
-      },
-      {
-        "kind": "code",
-        "text": "`K`"
-      },
-      {
-        "kind": "text",
-        "text": ")."
-      }
-    ]
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 235,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L235"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SchemaDefinition",
-    "qualifiedName": "SchemaDefinition",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
+<p>Validates a temperature quantity object and will only accept temperature units, eg. degrees
+celsius (<code>degC</code>), degrees Fahrenheit (<code>degF</code>) or kelvin (<code>K</code>).</p>
 
 
 `SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
@@ -4406,38 +1262,6 @@ Read-only tuple with 158 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 850,
-  "name": "TimeIntervalSchema",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 198,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L198"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SimpleSchema",
-    "qualifiedName": "SimpleSchema",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 `SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
 
 
@@ -4445,46 +1269,7 @@ Read-only tuple with 158 strings:
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L197)</span>
 
-
-
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 849,
-  "name": "TimeIntervalSchemaDefinition",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "comment": {
-    "summary": [
-      {
-        "kind": "text",
-        "text": "Validates a timer interval object and will only accept time units, eg. seconds, minutes or hours."
-      }
-    ]
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 197,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L197"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SchemaDefinition",
-    "qualifiedName": "SchemaDefinition",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
+<p>Validates a timer interval object and will only accept time units, eg. seconds, minutes or hours.</p>
 
 
 `SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
@@ -4496,66 +1281,15 @@ Read-only tuple with 158 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 757,
-  "name": "ToiletInteractions",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Toilet.ts",
-      "line": 10,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Toilet.ts#L10"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "use"
-        },
-        {
-          "type": "literal",
-          "value": "flush"
-        },
-        {
-          "type": "literal",
-          "value": "secondaryFlush"
-        },
-        {
-          "type": "literal",
-          "value": "spray"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 4 strings:
 <ul>
-<li>`use`</li>
+<li><code>use</code></li>
 
-<li>`flush`</li>
+<li><code>flush</code></li>
 
-<li>`secondaryFlush`</li>
+<li><code>secondaryFlush</code></li>
 
-<li>`spray`</li>
+<li><code>spray</code></li>
 </ul>
 
 
@@ -4564,38 +1298,6 @@ Read-only tuple with 4 strings:
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L160)</span>
 
-
-
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 840,
-  "name": "UnitlessSchema",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 160,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L160"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SimpleSchema",
-    "qualifiedName": "SimpleSchema",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
 
 
 `SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
@@ -4607,38 +1309,6 @@ Read-only tuple with 4 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 839,
-  "name": "UnitlessSchemaDefinition",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 159,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L159"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SchemaDefinition",
-    "qualifiedName": "SchemaDefinition",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 `SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
 
 
@@ -4648,72 +1318,17 @@ Read-only tuple with 4 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 473,
-  "name": "Urgencies",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "PerceptionMode.ts",
-      "line": 28,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/PerceptionMode.ts#L28"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "alert"
-        },
-        {
-          "type": "literal",
-          "value": "alarm"
-        },
-        {
-          "type": "literal",
-          "value": "warning"
-        },
-        {
-          "type": "literal",
-          "value": "info"
-        },
-        {
-          "type": "literal",
-          "value": "debug"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 5 strings:
 <ul>
-<li>`alert`</li>
+<li><code>alert</code></li>
 
-<li>`alarm`</li>
+<li><code>alarm</code></li>
 
-<li>`warning`</li>
+<li><code>warning</code></li>
 
-<li>`info`</li>
+<li><code>info</code></li>
 
-<li>`debug`</li>
+<li><code>debug</code></li>
 </ul>
 
 
@@ -4724,38 +1339,6 @@ Read-only tuple with 5 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 854,
-  "name": "VolumeSchema",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 211,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L211"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SimpleSchema",
-    "qualifiedName": "SimpleSchema",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 `SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
 
 
@@ -4763,46 +1346,7 @@ Read-only tuple with 5 strings:
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L210)</span>
 
-
-
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 853,
-  "name": "VolumeSchemaDefinition",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "comment": {
-    "summary": [
-      {
-        "kind": "text",
-        "text": "Validates a sound volume quantity object and will only accept sound volume units, eg. decibel."
-      }
-    ]
-  },
-  "sources": [
-    {
-      "fileName": "Quantity.ts",
-      "line": 210,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Quantity.ts#L210"
-    }
-  ],
-  "type": {
-    "type": "reference",
-    "name": "SchemaDefinition",
-    "qualifiedName": "SchemaDefinition",
-    "package": "simpl-schema"
-  },
-  "defaultValue": "..."
-}
-```
-</details>
+<p>Validates a sound volume quantity object and will only accept sound volume units, eg. decibel.</p>
 
 
 `SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
@@ -4814,120 +1358,33 @@ Read-only tuple with 5 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 886,
-  "name": "WashBashinInteractions",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "WashBasin.ts",
-      "line": 5,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/WashBasin.ts#L5"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "changeTemperature"
-        },
-        {
-          "type": "literal",
-          "value": "changeWaterPressure"
-        },
-        {
-          "type": "literal",
-          "value": "useWater"
-        },
-        {
-          "type": "literal",
-          "value": "getHotWater"
-        },
-        {
-          "type": "literal",
-          "value": "getColdWater"
-        },
-        {
-          "type": "literal",
-          "value": "getCarbonizedWater"
-        },
-        {
-          "type": "literal",
-          "value": "useWaterJet"
-        },
-        {
-          "type": "literal",
-          "value": "useWaterSpray"
-        },
-        {
-          "type": "literal",
-          "value": "useSoap"
-        },
-        {
-          "type": "literal",
-          "value": "getTowel"
-        },
-        {
-          "type": "literal",
-          "value": "getPaperTowel"
-        },
-        {
-          "type": "literal",
-          "value": "useAirDryer"
-        },
-        {
-          "type": "literal",
-          "value": "sanitizeHands"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 13 strings:
 <ul>
-<li>`changeTemperature`</li>
+<li><code>changeTemperature</code></li>
 
-<li>`changeWaterPressure`</li>
+<li><code>changeWaterPressure</code></li>
 
-<li>`useWater`</li>
+<li><code>useWater</code></li>
 
-<li>`getHotWater`</li>
+<li><code>getHotWater</code></li>
 
-<li>`getColdWater`</li>
+<li><code>getColdWater</code></li>
 
-<li>`getCarbonizedWater`</li>
+<li><code>getCarbonizedWater</code></li>
 
-<li>`useWaterJet`</li>
+<li><code>useWaterJet</code></li>
 
-<li>`useWaterSpray`</li>
+<li><code>useWaterSpray</code></li>
 
-<li>`useSoap`</li>
+<li><code>useSoap</code></li>
 
-<li>`getTowel`</li>
+<li><code>getTowel</code></li>
 
-<li>`getPaperTowel`</li>
+<li><code>getPaperTowel</code></li>
 
-<li>`useAirDryer`</li>
+<li><code>useAirDryer</code></li>
 
-<li>`sanitizeHands`</li>
+<li><code>sanitizeHands</code></li>
 </ul>
 
 
@@ -4936,70 +1393,17 @@ Read-only tuple with 13 strings:
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L28)</span>
 
-
-
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 11,
-  "name": "WheelchairAccessibilityGrades",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "comment": {
-    "summary": [
-      {
-        "kind": "text",
-        "text": "Describes the general wheelchair accessibility of the place. This is a human-rated value.\nIt SHOULD conform to the traffic light system found in OpenStreetMap and Wheelmap.org."
-      }
-    ]
-  },
-  "sources": [
-    {
-      "fileName": "Accessibility.ts",
-      "line": 28,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/Accessibility.ts#L28"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "fully"
-        },
-        {
-          "type": "literal",
-          "value": "partially"
-        },
-        {
-          "type": "literal",
-          "value": "not"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
+<p>Describes the general wheelchair accessibility of the place. This is a human-rated value.
+It SHOULD conform to the traffic light system found in OpenStreetMap and Wheelmap.org.</p>
 
 
 Read-only tuple with 3 strings:
 <ul>
-<li>`fully`</li>
+<li><code>fully</code></li>
 
-<li>`partially`</li>
+<li><code>partially</code></li>
 
-<li>`not`</li>
+<li><code>not</code></li>
 </ul>
 
 
@@ -5010,77 +1414,18 @@ Read-only tuple with 3 strings:
 
 
 
-
-<details>
-<summary>JSON</summary>
-```json
-{
-  "id": 904,
-  "name": "WifiInteractions",
-  "kind": 32,
-  "kindString": "Variable",
-  "flags": {
-    "isConst": true
-  },
-  "sources": [
-    {
-      "fileName": "WifiAccessibility.ts",
-      "line": 6,
-      "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/78e70e1/src/WifiAccessibility.ts#L6"
-    }
-  ],
-  "type": {
-    "type": "typeOperator",
-    "operator": "readonly",
-    "target": {
-      "type": "tuple",
-      "elements": [
-        {
-          "type": "literal",
-          "value": "login"
-        },
-        {
-          "type": "literal",
-          "value": "register"
-        },
-        {
-          "type": "literal",
-          "value": "getPassword"
-        },
-        {
-          "type": "literal",
-          "value": "getGuestPass"
-        },
-        {
-          "type": "literal",
-          "value": "getTerms"
-        },
-        {
-          "type": "literal",
-          "value": "acceptTerms"
-        }
-      ]
-    }
-  },
-  "defaultValue": "..."
-}
-```
-</details>
-
-
 Read-only tuple with 6 strings:
 <ul>
-<li>`login`</li>
+<li><code>login</code></li>
 
-<li>`register`</li>
+<li><code>register</code></li>
 
-<li>`getPassword`</li>
+<li><code>getPassword</code></li>
 
-<li>`getGuestPass`</li>
+<li><code>getGuestPass</code></li>
 
-<li>`getTerms`</li>
+<li><code>getTerms</code></li>
 
-<li>`acceptTerms`</li>
+<li><code>acceptTerms</code></li>
 </ul>
 

@@ -199,15 +199,15 @@ function ReferenceType(props: {
   }
 
   if (isConstant(props)) {
-    return `<a href="./constants/#${props.name}">${props.name}</a>`;
+    return `<a href="../constants/#${props.name}">${props.name}</a>`;
   }
 
   if (isTypeAlias(props)) {
-    return `<a href="./type-aliases/#${props.name}">${props.name}</a>`;
+    return `<a href="../type-aliases/#${props.name}">${props.name}</a>`;
   }
 
   if (isInterface(props)) {
-    return `<a href="./interfaces/#${props.name}">${props.name}</a>`;
+    return `<a href="../interfaces/#${props.name}">${props.name}</a>`;
   }
 
   return `<a href="#${props.name}">${props.name}</a>`;
@@ -299,7 +299,7 @@ function TupleType(props: { type: any; name: string; elements: any[] }): string 
   }
   const allElementsAreLiteralStrings = props.elements.every((e: any) => e.type === "literal" && typeof e.value === 'string');
   const elements = allElementsAreLiteralStrings ?
-    props.elements.map((t, i) => `\`${t.value}\``) :
+    props.elements.map((t, i) => `<code>${t.value}</code>`) :
     props.elements.map((t, i) => Type({ object: t }));
   const elementList = elements.map(element => `<li>${element}</li>`).join('\n\n');
   const allElementsAreTheSameType = elements.every((e, i) => _.isEqual(e, elements[0]));
@@ -402,10 +402,49 @@ function Tags(tags: any) {
   return tagsMarkdown.filter(Boolean).join(`\n\n`);
 }
 
+function Summary(summary: any[]) {
+// summary has a form like this:
+  // {
+  //   "kind": "text",
+  //   "text": "An object that indicates how the object can be interacted with.\n\nThe keys of this object are the interaction types, and the values are "
+  // },
+  // {
+  //   "kind": "code",
+  //   "text": "someCodeElement"
+  // },
+  // {
+  //   "kind": "inline-tag",
+  //   "tag": "@link",
+  //   "text": "InteractionMode",
+  //   "target": 361
+  // },
+  // {
+  //   "kind": "text",
+  //   "text": "\nobjects."
+  // }
+
+  // Concatenate the text from code/text elements and and create links for inline-tag elements.
+  const summaryText = summary?.map((s: any) => {
+    if (s.kind === 'text' || s.kind === 'code') {
+      return s.text;
+    } else if (s.kind === 'inline-tag' && s.tag === '@link') {
+      const linkTarget = childrenById.get(s.target) as any;
+      if (linkTarget) {
+        return ReferenceType(linkTarget);
+        // return `[${s.text}](${linkTarget.sources[0].fileName}#${linkTarget.name})`;
+      }
+    }
+    return '';
+  }).join('');
+
+  return summaryText && marked(summaryText);
+}
+
 function PropertyDescription(property: any) {
-  const shortText = get(property, "comment.shortText");
+  const summary = get(property, "comment.summary");
   const tagMarkdown = Tags(get(property, "comment.tags"));
-  return [shortText && marked(shortText), tagMarkdown].filter(Boolean).join(`\n\n`);
+  const summaryText = Summary(summary);
+  return [summaryText, tagMarkdown].filter(Boolean).join(`\n\n`);
 }
 
 function Interface(i: any): string {
@@ -418,7 +457,7 @@ function Interface(i: any): string {
 
   ${i.sources?.length && `${SourceLinkList(i.sources)}`}
 
-  ${get(i, "comment.shortText") || ""}
+  ${Summary(get(i, "comment.summary")) || ""}
 
   ${requiredCount === 1 ? `The \`${requiredProperties[0].name}\` property is required.` : ""}
   ${requiredCount > 1 ? `${getHumanEnumeration(requiredProperties.map((c: any) => `\`${c.name}\``), 'and')} properties are required.` : ""}
@@ -426,7 +465,7 @@ function Interface(i: any): string {
   ${TableFromArray(
     [["Name", "Type", ""]].concat(
       i.children
-        .filter((property: any) => get(property, "comment.shortText") !== "TODO")
+        .filter((property: any) => get(property, "comment.summary") !== "TODO")
         .map((property: any) => [
           PropertyName(property),
           `${Type({ object: property.type, property })}`,
@@ -498,7 +537,7 @@ Some lack proper formatting in the documentation. Fixes in [\`tools/generate-ove
 
 ${alias.sources?.length && `${SourceLinkList(alias.sources)}`}
 
-${get(alias, "comment.shortText") || ""}
+${Summary(get(alias, "comment.summary")) || ""}
 
 Definition: ${Type({ object: alias.type })}
 
@@ -528,9 +567,7 @@ Some lack proper formatting in the documentation. Fixes in [\`tools/generate-ove
 
 ${alias.sources?.length && `${SourceLinkList(alias.sources)}`}
 
-${get(alias, "comment.shortText") || ""}
-
-${JSONSummary(alias)}
+${Summary(get(alias, "comment.summary")) || ""}
 
 ${Type({ object: alias.type })}
 `
