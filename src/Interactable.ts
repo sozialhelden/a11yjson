@@ -14,16 +14,28 @@ export interface Interactable<InteractionType extends string> {
 
 export const getInteractableSchemaDefinition: (
   interactionTypes: readonly string[]
-) => SchemaDefinition = (interactionTypes) => ({
-  interactions: {
-    type: Object,
-    optional: true,
-  },
-  ...interactionTypes.reduce(
-    (acc, interactionType) => ({
-      ...acc,
-      ...getPrefixedSchemaDefinition(`interactions.${interactionType}`, getInteractionModeSchemaDefinition()),
-    }),
-    {},
-  ),
-});
+) => SchemaDefinition = (interactionTypes) => {
+  return ({
+    interactions: {
+      type: Object,
+      optional: true,
+      blackbox: true,
+      custom(): string | undefined {
+        if (!this.isSet) {
+          return undefined;
+        }
+        const { value } = this;
+        if (typeof value !== 'object') {
+          return 'expectedType';
+        }
+        if (Object.keys(value).length === 0) {
+          return 'mustHaveAtLeastOneKey';
+        }
+        return undefined;
+      },
+    },
+    ...getPrefixedSchemaDefinition(`interactions.$`, getInteractionModeSchemaDefinition()),
+  });
+};
+
+

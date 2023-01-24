@@ -1,7 +1,7 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import { Door, getDoorSchemaDefinition } from './Door';
 import {
-  getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition,
+  getPrefixedQuantitySchemaDefinition, Length, LengthSchema,
 } from './Quantity';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
@@ -389,10 +389,10 @@ export const getEquipmentPropertiesSchemaDefinition: () => SchemaDefinition = ()
   // with words
   ...getLocalizedStringSchemaDefinition('longDescription'), // Alternative description that uses less screen estate, more abbreviations and Unicode symbols like `→`
   ...getLocalizedStringSchemaDefinition('shortDescription'),
-  ...getPrefixedQuantitySchemaDefinition('heightOfControls', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('heightOfControls', LengthSchema),
   ...getPrefixedSchemaDefinition('door', getDoorSchemaDefinition()),
-  ...getPrefixedQuantitySchemaDefinition('cabinWidth', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('cabinLength', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('cabinWidth', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('cabinLength', LengthSchema),
   languages: {
     type: Array,
     defaultValue: [],

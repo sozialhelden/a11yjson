@@ -1,6 +1,6 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
-import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity';
 
 export const WashBashinInteractions = [
   'changeTemperature',
@@ -58,8 +58,8 @@ export const getWashBasinSchemaDefinition: () => SchemaDefinition = () => ({
     type: Boolean,
     optional: true,
   },
-  ...getPrefixedQuantitySchemaDefinition('height', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('spaceBelowHeight', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('spaceBelowDepth', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('height', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('spaceBelowHeight', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('spaceBelowDepth', LengthSchema),
   ...getInteractableSchemaDefinition(WashBashinInteractions),
 });

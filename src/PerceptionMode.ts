@@ -8,22 +8,32 @@ import {
   Force,
   Length,
   getPrefixedQuantitySchemaDefinition,
-  LengthSchemaDefinition,
   Volume,
-  VolumeSchemaDefinition,
   Hertz,
-  HertzSchemaDefinition,
   Brightness,
-  BrightnessSchemaDefinition,
-  ForceSchemaDefinition,
-  TimeIntervalSchemaDefinition,
   TimeInterval,
   Acceleration,
-  AccelerationSchemaDefinition,
   Temperature,
-  TemperatureSchemaDefinition,
+  LengthSchema,
+  VolumeSchema,
+  HertzSchema,
+  BrightnessSchema,
+  ForceSchema,
+  TimeIntervalSchema,
+  AccelerationSchema,
+  TemperatureSchema,
 } from './Quantity';
 import { getTechCombinationSchemaDefinition, TechCombination } from './TechCombination';
+
+export const Urgencies = [
+  'alert',
+  'alarm',
+  'warning',
+  'info',
+  'debug',
+] as const;
+
+export type Urgency = typeof Urgencies[number];
 
 /**
  * Describes necessary abilities and modes for interpreting information output, signals, or
@@ -52,7 +62,8 @@ export interface PerceptionMode {
   optional?: boolean;
 
   /**
-   * `false` if the perception is optional, `true` if it is required.
+   * `false` if the perception is required to make use of the main function of the described
+   * object, `true` if it is required.
    */
   required?: boolean;
 
@@ -67,24 +78,9 @@ export interface PerceptionMode {
   activationSignal?: boolean;
 
   /**
-   * The output is urgent.
+   * Urgency of the content when perceived.
    */
-  urgent?: boolean;
-
-  /**
-   * The output is an information without high urgency.
-   */
-  info?: boolean;
-
-  /**
-   * The output is an alarm.
-   */
-  alarm?: boolean;
-
-  /**
-   * The output is a warning.
-   */
-  warning?: boolean;
+  urgency?: Urgency;
 
   /**
    * The output is a light.
@@ -92,9 +88,9 @@ export interface PerceptionMode {
   light?: boolean;
 
   /**
-   * The output is visual.
+   * The output is rhythmic.
    */
-  visual?: boolean;
+  rhythmic?: boolean;
 
   /**
    * The ability to read is supported or needed.
@@ -107,24 +103,9 @@ export interface PerceptionMode {
   forceFeedback?: boolean;
 
   /**
-   * Feedback force applied to the user.
-   */
-  force?: Force;
-
-  /**
-   * Feedback force applied to the user.
-   */
-  acceleration?: Acceleration;
-
-  /**
    * The content/output/signal has active vibration feedback.
    */
   vibration?: boolean;
-
-  /**
-   * The content/output/signal has active vibration feedback.
-   */
-  soundVolume?: Volume;
 
   /**
    * The content/output/signal affects your full body.
@@ -140,17 +121,6 @@ export interface PerceptionMode {
    * The light looks like it is breathing.
    */
   breathing?: boolean;
-
-  /**
-   * The output's brightness.
-   */
-  brightness?: Brightness;
-
-  /**
-   * Ambient noise level in dB(A) relative to a reference pressure of 0.00002 Pa. Median over a
-   * 10-second period at least.
-   */
-  ambientNoiseLevel?: Volume;
 
   /**
    * The output has a haptic click feedback.
@@ -188,30 +158,19 @@ export interface PerceptionMode {
   pitchedTone?: boolean;
 
   /**
+   * The output is visual.
+   */
+  visual?: boolean;
+
+  /**
    * The output is haptic.
    */
   haptic?: boolean;
 
   /**
-   * The output is rhythmic.
+   * The output is tactile.
    */
-  rhythmic?: boolean;
-
-  /**
-   * `true` if the output is usually static and does not change over time, `false` if it is dynamic
-   * and changes over time.
-   */
-  static?: boolean;
-
-  /**
-   * Time interval in which the output is active.
-   */
-  duration?: TimeInterval;
-
-  /**
-   * Attention time span needed to understand the output.
-   */
-  attentionSpan?: TimeInterval;
+  tactile?: boolean;
 
   /**
    * The ability to smell is supported or needed.
@@ -224,9 +183,15 @@ export interface PerceptionMode {
   taste?: boolean;
 
   /**
-   * The output needs high concentration to understand.
+   * The output is acoustic.
    */
-  needsHighConcentration?: boolean;
+  sound?: boolean;
+
+  /**
+   * `true` if the output is usually static and does not change over time, `false` if it is dynamic
+   * and changes over time.
+   */
+  static?: boolean;
 
   /**
    * The output has a dedicated screen for subtitles.
@@ -287,11 +252,6 @@ export interface PerceptionMode {
   flashingHazard?: boolean;
 
   /**
-   * The frequency of the output, for tones or flashes.
-   */
-  frequency?: Hertz;
-
-  /**
    * The output uses morse code.
    */
   morse?: boolean;
@@ -312,24 +272,9 @@ export interface PerceptionMode {
   animation?: boolean;
 
   /**
-   * The framerate of animations.
-   */
-  framerate?: Hertz;
-
-  /**
-   * The output is acoustic.
-   */
-  sound?: boolean;
-
-  /**
    * The ability to understand sign language is supported or needed.
    */
   signLanguage?: boolean;
-
-  /**
-   * The output is tactile.
-   */
-  tactile?: boolean;
 
   /**
    * The ability to read braille is supported or needed.
@@ -362,6 +307,75 @@ export interface PerceptionMode {
   heat?: boolean;
 
   /**
+   * The output uses one or more charts.
+   */
+  chart?: boolean;
+
+  /**
+   * The output is displayed in high contrast.
+   */
+  highContrast?: boolean;
+
+  /**
+   * The height you need to grip to perceive the content/output/signal.
+   */
+  necessaryGripHeight?: Length;
+
+  /**
+   * How tall do you have to be to perceive the content/output/signal.
+   */
+  necessaryEyeHeight?: Length;
+
+  /**
+   * The frequency of the output, for tones or flashes.
+   */
+  frequency?: Hertz;
+
+  /**
+   * Feedback force applied to the user.
+   */
+  force?: Force;
+
+  /**
+   * Feedback force applied to the user.
+   */
+  acceleration?: Acceleration;
+
+
+  /**
+   * The content/output/signal has active vibration feedback.
+   */
+  soundVolume?: Volume;
+
+
+  /**
+   * The output's brightness.
+   */
+  brightness?: Brightness;
+
+  /**
+   * Ambient noise level in dB(A) relative to a reference pressure of 0.00002 Pa. Median over a
+   * 10-second period at least.
+   */
+  ambientNoiseLevel?: Volume;
+
+
+  /**
+   * Time interval in which the output is active.
+   */
+  duration?: TimeInterval;
+
+  /**
+   * Attention time span needed to understand the output.
+   */
+  attentionSpan?: TimeInterval;
+
+  /**
+   * The framerate of animations.
+   */
+  framerate?: Hertz;
+
+  /**
    * The temperature of the output.
    */
   temperature?: Temperature;
@@ -371,15 +385,6 @@ export interface PerceptionMode {
    */
   ambientTemperature?: Temperature;
 
-  /**
-   * The output uses one or more charts.
-   */
-  chart?: boolean;
-
-  /**
-   * The output is displayed in high contrast.
-   */
-  highContrast?: boolean;
 
   /**
    * Font size used in the output.
@@ -473,14 +478,9 @@ export interface PerceptionMode {
   isEasyToFind?: boolean;
 
   /**
-   * The height you need to grip to perceive the content/output/signal.
+   * The output needs high concentration to understand.
    */
-  necessaryGripHeight?: Length;
-
-  /**
-   * How tall do you have to be to perceive the content/output/signal.
-   */
-  necessaryEyeHeight?: Length;
+  needsHighConcentration?: boolean;
 
   /**
    * `true` if the system’s audio quality is good enough for understanding speech, `false` if it is
@@ -520,27 +520,24 @@ export const getPerceptionModeSchemaDefinition: () => SchemaDefinition = () => (
   ...getLocalizedStringSchemaDefinition('contentWarning'),
   light: BooleanField,
   needsHighConcentration: BooleanField,
-  ...getPrefixedQuantitySchemaDefinition('attentionSpan', TimeIntervalSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('attentionSpan', TimeIntervalSchema),
   audioIsComprehensible: BooleanField,
   optional: BooleanField,
   required: BooleanField,
   activationSignal: BooleanField,
   alarm: BooleanField,
-  warning: BooleanField,
-  info: BooleanField,
-  urgent: BooleanField,
+  urgency: {
+    type: String,
+    optional: true,
+    allowedValues: (Urgencies as any) as string[],
+  },
   animation: BooleanField,
   animationFramerate: BooleanField,
   static: BooleanField,
   byod: BooleanField,
-  audibleClick: BooleanField,
-  beep: BooleanField,
-  bing: BooleanField,
   blackAndWhite: BooleanField,
   braille: BooleanField,
   breathing: BooleanField,
-  smell: BooleanField,
-  taste: BooleanField,
   button: BooleanField,
   cable: BooleanField,
   radio: BooleanField,
@@ -552,7 +549,6 @@ export const getPerceptionModeSchemaDefinition: () => SchemaDefinition = () => (
   fontSize: BooleanField,
   forceFeedback: BooleanField,
   handwritten: BooleanField,
-  haptic: BooleanField,
   hapticClick: BooleanField,
   headphone: BooleanField,
   highContrast: BooleanField,
@@ -570,18 +566,24 @@ export const getPerceptionModeSchemaDefinition: () => SchemaDefinition = () => (
   backgroundMusic: BooleanField,
   numbers: BooleanField,
   pictograms: BooleanField,
+  audibleClick: BooleanField,
+  beep: BooleanField,
+  bing: BooleanField,
   pitchedTone: BooleanField,
+  rhythmic: BooleanField,
   qrCode: BooleanField,
   read: BooleanField,
-  rhythmic: BooleanField,
   screen: BooleanField,
   printer: BooleanField,
   paper: BooleanField,
   signLanguage: BooleanField,
   sound: BooleanField,
-  speech: BooleanField,
+  smell: BooleanField,
+  taste: BooleanField,
+  haptic: BooleanField,
   tactile: BooleanField,
   visual: BooleanField,
+  speech: BooleanField,
   tactileGuides: BooleanField,
   vibration: BooleanField,
   fullBody: BooleanField,
@@ -593,20 +595,20 @@ export const getPerceptionModeSchemaDefinition: () => SchemaDefinition = () => (
   ...getLocalizedStringSchemaDefinition('instructionsUrl'),
   ...getLocalizedStringSchemaDefinition('name'),
   ...getLocalizedStringSchemaDefinition('url'),
-  ...getPrefixedQuantitySchemaDefinition('ambientNoiseLevel', VolumeSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('brightness', BrightnessSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('fontSize', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('force', ForceSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('acceleration', AccelerationSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('framerate', HertzSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('frequency', HertzSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('soundVolume', VolumeSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('necessaryGripHeight', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('necessaryEyeHeight', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('antentionSpan', TimeIntervalSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('duration', TimeIntervalSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('temperature', TemperatureSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('ambientTemperature', TemperatureSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('ambientNoiseLevel', VolumeSchema),
+  ...getPrefixedQuantitySchemaDefinition('brightness', BrightnessSchema),
+  ...getPrefixedQuantitySchemaDefinition('fontSize', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('force', ForceSchema),
+  ...getPrefixedQuantitySchemaDefinition('acceleration', AccelerationSchema),
+  ...getPrefixedQuantitySchemaDefinition('framerate', HertzSchema),
+  ...getPrefixedQuantitySchemaDefinition('frequency', HertzSchema),
+  ...getPrefixedQuantitySchemaDefinition('soundVolume', VolumeSchema),
+  ...getPrefixedQuantitySchemaDefinition('necessaryGripHeight', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('necessaryEyeHeight', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('antentionSpan', TimeIntervalSchema),
+  ...getPrefixedQuantitySchemaDefinition('duration', TimeIntervalSchema),
+  ...getPrefixedQuantitySchemaDefinition('temperature', TemperatureSchema),
+  ...getPrefixedQuantitySchemaDefinition('ambientTemperature', TemperatureSchema),
   ...getPrefixedArraySchemaDefinition('techSufficient', getTechCombinationSchemaDefinition()),
   ...getPrefixedArraySchemaDefinition('techSupported', getTechCombinationSchemaDefinition()),
 });

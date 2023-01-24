@@ -1,5 +1,5 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { getSurfaceSchemaDefinition, Surface } from './Surface';
 import BooleanField from './BooleanField';
@@ -32,8 +32,8 @@ export interface Pathways {
 // https://docs.google.com/document/d/1qJOTe4m_a4dcJnvXYt4smYj4QQ1ejZ8CvLBYzDM5IyM
 
 export const getPathwaysSchemaDefinition: () => SchemaDefinition = () => ({
-  ...getPrefixedQuantitySchemaDefinition('width', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('widthAtObstacles', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('width', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('widthAtObstacles', LengthSchema),
   ...getPrefixedSchemaDefinition('surface', getSurfaceSchemaDefinition()),
   isKerbstoneFree: BooleanField,
 });

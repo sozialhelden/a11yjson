@@ -1,4 +1,4 @@
-import { parseLanguageTag } from '@sozialhelden/ietf-language-tags';
+import { getTag, parseLanguageTag } from '@sozialhelden/ietf-language-tags';
 import { SchemaKeyDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 
 /**
@@ -13,10 +13,16 @@ const IETFLanguageCodeSchemaKeyDefinition: SchemaKeyDefinition = {
     if (value === undefined) {
       return undefined;
     }
-    const parsedTag = parseLanguageTag(value, false);
-    if (parsedTag === undefined) {
-      return 'notAllowed';
+    const parsedTag = getTag(value);
+    if (parsedTag === undefined || parsedTag.language === undefined) {
+      return 'unknownLanguageTag';
     }
+
+    if (typeof parsedTag.language === 'string') {
+      return 'unknownLanguageTag';
+    }
+
+    console.log('parsedTag', parsedTag);
 
     return undefined;
   },

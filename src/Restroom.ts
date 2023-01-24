@@ -3,7 +3,7 @@ import { Room, getRoomSchemaDefinition } from './Room';
 import { Mirror, getMirrorSchemaDefinition } from './Mirror';
 import { WashBasin, getWashBasinSchemaDefinition } from './WashBasin';
 import { Entrance, getEntranceSchemaDefinition } from './Entrance';
-import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity';
 import { Toilet, getToiletSchemaDefinition } from './Toilet';
 import { Shower, getShowerSchemaDefinition } from './Shower';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
@@ -141,12 +141,12 @@ export const getRestroomSchemaDefinition: () => SchemaDefinition = () => ({
   hasShower: BooleanField,
   hasBathTub: BooleanField,
   ...getPrefixedSchemaDefinition('mirror', getMirrorSchemaDefinition()),
-  ...getPrefixedQuantitySchemaDefinition('turningSpaceInside', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('turningSpaceInside', LengthSchema),
   ...getPrefixedSchemaDefinition('toilet', getToiletSchemaDefinition()),
   ...getPrefixedSchemaDefinition('entrance', getEntranceSchemaDefinition()),
   ...getPrefixedSchemaDefinition('shower', getShowerSchemaDefinition()),
-  ...getPrefixedQuantitySchemaDefinition('heightOfSoap', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('heightOfDrier', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('heightOfSoap', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('heightOfDrier', LengthSchema),
   ...getPrefixedSchemaDefinition('washBasin', getWashBasinSchemaDefinition()),
   ...getRoomSchemaDefinition(),
   access: {

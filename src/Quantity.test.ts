@@ -1,14 +1,14 @@
 import {
   getPrefixedQuantitySchemaDefinition,
-  LengthSchemaDefinition,
+  LengthSchema,
   parseQuantity,
 } from './Quantity';
 import expectInvalidFixture from './lib/expectInvalidFixture';
 import expectValidFixture from './lib/expectValidFixture';
-import * as FasterSchema from 'faster-schema';
+import { SimpleSchema } from '../node_modules/simpl-schema/dist/esm/SimpleSchema.js';
 
-const definition = getPrefixedQuantitySchemaDefinition('field', LengthSchemaDefinition);
-const schema = new FasterSchema(definition);
+const definition = getPrefixedQuantitySchemaDefinition('field', LengthSchema);
+const schema = new SimpleSchema(definition);
 
 function expectValidUnitFixture(value: any) {
   expectValidFixture(definition, schema.clean({ field: value }));

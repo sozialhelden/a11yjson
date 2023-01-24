@@ -10,7 +10,7 @@ import { getLocalizedStringSchemaDefinition, LocalizedString } from './Localized
 import { getPaymentSchemaDefinition, Payment } from './Payment';
 import { getPersonalProfileSchemaDefinition, PersonalProfile } from './PersonalProfile';
 import {
-  getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition,
+  getPrefixedQuantitySchemaDefinition, Length, LengthSchema,
 } from './Quantity';
 
 export const SeatInteractions = [
@@ -213,10 +213,10 @@ export const getSeatSchemaDefinition: () => SchemaDefinition = () => ({
   'columns.$': {
     type: String,
   },
-  ...getPrefixedQuantitySchemaDefinition('fixedHeight', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('minimalHeight', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('maximalHeight', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('turningSpaceInFront', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('fixedHeight', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('minimalHeight', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('maximalHeight', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('turningSpaceInFront', LengthSchema),
   ...getPrefixedSchemaDefinition('payment', getPaymentSchemaDefinition()),
   ...getPrefixedSchemaDefinition('intercom', getIntercomSchemaDefinition()),
   ...getInteractableSchemaDefinition(SeatInteractions),

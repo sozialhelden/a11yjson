@@ -1,6 +1,6 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 
-import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import { W3CAccessibilityFeature, w3cAccessibilityFeatures } from './W3CAccessibilityFeature';
 import { W3CAccessibilityHazard, w3cAccessibilityHazards } from './W3CAccessibilityHazard';
@@ -250,7 +250,7 @@ export const getMediaSchemaDefinition: () => SchemaDefinition = () => ({
     type: String,
     allowedValues: w3cAccessibilityHazards,
   },
-  ...getPrefixedQuantitySchemaDefinition('turningSpaceInFront', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('turningSpaceInFront', LengthSchema),
   sameAs: {
     type: Array,
     optional: true,

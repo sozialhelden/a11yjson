@@ -1,7 +1,7 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import BooleanField from './BooleanField';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
-import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity';
 
 export const MirrorInteractions = [
   'turn',
@@ -33,6 +33,6 @@ export interface Mirror extends Interactable<MirrorInteraction> {
 export const getMirrorSchemaDefinition: () => SchemaDefinition = () => ({
   isLocatedInsideRestroom: BooleanField,
   isAccessibleWhileSeated: BooleanField,
-  ...getPrefixedQuantitySchemaDefinition('heightFromGround', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('heightFromGround', LengthSchema),
   ...getInteractableSchemaDefinition(MirrorInteractions),
 });

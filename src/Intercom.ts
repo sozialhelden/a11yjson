@@ -5,9 +5,9 @@ import { getLocalizedStringSchemaDefinition, LocalizedString } from './Localized
 import {
   getPrefixedQuantitySchemaDefinition,
   Length,
-  LengthSchemaDefinition,
+  LengthSchema,
   Volume,
-  VolumeSchemaDefinition,
+  VolumeSchema,
 } from './Quantity';
 
 export const IntercomInteractions = ['ring', 'call', 'hangUp', 'open', 'close', 'identify'] as const;
@@ -59,8 +59,8 @@ export interface Intercom extends Interactable<IntercomInteraction> {
 
 export const getIntercomSchemaDefinition: () => SchemaDefinition = () => ({
   ...getLocalizedStringSchemaDefinition('description'),
-  ...getPrefixedQuantitySchemaDefinition('ambientNoiseLevel', VolumeSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('necessaryGripHeight', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('ambientNoiseLevel', VolumeSchema),
+  ...getPrefixedQuantitySchemaDefinition('necessaryGripHeight', LengthSchema),
   hasAudio: BooleanField,
   audioIsComprehensible: BooleanField,
   hasVideoCamera: BooleanField,

@@ -1,5 +1,5 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import BooleanField from './BooleanField';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
@@ -98,7 +98,7 @@ export const getStairsSchemaDefinition: () => SchemaDefinition = () => ({
     type: String,
   },
   ...getLocalizedStringSchemaDefinition('name'),
-  ...getPrefixedQuantitySchemaDefinition('stepHeight', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('stepHeight', LengthSchema),
   hasHandRail: BooleanField,
   hasTactileSafetyStrips: BooleanField,
   hasBrailleSignage: BooleanField,

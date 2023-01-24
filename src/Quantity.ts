@@ -137,6 +137,8 @@ export const BaseQuantitySchemaDefinition = {
   },
 };
 
+export const BaseQuantitySchema = new SimpleSchema(BaseQuantitySchemaDefinition);
+
 // takes the BaseQuantitySchema and extends it with validation for the given unit type
 const createQuantitySchemaDefinition = (
   kind: UnitKind,
@@ -175,8 +177,8 @@ export const SpeedSchema = new SimpleSchema(SpeedSchemaDefinition)
  */
 export const AccelerationSchemaDefinition = createQuantitySchemaDefinition(
   UnitKind.Acceleration,
-  'g',
-  );
+  'meter/second^2',
+);
 export const AccelerationSchema = new SimpleSchema(AccelerationSchemaDefinition)
 
 /**
@@ -190,7 +192,7 @@ export const ForceSchema = new SimpleSchema(ForceSchemaDefinition)
  * Validates a timer interval object and will only accept time units, eg. seconds, minutes or hours.
  */
 export const TimeIntervalSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Time, 's');
-export const TimeInterval = new SimpleSchema(TimeIntervalSchemaDefinition)
+export const TimeIntervalSchema = new SimpleSchema(TimeIntervalSchemaDefinition)
 
 /**
  * Validates a mass quantity object and will only accept mass/weight units, eg. kilogram, gram or
@@ -288,15 +290,39 @@ export function parseQuantity(unitString: string): Quantity | string {
 
 export function getPrefixedQuantitySchemaDefinition(
   prefix: string,
-  definition: SchemaDefinition | SimpleSchema,
+  quantitySchema: SimpleSchema,
 ): SchemaDefinition {
-  const extension: Partial<SchemaKeyDefinitionWithOneType> = {
+  const result: SchemaKeyDefinitionWithOneType = {
+    type: Object,
+    blackbox: true,
+    optional: true,
     autoValue() {
-      if (this.isSet && typeof this.value === 'string') {
-        return parseQuantity(this.value);
+      if (this.isSet) {
+        if (typeof this.value === 'string') {
+          if (this.value.length === 0) {
+            this.unset();
+            return undefined;
+          }
+          return parseQuantity(this.value);
+        }
       }
       return undefined;
     },
+    custom() {
+      // We don't want to inflate the schema's size with too many keys, so we do a custom
+      // validation here only when the value is actually set.
+      if (this.isSet && this.value && typeof this.value !== 'string') {
+        console.log('Running custom validation for quantity', this);
+        const context = quantitySchema.newContext();
+        context.validate(this.value);
+        this.addValidationErrors(context.validationErrors().map((error) => ({ ...error, name: prefix + '.' + error.name })));
+        return undefined;
+      }
+      return undefined;
+    }
   };
-  return getPrefixedSchemaDefinition(prefix, definition, extension);
+
+  return {
+    [prefix]: result
+  };
 }

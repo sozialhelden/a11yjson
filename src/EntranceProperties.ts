@@ -2,7 +2,7 @@ import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js
 import { Door, getDoorSchemaDefinition } from './Door';
 import { Stairs, getStairsSchemaDefinition } from './Stairs';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
-import { getPrefixedQuantitySchemaDefinition, Slope, SlopeSchemaDefinition } from './Quantity';
+import { getPrefixedQuantitySchemaDefinition, Slope, SlopeSchema } from './Quantity';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import BooleanField from './BooleanField';
 
@@ -80,7 +80,7 @@ export const getEntrancePropertiesSchemaDefinition: () => SchemaDefinition = () 
   ...getLocalizedStringSchemaDefinition('name'),
   isMainEntrance: BooleanField,
   isLevel: BooleanField,
-  ...getPrefixedQuantitySchemaDefinition('slopeAngle', SlopeSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('slopeAngle', SlopeSchema),
   hasFixedRamp: BooleanField,
   hasRemovableRamp: BooleanField,
   hasHoist: BooleanField,

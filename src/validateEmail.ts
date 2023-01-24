@@ -1,12 +1,17 @@
-export default function validateEmail(this: any): 'invalidUrl' | undefined {
+export default function validateEmail(this: any): 'invalidEmail' | undefined {
   if (!this.isSet) { return; }
-  try {
-    // eslint-disable-next-line no-new
-    new URL(`mailto:${this.value}`);
-  } catch (err) {
-    // eslint-disable-next-line consistent-return
-    return 'invalidUrl';
+  if (this.value === '') {
+    this.unset();
+    return;
   }
+
+  const email = this.value;
+
+  // very basic email validation: validate that the email has an @ sign and that the host has a dot
+  if (!email.includes('@') || !email.split('@')[1].includes('.')) {
+    return 'invalidEmail';
+  }
+  
   // eslint-disable-next-line consistent-return
   return undefined;
 }

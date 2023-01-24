@@ -1,5 +1,5 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity';
 import BooleanField from './BooleanField';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
@@ -138,6 +138,6 @@ export const getSignageSchemaDefinition: () => SchemaDefinition = () => ({
   hasText: BooleanField,
   isHighContrast: BooleanField,
   highLegibility: BooleanField,
-  ...getPrefixedQuantitySchemaDefinition('fontHeight', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('fontHeight', LengthSchema),
   ...getInteractableSchemaDefinition(SignageInteractions),
 });

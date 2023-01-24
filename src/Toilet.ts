@@ -2,7 +2,7 @@ import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { GrabBars, getGrabBarsSchemaDefinition } from './GrabBars';
 import {
-  getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition,
+  getPrefixedQuantitySchemaDefinition, Length, LengthSchema,
 } from './Quantity';
 import BooleanField from './BooleanField';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
@@ -12,7 +12,6 @@ export const ToiletInteractions = [
   'flush',
   'secondaryFlush',
   'spray',
-  'washHands',
 ] as const;
 export type ToiletInteraction = typeof ToiletInteractions[number];
 
@@ -76,11 +75,11 @@ export const getToiletSchemaDefinition: () => SchemaDefinition = () => ({
   isUrinal: BooleanField,
   isLatrine: BooleanField,
   hasAutomaticFlush: BooleanField,
-  ...getPrefixedQuantitySchemaDefinition('heightOfBase', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('spaceOnUsersLeftSide', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('spaceOnUsersRightSide', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('spaceInFront', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('heightOfBase', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('spaceOnUsersLeftSide', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('spaceOnUsersRightSide', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('spaceInFront', LengthSchema),
   ...getPrefixedSchemaDefinition('grabBars', getGrabBarsSchemaDefinition()),
-  ...getPrefixedQuantitySchemaDefinition('flushMechanismDistanceFromToilet', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('flushMechanismDistanceFromToilet', LengthSchema),
   ...getInteractableSchemaDefinition(ToiletInteractions),
 });

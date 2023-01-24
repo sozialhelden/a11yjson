@@ -1,6 +1,6 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import {
-  getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition, Slope, SlopeSchemaDefinition,
+  getPrefixedQuantitySchemaDefinition, Length, LengthSchema, Slope, SlopeSchema,
 } from './Quantity';
 
 export const SurfaceTypeValues = [
@@ -204,9 +204,9 @@ export interface Surface {
 }
 
 export const getSurfaceSchemaDefinition: () => SchemaDefinition = () => ({
-  ...getPrefixedQuantitySchemaDefinition('longitudinalSlope', SlopeSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('lateralSlope', SlopeSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('turningSpace', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('longitudinalSlope', SlopeSchema),
+  ...getPrefixedQuantitySchemaDefinition('lateralSlope', SlopeSchema),
+  ...getPrefixedQuantitySchemaDefinition('turningSpace', LengthSchema),
   smoothness: {
     type: String,
     optional: true,

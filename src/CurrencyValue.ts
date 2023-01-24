@@ -3,7 +3,7 @@ import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js
 import { AccessType, AccessTypes } from './AccessType';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { getPaymentSchemaDefinition, Payment } from './Payment';
-import { BaseQuantitySchemaDefinition, getPrefixedQuantitySchemaDefinition, Quantity } from './Quantity';
+import { BaseQuantitySchema, getPrefixedQuantitySchemaDefinition, Quantity } from './Quantity';
 
 /**
  * Describes an amount of paid money in a specific currency, per specified unit, for a specific kind
@@ -62,7 +62,7 @@ export const getCurrencyValueSchemaDefinition: () => SchemaDefinition = () => ({
       return undefined;
     },
   },
-  ...getPrefixedQuantitySchemaDefinition('per', BaseQuantitySchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('per', BaseQuantitySchema),
   access: {
     type: Array,
     optional: true,

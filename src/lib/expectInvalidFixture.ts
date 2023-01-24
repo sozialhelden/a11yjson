@@ -1,5 +1,5 @@
 import omit from 'lodash.omit';
-import * as FasterSchema from 'faster-schema';
+import { SimpleSchema } from '../../node_modules/simpl-schema/dist/esm/SimpleSchema.js';
 
 export default function expectInvalidFixture(
   definition: Record<string, any>,
@@ -12,10 +12,11 @@ export default function expectInvalidFixture(
     allowedValues?: string[];
   }[],
 ) {
-  const schema = new FasterSchema(definition);
+  const schema = new SimpleSchema(definition);
   const context = schema.newContext();
-  context.validate(schema.clean(value, { filter: false }));
-  expect(context.validationErrors()).not.toHaveLength(0);
+  const valueAfterCleaning = schema.clean(value, { filter: false });
+  context.validate(valueAfterCleaning);
+  expect(context.validationErrors()).not.toEqual([]);
   expect(context.isValid()).toBeFalsy();
   if (expectedValidationErrors.length > 0) {
     expect(

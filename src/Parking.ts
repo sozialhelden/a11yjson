@@ -1,5 +1,5 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { getStructuredAddressSchemaDefinition } from './Address';
@@ -71,16 +71,16 @@ export interface WheelchairParking extends Interactable<ParkingInteraction> {
 
 export const getWheelchairParkingSchemaDefinition: () => SchemaDefinition = () => ({
   ...getLocalizedStringSchemaDefinition('location'),
-  ...getPrefixedQuantitySchemaDefinition('distanceToEntrance', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('distanceToEntrance', LengthSchema),
   count: {
     type: Number,
     optional: true,
     min: 0,
   },
   isLocatedInside: BooleanField,
-  ...getPrefixedQuantitySchemaDefinition('width', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('length', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('maxVehicleHeight', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('width', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('length', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('maxVehicleHeight', LengthSchema),
   hasDedicatedSignage: BooleanField,
   neededParkingPermits: {
     type: Array,

@@ -5,7 +5,7 @@ import { getIntercomSchemaDefinition, Intercom } from './Intercom';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
 import { getPaymentSchemaDefinition, Payment } from './Payment';
-import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity';
 import { getQueueSystemSchemaDefinition, QueueSystem } from './QueueSystem';
 
 export const DeskInteractions = [
@@ -108,13 +108,13 @@ export interface Desk extends Interactable<DeskInteraction> {
 export const getDeskSchemaDefinition: () => SchemaDefinition = () => ({
   ...getLocalizedStringSchemaDefinition('name'),
   isRollUnder: BooleanField,
-  ...getPrefixedQuantitySchemaDefinition('widthBelow', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('depthBelow', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('fixedHeightBelow', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('turningSpaceInFront', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('fixedHeight', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('minimalHeight', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('maximalHeight', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('widthBelow', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('depthBelow', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('fixedHeightBelow', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('turningSpaceInFront', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('fixedHeight', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('minimalHeight', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('maximalHeight', LengthSchema),
   ...getPrefixedSchemaDefinition('queueSystem', getQueueSystemSchemaDefinition()),
   ...getPrefixedSchemaDefinition('payment', getPaymentSchemaDefinition()),
   ...getPrefixedSchemaDefinition('intercom', getIntercomSchemaDefinition()),

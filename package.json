@@ -89,7 +89,6 @@
   },
   "dependencies": {
     "@sozialhelden/ietf-language-tags": "^3.2.4",
-    "faster-schema": "^2.1.0",
     "intersperse": "^1.0.0",
     "js-quantities": "^1.7.6",
     "kind-of": "^6.0.3",

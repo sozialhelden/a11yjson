@@ -8,11 +8,11 @@ import { getInteractionModeSchemaDefinition } from './InteractionMode';
 import { getIntercomSchemaDefinition, Intercom } from './Intercom';
 import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition';
 import {
-  ForceSchemaDefinition,
+  ForceSchema,
   getPrefixedQuantitySchemaDefinition,
   Length,
-  LengthSchemaDefinition,
-  SpeedSchemaDefinition,
+  LengthSchema,
+  SpeedSchema,
 } from './Quantity';
 
 export const DoorInteractions = ['ringDoorbell', 'open', 'close', 'unlock', 'lock', 'unlockAndLock', 'openAndClose'] as const;
@@ -243,10 +243,10 @@ export const getDoorSchemaDefinition: () => SchemaDefinition = () => ({
   hasSwitch: BooleanField,
   needsSwitchToOpen: BooleanField,
   isTurnstile: BooleanField,
-  ...getPrefixedQuantitySchemaDefinition('width', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('thresholdHeight', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('width', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('thresholdHeight', LengthSchema),
   thresholdIsRounded: BooleanField,
-  ...getPrefixedQuantitySchemaDefinition('turningSpaceInFront', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('turningSpaceInFront', LengthSchema),
   hasClearMarkingOnGlassDoor: BooleanField,
   isEasyToHoldOpen: BooleanField,
   hasErgonomicDoorHandle: BooleanField,
@@ -258,7 +258,7 @@ export const getDoorSchemaDefinition: () => SchemaDefinition = () => ({
   needsKeyCard: BooleanField,
   needsKeyPad: BooleanField,
   needsDoorbell: BooleanField,
-  ...getPrefixedQuantitySchemaDefinition('doorbellTopButtonHeight', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('doorbellTopButtonHeight', LengthSchema),
   hasIntercom: BooleanField,
   needsIntercom: BooleanField,
   access: {
@@ -275,9 +275,9 @@ export const getDoorSchemaDefinition: () => SchemaDefinition = () => ({
   ...getPrefixedArraySchemaDefinition('interactions.unlock', getInteractionModeSchemaDefinition()),
   ...getPrefixedArraySchemaDefinition('interactions.open', getInteractionModeSchemaDefinition()),
   ...getPrefixedArraySchemaDefinition('interactions.close', getInteractionModeSchemaDefinition()),
-  ...getPrefixedQuantitySchemaDefinition('openingForce', ForceSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('closingSpeed', SpeedSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('latchingSpeed', SpeedSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('openingForce', ForceSchema),
+  ...getPrefixedQuantitySchemaDefinition('closingSpeed', SpeedSchema),
+  ...getPrefixedQuantitySchemaDefinition('latchingSpeed', SpeedSchema),
   isVisuallyContrasted: BooleanField,
   hasVisuallyContrastedFrame: BooleanField,
   colors: {

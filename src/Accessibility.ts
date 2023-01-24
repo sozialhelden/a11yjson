@@ -11,7 +11,7 @@ import { Parking, getParkingSchemaDefinition } from './Parking';
 import { Surface, getSurfaceSchemaDefinition } from './Surface';
 import { AnimalPolicy, getAnimalPolicySchemaDefinition } from './AnimalPolicy';
 import { SmokingPolicy, smokingPolicies } from './SmokingPolicy';
-import { getPrefixedQuantitySchemaDefinition, Volume, VolumeSchemaDefinition } from './Quantity';
+import { getPrefixedQuantitySchemaDefinition, Volume, VolumeSchema } from './Quantity';
 import { WifiAccessibility, getWifiAccessibilitySchemaDefinition } from './WifiAccessibility';
 import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition';
 import { Desk, getDeskSchemaDefinition } from './Desk';
@@ -276,7 +276,7 @@ export const getAccessibilitySchemaDefinition: () => SchemaDefinition = () => ({
   ...getPrefixedArraySchemaDefinition('signageSystems', getSignageSchemaDefinition()),
   ...getPrefixedArraySchemaDefinition('entrances', getEntranceSchemaDefinition()),
   ...getPrefixedArraySchemaDefinition('restrooms', getRestroomSchemaDefinition()),
-  ...getPrefixedQuantitySchemaDefinition('ambientNoiseLevel', VolumeSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('ambientNoiseLevel', VolumeSchema),
   ...getLocalizedStringSchemaDefinition('serviceContact'),
   ...getInteractableSchemaDefinition(GenericInteractions),
 });

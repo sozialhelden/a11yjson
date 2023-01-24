@@ -17,9 +17,9 @@ describe('PlaceProperties schema', () => {
       editPageUrl: 'ASD',
       placeWebsiteUrl: 'www.example.com',
     }, [
-      { type: 'regEx', name: 'infoPageUrl' },
-      { type: 'regEx', name: 'editPageUrl' },
-      { type: 'regEx', name: 'placeWebsiteUrl' },
+      { type: 'invalidUrl', name: 'infoPageUrl' },
+      { type: 'invalidUrl', name: 'editPageUrl' },
+      { type: 'invalidUrl', name: 'placeWebsiteUrl' },
     ]);
   });
 
@@ -28,7 +28,7 @@ describe('PlaceProperties schema', () => {
       ...minimalPlaceProperties,
       emailAddress: 'example.com',
     }, [
-      { type: 'regEx', name: 'emailAddress' },
+      { type: 'invalidEmail', name: 'emailAddress' },
     ]);
   });
 });

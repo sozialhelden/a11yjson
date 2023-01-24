@@ -4,7 +4,7 @@ import { PerceptionMode } from './PerceptionMode';
 const perceptionModeFixture: Complete<PerceptionMode> = {
   speech: false,
   activationSignal: false,
-  alarm: false,
+  urgency: 'alert',
   read: false,
   forceFeedback: false,
   vibration: false,
@@ -48,9 +48,6 @@ const perceptionModeFixture: Complete<PerceptionMode> = {
   cable: false,
   radio: true,
   byod: true,
-  urgent: false,
-  info: false,
-  warning: false,
   light: true,
   fullBody: true,
   isEasyToUnderstand: true,

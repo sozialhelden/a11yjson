@@ -24,7 +24,7 @@ describe('Media schema', () => {
       type: 'website',
       languages: ['invalid'],
     }, [
-      { type: 'notAllowed', name: 'languages.0' },
+      { type: 'unknownLanguageTag', name: 'languages.0' },
     ]);
   });
 });

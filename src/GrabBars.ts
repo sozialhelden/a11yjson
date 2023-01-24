@@ -1,7 +1,7 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import BooleanField from './BooleanField';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable';
-import { getPrefixedQuantitySchemaDefinition, Length, LengthSchemaDefinition } from './Quantity';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity';
 
 export const GrabBarsInteractions = ['localizeYourself', 'findYourDestination'] as const;
 export type GrabBarsInteraction = typeof GrabBarsInteractions[number];
@@ -63,8 +63,8 @@ export const getGrabBarsSchemaDefinition: () => SchemaDefinition = () => ({
   onUsersLeftSide: BooleanField,
   onUsersRightSide: BooleanField,
   inFrontOfTheUser: BooleanField,
-  ...getPrefixedQuantitySchemaDefinition('topHeightFromFloor', LengthSchemaDefinition),
-  ...getPrefixedQuantitySchemaDefinition('distanceBetweenBars', LengthSchemaDefinition),
+  ...getPrefixedQuantitySchemaDefinition('topHeightFromFloor', LengthSchema),
+  ...getPrefixedQuantitySchemaDefinition('distanceBetweenBars', LengthSchema),
   foldable: BooleanField,
   continuous: BooleanField,
   ...getInteractableSchemaDefinition(GrabBarsInteractions),
