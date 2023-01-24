@@ -1,6 +1,6 @@
-import { getLocalizedStringSchemaDefinition } from '.';
-import expectInvalidFixture from './lib/expectInvalidFixture';
-import expectValidFixture from './lib/expectValidFixture';
+import { getLocalizedStringSchemaDefinition } from './index.js';
+import expectInvalidFixture from './lib/expectInvalidFixture.js';
+import expectValidFixture from './lib/expectValidFixture.js';
 
 const definition = getLocalizedStringSchemaDefinition('test');
 

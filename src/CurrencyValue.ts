@@ -1,9 +1,9 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 
-import { AccessType, AccessTypes } from './AccessType';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
-import { getPaymentSchemaDefinition, Payment } from './Payment';
-import { BaseQuantitySchema, getPrefixedQuantitySchemaDefinition, Quantity } from './Quantity';
+import { AccessType, AccessTypes } from './AccessType.js';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
+import { getPaymentSchemaDefinition, Payment } from './Payment.js';
+import { BaseQuantitySchema, getPrefixedQuantitySchemaDefinition, Quantity } from './Quantity.js';
 
 /**
  * Describes an amount of paid money in a specific currency, per specified unit, for a specific kind

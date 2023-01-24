@@ -1,6 +1,6 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import { getInteractableSchemaDefinition, Interactable } from './Interactable';
-import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity.js';
 
 export const WashBashinInteractions = [
   'changeTemperature',

@@ -1,6 +1,6 @@
-import { getWifiAccessibilitySchemaDefinition } from './WifiAccessibility';
-import expectValidFixture from './lib/expectValidFixture';
-import wifiAccessibilityFixture from './wifiAccessibilityFixture';
+import { getWifiAccessibilitySchemaDefinition } from './WifiAccessibility.js';
+import expectValidFixture from './lib/expectValidFixture.js';
+import wifiAccessibilityFixture from './wifiAccessibilityFixture.js';
 
 const definition = getWifiAccessibilitySchemaDefinition();
 

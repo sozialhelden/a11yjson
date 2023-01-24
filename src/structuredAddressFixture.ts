@@ -1,5 +1,5 @@
-import { StructuredAddress } from './Address';
-import { Complete } from './Complete';
+import { StructuredAddress } from './Address.js';
+import { Complete } from './Complete.js';
 
 const structuredAddressFixture: Complete<StructuredAddress> = {
   text: { en: 'Testweg 12, Berlin' },

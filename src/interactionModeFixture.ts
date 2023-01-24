@@ -1,5 +1,5 @@
-import { Complete } from './Complete';
-import { InteractionMode } from './InteractionMode';
+import { Complete } from './Complete.js';
+import { InteractionMode } from './InteractionMode.js';
 
 const interactionModeFixture: Complete<InteractionMode> = {
   name: { en: 'Reaction test' },

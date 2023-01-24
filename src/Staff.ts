@@ -1,5 +1,5 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags';
+import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags.js';
 
 /**
  * Describes the presence of staff and their qualifications and/or provided services.

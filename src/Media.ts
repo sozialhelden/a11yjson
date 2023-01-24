@@ -1,13 +1,13 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 
-import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity';
-import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
-import { W3CAccessibilityFeature, w3cAccessibilityFeatures } from './W3CAccessibilityFeature';
-import { W3CAccessibilityHazard, w3cAccessibilityHazards } from './W3CAccessibilityHazard';
-import { W3CAccessMode, w3cAccessModes } from './W3CAccessMode';
-import { w3cAccessibilityControls, W3CAccessibilityControl } from './W3CAccessibilityControl';
-import validateUrl from './validateUrl';
-import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity.js';
+import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
+import { W3CAccessibilityFeature, w3cAccessibilityFeatures } from './W3CAccessibilityFeature.js';
+import { W3CAccessibilityHazard, w3cAccessibilityHazards } from './W3CAccessibilityHazard.js';
+import { W3CAccessMode, w3cAccessModes } from './W3CAccessMode.js';
+import { w3cAccessibilityControls, W3CAccessibilityControl } from './W3CAccessibilityControl.js';
+import validateUrl from './validateUrl.js';
+import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags.js';
 
 export const MediaInteractions = [
   'watch',

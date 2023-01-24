@@ -1,7 +1,7 @@
-import { EntranceProperties } from './EntranceProperties';
-import doorFixture from './doorFixture';
-import stairsFixture from './stairsFixture';
-import { Complete } from './Complete';
+import { EntranceProperties } from './EntranceProperties.js';
+import doorFixture from './doorFixture.js';
+import stairsFixture from './stairsFixture.js';
+import { Complete } from './Complete.js';
 
 const entrancePropertiesFixture: Complete<EntranceProperties> = {
   name: { en: 'string' },

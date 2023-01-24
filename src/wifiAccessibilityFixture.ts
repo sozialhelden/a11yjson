@@ -1,5 +1,5 @@
-import { WifiAccessibility } from './WifiAccessibility';
-import { Complete } from './Complete';
+import { WifiAccessibility } from './WifiAccessibility.js';
+import { Complete } from './Complete.js';
 
 const wifiAccessibilityFixture: Complete<WifiAccessibility> = {
   access: ['public'],

@@ -1,5 +1,5 @@
-import { Parking } from './Parking';
-import { Complete } from './Complete';
+import { Parking } from './Parking.js';
+import { Complete } from './Complete.js';
 
 const parkingFixture: Complete<Parking> = {
   count: 14,

@@ -1,6 +1,6 @@
-import { getGrabBarsSchemaDefinition } from './GrabBars';
-import expectValidFixture from './lib/expectValidFixture';
-import grabBarsFixture from './grabBarsFixture';
+import { getGrabBarsSchemaDefinition } from './GrabBars.js';
+import expectValidFixture from './lib/expectValidFixture.js';
+import grabBarsFixture from './grabBarsFixture.js';
 
 const definition = getGrabBarsSchemaDefinition();
 

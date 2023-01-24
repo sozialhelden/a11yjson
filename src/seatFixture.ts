@@ -1,7 +1,7 @@
-import { Seat } from './Seat';
-import { Complete } from './Complete';
-import paymentFixture from './paymentFixture';
-import intercomFixture from './intercomFixture';
+import { Seat } from './Seat.js';
+import { Complete } from './Complete.js';
+import paymentFixture from './paymentFixture.js';
+import intercomFixture from './intercomFixture.js';
 
 const seatFixture: Complete<Seat> = {
   name: { en: 'Front seats in a cinema' },

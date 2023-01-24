@@ -1,6 +1,6 @@
-import { PlaceInfo } from './PlaceInfo';
-import pointGeometryFixture from './pointGeometryFixture';
-import placePropertiesFixture from './placePropertiesFixture';
+import { PlaceInfo } from './PlaceInfo.js';
+import pointGeometryFixture from './pointGeometryFixture.js';
+import placePropertiesFixture from './placePropertiesFixture.js';
 
 const placeInfoFixture: PlaceInfo = {
   properties: placePropertiesFixture,

@@ -1,6 +1,6 @@
-import { getStairsSchemaDefinition } from './Stairs';
-import expectValidFixture from './lib/expectValidFixture';
-import stairsFixture from './stairsFixture';
+import { getStairsSchemaDefinition } from './Stairs.js';
+import expectValidFixture from './lib/expectValidFixture.js';
+import stairsFixture from './stairsFixture.js';
 
 const definition = getStairsSchemaDefinition();
 

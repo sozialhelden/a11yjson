@@ -1,5 +1,5 @@
-import { Intercom } from './Intercom';
-import { Complete } from './Complete';
+import { Intercom } from './Intercom.js';
+import { Complete } from './Complete.js';
 
 const intercomFixture: Complete<Intercom> = {
   description: { en: 'doorbell' },

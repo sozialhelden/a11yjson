@@ -1,8 +1,8 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity';
-import BooleanField from './BooleanField';
-import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
-import { getInteractableSchemaDefinition, Interactable } from './Interactable';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity.js';
+import BooleanField from './BooleanField.js';
+import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
 
 export const SignageInteractions = [
   'locateYourself',

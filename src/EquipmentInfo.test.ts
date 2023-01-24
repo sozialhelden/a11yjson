@@ -1,6 +1,6 @@
-import { getEquipmentInfoSchemaDefinition } from './EquipmentInfo';
-import expectValidFixture from './lib/expectValidFixture';
-import equipmentInfoFixture from './equipmentInfoFixture';
+import { getEquipmentInfoSchemaDefinition } from './EquipmentInfo.js';
+import expectValidFixture from './lib/expectValidFixture.js';
+import equipmentInfoFixture from './equipmentInfoFixture.js';
 
 const definition = getEquipmentInfoSchemaDefinition();
 

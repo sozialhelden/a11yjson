@@ -1,7 +1,7 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import {
   getPrefixedQuantitySchemaDefinition, Length, LengthSchema, Slope, SlopeSchema,
-} from './Quantity';
+} from './Quantity.js';
 
 export const SurfaceTypeValues = [
   'acrylic',

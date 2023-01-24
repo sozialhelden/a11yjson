@@ -1,12 +1,12 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import BooleanField from './BooleanField';
-import { getInteractableSchemaDefinition, Interactable } from './Interactable';
-import { getIntercomSchemaDefinition, Intercom } from './Intercom';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
-import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
-import { getPaymentSchemaDefinition, Payment } from './Payment';
-import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity';
-import { getQueueSystemSchemaDefinition, QueueSystem } from './QueueSystem';
+import BooleanField from './BooleanField.js';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
+import { getIntercomSchemaDefinition, Intercom } from './Intercom.js';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
+import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
+import { getPaymentSchemaDefinition, Payment } from './Payment.js';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity.js';
+import { getQueueSystemSchemaDefinition, QueueSystem } from './QueueSystem.js';
 
 export const DeskInteractions = [
   'changeHeight',

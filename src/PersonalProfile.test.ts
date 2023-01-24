@@ -1,6 +1,6 @@
-import { getPersonalProfileSchemaDefinition } from './PersonalProfile';
-import expectValidFixture from './lib/expectValidFixture';
-import personalProfileFixture from './personalProfileFixture';
+import { getPersonalProfileSchemaDefinition } from './PersonalProfile.js';
+import expectValidFixture from './lib/expectValidFixture.js';
+import personalProfileFixture from './personalProfileFixture.js';
 
 const definition = getPersonalProfileSchemaDefinition();
 

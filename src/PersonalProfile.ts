@@ -1,5 +1,5 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import BooleanField from './BooleanField';
+import BooleanField from './BooleanField.js';
 
 /**
  * Describes a person. This exists only to transform data from sources where no physical attributes

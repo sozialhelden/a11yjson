@@ -1,8 +1,8 @@
-import { Door } from './Door';
-import { Complete } from './Complete';
-import intercomFixture from './intercomFixture';
-import grabBarsFixture from './grabBarsFixture';
-import interactionModeFixture from './interactionModeFixture';
+import { Door } from './Door.js';
+import { Complete } from './Complete.js';
+import intercomFixture from './intercomFixture.js';
+import grabBarsFixture from './grabBarsFixture.js';
+import interactionModeFixture from './interactionModeFixture.js';
 
 const doorFixture: Complete<Door> = {
   turningSpaceInFront: '<120cm',

@@ -1,6 +1,6 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 
-import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
+import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
 
 export const PaymentInteractions = [
   'pay',

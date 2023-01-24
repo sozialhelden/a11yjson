@@ -1,20 +1,20 @@
-import personalProfileFixture from './personalProfileFixture';
-import restroomFixture from './restroomFixture';
-import entranceFixture from './entranceFixture';
-import wheelchairPlacesFixture from './wheelchairPlacesFixture';
-import mediaFixture from './mediaFixture';
-import staffFixture from './staffFixture';
-import paymentFixture from './paymentFixture';
-import pathwaysFixture from './pathwaysFixture';
-import parkingFixture from './parkingFixture';
-import surfaceFixture from './surfaceFixture';
-import { Accessibility } from '.';
-import { Complete } from './Complete';
-import animalPolicyFixture from './animalPolicyFixture';
-import wifiAccessibilityFixture from './wifiAccessibilityFixture';
-import deskFixture from './deskFixture';
-import signageFixture from './signageFixture';
-import interactionModeFixture from './interactionModeFixture';
+import personalProfileFixture from './personalProfileFixture.js';
+import restroomFixture from './restroomFixture.js';
+import entranceFixture from './entranceFixture.js';
+import wheelchairPlacesFixture from './wheelchairPlacesFixture.js';
+import mediaFixture from './mediaFixture.js';
+import staffFixture from './staffFixture.js';
+import paymentFixture from './paymentFixture.js';
+import pathwaysFixture from './pathwaysFixture.js';
+import parkingFixture from './parkingFixture.js';
+import surfaceFixture from './surfaceFixture.js';
+import { Accessibility } from './index.js';
+import { Complete } from './Complete.js';
+import animalPolicyFixture from './animalPolicyFixture.js';
+import wifiAccessibilityFixture from './wifiAccessibilityFixture.js';
+import deskFixture from './deskFixture.js';
+import signageFixture from './signageFixture.js';
+import interactionModeFixture from './interactionModeFixture.js';
 
 const accessibilityFixture: Complete<Accessibility> = {
   accessibleWith: personalProfileFixture,

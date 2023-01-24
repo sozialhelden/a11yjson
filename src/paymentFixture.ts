@@ -1,5 +1,5 @@
-import { Payment } from './Payment';
-import { Complete } from './Complete';
+import { Payment } from './Payment.js';
+import { Complete } from './Complete.js';
 
 const paymentFixture: Complete<Payment> = {
   hasPortablePaymentSystem: true,

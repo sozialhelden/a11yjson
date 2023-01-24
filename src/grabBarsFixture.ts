@@ -1,6 +1,6 @@
-import { GrabBars } from './GrabBars';
-import { Complete } from './Complete';
-import interactionModeFixture from './interactionModeFixture';
+import { GrabBars } from './GrabBars.js';
+import { Complete } from './Complete.js';
+import interactionModeFixture from './interactionModeFixture.js';
 
 const grabBarsFixture: Complete<GrabBars> = {
   onUsersLeftSide: true,

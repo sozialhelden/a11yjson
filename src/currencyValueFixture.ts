@@ -1,6 +1,6 @@
-import { CurrencyValue } from './CurrencyValue';
-import { Complete } from './Complete';
-import paymentFixture from './paymentFixture';
+import { CurrencyValue } from './CurrencyValue.js';
+import { Complete } from './Complete.js';
+import paymentFixture from './paymentFixture.js';
 
 const currencyValueFixture: Complete<CurrencyValue> = {
   amount: 0.5,

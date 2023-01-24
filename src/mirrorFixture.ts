@@ -1,5 +1,5 @@
-import { Mirror } from './Mirror';
-import { Complete } from './Complete';
+import { Mirror } from './Mirror.js';
+import { Complete } from './Complete.js';
 
 const mirrorFixture: Complete<Mirror> = {
   isLocatedInsideRestroom: true,

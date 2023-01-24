@@ -1,13 +1,13 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import {
   Door, getDoorSchemaDefinition,
-} from './Door';
-import { getStairsSchemaDefinition, Stairs } from './Stairs';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
-import BooleanField from './BooleanField';
-import { getGrabBarsSchemaDefinition, GrabBars } from './GrabBars';
-import { getSeatSchemaDefinition, Seat } from './Seat';
-import { getInteractableSchemaDefinition, Interactable } from './Interactable';
+} from './Door.js';
+import { getStairsSchemaDefinition, Stairs } from './Stairs.js';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
+import BooleanField from './BooleanField.js';
+import { getGrabBarsSchemaDefinition, GrabBars } from './GrabBars.js';
+import { getSeatSchemaDefinition, Seat } from './Seat.js';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
 
 export const ShowerInteractions = [
   'transfer',

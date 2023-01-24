@@ -1,9 +1,9 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import BooleanField from './BooleanField';
-import htmlColorSchemaDefinition from './htmlColorSchemaDefinition';
-import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags';
-import { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition';
-import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
+import BooleanField from './BooleanField.js';
+import htmlColorSchemaDefinition from './htmlColorSchemaDefinition.js';
+import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags.js';
+import { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition.js';
+import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
 import {
   Force,
   Length,
@@ -22,8 +22,8 @@ import {
   TimeIntervalSchema,
   AccelerationSchema,
   TemperatureSchema,
-} from './Quantity';
-import { getTechCombinationSchemaDefinition, TechCombination } from './TechCombination';
+} from './Quantity.js';
+import { getTechCombinationSchemaDefinition, TechCombination } from './TechCombination.js';
 
 export const Urgencies = [
   'alert',

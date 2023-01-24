@@ -1,6 +1,6 @@
-import { Pathways } from './Pathways';
-import { Complete } from './Complete';
-import surfaceFixture from './surfaceFixture';
+import { Pathways } from './Pathways.js';
+import { Complete } from './Complete.js';
+import surfaceFixture from './surfaceFixture.js';
 
 const pathwaysFixture: Complete<Pathways> = {
   width: '>150cm',

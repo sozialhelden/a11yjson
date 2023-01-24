@@ -1,5 +1,5 @@
-import { Staff } from './Staff';
-import { Complete } from './Complete';
+import { Staff } from './Staff.js';
+import { Complete } from './Complete.js';
 
 const staffFixture: Complete<Staff> = {
   canSeeVisitorsFromInside: true,

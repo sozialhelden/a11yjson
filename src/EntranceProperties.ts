@@ -1,10 +1,10 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import { Door, getDoorSchemaDefinition } from './Door';
-import { Stairs, getStairsSchemaDefinition } from './Stairs';
-import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
-import { getPrefixedQuantitySchemaDefinition, Slope, SlopeSchema } from './Quantity';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
-import BooleanField from './BooleanField';
+import { Door, getDoorSchemaDefinition } from './Door.js';
+import { Stairs, getStairsSchemaDefinition } from './Stairs.js';
+import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
+import { getPrefixedQuantitySchemaDefinition, Slope, SlopeSchema } from './Quantity.js';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
+import BooleanField from './BooleanField.js';
 
 /**
  * Describes an entrance to a place.

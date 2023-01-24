@@ -1,6 +1,6 @@
-import { getAnimalPolicySchemaDefinition } from './AnimalPolicy';
-import animalPolicyFixture from './animalPolicyFixture';
-import expectValidFixture from './lib/expectValidFixture';
+import { getAnimalPolicySchemaDefinition } from './AnimalPolicy.js';
+import animalPolicyFixture from './animalPolicyFixture.js';
+import expectValidFixture from './lib/expectValidFixture.js';
 
 const definition = getAnimalPolicySchemaDefinition();
 

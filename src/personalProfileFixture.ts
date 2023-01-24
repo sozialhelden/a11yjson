@@ -1,5 +1,5 @@
-import { PersonalProfile } from './PersonalProfile';
-import { Complete } from './Complete';
+import { PersonalProfile } from './PersonalProfile.js';
+import { Complete } from './Complete.js';
 
 const personalProfileFixture: Complete<PersonalProfile> = {
   muteness: true,

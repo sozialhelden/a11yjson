@@ -10,20 +10,59 @@ Besides [interfaces](./interfaces.md) and [bare types](./type-aliases.md), A11yJ
 
 Some lack proper formatting in the documentation. Fixes in [`tools/generate-overview.ts`](https://github.com/sozialhelden/a11yjson/blob/master/tools/generate-overview.ts) are welcome!
 
-### <a id="AccelerationSchemaDefinition">AccelerationSchemaDefinition</a>
+### <a id="AccelerationSchema">AccelerationSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L173)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L182)</span>
 
-Validates a acceleration quantity object and will only accept acceleration units, eg.
-meter/second^2, miles/hour^2. Useful to describe the acceleration of a vehicle, or the
-acceleration that a person is subjected to.
+
 
 
 <details>
 <summary>JSON</summary>
 ```json
 {
-  "id": 841,
+  "id": 844,
+  "name": "AccelerationSchema",
+  "kind": 32,
+  "kindString": "Variable",
+  "flags": {
+    "isConst": true
+  },
+  "sources": [
+    {
+      "fileName": "Quantity.ts",
+      "line": 182,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L182"
+    }
+  ],
+  "type": {
+    "type": "reference",
+    "name": "SimpleSchema",
+    "qualifiedName": "SimpleSchema",
+    "package": "simpl-schema"
+  },
+  "defaultValue": "..."
+}
+```
+</details>
+
+
+`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+
+
+### <a id="AccelerationSchemaDefinition">AccelerationSchemaDefinition</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L178)</span>
+
+
+
+
+<details>
+<summary>JSON</summary>
+```json
+{
+  "id": 843,
   "name": "AccelerationSchemaDefinition",
   "kind": 32,
   "kindString": "Variable",
@@ -31,20 +70,26 @@ acceleration that a person is subjected to.
     "isConst": true
   },
   "comment": {
-    "shortText": "Validates a acceleration quantity object and will only accept acceleration units, eg.\nmeter/second^2, miles/hour^2. Useful to describe the acceleration of a vehicle, or the\nacceleration that a person is subjected to."
+    "summary": [
+      {
+        "kind": "text",
+        "text": "Validates a acceleration quantity object and will only accept acceleration units, eg.\nmeter/second^2, miles/hour^2. Useful to describe the acceleration of a vehicle, or the\nacceleration that a person is subjected to."
+      }
+    ]
   },
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 173,
-      "character": 13
+      "line": 178,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L178"
     }
   ],
   "type": {
     "type": "reference",
+    "name": "SchemaDefinition",
     "qualifiedName": "SchemaDefinition",
-    "package": "simpl-schema",
-    "name": "SchemaDefinition"
+    "package": "simpl-schema"
   },
   "defaultValue": "..."
 }
@@ -77,7 +122,8 @@ acceleration that a person is subjected to.
     {
       "fileName": "AccessType.ts",
       "line": 1,
-      "character": 13
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/AccessType.ts#L1"
     }
   ],
   "type": {
@@ -190,18 +236,100 @@ Read-only tuple with 15 strings:
 
 
 
-### <a id="BrightnessSchemaDefinition">BrightnessSchemaDefinition</a>
+### <a id="BaseQuantitySchema">BaseQuantitySchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L213)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L140)</span>
 
-Validates a brightness descriptor and will only accept brightness units, eg. nits or lumens.
+
 
 
 <details>
 <summary>JSON</summary>
 ```json
 {
-  "id": 848,
+  "id": 838,
+  "name": "BaseQuantitySchema",
+  "kind": 32,
+  "kindString": "Variable",
+  "flags": {
+    "isConst": true
+  },
+  "sources": [
+    {
+      "fileName": "Quantity.ts",
+      "line": 140,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L140"
+    }
+  ],
+  "type": {
+    "type": "reference",
+    "name": "SimpleSchema",
+    "qualifiedName": "SimpleSchema",
+    "package": "simpl-schema"
+  },
+  "defaultValue": "..."
+}
+```
+</details>
+
+
+`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+
+
+### <a id="BrightnessSchema">BrightnessSchema</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L226)</span>
+
+
+
+
+<details>
+<summary>JSON</summary>
+```json
+{
+  "id": 858,
+  "name": "BrightnessSchema",
+  "kind": 32,
+  "kindString": "Variable",
+  "flags": {
+    "isConst": true
+  },
+  "sources": [
+    {
+      "fileName": "Quantity.ts",
+      "line": 226,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L226"
+    }
+  ],
+  "type": {
+    "type": "reference",
+    "name": "SimpleSchema",
+    "qualifiedName": "SimpleSchema",
+    "package": "simpl-schema"
+  },
+  "defaultValue": "..."
+}
+```
+</details>
+
+
+`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+
+
+### <a id="BrightnessSchemaDefinition">BrightnessSchemaDefinition</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L225)</span>
+
+
+
+
+<details>
+<summary>JSON</summary>
+```json
+{
+  "id": 857,
   "name": "BrightnessSchemaDefinition",
   "kind": 32,
   "kindString": "Variable",
@@ -209,20 +337,26 @@ Validates a brightness descriptor and will only accept brightness units, eg. nit
     "isConst": true
   },
   "comment": {
-    "shortText": "Validates a brightness descriptor and will only accept brightness units, eg. nits or lumens."
+    "summary": [
+      {
+        "kind": "text",
+        "text": "Validates a brightness descriptor and will only accept brightness units, eg. nits or lumens."
+      }
+    ]
   },
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 213,
-      "character": 13
+      "line": 225,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L225"
     }
   ],
   "type": {
     "type": "reference",
+    "name": "SchemaDefinition",
     "qualifiedName": "SchemaDefinition",
-    "package": "simpl-schema",
-    "name": "SchemaDefinition"
+    "package": "simpl-schema"
   },
   "defaultValue": "..."
 }
@@ -255,7 +389,8 @@ Validates a brightness descriptor and will only accept brightness units, eg. nit
     {
       "fileName": "Desk.ts",
       "line": 11,
-      "character": 13
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Desk.ts#L11"
     }
   ],
   "type": {
@@ -402,7 +537,7 @@ Read-only tuple with 20 strings:
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L27)</span>
 
-Describes a physical direction axis relative to a person’s body.
+
 
 
 <details>
@@ -417,11 +552,21 @@ Describes a physical direction axis relative to a person’s body.
     "isConst": true
   },
   "comment": {
-    "shortText": "Describes a physical direction axis relative to a person’s body.",
-    "tags": [
+    "summary": [
       {
-        "tag": "see",
-        "text": "https://wisc.pb.unizin.org/app/uploads/sites/123/2018/10/Anatomical-Planes-and-Axes.jpg\n"
+        "kind": "text",
+        "text": "Describes a physical direction axis relative to a person’s body."
+      }
+    ],
+    "blockTags": [
+      {
+        "tag": "@see",
+        "content": [
+          {
+            "kind": "text",
+            "text": "https://wisc.pb.unizin.org/app/uploads/sites/123/2018/10/Anatomical-Planes-and-Axes.jpg"
+          }
+        ]
       }
     ]
   },
@@ -429,7 +574,8 @@ Describes a physical direction axis relative to a person’s body.
     {
       "fileName": "ActionMode.ts",
       "line": 27,
-      "character": 13
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/ActionMode.ts#L27"
     }
   ],
   "type": {
@@ -474,7 +620,7 @@ Read-only tuple with 3 strings:
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L43)</span>
 
-Describes physical directions, from the perspective of a person facing forward.
+
 
 
 <details>
@@ -489,13 +635,19 @@ Describes physical directions, from the perspective of a person facing forward.
     "isConst": true
   },
   "comment": {
-    "shortText": "Describes physical directions, from the perspective of a person facing forward."
+    "summary": [
+      {
+        "kind": "text",
+        "text": "Describes physical directions, from the perspective of a person facing forward."
+      }
+    ]
   },
   "sources": [
     {
       "fileName": "ActionMode.ts",
       "line": 43,
-      "character": 13
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/ActionMode.ts#L43"
     }
   ],
   "type": {
@@ -588,7 +740,8 @@ Read-only tuple with 8 strings:
     {
       "fileName": "Door.ts",
       "line": 18,
-      "character": 13
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Door.ts#L18"
     }
   ],
   "type": {
@@ -675,7 +828,8 @@ Read-only tuple with 7 strings:
     {
       "fileName": "EquipmentProperties.ts",
       "line": 39,
-      "character": 13
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/EquipmentProperties.ts#L39"
     }
   ],
   "type": {
@@ -840,7 +994,8 @@ Read-only tuple with 20 strings:
     {
       "fileName": "EquipmentProperties.ts",
       "line": 18,
-      "character": 13
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/EquipmentProperties.ts#L18"
     }
   ],
   "type": {
@@ -959,19 +1114,59 @@ Read-only tuple with 16 strings:
 
 
 
-### <a id="ForceSchemaDefinition">ForceSchemaDefinition</a>
+### <a id="ForceSchema">ForceSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L182)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L189)</span>
 
-Validates a force quantity object and will only accept force units, eg. newton, or
-kilogram*meter/second^2.
+
 
 
 <details>
 <summary>JSON</summary>
 ```json
 {
-  "id": 842,
+  "id": 846,
+  "name": "ForceSchema",
+  "kind": 32,
+  "kindString": "Variable",
+  "flags": {
+    "isConst": true
+  },
+  "sources": [
+    {
+      "fileName": "Quantity.ts",
+      "line": 189,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L189"
+    }
+  ],
+  "type": {
+    "type": "reference",
+    "name": "SimpleSchema",
+    "qualifiedName": "SimpleSchema",
+    "package": "simpl-schema"
+  },
+  "defaultValue": "..."
+}
+```
+</details>
+
+
+`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+
+
+### <a id="ForceSchemaDefinition">ForceSchemaDefinition</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L188)</span>
+
+
+
+
+<details>
+<summary>JSON</summary>
+```json
+{
+  "id": 845,
   "name": "ForceSchemaDefinition",
   "kind": 32,
   "kindString": "Variable",
@@ -979,20 +1174,26 @@ kilogram*meter/second^2.
     "isConst": true
   },
   "comment": {
-    "shortText": "Validates a force quantity object and will only accept force units, eg. newton, or\nkilogram*meter/second^2."
+    "summary": [
+      {
+        "kind": "text",
+        "text": "Validates a force quantity object and will only accept force units, eg. newton, or\nkilogram*meter/second^2."
+      }
+    ]
   },
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 182,
-      "character": 13
+      "line": 188,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L188"
     }
   ],
   "type": {
     "type": "reference",
+    "name": "SchemaDefinition",
     "qualifiedName": "SchemaDefinition",
-    "package": "simpl-schema",
-    "name": "SchemaDefinition"
+    "package": "simpl-schema"
   },
   "defaultValue": "..."
 }
@@ -1025,7 +1226,8 @@ kilogram*meter/second^2.
     {
       "fileName": "Accessibility.ts",
       "line": 49,
-      "character": 13
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Accessibility.ts#L49"
     }
   ],
   "type": {
@@ -1214,7 +1416,8 @@ Read-only tuple with 24 strings:
     {
       "fileName": "GrabBars.ts",
       "line": 6,
-      "character": 13
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/GrabBars.ts#L6"
     }
   ],
   "type": {
@@ -1249,18 +1452,59 @@ Read-only tuple with 2 strings:
 
 
 
-### <a id="HertzSchemaDefinition">HertzSchemaDefinition</a>
+### <a id="HertzSchema">HertzSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L203)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L214)</span>
 
-Validates a frequency quantity object and will only accept frequency units, eg. hertz.
+
 
 
 <details>
 <summary>JSON</summary>
 ```json
 {
-  "id": 846,
+  "id": 854,
+  "name": "HertzSchema",
+  "kind": 32,
+  "kindString": "Variable",
+  "flags": {
+    "isConst": true
+  },
+  "sources": [
+    {
+      "fileName": "Quantity.ts",
+      "line": 214,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L214"
+    }
+  ],
+  "type": {
+    "type": "reference",
+    "name": "SimpleSchema",
+    "qualifiedName": "SimpleSchema",
+    "package": "simpl-schema"
+  },
+  "defaultValue": "..."
+}
+```
+</details>
+
+
+`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+
+
+### <a id="HertzSchemaDefinition">HertzSchemaDefinition</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L213)</span>
+
+
+
+
+<details>
+<summary>JSON</summary>
+```json
+{
+  "id": 853,
   "name": "HertzSchemaDefinition",
   "kind": 32,
   "kindString": "Variable",
@@ -1268,20 +1512,26 @@ Validates a frequency quantity object and will only accept frequency units, eg. 
     "isConst": true
   },
   "comment": {
-    "shortText": "Validates a frequency quantity object and will only accept frequency units, eg. hertz."
+    "summary": [
+      {
+        "kind": "text",
+        "text": "Validates a frequency quantity object and will only accept frequency units, eg. hertz."
+      }
+    ]
   },
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 203,
-      "character": 13
+      "line": 213,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L213"
     }
   ],
   "type": {
     "type": "reference",
+    "name": "SchemaDefinition",
     "qualifiedName": "SchemaDefinition",
-    "package": "simpl-schema",
-    "name": "SchemaDefinition"
+    "package": "simpl-schema"
   },
   "defaultValue": "..."
 }
@@ -1314,7 +1564,8 @@ Validates a frequency quantity object and will only accept frequency units, eg. 
     {
       "fileName": "Intercom.ts",
       "line": 13,
-      "character": 13
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Intercom.ts#L13"
     }
   ],
   "type": {
@@ -1373,12 +1624,52 @@ Read-only tuple with 6 strings:
 
 
 
+### <a id="LengthSchema">LengthSchema</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L164)</span>
+
+
+
+
+<details>
+<summary>JSON</summary>
+```json
+{
+  "id": 840,
+  "name": "LengthSchema",
+  "kind": 32,
+  "kindString": "Variable",
+  "flags": {
+    "isConst": true
+  },
+  "sources": [
+    {
+      "fileName": "Quantity.ts",
+      "line": 164,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L164"
+    }
+  ],
+  "type": {
+    "type": "reference",
+    "name": "SimpleSchema",
+    "qualifiedName": "SimpleSchema",
+    "package": "simpl-schema"
+  },
+  "defaultValue": "..."
+}
+```
+</details>
+
+
+`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+
+
 ### <a id="LengthSchemaDefinition">LengthSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L160)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L163)</span>
 
-Validates a length quantity object and will only accept length units, eg. meter, centimeter or
-inch.
+
 
 
 <details>
@@ -1393,20 +1684,26 @@ inch.
     "isConst": true
   },
   "comment": {
-    "shortText": "Validates a length quantity object and will only accept length units, eg. meter, centimeter or\ninch."
+    "summary": [
+      {
+        "kind": "text",
+        "text": "Validates a length quantity object and will only accept length units, eg. meter, centimeter or\ninch."
+      }
+    ]
   },
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 160,
-      "character": 13
+      "line": 163,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L163"
     }
   ],
   "type": {
     "type": "reference",
+    "name": "SchemaDefinition",
     "qualifiedName": "SchemaDefinition",
-    "package": "simpl-schema",
-    "name": "SchemaDefinition"
+    "package": "simpl-schema"
   },
   "defaultValue": "..."
 }
@@ -1417,19 +1714,59 @@ inch.
 `SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
 
 
-### <a id="MassSchemaDefinition">MassSchemaDefinition</a>
+### <a id="MassSchema">MassSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L193)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L202)</span>
 
-Validates a mass quantity object and will only accept mass/weight units, eg. kilogram, gram or
-pound.
+
 
 
 <details>
 <summary>JSON</summary>
 ```json
 {
-  "id": 844,
+  "id": 850,
+  "name": "MassSchema",
+  "kind": 32,
+  "kindString": "Variable",
+  "flags": {
+    "isConst": true
+  },
+  "sources": [
+    {
+      "fileName": "Quantity.ts",
+      "line": 202,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L202"
+    }
+  ],
+  "type": {
+    "type": "reference",
+    "name": "SimpleSchema",
+    "qualifiedName": "SimpleSchema",
+    "package": "simpl-schema"
+  },
+  "defaultValue": "..."
+}
+```
+</details>
+
+
+`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+
+
+### <a id="MassSchemaDefinition">MassSchemaDefinition</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L201)</span>
+
+
+
+
+<details>
+<summary>JSON</summary>
+```json
+{
+  "id": 849,
   "name": "MassSchemaDefinition",
   "kind": 32,
   "kindString": "Variable",
@@ -1437,20 +1774,26 @@ pound.
     "isConst": true
   },
   "comment": {
-    "shortText": "Validates a mass quantity object and will only accept mass/weight units, eg. kilogram, gram or\npound."
+    "summary": [
+      {
+        "kind": "text",
+        "text": "Validates a mass quantity object and will only accept mass/weight units, eg. kilogram, gram or\npound."
+      }
+    ]
   },
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 193,
-      "character": 13
+      "line": 201,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L201"
     }
   ],
   "type": {
     "type": "reference",
+    "name": "SchemaDefinition",
     "qualifiedName": "SchemaDefinition",
-    "package": "simpl-schema",
-    "name": "SchemaDefinition"
+    "package": "simpl-schema"
   },
   "defaultValue": "..."
 }
@@ -1463,7 +1806,7 @@ pound.
 
 ### <a id="MediaInteractions">MediaInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L13)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L12)</span>
 
 
 
@@ -1482,8 +1825,9 @@ pound.
   "sources": [
     {
       "fileName": "Media.ts",
-      "line": 13,
-      "character": 13
+      "line": 12,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Media.ts#L12"
     }
   ],
   "type": {
@@ -1574,7 +1918,7 @@ Read-only tuple with 11 strings:
 
 ### <a id="MediaTypes">MediaTypes</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L28)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L27)</span>
 
 
 
@@ -1593,8 +1937,9 @@ Read-only tuple with 11 strings:
   "sources": [
     {
       "fileName": "Media.ts",
-      "line": 28,
-      "character": 13
+      "line": 27,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Media.ts#L27"
     }
   ],
   "type": {
@@ -1699,7 +2044,8 @@ Read-only tuple with 10 strings:
     {
       "fileName": "Mirror.ts",
       "line": 6,
-      "character": 13
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Mirror.ts#L6"
     }
   ],
   "type": {
@@ -1754,16 +2100,16 @@ Read-only tuple with 5 strings:
 
 ### <a id="Operators">Operators</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L68)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L69)</span>
 
-The allowed operators for comparison quantities
+
 
 
 <details>
 <summary>JSON</summary>
 ```json
 {
-  "id": 793,
+  "id": 792,
   "name": "Operators",
   "kind": 32,
   "kindString": "Variable",
@@ -1771,13 +2117,19 @@ The allowed operators for comparison quantities
     "isConst": true
   },
   "comment": {
-    "shortText": "The allowed operators for comparison quantities"
+    "summary": [
+      {
+        "kind": "text",
+        "text": "The allowed operators for comparison quantities"
+      }
+    ]
   },
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 68,
-      "character": 13
+      "line": 69,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L69"
     }
   ],
   "type": {
@@ -1856,7 +2208,7 @@ Read-only tuple with 9 strings:
 
 ### <a id="ParkingInteractions">ParkingInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Parking.ts#L10)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Parking.ts#L9)</span>
 
 
 
@@ -1875,8 +2227,9 @@ Read-only tuple with 9 strings:
   "sources": [
     {
       "fileName": "Parking.ts",
-      "line": 10,
-      "character": 13
+      "line": 9,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Parking.ts#L9"
     }
   ],
   "type": {
@@ -1925,7 +2278,7 @@ Read-only tuple with 4 strings:
 
 ### <a id="PaymentInteractions">PaymentInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Payment.ts#L6)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Payment.ts#L5)</span>
 
 
 
@@ -1944,8 +2297,9 @@ Read-only tuple with 4 strings:
   "sources": [
     {
       "fileName": "Payment.ts",
-      "line": 6,
-      "character": 13
+      "line": 5,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Payment.ts#L5"
     }
   ],
   "type": {
@@ -2000,7 +2354,7 @@ Read-only tuple with 5 strings:
 
 ### <a id="QueueSystemInteractions">QueueSystemInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/QueueSystem.ts#L8)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/QueueSystem.ts#L7)</span>
 
 
 
@@ -2009,7 +2363,7 @@ Read-only tuple with 5 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 861,
+  "id": 872,
   "name": "QueueSystemInteractions",
   "kind": 32,
   "kindString": "Variable",
@@ -2019,8 +2373,9 @@ Read-only tuple with 5 strings:
   "sources": [
     {
       "fileName": "QueueSystem.ts",
-      "line": 8,
-      "character": 13
+      "line": 7,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/QueueSystem.ts#L7"
     }
   ],
   "type": {
@@ -2108,7 +2463,7 @@ Read-only tuple with 9 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 605,
+  "id": 604,
   "name": "RestroomSignIcons",
   "kind": 32,
   "kindString": "Variable",
@@ -2119,7 +2474,8 @@ Read-only tuple with 9 strings:
     {
       "fileName": "Restroom.ts",
       "line": 15,
-      "character": 13
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Restroom.ts#L15"
     }
   ],
   "type": {
@@ -2213,7 +2569,7 @@ Read-only tuple with 10 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 634,
+  "id": 633,
   "name": "RoomInteractions",
   "kind": 32,
   "kindString": "Variable",
@@ -2224,7 +2580,8 @@ Read-only tuple with 10 strings:
     {
       "fileName": "Room.ts",
       "line": 8,
-      "character": 13
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Room.ts#L8"
     }
   ],
   "type": {
@@ -2330,7 +2687,7 @@ Read-only tuple with 12 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 644,
+  "id": 643,
   "name": "SeatInteractions",
   "kind": 32,
   "kindString": "Variable",
@@ -2341,7 +2698,8 @@ Read-only tuple with 12 strings:
     {
       "fileName": "Seat.ts",
       "line": 16,
-      "character": 13
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Seat.ts#L16"
     }
   ],
   "type": {
@@ -2501,7 +2859,7 @@ Read-only tuple with 21 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 698,
+  "id": 697,
   "name": "ShowerInteractions",
   "kind": 32,
   "kindString": "Variable",
@@ -2512,7 +2870,8 @@ Read-only tuple with 21 strings:
     {
       "fileName": "Shower.ts",
       "line": 12,
-      "character": 13
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Shower.ts#L12"
     }
   ],
   "type": {
@@ -2600,7 +2959,7 @@ Read-only tuple with 9 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 673,
+  "id": 672,
   "name": "SignageInteractions",
   "kind": 32,
   "kindString": "Variable",
@@ -2611,7 +2970,8 @@ Read-only tuple with 9 strings:
     {
       "fileName": "Signage.ts",
       "line": 7,
-      "character": 13
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Signage.ts#L7"
     }
   ],
   "type": {
@@ -2652,18 +3012,59 @@ Read-only tuple with 3 strings:
 
 
 
-### <a id="SlopeSchemaDefinition">SlopeSchemaDefinition</a>
+### <a id="SlopeSchema">SlopeSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L208)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L220)</span>
 
-Validates a slope quantity object and will only accept units to descrie a slope, eg. degrees.
+
 
 
 <details>
 <summary>JSON</summary>
 ```json
 {
-  "id": 847,
+  "id": 856,
+  "name": "SlopeSchema",
+  "kind": 32,
+  "kindString": "Variable",
+  "flags": {
+    "isConst": true
+  },
+  "sources": [
+    {
+      "fileName": "Quantity.ts",
+      "line": 220,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L220"
+    }
+  ],
+  "type": {
+    "type": "reference",
+    "name": "SimpleSchema",
+    "qualifiedName": "SimpleSchema",
+    "package": "simpl-schema"
+  },
+  "defaultValue": "..."
+}
+```
+</details>
+
+
+`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+
+
+### <a id="SlopeSchemaDefinition">SlopeSchemaDefinition</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L219)</span>
+
+
+
+
+<details>
+<summary>JSON</summary>
+```json
+{
+  "id": 855,
   "name": "SlopeSchemaDefinition",
   "kind": 32,
   "kindString": "Variable",
@@ -2671,20 +3072,26 @@ Validates a slope quantity object and will only accept units to descrie a slope,
     "isConst": true
   },
   "comment": {
-    "shortText": "Validates a slope quantity object and will only accept units to descrie a slope, eg. degrees."
+    "summary": [
+      {
+        "kind": "text",
+        "text": "Validates a slope quantity object and will only accept units to descrie a slope, eg. degrees."
+      }
+    ]
   },
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 208,
-      "character": 13
+      "line": 219,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L219"
     }
   ],
   "type": {
     "type": "reference",
+    "name": "SchemaDefinition",
     "qualifiedName": "SchemaDefinition",
-    "package": "simpl-schema",
-    "name": "SchemaDefinition"
+    "package": "simpl-schema"
   },
   "defaultValue": "..."
 }
@@ -2706,7 +3113,7 @@ Validates a slope quantity object and will only accept units to descrie a slope,
 <summary>JSON</summary>
 ```json
 {
-  "id": 742,
+  "id": 741,
   "name": "SmoothnessTypeValues",
   "kind": 32,
   "kindString": "Variable",
@@ -2717,7 +3124,8 @@ Validates a slope quantity object and will only accept units to descrie a slope,
     {
       "fileName": "Surface.ts",
       "line": 169,
-      "character": 13
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Surface.ts#L169"
     }
   ],
   "type": {
@@ -2794,19 +3202,59 @@ Read-only tuple with 9 strings:
 
 
 
-### <a id="SpeedSchemaDefinition">SpeedSchemaDefinition</a>
+### <a id="SpeedSchema">SpeedSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L166)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L171)</span>
 
-Validates a speed quantity object and will only accept speed units, eg. meter/second, miles/hour
-or similar.
+
 
 
 <details>
 <summary>JSON</summary>
 ```json
 {
-  "id": 840,
+  "id": 842,
+  "name": "SpeedSchema",
+  "kind": 32,
+  "kindString": "Variable",
+  "flags": {
+    "isConst": true
+  },
+  "sources": [
+    {
+      "fileName": "Quantity.ts",
+      "line": 171,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L171"
+    }
+  ],
+  "type": {
+    "type": "reference",
+    "name": "SimpleSchema",
+    "qualifiedName": "SimpleSchema",
+    "package": "simpl-schema"
+  },
+  "defaultValue": "..."
+}
+```
+</details>
+
+
+`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+
+
+### <a id="SpeedSchemaDefinition">SpeedSchemaDefinition</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L170)</span>
+
+
+
+
+<details>
+<summary>JSON</summary>
+```json
+{
+  "id": 841,
   "name": "SpeedSchemaDefinition",
   "kind": 32,
   "kindString": "Variable",
@@ -2814,20 +3262,26 @@ or similar.
     "isConst": true
   },
   "comment": {
-    "shortText": "Validates a speed quantity object and will only accept speed units, eg. meter/second, miles/hour\nor similar."
+    "summary": [
+      {
+        "kind": "text",
+        "text": "Validates a speed quantity object and will only accept speed units, eg. meter/second, miles/hour\nor similar."
+      }
+    ]
   },
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 166,
-      "character": 13
+      "line": 170,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L170"
     }
   ],
   "type": {
     "type": "reference",
+    "name": "SchemaDefinition",
     "qualifiedName": "SchemaDefinition",
-    "package": "simpl-schema",
-    "name": "SchemaDefinition"
+    "package": "simpl-schema"
   },
   "defaultValue": "..."
 }
@@ -2849,7 +3303,7 @@ or similar.
 <summary>JSON</summary>
 ```json
 {
-  "id": 740,
+  "id": 739,
   "name": "SurfaceTypeValues",
   "kind": 32,
   "kindString": "Variable",
@@ -2860,7 +3314,8 @@ or similar.
     {
       "fileName": "Surface.ts",
       "line": 6,
-      "character": 13
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Surface.ts#L6"
     }
   ],
   "type": {
@@ -3831,19 +4286,59 @@ Read-only tuple with 158 strings:
 
 
 
-### <a id="TemperatureSchemaDefinition">TemperatureSchemaDefinition</a>
+### <a id="TemperatureSchema">TemperatureSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L219)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L236)</span>
 
-Validates a temperature quantity object and will only accept temperature units, eg. degrees
-celsius (`degC`), degrees Fahrenheit (`degF`) or kelvin (`K`).
+
 
 
 <details>
 <summary>JSON</summary>
 ```json
 {
-  "id": 849,
+  "id": 860,
+  "name": "TemperatureSchema",
+  "kind": 32,
+  "kindString": "Variable",
+  "flags": {
+    "isConst": true
+  },
+  "sources": [
+    {
+      "fileName": "Quantity.ts",
+      "line": 236,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L236"
+    }
+  ],
+  "type": {
+    "type": "reference",
+    "name": "SimpleSchema",
+    "qualifiedName": "SimpleSchema",
+    "package": "simpl-schema"
+  },
+  "defaultValue": "..."
+}
+```
+</details>
+
+
+`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+
+
+### <a id="TemperatureSchemaDefinition">TemperatureSchemaDefinition</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L232)</span>
+
+
+
+
+<details>
+<summary>JSON</summary>
+```json
+{
+  "id": 859,
   "name": "TemperatureSchemaDefinition",
   "kind": 32,
   "kindString": "Variable",
@@ -3851,20 +4346,50 @@ celsius (`degC`), degrees Fahrenheit (`degF`) or kelvin (`K`).
     "isConst": true
   },
   "comment": {
-    "shortText": "Validates a temperature quantity object and will only accept temperature units, eg. degrees\ncelsius (`degC`), degrees Fahrenheit (`degF`) or kelvin (`K`)."
+    "summary": [
+      {
+        "kind": "text",
+        "text": "Validates a temperature quantity object and will only accept temperature units, eg. degrees\ncelsius ("
+      },
+      {
+        "kind": "code",
+        "text": "`degC`"
+      },
+      {
+        "kind": "text",
+        "text": "), degrees Fahrenheit ("
+      },
+      {
+        "kind": "code",
+        "text": "`degF`"
+      },
+      {
+        "kind": "text",
+        "text": ") or kelvin ("
+      },
+      {
+        "kind": "code",
+        "text": "`K`"
+      },
+      {
+        "kind": "text",
+        "text": ")."
+      }
+    ]
   },
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 219,
-      "character": 13
+      "line": 232,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L232"
     }
   ],
   "type": {
     "type": "reference",
+    "name": "SchemaDefinition",
     "qualifiedName": "SchemaDefinition",
-    "package": "simpl-schema",
-    "name": "SchemaDefinition"
+    "package": "simpl-schema"
   },
   "defaultValue": "..."
 }
@@ -3875,18 +4400,59 @@ celsius (`degC`), degrees Fahrenheit (`degF`) or kelvin (`K`).
 `SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
 
 
-### <a id="TimeIntervalSchemaDefinition">TimeIntervalSchemaDefinition</a>
+### <a id="TimeIntervalSchema">TimeIntervalSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L187)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L195)</span>
 
-Validates a timer interval object and will only accept time units, eg. seconds, minutes or hours.
+
 
 
 <details>
 <summary>JSON</summary>
 ```json
 {
-  "id": 843,
+  "id": 848,
+  "name": "TimeIntervalSchema",
+  "kind": 32,
+  "kindString": "Variable",
+  "flags": {
+    "isConst": true
+  },
+  "sources": [
+    {
+      "fileName": "Quantity.ts",
+      "line": 195,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L195"
+    }
+  ],
+  "type": {
+    "type": "reference",
+    "name": "SimpleSchema",
+    "qualifiedName": "SimpleSchema",
+    "package": "simpl-schema"
+  },
+  "defaultValue": "..."
+}
+```
+</details>
+
+
+`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+
+
+### <a id="TimeIntervalSchemaDefinition">TimeIntervalSchemaDefinition</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L194)</span>
+
+
+
+
+<details>
+<summary>JSON</summary>
+```json
+{
+  "id": 847,
   "name": "TimeIntervalSchemaDefinition",
   "kind": 32,
   "kindString": "Variable",
@@ -3894,20 +4460,26 @@ Validates a timer interval object and will only accept time units, eg. seconds, 
     "isConst": true
   },
   "comment": {
-    "shortText": "Validates a timer interval object and will only accept time units, eg. seconds, minutes or hours."
+    "summary": [
+      {
+        "kind": "text",
+        "text": "Validates a timer interval object and will only accept time units, eg. seconds, minutes or hours."
+      }
+    ]
   },
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 187,
-      "character": 13
+      "line": 194,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L194"
     }
   ],
   "type": {
     "type": "reference",
+    "name": "SchemaDefinition",
     "qualifiedName": "SchemaDefinition",
-    "package": "simpl-schema",
-    "name": "SchemaDefinition"
+    "package": "simpl-schema"
   },
   "defaultValue": "..."
 }
@@ -3929,7 +4501,7 @@ Validates a timer interval object and will only accept time units, eg. seconds, 
 <summary>JSON</summary>
 ```json
 {
-  "id": 758,
+  "id": 757,
   "name": "ToiletInteractions",
   "kind": 32,
   "kindString": "Variable",
@@ -3940,7 +4512,8 @@ Validates a timer interval object and will only accept time units, eg. seconds, 
     {
       "fileName": "Toilet.ts",
       "line": 10,
-      "character": 13
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Toilet.ts#L10"
     }
   ],
   "type": {
@@ -3964,10 +4537,80 @@ Validates a timer interval object and will only accept time units, eg. seconds, 
         {
           "type": "literal",
           "value": "spray"
+        }
+      ]
+    }
+  },
+  "defaultValue": "..."
+}
+```
+</details>
+
+
+Read-only tuple with 4 strings:
+<ul>
+<li>`use`</li>
+
+<li>`flush`</li>
+
+<li>`secondaryFlush`</li>
+
+<li>`spray`</li>
+</ul>
+
+
+
+### <a id="Urgencies">Urgencies</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/PerceptionMode.ts#L28)</span>
+
+
+
+
+<details>
+<summary>JSON</summary>
+```json
+{
+  "id": 473,
+  "name": "Urgencies",
+  "kind": 32,
+  "kindString": "Variable",
+  "flags": {
+    "isConst": true
+  },
+  "sources": [
+    {
+      "fileName": "PerceptionMode.ts",
+      "line": 28,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/PerceptionMode.ts#L28"
+    }
+  ],
+  "type": {
+    "type": "typeOperator",
+    "operator": "readonly",
+    "target": {
+      "type": "tuple",
+      "elements": [
+        {
+          "type": "literal",
+          "value": "alert"
         },
         {
           "type": "literal",
-          "value": "washHands"
+          "value": "alarm"
+        },
+        {
+          "type": "literal",
+          "value": "warning"
+        },
+        {
+          "type": "literal",
+          "value": "info"
+        },
+        {
+          "type": "literal",
+          "value": "debug"
         }
       ]
     }
@@ -3980,31 +4623,72 @@ Validates a timer interval object and will only accept time units, eg. seconds, 
 
 Read-only tuple with 5 strings:
 <ul>
-<li>`use`</li>
+<li>`alert`</li>
 
-<li>`flush`</li>
+<li>`alarm`</li>
 
-<li>`secondaryFlush`</li>
+<li>`warning`</li>
 
-<li>`spray`</li>
+<li>`info`</li>
 
-<li>`washHands`</li>
+<li>`debug`</li>
 </ul>
 
 
 
-### <a id="VolumeSchemaDefinition">VolumeSchemaDefinition</a>
+### <a id="VolumeSchema">VolumeSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L198)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L208)</span>
 
-Validates a sound volume quantity object and will only accept sound volume units, eg. decibel.
+
 
 
 <details>
 <summary>JSON</summary>
 ```json
 {
-  "id": 845,
+  "id": 852,
+  "name": "VolumeSchema",
+  "kind": 32,
+  "kindString": "Variable",
+  "flags": {
+    "isConst": true
+  },
+  "sources": [
+    {
+      "fileName": "Quantity.ts",
+      "line": 208,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L208"
+    }
+  ],
+  "type": {
+    "type": "reference",
+    "name": "SimpleSchema",
+    "qualifiedName": "SimpleSchema",
+    "package": "simpl-schema"
+  },
+  "defaultValue": "..."
+}
+```
+</details>
+
+
+`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+
+
+### <a id="VolumeSchemaDefinition">VolumeSchemaDefinition</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L207)</span>
+
+
+
+
+<details>
+<summary>JSON</summary>
+```json
+{
+  "id": 851,
   "name": "VolumeSchemaDefinition",
   "kind": 32,
   "kindString": "Variable",
@@ -4012,20 +4696,26 @@ Validates a sound volume quantity object and will only accept sound volume units
     "isConst": true
   },
   "comment": {
-    "shortText": "Validates a sound volume quantity object and will only accept sound volume units, eg. decibel."
+    "summary": [
+      {
+        "kind": "text",
+        "text": "Validates a sound volume quantity object and will only accept sound volume units, eg. decibel."
+      }
+    ]
   },
   "sources": [
     {
       "fileName": "Quantity.ts",
-      "line": 198,
-      "character": 13
+      "line": 207,
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L207"
     }
   ],
   "type": {
     "type": "reference",
+    "name": "SchemaDefinition",
     "qualifiedName": "SchemaDefinition",
-    "package": "simpl-schema",
-    "name": "SchemaDefinition"
+    "package": "simpl-schema"
   },
   "defaultValue": "..."
 }
@@ -4047,7 +4737,7 @@ Validates a sound volume quantity object and will only accept sound volume units
 <summary>JSON</summary>
 ```json
 {
-  "id": 873,
+  "id": 884,
   "name": "WashBashinInteractions",
   "kind": 32,
   "kindString": "Variable",
@@ -4058,7 +4748,8 @@ Validates a sound volume quantity object and will only accept sound volume units
     {
       "fileName": "WashBasin.ts",
       "line": 5,
-      "character": 13
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/WashBasin.ts#L5"
     }
   ],
   "type": {
@@ -4163,8 +4854,7 @@ Read-only tuple with 13 strings:
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L28)</span>
 
-Describes the general wheelchair accessibility of the place. This is a human-rated value.
-It SHOULD conform to the traffic light system found in OpenStreetMap and Wheelmap.org.
+
 
 
 <details>
@@ -4179,13 +4869,19 @@ It SHOULD conform to the traffic light system found in OpenStreetMap and Wheelma
     "isConst": true
   },
   "comment": {
-    "shortText": "Describes the general wheelchair accessibility of the place. This is a human-rated value.\nIt SHOULD conform to the traffic light system found in OpenStreetMap and Wheelmap.org."
+    "summary": [
+      {
+        "kind": "text",
+        "text": "Describes the general wheelchair accessibility of the place. This is a human-rated value.\nIt SHOULD conform to the traffic light system found in OpenStreetMap and Wheelmap.org."
+      }
+    ]
   },
   "sources": [
     {
       "fileName": "Accessibility.ts",
       "line": 28,
-      "character": 13
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Accessibility.ts#L28"
     }
   ],
   "type": {
@@ -4237,7 +4933,7 @@ Read-only tuple with 3 strings:
 <summary>JSON</summary>
 ```json
 {
-  "id": 891,
+  "id": 902,
   "name": "WifiInteractions",
   "kind": 32,
   "kindString": "Variable",
@@ -4248,7 +4944,8 @@ Read-only tuple with 3 strings:
     {
       "fileName": "WifiAccessibility.ts",
       "line": 6,
-      "character": 13
+      "character": 13,
+      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/WifiAccessibility.ts#L6"
     }
   ],
   "type": {

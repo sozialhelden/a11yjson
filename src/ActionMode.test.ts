@@ -1,6 +1,6 @@
-import expectValidFixture from './lib/expectValidFixture';
-import { getActionModeSchemaDefinition } from './ActionMode';
-import actionModeFixture from './actionModeFixture';
+import expectValidFixture from './lib/expectValidFixture.js';
+import { getActionModeSchemaDefinition } from './ActionMode.js';
+import actionModeFixture from './actionModeFixture.js';
 
 const definition = getActionModeSchemaDefinition();
 

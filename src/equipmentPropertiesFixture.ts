@@ -1,7 +1,7 @@
-import { EquipmentProperties } from './EquipmentProperties';
-import { Complete } from './Complete';
-import doorFixture from './doorFixture';
-import intercomFixture from './intercomFixture';
+import { EquipmentProperties } from './EquipmentProperties.js';
+import { Complete } from './Complete.js';
+import doorFixture from './doorFixture.js';
+import intercomFixture from './intercomFixture.js';
 
 const equipmentPropertiesFixture: Complete<EquipmentProperties> = {
   description: { en: 'string' },

@@ -5,7 +5,7 @@ import {
   SchemaDefinition, SchemaKeyDefinitionWithOneType, ValidatorContext, ValidatorFunction,
 } from '../node_modules/simpl-schema/dist/esm/types.js';
 
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
 
 export enum UnitKind {
   Length = 'length',

@@ -1,10 +1,10 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import { getPointGeometrySchemaDefinition, PointGeometry } from './Geometry';
+import { getPointGeometrySchemaDefinition, PointGeometry } from './Geometry.js';
 import {
   EntranceProperties,
   getEntrancePropertiesSchemaDefinition,
-} from './EntranceProperties';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+} from './EntranceProperties.js';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
 
 /**
  * Describes an entrance to a `PlaceInfo`.

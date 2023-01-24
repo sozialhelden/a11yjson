@@ -1,10 +1,10 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import { ActionMode, getActionModeSchemaDefinition } from './ActionMode';
-import BooleanField from './BooleanField';
-import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
-import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
-import { getPerceptionModeSchemaDefinition, PerceptionMode } from './PerceptionMode';
+import { ActionMode, getActionModeSchemaDefinition } from './ActionMode.js';
+import BooleanField from './BooleanField.js';
+import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags.js';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
+import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
+import { getPerceptionModeSchemaDefinition, PerceptionMode } from './PerceptionMode.js';
 
 /**
  * Describes how you can interact with a thing and which abilities you need to do so.

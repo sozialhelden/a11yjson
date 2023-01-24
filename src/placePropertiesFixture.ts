@@ -1,7 +1,7 @@
-import { PlaceProperties } from './PlaceProperties';
-import accessibilityFixture from './accessibilityFixture';
-import structuredAddressFixture from './structuredAddressFixture';
-import { Complete } from './Complete';
+import { PlaceProperties } from './PlaceProperties.js';
+import accessibilityFixture from './accessibilityFixture.js';
+import structuredAddressFixture from './structuredAddressFixture.js';
+import { Complete } from './Complete.js';
 
 export const minimalPlaceProperties: PlaceProperties = {
   category: 'biergarten',

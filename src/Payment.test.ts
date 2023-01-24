@@ -1,6 +1,6 @@
-import { getPaymentSchemaDefinition } from './Payment';
-import expectValidFixture from './lib/expectValidFixture';
-import paymentFixture from './paymentFixture';
+import { getPaymentSchemaDefinition } from './Payment.js';
+import expectValidFixture from './lib/expectValidFixture.js';
+import paymentFixture from './paymentFixture.js';
 
 const definition = getPaymentSchemaDefinition();
 

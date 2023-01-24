@@ -1,5 +1,5 @@
-import { TechCombination } from './TechCombination';
-import { Complete } from './Complete';
+import { TechCombination } from './TechCombination.js';
+import { Complete } from './Complete.js';
 
 const techCombinationFixture: Complete<TechCombination> = {
   uris: [

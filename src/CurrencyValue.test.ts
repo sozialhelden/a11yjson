@@ -1,9 +1,9 @@
-import { getCurrencyValueSchemaDefinition } from './CurrencyValue';
-import expectValidFixture from './lib/expectValidFixture';
-import expectInvalidFixture from './lib/expectInvalidFixture';
+import { getCurrencyValueSchemaDefinition } from './CurrencyValue.js';
+import expectValidFixture from './lib/expectValidFixture.js';
+import expectInvalidFixture from './lib/expectInvalidFixture.js';
 import currencyValueFixture, {
   forFreeFixture, nonFreeFixtureWithoutCurrency, negativeAmountFixture,
-} from './currencyValueFixture';
+} from './currencyValueFixture.js';
 
 const definition = getCurrencyValueSchemaDefinition();
 

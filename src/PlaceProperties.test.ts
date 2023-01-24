@@ -1,7 +1,7 @@
-import { getPlacePropertiesSchemaDefinition } from './PlaceProperties';
-import expectInvalidFixture from './lib/expectInvalidFixture';
-import expectValidFixture from './lib/expectValidFixture';
-import placePropertiesFixture, { minimalPlaceProperties } from './placePropertiesFixture';
+import { getPlacePropertiesSchemaDefinition } from './PlaceProperties.js';
+import expectInvalidFixture from './lib/expectInvalidFixture.js';
+import expectValidFixture from './lib/expectValidFixture.js';
+import placePropertiesFixture, { minimalPlaceProperties } from './placePropertiesFixture.js';
 
 const definition = getPlacePropertiesSchemaDefinition();
 

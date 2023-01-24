@@ -1,5 +1,5 @@
-import { Complete } from './Complete';
-import { PerceptionMode } from './PerceptionMode';
+import { Complete } from './Complete.js';
+import { PerceptionMode } from './PerceptionMode.js';
 
 const perceptionModeFixture: Complete<PerceptionMode> = {
   speech: false,

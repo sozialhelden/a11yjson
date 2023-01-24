@@ -1,5 +1,5 @@
-import { Toilet } from './Toilet';
-import { Complete } from './Complete';
+import { Toilet } from './Toilet.js';
+import { Complete } from './Complete.js';
 
 const toiletFixture: Complete<Toilet> = {
   heightOfBase: '40 .. 45cm',

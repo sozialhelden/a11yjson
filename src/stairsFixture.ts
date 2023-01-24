@@ -1,6 +1,6 @@
-import { Stairs } from './Stairs';
-import { Complete } from './Complete';
-import grabBarsFixture from './grabBarsFixture';
+import { Stairs } from './Stairs.js';
+import { Complete } from './Complete.js';
+import grabBarsFixture from './grabBarsFixture.js';
 
 const stairsFixture: Complete<Stairs> = {
   count: 123,

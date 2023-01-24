@@ -1,10 +1,10 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import { AccessType, AccessTypes } from './AccessType';
-import BooleanField from './BooleanField';
-import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags';
-import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition';
-import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
-import { getPerceptionModeSchemaDefinition, PerceptionMode } from './PerceptionMode';
+import { AccessType, AccessTypes } from './AccessType.js';
+import BooleanField from './BooleanField.js';
+import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags.js';
+import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition.js';
+import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
+import { getPerceptionModeSchemaDefinition, PerceptionMode } from './PerceptionMode.js';
 import {
   Force,
   ForceSchema,
@@ -15,9 +15,9 @@ import {
   TimeIntervalSchema,
   Mass,
   MassSchema,
-} from './Quantity';
-import { getTechCombinationSchemaDefinition, TechCombination } from './TechCombination';
-import validateUrl from './validateUrl';
+} from './Quantity.js';
+import { getTechCombinationSchemaDefinition, TechCombination } from './TechCombination.js';
+import validateUrl from './validateUrl.js';
 
 /**
  * Describes a physical direction axis relative to a person’s body.

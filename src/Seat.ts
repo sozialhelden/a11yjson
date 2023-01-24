@@ -1,17 +1,17 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import {
   Direction, DirectionAxes, DirectionAxis, Directions,
-} from './ActionMode';
-import BooleanField from './BooleanField';
-import { getInteractableSchemaDefinition, Interactable } from './Interactable';
-import { getIntercomSchemaDefinition, Intercom } from './Intercom';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
-import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
-import { getPaymentSchemaDefinition, Payment } from './Payment';
-import { getPersonalProfileSchemaDefinition, PersonalProfile } from './PersonalProfile';
+} from './ActionMode.js';
+import BooleanField from './BooleanField.js';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
+import { getIntercomSchemaDefinition, Intercom } from './Intercom.js';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
+import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
+import { getPaymentSchemaDefinition, Payment } from './Payment.js';
+import { getPersonalProfileSchemaDefinition, PersonalProfile } from './PersonalProfile.js';
 import {
   getPrefixedQuantitySchemaDefinition, Length, LengthSchema,
-} from './Quantity';
+} from './Quantity.js';
 
 export const SeatInteractions = [
   'sit',

@@ -1,7 +1,7 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import { AccessType, AccessTypes } from './AccessType';
-import { CurrencyValue } from './CurrencyValue';
-import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
+import { AccessType, AccessTypes } from './AccessType.js';
+import { CurrencyValue } from './CurrencyValue.js';
+import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
 
 export const WifiInteractions = [
   'login',

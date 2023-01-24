@@ -1,16 +1,16 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import { Room, getRoomSchemaDefinition } from './Room';
-import { Mirror, getMirrorSchemaDefinition } from './Mirror';
-import { WashBasin, getWashBasinSchemaDefinition } from './WashBasin';
-import { Entrance, getEntranceSchemaDefinition } from './Entrance';
-import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity';
-import { Toilet, getToiletSchemaDefinition } from './Toilet';
-import { Shower, getShowerSchemaDefinition } from './Shower';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
-import { AccessType, AccessTypes } from './AccessType';
-import { CurrencyValue, getCurrencyValueSchemaDefinition } from './CurrencyValue';
-import { getStructuredAddressSchemaDefinition } from './Address';
-import BooleanField from './BooleanField';
+import { Room, getRoomSchemaDefinition } from './Room.js';
+import { Mirror, getMirrorSchemaDefinition } from './Mirror.js';
+import { WashBasin, getWashBasinSchemaDefinition } from './WashBasin.js';
+import { Entrance, getEntranceSchemaDefinition } from './Entrance.js';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity.js';
+import { Toilet, getToiletSchemaDefinition } from './Toilet.js';
+import { Shower, getShowerSchemaDefinition } from './Shower.js';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
+import { AccessType, AccessTypes } from './AccessType.js';
+import { CurrencyValue, getCurrencyValueSchemaDefinition } from './CurrencyValue.js';
+import { getStructuredAddressSchemaDefinition } from './Address.js';
+import BooleanField from './BooleanField.js';
 
 export const RestroomSignIcons = [
   'allGender',

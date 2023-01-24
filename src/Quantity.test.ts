@@ -2,9 +2,9 @@ import {
   getPrefixedQuantitySchemaDefinition,
   LengthSchema,
   parseQuantity,
-} from './Quantity';
-import expectInvalidFixture from './lib/expectInvalidFixture';
-import expectValidFixture from './lib/expectValidFixture';
+} from './Quantity.js';
+import expectInvalidFixture from './lib/expectInvalidFixture.js';
+import expectValidFixture from './lib/expectValidFixture.js';
 import { SimpleSchema } from '../node_modules/simpl-schema/dist/esm/SimpleSchema.js';
 
 const definition = getPrefixedQuantitySchemaDefinition('field', LengthSchema);

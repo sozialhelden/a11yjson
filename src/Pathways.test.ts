@@ -1,6 +1,6 @@
-import { getPathwaysSchemaDefinition } from './Pathways';
-import expectValidFixture from './lib/expectValidFixture';
-import pathwaysFixture from './pathwaysFixture';
+import { getPathwaysSchemaDefinition } from './Pathways.js';
+import expectValidFixture from './lib/expectValidFixture.js';
+import pathwaysFixture from './pathwaysFixture.js';
 
 const definition = getPathwaysSchemaDefinition();
 

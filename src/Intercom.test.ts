@@ -1,6 +1,6 @@
-import { getIntercomSchemaDefinition } from './Intercom';
-import expectValidFixture from './lib/expectValidFixture';
-import intercomFixture from './intercomFixture';
+import { getIntercomSchemaDefinition } from './Intercom.js';
+import expectValidFixture from './lib/expectValidFixture.js';
+import intercomFixture from './intercomFixture.js';
 
 const definition = getIntercomSchemaDefinition();
 

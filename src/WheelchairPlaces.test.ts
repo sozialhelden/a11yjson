@@ -1,7 +1,7 @@
-import { getWheelchairPlacesSchemaDefinition } from './WheelchairPlaces';
-import expectInvalidFixture from './lib/expectInvalidFixture';
-import expectValidFixture from './lib/expectValidFixture';
-import wheelchairPlacesFixture from './wheelchairPlacesFixture';
+import { getWheelchairPlacesSchemaDefinition } from './WheelchairPlaces.js';
+import expectInvalidFixture from './lib/expectInvalidFixture.js';
+import expectValidFixture from './lib/expectValidFixture.js';
+import wheelchairPlacesFixture from './wheelchairPlacesFixture.js';
 
 const definition = getWheelchairPlacesSchemaDefinition();
 

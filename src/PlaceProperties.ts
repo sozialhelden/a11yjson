@@ -1,11 +1,11 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import { Accessibility, getAccessibilitySchemaDefinition } from './Accessibility';
-import { StructuredAddress, getStructuredAddressSchemaDefinition } from './Address';
-import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
-import { AccessType, AccessTypes } from './AccessType';
-import validateEmail from './validateEmail';
-import validateUrl from './validateUrl';
+import { Accessibility, getAccessibilitySchemaDefinition } from './Accessibility.js';
+import { StructuredAddress, getStructuredAddressSchemaDefinition } from './Address.js';
+import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
+import { AccessType, AccessTypes } from './AccessType.js';
+import validateEmail from './validateEmail.js';
+import validateUrl from './validateUrl.js';
 
 
 /**

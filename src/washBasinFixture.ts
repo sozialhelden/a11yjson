@@ -1,5 +1,5 @@
-import { Complete } from './Complete';
-import { WashBasin } from './WashBasin';
+import { Complete } from './Complete.js';
+import { WashBasin } from './WashBasin.js';
 
 const washBasinFixture: Complete<WashBasin> = {
   isLocatedInsideRestroom: true,

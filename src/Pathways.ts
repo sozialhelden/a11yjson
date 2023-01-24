@@ -1,8 +1,8 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
-import { getSurfaceSchemaDefinition, Surface } from './Surface';
-import BooleanField from './BooleanField';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity.js';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
+import { getSurfaceSchemaDefinition, Surface } from './Surface.js';
+import BooleanField from './BooleanField.js';
 
 /**
  * Describes one or multiple pathways inside a place.

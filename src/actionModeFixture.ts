@@ -1,5 +1,5 @@
-import { Complete } from './Complete';
-import { ActionMode } from './ActionMode';
+import { Complete } from './Complete.js';
+import { ActionMode } from './ActionMode.js';
 
 const actionModeFixture: Complete<ActionMode> = {
   name: { en: 'Reaction test' },

@@ -1,6 +1,6 @@
-import expectInvalidFixture from './lib/expectInvalidFixture';
-import expectValidFixture from './lib/expectValidFixture';
-import htmlColorSchemaDefinition from './htmlColorSchemaDefinition';
+import expectInvalidFixture from './lib/expectInvalidFixture.js';
+import expectValidFixture from './lib/expectValidFixture.js';
+import htmlColorSchemaDefinition from './htmlColorSchemaDefinition.js';
 
 describe('htmlColorSchemaDefinition', () => {
   it('validates various HTML colors', () => {

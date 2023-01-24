@@ -1,6 +1,6 @@
-import { getTechCombinationSchemaDefinition } from './TechCombination';
-import expectValidFixture from './lib/expectValidFixture';
-import techCombinationFixture from './techCombinationFixture';
+import { getTechCombinationSchemaDefinition } from './TechCombination.js';
+import expectValidFixture from './lib/expectValidFixture.js';
+import techCombinationFixture from './techCombinationFixture.js';
 
 const definition = getTechCombinationSchemaDefinition();
 

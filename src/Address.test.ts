@@ -1,7 +1,7 @@
-import { getStructuredAddressSchemaDefinition } from './Address';
-import expectInvalidFixture from './lib/expectInvalidFixture';
-import expectValidFixture from './lib/expectValidFixture';
-import structuredAddressFixture from './structuredAddressFixture';
+import { getStructuredAddressSchemaDefinition } from './Address.js';
+import expectInvalidFixture from './lib/expectInvalidFixture.js';
+import expectValidFixture from './lib/expectValidFixture.js';
+import structuredAddressFixture from './structuredAddressFixture.js';
 
 const definition = getStructuredAddressSchemaDefinition();
 

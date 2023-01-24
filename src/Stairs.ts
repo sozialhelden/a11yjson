@@ -1,9 +1,9 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity';
-import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
-import BooleanField from './BooleanField';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
-import { getGrabBarsSchemaDefinition, GrabBars } from './GrabBars';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity.js';
+import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
+import BooleanField from './BooleanField.js';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
+import { getGrabBarsSchemaDefinition, GrabBars } from './GrabBars.js';
 
 /**
  * The `Stairs` interface describes one or more walkable stairs.

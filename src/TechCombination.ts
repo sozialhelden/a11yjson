@@ -1,5 +1,5 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
+import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
 
 /**
  * Describes a combination of technologies that are used together to achieve a specific goal.

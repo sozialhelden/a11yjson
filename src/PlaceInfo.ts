@@ -1,7 +1,7 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import { PointGeometry, getPointGeometrySchemaDefinition } from './Geometry';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
-import { PlaceProperties, getPlacePropertiesSchemaDefinition } from './PlaceProperties';
+import { PointGeometry, getPointGeometrySchemaDefinition } from './Geometry.js';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
+import { PlaceProperties, getPlacePropertiesSchemaDefinition } from './PlaceProperties.js';
 
 /**
  * The PlaceInfo interface describes a physical location with added accessibility properties.

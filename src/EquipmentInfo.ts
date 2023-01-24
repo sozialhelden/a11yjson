@@ -1,10 +1,10 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import { getPointGeometrySchemaDefinition, PointGeometry } from './Geometry';
+import { getPointGeometrySchemaDefinition, PointGeometry } from './Geometry.js';
 import {
   EquipmentProperties,
   getEquipmentPropertiesSchemaDefinition,
-} from './EquipmentProperties';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+} from './EquipmentProperties.js';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
 
 /**
  * Describes a facility equipment that is part of a place, like an elevator, an escalator, or a

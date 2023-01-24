@@ -1,5 +1,5 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import BooleanField from './BooleanField';
+import BooleanField from './BooleanField.js';
 
 export interface AnimalPolicy {
   /**

@@ -1,6 +1,6 @@
-import { getStaffSchemaDefinition } from './Staff';
-import expectValidFixture from './lib/expectValidFixture';
-import staffFixture from './staffFixture';
+import { getStaffSchemaDefinition } from './Staff.js';
+import expectValidFixture from './lib/expectValidFixture.js';
+import staffFixture from './staffFixture.js';
 
 const definition = getStaffSchemaDefinition();
 

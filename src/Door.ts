@@ -1,19 +1,19 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import { AccessType, AccessTypes } from './AccessType';
-import BooleanField from './BooleanField';
-import { getGrabBarsSchemaDefinition, GrabBars } from './GrabBars';
-import htmlColorSchemaDefinition from './htmlColorSchemaDefinition';
-import { getInteractableSchemaDefinition, Interactable } from './Interactable';
-import { getInteractionModeSchemaDefinition } from './InteractionMode';
-import { getIntercomSchemaDefinition, Intercom } from './Intercom';
-import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition';
+import { AccessType, AccessTypes } from './AccessType.js';
+import BooleanField from './BooleanField.js';
+import { getGrabBarsSchemaDefinition, GrabBars } from './GrabBars.js';
+import htmlColorSchemaDefinition from './htmlColorSchemaDefinition.js';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
+import { getInteractionModeSchemaDefinition } from './InteractionMode.js';
+import { getIntercomSchemaDefinition, Intercom } from './Intercom.js';
+import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition.js';
 import {
   ForceSchema,
   getPrefixedQuantitySchemaDefinition,
   Length,
   LengthSchema,
   SpeedSchema,
-} from './Quantity';
+} from './Quantity.js';
 
 export const DoorInteractions = ['ringDoorbell', 'open', 'close', 'unlock', 'lock', 'unlockAndLock', 'openAndClose'] as const;
 

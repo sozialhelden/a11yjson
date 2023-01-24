@@ -1,5 +1,5 @@
-import { WheelchairPlaces } from './WheelchairPlaces';
-import { Complete } from './Complete';
+import { WheelchairPlaces } from './WheelchairPlaces.js';
+import { Complete } from './Complete.js';
 
 const wheelchairPlacesFixture: Complete<WheelchairPlaces> = {
   count: 200,

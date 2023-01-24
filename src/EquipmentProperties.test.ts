@@ -1,8 +1,8 @@
 import {
   getEquipmentPropertiesSchemaDefinition,
-} from './EquipmentProperties';
-import expectValidFixture from './lib/expectValidFixture';
-import equipmentPropertiesFixture from './equipmentPropertiesFixture';
+} from './EquipmentProperties.js';
+import expectValidFixture from './lib/expectValidFixture.js';
+import equipmentPropertiesFixture from './equipmentPropertiesFixture.js';
 
 const definition = getEquipmentPropertiesSchemaDefinition();
 

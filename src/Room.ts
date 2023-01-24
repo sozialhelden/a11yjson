@@ -1,9 +1,9 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import { getStructuredAddressSchemaDefinition, StructuredAddress } from './Address';
-import BooleanField from './BooleanField';
-import { getInteractableSchemaDefinition, Interactable } from './Interactable';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
-import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
+import { getStructuredAddressSchemaDefinition, StructuredAddress } from './Address.js';
+import BooleanField from './BooleanField.js';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
+import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
 
 export const RoomInteractions = [
   'enter',

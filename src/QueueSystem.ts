@@ -1,8 +1,8 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import BooleanField from './BooleanField';
-import { getGrabBarsSchemaDefinition, GrabBars } from './GrabBars';
-import { getInteractableSchemaDefinition, Interactable } from './Interactable';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+import BooleanField from './BooleanField.js';
+import { getGrabBarsSchemaDefinition, GrabBars } from './GrabBars.js';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
 
 export const QueueSystemInteractions = ['enqueue', 'skipQueue', 'wait', 'leaveQueue', 'arrive', 'checkIn', 'checkOut', 'getTicket', 'getOnesTurn'] as const;
 export type QueueSystemInteraction = typeof QueueSystemInteractions[number];

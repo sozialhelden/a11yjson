@@ -1,5 +1,5 @@
-import { Surface } from './Surface';
-import { Complete } from './Complete';
+import { Surface } from './Surface.js';
+import { Complete } from './Complete.js';
 
 const surfaceFixture: Complete<Surface> = {
   lateralSlope: {

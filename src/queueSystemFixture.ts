@@ -1,6 +1,6 @@
-import { Complete } from './Complete';
-import grabBarsFixture from './grabBarsFixture';
-import { QueueSystem } from './QueueSystem';
+import { Complete } from './Complete.js';
+import grabBarsFixture from './grabBarsFixture.js';
+import { QueueSystem } from './QueueSystem.js';
 
 const queueSystemFixture: Complete<QueueSystem> = {
   usesCattleBars: true,

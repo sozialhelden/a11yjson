@@ -1,5 +1,5 @@
-import { Room } from './Room';
-import { Complete } from './Complete';
+import { Room } from './Room.js';
+import { Complete } from './Complete.js';
 
 const roomFixture: Complete<Room> = {
   isAccessibleWithWheelchair: true,

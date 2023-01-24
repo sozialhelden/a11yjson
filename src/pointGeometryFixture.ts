@@ -1,4 +1,4 @@
-import { PointGeometry } from './Geometry';
+import { PointGeometry } from './Geometry.js';
 
 const pointGeometryFixture: PointGeometry = {
   type: 'Point',

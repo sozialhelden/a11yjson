@@ -1,6 +1,6 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import getIsoAlphaThreeCountryCodes from './CountryCodes';
-import { LocalizedString, getLocalizedStringSchemaDefinition } from './LocalizedString';
+import getIsoAlphaThreeCountryCodes from './CountryCodes.js';
+import { LocalizedString, getLocalizedStringSchemaDefinition } from './LocalizedString.js';
 
 /**
  * The address of a places as Address as a series of structured attributes.

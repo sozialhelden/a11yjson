@@ -1,4 +1,4 @@
-import { Signage } from './Signage';
+import { Signage } from './Signage.js';
 
 const signageFixture: Signage = {
   description: { en: 'Building navigation system' },

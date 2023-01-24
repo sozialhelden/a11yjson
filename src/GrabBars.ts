@@ -1,7 +1,7 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import BooleanField from './BooleanField';
-import { getInteractableSchemaDefinition, Interactable } from './Interactable';
-import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity';
+import BooleanField from './BooleanField.js';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity.js';
 
 export const GrabBarsInteractions = ['localizeYourself', 'findYourDestination'] as const;
 export type GrabBarsInteraction = typeof GrabBarsInteractions[number];

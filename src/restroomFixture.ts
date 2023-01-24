@@ -1,10 +1,10 @@
-import { Restroom } from './Restroom';
-import { Complete } from './Complete';
-import entranceFixture from './entranceFixture';
-import toiletFixture from './toiletFixture';
-import showerFixture from './showerFixture';
-import washBasinFixture from './washBasinFixture';
-import roomFixture from './roomFixture';
+import { Restroom } from './Restroom.js';
+import { Complete } from './Complete.js';
+import entranceFixture from './entranceFixture.js';
+import toiletFixture from './toiletFixture.js';
+import showerFixture from './showerFixture.js';
+import washBasinFixture from './washBasinFixture.js';
+import roomFixture from './roomFixture.js';
 
 const restroomFixture: Complete<Restroom> = {
   ...roomFixture,

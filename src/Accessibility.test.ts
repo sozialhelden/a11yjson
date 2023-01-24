@@ -1,6 +1,6 @@
-import { getAccessibilitySchemaDefinition } from './Accessibility';
-import expectValidFixture from './lib/expectValidFixture';
-import accessibilityFixture from './accessibilityFixture';
+import { getAccessibilitySchemaDefinition } from './Accessibility.js';
+import expectValidFixture from './lib/expectValidFixture.js';
+import accessibilityFixture from './accessibilityFixture.js';
 
 const definition = getAccessibilitySchemaDefinition();
 

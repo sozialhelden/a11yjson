@@ -1,6 +1,6 @@
-import { getRoomSchemaDefinition } from './Room';
-import expectValidFixture from './lib/expectValidFixture';
-import roomFixture from './roomFixture';
+import { getRoomSchemaDefinition } from './Room.js';
+import expectValidFixture from './lib/expectValidFixture.js';
+import roomFixture from './roomFixture.js';
 
 const definition = getRoomSchemaDefinition();
 

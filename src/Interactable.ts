@@ -1,6 +1,6 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import { getInteractionModeSchemaDefinition, InteractionMode } from './InteractionMode';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
+import { getInteractionModeSchemaDefinition, InteractionMode } from './InteractionMode.js';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
 
 export interface Interactable<InteractionType extends string> {
   /**

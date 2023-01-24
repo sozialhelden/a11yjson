@@ -1,19 +1,19 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import { Door, getDoorSchemaDefinition } from './Door';
+import { Door, getDoorSchemaDefinition } from './Door.js';
 import {
   getPrefixedQuantitySchemaDefinition, Length, LengthSchema,
-} from './Quantity';
-import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
-import { W3CAccessMode, w3cAccessModes } from './W3CAccessMode';
-import { W3CAccessibilityFeature, w3cAccessibilityFeatures } from './W3CAccessibilityFeature';
-import { W3CAccessibilityHazard, w3cAccessibilityHazards } from './W3CAccessibilityHazard';
-import { w3cAccessibilityControls, W3CAccessibilityControl } from './W3CAccessibilityControl';
-import BooleanField from './BooleanField';
-import { getIntercomSchemaDefinition, Intercom } from './Intercom';
-import { getInteractableSchemaDefinition, Interactable } from './Interactable';
-import validateUrl from './validateUrl';
-import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags';
+} from './Quantity.js';
+import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
+import { W3CAccessMode, w3cAccessModes } from './W3CAccessMode.js';
+import { W3CAccessibilityFeature, w3cAccessibilityFeatures } from './W3CAccessibilityFeature.js';
+import { W3CAccessibilityHazard, w3cAccessibilityHazards } from './W3CAccessibilityHazard.js';
+import { w3cAccessibilityControls, W3CAccessibilityControl } from './W3CAccessibilityControl.js';
+import BooleanField from './BooleanField.js';
+import { getIntercomSchemaDefinition, Intercom } from './Intercom.js';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
+import validateUrl from './validateUrl.js';
+import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags.js';
 
 export const EquipmentTypes = [
   'bed',

@@ -12,7 +12,7 @@ Some lack proper formatting in the documentation. Fixes in [`tools/generate-over
 
 ### <a id="Acceleration">Acceleration</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L232)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L246)</span>
 
 
 
@@ -62,7 +62,7 @@ Definition: one of the following strings:
 
 ### <a id="Brightness">Brightness</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L227)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L241)</span>
 
 
 
@@ -124,7 +124,7 @@ Definition: one of the following strings:
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L57)</span>
 
-Describes a physical direction, from the perspective of a person facing forward.
+
 
 Definition: one of the following strings:
 
@@ -150,7 +150,7 @@ Definition: one of the following strings:
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L38)</span>
 
-Describes a physical direction axis relative to a person’s body.
+
 
 Definition: one of the following strings:
 
@@ -280,7 +280,7 @@ Definition: one of the following strings:
 
 ### <a id="Force">Force</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L230)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L244)</span>
 
 
 
@@ -362,7 +362,7 @@ Definition: one of the following strings:
 
 ### <a id="Hertz">Hertz</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L233)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L247)</span>
 
 
 
@@ -374,7 +374,7 @@ Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ietfLanguageTags.ts#L7)</span>
 
-Defines a spoken or written language in [IETF language tag format](https://github.com/sozialhelden/ietf-language-tags).
+
 
 Definition: <code>string</code>
 
@@ -404,7 +404,7 @@ Definition: one of the following strings:
 
 ### <a id="Length">Length</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L224)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L238)</span>
 
 
 
@@ -432,7 +432,7 @@ Values must be of type <code>string</code>.
 
 ### <a id="Mass">Mass</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L226)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L240)</span>
 
 
 
@@ -442,7 +442,7 @@ Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
 
 ### <a id="MediaInteraction">MediaInteraction</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L26)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L25)</span>
 
 
 
@@ -474,7 +474,7 @@ Definition: one of the following strings:
 
 ### <a id="MediaType">MediaType</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L40)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L39)</span>
 
 
 
@@ -524,7 +524,7 @@ Definition: one of the following strings:
 
 ### <a id="Operator">Operator</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L69)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L70)</span>
 
 
 
@@ -552,7 +552,7 @@ Definition: one of the following strings:
 
 ### <a id="ParkingInteraction">ParkingInteraction</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Parking.ts#L16)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Parking.ts#L15)</span>
 
 
 
@@ -570,7 +570,7 @@ Definition: one of the following strings:
 
 ### <a id="Paymentnteraction">Paymentnteraction</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Payment.ts#L13)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Payment.ts#L12)</span>
 
 
 
@@ -590,7 +590,7 @@ Definition: one of the following strings:
 
 ### <a id="QueueSystemInteraction">QueueSystemInteraction</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/QueueSystem.ts#L9)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/QueueSystem.ts#L8)</span>
 
 
 
@@ -778,7 +778,7 @@ Definition: one of the following strings:
 
 ### <a id="Slope">Slope</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L228)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L242)</span>
 
 
 
@@ -788,9 +788,9 @@ Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
 
 ### <a id="SmokingPolicy">SmokingPolicy</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/SmokingPolicy.ts#L6)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/SmokingPolicy.ts#L4)</span>
 
-Describes the smoking policy for visitors of a place.
+
 
 Definition: One of the following strings:
 
@@ -841,7 +841,7 @@ Definition: one of the following strings:
 
 ### <a id="Speed">Speed</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L231)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L245)</span>
 
 
 
@@ -1177,7 +1177,7 @@ Definition: one of the following strings:
 
 ### <a id="Temperature">Temperature</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L234)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L248)</span>
 
 
 
@@ -1187,7 +1187,7 @@ Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
 
 ### <a id="TimeInterval">TimeInterval</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L229)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L243)</span>
 
 
 
@@ -1197,7 +1197,7 @@ Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
 
 ### <a id="ToiletInteraction">ToiletInteraction</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Toilet.ts#L17)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Toilet.ts#L16)</span>
 
 
 
@@ -1211,13 +1211,31 @@ Definition: one of the following strings:
 
 - `spray`
 
-- `washHands`
+
+
+### <a id="Urgency">Urgency</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/PerceptionMode.ts#L36)</span>
+
+
+
+Definition: one of the following strings:
+
+- `alert`
+
+- `alarm`
+
+- `warning`
+
+- `info`
+
+- `debug`
 
 
 
 ### <a id="Volume">Volume</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L225)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L239)</span>
 
 
 

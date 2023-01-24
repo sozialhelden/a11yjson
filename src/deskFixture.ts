@@ -1,9 +1,9 @@
-import { Desk } from './Desk';
-import { Complete } from './Complete';
-import paymentFixture from './paymentFixture';
-import intercomFixture from './intercomFixture';
-import interactionModeFixture from './interactionModeFixture';
-import queueSystemFixture from './queueSystemFixture';
+import { Desk } from './Desk.js';
+import { Complete } from './Complete.js';
+import paymentFixture from './paymentFixture.js';
+import intercomFixture from './intercomFixture.js';
+import interactionModeFixture from './interactionModeFixture.js';
+import queueSystemFixture from './queueSystemFixture.js';
 
 const deskFixture: Complete<Desk> = {
   name: { en: 'string' },

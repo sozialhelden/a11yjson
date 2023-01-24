@@ -1,14 +1,14 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import BooleanField from './BooleanField';
-import { getInteractableSchemaDefinition, Interactable } from './Interactable';
-import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString';
+import BooleanField from './BooleanField.js';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
+import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
 import {
   getPrefixedQuantitySchemaDefinition,
   Length,
   LengthSchema,
   Volume,
   VolumeSchema,
-} from './Quantity';
+} from './Quantity.js';
 
 export const IntercomInteractions = ['ring', 'call', 'hangUp', 'open', 'close', 'identify'] as const;
 export type IntercomInteraction = typeof IntercomInteractions[number];

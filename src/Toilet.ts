@@ -1,11 +1,11 @@
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition';
-import { GrabBars, getGrabBarsSchemaDefinition } from './GrabBars';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
+import { GrabBars, getGrabBarsSchemaDefinition } from './GrabBars.js';
 import {
   getPrefixedQuantitySchemaDefinition, Length, LengthSchema,
-} from './Quantity';
-import BooleanField from './BooleanField';
-import { getInteractableSchemaDefinition, Interactable } from './Interactable';
+} from './Quantity.js';
+import BooleanField from './BooleanField.js';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
 
 export const ToiletInteractions = [
   'use',

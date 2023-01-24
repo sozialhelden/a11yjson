@@ -1,5 +1,5 @@
-import { Media } from './Media';
-import { Complete } from './Complete';
+import { Media } from './Media.js';
+import { Complete } from './Complete.js';
 
 const mediaFixture: Complete<Media> = {
   type: 'document',

@@ -1,5 +1,5 @@
-import { AnimalPolicy } from './AnimalPolicy';
-import { Complete } from './Complete';
+import { AnimalPolicy } from './AnimalPolicy.js';
+import { Complete } from './Complete.js';
 
 const animalPolicyFixture: Complete<AnimalPolicy> = {
   allowsGuideDogs: true,
