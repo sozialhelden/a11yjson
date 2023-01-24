@@ -1,6 +1,6 @@
 {
   "name": "@sozialhelden/a11yjson",
-  "version": "20.2.0",
+  "version": "20.3.0",
   "description": "A harmonized data schema for describing the accessibility of physical places",
   "keywords": [],
   "type": "module",
