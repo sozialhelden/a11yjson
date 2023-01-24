@@ -2,16 +2,18 @@ import {
   getPrefixedQuantitySchemaDefinition,
   LengthSchema,
   parseQuantity,
+  UnitlessSchema,
 } from './Quantity.js';
 import expectInvalidFixture from './lib/expectInvalidFixture.js';
 import expectValidFixture from './lib/expectValidFixture.js';
 import { SimpleSchema } from '../node_modules/simpl-schema/dist/esm/SimpleSchema.js';
+import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 
 const definition = getPrefixedQuantitySchemaDefinition('field', LengthSchema);
 const schema = new SimpleSchema(definition);
 
-function expectValidUnitFixture(value: any) {
-  expectValidFixture(definition, schema.clean({ field: value }));
+function expectValidQuantity(value: any, overwrittenDefinition?: SchemaDefinition) {
+  expectValidFixture(overwrittenDefinition || definition, schema.clean({ field: value }));
 }
 
 function expectInvalidUnitFixture(
@@ -22,20 +24,20 @@ function expectInvalidUnitFixture(
 }
 
 describe('QuantitativeValue', () => {
-  it('accepts a simple quantity string', () => expectValidUnitFixture('10cm'));
+  it('accepts a simple quantity string', () => expectValidQuantity('10cm'));
 
-  it('accepts a QuantitativeValue object', () => expectValidUnitFixture({ value: 10, unit: 'meter', rawValue: '10m' }));
+  it('accepts a QuantitativeValue object', () => expectValidQuantity({ value: 10, unit: 'meter', rawValue: '10m' }));
 
-  it('accepts an object without unit', () => expectValidUnitFixture({ value: 10, rawValue: '10' }));
+  it('accepts an object without unit', () => expectValidQuantity({ value: 10, rawValue: '10' }, getPrefixedQuantitySchemaDefinition('field', UnitlessSchema)));
 
-  it('accepts a QuantitativeValue object with accuracy', () => expectValidUnitFixture({
+  it('accepts a QuantitativeValue object with accuracy', () => expectValidQuantity({
     value: 10,
     unit: 'kilometer',
     precision: 2,
     rawValue: '10km',
   }));
 
-  it('accepts a QuantitativeValue object with a constraint operator', () => expectValidUnitFixture({
+  it('accepts a QuantitativeValue object with a constraint operator', () => expectValidQuantity({
     value: 10,
     unit: 'kilometer',
     precision: 2,

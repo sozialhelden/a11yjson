@@ -156,6 +156,9 @@ const createQuantitySchemaDefinition = (
     : {}),
 });
 
+export const UnitlessSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Unitless);
+export const UnitlessSchema = new SimpleSchema(UnitlessSchemaDefinition);
+
 /**
  * Validates a length quantity object and will only accept length units, eg. meter, centimeter or
  * inch.
@@ -312,7 +315,6 @@ export function getPrefixedQuantitySchemaDefinition(
       // We don't want to inflate the schema's size with too many keys, so we do a custom
       // validation here only when the value is actually set.
       if (this.isSet && this.value && typeof this.value !== 'string') {
-        console.log('Running custom validation for quantity', this);
         const context = quantitySchema.newContext();
         context.validate(this.value);
         this.addValidationErrors(context.validationErrors().map((error) => ({ ...error, name: prefix + '.' + error.name })));

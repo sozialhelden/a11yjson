@@ -33,7 +33,7 @@ Some lack proper formatting in the documentation. Fixes in [`tools/generate-over
       "fileName": "Quantity.ts",
       "line": 182,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L182"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L182"
     }
   ],
   "type": {
@@ -82,7 +82,7 @@ Some lack proper formatting in the documentation. Fixes in [`tools/generate-over
       "fileName": "Quantity.ts",
       "line": 178,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L178"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L178"
     }
   ],
   "type": {
@@ -123,7 +123,7 @@ Some lack proper formatting in the documentation. Fixes in [`tools/generate-over
       "fileName": "AccessType.ts",
       "line": 1,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/AccessType.ts#L1"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/AccessType.ts#L1"
     }
   ],
   "type": {
@@ -259,7 +259,7 @@ Read-only tuple with 15 strings:
       "fileName": "Quantity.ts",
       "line": 140,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L140"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L140"
     }
   ],
   "type": {
@@ -300,7 +300,7 @@ Read-only tuple with 15 strings:
       "fileName": "Quantity.ts",
       "line": 226,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L226"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L226"
     }
   ],
   "type": {
@@ -349,7 +349,7 @@ Read-only tuple with 15 strings:
       "fileName": "Quantity.ts",
       "line": 225,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L225"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L225"
     }
   ],
   "type": {
@@ -390,7 +390,7 @@ Read-only tuple with 15 strings:
       "fileName": "Desk.ts",
       "line": 11,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Desk.ts#L11"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Desk.ts#L11"
     }
   ],
   "type": {
@@ -575,7 +575,7 @@ Read-only tuple with 20 strings:
       "fileName": "ActionMode.ts",
       "line": 27,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/ActionMode.ts#L27"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/ActionMode.ts#L27"
     }
   ],
   "type": {
@@ -647,7 +647,7 @@ Read-only tuple with 3 strings:
       "fileName": "ActionMode.ts",
       "line": 43,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/ActionMode.ts#L43"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/ActionMode.ts#L43"
     }
   ],
   "type": {
@@ -741,7 +741,7 @@ Read-only tuple with 8 strings:
       "fileName": "Door.ts",
       "line": 18,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Door.ts#L18"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Door.ts#L18"
     }
   ],
   "type": {
@@ -829,7 +829,7 @@ Read-only tuple with 7 strings:
       "fileName": "EquipmentProperties.ts",
       "line": 39,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/EquipmentProperties.ts#L39"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/EquipmentProperties.ts#L39"
     }
   ],
   "type": {
@@ -995,7 +995,7 @@ Read-only tuple with 20 strings:
       "fileName": "EquipmentProperties.ts",
       "line": 18,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/EquipmentProperties.ts#L18"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/EquipmentProperties.ts#L18"
     }
   ],
   "type": {
@@ -1137,7 +1137,7 @@ Read-only tuple with 16 strings:
       "fileName": "Quantity.ts",
       "line": 189,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L189"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L189"
     }
   ],
   "type": {
@@ -1186,7 +1186,7 @@ Read-only tuple with 16 strings:
       "fileName": "Quantity.ts",
       "line": 188,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L188"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L188"
     }
   ],
   "type": {
@@ -1227,7 +1227,7 @@ Read-only tuple with 16 strings:
       "fileName": "Accessibility.ts",
       "line": 49,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Accessibility.ts#L49"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Accessibility.ts#L49"
     }
   ],
   "type": {
@@ -1417,7 +1417,7 @@ Read-only tuple with 24 strings:
       "fileName": "GrabBars.ts",
       "line": 6,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/GrabBars.ts#L6"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/GrabBars.ts#L6"
     }
   ],
   "type": {
@@ -1475,7 +1475,7 @@ Read-only tuple with 2 strings:
       "fileName": "Quantity.ts",
       "line": 214,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L214"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L214"
     }
   ],
   "type": {
@@ -1524,7 +1524,7 @@ Read-only tuple with 2 strings:
       "fileName": "Quantity.ts",
       "line": 213,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L213"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L213"
     }
   ],
   "type": {
@@ -1565,7 +1565,7 @@ Read-only tuple with 2 strings:
       "fileName": "Intercom.ts",
       "line": 13,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Intercom.ts#L13"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Intercom.ts#L13"
     }
   ],
   "type": {
@@ -1647,7 +1647,7 @@ Read-only tuple with 6 strings:
       "fileName": "Quantity.ts",
       "line": 164,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L164"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L164"
     }
   ],
   "type": {
@@ -1696,7 +1696,7 @@ Read-only tuple with 6 strings:
       "fileName": "Quantity.ts",
       "line": 163,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L163"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L163"
     }
   ],
   "type": {
@@ -1737,7 +1737,7 @@ Read-only tuple with 6 strings:
       "fileName": "Quantity.ts",
       "line": 202,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L202"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L202"
     }
   ],
   "type": {
@@ -1786,7 +1786,7 @@ Read-only tuple with 6 strings:
       "fileName": "Quantity.ts",
       "line": 201,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L201"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L201"
     }
   ],
   "type": {
@@ -1827,7 +1827,7 @@ Read-only tuple with 6 strings:
       "fileName": "Media.ts",
       "line": 12,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Media.ts#L12"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Media.ts#L12"
     }
   ],
   "type": {
@@ -1939,7 +1939,7 @@ Read-only tuple with 11 strings:
       "fileName": "Media.ts",
       "line": 27,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Media.ts#L27"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Media.ts#L27"
     }
   ],
   "type": {
@@ -2045,7 +2045,7 @@ Read-only tuple with 10 strings:
       "fileName": "Mirror.ts",
       "line": 6,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Mirror.ts#L6"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Mirror.ts#L6"
     }
   ],
   "type": {
@@ -2129,7 +2129,7 @@ Read-only tuple with 5 strings:
       "fileName": "Quantity.ts",
       "line": 69,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L69"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L69"
     }
   ],
   "type": {
@@ -2229,7 +2229,7 @@ Read-only tuple with 9 strings:
       "fileName": "Parking.ts",
       "line": 9,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Parking.ts#L9"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Parking.ts#L9"
     }
   ],
   "type": {
@@ -2299,7 +2299,7 @@ Read-only tuple with 4 strings:
       "fileName": "Payment.ts",
       "line": 5,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Payment.ts#L5"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Payment.ts#L5"
     }
   ],
   "type": {
@@ -2375,7 +2375,7 @@ Read-only tuple with 5 strings:
       "fileName": "QueueSystem.ts",
       "line": 7,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/QueueSystem.ts#L7"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/QueueSystem.ts#L7"
     }
   ],
   "type": {
@@ -2475,7 +2475,7 @@ Read-only tuple with 9 strings:
       "fileName": "Restroom.ts",
       "line": 15,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Restroom.ts#L15"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Restroom.ts#L15"
     }
   ],
   "type": {
@@ -2581,7 +2581,7 @@ Read-only tuple with 10 strings:
       "fileName": "Room.ts",
       "line": 8,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Room.ts#L8"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Room.ts#L8"
     }
   ],
   "type": {
@@ -2699,7 +2699,7 @@ Read-only tuple with 12 strings:
       "fileName": "Seat.ts",
       "line": 16,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Seat.ts#L16"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Seat.ts#L16"
     }
   ],
   "type": {
@@ -2871,7 +2871,7 @@ Read-only tuple with 21 strings:
       "fileName": "Shower.ts",
       "line": 12,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Shower.ts#L12"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Shower.ts#L12"
     }
   ],
   "type": {
@@ -2971,7 +2971,7 @@ Read-only tuple with 9 strings:
       "fileName": "Signage.ts",
       "line": 7,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Signage.ts#L7"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Signage.ts#L7"
     }
   ],
   "type": {
@@ -3035,7 +3035,7 @@ Read-only tuple with 3 strings:
       "fileName": "Quantity.ts",
       "line": 220,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L220"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L220"
     }
   ],
   "type": {
@@ -3084,7 +3084,7 @@ Read-only tuple with 3 strings:
       "fileName": "Quantity.ts",
       "line": 219,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L219"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L219"
     }
   ],
   "type": {
@@ -3125,7 +3125,7 @@ Read-only tuple with 3 strings:
       "fileName": "Surface.ts",
       "line": 169,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Surface.ts#L169"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Surface.ts#L169"
     }
   ],
   "type": {
@@ -3225,7 +3225,7 @@ Read-only tuple with 9 strings:
       "fileName": "Quantity.ts",
       "line": 171,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L171"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L171"
     }
   ],
   "type": {
@@ -3274,7 +3274,7 @@ Read-only tuple with 9 strings:
       "fileName": "Quantity.ts",
       "line": 170,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L170"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L170"
     }
   ],
   "type": {
@@ -3315,7 +3315,7 @@ Read-only tuple with 9 strings:
       "fileName": "Surface.ts",
       "line": 6,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Surface.ts#L6"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Surface.ts#L6"
     }
   ],
   "type": {
@@ -4309,7 +4309,7 @@ Read-only tuple with 158 strings:
       "fileName": "Quantity.ts",
       "line": 236,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L236"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L236"
     }
   ],
   "type": {
@@ -4382,7 +4382,7 @@ Read-only tuple with 158 strings:
       "fileName": "Quantity.ts",
       "line": 232,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L232"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L232"
     }
   ],
   "type": {
@@ -4423,7 +4423,7 @@ Read-only tuple with 158 strings:
       "fileName": "Quantity.ts",
       "line": 195,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L195"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L195"
     }
   ],
   "type": {
@@ -4472,7 +4472,7 @@ Read-only tuple with 158 strings:
       "fileName": "Quantity.ts",
       "line": 194,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L194"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L194"
     }
   ],
   "type": {
@@ -4513,7 +4513,7 @@ Read-only tuple with 158 strings:
       "fileName": "Toilet.ts",
       "line": 10,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Toilet.ts#L10"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Toilet.ts#L10"
     }
   ],
   "type": {
@@ -4583,7 +4583,7 @@ Read-only tuple with 4 strings:
       "fileName": "PerceptionMode.ts",
       "line": 28,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/PerceptionMode.ts#L28"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/PerceptionMode.ts#L28"
     }
   ],
   "type": {
@@ -4659,7 +4659,7 @@ Read-only tuple with 5 strings:
       "fileName": "Quantity.ts",
       "line": 208,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L208"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L208"
     }
   ],
   "type": {
@@ -4708,7 +4708,7 @@ Read-only tuple with 5 strings:
       "fileName": "Quantity.ts",
       "line": 207,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Quantity.ts#L207"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Quantity.ts#L207"
     }
   ],
   "type": {
@@ -4749,7 +4749,7 @@ Read-only tuple with 5 strings:
       "fileName": "WashBasin.ts",
       "line": 5,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/WashBasin.ts#L5"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/WashBasin.ts#L5"
     }
   ],
   "type": {
@@ -4881,7 +4881,7 @@ Read-only tuple with 13 strings:
       "fileName": "Accessibility.ts",
       "line": 28,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/Accessibility.ts#L28"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/Accessibility.ts#L28"
     }
   ],
   "type": {
@@ -4945,7 +4945,7 @@ Read-only tuple with 3 strings:
       "fileName": "WifiAccessibility.ts",
       "line": 6,
       "character": 13,
-      "url": "https://github.com/sozialhelden/a11yjson/blob/7fcdd8f/src/WifiAccessibility.ts#L6"
+      "url": "https://github.com/sozialhelden/a11yjson/blob/aa801f9/src/WifiAccessibility.ts#L6"
     }
   ],
   "type": {

@@ -13,16 +13,19 @@ const IETFLanguageCodeSchemaKeyDefinition: SchemaKeyDefinition = {
     if (value === undefined) {
       return undefined;
     }
+    if (value !== 'string') {
+      return 'expectedType';
+    }
     const parsedTag = getTag(value);
-    if (parsedTag === undefined || parsedTag.language === undefined) {
+    if (parsedTag === undefined || (parsedTag.language === undefined && parsedTag.extlang === undefined)) {
+      console.log('parsedTag', parsedTag);
       return 'unknownLanguageTag';
     }
 
     if (typeof parsedTag.language === 'string') {
+      console.log('parsedTag', parsedTag);
       return 'unknownLanguageTag';
     }
-
-    console.log('parsedTag', parsedTag);
 
     return undefined;
   },

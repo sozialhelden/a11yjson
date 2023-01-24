@@ -20,6 +20,14 @@ export const getInteractableSchemaDefinition: (
       type: Object,
       optional: true,
       blackbox: true,
+      autoValue() {
+        const { value } = this;
+        if (value && Object.keys(value).length === 0) {
+          this.unset();
+          return undefined;
+        }
+        return undefined;
+      },
       custom(): string | undefined {
         if (!this.isSet) {
           return undefined;
