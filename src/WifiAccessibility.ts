@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import { AccessType, AccessTypes } from './AccessType.js';
 import { CurrencyValue } from './CurrencyValue.js';
@@ -12,6 +13,7 @@ export const WifiInteractions = [
   'acceptTerms',
 ] as const;
 export type WifiInteraction = typeof WifiInteractions[number];
+export const WifiInteractionsSet = new Set(WifiInteractions);
 
 /**
  * Describes the presence of staff and their qualifications and/or provided services.

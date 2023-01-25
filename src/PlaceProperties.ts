@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import { Accessibility, getAccessibilitySchemaDefinition } from './Accessibility.js';
 import { StructuredAddress, getStructuredAddressSchemaDefinition } from './Address.js';
@@ -6,7 +7,6 @@ import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
 import { AccessType, AccessTypes } from './AccessType.js';
 import validateEmail from './validateEmail.js';
 import validateUrl from './validateUrl.js';
-
 
 /**
  * Properties of a place of interest.

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import { getStructuredAddressSchemaDefinition, StructuredAddress } from './Address.js';
 import BooleanField from './BooleanField.js';
@@ -20,6 +21,7 @@ export const RoomInteractions = [
   'closeWindow',
 ] as const;
 export type RoomInteraction = typeof RoomInteractions[number];
+export const RoomInteractionsSet = new Set(RoomInteractions);
 
 /**
  * Describes a room inside a structure.

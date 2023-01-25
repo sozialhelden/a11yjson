@@ -1,3 +1,5 @@
+/* eslint-disable import/no-relative-packages */
+import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
 import { PersonalProfile, getPersonalProfileSchemaDefinition } from './PersonalProfile.js';
 import { Entrance, getEntranceSchemaDefinition } from './Entrance.js';
@@ -18,7 +20,6 @@ import { Desk, getDeskSchemaDefinition } from './Desk.js';
 import BooleanField from './BooleanField.js';
 import { getSignageSchemaDefinition, Signage } from './Signage.js';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
-import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 
 /**
  * Describes the general wheelchair accessibility of the place. This is a human-rated value.
@@ -73,6 +74,7 @@ export const GenericInteractions = [
   'play',
 ] as const;
 export type GenericInteraction = typeof GenericInteractions[number];
+export const GenericInteractionsSet = new Set(GenericInteractions);
 
 /**
  * Describes the physical (and sometimes human rated) accessibility of a place.
@@ -250,7 +252,7 @@ export const getAccessibilitySchemaDefinition: () => SchemaDefinition = () => ({
   smokingPolicy: {
     type: String,
     optional: true,
-    allowedValues: smokingPolicies().map((s) => s.value),
+    allowedValues: smokingPolicies,
   },
   isWellLit: BooleanField,
   isQuiet: BooleanField,

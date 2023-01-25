@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
 import { GrabBars, getGrabBarsSchemaDefinition } from './GrabBars.js';
@@ -14,6 +15,7 @@ export const ToiletInteractions = [
   'spray',
 ] as const;
 export type ToiletInteraction = typeof ToiletInteractions[number];
+export const ToiletInteractionsSet = new Set(ToiletInteractions);
 
 /**
  * Describes a single toilet that can be inside a restroom or cabin.

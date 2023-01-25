@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import {
   Door, getDoorSchemaDefinition,
@@ -21,6 +22,7 @@ export const ShowerInteractions = [
   'useSupport',
 ] as const;
 export type ShowerInteraction = typeof ShowerInteractions[number];
+export const ShowerInteractionsSet = new Set(ShowerInteractions);
 
 /**
  * Describes a shower.

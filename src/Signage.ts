@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity.js';
 import BooleanField from './BooleanField.js';
@@ -10,6 +11,7 @@ export const SignageInteractions = [
   'useSitemap',
 ] as const;
 export type SignageInteraction = typeof SignageInteractions[number];
+export const SignageInteractionsSet = new Set(SignageInteractions);
 
 /**
  * Describes a signage / physical navigation system belonging to a location.

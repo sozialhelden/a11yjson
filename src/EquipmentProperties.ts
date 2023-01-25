@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import { Door, getDoorSchemaDefinition } from './Door.js';
 import {
@@ -60,6 +61,7 @@ export const EquipmentInteractions = [
 ] as const;
 
 export type EquipmentInteraction = typeof EquipmentInteractions[number];
+export const EquipmentInteractionsSet = new Set(EquipmentInteractions);
 
 export interface EquipmentProperties extends Interactable<EquipmentInteraction> {
   /**

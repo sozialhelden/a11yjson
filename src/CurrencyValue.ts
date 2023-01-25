@@ -1,4 +1,4 @@
-import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
+import { SchemaDefinition } from 'simpl-schema';
 
 import { AccessType, AccessTypes } from './AccessType.js';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
@@ -26,7 +26,7 @@ export interface CurrencyValue {
    */
   currency?: string;
   /**
-   * Unit that is paid with the amount of money, e.g. "minute", "hour", 'GB', 'piece'
+   * Unit that is paid with the amount of money, e.g. "30 minutes", "1 hour", '1 GB', '3 pieces'
    */
   per?: Quantity;
   /**
@@ -40,40 +40,44 @@ export interface CurrencyValue {
   paymentTypes?: Payment[];
 }
 
-export const getCurrencyValueSchemaDefinition: () => SchemaDefinition = () => ({
-  amount: {
-    type: Number,
-    min: 0,
-  },
-  currency: {
-    type: String,
-    max: 3,
-    min: 3,
-    optional: true,
-    custom() {
-      // Allow zero amounts without currency
-      if (this.isSet) {
-        if (!this.value.match(/^[A-Z]{3}$/)) {
-          return 'notAllowed';
-        }
-      } else if (this.field('amount').value !== 0) {
-        return 'required';
-      }
-      return undefined;
+export const getCurrencyValueSchemaDefinition: () => SchemaDefinition = () => {
+  const definition: SchemaDefinition = {
+    amount: {
+      type: Number,
+      min: 0,
     },
-  },
-  ...getPrefixedQuantitySchemaDefinition('per', BaseQuantitySchema),
-  access: {
-    type: Array,
-    optional: true,
-  },
-  'access.$': {
-    type: String,
-    allowedValues: (AccessTypes as any) as any[],
-  },
-  paymentTypes: {
-    type: Array,
-    optional: true,
-  },
-  ...getPrefixedSchemaDefinition('paymentTypes.$', getPaymentSchemaDefinition()),
-});
+    currency: {
+      type: String,
+      max: 3,
+      min: 3,
+      optional: true,
+      custom() {
+        // Allow zero amounts without currency
+        if (this.isSet) {
+          if (!this.value.match(/^[A-Z]{3}$/)) {
+            return 'notAllowed';
+          }
+        } else if (this.field('amount').value !== 0) {
+          return 'required';
+        }
+        return undefined;
+      },
+    },
+    ...getPrefixedQuantitySchemaDefinition('per', BaseQuantitySchema),
+    access: {
+      type: Array,
+      optional: true,
+    },
+    'access.$': {
+      type: String,
+      allowedValues: (AccessTypes as any) as any[],
+    },
+    paymentTypes: {
+      type: Array,
+      optional: true,
+    },
+    ...getPrefixedSchemaDefinition('paymentTypes.$', getPaymentSchemaDefinition()),
+  };
+
+  return definition;
+};

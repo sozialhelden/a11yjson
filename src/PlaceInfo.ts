@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import { PointGeometry, getPointGeometrySchemaDefinition } from './Geometry.js';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';

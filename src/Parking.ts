@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity.js';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
@@ -13,6 +14,7 @@ export const ParkingInteractions = [
   'arrive',
 ] as const;
 export type ParkingInteraction = typeof ParkingInteractions[number];
+export const ParkingInteractionsSet = new Set(ParkingInteractions);
 
 /**
  * Describes one or more wheelchair parking lots.

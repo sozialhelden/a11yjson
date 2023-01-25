@@ -8,7 +8,7 @@
  */
 
 import { parseLanguageTag } from '@sozialhelden/ietf-language-tags';
-import { SchemaDefinition, SchemaKeyDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
+import { SchemaDefinition, SchemaKeyDefinition } from 'simpl-schema/dist/esm/types.js';
 
 export type LocalizedString = Record<string, string>;
 

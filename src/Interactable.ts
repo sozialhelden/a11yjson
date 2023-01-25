@@ -1,4 +1,4 @@
-import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
+import { SchemaDefinition, SchemaKeyDefinition } from 'simpl-schema/dist/esm/types.js';
 import { getInteractionModeSchemaDefinition, InteractionMode } from './InteractionMode.js';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
 
@@ -15,35 +15,35 @@ export interface Interactable<InteractionType extends string> {
 export const getInteractableSchemaDefinition: (
   interactionTypes: readonly string[]
 ) => SchemaDefinition = (interactionTypes) => {
-  return ({
-    interactions: {
-      type: Object,
-      optional: true,
-      blackbox: true,
-      autoValue() {
-        const { value } = this;
-        if (value && Object.keys(value).length === 0) {
-          this.unset();
-          return undefined;
-        }
+  const interactions: SchemaKeyDefinition = {
+    type: Object,
+    optional: true,
+    blackbox: true,
+    autoValue() {
+      const { value } = this;
+      if (value && Object.keys(value).length === 0) {
+        this.unset();
         return undefined;
-      },
-      custom(): string | undefined {
-        if (!this.isSet) {
-          return undefined;
-        }
-        const { value } = this;
-        if (typeof value !== 'object') {
-          return 'expectedType';
-        }
-        if (Object.keys(value).length === 0) {
-          return 'mustHaveAtLeastOneKey';
-        }
-        return undefined;
-      },
+      }
+      return undefined;
     },
-    ...getPrefixedSchemaDefinition(`interactions.$`, getInteractionModeSchemaDefinition()),
+    custom(): string | undefined {
+      if (!this.isSet) {
+        return undefined;
+      }
+      const { value } = this;
+      if (typeof value !== 'object') {
+        return 'expectedType';
+      }
+      const keys = Object.keys(value);
+      if (keys.length === 0) {
+        return 'mustHaveAtLeastOneKey';
+      }
+      return undefined;
+    },
+  };
+  return ({
+    interactions,
+    ...getPrefixedSchemaDefinition('interactions.$', getInteractionModeSchemaDefinition()),
   });
 };
-
-

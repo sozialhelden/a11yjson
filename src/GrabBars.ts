@@ -1,10 +1,18 @@
+/* eslint-disable import/no-relative-packages */
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import BooleanField from './BooleanField.js';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity.js';
 
-export const GrabBarsInteractions = ['localizeYourself', 'findYourDestination'] as const;
+export const GrabBarsInteractions = [
+  'localizeYourself',
+  'findYourDestination',
+  'foldUp',
+  'foldDown',
+  'adjust',
+] as const;
 export type GrabBarsInteraction = typeof GrabBarsInteractions[number];
+export const GrabBarsInteractionsSet = new Set(GrabBarsInteractions);
 
 /**
  * Describes grab bars or hand rails.

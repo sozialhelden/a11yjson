@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import {
   Direction, DirectionAxes, DirectionAxis, Directions,
@@ -37,6 +38,7 @@ export const SeatInteractions = [
   'connectSeatbelt',
 ] as const;
 export type SeatInteraction = typeof SeatInteractions[number];
+export const SeatInteractionsSet = new Set(SeatInteractions);
 
 /**
  * Describes one or multiple seats / chairs / benches / stools / couches / sofas / armchairs / ...

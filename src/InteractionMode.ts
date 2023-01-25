@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import { ActionMode, getActionModeSchemaDefinition } from './ActionMode.js';
 import BooleanField from './BooleanField.js';

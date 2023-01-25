@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import { AccessType, AccessTypes } from './AccessType.js';
 import BooleanField from './BooleanField.js';
@@ -18,6 +19,7 @@ import {
 export const DoorInteractions = ['ringDoorbell', 'open', 'close', 'unlock', 'lock', 'unlockAndLock', 'openAndClose'] as const;
 
 export type DoorInteraction = typeof DoorInteractions[number];
+export const DoorInteractionsSet = new Set(DoorInteractions);
 
 /**
  * Describes the door of a place's entrance or to one of its facilities (e.g. to a shower, or to

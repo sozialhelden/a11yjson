@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity.js';
@@ -23,6 +24,7 @@ export const MediaInteractions = [
   'interact',
 ] as const;
 export type MediaInteraction = typeof MediaInteractions[number];
+export const MediaInteractionsSet = new Set(MediaInteractions);
 
 export const MediaTypes = [
   'document',
@@ -37,6 +39,7 @@ export const MediaTypes = [
   'website',
 ] as const;
 export type MediaType = typeof MediaTypes[number];
+export const MediaTypeSet = new Set(MediaTypes);
 
 /**
  * Describes a media unit provided at this place, for example an exhibit at a museum or a movie in

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import BooleanField from './BooleanField.js';
 import htmlColorSchemaDefinition from './htmlColorSchemaDefinition.js';
@@ -341,12 +342,10 @@ export interface PerceptionMode {
    */
   acceleration?: Acceleration;
 
-
   /**
    * The content/output/signal has active vibration feedback.
    */
   soundVolume?: Volume;
-
 
   /**
    * The output's brightness.
@@ -358,7 +357,6 @@ export interface PerceptionMode {
    * 10-second period at least.
    */
   ambientNoiseLevel?: Volume;
-
 
   /**
    * Time interval in which the output is active.
@@ -384,7 +382,6 @@ export interface PerceptionMode {
    * The ambient temperature around the output.
    */
   ambientTemperature?: Temperature;
-
 
   /**
    * Font size used in the output.

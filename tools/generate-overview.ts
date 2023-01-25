@@ -1,10 +1,8 @@
-const fs = require("fs");
-const _ = require("lodash");
-const packageJSON = require("../package.json");
-const intersperse = require("intersperse");
-const { get, includes } = require("lodash");
-const table = require("markdown-table");
-const marked = require("marked").marked;
+import fs from "fs";
+import _ from "lodash";
+import packageJSON from "../package.json";
+import { get, includes } from "lodash";
+import { marked } from "marked";
 
 const json = JSON.parse(fs.readFileSync("./dist/typedoc-output.json").toString());
 const prefix = 'docs/describing-objects/';

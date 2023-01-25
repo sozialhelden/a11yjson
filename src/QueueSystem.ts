@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import BooleanField from './BooleanField.js';
 import { getGrabBarsSchemaDefinition, GrabBars } from './GrabBars.js';
@@ -6,6 +7,7 @@ import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
 
 export const QueueSystemInteractions = ['enqueue', 'skipQueue', 'wait', 'leaveQueue', 'arrive', 'checkIn', 'checkOut', 'getTicket', 'getOnesTurn'] as const;
 export type QueueSystemInteraction = typeof QueueSystemInteractions[number];
+export const QueueSystemInteractionsSet = new Set(QueueSystemInteractions);
 
 /**
  * Describes a system that encourages or forces people to queue up.

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import BooleanField from './BooleanField.js';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
@@ -12,6 +13,7 @@ import {
 
 export const IntercomInteractions = ['ring', 'call', 'hangUp', 'open', 'close', 'identify'] as const;
 export type IntercomInteraction = typeof IntercomInteractions[number];
+export const IntercomInteractionsSet = new Set(IntercomInteractions);
 
 /**
  * Describes a system to communicate over distance, e.g. a door intercom next to a doorbell.

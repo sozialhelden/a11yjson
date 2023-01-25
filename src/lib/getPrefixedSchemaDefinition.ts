@@ -1,5 +1,7 @@
-import { SchemaDefinition, SchemaKeyDefinition, SchemaKeyDefinitionWithOneType } from '../../node_modules/simpl-schema/dist/esm/types.js';
+/* eslint-disable import/no-relative-packages */
 import { SimpleSchema } from '../../node_modules/simpl-schema/dist/esm/SimpleSchema.js';
+import { SchemaKeyDefinitionWithOneType } from '../../node_modules/simpl-schema/dist/esm/types.js';
+import { SchemaDefinition, SchemaKeyDefinition } from '../SchemaDefinition.js';
 
 export default function getPrefixedSchemaDefinition(
   prefix: string,
@@ -27,7 +29,7 @@ export function getPrefixedArraySchemaDefinition(
   prefix: string,
   definition: SchemaDefinition,
   extendElementDefinition?: Partial<SchemaKeyDefinitionWithOneType>,
-) {
+): SchemaDefinition {
   const prefixedDefinition: SchemaDefinition = {
     [prefix]: {
       type: Array,

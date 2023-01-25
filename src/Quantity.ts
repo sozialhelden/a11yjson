@@ -1,11 +1,10 @@
+/* eslint-disable import/no-relative-packages */
 import * as Qty from 'js-quantities';
 import memoize from 'lodash.memoize';
 import { SimpleSchema } from '../node_modules/simpl-schema/dist/esm/SimpleSchema.js';
 import {
   SchemaDefinition, SchemaKeyDefinitionWithOneType, ValidatorContext, ValidatorFunction,
 } from '../node_modules/simpl-schema/dist/esm/types.js';
-
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
 
 export enum UnitKind {
   Length = 'length',
@@ -164,14 +163,14 @@ export const UnitlessSchema = new SimpleSchema(UnitlessSchemaDefinition);
  * inch.
  */
 export const LengthSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Length, 'meter');
-export const LengthSchema = new SimpleSchema(LengthSchemaDefinition)
+export const LengthSchema = new SimpleSchema(LengthSchemaDefinition);
 
 /**
  * Validates a speed quantity object and will only accept speed units, eg. meter/second, miles/hour
  * or similar.
  */
 export const SpeedSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Speed, 'meter/second');
-export const SpeedSchema = new SimpleSchema(SpeedSchemaDefinition)
+export const SpeedSchema = new SimpleSchema(SpeedSchemaDefinition);
 
 /**
  * Validates a acceleration quantity object and will only accept acceleration units, eg.
@@ -182,51 +181,51 @@ export const AccelerationSchemaDefinition = createQuantitySchemaDefinition(
   UnitKind.Acceleration,
   'meter/second^2',
 );
-export const AccelerationSchema = new SimpleSchema(AccelerationSchemaDefinition)
+export const AccelerationSchema = new SimpleSchema(AccelerationSchemaDefinition);
 
 /**
  * Validates a force quantity object and will only accept force units, eg. newton, or
  * kilogram*meter/second^2.
  */
 export const ForceSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Force, 'Newton');
-export const ForceSchema = new SimpleSchema(ForceSchemaDefinition)
+export const ForceSchema = new SimpleSchema(ForceSchemaDefinition);
 
 /**
  * Validates a timer interval object and will only accept time units, eg. seconds, minutes or hours.
  */
 export const TimeIntervalSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Time, 's');
-export const TimeIntervalSchema = new SimpleSchema(TimeIntervalSchemaDefinition)
+export const TimeIntervalSchema = new SimpleSchema(TimeIntervalSchemaDefinition);
 
 /**
  * Validates a mass quantity object and will only accept mass/weight units, eg. kilogram, gram or
  * pound.
  */
 export const MassSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Mass, 's');
-export const MassSchema = new SimpleSchema(MassSchemaDefinition)
+export const MassSchema = new SimpleSchema(MassSchemaDefinition);
 
 /**
  * Validates a sound volume quantity object and will only accept sound volume units, eg. decibel.
  */
 export const VolumeSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Unitless, 'dB');
-export const VolumeSchema = new SimpleSchema(VolumeSchemaDefinition)
+export const VolumeSchema = new SimpleSchema(VolumeSchemaDefinition);
 
 /**
  * Validates a frequency quantity object and will only accept frequency units, eg. hertz.
  */
 export const HertzSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Unitless, 'Hz');
-export const HertzSchema = new SimpleSchema(HertzSchemaDefinition)
+export const HertzSchema = new SimpleSchema(HertzSchemaDefinition);
 
 /**
  * Validates a slope quantity object and will only accept units to descrie a slope, eg. degrees.
  */
 export const SlopeSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Unitless, 'deg');
-export const SlopeSchema = new SimpleSchema(SlopeSchemaDefinition)
+export const SlopeSchema = new SimpleSchema(SlopeSchemaDefinition);
 
 /**
  * Validates a brightness descriptor and will only accept brightness units, eg. nits or lumens.
  */
 export const BrightnessSchemaDefinition = createQuantitySchemaDefinition(UnitKind.Unitless, 'nits');
-export const BrightnessSchema = new SimpleSchema(BrightnessSchemaDefinition)
+export const BrightnessSchema = new SimpleSchema(BrightnessSchemaDefinition);
 
 /**
  * Validates a temperature quantity object and will only accept temperature units, eg. degrees
@@ -235,8 +234,8 @@ export const BrightnessSchema = new SimpleSchema(BrightnessSchemaDefinition)
 export const TemperatureSchemaDefinition = createQuantitySchemaDefinition(
   UnitKind.Unitless,
   'degC',
-  );
-export const TemperatureSchema = new SimpleSchema(TemperatureSchemaDefinition)
+);
+export const TemperatureSchema = new SimpleSchema(TemperatureSchemaDefinition);
 
 export type Length = Quantity | string;
 export type Volume = Quantity | string;
@@ -317,14 +316,14 @@ export function getPrefixedQuantitySchemaDefinition(
       if (this.isSet && this.value && typeof this.value !== 'string') {
         const context = quantitySchema.newContext();
         context.validate(this.value);
-        this.addValidationErrors(context.validationErrors().map((error) => ({ ...error, name: prefix + '.' + error.name })));
+        this.addValidationErrors(context.validationErrors().map((error) => ({ ...error, name: `${prefix}.${error.name}` })));
         return undefined;
       }
       return undefined;
-    }
+    },
   };
 
   return {
-    [prefix]: result
+    [prefix]: result,
   };
 }

@@ -18,7 +18,6 @@
     }
   },
   "types": "./types/index.d.ts",
-  "main": "./cjs/index.cjs",
   "files": [
     "dist"
   ],
@@ -82,7 +81,7 @@
     "rimraf": "^2.6.1",
     "ts-node": "^10.9.1",
     "typedoc": "^0.23.24",
-    "typescript": "^4.9.4"
+    "typescript": "^5.0.0-dev.20230123"
   },
   "dependencies": {
     "@sozialhelden/ietf-language-tags": "^3.2.4",

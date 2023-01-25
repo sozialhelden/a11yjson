@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import BooleanField from './BooleanField.js';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
@@ -32,6 +33,7 @@ export const DeskInteractions = [
 ] as const;
 
 export type DeskInteraction = typeof DeskInteractions[number];
+export const DeskInteractionsSet = new Set(DeskInteractions);
 
 /**
  * Describes a desk / table / cash desk / reception counter.

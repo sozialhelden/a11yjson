@@ -1,6 +1,6 @@
-import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity.js';
+import { SchemaDefinition } from './SchemaDefinition.js';
 
 export const WashBashinInteractions = [
   'changeTemperature',
@@ -18,6 +18,7 @@ export const WashBashinInteractions = [
   'sanitizeHands',
 ] as const;
 export type WashBashinInteraction = typeof WashBashinInteractions[number];
+export const WashBasinInteractionsSet = new Set(WashBashinInteractions);
 
 /**
  * Describes a wash basin.

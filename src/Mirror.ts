@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import BooleanField from './BooleanField.js';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
@@ -11,6 +12,7 @@ export const MirrorInteractions = [
   'use',
 ] as const;
 export type MirrorInteraction = typeof MirrorInteractions[number];
+export const MirrorInteractionsSet = new Set(MirrorInteractions);
 
 /**
  * Describes a mirror.
