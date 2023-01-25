@@ -1,4 +1,4 @@
-import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
+import { SchemaDefinition } from '@sozialhelden/simpl-schema';
 import { Door, getDoorSchemaDefinition } from './Door.js';
 import { Stairs, getStairsSchemaDefinition } from './Stairs.js';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';

@@ -1,4 +1,4 @@
-import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
+import { SchemaDefinition } from '@sozialhelden/simpl-schema';
 import { getPointGeometrySchemaDefinition, PointGeometry } from './Geometry.js';
 import {
   EntranceProperties,

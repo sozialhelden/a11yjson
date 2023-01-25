@@ -1,6 +1,5 @@
-/* eslint-disable import/no-relative-packages */
+import SimpleSchema from '@sozialhelden/simpl-schema';
 import { omit } from 'lodash-es';
-import { SimpleSchema } from '../../node_modules/simpl-schema/dist/esm/SimpleSchema.js';
 
 export default function expectInvalidFixture(
   definition: Record<string, any>,

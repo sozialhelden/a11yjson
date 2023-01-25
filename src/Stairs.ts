@@ -1,5 +1,4 @@
-/* eslint-disable import/no-relative-packages */
-import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
+import { SchemaDefinition } from '@sozialhelden/simpl-schema';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity.js';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
 import BooleanField from './BooleanField.js';

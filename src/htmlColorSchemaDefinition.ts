@@ -1,4 +1,4 @@
-import { SchemaKeyDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
+import { SchemaKeyDefinition } from '@sozialhelden/simpl-schema';
 
 /**
  * regex that matches any HTML color including the following formats:

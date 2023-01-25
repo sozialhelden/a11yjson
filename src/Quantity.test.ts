@@ -1,4 +1,4 @@
-/* eslint-disable import/no-relative-packages */
+import SimpleSchema, { SchemaDefinition } from '@sozialhelden/simpl-schema';
 import {
   getPrefixedQuantitySchemaDefinition,
   LengthSchema,
@@ -7,8 +7,6 @@ import {
 } from './Quantity.js';
 import expectInvalidFixture from './lib/expectInvalidFixture.js';
 import expectValidFixture from './lib/expectValidFixture.js';
-import { SimpleSchema } from '../node_modules/simpl-schema/dist/esm/SimpleSchema.js';
-import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 
 const definition = getPrefixedQuantitySchemaDefinition('field', LengthSchema);
 const schema = new SimpleSchema(definition);

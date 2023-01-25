@@ -83,13 +83,13 @@
   },
   "dependencies": {
     "@sozialhelden/ietf-language-tags": "^3.2.4",
+    "@sozialhelden/simpl-schema": "^3.4.1-export-all-types",
     "@types/lodash-es": "^4.17.6",
     "intersperse": "^1.0.0",
     "js-quantities": "^1.7.6",
     "kind-of": "^6.0.3",
     "lodash-es": "^4.17.21",
     "markdown-table": "^2.0.0",
-    "marked": "^4.0.10",
-    "simpl-schema": "^3.4.1"
+    "marked": "^4.0.10"
   }
 }

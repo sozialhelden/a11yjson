@@ -1,5 +1,4 @@
-/* eslint-disable import/no-relative-packages */
-import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
+import { SchemaDefinition } from '@sozialhelden/simpl-schema';
 import { Room, getRoomSchemaDefinition } from './Room.js';
 import { Mirror, getMirrorSchemaDefinition } from './Mirror.js';
 import { WashBasin, getWashBasinSchemaDefinition } from './WashBasin.js';

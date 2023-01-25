@@ -1,5 +1,4 @@
-/* eslint-disable import/no-relative-packages */
-import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
+import { SchemaDefinition } from '@sozialhelden/simpl-schema';
 
 /**
  * The WheelchairPlaces interface describes the presence of reserved spots for wheelchairs.

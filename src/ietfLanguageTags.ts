@@ -1,6 +1,5 @@
-/* eslint-disable import/no-relative-packages */
-import { getTag } from '../node_modules/@sozialhelden/ietf-language-tags/dist/index.js';
-import { SchemaKeyDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
+import { SchemaKeyDefinition } from '@sozialhelden/simpl-schema';
+import { getTag } from '@sozialhelden/ietf-language-tags/dist/index.js';
 
 /**
  * Defines a spoken or written language in [IETF language tag format](https://github.com/sozialhelden/ietf-language-tags).

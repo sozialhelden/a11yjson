@@ -1,4 +1,3 @@
-/* eslint-disable import/no-relative-packages */
 /**
  * Localized strings MUST be `Object`s with IETF language tags
  * as property names and localized strings as property values.
@@ -9,7 +8,7 @@
  */
 
 import { parseLanguageTag } from '@sozialhelden/ietf-language-tags';
-import { SchemaDefinition, SchemaKeyDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
+import { SchemaDefinition, SchemaKeyDefinition } from '@sozialhelden/simpl-schema';
 
 export type LocalizedString = Record<string, string>;
 

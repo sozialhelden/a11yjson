@@ -1,5 +1,4 @@
-/* eslint-disable import/no-relative-packages */
-import { SimpleSchema } from '../../node_modules/simpl-schema/dist/esm/SimpleSchema.js';
+import SimpleSchema from '@sozialhelden/simpl-schema';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function expectValidFixture(definition: Record<string, any>, value: any) {

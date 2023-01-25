@@ -1,4 +1,4 @@
-import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
+import { SchemaDefinition } from '@sozialhelden/simpl-schema';
 /**
  * [GeoJSON](https://tools.ietf.org/html/rfc7946) `Point` object.
  */

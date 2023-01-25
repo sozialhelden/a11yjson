@@ -1,10 +1,8 @@
-/* eslint-disable import/no-relative-packages */
-import { SimpleSchema } from '../node_modules/simpl-schema/dist/esm/SimpleSchema.js';
-import {
+import SimpleSchema, {
   SchemaDefinition,
   SchemaKeyDefinition,
   ValidationError,
-} from '../node_modules/simpl-schema/dist/esm/types.js';
+} from '@sozialhelden/simpl-schema';
 import { getInteractionModeSchemaDefinition, InteractionMode } from './InteractionMode.js';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
 

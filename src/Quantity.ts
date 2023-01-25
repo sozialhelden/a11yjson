@@ -1,10 +1,8 @@
-/* eslint-disable import/no-relative-packages */
 import * as Qty from 'js-quantities';
 import { memoize } from 'lodash-es';
-import { SimpleSchema } from '../node_modules/simpl-schema/dist/esm/SimpleSchema.js';
-import {
+import SimpleSchema, {
   SchemaDefinition, SchemaKeyDefinitionWithOneType, ValidatorContext, ValidatorFunction,
-} from '../node_modules/simpl-schema/dist/esm/types.js';
+} from '@sozialhelden/simpl-schema';
 
 export enum UnitKind {
   Length = 'length',

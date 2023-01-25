@@ -1,5 +1,4 @@
-/* eslint-disable import/no-relative-packages */
-import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
+import { SchemaDefinition } from '@sozialhelden/simpl-schema';
 import BooleanField from './BooleanField.js';
 import { getGrabBarsSchemaDefinition, GrabBars } from './GrabBars.js';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
