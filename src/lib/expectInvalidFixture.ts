@@ -1,5 +1,5 @@
 /* eslint-disable import/no-relative-packages */
-import { omit } from 'lodash';
+import { omit } from 'lodash-es';
 import { SimpleSchema } from '../../node_modules/simpl-schema/dist/esm/SimpleSchema.js';
 
 export default function expectInvalidFixture(

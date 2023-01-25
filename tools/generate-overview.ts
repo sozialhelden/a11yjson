@@ -1,9 +1,7 @@
 import fs from "fs";
 import packageJSON from "../package.json";
-import lodashPackage from "lodash";
+import { get, includes, isEqual } from "lodash-es";
 import { marked } from "marked";
-
-const { get, includes, isEqual } = lodashPackage;
 
 const json = JSON.parse(fs.readFileSync("./dist/typedoc-output.json").toString());
 const prefix = 'docs/describing-objects/';

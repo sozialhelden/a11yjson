@@ -1,6 +1,6 @@
 /* eslint-disable import/no-relative-packages */
 import * as Qty from 'js-quantities';
-import { memoize } from 'lodash';
+import { memoize } from 'lodash-es';
 import { SimpleSchema } from '../node_modules/simpl-schema/dist/esm/SimpleSchema.js';
 import {
   SchemaDefinition, SchemaKeyDefinitionWithOneType, ValidatorContext, ValidatorFunction,
