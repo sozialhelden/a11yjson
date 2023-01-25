@@ -39,9 +39,11 @@ export const getInteractableSchemaDefinition: (
       const newValue = {};
       const keys = Object.keys(value);
       keys.forEach((key) => {
-        if (interactionTypes.has(key)) {
-          newValue[key] = InteractionModeSchema.clean(value[key]);
+        const interactionMode = value[key];
+        if (typeof interactionMode !== 'object' || interactionMode instanceof Array || typeof interactionMode === 'string' || interactionMode === null || interactionMode === undefined) {
+          return;
         }
+        newValue[key] = InteractionModeSchema.clean(value[key]);
       });
       return newValue;
     },
@@ -56,7 +58,7 @@ export const getInteractableSchemaDefinition: (
 
       const keys = Object.keys(value);
       if (keys.length === 0) {
-        return 'mustHaveAtLeastOneKey';
+        return 'mustHaveAtLeastOneValidKey';
       }
       const errors: ValidationError[] = [];
       keys.forEach((key) => {

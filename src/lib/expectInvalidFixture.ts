@@ -12,12 +12,15 @@ export default function expectInvalidFixture(
     min?: number;
     allowedValues?: string[];
   }[],
+  clean: boolean = true,
 ) {
   const schema = new SimpleSchema(definition);
   const context = schema.newContext();
-  const valueAfterCleaning = schema.clean(value, { filter: false });
-  console.log('valueAfterCleaning', valueAfterCleaning);
-  context.validate(valueAfterCleaning);
+  if (clean) {
+    schema.clean(value, { filter: false, mutate: true });
+  }
+  console.log('valueAfterCleaning', value);
+  context.validate(value);
   expect(context.validationErrors()).not.toEqual([]);
   expect(context.isValid()).toBeFalsy();
   if (expectedValidationErrors.length > 0) {
