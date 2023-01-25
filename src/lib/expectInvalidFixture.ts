@@ -19,7 +19,6 @@ export default function expectInvalidFixture(
   if (clean) {
     schema.clean(value, { filter: false, mutate: true });
   }
-  console.log('valueAfterCleaning', value);
   context.validate(value);
   expect(context.validationErrors()).not.toEqual([]);
   expect(context.isValid()).toBeFalsy();
