@@ -521,5 +521,5 @@ export const getEquipmentPropertiesSchemaDefinition: () => SchemaDefinition = ()
     type: String,
     allowedValues: w3cAccessibilityHazards,
   },
-  ...getInteractableSchemaDefinition(EquipmentInteractions),
+  ...getInteractableSchemaDefinition(EquipmentInteractionsSet),
 });

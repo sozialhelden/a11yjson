@@ -1,3 +1,4 @@
+/* eslint-disable import/no-relative-packages */
 import omit from 'lodash.omit';
 import { SimpleSchema } from '../../node_modules/simpl-schema/dist/esm/SimpleSchema.js';
 
@@ -15,6 +16,7 @@ export default function expectInvalidFixture(
   const schema = new SimpleSchema(definition);
   const context = schema.newContext();
   const valueAfterCleaning = schema.clean(value, { filter: false });
+  console.log('valueAfterCleaning', valueAfterCleaning);
   context.validate(valueAfterCleaning);
   expect(context.validationErrors()).not.toEqual([]);
   expect(context.isValid()).toBeFalsy();

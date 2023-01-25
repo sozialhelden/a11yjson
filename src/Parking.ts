@@ -89,7 +89,7 @@ export const getWheelchairParkingSchemaDefinition: () => SchemaDefinition = () =
     optional: true,
   },
   ...getLocalizedStringSchemaDefinition('neededParkingPermits.$', {}),
-  ...getInteractableSchemaDefinition(ParkingInteractions),
+  ...getInteractableSchemaDefinition(ParkingInteractionsSet),
 });
 
 export interface Parking extends Interactable<ParkingInteraction> {
@@ -105,5 +105,5 @@ export const getParkingSchemaDefinition: () => SchemaDefinition = () => ({
     min: 0,
   },
   ...getPrefixedSchemaDefinition('address', getStructuredAddressSchemaDefinition()),
-  ...getInteractableSchemaDefinition(ParkingInteractions),
+  ...getInteractableSchemaDefinition(ParkingInteractionsSet),
 });

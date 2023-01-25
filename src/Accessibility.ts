@@ -280,5 +280,5 @@ export const getAccessibilitySchemaDefinition: () => SchemaDefinition = () => ({
   ...getPrefixedArraySchemaDefinition('restrooms', getRestroomSchemaDefinition()),
   ...getPrefixedQuantitySchemaDefinition('ambientNoiseLevel', VolumeSchema),
   ...getLocalizedStringSchemaDefinition('serviceContact'),
-  ...getInteractableSchemaDefinition(GenericInteractions),
+  ...getInteractableSchemaDefinition(GenericInteractionsSet),
 });

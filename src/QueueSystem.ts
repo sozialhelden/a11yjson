@@ -65,5 +65,5 @@ export const getQueueSystemSchemaDefinition: () => SchemaDefinition = () => ({
     type: 'SimpleSchema.Integer',
     optional: true,
   },
-  ...getInteractableSchemaDefinition(QueueSystemInteractions),
+  ...getInteractableSchemaDefinition(QueueSystemInteractionsSet),
 });

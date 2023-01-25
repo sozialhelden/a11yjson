@@ -49,5 +49,5 @@ export const getRoomSchemaDefinition: () => SchemaDefinition = () => ({
   },
   ...getPrefixedSchemaDefinition('address', getStructuredAddressSchemaDefinition()),
   ...getLocalizedStringSchemaDefinition('description'),
-  ...getInteractableSchemaDefinition(RoomInteractions),
+  ...getInteractableSchemaDefinition(RoomInteractionsSet),
 });

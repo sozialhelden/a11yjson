@@ -120,5 +120,5 @@ export const getDeskSchemaDefinition: () => SchemaDefinition = () => ({
   ...getPrefixedSchemaDefinition('queueSystem', getQueueSystemSchemaDefinition()),
   ...getPrefixedSchemaDefinition('payment', getPaymentSchemaDefinition()),
   ...getPrefixedSchemaDefinition('intercom', getIntercomSchemaDefinition()),
-  ...getInteractableSchemaDefinition(DeskInteractions),
+  ...getInteractableSchemaDefinition(DeskInteractionsSet),
 });

@@ -304,5 +304,5 @@ export const getDoorSchemaDefinition: () => SchemaDefinition = () => ({
     optional: true,
   },
   'nearbyWallColors.$': htmlColorSchemaDefinition,
-  ...getInteractableSchemaDefinition(DoorInteractions),
+  ...getInteractableSchemaDefinition(DoorInteractionsSet),
 });

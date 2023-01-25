@@ -1,6 +1,7 @@
+/* eslint-disable import/no-relative-packages */
+import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity.js';
-import { SchemaDefinition } from './SchemaDefinition.js';
 
 export const WashBashinInteractions = [
   'changeTemperature',
@@ -62,5 +63,5 @@ export const getWashBasinSchemaDefinition: () => SchemaDefinition = () => ({
   ...getPrefixedQuantitySchemaDefinition('height', LengthSchema),
   ...getPrefixedQuantitySchemaDefinition('spaceBelowHeight', LengthSchema),
   ...getPrefixedQuantitySchemaDefinition('spaceBelowDepth', LengthSchema),
-  ...getInteractableSchemaDefinition(WashBashinInteractions),
+  ...getInteractableSchemaDefinition(WashBasinInteractionsSet),
 });

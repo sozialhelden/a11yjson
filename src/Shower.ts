@@ -60,5 +60,5 @@ export const getShowerSchemaDefinition: () => SchemaDefinition = () => ({
   hasErgonomicHandle: BooleanField,
   showerSeatIsRemovable: BooleanField,
   showerSeatIsFolding: BooleanField,
-  ...getInteractableSchemaDefinition(ShowerInteractions),
+  ...getInteractableSchemaDefinition(ShowerInteractionsSet),
 });

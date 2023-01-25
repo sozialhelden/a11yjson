@@ -221,5 +221,5 @@ export const getSeatSchemaDefinition: () => SchemaDefinition = () => ({
   ...getPrefixedQuantitySchemaDefinition('turningSpaceInFront', LengthSchema),
   ...getPrefixedSchemaDefinition('payment', getPaymentSchemaDefinition()),
   ...getPrefixedSchemaDefinition('intercom', getIntercomSchemaDefinition()),
-  ...getInteractableSchemaDefinition(SeatInteractions),
+  ...getInteractableSchemaDefinition(SeatInteractionsSet),
 });

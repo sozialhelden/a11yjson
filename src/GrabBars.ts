@@ -75,5 +75,5 @@ export const getGrabBarsSchemaDefinition: () => SchemaDefinition = () => ({
   ...getPrefixedQuantitySchemaDefinition('distanceBetweenBars', LengthSchema),
   foldable: BooleanField,
   continuous: BooleanField,
-  ...getInteractableSchemaDefinition(GrabBarsInteractions),
+  ...getInteractableSchemaDefinition(GrabBarsInteractionsSet),
 });

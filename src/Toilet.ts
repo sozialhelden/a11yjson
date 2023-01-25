@@ -83,5 +83,5 @@ export const getToiletSchemaDefinition: () => SchemaDefinition = () => ({
   ...getPrefixedQuantitySchemaDefinition('spaceInFront', LengthSchema),
   ...getPrefixedSchemaDefinition('grabBars', getGrabBarsSchemaDefinition()),
   ...getPrefixedQuantitySchemaDefinition('flushMechanismDistanceFromToilet', LengthSchema),
-  ...getInteractableSchemaDefinition(ToiletInteractions),
+  ...getInteractableSchemaDefinition(ToiletInteractionsSet),
 });

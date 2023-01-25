@@ -36,5 +36,5 @@ export const getMirrorSchemaDefinition: () => SchemaDefinition = () => ({
   isLocatedInsideRestroom: BooleanField,
   isAccessibleWhileSeated: BooleanField,
   ...getPrefixedQuantitySchemaDefinition('heightFromGround', LengthSchema),
-  ...getInteractableSchemaDefinition(MirrorInteractions),
+  ...getInteractableSchemaDefinition(MirrorInteractionsSet),
 });

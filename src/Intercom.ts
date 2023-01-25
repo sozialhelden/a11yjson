@@ -68,5 +68,5 @@ export const getIntercomSchemaDefinition: () => SchemaDefinition = () => ({
   hasVideoCamera: BooleanField,
   hasVisualFeedbackOnConnection: BooleanField,
   needsKeyPad: BooleanField,
-  ...getInteractableSchemaDefinition(IntercomInteractions),
+  ...getInteractableSchemaDefinition(IntercomInteractionsSet),
 });

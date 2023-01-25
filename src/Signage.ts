@@ -141,5 +141,5 @@ export const getSignageSchemaDefinition: () => SchemaDefinition = () => ({
   isHighContrast: BooleanField,
   highLegibility: BooleanField,
   ...getPrefixedQuantitySchemaDefinition('fontHeight', LengthSchema),
-  ...getInteractableSchemaDefinition(SignageInteractions),
+  ...getInteractableSchemaDefinition(SignageInteractionsSet),
 });
