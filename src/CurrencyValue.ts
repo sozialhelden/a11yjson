@@ -1,5 +1,5 @@
-import { SchemaDefinition } from 'simpl-schema';
-
+/* eslint-disable import/no-relative-packages */
+import { SchemaDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 import { AccessType, AccessTypes } from './AccessType.js';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
 import { getPaymentSchemaDefinition, Payment } from './Payment.js';

@@ -1,5 +1,5 @@
 /* eslint-disable import/no-relative-packages */
-import { getTag } from '@sozialhelden/ietf-language-tags';
+import { getTag } from '../node_modules/@sozialhelden/ietf-language-tags/dist/index.js';
 import { SchemaKeyDefinition } from '../node_modules/simpl-schema/dist/esm/types.js';
 
 /**

@@ -1,5 +1,5 @@
 /* eslint-disable import/no-relative-packages */
-import SimpleSchema from 'simpl-schema';
+import { SimpleSchema } from '../node_modules/simpl-schema/dist/esm/SimpleSchema.js';
 import {
   SchemaDefinition,
   SchemaKeyDefinition,
@@ -36,7 +36,7 @@ export const getInteractableSchemaDefinition: (
       if (typeof value !== 'object' || value instanceof Array || typeof value === 'string' || value === null || value === undefined) {
         return undefined;
       }
-      const newValue = {};
+      const newValue: typeof value = {};
       const keys = Object.keys(value);
       keys.forEach((key) => {
         const interactionMode = value[key];

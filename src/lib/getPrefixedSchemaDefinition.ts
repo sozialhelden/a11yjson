@@ -1,7 +1,10 @@
 /* eslint-disable import/no-relative-packages */
 import { SimpleSchema } from '../../node_modules/simpl-schema/dist/esm/SimpleSchema.js';
-import { SchemaKeyDefinitionWithOneType } from '../../node_modules/simpl-schema/dist/esm/types.js';
-import { SchemaDefinition, SchemaKeyDefinition } from '../SchemaDefinition.js';
+import {
+  SchemaDefinition,
+  SchemaKeyDefinition,
+  SchemaKeyDefinitionWithOneType,
+} from '../../node_modules/simpl-schema/dist/esm/types.js';
 
 export default function getPrefixedSchemaDefinition(
   prefix: string,

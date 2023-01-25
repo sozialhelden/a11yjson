@@ -12,7 +12,7 @@ Some lack proper formatting in the documentation. Fixes in [`tools/generate-over
 
 ### <a id="AccelerationSchema">AccelerationSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L185)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L184)</span>
 
 
 
@@ -21,7 +21,7 @@ Some lack proper formatting in the documentation. Fixes in [`tools/generate-over
 
 ### <a id="AccelerationSchemaDefinition">AccelerationSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L181)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L180)</span>
 
 <p>Validates a acceleration quantity object and will only accept acceleration units, eg.
 meter/second^2, miles/hour^2. Useful to describe the acceleration of a vehicle, or the
@@ -74,7 +74,7 @@ Read-only tuple with 15 strings:
 
 ### <a id="BaseQuantitySchema">BaseQuantitySchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L140)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L139)</span>
 
 
 
@@ -83,7 +83,7 @@ Read-only tuple with 15 strings:
 
 ### <a id="BrightnessSchema">BrightnessSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L229)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L228)</span>
 
 
 
@@ -92,7 +92,7 @@ Read-only tuple with 15 strings:
 
 ### <a id="BrightnessSchemaDefinition">BrightnessSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L228)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L227)</span>
 
 <p>Validates a brightness descriptor and will only accept brightness units, eg. nits or lumens.</p>
 
@@ -102,7 +102,7 @@ Read-only tuple with 15 strings:
 
 ### <a id="DeskInteractions">DeskInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Desk.ts#L11)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Desk.ts#L12)</span>
 
 
 
@@ -151,9 +151,61 @@ Read-only tuple with 20 strings:
 
 
 
+### <a id="DeskInteractionsSet">DeskInteractionsSet</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Desk.ts#L36)</span>
+
+
+
+Set&lt;One of the following strings:
+
+<p class='grid'>
+<code>changeHeight</code>
+
+<code>checkIn</code>
+
+<code>checkOut</code>
+
+<code>close</code>
+
+<code>enqueue</code>
+
+<code>getFood</code>
+
+<code>getReturn</code>
+
+<code>getShoppingBag</code>
+
+<code>handover</code>
+
+<code>handoverLuggage</code>
+
+<code>lock</code>
+
+<code>open</code>
+
+<code>openAndClose</code>
+
+<code>pay</code>
+
+<code>ringBell</code>
+
+<code>savePreset</code>
+
+<code>scan</code>
+
+<code>selfCheckout</code>
+
+<code>unlock</code>
+
+<code>unlockAndLock</code>
+</p>
+&gt;
+
+
 ### <a id="DirectionAxes">DirectionAxes</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L27)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L28)</span>
 
 <p>Describes a physical direction axis relative to a person’s body.</p>
 
@@ -171,7 +223,7 @@ Read-only tuple with 3 strings:
 
 ### <a id="Directions">Directions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L43)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L44)</span>
 
 <p>Describes physical directions, from the perspective of a person facing forward.</p>
 
@@ -199,7 +251,7 @@ Read-only tuple with 8 strings:
 
 ### <a id="DoorInteractions">DoorInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Door.ts#L18)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Door.ts#L19)</span>
 
 
 
@@ -222,9 +274,35 @@ Read-only tuple with 7 strings:
 
 
 
+### <a id="DoorInteractionsSet">DoorInteractionsSet</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Door.ts#L22)</span>
+
+
+
+Set&lt;One of the following strings:
+
+<p class='grid'>
+<code>close</code>
+
+<code>lock</code>
+
+<code>open</code>
+
+<code>openAndClose</code>
+
+<code>ringDoorbell</code>
+
+<code>unlock</code>
+
+<code>unlockAndLock</code>
+</p>
+&gt;
+
+
 ### <a id="EquipmentInteractions">EquipmentInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L39)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L40)</span>
 
 
 
@@ -273,9 +351,61 @@ Read-only tuple with 20 strings:
 
 
 
+### <a id="EquipmentInteractionsSet">EquipmentInteractionsSet</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L64)</span>
+
+
+
+Set&lt;One of the following strings:
+
+<p class='grid'>
+<code>arriveAtFloor</code>
+
+<code>buy</code>
+
+<code>call</code>
+
+<code>callEmergency</code>
+
+<code>disable</code>
+
+<code>enable</code>
+
+<code>engage</code>
+
+<code>findYourDestination</code>
+
+<code>flush</code>
+
+<code>handover</code>
+
+<code>locateYourself</code>
+
+<code>ride</code>
+
+<code>scan</code>
+
+<code>selectFloor</code>
+
+<code>sell</code>
+
+<code>sleep</code>
+
+<code>toggle</code>
+
+<code>travel</code>
+
+<code>understand</code>
+
+<code>use</code>
+</p>
+&gt;
+
+
 ### <a id="EquipmentTypes">EquipmentTypes</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L18)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L19)</span>
 
 
 
@@ -318,7 +448,7 @@ Read-only tuple with 16 strings:
 
 ### <a id="ForceSchema">ForceSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L192)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L191)</span>
 
 
 
@@ -327,7 +457,7 @@ Read-only tuple with 16 strings:
 
 ### <a id="ForceSchemaDefinition">ForceSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L191)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L190)</span>
 
 <p>Validates a force quantity object and will only accept force units, eg. newton, or
 kilogram*meter/second^2.</p>
@@ -338,7 +468,7 @@ kilogram*meter/second^2.</p>
 
 ### <a id="GenericInteractions">GenericInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L49)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L50)</span>
 
 
 
@@ -395,24 +525,112 @@ Read-only tuple with 24 strings:
 
 
 
+### <a id="GenericInteractionsSet">GenericInteractionsSet</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L77)</span>
+
+
+
+Set&lt;One of the following strings:
+
+<p class='grid'>
+<code>arrive</code>
+
+<code>book</code>
+
+<code>buy</code>
+
+<code>change</code>
+
+<code>checkIn</code>
+
+<code>checkOut</code>
+
+<code>eat</code>
+
+<code>explore</code>
+
+<code>getFood</code>
+
+<code>listen</code>
+
+<code>pay</code>
+
+<code>play</code>
+
+<code>read</code>
+
+<code>rent</code>
+
+<code>roam</code>
+
+<code>see</code>
+
+<code>sell</code>
+
+<code>use</code>
+
+<code>useLockers</code>
+
+<code>visit</code>
+
+<code>watch</code>
+
+<code>watchMovies</code>
+
+<code>watchPlays</code>
+
+<code>workHere</code>
+</p>
+&gt;
+
+
 ### <a id="GrabBarsInteractions">GrabBarsInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/GrabBars.ts#L6)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/GrabBars.ts#L7)</span>
 
 
 
-Read-only tuple with 2 strings:
+Read-only tuple with 5 strings:
 <ul>
 <li><code>localizeYourself</code></li>
 
 <li><code>findYourDestination</code></li>
+
+<li><code>foldUp</code></li>
+
+<li><code>foldDown</code></li>
+
+<li><code>adjust</code></li>
 </ul>
 
 
 
+### <a id="GrabBarsInteractionsSet">GrabBarsInteractionsSet</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/GrabBars.ts#L15)</span>
+
+
+
+Set&lt;One of the following strings:
+
+<p class='grid'>
+<code>adjust</code>
+
+<code>findYourDestination</code>
+
+<code>foldDown</code>
+
+<code>foldUp</code>
+
+<code>localizeYourself</code>
+</p>
+&gt;
+
+
 ### <a id="HertzSchema">HertzSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L217)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L216)</span>
 
 
 
@@ -421,7 +639,7 @@ Read-only tuple with 2 strings:
 
 ### <a id="HertzSchemaDefinition">HertzSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L216)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L215)</span>
 
 <p>Validates a frequency quantity object and will only accept frequency units, eg. hertz.</p>
 
@@ -431,7 +649,7 @@ Read-only tuple with 2 strings:
 
 ### <a id="IntercomInteractions">IntercomInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Intercom.ts#L13)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Intercom.ts#L14)</span>
 
 
 
@@ -452,9 +670,33 @@ Read-only tuple with 6 strings:
 
 
 
+### <a id="IntercomInteractionsSet">IntercomInteractionsSet</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Intercom.ts#L16)</span>
+
+
+
+Set&lt;One of the following strings:
+
+<p class='grid'>
+<code>call</code>
+
+<code>close</code>
+
+<code>hangUp</code>
+
+<code>identify</code>
+
+<code>open</code>
+
+<code>ring</code>
+</p>
+&gt;
+
+
 ### <a id="LengthSchema">LengthSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L167)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L166)</span>
 
 
 
@@ -463,7 +705,7 @@ Read-only tuple with 6 strings:
 
 ### <a id="LengthSchemaDefinition">LengthSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L166)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L165)</span>
 
 <p>Validates a length quantity object and will only accept length units, eg. meter, centimeter or
 inch.</p>
@@ -474,7 +716,7 @@ inch.</p>
 
 ### <a id="MassSchema">MassSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L205)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L204)</span>
 
 
 
@@ -483,7 +725,7 @@ inch.</p>
 
 ### <a id="MassSchemaDefinition">MassSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L204)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L203)</span>
 
 <p>Validates a mass quantity object and will only accept mass/weight units, eg. kilogram, gram or
 pound.</p>
@@ -494,7 +736,7 @@ pound.</p>
 
 ### <a id="MediaInteractions">MediaInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L12)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L13)</span>
 
 
 
@@ -525,9 +767,75 @@ Read-only tuple with 11 strings:
 
 
 
-### <a id="MediaTypes">MediaTypes</a>
+### <a id="MediaInteractionsSet">MediaInteractionsSet</a>
 
 <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L27)</span>
+
+
+
+Set&lt;One of the following strings:
+
+<p class='grid'>
+<code>browse</code>
+
+<code>close</code>
+
+<code>discover</code>
+
+<code>feel</code>
+
+<code>interact</code>
+
+<code>listen</code>
+
+<code>open</code>
+
+<code>read</code>
+
+<code>recognize</code>
+
+<code>rent</code>
+
+<code>watch</code>
+</p>
+&gt;
+
+
+### <a id="MediaTypeSet">MediaTypeSet</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L42)</span>
+
+
+
+Set&lt;One of the following strings:
+
+<p class='grid'>
+<code>document</code>
+
+<code>exhibit</code>
+
+<code>guide</code>
+
+<code>menu</code>
+
+<code>movie</code>
+
+<code>play</code>
+
+<code>presentation</code>
+
+<code>screen</code>
+
+<code>tour</code>
+
+<code>website</code>
+</p>
+&gt;
+
+
+### <a id="MediaTypes">MediaTypes</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L29)</span>
 
 
 
@@ -558,7 +866,7 @@ Read-only tuple with 10 strings:
 
 ### <a id="MirrorInteractions">MirrorInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Mirror.ts#L6)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Mirror.ts#L7)</span>
 
 
 
@@ -577,9 +885,31 @@ Read-only tuple with 5 strings:
 
 
 
+### <a id="MirrorInteractionsSet">MirrorInteractionsSet</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Mirror.ts#L15)</span>
+
+
+
+Set&lt;One of the following strings:
+
+<p class='grid'>
+<code>adjust</code>
+
+<code>clean</code>
+
+<code>move</code>
+
+<code>turn</code>
+
+<code>use</code>
+</p>
+&gt;
+
+
 ### <a id="Operators">Operators</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L69)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L68)</span>
 
 <p>The allowed operators for comparison quantities</p>
 
@@ -609,7 +939,7 @@ Read-only tuple with 9 strings:
 
 ### <a id="ParkingInteractions">ParkingInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Parking.ts#L9)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Parking.ts#L10)</span>
 
 
 
@@ -626,9 +956,29 @@ Read-only tuple with 4 strings:
 
 
 
+### <a id="ParkingInteractionsSet">ParkingInteractionsSet</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Parking.ts#L17)</span>
+
+
+
+Set&lt;One of the following strings:
+
+<p class='grid'>
+<code>arrive</code>
+
+<code>enterVehicle</code>
+
+<code>exitVehicle</code>
+
+<code>park</code>
+</p>
+&gt;
+
+
 ### <a id="PaymentInteractions">PaymentInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Payment.ts#L5)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Payment.ts#L6)</span>
 
 
 
@@ -649,7 +999,7 @@ Read-only tuple with 5 strings:
 
 ### <a id="QueueSystemInteractions">QueueSystemInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/QueueSystem.ts#L7)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/QueueSystem.ts#L8)</span>
 
 
 
@@ -676,9 +1026,39 @@ Read-only tuple with 9 strings:
 
 
 
+### <a id="QueueSystemInteractionsSet">QueueSystemInteractionsSet</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/QueueSystem.ts#L10)</span>
+
+
+
+Set&lt;One of the following strings:
+
+<p class='grid'>
+<code>arrive</code>
+
+<code>checkIn</code>
+
+<code>checkOut</code>
+
+<code>enqueue</code>
+
+<code>getOnesTurn</code>
+
+<code>getTicket</code>
+
+<code>leaveQueue</code>
+
+<code>skipQueue</code>
+
+<code>wait</code>
+</p>
+&gt;
+
+
 ### <a id="RestroomSignIcons">RestroomSignIcons</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Restroom.ts#L15)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Restroom.ts#L16)</span>
 
 
 
@@ -709,7 +1089,7 @@ Read-only tuple with 10 strings:
 
 ### <a id="RoomInteractions">RoomInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Room.ts#L8)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Room.ts#L9)</span>
 
 
 
@@ -742,9 +1122,45 @@ Read-only tuple with 12 strings:
 
 
 
+### <a id="RoomInteractionsSet">RoomInteractionsSet</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Room.ts#L24)</span>
+
+
+
+Set&lt;One of the following strings:
+
+<p class='grid'>
+<code>closeWindow</code>
+
+<code>enter</code>
+
+<code>exit</code>
+
+<code>lookAround</code>
+
+<code>openWindow</code>
+
+<code>play</code>
+
+<code>see</code>
+
+<code>sit</code>
+
+<code>sleep</code>
+
+<code>stand</code>
+
+<code>storeThings</code>
+
+<code>wait</code>
+</p>
+&gt;
+
+
 ### <a id="SeatInteractions">SeatInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Seat.ts#L16)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Seat.ts#L17)</span>
 
 
 
@@ -795,9 +1211,63 @@ Read-only tuple with 21 strings:
 
 
 
+### <a id="SeatInteractionsSet">SeatInteractionsSet</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Seat.ts#L41)</span>
+
+
+
+Set&lt;One of the following strings:
+
+<p class='grid'>
+<code>adjust</code>
+
+<code>adjustArmRests</code>
+
+<code>adjustBackRest</code>
+
+<code>adjustFootRest</code>
+
+<code>adjustHeadRest</code>
+
+<code>adjustHeight</code>
+
+<code>adjustLegRest</code>
+
+<code>adjustSeatBelt</code>
+
+<code>adjustSeatBeltAngle</code>
+
+<code>adjustSeatBeltHeight</code>
+
+<code>adjustSeatBeltLength</code>
+
+<code>adjustSeatBeltLock</code>
+
+<code>adjustSeatBeltPosition</code>
+
+<code>adjustSeatBeltTension</code>
+
+<code>adjustSeatingAngle</code>
+
+<code>adjustSeatingSurface</code>
+
+<code>connectSeatbelt</code>
+
+<code>fold</code>
+
+<code>move</code>
+
+<code>sit</code>
+
+<code>unfold</code>
+</p>
+&gt;
+
+
 ### <a id="ShowerInteractions">ShowerInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Shower.ts#L12)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Shower.ts#L13)</span>
 
 
 
@@ -824,9 +1294,39 @@ Read-only tuple with 9 strings:
 
 
 
+### <a id="ShowerInteractionsSet">ShowerInteractionsSet</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Shower.ts#L25)</span>
+
+
+
+Set&lt;One of the following strings:
+
+<p class='grid'>
+<code>transfer</code>
+
+<code>useConditioner</code>
+
+<code>useShampoo</code>
+
+<code>useShowerCurtain</code>
+
+<code>useShowerGel</code>
+
+<code>useShowerHead</code>
+
+<code>useSoap</code>
+
+<code>useSupport</code>
+
+<code>wash</code>
+</p>
+&gt;
+
+
 ### <a id="SignageInteractions">SignageInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Signage.ts#L7)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Signage.ts#L8)</span>
 
 
 
@@ -841,9 +1341,27 @@ Read-only tuple with 3 strings:
 
 
 
+### <a id="SignageInteractionsSet">SignageInteractionsSet</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Signage.ts#L14)</span>
+
+
+
+Set&lt;One of the following strings:
+
+<p class='grid'>
+<code>findYourDestination</code>
+
+<code>locateYourself</code>
+
+<code>useSitemap</code>
+</p>
+&gt;
+
+
 ### <a id="SlopeSchema">SlopeSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L223)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L222)</span>
 
 
 
@@ -852,7 +1370,7 @@ Read-only tuple with 3 strings:
 
 ### <a id="SlopeSchemaDefinition">SlopeSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L222)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L221)</span>
 
 <p>Validates a slope quantity object and will only accept units to descrie a slope, eg. degrees.</p>
 
@@ -862,7 +1380,7 @@ Read-only tuple with 3 strings:
 
 ### <a id="SmoothnessTypeValues">SmoothnessTypeValues</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Surface.ts#L169)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Surface.ts#L170)</span>
 
 
 
@@ -891,7 +1409,7 @@ Read-only tuple with 9 strings:
 
 ### <a id="SpeedSchema">SpeedSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L174)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L173)</span>
 
 
 
@@ -900,7 +1418,7 @@ Read-only tuple with 9 strings:
 
 ### <a id="SpeedSchemaDefinition">SpeedSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L173)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L172)</span>
 
 <p>Validates a speed quantity object and will only accept speed units, eg. meter/second, miles/hour
 or similar.</p>
@@ -911,7 +1429,7 @@ or similar.</p>
 
 ### <a id="SurfaceTypeValues">SurfaceTypeValues</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Surface.ts#L6)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Surface.ts#L7)</span>
 
 
 
@@ -1238,7 +1756,7 @@ Read-only tuple with 158 strings:
 
 ### <a id="TemperatureSchema">TemperatureSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L239)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L238)</span>
 
 
 
@@ -1247,7 +1765,7 @@ Read-only tuple with 158 strings:
 
 ### <a id="TemperatureSchemaDefinition">TemperatureSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L235)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L234)</span>
 
 <p>Validates a temperature quantity object and will only accept temperature units, eg. degrees
 celsius (<code>degC</code>), degrees Fahrenheit (<code>degF</code>) or kelvin (<code>K</code>).</p>
@@ -1258,7 +1776,7 @@ celsius (<code>degC</code>), degrees Fahrenheit (<code>degF</code>) or kelvin (<
 
 ### <a id="TimeIntervalSchema">TimeIntervalSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L198)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L197)</span>
 
 
 
@@ -1267,7 +1785,7 @@ celsius (<code>degC</code>), degrees Fahrenheit (<code>degF</code>) or kelvin (<
 
 ### <a id="TimeIntervalSchemaDefinition">TimeIntervalSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L197)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L196)</span>
 
 <p>Validates a timer interval object and will only accept time units, eg. seconds, minutes or hours.</p>
 
@@ -1277,7 +1795,7 @@ celsius (<code>degC</code>), degrees Fahrenheit (<code>degF</code>) or kelvin (<
 
 ### <a id="ToiletInteractions">ToiletInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Toilet.ts#L10)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Toilet.ts#L11)</span>
 
 
 
@@ -1294,9 +1812,29 @@ Read-only tuple with 4 strings:
 
 
 
+### <a id="ToiletInteractionsSet">ToiletInteractionsSet</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Toilet.ts#L18)</span>
+
+
+
+Set&lt;One of the following strings:
+
+<p class='grid'>
+<code>flush</code>
+
+<code>secondaryFlush</code>
+
+<code>spray</code>
+
+<code>use</code>
+</p>
+&gt;
+
+
 ### <a id="UnitlessSchema">UnitlessSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L160)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L159)</span>
 
 
 
@@ -1305,7 +1843,7 @@ Read-only tuple with 4 strings:
 
 ### <a id="UnitlessSchemaDefinition">UnitlessSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L159)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L158)</span>
 
 
 
@@ -1314,7 +1852,7 @@ Read-only tuple with 4 strings:
 
 ### <a id="Urgencies">Urgencies</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/PerceptionMode.ts#L28)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/PerceptionMode.ts#L29)</span>
 
 
 
@@ -1335,7 +1873,7 @@ Read-only tuple with 5 strings:
 
 ### <a id="VolumeSchema">VolumeSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L211)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L210)</span>
 
 
 
@@ -1344,7 +1882,7 @@ Read-only tuple with 5 strings:
 
 ### <a id="VolumeSchemaDefinition">VolumeSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L210)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L209)</span>
 
 <p>Validates a sound volume quantity object and will only accept sound volume units, eg. decibel.</p>
 
@@ -1354,7 +1892,7 @@ Read-only tuple with 5 strings:
 
 ### <a id="WashBashinInteractions">WashBashinInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/WashBasin.ts#L5)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/WashBasin.ts#L6)</span>
 
 
 
@@ -1389,9 +1927,47 @@ Read-only tuple with 13 strings:
 
 
 
+### <a id="WashBasinInteractionsSet">WashBasinInteractionsSet</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/WashBasin.ts#L22)</span>
+
+
+
+Set&lt;One of the following strings:
+
+<p class='grid'>
+<code>changeTemperature</code>
+
+<code>changeWaterPressure</code>
+
+<code>getCarbonizedWater</code>
+
+<code>getColdWater</code>
+
+<code>getHotWater</code>
+
+<code>getPaperTowel</code>
+
+<code>getTowel</code>
+
+<code>sanitizeHands</code>
+
+<code>useAirDryer</code>
+
+<code>useSoap</code>
+
+<code>useWater</code>
+
+<code>useWaterJet</code>
+
+<code>useWaterSpray</code>
+</p>
+&gt;
+
+
 ### <a id="WheelchairAccessibilityGrades">WheelchairAccessibilityGrades</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L28)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L29)</span>
 
 <p>Describes the general wheelchair accessibility of the place. This is a human-rated value.
 It SHOULD conform to the traffic light system found in OpenStreetMap and Wheelmap.org.</p>
@@ -1410,7 +1986,7 @@ Read-only tuple with 3 strings:
 
 ### <a id="WifiInteractions">WifiInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/WifiAccessibility.ts#L6)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/WifiAccessibility.ts#L7)</span>
 
 
 
@@ -1427,5 +2003,53 @@ Read-only tuple with 6 strings:
 <li><code>getTerms</code></li>
 
 <li><code>acceptTerms</code></li>
+</ul>
+
+
+
+### <a id="WifiInteractionsSet">WifiInteractionsSet</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/WifiAccessibility.ts#L16)</span>
+
+
+
+Set&lt;One of the following strings:
+
+<p class='grid'>
+<code>acceptTerms</code>
+
+<code>getGuestPass</code>
+
+<code>getPassword</code>
+
+<code>getTerms</code>
+
+<code>login</code>
+
+<code>register</code>
+</p>
+&gt;
+
+
+### <a id="smokingPolicies">smokingPolicies</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/SmokingPolicy.ts#L4)</span>
+
+<p>Describes smoking policies for visitors of a place.</p>
+
+
+Read-only tuple with 6 strings:
+<ul>
+<li><code>dedicatedToSmoking</code></li>
+
+<li><code>allowedEverywhere</code></li>
+
+<li><code>inSeparateArea</code></li>
+
+<li><code>inIsolatedArea</code></li>
+
+<li><code>prohibited</code></li>
+
+<li><code>onlyOutside</code></li>
 </ul>
 

@@ -252,7 +252,7 @@ export const getAccessibilitySchemaDefinition: () => SchemaDefinition = () => ({
   smokingPolicy: {
     type: String,
     optional: true,
-    allowedValues: smokingPolicies,
+    allowedValues: ((smokingPolicies as any) as any[]),
   },
   isWellLit: BooleanField,
   isQuiet: BooleanField,

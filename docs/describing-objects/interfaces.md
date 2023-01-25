@@ -13,7 +13,7 @@ them as they are, or mix them into your own entity definitions.
 
 ### <a id="Accessibility">Accessibility</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L80)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L82)</span>
 
   <p>Describes the physical (and sometimes human rated) accessibility of a place.</p>
 
@@ -110,7 +110,22 @@ describe pathways from there to this place.</p>
 <code>undefined</code> or missing property indicates unknown.</p>
 </td></tr><tr><td class="property-name">restrooms</td><td class="property-type"><code>undefined</code>&nbsp;|&nbsp;<a href="#Restroom">Restroom</a>[]</td><td class="property-docs"><p>Describes the accessibility of restrooms in the place.</p>
 </td></tr><tr><td class="property-name">serviceContact</td><td class="property-type"><a href="../i18n">LocalizedString</a></td><td class="property-docs"></td></tr><tr><td class="property-name">signageSystems</td><td class="property-type"><a href="#Signage">Signage</a>[]</td><td class="property-docs"><p>Describes local signage systems. If multiple different systems are used, describe them all.</p>
-</td></tr><tr><td class="property-name">smokingPolicy</td><td class="property-type"><a href="#SmokingPolicy">SmokingPolicy</a></td><td class="property-docs"><p>Object describing the owner&#39;s smoking policy.</p>
+</td></tr><tr><td class="property-name">smokingPolicy</td><td class="property-type">One of the following strings:
+
+<p class='grid'>
+<code>allowedEverywhere</code>
+
+<code>dedicatedToSmoking</code>
+
+<code>inIsolatedArea</code>
+
+<code>inSeparateArea</code>
+
+<code>onlyOutside</code>
+
+<code>prohibited</code>
+</p>
+</td><td class="property-docs"><p>Object describing the owner&#39;s smoking policy.</p>
 </td></tr><tr><td class="property-name">staff</td><td class="property-type"><code>undefined</code>&nbsp;|&nbsp;<a href="#Staff">Staff</a></td><td class="property-docs"><p>Information about the service staff.
 <code>null</code> indicates there is no staff, <code>undefined</code> or missing property indicates unknown.</p>
 </td></tr><tr><td class="property-name">surface</td><td class="property-type"><code>undefined</code>&nbsp;|&nbsp;<a href="#Surface">Surface</a></td><td class="property-docs"><p>Object describing the place&#39;s ground condition. If there are very different ground conditions,
@@ -136,7 +151,7 @@ you can create multiple places and nest them.</p>
 
 ### <a id="ActionMode">ActionMode</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L62)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L63)</span>
 
   <p>Describes necessary abilities and modes inputting information.</p>
 
@@ -325,7 +340,7 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 ### <a id="AnimalPolicy">AnimalPolicy</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/AnimalPolicy.ts#L4)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/AnimalPolicy.ts#L5)</span>
 
   
 
@@ -397,14 +412,14 @@ BigDecimal arithmetic.</p>
 </td></tr><tr><td class="property-name">currency</td><td class="property-type"><code>string</code></td><td class="property-docs"><p>The currency in which the amount is specified, as three-letter acronym.</p>
 <p>Can be undefined if the amount is zero.</p>
 </td></tr><tr><td class="property-name">paymentTypes</td><td class="property-type"><a href="#Payment">Payment</a>[]</td><td class="property-docs"><p>The payment method that is used to pay the amount of money.</p>
-</td></tr><tr><td class="property-name">per</td><td class="property-type"><a href="#Quantity">Quantity</a></td><td class="property-docs"><p>Unit that is paid with the amount of money, e.g. &quot;minute&quot;, &quot;hour&quot;, &#39;GB&#39;, &#39;piece&#39;</p>
+</td></tr><tr><td class="property-name">per</td><td class="property-type"><a href="#Quantity">Quantity</a></td><td class="property-docs"><p>Unit that is paid with the amount of money, e.g. &quot;30 minutes&quot;, &quot;1 hour&quot;, &#39;1 GB&#39;, &#39;3 pieces&#39;</p>
 </td></tr></table>
 
   
 
 ### <a id="Desk">Desk</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Desk.ts#L39)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Desk.ts#L41)</span>
 
   <p>Describes a desk / table / cash desk / reception counter.</p>
 
@@ -492,7 +507,7 @@ This can be used to determine if a wheelchair user can sit at the desk.</p>
 
 ### <a id="Door">Door</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Door.ts#L26)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Door.ts#L28)</span>
 
   <p>Describes the door of a place&#39;s entrance or to one of its facilities (e.g. to a shower, or to
 an elevator)</p>
@@ -689,7 +704,7 @@ sitemap. Can contain attributes that are realtime updated to indicate operationa
 
 ### <a id="EquipmentProperties">EquipmentProperties</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L64)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L66)</span>
 
   
 
@@ -883,7 +898,7 @@ developed and users are only given one text field to describe the problem.)</p>
 
 ### <a id="GrabBars">GrabBars</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/GrabBars.ts#L12)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/GrabBars.ts#L20)</span>
 
   <p>Describes grab bars or hand rails.</p>
 
@@ -905,7 +920,13 @@ developed and users are only given one text field to describe the problem.)</p>
 Object with one or more of these keys:
 
 <p class="grid">
+<code>adjust</code>
+
 <code>findYourDestination</code>
+
+<code>foldDown</code>
+
+<code>foldUp</code>
 
 <code>localizeYourself</code>
 </p>
@@ -935,7 +956,7 @@ objects.</p>
 
 ### <a id="Interactable">Interactable</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Interactable.ts#L5)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Interactable.ts#L11)</span>
 
   
 
@@ -959,7 +980,7 @@ objects.</p>
 
 ### <a id="InteractionMode">InteractionMode</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/InteractionMode.ts#L12)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/InteractionMode.ts#L13)</span>
 
   <p>Describes how you can interact with a thing and which abilities you need to do so.</p>
 
@@ -981,7 +1002,7 @@ button’.</p>
 
 ### <a id="Intercom">Intercom</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Intercom.ts#L19)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Intercom.ts#L21)</span>
 
   <p>Describes a system to communicate over distance, e.g. a door intercom next to a doorbell.</p>
 
@@ -1025,7 +1046,7 @@ objects.</p>
 
 ### <a id="Media">Media</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L45)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L48)</span>
 
   <p>Describes a media unit provided at this place, for example an exhibit at a museum or a movie in
 a cinema.</p>
@@ -1086,7 +1107,7 @@ how much turning space there is in front of it.</p>
 
 ### <a id="Mirror">Mirror</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Mirror.ts#L18)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Mirror.ts#L20)</span>
 
   <p>Describes a mirror.</p>
 
@@ -1122,7 +1143,7 @@ objects.</p>
 
 ### <a id="Parking">Parking</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Parking.ts#L93)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Parking.ts#L95)</span>
 
   
 
@@ -1152,7 +1173,7 @@ objects.</p>
 
 ### <a id="Pathways">Pathways</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Pathways.ts#L10)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Pathways.ts#L11)</span>
 
   <p>Describes one or multiple pathways inside a place.</p>
 
@@ -1169,7 +1190,7 @@ objects.</p>
 
 ### <a id="Payment">Payment</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Payment.ts#L17)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Payment.ts#L18)</span>
 
   <p>The <code>Payment</code> interface describes the payment options at a location.</p>
 
@@ -1183,7 +1204,7 @@ objects.</p>
 
 ### <a id="PerceptionMode">PerceptionMode</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/PerceptionMode.ts#L42)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/PerceptionMode.ts#L43)</span>
 
   <p>Describes necessary abilities and modes for interpreting information output, signals, or
 content.</p>
@@ -1317,7 +1338,7 @@ and changes over time.</p>
 
 ### <a id="PersonalProfile">PersonalProfile</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/PersonalProfile.ts#L12)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/PersonalProfile.ts#L13)</span>
 
   <p>Describes a person. This exists only to transform data from sources where no physical attributes
 of places have been captured as data directly. It&#39;s better to describe physical attributes of
@@ -1342,7 +1363,7 @@ for them.</p>
 
 ### <a id="PlaceInfo">PlaceInfo</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/PlaceInfo.ts#L9)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/PlaceInfo.ts#L10)</span>
 
   <p>The PlaceInfo interface describes a physical location with added accessibility properties.</p>
 
@@ -1452,7 +1473,7 @@ data provider, it’s a good idea to use the provider&#39;s internal ID here.</p
 
 ### <a id="Quantity">Quantity</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L75)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L74)</span>
 
   <p>Describes a quantity of a unit type.</p>
 
@@ -1495,7 +1516,7 @@ data provider, it’s a good idea to use the provider&#39;s internal ID here.</p
 
 ### <a id="QueueSystem">QueueSystem</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/QueueSystem.ts#L13)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/QueueSystem.ts#L15)</span>
 
   <p>Describes a system that encourages or forces people to queue up.</p>
 
@@ -1542,7 +1563,7 @@ objects.</p>
 
 ### <a id="Restroom">Restroom</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Restroom.ts#L33)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Restroom.ts#L34)</span>
 
   <p>Describes a <code>Room</code> that contains one or more <code>Toilet</code>s or <code>Shower</code>s.</p>
 
@@ -1664,7 +1685,7 @@ e.g. for different access types or usage times.</p>
 
 ### <a id="Room">Room</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Room.ts#L27)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Room.ts#L29)</span>
 
   <p>Describes a room inside a structure.</p>
 
@@ -1713,7 +1734,7 @@ objects.</p>
 
 ### <a id="Seat">Seat</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Seat.ts#L44)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Seat.ts#L46)</span>
 
   <p>Describes one or multiple seats / chairs / benches / stools / couches / sofas / armchairs / ...</p>
 
@@ -1838,7 +1859,7 @@ This can be used to determine if a wheelchair user can sit at the desk.</p>
 
 ### <a id="Shower">Shower</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Shower.ts#L29)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Shower.ts#L31)</span>
 
   <p>Describes a shower.</p>
 
@@ -1883,7 +1904,7 @@ objects.</p>
 
 ### <a id="Signage">Signage</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Signage.ts#L17)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Signage.ts#L19)</span>
 
   <p>Describes a signage / physical navigation system belonging to a location.</p>
 
@@ -1938,7 +1959,7 @@ objects.</p>
 
 ### <a id="Staff">Staff</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Staff.ts#L7)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Staff.ts#L8)</span>
 
   <p>Describes the presence of staff and their qualifications and/or provided services.</p>
 
@@ -1958,7 +1979,7 @@ if not.</p>
 
 ### <a id="Stairs">Stairs</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Stairs.ts#L11)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Stairs.ts#L12)</span>
 
   <p>The <code>Stairs</code> interface describes one or more walkable stairs.</p>
 
@@ -1990,7 +2011,7 @@ detectable with the touch of a foot or sweep of a cane.</p>
 
 ### <a id="StructuredAddress">StructuredAddress</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Address.ts#L8)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Address.ts#L9)</span>
 
   <p>The address of a places as Address as a series of structured attributes.</p>
 
@@ -2030,7 +2051,7 @@ geographical region.</p>
 
 ### <a id="Surface">Surface</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Surface.ts#L186)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Surface.ts#L187)</span>
 
   <p>Describes the surface of a ground or path.</p>
 
@@ -2387,7 +2408,7 @@ geographical region.</p>
 
 ### <a id="TechCombination">TechCombination</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/TechCombination.ts#L7)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/TechCombination.ts#L8)</span>
 
   <p>Describes a combination of technologies that are used together to achieve a specific goal.</p>
 
@@ -2413,7 +2434,7 @@ possible.</p>
 
 ### <a id="Toilet">Toilet</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Toilet.ts#L21)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Toilet.ts#L23)</span>
 
   <p>Describes a single toilet that can be inside a restroom or cabin.</p>
 
@@ -2457,7 +2478,7 @@ toilet)</p>
 
 ### <a id="WashBasin">WashBasin</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/WashBasin.ts#L25)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/WashBasin.ts#L27)</span>
 
   <p>Describes a wash basin.</p>
 
@@ -2511,7 +2532,7 @@ objects.</p>
 
 ### <a id="WheelchairParking">WheelchairParking</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Parking.ts#L20)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Parking.ts#L22)</span>
 
   <p>Describes one or more wheelchair parking lots.</p>
 
@@ -2554,7 +2575,7 @@ unknown.</p>
 
 ### <a id="WheelchairPlaces">WheelchairPlaces</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/WheelchairPlaces.ts#L6)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/WheelchairPlaces.ts#L7)</span>
 
   <p>The WheelchairPlaces interface describes the presence of reserved spots for wheelchairs.</p>
 
@@ -2572,7 +2593,7 @@ there is no designated space for wheelchair users, but the number is known.</p>
 
 ### <a id="WifiAccessibility">WifiAccessibility</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/WifiAccessibility.ts#L19)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/WifiAccessibility.ts#L21)</span>
 
   <p>Describes the presence of staff and their qualifications and/or provided services.</p>
 

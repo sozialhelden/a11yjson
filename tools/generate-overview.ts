@@ -1,8 +1,9 @@
 import fs from "fs";
-import _ from "lodash";
 import packageJSON from "../package.json";
-import { get, includes } from "lodash";
+import lodashPackage from "lodash";
 import { marked } from "marked";
+
+const { get, includes, isEqual } = lodashPackage;
 
 const json = JSON.parse(fs.readFileSync("./dist/typedoc-output.json").toString());
 const prefix = 'docs/describing-objects/';
@@ -300,7 +301,7 @@ function TupleType(props: { type: any; name: string; elements: any[] }): string 
     props.elements.map((t, i) => `<code>${t.value}</code>`) :
     props.elements.map((t, i) => Type({ object: t }));
   const elementList = elements.map(element => `<li>${element}</li>`).join('\n\n');
-  const allElementsAreTheSameType = elements.every((e, i) => _.isEqual(e, elements[0]));
+  const allElementsAreTheSameType = elements.every((e, i) => isEqual(e, elements[0]));
   if (allElementsAreTheSameType) {
     return `tuple with ${elements.length} ${elements[0]} elements`;
   }
