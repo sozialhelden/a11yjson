@@ -13,7 +13,7 @@ export default function expectInvalidFixture(
   }[],
   clean: boolean = true,
 ) {
-  const schema = new SimpleSchema(definition);
+  const schema = new SimpleSchema(definition, { humanizeAutoLabels: false });
   const context = schema.newContext();
   if (clean) {
     schema.clean(value, { filter: false, mutate: true });
