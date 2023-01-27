@@ -102,6 +102,5 @@ export const getInteractableSchemaDefinition: (
   };
   return {
     interactions,
-    ...getPrefixedSchemaDefinition('interactions.$', getInteractionModeSchemaDefinition()),
   };
 };
