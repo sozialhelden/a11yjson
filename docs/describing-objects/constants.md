@@ -12,23 +12,23 @@ Some lack proper formatting in the documentation. Fixes in [`tools/generate-over
 
 ### <a id="AccelerationSchema">AccelerationSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L184)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L182)</span>
 
 
 
-`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SimpleSchema` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="AccelerationSchemaDefinition">AccelerationSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L180)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L178)</span>
 
 <p>Validates a acceleration quantity object and will only accept acceleration units, eg.
 meter/second^2, miles/hour^2. Useful to describe the acceleration of a vehicle, or the
 acceleration that a person is subjected to.</p>
 
 
-`SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SchemaDefinition` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="AccessTypes">AccessTypes</a>
@@ -74,35 +74,35 @@ Read-only tuple with 15 strings:
 
 ### <a id="BaseQuantitySchema">BaseQuantitySchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L139)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L137)</span>
 
 
 
-`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SimpleSchema` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="BrightnessSchema">BrightnessSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L228)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L226)</span>
 
 
 
-`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SimpleSchema` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="BrightnessSchemaDefinition">BrightnessSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L227)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L225)</span>
 
 <p>Validates a brightness descriptor and will only accept brightness units, eg. nits or lumens.</p>
 
 
-`SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SchemaDefinition` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="DeskInteractions">DeskInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Desk.ts#L12)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Desk.ts#L11)</span>
 
 
 
@@ -153,7 +153,7 @@ Read-only tuple with 20 strings:
 
 ### <a id="DeskInteractionsSet">DeskInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Desk.ts#L36)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Desk.ts#L35)</span>
 
 
 
@@ -205,7 +205,7 @@ Set&lt;One of the following strings:
 
 ### <a id="DirectionAxes">DirectionAxes</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L28)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L27)</span>
 
 <p>Describes a physical direction axis relative to a person’s body.</p>
 
@@ -223,7 +223,7 @@ Read-only tuple with 3 strings:
 
 ### <a id="Directions">Directions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L44)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L43)</span>
 
 <p>Describes physical directions, from the perspective of a person facing forward.</p>
 
@@ -251,7 +251,7 @@ Read-only tuple with 8 strings:
 
 ### <a id="DoorInteractions">DoorInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Door.ts#L19)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Door.ts#L18)</span>
 
 
 
@@ -276,7 +276,7 @@ Read-only tuple with 7 strings:
 
 ### <a id="DoorInteractionsSet">DoorInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Door.ts#L22)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Door.ts#L21)</span>
 
 
 
@@ -302,7 +302,7 @@ Set&lt;One of the following strings:
 
 ### <a id="EquipmentInteractions">EquipmentInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L40)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L39)</span>
 
 
 
@@ -353,7 +353,7 @@ Read-only tuple with 20 strings:
 
 ### <a id="EquipmentInteractionsSet">EquipmentInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L64)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L63)</span>
 
 
 
@@ -405,7 +405,7 @@ Set&lt;One of the following strings:
 
 ### <a id="EquipmentTypes">EquipmentTypes</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L19)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L18)</span>
 
 
 
@@ -448,27 +448,27 @@ Read-only tuple with 16 strings:
 
 ### <a id="ForceSchema">ForceSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L191)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L189)</span>
 
 
 
-`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SimpleSchema` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="ForceSchemaDefinition">ForceSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L190)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L188)</span>
 
 <p>Validates a force quantity object and will only accept force units, eg. newton, or
 kilogram*meter/second^2.</p>
 
 
-`SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SchemaDefinition` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="GenericInteractions">GenericInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L50)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L49)</span>
 
 
 
@@ -527,7 +527,7 @@ Read-only tuple with 24 strings:
 
 ### <a id="GenericInteractionsSet">GenericInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L77)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L76)</span>
 
 
 
@@ -587,7 +587,7 @@ Set&lt;One of the following strings:
 
 ### <a id="GrabBarsInteractions">GrabBarsInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/GrabBars.ts#L7)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/GrabBars.ts#L6)</span>
 
 
 
@@ -608,7 +608,7 @@ Read-only tuple with 5 strings:
 
 ### <a id="GrabBarsInteractionsSet">GrabBarsInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/GrabBars.ts#L15)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/GrabBars.ts#L14)</span>
 
 
 
@@ -630,26 +630,26 @@ Set&lt;One of the following strings:
 
 ### <a id="HertzSchema">HertzSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L216)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L214)</span>
 
 
 
-`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SimpleSchema` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="HertzSchemaDefinition">HertzSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L215)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L213)</span>
 
 <p>Validates a frequency quantity object and will only accept frequency units, eg. hertz.</p>
 
 
-`SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SchemaDefinition` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="IntercomInteractions">IntercomInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Intercom.ts#L14)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Intercom.ts#L13)</span>
 
 
 
@@ -672,7 +672,7 @@ Read-only tuple with 6 strings:
 
 ### <a id="IntercomInteractionsSet">IntercomInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Intercom.ts#L16)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Intercom.ts#L15)</span>
 
 
 
@@ -696,47 +696,47 @@ Set&lt;One of the following strings:
 
 ### <a id="LengthSchema">LengthSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L166)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L164)</span>
 
 
 
-`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SimpleSchema` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="LengthSchemaDefinition">LengthSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L165)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L163)</span>
 
 <p>Validates a length quantity object and will only accept length units, eg. meter, centimeter or
 inch.</p>
 
 
-`SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SchemaDefinition` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="MassSchema">MassSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L204)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L202)</span>
 
 
 
-`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SimpleSchema` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="MassSchemaDefinition">MassSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L203)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L201)</span>
 
 <p>Validates a mass quantity object and will only accept mass/weight units, eg. kilogram, gram or
 pound.</p>
 
 
-`SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SchemaDefinition` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="MediaInteractions">MediaInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L13)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L12)</span>
 
 
 
@@ -769,7 +769,7 @@ Read-only tuple with 11 strings:
 
 ### <a id="MediaInteractionsSet">MediaInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L27)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L26)</span>
 
 
 
@@ -803,7 +803,7 @@ Set&lt;One of the following strings:
 
 ### <a id="MediaTypeSet">MediaTypeSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L42)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L41)</span>
 
 
 
@@ -835,7 +835,7 @@ Set&lt;One of the following strings:
 
 ### <a id="MediaTypes">MediaTypes</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L29)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L28)</span>
 
 
 
@@ -866,7 +866,7 @@ Read-only tuple with 10 strings:
 
 ### <a id="MirrorInteractions">MirrorInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Mirror.ts#L7)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Mirror.ts#L6)</span>
 
 
 
@@ -887,7 +887,7 @@ Read-only tuple with 5 strings:
 
 ### <a id="MirrorInteractionsSet">MirrorInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Mirror.ts#L15)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Mirror.ts#L14)</span>
 
 
 
@@ -909,7 +909,7 @@ Set&lt;One of the following strings:
 
 ### <a id="Operators">Operators</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L68)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L66)</span>
 
 <p>The allowed operators for comparison quantities</p>
 
@@ -939,7 +939,7 @@ Read-only tuple with 9 strings:
 
 ### <a id="ParkingInteractions">ParkingInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Parking.ts#L10)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Parking.ts#L9)</span>
 
 
 
@@ -958,7 +958,7 @@ Read-only tuple with 4 strings:
 
 ### <a id="ParkingInteractionsSet">ParkingInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Parking.ts#L17)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Parking.ts#L16)</span>
 
 
 
@@ -978,7 +978,7 @@ Set&lt;One of the following strings:
 
 ### <a id="PaymentInteractions">PaymentInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Payment.ts#L6)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Payment.ts#L5)</span>
 
 
 
@@ -999,7 +999,7 @@ Read-only tuple with 5 strings:
 
 ### <a id="QueueSystemInteractions">QueueSystemInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/QueueSystem.ts#L8)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/QueueSystem.ts#L7)</span>
 
 
 
@@ -1028,7 +1028,7 @@ Read-only tuple with 9 strings:
 
 ### <a id="QueueSystemInteractionsSet">QueueSystemInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/QueueSystem.ts#L10)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/QueueSystem.ts#L9)</span>
 
 
 
@@ -1058,7 +1058,7 @@ Set&lt;One of the following strings:
 
 ### <a id="RestroomSignIcons">RestroomSignIcons</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Restroom.ts#L16)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Restroom.ts#L15)</span>
 
 
 
@@ -1089,11 +1089,11 @@ Read-only tuple with 10 strings:
 
 ### <a id="RoomInteractions">RoomInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Room.ts#L9)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Room.ts#L8)</span>
 
 
 
-Read-only tuple with 12 strings:
+Read-only tuple with 13 strings:
 <ul>
 <li><code>enter</code></li>
 
@@ -1118,6 +1118,8 @@ Read-only tuple with 12 strings:
 <li><code>openWindow</code></li>
 
 <li><code>closeWindow</code></li>
+
+<li><code>callEmergency</code></li>
 </ul>
 
 
@@ -1131,6 +1133,8 @@ Read-only tuple with 12 strings:
 Set&lt;One of the following strings:
 
 <p class='grid'>
+<code>callEmergency</code>
+
 <code>closeWindow</code>
 
 <code>enter</code>
@@ -1160,7 +1164,7 @@ Set&lt;One of the following strings:
 
 ### <a id="SeatInteractions">SeatInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Seat.ts#L17)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Seat.ts#L16)</span>
 
 
 
@@ -1213,7 +1217,7 @@ Read-only tuple with 21 strings:
 
 ### <a id="SeatInteractionsSet">SeatInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Seat.ts#L41)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Seat.ts#L40)</span>
 
 
 
@@ -1267,7 +1271,7 @@ Set&lt;One of the following strings:
 
 ### <a id="ShowerInteractions">ShowerInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Shower.ts#L13)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Shower.ts#L12)</span>
 
 
 
@@ -1296,7 +1300,7 @@ Read-only tuple with 9 strings:
 
 ### <a id="ShowerInteractionsSet">ShowerInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Shower.ts#L25)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Shower.ts#L24)</span>
 
 
 
@@ -1326,7 +1330,7 @@ Set&lt;One of the following strings:
 
 ### <a id="SignageInteractions">SignageInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Signage.ts#L8)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Signage.ts#L7)</span>
 
 
 
@@ -1343,7 +1347,7 @@ Read-only tuple with 3 strings:
 
 ### <a id="SignageInteractionsSet">SignageInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Signage.ts#L14)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Signage.ts#L13)</span>
 
 
 
@@ -1361,26 +1365,26 @@ Set&lt;One of the following strings:
 
 ### <a id="SlopeSchema">SlopeSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L222)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L220)</span>
 
 
 
-`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SimpleSchema` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="SlopeSchemaDefinition">SlopeSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L221)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L219)</span>
 
 <p>Validates a slope quantity object and will only accept units to descrie a slope, eg. degrees.</p>
 
 
-`SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SchemaDefinition` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="SmoothnessTypeValues">SmoothnessTypeValues</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Surface.ts#L170)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Surface.ts#L169)</span>
 
 
 
@@ -1409,27 +1413,27 @@ Read-only tuple with 9 strings:
 
 ### <a id="SpeedSchema">SpeedSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L173)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L171)</span>
 
 
 
-`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SimpleSchema` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="SpeedSchemaDefinition">SpeedSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L172)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L170)</span>
 
 <p>Validates a speed quantity object and will only accept speed units, eg. meter/second, miles/hour
 or similar.</p>
 
 
-`SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SchemaDefinition` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="SurfaceTypeValues">SurfaceTypeValues</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Surface.ts#L7)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Surface.ts#L6)</span>
 
 
 
@@ -1756,46 +1760,46 @@ Read-only tuple with 158 strings:
 
 ### <a id="TemperatureSchema">TemperatureSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L238)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L236)</span>
 
 
 
-`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SimpleSchema` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="TemperatureSchemaDefinition">TemperatureSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L234)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L232)</span>
 
 <p>Validates a temperature quantity object and will only accept temperature units, eg. degrees
 celsius (<code>degC</code>), degrees Fahrenheit (<code>degF</code>) or kelvin (<code>K</code>).</p>
 
 
-`SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SchemaDefinition` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="TimeIntervalSchema">TimeIntervalSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L197)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L195)</span>
 
 
 
-`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SimpleSchema` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="TimeIntervalSchemaDefinition">TimeIntervalSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L196)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L194)</span>
 
 <p>Validates a timer interval object and will only accept time units, eg. seconds, minutes or hours.</p>
 
 
-`SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SchemaDefinition` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="ToiletInteractions">ToiletInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Toilet.ts#L11)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Toilet.ts#L10)</span>
 
 
 
@@ -1814,7 +1818,7 @@ Read-only tuple with 4 strings:
 
 ### <a id="ToiletInteractionsSet">ToiletInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Toilet.ts#L18)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Toilet.ts#L17)</span>
 
 
 
@@ -1834,25 +1838,25 @@ Set&lt;One of the following strings:
 
 ### <a id="UnitlessSchema">UnitlessSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L159)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L157)</span>
 
 
 
-`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SimpleSchema` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="UnitlessSchemaDefinition">UnitlessSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L158)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L156)</span>
 
 
 
-`SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SchemaDefinition` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="Urgencies">Urgencies</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/PerceptionMode.ts#L29)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/PerceptionMode.ts#L28)</span>
 
 
 
@@ -1873,26 +1877,26 @@ Read-only tuple with 5 strings:
 
 ### <a id="VolumeSchema">VolumeSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L210)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L208)</span>
 
 
 
-`SimpleSchema` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SimpleSchema` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="VolumeSchemaDefinition">VolumeSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L209)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L207)</span>
 
 <p>Validates a sound volume quantity object and will only accept sound volume units, eg. decibel.</p>
 
 
-`SchemaDefinition` from the [`simpl-schema` NPM package](https://www.npmjs.com/package/simpl-schema).
+`SchemaDefinition` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="WashBashinInteractions">WashBashinInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/WashBasin.ts#L6)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/WashBasin.ts#L5)</span>
 
 
 
@@ -1929,7 +1933,7 @@ Read-only tuple with 13 strings:
 
 ### <a id="WashBasinInteractionsSet">WashBasinInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/WashBasin.ts#L22)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/WashBasin.ts#L21)</span>
 
 
 
@@ -1967,7 +1971,7 @@ Set&lt;One of the following strings:
 
 ### <a id="WheelchairAccessibilityGrades">WheelchairAccessibilityGrades</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L29)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L28)</span>
 
 <p>Describes the general wheelchair accessibility of the place. This is a human-rated value.
 It SHOULD conform to the traffic light system found in OpenStreetMap and Wheelmap.org.</p>
@@ -1986,7 +1990,7 @@ Read-only tuple with 3 strings:
 
 ### <a id="WifiInteractions">WifiInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/WifiAccessibility.ts#L7)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/WifiAccessibility.ts#L6)</span>
 
 
 
@@ -2009,7 +2013,7 @@ Read-only tuple with 6 strings:
 
 ### <a id="WifiInteractionsSet">WifiInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/WifiAccessibility.ts#L16)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/WifiAccessibility.ts#L15)</span>
 
 
 
