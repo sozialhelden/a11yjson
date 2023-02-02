@@ -18,6 +18,7 @@ export const RoomInteractions = [
   'lookAround',
   'openWindow',
   'closeWindow',
+  'callEmergency',
 ] as const;
 export type RoomInteraction = typeof RoomInteractions[number];
 export const RoomInteractionsSet = new Set(RoomInteractions);
