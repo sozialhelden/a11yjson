@@ -1058,7 +1058,7 @@ Set&lt;One of the following strings:
 
 ### <a id="RestroomSignIcons">RestroomSignIcons</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Restroom.ts#L15)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Restroom.ts#L13)</span>
 
 
 
@@ -1089,7 +1089,7 @@ Read-only tuple with 10 strings:
 
 ### <a id="RoomInteractions">RoomInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Room.ts#L8)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Room.ts#L12)</span>
 
 
 
@@ -1126,7 +1126,7 @@ Read-only tuple with 13 strings:
 
 ### <a id="RoomInteractionsSet">RoomInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Room.ts#L24)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Room.ts#L28)</span>
 
 
 

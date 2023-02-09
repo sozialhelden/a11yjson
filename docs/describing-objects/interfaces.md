@@ -1563,7 +1563,7 @@ objects.</p>
 
 ### <a id="Restroom">Restroom</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Restroom.ts#L33)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Restroom.ts#L31)</span>
 
   <p>Describes a <code>Room</code> that contains one or more <code>Toilet</code>s or <code>Shower</code>s.</p>
 
@@ -1600,8 +1600,9 @@ objects.</p>
 
 <code>yes</code>
 </p>
-</td><td class="property-docs"><p>Defines who this restroom is for. See <a href="https://wiki.openstreetmap.org/wiki/Key:access">https://wiki.openstreetmap.org/wiki/Key:access</a> for more information.</p>
-</td></tr><tr><td class="property-name">address</td><td class="property-type"><a href="#StructuredAddress">StructuredAddress</a></td><td class="property-docs"></td></tr><tr><td class="property-name">description</td><td class="property-type"><a href="../i18n">LocalizedString</a></td><td class="property-docs"></td></tr><tr><td class="property-name">entrance</td><td class="property-type"><a href="#Entrance">Entrance</a></td><td class="property-docs"><p>Object describing the entrance to this restroom.</p>
+</td><td class="property-docs"><p>Defines who this room is for. See <a href="https://wiki.openstreetmap.org/wiki/Key:access">https://wiki.openstreetmap.org/wiki/Key:access</a> for more information.</p>
+</td></tr><tr><td class="property-name">address</td><td class="property-type"><a href="#StructuredAddress">StructuredAddress</a></td><td class="property-docs"></td></tr><tr><td class="property-name">description</td><td class="property-type"><a href="../i18n">LocalizedString</a></td><td class="property-docs"></td></tr><tr><td class="property-name">entrance</td><td class="property-type"><a href="#EntranceProperties">EntranceProperties</a></td><td class="property-docs"><p>Object describing the entrance to this room.</p>
+</td></tr><tr><td class="property-name">entrances</td><td class="property-type"><a href="#Entrance">Entrance</a>[]</td><td class="property-docs"><p>Object describing the entrance to this room.</p>
 </td></tr><tr><td class="property-name">hasBathTub</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if there is a bath tub in this room, <code>false</code> if not, <code>undefined</code> if condition is
 unknown.</p>
 </td></tr><tr><td class="property-name">hasCeilingHoist</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the restroom has a ceiling hoist, <code>false</code> if not.</p>
@@ -1677,7 +1678,7 @@ objects.</p>
 </p>
 </td><td class="property-docs"><p>Visible icons on the restroom’s sign</p>
 </td></tr><tr><td class="property-name">toilet</td><td class="property-type"><a href="#Toilet">Toilet</a></td><td class="property-docs"><p>Object describing a toilet inside the restroom, if existing.</p>
-</td></tr><tr><td class="property-name">turningSpaceInside</td><td class="property-type"><a href="#Length">Length</a></td><td class="property-docs"><p>How wide is the space inside that is usable for turning?</p>
+</td></tr><tr><td class="property-name">turningSpaceInside</td><td class="property-type"><a href="#Length">Length</a></td><td class="property-docs"><p>How wide is the space inside that you can use for turning?</p>
 </td></tr><tr><td class="property-name">usageFee</td><td class="property-type"><a href="#CurrencyValue">CurrencyValue</a>[]</td><td class="property-docs"><p>Defines how much you have to pay to use this restroom. There might be multiple fee amounts,
 e.g. for different access types or usage times.</p>
 </td></tr><tr><td class="property-name">washBasin</td><td class="property-type"><a href="#WashBasin">WashBasin</a></td><td class="property-docs"><p>Object describing a wash basin belonging to this restroom. It can be outside of the restroom.</p>
@@ -1687,7 +1688,7 @@ e.g. for different access types or usage times.</p>
 
 ### <a id="Room">Room</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Room.ts#L29)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Room.ts#L33)</span>
 
   <p>Describes a room inside a structure.</p>
 
@@ -1695,7 +1696,40 @@ e.g. for different access types or usage times.</p>
   
   
 
-  <table><tr><th class="property-name">Name</th><th class="property-type">Type</th><th class="property-docs"></th></tr><tr><td class="property-name">address</td><td class="property-type"><a href="#StructuredAddress">StructuredAddress</a></td><td class="property-docs"></td></tr><tr><td class="property-name">description</td><td class="property-type"><a href="../i18n">LocalizedString</a></td><td class="property-docs"></td></tr><tr><td class="property-name">interactions</td><td class="property-type">
+  <table><tr><th class="property-name">Name</th><th class="property-type">Type</th><th class="property-docs"></th></tr><tr><td class="property-name">access</td><td class="property-type">Array of one or more of these strings:
+
+<p class='grid'>
+<code>customers</code>
+
+<code>delivery</code>
+
+<code>designated</code>
+
+<code>disabled</code>
+
+<code>emergency</code>
+
+<code>employees</code>
+
+<code>no</code>
+
+<code>permissive</code>
+
+<code>permit</code>
+
+<code>private</code>
+
+<code>public</code>
+
+<code>residents</code>
+
+<code>yes</code>
+</p>
+</td><td class="property-docs"><p>Defines who this room is for. See <a href="https://wiki.openstreetmap.org/wiki/Key:access">https://wiki.openstreetmap.org/wiki/Key:access</a> for more information.</p>
+</td></tr><tr><td class="property-name">address</td><td class="property-type"><a href="#StructuredAddress">StructuredAddress</a></td><td class="property-docs"></td></tr><tr><td class="property-name">description</td><td class="property-type"><a href="../i18n">LocalizedString</a></td><td class="property-docs"></td></tr><tr><td class="property-name">entrance</td><td class="property-type"><a href="#EntranceProperties">EntranceProperties</a></td><td class="property-docs"><p>Object describing the entrance to this room.</p>
+</td></tr><tr><td class="property-name">entrances</td><td class="property-type"><a href="#Entrance">Entrance</a>[]</td><td class="property-docs"><p>Object describing the entrance to this room.</p>
+</td></tr><tr><td class="property-name">hasSupportRails</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if there support rails on the walls</p>
+</td></tr><tr><td class="property-name">interactions</td><td class="property-type">
 Object with one or more of these keys:
 
 <p class="grid">
@@ -1732,7 +1766,8 @@ Values must be of type <a href="#InteractionMode">InteractionMode</a>.
 objects.</p>
 </td></tr><tr><td class="property-name">isAccessibleWithWheelchair</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the room&#39;s relevant facilities are completely accessible while using a wheelchair,
 <code>false</code> if not, <code>undefined</code> if the condition is unknown or difficult to assess.</p>
-</td></tr><tr><td class="property-name">sameAs</td><td class="property-type"><code>string</code>[]</td><td class="property-docs"></td></tr></table>
+</td></tr><tr><td class="property-name">sameAs</td><td class="property-type"><code>string</code>[]</td><td class="property-docs"></td></tr><tr><td class="property-name">turningSpaceInside</td><td class="property-type"><a href="#Length">Length</a></td><td class="property-docs"><p>How wide is the space inside that you can use for turning?</p>
+</td></tr></table>
 
   
 

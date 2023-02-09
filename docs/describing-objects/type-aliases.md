@@ -627,7 +627,7 @@ Definition: one of the following strings:
 
 ### <a id="RestroomSignIcon">RestroomSignIcon</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Restroom.ts#L28)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Restroom.ts#L26)</span>
 
 
 
@@ -657,7 +657,7 @@ Definition: one of the following strings:
 
 ### <a id="RoomInteraction">RoomInteraction</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Room.ts#L23)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Room.ts#L27)</span>
 
 
 
