@@ -1,9 +1,13 @@
 import { SchemaDefinition } from '@sozialhelden/simpl-schema';
+import { AccessType, AccessTypes } from './AccessType.js';
 import { getStructuredAddressSchemaDefinition, StructuredAddress } from './Address.js';
 import BooleanField from './BooleanField.js';
+import { Entrance, getEntranceSchemaDefinition } from './Entrance.js';
+import { EntranceProperties, getEntrancePropertiesSchemaDefinition } from './EntranceProperties.js';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
+import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition.js';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity.js';
 
 export const RoomInteractions = [
   'enter',
@@ -36,6 +40,32 @@ export interface Room extends Interactable<RoomInteraction> {
   sameAs?: string[];
   address?: StructuredAddress;
   description?: LocalizedString;
+
+  /**
+   * How wide is the space inside that you can use for turning?
+   */
+  turningSpaceInside?: Length;
+
+  /**
+   * `true` if there support rails on the walls
+   */
+  hasSupportRails?: boolean;
+
+  /**
+   * Object describing the entrance to this room.
+   */
+  entrance?: EntranceProperties;
+
+  /**
+   * Object describing the entrance to this room.
+   */
+  entrances?: Entrance[];
+
+  /**
+   * Defines who this room is for. See https://wiki.openstreetmap.org/wiki/Key:access for more information.
+   */
+  access?: AccessType[];
+
 }
 
 export const getRoomSchemaDefinition: () => SchemaDefinition = () => ({
@@ -50,4 +80,16 @@ export const getRoomSchemaDefinition: () => SchemaDefinition = () => ({
   ...getPrefixedSchemaDefinition('address', getStructuredAddressSchemaDefinition()),
   ...getLocalizedStringSchemaDefinition('description'),
   ...getInteractableSchemaDefinition(RoomInteractionsSet),
+  ...getPrefixedSchemaDefinition('entrance', getEntrancePropertiesSchemaDefinition()),
+  ...getPrefixedArraySchemaDefinition('entrances', getEntranceSchemaDefinition()),
+  ...getPrefixedQuantitySchemaDefinition('turningSpaceInside', LengthSchema),
+  hasSupportRails: BooleanField,
+  access: {
+    type: Array,
+    optional: true,
+  },
+  'access.$': {
+    type: String,
+    allowedValues: (AccessTypes as any) as any[],
+  },
 });

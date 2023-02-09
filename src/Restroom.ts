@@ -2,12 +2,10 @@ import { SchemaDefinition } from '@sozialhelden/simpl-schema';
 import { Room, getRoomSchemaDefinition } from './Room.js';
 import { Mirror, getMirrorSchemaDefinition } from './Mirror.js';
 import { WashBasin, getWashBasinSchemaDefinition } from './WashBasin.js';
-import { Entrance, getEntranceSchemaDefinition } from './Entrance.js';
 import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity.js';
 import { Toilet, getToiletSchemaDefinition } from './Toilet.js';
 import { Shower, getShowerSchemaDefinition } from './Shower.js';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
-import { AccessType, AccessTypes } from './AccessType.js';
 import { CurrencyValue, getCurrencyValueSchemaDefinition } from './CurrencyValue.js';
 import { getStructuredAddressSchemaDefinition } from './Address.js';
 import BooleanField from './BooleanField.js';
@@ -43,14 +41,6 @@ export interface Restroom extends Room {
    * Describes a mirror, if existing.
    */
   mirror?: Mirror;
-  /**
-   * How wide is the space inside that is usable for turning?
-   */
-  turningSpaceInside?: Length;
-  /**
-   * `true` if there support rails on the walls
-   */
-  hasSupportRails?: boolean;
 
   /**
    * `true` if the restroom has a changing table for babies, `false` if not.
@@ -84,10 +74,6 @@ export interface Restroom extends Room {
   hasBathTub?: boolean;
 
   /**
-   * Object describing the entrance to this restroom.
-   */
-  entrance?: Entrance;
-  /**
    * `true` if the restroom has a shower, `false` if not.
    */
   hasShower?: boolean;
@@ -111,11 +97,6 @@ export interface Restroom extends Room {
   washBasin?: WashBasin;
 
   /**
-   * Defines who this restroom is for. See https://wiki.openstreetmap.org/wiki/Key:access for more information.
-   */
-  access?: AccessType[];
-
-  /**
    * Defines how much you have to pay to use this restroom. There might be multiple fee amounts,
    * e.g. for different access types or usage times.
    */
@@ -133,7 +114,6 @@ export const getRestroomSchemaDefinition: () => SchemaDefinition = () => ({
     allowedValues: (RestroomSignIcons as any) as any[],
   },
   hasMirror: BooleanField,
-  hasSupportRails: BooleanField,
   hasChangingTableForBabies: BooleanField,
   hasChangingTableForAdults: BooleanField,
   hasCeilingHoist: BooleanField,
@@ -141,22 +121,12 @@ export const getRestroomSchemaDefinition: () => SchemaDefinition = () => ({
   hasShower: BooleanField,
   hasBathTub: BooleanField,
   ...getPrefixedSchemaDefinition('mirror', getMirrorSchemaDefinition()),
-  ...getPrefixedQuantitySchemaDefinition('turningSpaceInside', LengthSchema),
   ...getPrefixedSchemaDefinition('toilet', getToiletSchemaDefinition()),
-  ...getPrefixedSchemaDefinition('entrance', getEntranceSchemaDefinition()),
   ...getPrefixedSchemaDefinition('shower', getShowerSchemaDefinition()),
   ...getPrefixedQuantitySchemaDefinition('heightOfSoap', LengthSchema),
   ...getPrefixedQuantitySchemaDefinition('heightOfDrier', LengthSchema),
   ...getPrefixedSchemaDefinition('washBasin', getWashBasinSchemaDefinition()),
   ...getRoomSchemaDefinition(),
-  access: {
-    type: Array,
-    optional: true,
-  },
-  'access.$': {
-    type: String,
-    allowedValues: (AccessTypes as any) as any[],
-  },
   usageFee: {
     type: Array,
     optional: true,

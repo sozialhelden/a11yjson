@@ -1,7 +1,14 @@
 import { Room } from './Room.js';
 import { Complete } from './Complete.js';
+import entrancePropertiesFixture from './entrancePropertiesFixture.js';
+import entranceFixture from './entranceFixture.js';
 
 const roomFixture: Complete<Room> = {
+  turningSpaceInside: '>150cm',
+  hasSupportRails: true,
+  entrance: entrancePropertiesFixture,
+  entrances: [entranceFixture],
+  access: ['customers', 'employees'],
   isAccessibleWithWheelchair: true,
   sameAs: ['https://example.com/rooms/1'],
   address: {
