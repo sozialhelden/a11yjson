@@ -305,6 +305,7 @@ export function getPrefixedQuantitySchemaDefinition(
           }
           return parseQuantity(this.value);
         }
+        return BaseQuantitySchema.clean(this.value);
       }
       return undefined;
     },

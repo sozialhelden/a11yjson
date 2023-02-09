@@ -58,6 +58,11 @@ describe('QuantitativeValue', () => {
   ));
 
   it('rejects a string with an invalid unit', () => expectInvalidUnitFixture('10 breadcrumbs', [{ name: 'field.unit', type: 'notAllowed' }]));
+
+  it('cleans a string value and autoconverts it to a number', () => {
+    const cleaned = schema.clean({ field: { value: '10', unit: 'cm' } });
+    expect(cleaned.field).toEqual({ value: 10, unit: 'cm' });
+  });
 });
 
 describe('parseQuantity', () => {
