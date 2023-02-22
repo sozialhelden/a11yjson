@@ -13,6 +13,7 @@ export * from './AccessType.js';
 export * from './ActionMode.js';
 export * from './Address.js';
 export * from './AnimalPolicy.js';
+export * from './AppointmentPolicy.js';
 export * from './CurrencyValue.js';
 export * from './Desk.js';
 export * from './Door.js';

@@ -15,6 +15,7 @@ import wifiAccessibilityFixture from './wifiAccessibilityFixture.js';
 import deskFixture from './deskFixture.js';
 import signageFixture from './signageFixture.js';
 import interactionModeFixture from './interactionModeFixture.js';
+import appointmentPolicyFixture from './appointmentPolicyFixture.js';
 
 const accessibilityFixture: Complete<Accessibility> = {
   accessibleWith: personalProfileFixture,
@@ -48,6 +49,7 @@ const accessibilityFixture: Complete<Accessibility> = {
   surface: surfaceFixture,
   animalPolicy: animalPolicyFixture,
   wifi: wifiAccessibilityFixture,
+  appointmentPolicies: [appointmentPolicyFixture],
   interactions: {
     arrive: interactionModeFixture,
     book: interactionModeFixture,

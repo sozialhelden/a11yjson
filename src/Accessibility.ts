@@ -19,6 +19,7 @@ import { Desk, getDeskSchemaDefinition } from './Desk.js';
 import BooleanField from './BooleanField.js';
 import { getSignageSchemaDefinition, Signage } from './Signage.js';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
+import { AppointmentPolicy, getAppointmentPolicySchemaDefinition } from './AppointmentPolicy.js';
 
 /**
  * Describes the general wheelchair accessibility of the place. This is a human-rated value.
@@ -142,6 +143,12 @@ export interface Accessibility extends Interactable<GenericInteraction> {
    * Object describing the owner's policy regarding visitors bringing animals with them.
    */
   animalPolicy?: AnimalPolicy;
+
+  /**
+   * Describes how you can get an appointment for this place, or if you need one.
+   */
+  appointmentPolicies?: AppointmentPolicy[];
+
   /**
    * `true` if the venue has tactile guide strips on the floor or at the walls, `false` if not.
    * `undefined` or missing property indicates unknown.
@@ -283,4 +290,5 @@ export const getAccessibilitySchemaDefinition: () => SchemaDefinition = () => ({
   ...getPrefixedQuantitySchemaDefinition('ambientNoiseLevel', VolumeSchema),
   ...getLocalizedStringSchemaDefinition('serviceContact'),
   ...getInteractableSchemaDefinition(GenericInteractionsSet),
+  ...getPrefixedArraySchemaDefinition('appointmentPolicies', getAppointmentPolicySchemaDefinition()),
 });
