@@ -33,6 +33,13 @@ export const EquipmentTypes = [
   'flushMechanism',
   'bodyScanner',
   'luggageScanner',
+  'ticketVendingMachine',
+  'xrayMachine',
+  'ctScanner',
+  'mriScanner',
+  'ultrasoundScanner',
+  'wheelchairLift',
+  'treatmentChair',
 ] as const;
 
 export type EquipmentType = typeof EquipmentTypes[number];
@@ -58,6 +65,7 @@ export const EquipmentInteractions = [
   'disable',
   'locateYourself',
   'findYourDestination',
+  'getTreatment',
 ] as const;
 
 export type EquipmentInteraction = typeof EquipmentInteractions[number];
