@@ -23,6 +23,7 @@ export const SeatInteractions = [
   'adjustSeatingSurface',
   'adjustSeatingAngle',
   'adjustArmRests',
+  'removeArmrests',
   'adjustHeadRest',
   'adjustLegRest',
   'adjustBackRest',
