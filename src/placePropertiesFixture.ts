@@ -31,6 +31,9 @@ const placePropertiesFixture: Complete<PlaceProperties> = {
   },
   accessibility: accessibilityFixture,
   access: ['designated'],
+  tags: {
+    healthcare: 'dentist',
+  },
 };
 
 export default placePropertiesFixture;

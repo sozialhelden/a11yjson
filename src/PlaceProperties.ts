@@ -1,4 +1,4 @@
-import { SchemaDefinition } from '@sozialhelden/simpl-schema';
+import { SchemaDefinition, ValidationError } from '@sozialhelden/simpl-schema';
 import { Accessibility, getAccessibilitySchemaDefinition } from './Accessibility.js';
 import { StructuredAddress, getStructuredAddressSchemaDefinition } from './Address.js';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
@@ -118,6 +118,20 @@ export interface PlaceProperties {
    * information.
    */
   access?: AccessType[];
+
+  /**
+   * Tags that are not part of the schema, but are still useful for the data consumer.
+   *
+   * - If a OSM place is described, the tags are the OSM tags.
+   * - If a GTFS place is described, the tags are the GTFS fields.
+   * - If a IMDF place is described, the tags are the IMDF fields.
+   * - If a custom place is described, the tags are the custom fields.
+   * - If a place is described by a combination of multiple sources, the tags are the union of all
+   *   fields.
+   *
+   * @example { 'healthcare': 'dentist' }
+   */
+  tags?: Record<string, string>;
 }
 
 export const getPlacePropertiesSchemaDefinition: () => SchemaDefinition = () => ({
@@ -200,5 +214,45 @@ export const getPlacePropertiesSchemaDefinition: () => SchemaDefinition = () => 
   'access.$': {
     type: String,
     allowedValues: (AccessTypes as any) as any[],
+  },
+  tags: {
+    type: Object,
+    optional: true,
+    blackbox: true,
+    custom(): string | undefined {
+      if (!this.isSet) {
+        return undefined;
+      }
+      const { value } = this;
+      if (typeof value !== 'object' || value instanceof Array || typeof value === 'string' || value === null || value === undefined) {
+        return 'expectedType';
+      }
+      const keys = Object.keys(value);
+      if (keys.length === 0) {
+        return 'mustHaveAtLeastOneKey';
+      }
+      const errors: ValidationError[] = [];
+      keys.forEach((key) => {
+        const interactionMode = value[key];
+        if (
+          typeof interactionMode !== 'string'
+        ) {
+          errors.push({
+            name: `interactions.${key}`,
+            type: 'expectedType',
+            value: interactionMode,
+          });
+        }
+        if (errors.length > 0) {
+          this.addValidationErrors(errors);
+          return false;
+        }
+        return undefined;
+      });
+      return undefined;
+    },
+  },
+  'tags.$': {
+    type: String,
   },
 });
