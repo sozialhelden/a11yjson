@@ -53,6 +53,8 @@ const perceptionModeFixture: Complete<PerceptionMode> = {
   isEasyToUnderstand: true,
   isEasyToFind: true,
   needsHighConcentration: true,
+  provisionalHearingAid: true,
+  stethoscope: true,
   dedicatedScreenForSubtitles: false,
   subtitles: false,
   audioDescription: false,

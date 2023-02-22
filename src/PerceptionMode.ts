@@ -113,6 +113,25 @@ export interface PerceptionMode {
   fullBody?: boolean;
 
   /**
+   * The perceiving person uses a stethoscope.
+   *
+   * This is method for patient communication that is used by doctors to speak to patients with
+   * hearing impairments:
+   *
+   * > British doctors recommend using the stethoscope as a hearing aid for patients in such
+   * > situations (BMJ 2010; 341: c4672). If the patient has the buttons in his ear and the
+   * > physician speaks softly and clearly into the diaphragm as into a microphone, then sufficient
+   * > communication is often possible despite hearing problems. The intimacy of the conversation
+   * > can be preserved by this simple means.
+   *
+   * Sources:
+   *
+   * - [Ärztezeitung](https://www.aerztezeitung.de/Medizin/Das-Stethoskop-als-Hoerhilfe-213950.html)
+   * - [BMJ 2010;341:c4672](https://www.bmj.com/content/341/bmj.c4672?ijkey=66f0d96a9e9bca9e8d5b85b5f35ee0177d7e4239&keytype2=tf_ipsecsha)
+   */
+  stethoscope?: boolean;
+
+  /**
    * The output is an LED.
    */
   led?: boolean;
@@ -192,6 +211,12 @@ export interface PerceptionMode {
    * and changes over time.
    */
   static?: boolean;
+
+  /**
+   * The perceiving person uses a provisional hearing aid, e.g. a stethoscope, a smartphone, or a
+   * headset with a microphone that amplifies the sound or speech.
+   */
+  provisionalHearingAid?: boolean;
 
   /**
    * The output has a dedicated screen for subtitles.
@@ -583,6 +608,8 @@ export const getPerceptionModeSchemaDefinition: () => SchemaDefinition = () => (
   tactileGuides: BooleanField,
   vibration: BooleanField,
   fullBody: BooleanField,
+  stethoscope: BooleanField,
+  provisionalHearingAid: BooleanField,
   apiDocumentationUrl: {
     type: String,
     optional: true,
