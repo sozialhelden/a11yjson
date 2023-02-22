@@ -14,7 +14,7 @@ import { getIntercomSchemaDefinition, Intercom } from './Intercom.js';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
 import validateUrl from './validateUrl.js';
 import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags.js';
-import { Seat } from './Seat.js';
+import { getSeatSchemaDefinition, Seat } from './Seat.js';
 
 export const EquipmentTypes = [
   'bed',
@@ -534,5 +534,6 @@ export const getEquipmentPropertiesSchemaDefinition: () => SchemaDefinition = ()
     type: String,
     allowedValues: w3cAccessibilityHazards,
   },
+  ...getPrefixedSchemaDefinition('seat', getSeatSchemaDefinition()),
   ...getInteractableSchemaDefinition(EquipmentInteractionsSet),
 });

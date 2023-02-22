@@ -2,6 +2,7 @@ import { EquipmentProperties } from './EquipmentProperties.js';
 import { Complete } from './Complete.js';
 import doorFixture from './doorFixture.js';
 import intercomFixture from './intercomFixture.js';
+import seatFixture from './seatFixture.js';
 
 const equipmentPropertiesFixture: Complete<EquipmentProperties> = {
   description: { en: 'string' },
@@ -50,6 +51,7 @@ const equipmentPropertiesFixture: Complete<EquipmentProperties> = {
   accessibilityFeature: ['braille'],
   accessibilityHazard: ['noFlashingHazard'],
   hasLandings: true,
+  seat: seatFixture,
   interactions: {
     use: {},
     selectFloor: {
