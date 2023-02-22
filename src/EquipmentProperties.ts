@@ -14,6 +14,7 @@ import { getIntercomSchemaDefinition, Intercom } from './Intercom.js';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
 import validateUrl from './validateUrl.js';
 import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags.js';
+import { Seat } from './Seat.js';
 
 export const EquipmentTypes = [
   'bed',
@@ -125,6 +126,11 @@ export interface EquipmentProperties extends Interactable<EquipmentInteraction> 
    * Object describing the door to the equipment, or `undefined` if there is no door.
    */
   door?: Door;
+
+  /**
+   * Object describing the seat of the equipment, or `undefined` if there is no seat.
+   */
+  seat?: Seat;
 
   /**
    * `true` if the equipment has doors in two directions, so wheelchair, rollator, bike or pushchair
