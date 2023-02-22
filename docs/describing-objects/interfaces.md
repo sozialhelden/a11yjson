@@ -13,7 +13,7 @@ them as they are, or mix them into your own entity definitions.
 
 ### <a id="Accessibility">Accessibility</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L81)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L85)</span>
 
   <p>Describes the physical (and sometimes human rated) accessibility of a place.</p>
 
@@ -24,6 +24,7 @@ them as they are, or mix them into your own entity definitions.
   <table><tr><th class="property-name">Name</th><th class="property-type">Type</th><th class="property-docs"></th></tr><tr><td class="property-name">accessibleWith</td><td class="property-type"><a href="#PersonalProfile">PersonalProfile</a></td><td class="property-docs"></td></tr><tr><td class="property-name">ambientNoiseLevel</td><td class="property-type"><a href="#Volume">Volume</a></td><td class="property-docs"><p>Ambient noise level in dB(A) relative to a reference pressure of 0.00002 Pa. Median over a
 10-second period at least.</p>
 </td></tr><tr><td class="property-name">animalPolicy</td><td class="property-type"><a href="#AnimalPolicy">AnimalPolicy</a></td><td class="property-docs"><p>Object describing the owner&#39;s policy regarding visitors bringing animals with them.</p>
+</td></tr><tr><td class="property-name">appointmentPolicies</td><td class="property-type"><a href="#AppointmentPolicy">AppointmentPolicy</a>[]</td><td class="property-docs"><p>Describes how you can get an appointment for this place, or if you need one.</p>
 </td></tr><tr><td class="property-name">desks</td><td class="property-type"><code>undefined</code>&nbsp;|&nbsp;<a href="#Desk">Desk</a>[]</td><td class="property-docs"><p>Describes the accessibility of desks in the place.
 <code>null</code> indicates there are no desks, <code>undefined</code> or missing property indicates unknown.</p>
 </td></tr><tr><td class="property-name">entrances</td><td class="property-type"><code>undefined</code>&nbsp;|&nbsp;<a href="#Entrance">Entrance</a>[]</td><td class="property-docs"><p>Describes the accessibility of entrances to the place.</p>
@@ -57,6 +58,10 @@ Object with one or more of these keys:
 
 <code>getFood</code>
 
+<code>getService</code>
+
+<code>getTreatment</code>
+
 <code>listen</code>
 
 <code>pay</code>
@@ -76,6 +81,8 @@ Object with one or more of these keys:
 <code>use</code>
 
 <code>useLockers</code>
+
+<code>useService</code>
 
 <code>visit</code>
 
@@ -360,6 +367,129 @@ there are exceptions.</p>
 dogs without muzzles are explicitly allowed.</p>
 </td></tr><tr><td class="property-name">suppliesWaterForPets</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the place supplies water for accompanying animals, <code>false</code> if explicitly not, or
 <code>undefined</code> if unknown.</p>
+</td></tr></table>
+
+  
+
+### <a id="AppointmentPolicy">AppointmentPolicy</a>
+
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/AppointmentPolicy.ts#L14)</span>
+
+  
+
+  
+  
+
+  <table><tr><th class="property-name">Name</th><th class="property-type">Type</th><th class="property-docs"></th></tr><tr><td class="property-name">access</td><td class="property-type">Array of one or more of these strings:
+
+<p class='grid'>
+<code>customers</code>
+
+<code>delivery</code>
+
+<code>designated</code>
+
+<code>disabled</code>
+
+<code>emergency</code>
+
+<code>employees</code>
+
+<code>no</code>
+
+<code>permissive</code>
+
+<code>permit</code>
+
+<code>private</code>
+
+<code>public</code>
+
+<code>residents</code>
+
+<code>yes</code>
+</p>
+</td><td class="property-docs"><p>Who can make this kind of appointment.</p>
+</td></tr><tr><td class="property-name">allowsWalkIn</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if you need no appointment to visit the place.</p>
+</td></tr><tr><td class="property-name">bookingURL</td><td class="property-type"><code>string</code></td><td class="property-docs"><p>The URL to a page where the appointment can be booked.</p>
+</td></tr><tr><td class="property-name">description</td><td class="property-type"><a href="../i18n">LocalizedString</a></td><td class="property-docs"><p>Describes this policy as text string, e.g. ‘home visits possible if you are over 60’. Use the
+other fields only if the described place has only one typical policy (like at a hairdresser).</p>
+</td></tr><tr><td class="property-name">equipmentProperties</td><td class="property-type"><a href="#EquipmentProperties">EquipmentProperties</a></td><td class="property-docs"><p>If the appointment needs a specific equipment, it is described here.</p>
+</td></tr><tr><td class="property-name">fees</td><td class="property-type"><a href="#CurrencyValue">CurrencyValue</a>[]</td><td class="property-docs"><p>The amount of money that is charged for the appointment.</p>
+</td></tr><tr><td class="property-name">homeVisit</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the appointment can be at the person’s home.</p>
+</td></tr><tr><td class="property-name">inPersonOnSite</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the appointment can be made in person.</p>
+</td></tr><tr><td class="property-name">interactions</td><td class="property-type">
+Object with one or more of these keys:
+
+<p class="grid">
+<code>arrive</code>
+
+<code>book</code>
+
+<code>buy</code>
+
+<code>change</code>
+
+<code>checkIn</code>
+
+<code>checkOut</code>
+
+<code>eat</code>
+
+<code>explore</code>
+
+<code>getFood</code>
+
+<code>getService</code>
+
+<code>getTreatment</code>
+
+<code>listen</code>
+
+<code>pay</code>
+
+<code>play</code>
+
+<code>read</code>
+
+<code>rent</code>
+
+<code>roam</code>
+
+<code>see</code>
+
+<code>sell</code>
+
+<code>use</code>
+
+<code>useLockers</code>
+
+<code>useService</code>
+
+<code>visit</code>
+
+<code>watch</code>
+
+<code>watchMovies</code>
+
+<code>watchPlays</code>
+
+<code>workHere</code>
+</p>
+
+Values must be of type <a href="#InteractionMode">InteractionMode</a>.
+</td><td class="property-docs"><p>An object that indicates how the object can be interacted with.</p>
+<p>The keys of this object are the interaction types, and the values are <a href="../interfaces/#InteractionMode">InteractionMode</a>
+objects.</p>
+</td></tr><tr><td class="property-name">languages</td><td class="property-type"><code>string</code>[]</td><td class="property-docs"><p>The languages that are spoken by the person who is responsible for the appointment.</p>
+</td></tr><tr><td class="property-name">limitationsDescription</td><td class="property-type"><a href="../i18n">LocalizedString</a></td><td class="property-docs"><p>Describes limitations that apply to this policy, e.g. ‘only for people with a disability’.</p>
+</td></tr><tr><td class="property-name">needsAppointmentForAssistant</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if appointments with an assistant are possible, but need to be booked separately.</p>
+</td></tr><tr><td class="property-name">openingHours</td><td class="property-type"><code>string</code></td><td class="property-docs"><p>Opening hours in the format described at <a href="https://wiki.openstreetmap.org/wiki/Key:opening_hours">https://wiki.openstreetmap.org/wiki/Key:opening_hours</a>.</p>
+</td></tr><tr><td class="property-name">paymentTypes</td><td class="property-type"><a href="#Payment">Payment</a>[]</td><td class="property-docs"><p>The payment method that is used to pay the amount of money. Use <code>fees</code> instead, if possible.</p>
+</td></tr><tr><td class="property-name">phoneCall</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the appointment can be made by video call.</p>
+</td></tr><tr><td class="property-name">seat</td><td class="property-type"><a href="#Seat">Seat</a></td><td class="property-docs"><p>If a seat is associated with this appointment, it is described here.</p>
+</td></tr><tr><td class="property-name">seatCount</td><td class="property-type"><code>number</code></td><td class="property-docs"><p>How many seats are available for this appointment.</p>
+</td></tr><tr><td class="property-name">videoCall</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the appointment can be made by video call.</p>
 </td></tr></table>
 
   
@@ -704,7 +834,7 @@ sitemap. Can contain attributes that are realtime updated to indicate operationa
 
 ### <a id="EquipmentProperties">EquipmentProperties</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L65)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L74)</span>
 
   
 
@@ -732,6 +862,8 @@ cabin. For a hoist, this refers to the hoist platform itself.</p>
 
 <code>bodyScanner</code>
 
+<code>ctScanner</code>
+
 <code>elevator</code>
 
 <code>escalator</code>
@@ -746,6 +878,8 @@ cabin. For a hoist, this refers to the hoist platform itself.</p>
 
 <code>movingWalkway</code>
 
+<code>mriScanner</code>
+
 <code>powerOutlet</code>
 
 <code>ramp</code>
@@ -756,9 +890,19 @@ cabin. For a hoist, this refers to the hoist platform itself.</p>
 
 <code>switch</code>
 
+<code>ticketVendingMachine</code>
+
+<code>treatmentChair</code>
+
+<code>ultrasoundScanner</code>
+
 <code>vendingMachine</code>
 
 <code>wardrobe</code>
+
+<code>wheelchairLift</code>
+
+<code>xrayMachine</code>
 </p>
 </td><td class="property-docs"><p>Type of the equipment or facility.</p>
 </td></tr><tr><td class="property-name">description</td><td class="property-type"><a href="../i18n">LocalizedString</a></td><td class="property-docs"><p>Describes where the equipment is located. If only one description string is technically
@@ -808,6 +952,8 @@ Object with one or more of these keys:
 <code>findYourDestination</code>
 
 <code>flush</code>
+
+<code>getTreatment</code>
 
 <code>handover</code>
 
@@ -875,6 +1021,7 @@ operation.</p>
 again.</p>
 <p>MUST be <code>undefined</code> if the facility is currently in operation.</p>
 </td></tr><tr><td class="property-name">sameAs</td><td class="property-type"><code>string</code>[]</td><td class="property-docs"><p>URLs of this equipment in external data sources, for example in GTFS, IMDF or other sources.</p>
+</td></tr><tr><td class="property-name">seat</td><td class="property-type"><a href="#Seat">Seat</a></td><td class="property-docs"><p>Object describing the seat of the equipment, or <code>undefined</code> if there is no seat.</p>
 </td></tr><tr><td class="property-name">servicePhoneNumber</td><td class="property-type"><code>string</code></td><td class="property-docs"><p>Phone number where a service operator can be reached for help using this facility.</p>
 </td></tr><tr><td class="property-name">serviceWebsiteUrl</td><td class="property-type"><code>string</code></td><td class="property-docs"><p>URL pointing to a website that describes the equipnent or it&#39;s current operational status.</p>
 </td></tr><tr><td class="property-name">shortDescription</td><td class="property-type"><a href="../i18n">LocalizedString</a></td><td class="property-docs"><p>Contains the same information as description, but in a shorter form, to save space on the
@@ -956,7 +1103,7 @@ objects.</p>
 
 ### <a id="Interactable">Interactable</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Interactable.ts#L9)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Interactable.ts#L8)</span>
 
   
 
@@ -1046,7 +1193,7 @@ objects.</p>
 
 ### <a id="Media">Media</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L47)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L48)</span>
 
   <p>Describes a media unit provided at this place, for example an exhibit at a museum or a movie in
 a cinema.</p>
@@ -1068,6 +1215,37 @@ be read?</p>
 </td></tr><tr><td class="property-name">hasPlainLanguageOption</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>Is the media unit provided in a <a href="https://en.wikipedia.org/wiki/Plain_language">Plain Language</a> option?</p>
 </td></tr><tr><td class="property-name">hasRealTimeCaptioning</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>Does the media unit have <a href="https://www.washington.edu/doit/what-real-time-captioning">real time captioning</a>?</p>
 </td></tr><tr><td class="property-name">hasSubtitles</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>Is the media unit provided with subtitles?</p>
+</td></tr><tr><td class="property-name">interactions</td><td class="property-type">
+Object with one or more of these keys:
+
+<p class="grid">
+<code>browse</code>
+
+<code>close</code>
+
+<code>discover</code>
+
+<code>feel</code>
+
+<code>interact</code>
+
+<code>listen</code>
+
+<code>open</code>
+
+<code>read</code>
+
+<code>recognize</code>
+
+<code>rent</code>
+
+<code>watch</code>
+</p>
+
+Values must be of type <a href="#InteractionMode">InteractionMode</a>.
+</td><td class="property-docs"><p>An object that indicates how the object can be interacted with.</p>
+<p>The keys of this object are the interaction types, and the values are <a href="../interfaces/#InteractionMode">InteractionMode</a>
+objects.</p>
 </td></tr><tr><td class="property-name">isAudio</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>Is the media unit consumable as audio-only option?</p>
 </td></tr><tr><td class="property-name">isBraille</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>Is the media unit consumable or described for Braille readers?</p>
 </td></tr><tr><td class="property-name">isLargePrint</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>If the media unit is printed, is the print large?</p>
@@ -1293,6 +1471,8 @@ lements.</p>
 </td></tr><tr><td class="property-name">pitchedTone</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>The output uses a pitched tone as signal.</p>
 </td></tr><tr><td class="property-name">plainLanguageOption</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>The output has a plain language option.</p>
 </td></tr><tr><td class="property-name">printer</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>The output is from a printer.</p>
+</td></tr><tr><td class="property-name">provisionalHearingAid</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>The perceiving person uses a provisional hearing aid, e.g. a stethoscope, a smartphone, or a
+headset with a microphone that amplifies the sound or speech.</p>
 </td></tr><tr><td class="property-name">qrCode</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>A QR code is supported or needed.</p>
 </td></tr><tr><td class="property-name">radio</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>A radio connection is supported or needed (e.g. WiFi, Bluetooth, NFC, etc.)</p>
 </td></tr><tr><td class="property-name">read</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>The ability to read is supported or needed.</p>
@@ -1308,6 +1488,21 @@ object, <code>true</code> if it is required.</p>
 </td></tr><tr><td class="property-name">speech</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>The ability to understand speech is supported or needed.</p>
 </td></tr><tr><td class="property-name">static</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the output is usually static and does not change over time, <code>false</code> if it is dynamic
 and changes over time.</p>
+</td></tr><tr><td class="property-name">stethoscope</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>The perceiving person uses a stethoscope.</p>
+<p>This is method for patient communication that is used by doctors to speak to patients with
+hearing impairments:</p>
+<blockquote>
+<p>British doctors recommend using the stethoscope as a hearing aid for patients in such
+situations (BMJ 2010; 341: c4672). If the patient has the buttons in his ear and the
+physician speaks softly and clearly into the diaphragm as into a microphone, then sufficient
+communication is often possible despite hearing problems. The intimacy of the conversation
+can be preserved by this simple means.</p>
+</blockquote>
+<p>Sources:</p>
+<ul>
+<li><a href="https://www.aerztezeitung.de/Medizin/Das-Stethoskop-als-Hoerhilfe-213950.html">Ärztezeitung</a></li>
+<li><a href="https://www.bmj.com/content/341/bmj.c4672?ijkey=66f0d96a9e9bca9e8d5b85b5f35ee0177d7e4239&keytype2=tf_ipsecsha">BMJ 2010;341:c4672</a></li>
+</ul>
 </td></tr><tr><td class="property-name">subtitles</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>The output has subtitles.</p>
 </td></tr><tr><td class="property-name">tactile</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>The output is tactile.</p>
 </td></tr><tr><td class="property-name">tactileGuides</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>The output has tactile guides, for example around buttons.</p>
@@ -1453,6 +1648,23 @@ data provider, it’s a good idea to use the provider&#39;s internal ID here.</p
 </td></tr><tr><td class="property-name">sameAs</td><td class="property-type"><code>string</code>[]</td><td class="property-docs"><p>URLs of this equipment in external data sources, for example in GTFS, IMDF or other sources.</p>
 </td></tr><tr><td class="property-name">sourceId</td><td class="property-type"><code>string</code></td><td class="property-docs"><p>ID of the data source that provided the place (accessibility.cloud ID)</p>
 </td></tr><tr><td class="property-name">sourceImportId</td><td class="property-type"><code>string</code></td><td class="property-docs"><p>ID of the import that created this place (accessibility.cloud ID)</p>
+</td></tr><tr><td class="property-name">tags</td><td class="property-type">
+Object with one or more of these keys:
+
+<p class="grid">
+<code>string</code>
+</p>
+
+Values must be of type <code>string</code>.
+</td><td class="property-docs"><p>Tags that are not part of the schema, but are still useful for the data consumer.</p>
+<ul>
+<li>If a OSM place is described, the tags are the OSM tags.</li>
+<li>If a GTFS place is described, the tags are the GTFS fields.</li>
+<li>If a IMDF place is described, the tags are the IMDF fields.</li>
+<li>If a custom place is described, the tags are the custom fields.</li>
+<li>If a place is described by a combination of multiple sources, the tags are the union of all
+fields.</li>
+</ul>
 </td></tr></table>
 
   
@@ -1773,7 +1985,7 @@ objects.</p>
 
 ### <a id="Seat">Seat</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Seat.ts#L45)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Seat.ts#L46)</span>
 
   <p>Describes one or multiple seats / chairs / benches / stools / couches / sofas / armchairs / ...</p>
 
@@ -1859,6 +2071,8 @@ Object with one or more of these keys:
 <code>fold</code>
 
 <code>move</code>
+
+<code>removeArmrests</code>
 
 <code>sit</code>
 

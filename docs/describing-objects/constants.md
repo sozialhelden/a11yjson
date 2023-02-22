@@ -302,11 +302,11 @@ Set&lt;One of the following strings:
 
 ### <a id="EquipmentInteractions">EquipmentInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L39)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L47)</span>
 
 
 
-Read-only tuple with 20 strings:
+Read-only tuple with 21 strings:
 <ul>
 <li><code>use</code></li>
 
@@ -347,13 +347,15 @@ Read-only tuple with 20 strings:
 <li><code>locateYourself</code></li>
 
 <li><code>findYourDestination</code></li>
+
+<li><code>getTreatment</code></li>
 </ul>
 
 
 
 ### <a id="EquipmentInteractionsSet">EquipmentInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L63)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L72)</span>
 
 
 
@@ -377,6 +379,8 @@ Set&lt;One of the following strings:
 <code>findYourDestination</code>
 
 <code>flush</code>
+
+<code>getTreatment</code>
 
 <code>handover</code>
 
@@ -405,11 +409,11 @@ Set&lt;One of the following strings:
 
 ### <a id="EquipmentTypes">EquipmentTypes</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L18)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L19)</span>
 
 
 
-Read-only tuple with 16 strings:
+Read-only tuple with 23 strings:
 <ul>
 <li><code>bed</code></li>
 
@@ -442,6 +446,20 @@ Read-only tuple with 16 strings:
 <li><code>bodyScanner</code></li>
 
 <li><code>luggageScanner</code></li>
+
+<li><code>ticketVendingMachine</code></li>
+
+<li><code>xrayMachine</code></li>
+
+<li><code>ctScanner</code></li>
+
+<li><code>mriScanner</code></li>
+
+<li><code>ultrasoundScanner</code></li>
+
+<li><code>wheelchairLift</code></li>
+
+<li><code>treatmentChair</code></li>
 </ul>
 
 
@@ -468,11 +486,11 @@ kilogram*meter/second^2.</p>
 
 ### <a id="GenericInteractions">GenericInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L49)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L50)</span>
 
 
 
-Read-only tuple with 24 strings:
+Read-only tuple with 27 strings:
 <ul>
 <li><code>watchMovies</code></li>
 
@@ -496,6 +514,10 @@ Read-only tuple with 24 strings:
 
 <li><code>getFood</code></li>
 
+<li><code>getTreatment</code></li>
+
+<li><code>getService</code></li>
+
 <li><code>eat</code></li>
 
 <li><code>pay</code></li>
@@ -514,6 +536,8 @@ Read-only tuple with 24 strings:
 
 <li><code>useLockers</code></li>
 
+<li><code>useService</code></li>
+
 <li><code>change</code></li>
 
 <li><code>use</code></li>
@@ -527,7 +551,7 @@ Read-only tuple with 24 strings:
 
 ### <a id="GenericInteractionsSet">GenericInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L76)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L80)</span>
 
 
 
@@ -552,6 +576,10 @@ Set&lt;One of the following strings:
 
 <code>getFood</code>
 
+<code>getService</code>
+
+<code>getTreatment</code>
+
 <code>listen</code>
 
 <code>pay</code>
@@ -571,6 +599,8 @@ Set&lt;One of the following strings:
 <code>use</code>
 
 <code>useLockers</code>
+
+<code>useService</code>
 
 <code>visit</code>
 
@@ -736,7 +766,7 @@ pound.</p>
 
 ### <a id="MediaInteractions">MediaInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L12)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L13)</span>
 
 
 
@@ -769,7 +799,7 @@ Read-only tuple with 11 strings:
 
 ### <a id="MediaInteractionsSet">MediaInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L26)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L27)</span>
 
 
 
@@ -803,7 +833,7 @@ Set&lt;One of the following strings:
 
 ### <a id="MediaTypeSet">MediaTypeSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L41)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L42)</span>
 
 
 
@@ -835,7 +865,7 @@ Set&lt;One of the following strings:
 
 ### <a id="MediaTypes">MediaTypes</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L28)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L29)</span>
 
 
 
@@ -1168,7 +1198,7 @@ Set&lt;One of the following strings:
 
 
 
-Read-only tuple with 21 strings:
+Read-only tuple with 22 strings:
 <ul>
 <li><code>sit</code></li>
 
@@ -1187,6 +1217,8 @@ Read-only tuple with 21 strings:
 <li><code>adjustSeatingAngle</code></li>
 
 <li><code>adjustArmRests</code></li>
+
+<li><code>removeArmrests</code></li>
 
 <li><code>adjustHeadRest</code></li>
 
@@ -1217,7 +1249,7 @@ Read-only tuple with 21 strings:
 
 ### <a id="SeatInteractionsSet">SeatInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Seat.ts#L40)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Seat.ts#L41)</span>
 
 
 
@@ -1261,6 +1293,8 @@ Set&lt;One of the following strings:
 <code>fold</code>
 
 <code>move</code>
+
+<code>removeArmrests</code>
 
 <code>sit</code>
 
@@ -1971,7 +2005,7 @@ Set&lt;One of the following strings:
 
 ### <a id="WheelchairAccessibilityGrades">WheelchairAccessibilityGrades</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L28)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L29)</span>
 
 <p>Describes the general wheelchair accessibility of the place. This is a human-rated value.
 It SHOULD conform to the traffic light system found in OpenStreetMap and Wheelmap.org.</p>

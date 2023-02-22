@@ -190,7 +190,7 @@ Definition: one of the following strings:
 
 ### <a id="EquipmentInteraction">EquipmentInteraction</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L62)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L71)</span>
 
 
 
@@ -236,11 +236,13 @@ Definition: one of the following strings:
 
 - `findYourDestination`
 
+- `getTreatment`
+
 
 
 ### <a id="EquipmentType">EquipmentType</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L37)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EquipmentProperties.ts#L45)</span>
 
 
 
@@ -278,6 +280,20 @@ Definition: one of the following strings:
 
 - `luggageScanner`
 
+- `ticketVendingMachine`
+
+- `xrayMachine`
+
+- `ctScanner`
+
+- `mriScanner`
+
+- `ultrasoundScanner`
+
+- `wheelchairLift`
+
+- `treatmentChair`
+
 
 
 ### <a id="Force">Force</a>
@@ -292,7 +308,7 @@ Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
 
 ### <a id="GenericInteraction">GenericInteraction</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L75)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L79)</span>
 
 
 
@@ -320,6 +336,10 @@ Definition: one of the following strings:
 
 - `getFood`
 
+- `getTreatment`
+
+- `getService`
+
 - `eat`
 
 - `pay`
@@ -337,6 +357,8 @@ Definition: one of the following strings:
 - `checkOut`
 
 - `useLockers`
+
+- `useService`
 
 - `change`
 
@@ -451,7 +473,7 @@ Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
 
 ### <a id="MediaInteraction">MediaInteraction</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L25)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L26)</span>
 
 
 
@@ -483,7 +505,7 @@ Definition: one of the following strings:
 
 ### <a id="MediaType">MediaType</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L40)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L41)</span>
 
 
 
@@ -693,7 +715,7 @@ Definition: one of the following strings:
 
 ### <a id="SeatInteraction">SeatInteraction</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Seat.ts#L39)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Seat.ts#L40)</span>
 
 
 
@@ -716,6 +738,8 @@ Definition: one of the following strings:
 - `adjustSeatingAngle`
 
 - `adjustArmRests`
+
+- `removeArmrests`
 
 - `adjustHeadRest`
 
@@ -1290,7 +1314,7 @@ Definition: one of the following strings:
 
 ### <a id="WheelchairAccessibilityGrade">WheelchairAccessibilityGrade</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L47)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L48)</span>
 
 
 
