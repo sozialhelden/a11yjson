@@ -4,7 +4,6 @@ import SimpleSchema, {
   ValidationError,
 } from '@sozialhelden/simpl-schema';
 import { getInteractionModeSchemaDefinition, InteractionMode } from './InteractionMode.js';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
 
 export interface Interactable<InteractionType extends string> {
   /**

@@ -22,5 +22,18 @@ const mediaFixture: Complete<Media> = {
   accessibilityControl: ['fullKeyboardControl'],
   accessibilityFeature: ['largePrint'],
   accessibilityHazard: ['noFlashingHazard'],
+  interactions: {
+    read: {
+      perception: {
+        visual: true,
+        flashingHazard: false,
+        fontSize: '>6mm',
+      },
+      action: {
+        touch: true,
+        keyboard: true,
+      },
+    },
+  },
 };
 export default mediaFixture;

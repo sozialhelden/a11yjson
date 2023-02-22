@@ -8,6 +8,7 @@ import { W3CAccessMode, w3cAccessModes } from './W3CAccessMode.js';
 import { w3cAccessibilityControls, W3CAccessibilityControl } from './W3CAccessibilityControl.js';
 import validateUrl from './validateUrl.js';
 import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags.js';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
 
 export const MediaInteractions = [
   'watch',
@@ -44,7 +45,7 @@ export const MediaTypeSet = new Set(MediaTypes);
  * Describes a media unit provided at this place, for example an exhibit at a museum or a movie in
  * a cinema.
  */
-export interface Media {
+export interface Media extends Interactable<MediaInteraction> {
   /**
    * Type of the media unit
    */
@@ -261,4 +262,5 @@ export const getMediaSchemaDefinition: () => SchemaDefinition = () => ({
     type: String,
     custom: validateUrl,
   },
+  ...getInteractableSchemaDefinition(MediaInteractionsSet),
 });
