@@ -41,6 +41,11 @@ export interface QueueSystem extends Interactable<QueueSystemInteraction> {
   numberOfQueueServerPoints?: number;
 
   /**
+   * `true` if the queueing system announces the next person in line visually, `false` if not.
+   */
+  hasVisualAnnouncements?: boolean;
+
+  /**
    * Grab bars inside the queueing system, if applicable.
    */
   grabBars?: GrabBars;
@@ -50,6 +55,7 @@ export const getQueueSystemSchemaDefinition: () => SchemaDefinition = () => ({
   isAccessibleWithWheelchair: BooleanField,
   usesCattleBars: BooleanField,
   needsTickets: BooleanField,
+  hasVisualAnnouncements: BooleanField,
   ...getPrefixedSchemaDefinition('grabBars', getGrabBarsSchemaDefinition()),
   ticketEquipmentId: {
     type: String,

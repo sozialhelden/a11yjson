@@ -9,6 +9,7 @@ const queueSystemFixture: Complete<QueueSystem> = {
   numberOfSeats: 42,
   numberOfQueueServerPoints: 23,
   grabBars: grabBarsFixture,
+  hasVisualAnnouncements: true,
   interactions: {
     enqueue: {
       action: {
