@@ -1201,7 +1201,7 @@ objects.</p>
 
 ### <a id="Media">Media</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L48)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L49)</span>
 
   <p>Describes a media unit provided at this place, for example an exhibit at a museum or a movie in
 a cinema.</p>
@@ -1269,6 +1269,8 @@ how much turning space there is in front of it.</p>
 <code>document</code>
 
 <code>exhibit</code>
+
+<code>form</code>
 
 <code>guide</code>
 
@@ -2036,7 +2038,9 @@ objects.</p>
 </td></tr><tr><td class="property-name">fixedHeight</td><td class="property-type"><a href="#Length">Length</a></td><td class="property-docs"><p>How high is the desk? For variable-height desks, use <code>minimalHeight</code> and <code>maximalHeight</code>
 instead.</p>
 <p>This can be used to determine if a wheelchair user can sit at the desk.</p>
+</td></tr><tr><td class="property-name">hasAdjustableHeight</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>The seat has an adjustable seating surface.</p>
 </td></tr><tr><td class="property-name">hasHeadRest</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>The seat has a headrest.</p>
+</td></tr><tr><td class="property-name">hasRemovableArmRests</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>The seat has removable armrests.</p>
 </td></tr><tr><td class="property-name">hasSeatbelt</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>The seat has a seatbelt.</p>
 </td></tr><tr><td class="property-name">interactions</td><td class="property-type">
 Object with one or more of these keys:

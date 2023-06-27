@@ -505,7 +505,7 @@ Definition: one of the following strings:
 
 ### <a id="MediaType">MediaType</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L41)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L42)</span>
 
 
 
@@ -530,6 +530,8 @@ Definition: one of the following strings:
 - `screen`
 
 - `website`
+
+- `form`
 
 
 

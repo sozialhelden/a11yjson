@@ -833,7 +833,7 @@ Set&lt;One of the following strings:
 
 ### <a id="MediaTypeSet">MediaTypeSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L42)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Media.ts#L43)</span>
 
 
 
@@ -843,6 +843,8 @@ Set&lt;One of the following strings:
 <code>document</code>
 
 <code>exhibit</code>
+
+<code>form</code>
 
 <code>guide</code>
 
@@ -869,7 +871,7 @@ Set&lt;One of the following strings:
 
 
 
-Read-only tuple with 10 strings:
+Read-only tuple with 11 strings:
 <ul>
 <li><code>document</code></li>
 
@@ -890,6 +892,8 @@ Read-only tuple with 10 strings:
 <li><code>screen</code></li>
 
 <li><code>website</code></li>
+
+<li><code>form</code></li>
 </ul>
 
 
