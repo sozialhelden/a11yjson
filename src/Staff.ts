@@ -15,6 +15,11 @@ export interface Staff {
    *
    * Uses [IETF language codes](https://github.com/sozialhelden/ietf-language-tags).
    */
+  languages?: IETFLanguageTag[];
+
+  /**
+   * @deprecated Use `languages` instead.
+   */
   spokenLanguages?: IETFLanguageTag[];
 
   /**
@@ -40,6 +45,12 @@ export const getStaffSchemaDefinition: () => SchemaDefinition = () => ({
     type: Boolean,
     optional: true,
   },
+  languages: {
+    type: Array,
+    defaultValue: [],
+    optional: true,
+  },
+  'languages.$': IETFLanguageCodeSchemaKeyDefinition,
   spokenLanguages: {
     type: Array,
     defaultValue: [],
