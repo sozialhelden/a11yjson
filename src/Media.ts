@@ -1,14 +1,14 @@
 import { SchemaDefinition } from '@sozialhelden/simpl-schema';
 
-import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity.js';
+import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags.js';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
+import { getPrefixedQuantitySchemaDefinition, Length, LengthSchema } from './Quantity.js';
+import validateUrl from './validateUrl.js';
+import { W3CAccessibilityControl, w3cAccessibilityControls } from './W3CAccessibilityControl.js';
 import { W3CAccessibilityFeature, w3cAccessibilityFeatures } from './W3CAccessibilityFeature.js';
 import { W3CAccessibilityHazard, w3cAccessibilityHazards } from './W3CAccessibilityHazard.js';
 import { W3CAccessMode, w3cAccessModes } from './W3CAccessMode.js';
-import { w3cAccessibilityControls, W3CAccessibilityControl } from './W3CAccessibilityControl.js';
-import validateUrl from './validateUrl.js';
-import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags.js';
-import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
 
 export const MediaInteractions = [
   'watch',
