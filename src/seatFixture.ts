@@ -1,7 +1,7 @@
-import { Seat } from './Seat.js';
 import { Complete } from './Complete.js';
-import paymentFixture from './paymentFixture.js';
 import intercomFixture from './intercomFixture.js';
+import paymentFixture from './paymentFixture.js';
+import { Seat } from './Seat.js';
 
 const seatFixture: Complete<Seat> = {
   name: { en: 'Front seats in a cinema' },
@@ -16,6 +16,8 @@ const seatFixture: Complete<Seat> = {
   seatbeltPoints: 3,
   adjustmentAxes: ['axial', 'sagittal'],
   adjustmentDirections: ['up', 'down'],
+  hasAdjustableHeight: true,
+  hasRemovableArmRests: true,
   isCenterColumn: false,
   isLastRow: false,
   rows: [1, 2, 3],

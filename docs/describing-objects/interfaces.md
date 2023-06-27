@@ -916,6 +916,7 @@ screen readers or voice assistants.</p>
 </td></tr><tr><td class="property-name">disruptionSourceImportId</td><td class="property-type"><code>string</code></td><td class="property-docs"><p>Data source ID of a secondary source used for realtime status info on accessibility.cloud</p>
 </td></tr><tr><td class="property-name">door</td><td class="property-type"><a href="#Door">Door</a></td><td class="property-docs"><p>Object describing the door to the equipment, or <code>undefined</code> if there is no door.</p>
 </td></tr><tr><td class="property-name">emergencyIntercom</td><td class="property-type"><a href="#Intercom">Intercom</a></td><td class="property-docs"><p>Describes the intercom system for emergency calls.</p>
+</td></tr><tr><td class="property-name">hasAdjustableHeight</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the equipment&#39;s height is adjustable, <code>false</code> if not.</p>
 </td></tr><tr><td class="property-name">hasDoorsAtRightAngles</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the equipment has doors at right angles to each other.</p>
 </td></tr><tr><td class="property-name">hasDoorsInBothDirections</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the equipment has doors in two directions, so wheelchair, rollator, bike or pushchair
 users do not have to move backwards to exit.</p>
@@ -987,6 +988,8 @@ Values must be of type <a href="#InteractionMode">InteractionMode</a>.
 </td><td class="property-docs"><p>An object that indicates how the object can be interacted with.</p>
 <p>The keys of this object are the interaction types, and the values are <a href="../interfaces/#InteractionMode">InteractionMode</a>
 objects.</p>
+</td></tr><tr><td class="property-name">isAccessibleWithWheelchair</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the equipment is fully operatable for/by a person in a wheelchair, <code>false</code> if not.
+If you can, please don&#39;t use this attribute. Instead, use more specific attributes.</p>
 </td></tr><tr><td class="property-name">isIndoors</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the equipment is indoors, <code>false</code> if it’s fully or partially outdoors.</p>
 </td></tr><tr><td class="property-name">isSuitableForBicycles</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>For elevators. <code>true</code> if the elevator can carry a bicycle, <code>false</code> if not.</p>
 </td></tr><tr><td class="property-name">isWorking</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>Live status update.</p>

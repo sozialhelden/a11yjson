@@ -125,6 +125,16 @@ export interface Seat extends Interactable<SeatInteraction> {
   adjustmentDirections?: Direction[];
 
   /**
+   * The seat has an adjustable seating surface.
+   */
+  hasAdjustableHeight?: boolean;
+
+  /**
+   * The seat has removable armrests.
+   */
+  hasRemovableArmRests?: boolean;
+
+  /**
    * How high is the desk? For variable-height desks, use `minimalHeight` and `maximalHeight`
    * instead.
    *
@@ -180,6 +190,8 @@ export const getSeatSchemaDefinition: () => SchemaDefinition = () => ({
   isFixed: BooleanField,
   hasHeadRest: BooleanField,
   hasSeatbelt: BooleanField,
+  hasAdjustableHeight: BooleanField,
+  hasRemovableArmRests: BooleanField,
   adjustmentAxes: {
     type: Array,
     optional: true,
