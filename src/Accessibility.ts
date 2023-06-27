@@ -1,25 +1,25 @@
 import { SchemaDefinition } from '@sozialhelden/simpl-schema';
-import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
-import { PersonalProfile, getPersonalProfileSchemaDefinition } from './PersonalProfile.js';
-import { Entrance, getEntranceSchemaDefinition } from './Entrance.js';
-import { Restroom, getRestroomSchemaDefinition } from './Restroom.js';
-import { Staff, getStaffSchemaDefinition } from './Staff.js';
-import { WheelchairPlaces, getWheelchairPlacesSchemaDefinition } from './WheelchairPlaces.js';
-import { Media, getMediaSchemaDefinition } from './Media.js';
-import { Payment, getPaymentSchemaDefinition } from './Payment.js';
-import { Pathways, getPathwaysSchemaDefinition } from './Pathways.js';
-import { Parking, getParkingSchemaDefinition } from './Parking.js';
-import { Surface, getSurfaceSchemaDefinition } from './Surface.js';
 import { AnimalPolicy, getAnimalPolicySchemaDefinition } from './AnimalPolicy.js';
-import { SmokingPolicy, smokingPolicies } from './SmokingPolicy.js';
-import { getPrefixedQuantitySchemaDefinition, Volume, VolumeSchema } from './Quantity.js';
-import { WifiAccessibility, getWifiAccessibilitySchemaDefinition } from './WifiAccessibility.js';
-import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition.js';
-import { Desk, getDeskSchemaDefinition } from './Desk.js';
-import BooleanField from './BooleanField.js';
-import { getSignageSchemaDefinition, Signage } from './Signage.js';
-import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
 import { AppointmentPolicy, getAppointmentPolicySchemaDefinition } from './AppointmentPolicy.js';
+import BooleanField from './BooleanField.js';
+import { Desk, getDeskSchemaDefinition } from './Desk.js';
+import { Entrance, getEntranceSchemaDefinition } from './Entrance.js';
+import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
+import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition.js';
+import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
+import { getMediaSchemaDefinition, Media } from './Media.js';
+import { getParkingSchemaDefinition, Parking } from './Parking.js';
+import { getPathwaysSchemaDefinition, Pathways } from './Pathways.js';
+import { getPaymentSchemaDefinition, Payment } from './Payment.js';
+import { getPersonalProfileSchemaDefinition, PersonalProfile } from './PersonalProfile.js';
+import { getPrefixedQuantitySchemaDefinition, Volume, VolumeSchema } from './Quantity.js';
+import { getRestroomSchemaDefinition, Restroom } from './Restroom.js';
+import { getSignageSchemaDefinition, Signage } from './Signage.js';
+import { smokingPolicies, SmokingPolicy } from './SmokingPolicy.js';
+import { getStaffSchemaDefinition, Staff } from './Staff.js';
+import { getSurfaceSchemaDefinition, Surface } from './Surface.js';
+import { getWheelchairPlacesSchemaDefinition, WheelchairPlaces } from './WheelchairPlaces.js';
+import { getWifiAccessibilitySchemaDefinition, WifiAccessibility } from './WifiAccessibility.js';
 
 /**
  * Describes the general wheelchair accessibility of the place. This is a human-rated value.
@@ -139,6 +139,7 @@ export interface Accessibility extends Interactable<GenericInteraction> {
    * Object describing the owner's smoking policy.
    */
   smokingPolicy?: SmokingPolicy;
+
   /**
    * Object describing the owner's policy regarding visitors bringing animals with them.
    */
