@@ -37,6 +37,7 @@ export const MediaTypes = [
   'play',
   'screen',
   'website',
+  'form',
 ] as const;
 export type MediaType = typeof MediaTypes[number];
 export const MediaTypeSet = new Set(MediaTypes);
