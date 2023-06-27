@@ -8,8 +8,11 @@
   "editor.tabSize": 2,
   // ensure that a matching typescript version is used
   "typescript.tsdk": "node_modules/typescript/lib",
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "eslint.validate": ["javascript", "typescript"]
+  "eslint.validate": ["javascript", "typescript"],
+  "editor.codeActionsOnSave": [
+    "source.organizeImports",
+    "source.fixAll.prettier",
+    "source.fixAll.eslint",
+    "source.fixAll.stylelint",
+  ],
 }
