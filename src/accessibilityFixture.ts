@@ -36,6 +36,7 @@ const accessibilityFixture: Complete<Accessibility> = {
   hasBrailleSignage: true,
   hasPatientLifter: true,
   offersTreatmentWithoutLeavingWheelchair: true,
+  hasLowStimulusEnvironment: true,
   serviceContact: { en: 'string' },
   media: [mediaFixture],
   desks: [deskFixture],

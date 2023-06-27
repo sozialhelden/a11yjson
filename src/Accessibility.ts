@@ -192,6 +192,13 @@ export interface Accessibility extends Interactable<GenericInteraction> {
    * wheelchair for treatment, `false` if this is not possible.
    */
   offersTreatmentWithoutLeavingWheelchair?: boolean;
+
+  /**
+   * `true` if the venue has a designated low-stimulus room or environment, `false` if not.
+   * Can help with hypersensitivity to sensory input.
+   */
+  hasLowStimulusEnvironment?: boolean;
+
   /**
    * Describes the Wifi availability and accessibility at the place.
    */
@@ -284,6 +291,7 @@ export const getAccessibilitySchemaDefinition: () => SchemaDefinition = () => ({
   hasTactileGuideStrips: BooleanField,
   hasPatientLifter: BooleanField,
   offersTreatmentWithoutLeavingWheelchair: BooleanField,
+  hasLowStimulusEnvironment: BooleanField,
   ...getPrefixedSchemaDefinition('staff', getStaffSchemaDefinition()),
   ...getPrefixedSchemaDefinition('wheelchairPlaces', getWheelchairPlacesSchemaDefinition()),
   ...getPrefixedSchemaDefinition('payment', getPaymentSchemaDefinition()),
