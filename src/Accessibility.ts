@@ -4,6 +4,7 @@ import { AppointmentPolicy, getAppointmentPolicySchemaDefinition } from './Appoi
 import BooleanField from './BooleanField.js';
 import { Desk, getDeskSchemaDefinition } from './Desk.js';
 import { Entrance, getEntranceSchemaDefinition } from './Entrance.js';
+import { EquipmentProperties, getEquipmentPropertiesSchemaDefinition } from './EquipmentProperties.js';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
 import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition.js';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
@@ -257,6 +258,14 @@ export interface Accessibility extends Interactable<GenericInteraction> {
    */
   tables?: Desk[] | null;
 
+  /**
+   * Information about the place's equipment.
+   *
+   * Use this property for equipment that does not need to be locatable in a specific geolocation,
+   * but belongs to a place.
+   */
+  availableEquipment?: EquipmentProperties[] | null;
+
   serviceContact?: LocalizedString;
   /**
    * Information about media.
@@ -294,6 +303,7 @@ export const getAccessibilitySchemaDefinition: () => SchemaDefinition = () => ({
   offersTreatmentWithoutLeavingWheelchair: BooleanField,
   hasLowStimulusEnvironment: BooleanField,
   ...getPrefixedSchemaDefinition('staff', getStaffSchemaDefinition()),
+  ...getPrefixedArraySchemaDefinition('availableEquipment', getEquipmentPropertiesSchemaDefinition()),
   ...getPrefixedSchemaDefinition('wheelchairPlaces', getWheelchairPlacesSchemaDefinition()),
   ...getPrefixedSchemaDefinition('payment', getPaymentSchemaDefinition()),
   ...getPrefixedSchemaDefinition('parking', getParkingSchemaDefinition()),

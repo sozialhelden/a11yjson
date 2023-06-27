@@ -53,6 +53,7 @@ const accessibilityFixture: Complete<Accessibility> = {
   animalPolicy: animalPolicyFixture,
   wifi: wifiAccessibilityFixture,
   appointmentPolicies: [appointmentPolicyFixture],
+  availableEquipment: [],
   interactions: {
     arrive: interactionModeFixture,
     book: interactionModeFixture,
