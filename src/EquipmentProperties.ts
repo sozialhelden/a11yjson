@@ -157,6 +157,17 @@ export interface EquipmentProperties extends Interactable<EquipmentInteraction> 
   hasLandings?: boolean;
 
   /**
+   * `true` if the equipment's height is adjustable, `false` if not.
+   */
+  hasAdjustableHeight?: boolean;
+
+  /**
+   * `true` if the equipment is fully operatable for/by a person in a wheelchair, `false` if not.
+   * If you can, please don't use this attribute. Instead, use more specific attributes.
+   */
+  isAccessibleWithWheelchair?: boolean;
+
+  /**
    * Languages of the equipment’s visible controls and/or voice output.
    */
   languages?: IETFLanguageTag[];
@@ -435,6 +446,7 @@ export const getEquipmentPropertiesSchemaDefinition: () => SchemaDefinition = ()
   hasQRCode: BooleanField,
   isIndoors: BooleanField,
   hasLandings: BooleanField,
+  hasAdjustableHeight: BooleanField,
   isAccessibleWithWheelchair: BooleanField,
   isSuitableForBicycles: BooleanField,
   hasExternalFloorSelection: BooleanField,

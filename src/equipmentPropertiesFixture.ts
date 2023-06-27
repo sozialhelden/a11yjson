@@ -1,6 +1,6 @@
-import { EquipmentProperties } from './EquipmentProperties.js';
 import { Complete } from './Complete.js';
 import doorFixture from './doorFixture.js';
+import { EquipmentProperties } from './EquipmentProperties.js';
 import intercomFixture from './intercomFixture.js';
 import seatFixture from './seatFixture.js';
 
@@ -19,6 +19,8 @@ const equipmentPropertiesFixture: Complete<EquipmentProperties> = {
   hasDoorsInBothDirections: true,
   hasDoorsAtRightAngles: false,
   hasMirror: true,
+  hasAdjustableHeight: true,
+  isAccessibleWithWheelchair: true,
   hasExternalFloorSelection: true,
   isSuitableForBicycles: true,
   isIndoors: true,
