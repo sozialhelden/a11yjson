@@ -32,6 +32,9 @@ them as they are, or mix them into your own entity definitions.
 </td></tr><tr><td class="property-name">hasBrailleSignage</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if there is braille navigation for/to this place, <code>false</code> if not.</p>
 </td></tr><tr><td class="property-name">hasInductionLoop</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the venue has induction loops installed in its functional units where this is
 relevant.</p>
+</td></tr><tr><td class="property-name">hasLowStimulusEnvironment</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the venue has a designated low-stimulus room or environment, <code>false</code> if not.
+Can help with hypersensitivity to sensory input.</p>
+</td></tr><tr><td class="property-name">hasPatientLifter</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the venue has a patient lifter (MedTech) installed, <code>false</code> if not..</p>
 </td></tr><tr><td class="property-name">hasSoundAbsorption</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>Determines if there is sound absorption installed.</p>
 </td></tr><tr><td class="property-name">hasTactileGuideStrips</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the venue has tactile guide strips on the floor or at the walls, <code>false</code> if not.
 <code>undefined</code> or missing property indicates unknown.</p>
@@ -105,7 +108,9 @@ objects.</p>
 measurable lumen value in the future.</p>
 </td></tr><tr><td class="property-name">media</td><td class="property-type"><code>undefined</code>&nbsp;|&nbsp;<a href="#Media">Media</a>[]</td><td class="property-docs"><p>Information about media.
 <code>null</code> indicates there is no media, <code>undefined</code> or missing property indicates unknown.</p>
-</td></tr><tr><td class="property-name">offersActivitiesForPeopleWith</td><td class="property-type"><a href="#PersonalProfile">PersonalProfile</a></td><td class="property-docs"></td></tr><tr><td class="property-name">parking</td><td class="property-type"><code>undefined</code>&nbsp;|&nbsp;<a href="#Parking">Parking</a></td><td class="property-docs"><p>Information about parking facilities at/around the venue.
+</td></tr><tr><td class="property-name">offersActivitiesForPeopleWith</td><td class="property-type"><a href="#PersonalProfile">PersonalProfile</a></td><td class="property-docs"></td></tr><tr><td class="property-name">offersTreatmentWithoutLeavingWheelchair</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> for healthcare providers that offer that wheelchair users do not have to leave their
+wheelchair for treatment, <code>false</code> if this is not possible.</p>
+</td></tr><tr><td class="property-name">parking</td><td class="property-type"><code>undefined</code>&nbsp;|&nbsp;<a href="#Parking">Parking</a></td><td class="property-docs"><p>Information about parking facilities at/around the venue.
 <code>null</code> indicates there is no parking, <code>undefined</code> or missing property indicates unknown.</p>
 </td></tr><tr><td class="property-name">partiallyAccessibleWith</td><td class="property-type"><a href="#PersonalProfile">PersonalProfile</a></td><td class="property-docs"></td></tr><tr><td class="property-name">pathways</td><td class="property-type"><code>undefined</code>&nbsp;|&nbsp;<a href="#Pathways">Pathways</a></td><td class="property-docs"><p>Describes the accessibility of pathways to the place or inside the place’s boundaries (mixed)</p>
 </td></tr><tr><td class="property-name">pathwaysFromEntrance</td><td class="property-type"><code>undefined</code>&nbsp;|&nbsp;<a href="#Pathways">Pathways</a></td><td class="property-docs"><p>For places inside other places (e.g. a room inside a building).</p>
@@ -2224,9 +2229,9 @@ objects.</p>
 open (for example a window or CCTV system), <code>false</code> if not.</p>
 </td></tr><tr><td class="property-name">hasFreeAssistantForVisitors</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if there is an assistant for the duration of the visit that is free of charge, <code>false</code>
 if not.</p>
-</td></tr><tr><td class="property-name">spokenLanguages</td><td class="property-type"><code>string</code>[]</td><td class="property-docs"><p>Languages that the staff speaks, including sign language variants.</p>
+</td></tr><tr><td class="property-name">languages</td><td class="property-type"><code>string</code>[]</td><td class="property-docs"><p>Languages that the staff speaks, including sign language variants.</p>
 <p>Uses <a href="https://github.com/sozialhelden/ietf-language-tags">IETF language codes</a>.</p>
-</td></tr></table>
+</td></tr><tr><td class="property-name">spokenLanguages</td><td class="property-type"><code>string</code>[]</td><td class="property-docs"></td></tr></table>
 
   
 
