@@ -486,7 +486,7 @@ kilogram*meter/second^2.</p>
 
 ### <a id="GenericInteractions">GenericInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L50)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L51)</span>
 
 
 
@@ -551,7 +551,7 @@ Read-only tuple with 27 strings:
 
 ### <a id="GenericInteractionsSet">GenericInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L80)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L81)</span>
 
 
 
@@ -2009,7 +2009,7 @@ Set&lt;One of the following strings:
 
 ### <a id="WheelchairAccessibilityGrades">WheelchairAccessibilityGrades</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L29)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L30)</span>
 
 <p>Describes the general wheelchair accessibility of the place. This is a human-rated value.
 It SHOULD conform to the traffic light system found in OpenStreetMap and Wheelmap.org.</p>

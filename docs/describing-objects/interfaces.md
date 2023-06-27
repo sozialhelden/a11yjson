@@ -13,7 +13,7 @@ them as they are, or mix them into your own entity definitions.
 
 ### <a id="Accessibility">Accessibility</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L85)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L86)</span>
 
   <p>Describes the physical (and sometimes human rated) accessibility of a place.</p>
 
@@ -25,6 +25,9 @@ them as they are, or mix them into your own entity definitions.
 10-second period at least.</p>
 </td></tr><tr><td class="property-name">animalPolicy</td><td class="property-type"><a href="#AnimalPolicy">AnimalPolicy</a></td><td class="property-docs"><p>Object describing the owner&#39;s policy regarding visitors bringing animals with them.</p>
 </td></tr><tr><td class="property-name">appointmentPolicies</td><td class="property-type"><a href="#AppointmentPolicy">AppointmentPolicy</a>[]</td><td class="property-docs"><p>Describes how you can get an appointment for this place, or if you need one.</p>
+</td></tr><tr><td class="property-name">availableEquipment</td><td class="property-type"><code>undefined</code>&nbsp;|&nbsp;<a href="#EquipmentProperties">EquipmentProperties</a>[]</td><td class="property-docs"><p>Information about the place&#39;s equipment.</p>
+<p>Use this property for equipment that does not need to be locatable in a specific geolocation,
+but belongs to a place.</p>
 </td></tr><tr><td class="property-name">desks</td><td class="property-type"><code>undefined</code>&nbsp;|&nbsp;<a href="#Desk">Desk</a>[]</td><td class="property-docs"><p>Describes the accessibility of desks in the place.
 <code>null</code> indicates there are no desks, <code>undefined</code> or missing property indicates unknown.</p>
 </td></tr><tr><td class="property-name">entrances</td><td class="property-type"><code>undefined</code>&nbsp;|&nbsp;<a href="#Entrance">Entrance</a>[]</td><td class="property-docs"><p>Describes the accessibility of entrances to the place.</p>
@@ -1748,6 +1751,7 @@ fields.</li>
 
   <table><tr><th class="property-name">Name</th><th class="property-type">Type</th><th class="property-docs"></th></tr><tr><td class="property-name">canSkipQueueWithDisability</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if you can skip the queue with a disability, <code>false</code> if not.</p>
 </td></tr><tr><td class="property-name">grabBars</td><td class="property-type"><a href="#GrabBars">GrabBars</a></td><td class="property-docs"><p>Grab bars inside the queueing system, if applicable.</p>
+</td></tr><tr><td class="property-name">hasVisualAnnouncements</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the queueing system announces the next person in line visually, <code>false</code> if not.</p>
 </td></tr><tr><td class="property-name">interactions</td><td class="property-type">
 Object with one or more of these keys:
 
