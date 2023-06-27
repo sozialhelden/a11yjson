@@ -10,6 +10,7 @@ import parkingFixture from './parkingFixture.js';
 import pathwaysFixture from './pathwaysFixture.js';
 import paymentFixture from './paymentFixture.js';
 import personalProfileFixture from './personalProfileFixture.js';
+import queueSystemFixture from './queueSystemFixture.js';
 import restroomFixture from './restroomFixture.js';
 import signageFixture from './signageFixture.js';
 import staffFixture from './staffFixture.js';
@@ -50,6 +51,7 @@ const accessibilityFixture: Complete<Accessibility> = {
   pathwaysFromEntrance: pathwaysFixture,
   parking: parkingFixture,
   surface: surfaceFixture,
+  queueSystem: queueSystemFixture,
   animalPolicy: animalPolicyFixture,
   wifi: wifiAccessibilityFixture,
   appointmentPolicies: [appointmentPolicyFixture],

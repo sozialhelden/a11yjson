@@ -14,6 +14,7 @@ import { getPathwaysSchemaDefinition, Pathways } from './Pathways.js';
 import { getPaymentSchemaDefinition, Payment } from './Payment.js';
 import { getPersonalProfileSchemaDefinition, PersonalProfile } from './PersonalProfile.js';
 import { getPrefixedQuantitySchemaDefinition, Volume, VolumeSchema } from './Quantity.js';
+import { getQueueSystemSchemaDefinition, QueueSystem } from './QueueSystem.js';
 import { getRestroomSchemaDefinition, Restroom } from './Restroom.js';
 import { getSignageSchemaDefinition, Signage } from './Signage.js';
 import { smokingPolicies, SmokingPolicy } from './SmokingPolicy.js';
@@ -266,6 +267,11 @@ export interface Accessibility extends Interactable<GenericInteraction> {
    */
   availableEquipment?: EquipmentProperties[] | null;
 
+  /**
+   * Information about the place's queue system.
+   */
+  queueSystem?: QueueSystem | null;
+
   serviceContact?: LocalizedString;
   /**
    * Information about media.
@@ -309,6 +315,7 @@ export const getAccessibilitySchemaDefinition: () => SchemaDefinition = () => ({
   ...getPrefixedSchemaDefinition('parking', getParkingSchemaDefinition()),
   ...getPrefixedSchemaDefinition('surface', getSurfaceSchemaDefinition()),
   ...getPrefixedSchemaDefinition('wifi', getWifiAccessibilitySchemaDefinition()),
+  ...getPrefixedSchemaDefinition('queueSystem', getQueueSystemSchemaDefinition()),
   ...getPrefixedSchemaDefinition('animalPolicy', getAnimalPolicySchemaDefinition()),
   ...getPrefixedSchemaDefinition('pathways', getPathwaysSchemaDefinition()),
   ...getPrefixedSchemaDefinition('pathwaysInside', getPathwaysSchemaDefinition()),
