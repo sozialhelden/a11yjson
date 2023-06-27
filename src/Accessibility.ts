@@ -181,6 +181,11 @@ export interface Accessibility extends Interactable<GenericInteraction> {
    * relevant.
    */
   hasInductionLoop?: boolean;
+
+  /**
+   * `true` if the venue has a patient lifter (MedTech) installed, `false` if not..
+   */
+  hasPatientLifter?: boolean;
   /**
    * Describes the Wifi availability and accessibility at the place.
    */
@@ -271,6 +276,7 @@ export const getAccessibilitySchemaDefinition: () => SchemaDefinition = () => ({
   hasBrailleSignage: BooleanField,
   hasTactileSignage: BooleanField,
   hasTactileGuideStrips: BooleanField,
+  hasPatientLifter: BooleanField,
   ...getPrefixedSchemaDefinition('staff', getStaffSchemaDefinition()),
   ...getPrefixedSchemaDefinition('wheelchairPlaces', getWheelchairPlacesSchemaDefinition()),
   ...getPrefixedSchemaDefinition('payment', getPaymentSchemaDefinition()),

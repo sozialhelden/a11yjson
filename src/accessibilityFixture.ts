@@ -34,6 +34,7 @@ const accessibilityFixture: Complete<Accessibility> = {
   hasTactileGuideStrips: true,
   hasTactileSignage: true,
   hasBrailleSignage: true,
+  hasPatientLifter: true,
   serviceContact: { en: 'string' },
   media: [mediaFixture],
   desks: [deskFixture],
