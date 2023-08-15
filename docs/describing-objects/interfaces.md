@@ -13,7 +13,7 @@ them as they are, or mix them into your own entity definitions.
 
 ### <a id="Accessibility">Accessibility</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L87)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L88)</span>
 
   <p>Describes the physical (and sometimes human rated) accessibility of a place.</p>
 
@@ -124,7 +124,8 @@ describe pathways from there to this place.</p>
 <code>null</code> indicates there is no payment possible/required,
 <code>undefined</code> or missing property indicates unknown.</p>
 </td></tr><tr><td class="property-name">queueSystem</td><td class="property-type"><code>undefined</code>&nbsp;|&nbsp;<a href="#QueueSystem">QueueSystem</a></td><td class="property-docs"><p>Information about the place&#39;s queue system.</p>
-</td></tr><tr><td class="property-name">restrooms</td><td class="property-type"><code>undefined</code>&nbsp;|&nbsp;<a href="#Restroom">Restroom</a>[]</td><td class="property-docs"><p>Describes the accessibility of restrooms in the place.</p>
+</td></tr><tr><td class="property-name">restrooms</td><td class="property-type"><code>undefined</code>&nbsp;|&nbsp;<a href="#Restroom">Restroom</a>[]</td><td class="property-docs"><p>Describes the accessibility of restrooms that belong to the place.</p>
+</td></tr><tr><td class="property-name">rooms</td><td class="property-type"><code>undefined</code>&nbsp;|&nbsp;<a href="#Room">Room</a>[]</td><td class="property-docs"><p>Describes the accessibility of rooms that belong to the place.</p>
 </td></tr><tr><td class="property-name">serviceContact</td><td class="property-type"><a href="../i18n">LocalizedString</a></td><td class="property-docs"></td></tr><tr><td class="property-name">signageSystems</td><td class="property-type"><a href="#Signage">Signage</a>[]</td><td class="property-docs"><p>Describes local signage systems. If multiple different systems are used, describe them all.</p>
 </td></tr><tr><td class="property-name">smokingPolicy</td><td class="property-type">One of the following strings:
 
