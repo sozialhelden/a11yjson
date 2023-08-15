@@ -16,6 +16,7 @@ import { getPersonalProfileSchemaDefinition, PersonalProfile } from './PersonalP
 import { getPrefixedQuantitySchemaDefinition, Volume, VolumeSchema } from './Quantity.js';
 import { getQueueSystemSchemaDefinition, QueueSystem } from './QueueSystem.js';
 import { getRestroomSchemaDefinition, Restroom } from './Restroom.js';
+import { getRoomSchemaDefinition, Room } from './Room.js';
 import { getSignageSchemaDefinition, Signage } from './Signage.js';
 import { smokingPolicies, SmokingPolicy } from './SmokingPolicy.js';
 import { getStaffSchemaDefinition, Staff } from './Staff.js';
@@ -238,9 +239,14 @@ export interface Accessibility extends Interactable<GenericInteraction> {
   desks?: Desk[] | null;
 
   /**
-   * Describes the accessibility of restrooms in the place.
+   * Describes the accessibility of restrooms that belong to the place.
    */
   restrooms?: Restroom[] | null;
+
+  /**
+   * Describes the accessibility of rooms that belong to the place.
+   */
+  rooms?: Room[] | null;
 
   /**
    * Information about payment at the place.
@@ -326,6 +332,7 @@ export const getAccessibilitySchemaDefinition: () => SchemaDefinition = () => ({
   ...getPrefixedArraySchemaDefinition('signageSystems', getSignageSchemaDefinition()),
   ...getPrefixedArraySchemaDefinition('entrances', getEntranceSchemaDefinition()),
   ...getPrefixedArraySchemaDefinition('restrooms', getRestroomSchemaDefinition()),
+  ...getPrefixedArraySchemaDefinition('rooms', getRoomSchemaDefinition()),
   ...getPrefixedQuantitySchemaDefinition('ambientNoiseLevel', VolumeSchema),
   ...getLocalizedStringSchemaDefinition('serviceContact'),
   ...getInteractableSchemaDefinition(GenericInteractionsSet),

@@ -12,6 +12,7 @@ import paymentFixture from './paymentFixture.js';
 import personalProfileFixture from './personalProfileFixture.js';
 import queueSystemFixture from './queueSystemFixture.js';
 import restroomFixture from './restroomFixture.js';
+import roomFixture from './roomFixture.js';
 import signageFixture from './signageFixture.js';
 import staffFixture from './staffFixture.js';
 import surfaceFixture from './surfaceFixture.js';
@@ -45,6 +46,7 @@ const accessibilityFixture: Complete<Accessibility> = {
   payment: paymentFixture,
   entrances: [entranceFixture, entranceFixture],
   restrooms: [restroomFixture, restroomFixture],
+  rooms: [roomFixture],
   signageSystems: [signageFixture],
   pathways: pathwaysFixture,
   pathwaysInside: pathwaysFixture,
