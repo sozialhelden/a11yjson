@@ -20,7 +20,7 @@ npm install --save @sozialhelden/a11yjson
 
 ## Basics
 
-A11yJSON's reference provides a documentation of [the A11yJSON data model](./describing-objects/0-model.md) and has [example A11yJSON objects](example-data/index.md).
+A11yJSON's reference provides a documentation of [the A11yJSON data model](./describing-objects/0-model.md).
 
 For each interface `X` you find in the reference, the `a11yjson` npm module provides
 
