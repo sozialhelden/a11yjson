@@ -133,6 +133,11 @@ export interface Accessibility extends Interactable<GenericInteraction> {
   hasSoundAbsorption?: boolean;
 
   /**
+   * Determines if there is background music playing.
+   */
+  hasBackgroundMusic?: boolean;
+
+  /**
    * Determines if there is air conditioning installed and actively used.
    */
   hasAirConditioning?: boolean;
@@ -319,6 +324,7 @@ export const getAccessibilitySchemaDefinition: () => SchemaDefinition = () => ({
   hasPatientLifter: BooleanField,
   offersTreatmentWithoutLeavingWheelchair: BooleanField,
   hasLowStimulusEnvironment: BooleanField,
+  hasBackgroundMusic: BooleanField,
   ...getPrefixedSchemaDefinition('staff', getStaffSchemaDefinition()),
   ...getPrefixedArraySchemaDefinition('availableEquipment', getEquipmentPropertiesSchemaDefinition()),
   ...getPrefixedSchemaDefinition('wheelchairPlaces', getWheelchairPlacesSchemaDefinition()),
