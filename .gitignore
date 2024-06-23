@@ -5,6 +5,5 @@ coverage
 *.log
 .idea
 dist
-compiled
 .awcache
 site

@@ -18,7 +18,6 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "declarationDir": "dist/types",
-    "outDir": "compiled",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
@@ -35,7 +34,6 @@
     "typings"
   ],
   "exclude": [
-    "compiled",
     "dist"
   ]
 }
