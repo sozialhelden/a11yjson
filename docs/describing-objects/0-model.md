@@ -814,38 +814,7 @@ you can create multiple places and nest them.</p>
 <code>usually</code>
 </p>
 </td><td class="property-docs"><p>Headphones are supported or needed.</p>
-</td></tr><tr><td class="property-name">highContrast</td><td class="property-type">One of the following strings:
-
-<p class='grid'>
-<code>always</code>
-
-<code>discouraged</code>
-
-<code>forbidden</code>
-
-<code>impossible</code>
-
-<code>notApplicable</code>
-
-<code>notAvailable</code>
-
-<code>notNecessary</code>
-
-<code>optional</code>
-
-<code>possible</code>
-
-<code>recommended</code>
-
-<code>required</code>
-
-<code>sometimes</code>
-
-<code>unknown</code>
-
-<code>usually</code>
-</p>
-</td><td class="property-docs"><p>The input has high contrast elements, for example around buttons.</p>
+</td></tr><tr><td class="property-name">highContrast</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>The input has high contrast elements, for example around buttons.</p>
 </td></tr><tr><td class="property-name">instructionsUrl</td><td class="property-type"><a href="../i18n">LocalizedString</a></td><td class="property-docs"><p>URL describing how to use the input mechanism.</p>
 </td></tr><tr><td class="property-name">irisScan</td><td class="property-type">One of the following strings:
 
@@ -1011,38 +980,7 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 <code>usually</code>
 </p>
 </td><td class="property-docs"><p>The action uses a knob.</p>
-</td></tr><tr><td class="property-name">knurled</td><td class="property-type">One of the following strings:
-
-<p class='grid'>
-<code>always</code>
-
-<code>discouraged</code>
-
-<code>forbidden</code>
-
-<code>impossible</code>
-
-<code>notApplicable</code>
-
-<code>notAvailable</code>
-
-<code>notNecessary</code>
-
-<code>optional</code>
-
-<code>possible</code>
-
-<code>recommended</code>
-
-<code>required</code>
-
-<code>sometimes</code>
-
-<code>unknown</code>
-
-<code>usually</code>
-</p>
-</td><td class="property-docs"><p>The input has a knurled surface, for example around buttons.</p>
+</td></tr><tr><td class="property-name">knurled</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>The input has a knurled surface, for example around buttons.</p>
 </td></tr><tr><td class="property-name">languages</td><td class="property-type"><code>string</code>[]</td><td class="property-docs"><p>Input languages supported.</p>
 </td></tr><tr><td class="property-name">leftHanded</td><td class="property-type">One of the following strings:
 
@@ -3843,38 +3781,7 @@ content.</p>
   
 
   <table><tr><th class="property-name">Name</th><th class="property-type">Type</th><th class="property-docs"></th></tr><tr><td class="property-name">acceleration</td><td class="property-type"><a href="#Acceleration">Acceleration</a></td><td class="property-docs"><p>Feedback force applied to the user.</p>
-</td></tr><tr><td class="property-name">activationSignal</td><td class="property-type">One of the following strings:
-
-<p class='grid'>
-<code>always</code>
-
-<code>discouraged</code>
-
-<code>forbidden</code>
-
-<code>impossible</code>
-
-<code>notApplicable</code>
-
-<code>notAvailable</code>
-
-<code>notNecessary</code>
-
-<code>optional</code>
-
-<code>possible</code>
-
-<code>recommended</code>
-
-<code>required</code>
-
-<code>sometimes</code>
-
-<code>unknown</code>
-
-<code>usually</code>
-</p>
-</td><td class="property-docs"><p>The output is an activation/engagement signal.</p>
+</td></tr><tr><td class="property-name">activationSignal</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>The output is an activation/engagement signal.</p>
 </td></tr><tr><td class="property-name">ambientNoiseLevel</td><td class="property-type"><a href="#Volume">Volume</a></td><td class="property-docs"><p>Ambient noise level in dB(A) relative to a reference pressure of 0.00002 Pa. Median over a
 10-second period at least.</p>
 </td></tr><tr><td class="property-name">ambientTemperature</td><td class="property-type"><a href="#Temperature">Temperature</a></td><td class="property-docs"><p>The ambient temperature around the output.</p>
@@ -4583,38 +4490,7 @@ and someone / something ensures this. This can be relevant for people with epile
 <code>usually</code>
 </p>
 </td><td class="property-docs"><p>Heat perception is supported or needed.</p>
-</td></tr><tr><td class="property-name">highContrast</td><td class="property-type">One of the following strings:
-
-<p class='grid'>
-<code>always</code>
-
-<code>discouraged</code>
-
-<code>forbidden</code>
-
-<code>impossible</code>
-
-<code>notApplicable</code>
-
-<code>notAvailable</code>
-
-<code>notNecessary</code>
-
-<code>optional</code>
-
-<code>possible</code>
-
-<code>recommended</code>
-
-<code>required</code>
-
-<code>sometimes</code>
-
-<code>unknown</code>
-
-<code>usually</code>
-</p>
-</td><td class="property-docs"><p>The output is displayed in high contrast.</p>
+</td></tr><tr><td class="property-name">highContrast</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>The output is displayed in high contrast.</p>
 </td></tr><tr><td class="property-name">instructionsUrl</td><td class="property-type"><a href="../i18n">LocalizedString</a></td><td class="property-docs"><p>URL describing how to make use of the content/output/signal.</p>
 </td></tr><tr><td class="property-name">isEasyToFind</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the input is easy to find.</p>
 </td></tr><tr><td class="property-name">isEasyToUnderstand</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the input is easy to understand, <code>false</code> if people might face difficulties trying to
@@ -5751,7 +5627,7 @@ fields.</li>
 
 ### <a id="Quantity">Quantity</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L72)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L75)</span>
 
   <p>Describes a quantity of a unit type.</p>
 

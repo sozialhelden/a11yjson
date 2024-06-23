@@ -12,7 +12,7 @@ Some lack proper formatting in the documentation. Fixes in [`tools/generate-over
 
 ### <a id="AccelerationSchema">AccelerationSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L182)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L185)</span>
 
 
 
@@ -21,7 +21,7 @@ Some lack proper formatting in the documentation. Fixes in [`tools/generate-over
 
 ### <a id="AccelerationSchemaDefinition">AccelerationSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L178)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L181)</span>
 
 <p>Validates a acceleration quantity object and will only accept acceleration units, eg.
 meter/second^2, miles/hour^2. Useful to describe the acceleration of a vehicle, or the
@@ -74,7 +74,7 @@ Read-only tuple with 15 strings:
 
 ### <a id="BaseQuantitySchema">BaseQuantitySchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L137)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L140)</span>
 
 
 
@@ -83,7 +83,7 @@ Read-only tuple with 15 strings:
 
 ### <a id="BrightnessSchema">BrightnessSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L226)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L229)</span>
 
 
 
@@ -92,7 +92,7 @@ Read-only tuple with 15 strings:
 
 ### <a id="BrightnessSchemaDefinition">BrightnessSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L225)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L228)</span>
 
 <p>Validates a brightness descriptor and will only accept brightness units, eg. nits or lumens.</p>
 
@@ -466,7 +466,7 @@ Read-only tuple with 23 strings:
 
 ### <a id="ForceSchema">ForceSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L189)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L192)</span>
 
 
 
@@ -475,7 +475,7 @@ Read-only tuple with 23 strings:
 
 ### <a id="ForceSchemaDefinition">ForceSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L188)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L191)</span>
 
 <p>Validates a force quantity object and will only accept force units, eg. newton, or
 kilogram*meter/second^2.</p>
@@ -680,7 +680,7 @@ Set&lt;One of the following strings:
 
 ### <a id="HertzSchema">HertzSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L214)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L217)</span>
 
 
 
@@ -689,7 +689,7 @@ Set&lt;One of the following strings:
 
 ### <a id="HertzSchemaDefinition">HertzSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L213)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L216)</span>
 
 <p>Validates a frequency quantity object and will only accept frequency units, eg. hertz.</p>
 
@@ -746,7 +746,7 @@ Set&lt;One of the following strings:
 
 ### <a id="LengthSchema">LengthSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L164)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L167)</span>
 
 
 
@@ -755,7 +755,7 @@ Set&lt;One of the following strings:
 
 ### <a id="LengthSchemaDefinition">LengthSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L163)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L166)</span>
 
 <p>Validates a length quantity object and will only accept length units, eg. meter, centimeter or
 inch.</p>
@@ -766,7 +766,7 @@ inch.</p>
 
 ### <a id="MassSchema">MassSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L202)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L205)</span>
 
 
 
@@ -775,7 +775,7 @@ inch.</p>
 
 ### <a id="MassSchemaDefinition">MassSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L201)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L204)</span>
 
 <p>Validates a mass quantity object and will only accept mass/weight units, eg. kilogram, gram or
 pound.</p>
@@ -1011,7 +1011,7 @@ Read-only tuple with 14 strings:
 
 ### <a id="Operators">Operators</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L66)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L69)</span>
 
 <p>The allowed operators for comparison quantities</p>
 
@@ -1471,7 +1471,7 @@ Set&lt;One of the following strings:
 
 ### <a id="SlopeSchema">SlopeSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L220)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L223)</span>
 
 
 
@@ -1480,7 +1480,7 @@ Set&lt;One of the following strings:
 
 ### <a id="SlopeSchemaDefinition">SlopeSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L219)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L222)</span>
 
 <p>Validates a slope quantity object and will only accept units to descrie a slope, eg. degrees.</p>
 
@@ -1519,7 +1519,7 @@ Read-only tuple with 9 strings:
 
 ### <a id="SpeedSchema">SpeedSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L171)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L174)</span>
 
 
 
@@ -1528,7 +1528,7 @@ Read-only tuple with 9 strings:
 
 ### <a id="SpeedSchemaDefinition">SpeedSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L170)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L173)</span>
 
 <p>Validates a speed quantity object and will only accept speed units, eg. meter/second, miles/hour
 or similar.</p>
@@ -1866,7 +1866,7 @@ Read-only tuple with 158 strings:
 
 ### <a id="TemperatureSchema">TemperatureSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L236)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L239)</span>
 
 
 
@@ -1875,7 +1875,7 @@ Read-only tuple with 158 strings:
 
 ### <a id="TemperatureSchemaDefinition">TemperatureSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L232)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L235)</span>
 
 <p>Validates a temperature quantity object and will only accept temperature units, eg. degrees
 celsius (<code>degC</code>), degrees Fahrenheit (<code>degF</code>) or kelvin (<code>K</code>).</p>
@@ -1886,7 +1886,7 @@ celsius (<code>degC</code>), degrees Fahrenheit (<code>degF</code>) or kelvin (<
 
 ### <a id="TimeIntervalSchema">TimeIntervalSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L195)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L198)</span>
 
 
 
@@ -1895,7 +1895,7 @@ celsius (<code>degC</code>), degrees Fahrenheit (<code>degF</code>) or kelvin (<
 
 ### <a id="TimeIntervalSchemaDefinition">TimeIntervalSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L194)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L197)</span>
 
 <p>Validates a timer interval object and will only accept time units, eg. seconds, minutes or hours.</p>
 
@@ -1944,7 +1944,7 @@ Set&lt;One of the following strings:
 
 ### <a id="UnitlessSchema">UnitlessSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L157)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L160)</span>
 
 
 
@@ -1953,7 +1953,7 @@ Set&lt;One of the following strings:
 
 ### <a id="UnitlessSchemaDefinition">UnitlessSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L156)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L159)</span>
 
 
 
@@ -1962,7 +1962,7 @@ Set&lt;One of the following strings:
 
 ### <a id="VolumeSchema">VolumeSchema</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L208)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L211)</span>
 
 
 
@@ -1971,7 +1971,7 @@ Set&lt;One of the following strings:
 
 ### <a id="VolumeSchemaDefinition">VolumeSchemaDefinition</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L207)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Quantity.ts#L210)</span>
 
 <p>Validates a sound volume quantity object and will only accept sound volume units, eg. decibel.</p>
 
