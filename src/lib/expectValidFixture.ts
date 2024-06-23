@@ -16,6 +16,8 @@ export default function expectValidFixture(
   context.validate(value);
   if (!context.isValid()) {
     console.log('Invalid fixture:', value);
+
+    console.log('Schema:', schema);
   }
   expect(context.validationErrors()).toHaveLength(0);
   expect(context.isValid()).toBeTruthy();

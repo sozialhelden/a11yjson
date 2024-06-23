@@ -1,5 +1,4 @@
 import SimpleSchema from '@sozialhelden/simpl-schema';
-import { omit } from 'lodash-es';
 
 export default function expectInvalidFixture(
   definition: Record<string, any>,
@@ -23,7 +22,12 @@ export default function expectInvalidFixture(
   expect(context.isValid()).toBeFalsy();
   if (expectedValidationErrors.length > 0) {
     expect(
-      context.validationErrors().map((e: any) => omit(e, 'value', 'dataType', 'regExp')),
+      context.validationErrors().map((e: any) => {
+        delete e.value;
+        delete e.dataType;
+        delete e.regExp;
+        return e;
+      }),
     ).toEqual(expectedValidationErrors);
   }
 }

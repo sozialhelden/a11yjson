@@ -2,7 +2,6 @@ import SimpleSchema, {
   SchemaDefinition, SchemaKeyDefinitionWithOneType, ValidatorContext, ValidatorFunction,
 } from '@sozialhelden/simpl-schema';
 import * as Qty from 'js-quantities';
-import { memoize } from 'lodash-es';
 
 export enum UnitKind {
   Length = 'length',
@@ -14,6 +13,8 @@ export enum UnitKind {
   Acceleration = 'acceleration',
   Mass = 'mass',
 }
+
+const unitKinds = Object.values(UnitKind);
 
 // https://stackoverflow.com/a/46759625/387719
 function isConstructor(f: Function): boolean {
@@ -57,7 +58,9 @@ export const validateUnit = function (kind: UnitKind): ValidatorFunction {
   };
 };
 
-const memoizedValidateUnit = memoize(validateUnit);
+const unitValidatorsByKind = Object.fromEntries(
+  unitKinds.map((kind) => [kind, validateUnit(kind)]),
+);
 
 /**
  * The allowed operators for comparison quantities
@@ -146,7 +149,7 @@ const createQuantitySchemaDefinition = (
     ? {
       unit: {
         type: String,
-        custom: memoizedValidateUnit(kind),
+        custom: unitValidatorsByKind[kind],
         defaultValue: defaultUnit,
       },
     }
