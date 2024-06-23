@@ -2,77 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://sozialhelden.github.io/a11yjson/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sozialhelden.github.io/a11yjson/0-usage/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://sozialhelden.github.io/a11yjson/1-example-data/</loc>
-         <lastmod>2023-08-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://sozialhelden.github.io/a11yjson/2-who-uses-a11yjson/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <loc>https://sozialhelden.github.io/a11yjson/1-who-uses-a11yjson/</loc>
+         <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sozialhelden.github.io/a11yjson/faq/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sozialhelden.github.io/a11yjson/i18n/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sozialhelden.github.io/a11yjson/x-contributing/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sozialhelden.github.io/a11yjson/best-practices/bad-examples-and-how-to-improve-them/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sozialhelden.github.io/a11yjson/best-practices/copytext-accessibility/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sozialhelden.github.io/a11yjson/best-practices/describe-objects-not-people/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sozialhelden.github.io/a11yjson/best-practices/rating-scales/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://sozialhelden.github.io/a11yjson/describing-objects/0-model/</loc>
+         <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sozialhelden.github.io/a11yjson/describing-objects/0-quantities/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sozialhelden.github.io/a11yjson/describing-objects/constants/</loc>
-         <lastmod>2023-08-15</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://sozialhelden.github.io/a11yjson/describing-objects/interfaces/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sozialhelden.github.io/a11yjson/describing-objects/type-aliases/</loc>
-         <lastmod>2023-08-15</lastmod>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://sozialhelden.github.io/a11yjson/example-data/0-place/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://sozialhelden.github.io/a11yjson/example-data/canteen/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://sozialhelden.github.io/a11yjson/example-data/cinema/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://sozialhelden.github.io/a11yjson/example-data/elevator/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://sozialhelden.github.io/a11yjson/example-data/museum/</loc>
+         <lastmod>2024-06-23</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://sozialhelden.github.io/a11yjson/example-data/wash-basin/</loc>
+         <lastmod>2024-06-23</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
