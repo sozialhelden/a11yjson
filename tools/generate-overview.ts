@@ -1,7 +1,7 @@
 import fs from "fs";
-import packageJSON from "../package.json";
 import { get, includes, isEqual } from "lodash-es";
 import { marked } from "marked";
+import packageJSON from "../package.json";
 
 const json = JSON.parse(fs.readFileSync("./dist/typedoc-output.json").toString());
 const prefix = 'docs/describing-objects/';
@@ -204,7 +204,7 @@ function ReferenceType(props: {
   }
 
   if (isInterface(props)) {
-    return `<a href="../interfaces/#${props.name}">${props.name}</a>`;
+    return `<a href="../0-model/#${props.name}">${props.name}</a>`;
   }
 
   return `<a href="#${props.name}">${props.name}</a>`;
@@ -502,15 +502,15 @@ ${JSON.stringify(object, null, 2)}
 `;
 }
 
-function Interfaces() {
-  return `# Interfaces
+function DataModel() {
+  return `# Core Data Model
 
 ${Styles()}
 
 This is a list of data structures that A11yJSON specifies.
 
 They are meant to be interfaces in the software development sense: This means you can either use
-them as they are, or mix them into your own entity definitions.
+them as they are, or mix them into your own model.
 
 ${interfaces.map(Interface).join("\n\n")}
 `;
@@ -522,7 +522,7 @@ function TypeAliases() {
 
 ${Styles()}
 
-Besides [interfaces](./interfaces.md) and [constants](./constants.md), A11yJSON defines the following bare types.
+Besides [interfaces](./0-model.md) and [constants](./constants.md), A11yJSON defines the following bare types.
 
 Some lack proper formatting in the documentation. Fixes in [\`tools/generate-overview.ts\`](https://github.com/sozialhelden/a11yjson/blob/master/tools/generate-overview.ts) are welcome!
 
@@ -552,7 +552,7 @@ function Constants() {
 
 ${Styles()}
 
-Besides [interfaces](./interfaces.md) and [bare types](./type-aliases.md), A11yJSON defines the following constants.
+Besides [interfaces](./0-model.md) and [bare types](./type-aliases.md), A11yJSON defines the following constants.
 
 Some lack proper formatting in the documentation. Fixes in [\`tools/generate-overview.ts\`](https://github.com/sozialhelden/a11yjson/blob/master/tools/generate-overview.ts) are welcome!
 
@@ -574,7 +574,7 @@ ${Type({ object: alias.type })}
 }
 
 
-fs.writeFileSync(`${prefix}interfaces.md`, Interfaces());
+fs.writeFileSync(`${prefix}0-model.md`, DataModel());
 
 fs.writeFileSync(`${prefix}type-aliases.md`, TypeAliases());
 

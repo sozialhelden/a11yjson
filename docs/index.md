@@ -8,7 +8,7 @@ Status](https://travis-ci.org/sozialhelden/a11yjson.svg?branch=master)](https://
 Integrate A11yJSON into data schemas that describe…
 
 - real places
-- local amenities
+- local amenities, like elevators, escalators, or vending machines
 - sanitary facilities
 - physical media and services
 - policies that can be barriers (like dog friendliness)
@@ -28,27 +28,17 @@ This is a valid A11yJSON data snippet:
 }
 ```
 
-See the [examples](1-example-data.md) for more complex definitions, or the [list of accessibility criteria](describing-objects/interfaces.md) to see the format's extent.
+The docs provide examples (for example, a [cinema](./example-data/cinema.md), [canteen](./example-data/canteen.md), an [elevator](./example-data/elevator.md)) for more complex definitions, or the [list of accessibility criteria](describing-objects/0-model.md) to see the format's extent.
 
 ## Is this for me?
 
-If you build an app that digitalizes any aspect of real life, *you decide if it adds a new barrier to this real world – or creates a new entrance*. Use this power wisely and ensure that your data design is inclusive. 🦾
+See the [FAQ](faq.md).
 
-A11yJSON can help you if you work with data in…
-
-- Architecture
-- Indoor navigation
-- Facility management
-- Accessibility surveys
-- Location-based services
-- Outdoor/transit navigation
-- Building Information Management (BIM)
-
-Here is a [list of projects using A11yJSON](./2-who-uses-a11yjson.md).
+Here is a [list of projects using A11yJSON](1-who-uses-a11yjson.md).
 
 ## Technically…
 
-A11yJSON provides a collection of [documented interfaces](./describing-objects/interfaces.md) for structuring data in your projects – no matter which language you use.
+A11yJSON provides a collection of [documented data model](./describing-objects/0-model.md) for structuring data in your projects – no matter which language you use.
 
 It comes with a TypeScript library to check your data structures at compile-time.
 
@@ -62,4 +52,4 @@ A11yJSON is made by [Sozialhelden e.V.](https://sozialhelden.de), a non-profit t
 
 ## Finally…
 
-If you think that A11yJSON deserves attention, consider giving it a [Star on GitHub](https://github.com/sozialhelden/a11yjson/), and [sharing it on Twitter](https://twitter.com/share?text=I%20support%20A11yJSON,%20and%20you%20should%20too.%20RT%20to%20spread%20this%20idea!&url=https://a11yjson.org&hashtags=accessibility,a11y,a11yjson,sozialhelden)! 🙌
+If you think that A11yJSON deserves attention, consider giving it a [Star on GitHub](https://github.com/sozialhelden/a11yjson/), share the project on social media, and tell your friends! 🙌

@@ -6,7 +6,7 @@
     }
   </style>
 
-Besides [interfaces](./interfaces.md) and [constants](./constants.md), A11yJSON defines the following bare types.
+Besides [interfaces](./0-model.md) and [constants](./constants.md), A11yJSON defines the following bare types.
 
 Some lack proper formatting in the documentation. Fixes in [`tools/generate-overview.ts`](https://github.com/sozialhelden/a11yjson/blob/master/tools/generate-overview.ts) are welcome!
 
@@ -122,7 +122,7 @@ Definition: one of the following strings:
 
 ### <a id="Direction">Direction</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L57)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L56)</span>
 
 <p>Describes a physical direction, from the perspective of a person facing forward.</p>
 
@@ -149,7 +149,7 @@ Definition: one of the following strings:
 
 ### <a id="DirectionAxis">DirectionAxis</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L38)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L37)</span>
 
 <p>Describes a physical direction axis relative to a person’s body.</p>
 
@@ -166,7 +166,7 @@ Definition: one of the following strings:
 
 ### <a id="DoorInteraction">DoorInteraction</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Door.ts#L20)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Door.ts#L19)</span>
 
 
 
@@ -308,11 +308,13 @@ Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
 
 ### <a id="GenericInteraction">GenericInteraction</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L82)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L86)</span>
 
 
 
 Definition: one of the following strings:
+
+- `main`
 
 - `watchMovies`
 
@@ -336,11 +338,17 @@ Definition: one of the following strings:
 
 - `getFood`
 
+- `getDrinks`
+
 - `getTreatment`
 
 - `getService`
 
 - `eat`
+
+- `order`
+
+- `pickUpOrder`
 
 - `pay`
 
@@ -552,6 +560,40 @@ Definition: one of the following strings:
 - `clean`
 
 - `use`
+
+
+
+### <a id="Necessity">Necessity</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Necessity.ts#L18)</span>
+
+
+
+Definition: one of the following strings:
+
+- `optional`
+
+- `always`
+
+- `required`
+
+- `possible`
+
+- `impossible`
+
+- `recommended`
+
+- `discouraged`
+
+- `forbidden`
+
+- `notApplicable`
+
+- `notAvailable`
+
+- `notNecessary`
+
+- `unknown`
 
 
 
@@ -1245,26 +1287,6 @@ Definition: one of the following strings:
 - `secondaryFlush`
 
 - `spray`
-
-
-
-### <a id="Urgency">Urgency</a>
-
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/PerceptionMode.ts#L36)</span>
-
-
-
-Definition: one of the following strings:
-
-- `alert`
-
-- `alarm`
-
-- `warning`
-
-- `info`
-
-- `debug`
 
 
 

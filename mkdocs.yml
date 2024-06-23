@@ -31,7 +31,7 @@ repo_url: https://github.com/sozialhelden/a11yjson
 # edit_uri: https://github.com/sozialhelden/k8s/edit/master/docs/
 
 # Copyright
-copyright: Copyright &copy; 2018-2023 Sozialhelden e.V.
+copyright: Copyright &copy; 2018-2024 Sozialhelden e.V.
 
 # Configuration
 theme:
@@ -50,10 +50,13 @@ theme:
   features:
     # - tabs
     - instant
+    - content.code.annotate
+
   palette:
     scheme: default
     primary: red
-    accent: blue grey
+    accent: red grey
+
   font:
     text: Inter
     code: Source Code Pro
@@ -85,6 +88,8 @@ extra:
     - icon: fontawesome/brands/instagram
       link: https://instagram.com/sozialhelden
 
+  annotate:
+    json: [.s2]
 
 # TODO:
 #      <meta property="og:title" content="A11yJSON" />
@@ -122,9 +127,17 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-  # - pymdownx.highlight:
-  #     linenums_style: pymdownx-inline
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
   - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.keys
   - pymdownx.magiclink:
       repo_url_shorthand: true

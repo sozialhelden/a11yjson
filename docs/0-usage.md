@@ -1,5 +1,17 @@
 # Usage
 
+You can use A11yJSON in any project that supports nested, JSON-like data structures or classes.
+
+Best support is available for:
+
+TypeScript, Node.js, Browsers (CommonJS/ES modules).
+
+Usage is, of course, not limited to these environments – we encourage you to use the same structures
+in your Python, Rust, Java, Swift, PHP, … project!
+
+Feel free to contribute automatically type generation for your favorite programming environment
+and [create an issue](https://github.com/sozialhelden/a11yjson/issues/new) if you plan to do this.
+
 ## Installing the npm module
 
 ```bash
@@ -8,7 +20,7 @@ npm install --save @sozialhelden/a11yjson
 
 ## Basics
 
-A11yJSON's reference provides a documentation of [all available interfaces](./describing-objects/interfaces.md) and has [example A11yJSON objects](./1-example-data.md).
+A11yJSON's reference provides a documentation of [the A11yJSON data model](./describing-objects/0-model.md) and has [example A11yJSON objects](example-data/index.md).
 
 For each interface `X` you find in the reference, the `a11yjson` npm module provides
 
@@ -37,14 +49,12 @@ const placeInfo: PlaceInfo = {
             watch: {
               perception: {
                 languages: ['fr'],
-                dedicatedScreenForSubtitles: true,
-                subtitles: true,
-                audioDescription: true,
-                byod: true,
+                subtitles: "always",
+                audioDescription: "sometimes",
+                byod: "optional",
                 educationLevel: 3,
-                visual: true,
-                realTimeCaptioning: true,
-                signLanguage: true,
+                visual: "optional",
+                signLanguage: "optional",
               }
             }
           }

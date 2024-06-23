@@ -6,7 +6,7 @@
     }
   </style>
 
-Besides [interfaces](./interfaces.md) and [bare types](./type-aliases.md), A11yJSON defines the following constants.
+Besides [interfaces](./0-model.md) and [bare types](./type-aliases.md), A11yJSON defines the following constants.
 
 Some lack proper formatting in the documentation. Fixes in [`tools/generate-overview.ts`](https://github.com/sozialhelden/a11yjson/blob/master/tools/generate-overview.ts) are welcome!
 
@@ -205,7 +205,7 @@ Set&lt;One of the following strings:
 
 ### <a id="DirectionAxes">DirectionAxes</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L27)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L26)</span>
 
 <p>Describes a physical direction axis relative to a person’s body.</p>
 
@@ -223,7 +223,7 @@ Read-only tuple with 3 strings:
 
 ### <a id="Directions">Directions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L43)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/ActionMode.ts#L42)</span>
 
 <p>Describes physical directions, from the perspective of a person facing forward.</p>
 
@@ -251,7 +251,7 @@ Read-only tuple with 8 strings:
 
 ### <a id="DoorInteractions">DoorInteractions</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Door.ts#L18)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Door.ts#L17)</span>
 
 
 
@@ -276,7 +276,7 @@ Read-only tuple with 7 strings:
 
 ### <a id="DoorInteractionsSet">DoorInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Door.ts#L21)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Door.ts#L20)</span>
 
 
 
@@ -490,8 +490,10 @@ kilogram*meter/second^2.</p>
 
 
 
-Read-only tuple with 27 strings:
+Read-only tuple with 31 strings:
 <ul>
+<li><code>main</code></li>
+
 <li><code>watchMovies</code></li>
 
 <li><code>watchPlays</code></li>
@@ -514,11 +516,17 @@ Read-only tuple with 27 strings:
 
 <li><code>getFood</code></li>
 
+<li><code>getDrinks</code></li>
+
 <li><code>getTreatment</code></li>
 
 <li><code>getService</code></li>
 
 <li><code>eat</code></li>
+
+<li><code>order</code></li>
+
+<li><code>pickUpOrder</code></li>
 
 <li><code>pay</code></li>
 
@@ -551,7 +559,7 @@ Read-only tuple with 27 strings:
 
 ### <a id="GenericInteractionsSet">GenericInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L83)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L87)</span>
 
 
 
@@ -574,6 +582,8 @@ Set&lt;One of the following strings:
 
 <code>explore</code>
 
+<code>getDrinks</code>
+
 <code>getFood</code>
 
 <code>getService</code>
@@ -582,7 +592,13 @@ Set&lt;One of the following strings:
 
 <code>listen</code>
 
+<code>main</code>
+
+<code>order</code>
+
 <code>pay</code>
+
+<code>pickUpOrder</code>
 
 <code>play</code>
 
@@ -939,6 +955,50 @@ Set&lt;One of the following strings:
 <code>use</code>
 </p>
 &gt;
+
+
+### <a id="Necessities">Necessities</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Necessity.ts#L3)</span>
+
+
+
+Read-only tuple with 12 strings:
+<ul>
+<li><code>optional</code></li>
+
+<li><code>always</code></li>
+
+<li><code>required</code></li>
+
+<li><code>possible</code></li>
+
+<li><code>impossible</code></li>
+
+<li><code>recommended</code></li>
+
+<li><code>discouraged</code></li>
+
+<li><code>forbidden</code></li>
+
+<li><code>notApplicable</code></li>
+
+<li><code>notAvailable</code></li>
+
+<li><code>notNecessary</code></li>
+
+<li><code>unknown</code></li>
+</ul>
+
+
+
+### <a id="NecessityField">NecessityField</a>
+
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Necessity.ts#L20)</span>
+
+
+
+`SchemaKeyDefinition` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
 
 
 ### <a id="Operators">Operators</a>
@@ -1890,27 +1950,6 @@ Set&lt;One of the following strings:
 
 
 `SchemaDefinition` from the [`@sozialhelden/simpl-schema` NPM package](https://www.npmjs.com/package/@sozialhelden/simpl-schema).
-
-
-### <a id="Urgencies">Urgencies</a>
-
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/PerceptionMode.ts#L28)</span>
-
-
-
-Read-only tuple with 5 strings:
-<ul>
-<li><code>alert</code></li>
-
-<li><code>alarm</code></li>
-
-<li><code>warning</code></li>
-
-<li><code>info</code></li>
-
-<li><code>debug</code></li>
-</ul>
-
 
 
 ### <a id="VolumeSchema">VolumeSchema</a>
