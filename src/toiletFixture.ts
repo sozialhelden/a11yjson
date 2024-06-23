@@ -1,5 +1,5 @@
-import { Toilet } from './Toilet.js';
 import { Complete } from './Complete.js';
+import { Toilet } from './Toilet.js';
 
 const toiletFixture: Complete<Toilet> = {
   heightOfBase: '40 .. 45cm',
@@ -20,16 +20,17 @@ const toiletFixture: Complete<Toilet> = {
   flushMechanismDistanceFromToilet: '0 .. 100cm',
   interactions: {
     flush: {
-      action: { pullstring: true, pedal: true, activationForce: '10N' },
+      action: { pullstring: 'optional', pedal: 'optional', activationForce: '8 .. 10N' },
     },
     secondaryFlush: {
       name: { en: 'Flush with a secondary button at low height' },
       action: {
-        pushButton: true,
+        pushButton: 'required',
         necessaryGripHeight: '50cm',
-        tactileGuides: true,
-        tactile: true,
-        brailleText: true,
+        tactileGuides: 'always',
+        tactile: 'always',
+        brailleText: 'always',
+        raisedText: 'always',
       },
     },
   },

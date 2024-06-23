@@ -16,7 +16,7 @@ const queueSystemFixture: Complete<QueueSystem> = {
         educationLevel: 2,
       },
       perception: {
-        backgroundMusic: true,
+        backgroundMusic: 'always',
         ambientNoiseLevel: { value: 20, unit: 'dB' },
       },
     },

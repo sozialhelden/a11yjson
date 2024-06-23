@@ -1,8 +1,8 @@
-import * as Qty from 'js-quantities';
-import { memoize } from 'lodash-es';
 import SimpleSchema, {
   SchemaDefinition, SchemaKeyDefinitionWithOneType, ValidatorContext, ValidatorFunction,
 } from '@sozialhelden/simpl-schema';
+import * as Qty from 'js-quantities';
+import { memoize } from 'lodash-es';
 
 export enum UnitKind {
   Length = 'length',
@@ -101,7 +101,7 @@ export interface Quantity {
 export const BaseQuantitySchemaDefinition = {
   operator: {
     type: String,
-    allowedValues: ['<', '<=', '==', '>=', '>'],
+    allowedValues: (Operators as any) as string[],
     optional: true,
   },
   value: {

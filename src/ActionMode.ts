@@ -4,17 +4,16 @@ import BooleanField from './BooleanField.js';
 import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags.js';
 import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition.js';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
+import { Necessity, NecessityField } from './Necessity.js';
 import { getPerceptionModeSchemaDefinition, PerceptionMode } from './PerceptionMode.js';
 import {
   Force,
   ForceSchema,
   getPrefixedQuantitySchemaDefinition,
   Length,
-  LengthSchema,
-  TimeInterval,
+  LengthSchema, Mass,
+  MassSchema, TimeInterval,
   TimeIntervalSchema,
-  Mass,
-  MassSchema,
 } from './Quantity.js';
 import { getTechCombinationSchemaDefinition, TechCombination } from './TechCombination.js';
 import validateUrl from './validateUrl.js';
@@ -131,49 +130,54 @@ export interface ActionMode {
   feedback?: PerceptionMode;
 
   /**
+   * The ability to carry a weight is supported or needed.
+   */
+  carryWeight?: Necessity;
+
+  /**
    * The ability to speak is supported or needed.
    */
-  speak?: boolean;
+  speak?: Necessity;
 
   /**
    * Morse code input is supported or needed.
    */
-  morseCode?: boolean;
+  morseCode?: Necessity;
 
   /**
    * Clapping your hands is supported or needed.
    */
-  clap?: boolean;
+  clap?: Necessity;
 
   /**
    * Waving your hands is supported or needed.
    */
-  wave?: boolean;
+  wave?: Necessity;
 
   /**
    * Walking is supported or needed.
    */
-  walk?: boolean;
+  walk?: Necessity;
 
   /**
    * The ability to use sign language is supported or needed.
    */
-  signLanguage?: boolean;
+  signLanguage?: Necessity;
 
   /**
    * A QR code is supported or needed.
    */
-  qrCode?: boolean;
+  qrCode?: Necessity;
 
   /**
    * Headphones are supported or needed.
    */
-  headphone?: boolean;
+  headphone?: Necessity;
 
   /**
    * A cable is supported or needed.
    */
-  cable?: boolean;
+  cable?: Necessity;
 
   /**
    * URL where you can use the input mechanism, e.g. on your phone.
@@ -188,102 +192,102 @@ export interface ActionMode {
   /**
    * Tactile input is supported or needed.
    */
-  tactile?: boolean;
+  tactile?: Necessity;
 
   /**
    * Haptic input is supported or needed.
    */
-  haptic?: boolean;
+  haptic?: Necessity;
 
   /**
    * The ability to read braille is supported or needed.
    */
-  brailleText?: boolean;
+  brailleText?: Necessity;
 
   /**
    * The ability to write textual content with a braille keyboard is supported or needed.
    */
-  brailleKeyboard?: boolean;
+  brailleKeyboard?: Necessity;
 
   /**
    * You can or must give input with both hands.
    */
-  twoHanded?: boolean;
+  twoHanded?: Necessity;
 
   /**
    * You can or must give input with one hand.
    */
-  singleHanded?: boolean;
+  singleHanded?: Necessity;
 
   /**
    * You can or must give input with your left hand.
    */
-  leftHanded?: boolean;
+  leftHanded?: Necessity;
 
   /**
    * You can or must give input with your right hand.
    */
-  rightHanded?: boolean;
+  rightHanded?: Necessity;
 
   /**
    * The ability to write textual content by hand is supported or needed.
    */
-  handwriting?: boolean;
+  handwriting?: Necessity;
 
   /**
    * The ability to write textual content by typing on a keyboard is supported or needed.
    */
-  keyboard?: boolean;
+  keyboard?: Necessity;
 
   /**
    * The ability to write numbers by typing on a keypad is supported or needed.
    */
-  keypad?: boolean;
+  keypad?: Necessity;
 
   /**
    * The ability to use a mouse is supported or needed.
    */
-  mouse?: boolean;
+  mouse?: Necessity;
 
   /**
    * The ability to click a button with a finger is supported or needed.
    */
-  click?: boolean;
+  click?: Necessity;
 
   /**
    * The ability to click a button with a finger is supported or needed.
    */
-  doubleClick?: boolean;
+  doubleClick?: Necessity;
 
   /**
    * The ability to click a button with a finger is supported or needed.
    */
-  tripleClick?: boolean;
+  tripleClick?: Necessity;
 
   /**
    * The ability to tap an element with a finger is supported or needed.
    */
-  tap?: boolean;
+  tap?: Necessity;
 
   /**
    * The ability to use a trackball is supported or needed.
    */
-  trackball?: boolean;
+  trackball?: Necessity;
 
   /**
    * The ability to use a push switch is supported or needed.
    */
-  pushSwitch?: boolean;
+  pushSwitch?: Necessity;
 
   /**
    * The ability to use a push button is supported or needed.
    */
-  pushButton?: boolean;
+  pushButton?: Necessity;
 
   /**
    * The action uses a capacity sensor, for example a touch sensor.
    */
-  capacitive?: boolean;
+  capacitive?: Necessity;
 
   /**
    * State count for a button or switch, for example 2 for a toggle button, 3 for a 3-way button.
@@ -293,52 +297,52 @@ export interface ActionMode {
   /**
    * The ability to use a pedal is supported or needed.
    */
-  pedal?: boolean;
+  pedal?: Necessity;
 
   /**
    * The ability to use a pull switch is supported or needed.
    */
-  pullSwitch?: boolean;
+  pullSwitch?: Necessity;
 
   /**
    * The ability to use a pullstring is supported or needed.
    */
-  pullstring?: boolean;
+  pullstring?: Necessity;
 
   /**
    * The input has tactile guides, for example around buttons.
    */
-  tactileGuides?: boolean;
+  tactileGuides?: Necessity;
 
   /**
    * The input has a knurled surface, for example around buttons.
    */
-  knurled?: boolean;
+  knurled?: Necessity;
 
   /**
    * The input has high contrast elements, for example around buttons.
    */
-  highContrast?: boolean;
+  highContrast?: Necessity;
 
   /**
    * Touchscreen input is supported or needed.
    */
-  touchscreen?: boolean;
+  touchscreen?: Necessity;
 
   /**
    * A screen is supported or needed.
    */
-  screen?: boolean;
+  screen?: Necessity;
 
   /**
    * Handling paper is supported or needed.
    */
-  paper?: boolean;
+  paper?: Necessity;
 
   /**
    * Touch input is supported or needed.
    */
-  touch?: boolean;
+  touch?: Necessity;
 
   /**
    * There is a burn hazard.
@@ -348,37 +352,37 @@ export interface ActionMode {
   /**
    * The ability to apply force to an object is supported or needed.
    */
-  press?: boolean;
+  press?: Necessity;
 
   /**
    * The ability to tear something apart is supported or needed.
    */
-  tearApart?: boolean;
+  tearApart?: Necessity;
 
   /**
    * The ability to use a joystick is supported or needed.
    */
-  joystick?: boolean;
+  joystick?: Necessity;
 
   /**
    * The ability to turn a knob is supported or needed.
    */
-  turnKnob?: boolean;
+  turnKnob?: Necessity;
 
   /**
    * The action uses a knob.
    */
-  knob?: boolean;
+  knob?: Necessity;
 
   /**
    * The ability to drag an object is supported or needed.
    */
-  drag?: boolean;
+  drag?: Necessity;
 
   /**
    * The ability to turn an object is supported or needed.
    */
-  turn?: boolean;
+  turn?: Necessity;
 
   /**
    * The direction of the action, relative to the body.
@@ -393,152 +397,152 @@ export interface ActionMode {
   /**
    * The ability to pinch an object is supported or needed.
    */
-  pinch?: boolean;
+  pinch?: Necessity;
 
   /**
    * The ability to squeeze an object is supported or needed.
    */
-  squeeze?: boolean;
+  squeeze?: Necessity;
 
   /**
    * The ability to rotate an object is supported or needed.
    */
-  rotate?: boolean;
+  rotate?: Necessity;
 
   /**
    * The ability to tilt an object is supported or needed.
    */
-  tilt?: boolean;
+  tilt?: Necessity;
 
   /**
    * The ability to move an object is supported or needed.
    */
-  move?: boolean;
+  move?: Necessity;
 
   /**
    * The ability to move an object with your tongue is supported or needed.
    */
-  tongue?: boolean;
+  tongue?: Necessity;
 
   /**
    * The ability to lick an object with your tongue is supported or needed (e.g. a lollipop)
    */
-  lick?: boolean;
+  lick?: Necessity;
 
   /**
    * The ability to smell is supported or needed.
    */
-  smell?: boolean;
+  smell?: Necessity;
 
   /**
    * The ability to scratch is supported or needed.
    */
-  scratch?: boolean;
+  scratch?: Necessity;
 
   /**
    * The ability to use a sip and puff switch is supported or needed.
    */
-  sipAndPuff?: boolean;
+  sipAndPuff?: Necessity;
 
   /**
    * The ability to use a pinch finger gesture is supported or needed.
    */
-  pinchFingerGesture?: boolean;
+  pinchFingerGesture?: Necessity;
 
   /**
    * The ability to do a virtual drag-and-drop finger/mouse gesture is supported or needed.
    */
-  dragAndDropGesture?: boolean;
+  dragAndDropGesture?: Necessity;
 
   /**
    * The ability to use a two-finger rotation gesture is supported or needed.
    */
-  rotateTwoFingersGesture?: boolean;
+  rotateTwoFingersGesture?: Necessity;
 
   /**
    * The ability to use a swipe finger gesture is supported or needed.
    */
-  swipeFingerGesture?: boolean;
+  swipeFingerGesture?: Necessity;
 
   /**
    * The ability to use a three-finger swipe gesture is supported or needed.
    */
-  swipeTwoFingersGesture?: boolean;
+  swipeTwoFingersGesture?: Necessity;
 
   /**
    * The ability to use a three-finger swipe gesture is supported or needed.
    */
-  swipeThreeFingersGesture?: boolean;
+  swipeThreeFingersGesture?: Necessity;
 
   /**
    * The ability to use rhythm input is supported or needed.
    */
-  rhythm?: boolean;
+  rhythm?: Necessity;
 
   /**
    * The ability to use a head pointer is supported or needed.
    */
-  headPointer?: boolean;
+  headPointer?: Necessity;
 
   /**
    * The ability to use an eye tracker is supported or needed.
    */
-  eyeTracker?: boolean;
+  eyeTracker?: Necessity;
 
   /**
    * The input features a wheel.
    */
-  wheel?: boolean;
+  wheel?: Necessity;
 
   /**
    * The input is wireless.
    */
-  wireless?: boolean;
+  wireless?: Necessity;
 
   /**
    * The input makes a photo.
    */
-  photo?: boolean;
+  photo?: Necessity;
 
   /**
    * The input makes a video.
    */
-  video?: boolean;
+  video?: Necessity;
 
   /**
    * The input makes a sound recording.
    */
-  soundRecording?: boolean;
+  soundRecording?: Necessity;
 
   /**
    * The input uses face recognition.
    */
-  faceRecognition?: boolean;
+  faceRecognition?: Necessity;
 
   /**
    * The input uses a fingerprint scanner.
    */
-  fingerprintScan?: boolean;
+  fingerprintScan?: Necessity;
 
   /**
    * The input uses an iris scanner.
    */
-  irisScan?: boolean;
+  irisScan?: Necessity;
 
   /**
    * `true` if the controls or signs have raised letters, `false` if not.
    */
-  raisedText?: boolean;
+  raisedText?: Necessity;
 
   /**
    * `true` if the control is activated by voice, `false` if not.
    */
-  voiceActivation?: boolean;
+  voiceActivation?: Necessity;
 
   /**
    * `true` if the input user interface needs or supports visual input, `false` if not.
    */
-  visualRecognition?: boolean;
+  visualRecognition?: Necessity;
 
   /**
    * The height you need to grip to perceive the content/output/signal.
@@ -613,103 +617,96 @@ export const getActionModeSchemaDefinition: () => SchemaDefinition = () => ({
     optional: true,
   },
   'languages.$': IETFLanguageCodeSchemaKeyDefinition,
-  speak: BooleanField,
-  morseCode: BooleanField,
-  signLanguage: BooleanField,
-  tactile: BooleanField,
-  haptic: BooleanField,
-  brailleText: BooleanField,
-  brailleKeyboard: BooleanField,
-  twoHanded: BooleanField,
-  singleHanded: BooleanField,
-  leftHanded: BooleanField,
-  rightHanded: BooleanField,
-  handwriting: BooleanField,
-  click: BooleanField,
-  doubleClick: BooleanField,
-  tripleClick: BooleanField,
-  tap: BooleanField,
-  tactileGuides: BooleanField,
-  touch: BooleanField,
-  drag: BooleanField,
-  press: BooleanField,
-  pinch: BooleanField,
-  clap: BooleanField,
-  wave: BooleanField,
-  squeeze: BooleanField,
-  rotate: BooleanField,
-  tilt: BooleanField,
-  move: BooleanField,
-  tongue: BooleanField,
-  walk: BooleanField,
-  knurled: BooleanField,
-  capacitive: BooleanField,
-  screen: BooleanField,
-  paper: BooleanField,
-  burnHazard: BooleanField,
-  direction: {
-    type: String,
-    allowedValues: (Directions as any) as any[],
-    optional: true,
-  },
-  directionAxis: {
-    type: String,
-    allowedValues: (DirectionAxes as any) as any[],
-    optional: true,
-  },
-  pinchFingerGesture: BooleanField,
-  rotateTwoFingersGesture: BooleanField,
-  swipeFingerGesture: BooleanField,
-  swipeTwoFingersGesture: BooleanField,
-  swipeThreeFingersGesture: BooleanField,
-  dragAndDropGesture: BooleanField,
-  rhythm: BooleanField,
-  keypad: BooleanField,
-  keyboard: BooleanField,
-  mouse: BooleanField,
-  trackball: BooleanField,
-  pushSwitch: BooleanField,
-  pushButton: BooleanField,
+  speak: NecessityField,
+  morseCode: NecessityField,
+  signLanguage: NecessityField,
+  tactile: NecessityField,
+  haptic: NecessityField,
+  brailleText: NecessityField,
+  brailleKeyboard: NecessityField,
+  twoHanded: NecessityField,
+  singleHanded: NecessityField,
+  leftHanded: NecessityField,
+  rightHanded: NecessityField,
+  handwriting: NecessityField,
+  click: NecessityField,
+  doubleClick: NecessityField,
+  tripleClick: NecessityField,
+  tap: NecessityField,
+  tactileGuides: NecessityField,
+  touch: NecessityField,
+  drag: NecessityField,
+  press: NecessityField,
+  pinch: NecessityField,
+  clap: NecessityField,
+  wave: NecessityField,
+  squeeze: NecessityField,
+  rotate: NecessityField,
+  tilt: NecessityField,
+  move: NecessityField,
+  tongue: NecessityField,
+  walk: NecessityField,
+  knurled: NecessityField,
+  capacitive: NecessityField,
+  screen: NecessityField,
+  paper: NecessityField,
+  pinchFingerGesture: NecessityField,
+  rotateTwoFingersGesture: NecessityField,
+  swipeFingerGesture: NecessityField,
+  swipeTwoFingersGesture: NecessityField,
+  swipeThreeFingersGesture: NecessityField,
+  dragAndDropGesture: NecessityField,
+  rhythm: NecessityField,
+  keypad: NecessityField,
+  keyboard: NecessityField,
+  mouse: NecessityField,
+  trackball: NecessityField,
+  pushSwitch: NecessityField,
+  pushButton: NecessityField,
   stateCount: {
     type: Number,
     min: 1,
     optional: true,
   },
-  pedal: BooleanField,
-  pullSwitch: BooleanField,
-  pullstring: BooleanField,
-  touchscreen: BooleanField,
-  joystick: BooleanField,
-  sipAndPuff: BooleanField,
-  turn: BooleanField,
-  turnKnob: BooleanField,
-  tearApart: BooleanField,
-  lick: BooleanField,
-  smell: BooleanField,
-  scratch: BooleanField,
-  headPointer: BooleanField,
-  eyeTracker: BooleanField,
-  wheel: BooleanField,
-  wireless: BooleanField,
-  qrCode: BooleanField,
-  knob: BooleanField,
-  headphone: BooleanField,
-  cable: BooleanField,
-  phone: BooleanField,
-  photo: BooleanField,
-  video: BooleanField,
-  highContrast: BooleanField,
-  soundRecording: BooleanField,
-  faceRecognition: BooleanField,
-  fingerprintScan: BooleanField,
+  pedal: NecessityField,
+  pullSwitch: NecessityField,
+  pullstring: NecessityField,
+  touchscreen: NecessityField,
+  joystick: NecessityField,
+  sipAndPuff: NecessityField,
+  turn: NecessityField,
+  turnKnob: NecessityField,
+  tearApart: NecessityField,
+  lick: NecessityField,
+  smell: NecessityField,
+  scratch: NecessityField,
+  headPointer: NecessityField,
+  eyeTracker: NecessityField,
+  wheel: NecessityField,
+  wireless: NecessityField,
+  qrCode: NecessityField,
+  knob: NecessityField,
+  headphone: NecessityField,
+  cable: NecessityField,
+  phone: NecessityField,
+  photo: NecessityField,
+  video: NecessityField,
+  highContrast: NecessityField,
+  soundRecording: NecessityField,
+  faceRecognition: NecessityField,
+  fingerprintScan: NecessityField,
   irisScan: BooleanField,
   isEasyToUnderstand: BooleanField,
   isEasyToFind: BooleanField,
+  raisedText: NecessityField,
+  voiceActivation: NecessityField,
+  visualRecognition: NecessityField,
   educationLevel: {
     type: Number,
     optional: true,
     allowedValues: [0, 1, 2, 3, 4, 5, 6, 7, 8],
   },
+  burnHazard: BooleanField,
   ...getPrefixedQuantitySchemaDefinition('heightFromFloor', LengthSchema),
   ...getPrefixedQuantitySchemaDefinition('necessaryGripHeight', LengthSchema),
   ...getPrefixedQuantitySchemaDefinition('necessaryClimbHeight', LengthSchema),
@@ -722,9 +719,6 @@ export const getActionModeSchemaDefinition: () => SchemaDefinition = () => ({
   ...getPrefixedArraySchemaDefinition('techSufficient', getTechCombinationSchemaDefinition()),
   ...getPrefixedArraySchemaDefinition('techSupported', getTechCombinationSchemaDefinition()),
   ...getPrefixedSchemaDefinition('feedback', getPerceptionModeSchemaDefinition()),
-  raisedText: BooleanField,
-  voiceActivation: BooleanField,
-  visualRecognition: BooleanField,
   ...getPrefixedQuantitySchemaDefinition('attentionSpan', TimeIntervalSchema),
   access: {
     type: Array,

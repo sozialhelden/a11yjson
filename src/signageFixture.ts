@@ -21,10 +21,10 @@ const signageFixture: Signage = {
   highLegibility: true,
   fontHeight: { value: 1.5, unit: 'cm' },
   interactions: {
-    locateYourself: { action: { touchscreen: true }, perception: { screen: true } },
+    locateYourself: { action: { touchscreen: 'optional', brailleText: 'optional' }, perception: { screen: 'optional' } },
     useSitemap: {
-      action: { touchscreen: true },
-      perception: { screen: true },
+      action: { touchscreen: 'required' },
+      perception: { screen: 'required' },
     },
   },
 };

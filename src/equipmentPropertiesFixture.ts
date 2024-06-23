@@ -59,27 +59,27 @@ const equipmentPropertiesFixture: Complete<EquipmentProperties> = {
     selectFloor: {
       required: true,
       action: {
-        pushButton: true,
+        pushButton: 'required',
         activationForce: '0.1N',
         activationTimeInterval: '0.2s',
-        capacitive: true,
+        capacitive: 'required',
         feedback: {
-          hapticClick: true,
-          beep: true,
+          hapticClick: 'always',
+          beep: 'always',
         },
       },
     },
     arriveAtFloor: {
-      optional: true,
+      required: true,
       perception: {
-        speech: true,
+        speech: 'always',
       },
     },
     callEmergency: {},
     ride: {
       required: true,
       perception: {
-        vibration: true,
+        vibration: 'optional',
         acceleration: '1m/s^2',
       },
     },

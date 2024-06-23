@@ -59,6 +59,7 @@ const accessibilityFixture: Complete<Accessibility> = {
   appointmentPolicies: [appointmentPolicyFixture],
   availableEquipment: [],
   interactions: {
+    main: interactionModeFixture,
     arrive: interactionModeFixture,
     book: interactionModeFixture,
     buy: interactionModeFixture,

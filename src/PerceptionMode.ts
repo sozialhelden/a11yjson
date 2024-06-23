@@ -4,36 +4,12 @@ import htmlColorSchemaDefinition from './htmlColorSchemaDefinition.js';
 import IETFLanguageCodeSchemaKeyDefinition, { IETFLanguageTag } from './ietfLanguageTags.js';
 import { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition.js';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
+import { Necessity, NecessityField } from './Necessity.js';
 import {
-  Force,
-  Length,
-  getPrefixedQuantitySchemaDefinition,
-  Volume,
-  Hertz,
-  Brightness,
-  TimeInterval,
-  Acceleration,
-  Temperature,
-  LengthSchema,
-  VolumeSchema,
-  HertzSchema,
-  BrightnessSchema,
-  ForceSchema,
-  TimeIntervalSchema,
-  AccelerationSchema,
-  TemperatureSchema,
+  Acceleration, AccelerationSchema, Brightness, BrightnessSchema, Force, ForceSchema, getPrefixedQuantitySchemaDefinition, Hertz, HertzSchema, Length, LengthSchema, Temperature, TemperatureSchema, TimeInterval, TimeIntervalSchema, Volume, VolumeSchema,
 } from './Quantity.js';
 import { getTechCombinationSchemaDefinition, TechCombination } from './TechCombination.js';
-
-export const Urgencies = [
-  'alert',
-  'alarm',
-  'warning',
-  'info',
-  'debug',
-] as const;
-
-export type Urgency = typeof Urgencies[number];
+import { Urgencies, Urgency } from './Urgency.js';
 
 /**
  * Describes necessary abilities and modes for interpreting information output, signals, or
@@ -68,49 +44,49 @@ export interface PerceptionMode {
   required?: boolean;
 
   /**
-   * The ability to understand speech is supported or needed.
-   */
-  speech?: boolean;
-
-  /**
-   * The output is an activation/engagement signal.
-   */
-  activationSignal?: boolean;
-
-  /**
    * Urgency of the content when perceived.
    */
   urgency?: Urgency;
 
   /**
+   * The ability to understand speech is supported or needed.
+   */
+  speech?: Necessity;
+
+  /**
+   * The output is an activation/engagement signal.
+   */
+  activationSignal?: Necessity;
+
+  /**
    * The output is a light.
    */
-  light?: boolean;
+  light?: Necessity;
 
   /**
    * The output is rhythmic.
    */
-  rhythmic?: boolean;
+  rhythmic?: Necessity;
 
   /**
    * The ability to read is supported or needed.
    */
-  read?: boolean;
+  read?: Necessity;
 
   /**
    * The content/output/signal has active force feedback.
    */
-  forceFeedback?: boolean;
+  forceFeedback?: Necessity;
 
   /**
    * The content/output/signal has active vibration feedback.
    */
-  vibration?: boolean;
+  vibration?: Necessity;
 
   /**
    * The content/output/signal affects your full body.
    */
-  fullBody?: boolean;
+  fullBody?: Necessity;
 
   /**
    * The perceiving person uses a stethoscope.
@@ -129,82 +105,82 @@ export interface PerceptionMode {
    * - [Ärztezeitung](https://www.aerztezeitung.de/Medizin/Das-Stethoskop-als-Hoerhilfe-213950.html)
    * - [BMJ 2010;341:c4672](https://www.bmj.com/content/341/bmj.c4672?ijkey=66f0d96a9e9bca9e8d5b85b5f35ee0177d7e4239&keytype2=tf_ipsecsha)
    */
-  stethoscope?: boolean;
+  stethoscope?: Necessity;
 
   /**
    * The output is an LED.
    */
-  led?: boolean;
+  led?: Necessity;
 
   /**
    * The light looks like it is breathing.
    */
-  breathing?: boolean;
+  breathing?: Necessity;
 
   /**
    * The output has a haptic click feedback.
    */
-  hapticClick?: boolean;
+  hapticClick?: Necessity;
 
   /**
    * The output has an acoustic click feedback.
    */
-  audibleClick?: boolean;
+  audibleClick?: Necessity;
 
   /**
    * There is background music playing.
    */
-  backgroundMusic?: boolean;
+  backgroundMusic?: Necessity;
 
   /**
    * The output uses music.
    */
-  music?: boolean;
+  music?: Necessity;
 
   /**
    * The output uses one or more beeps as signal.
    */
-  beep?: boolean;
+  beep?: Necessity;
 
   /**
    * The output uses one or more bing-like signals.
    */
-  bing?: boolean;
+  bing?: Necessity;
 
   /**
    * The output uses a pitched tone as signal.
    */
-  pitchedTone?: boolean;
+  pitchedTone?: Necessity;
 
   /**
    * The output is visual.
    */
-  visual?: boolean;
+  visual?: Necessity;
 
   /**
    * The output is haptic.
    */
-  haptic?: boolean;
+  haptic?: Necessity;
 
   /**
    * The output is tactile.
    */
-  tactile?: boolean;
+  tactile?: Necessity;
 
   /**
    * The ability to smell is supported or needed.
    */
-  smell?: boolean;
+  smell?: Necessity;
 
   /**
    * Tasting something is supported or needed.
    */
-  taste?: boolean;
+  taste?: Necessity;
 
   /**
    * The output is acoustic.
    */
-  sound?: boolean;
+  sound?: Necessity;
 
   /**
    * `true` if the output is usually static and does not change over time, `false` if it is dynamic
@@ -216,32 +192,32 @@ export interface PerceptionMode {
    * The perceiving person uses a provisional hearing aid, e.g. a stethoscope, a smartphone, or a
    * headset with a microphone that amplifies the sound or speech.
    */
-  provisionalHearingAid?: boolean;
+  provisionalHearingAid?: Necessity;
 
   /**
    * The output has a dedicated screen for subtitles.
    */
-  dedicatedScreenForSubtitles?: boolean,
+  dedicatedScreenForSubtitles?: Necessity,
 
   /**
    * The output has subtitles.
    */
-  subtitles?: boolean;
+  subtitles?: Necessity;
 
   /**
    * The output has  audio description.
    */
-  audioDescription?: boolean;
+  audioDescription?: Necessity;
 
   /**
    * The output has realtime captioning.
    */
-  realTimeCaptioning?: boolean;
+  realTimeCaptioning?: Necessity;
 
   /**
    * The output has a plain language option.
    */
-  plainLanguageOption?: boolean;
+  plainLanguageOption?: Necessity;
 
   /**
    * Education level needed to understand the output.
@@ -263,12 +239,12 @@ export interface PerceptionMode {
   /**
    * The content is handwritten.
    */
-  handwritten?: boolean;
+  handwritten?: Necessity;
 
   /**
    * The output is a flashing light.
    */
-  flash?: boolean;
+  flash?: Necessity;
 
   /**
    * `true` if the output is a flashing hazard, `false` if there is explicitly no flashing hazard
@@ -279,67 +255,72 @@ export interface PerceptionMode {
   /**
    * The output uses morse code.
    */
-  morse?: boolean;
+  morse?: Necessity;
 
   /**
    * The output uses one or more pictograms.
    */
-  pictograms?: boolean;
+  pictograms?: Necessity;
 
   /**
    * The output uses one or more numbers.
    */
-  numbers?: boolean;
+  numbers?: Necessity;
 
   /**
    * The output is animated.
    */
-  animation?: boolean;
+  animation?: Necessity;
 
   /**
    * The ability to understand sign language is supported or needed.
    */
-  signLanguage?: boolean;
+  signLanguage?: Necessity;
 
   /**
    * The ability to read braille is supported or needed.
    */
-  braille?: boolean;
+  braille?: Necessity;
 
   /**
    * The output has tactile guides, for example around buttons.
    */
-  tactileGuides?: boolean;
+  tactileGuides?: Necessity;
+
+  /**
+   * The output is using a buzzer / paging device.
+   */
+  buzzer?: Necessity;
 
   /**
    * The output is displayed on a screen.
    */
-  screen?: boolean;
+  screen?: Necessity;
 
   /**
    * The output is displayed on a paper.
    */
-  paper?: boolean;
+  paper?: Necessity;
 
   /**
    * The output is from a printer.
    */
-  printer?: boolean;
+  printer?: Necessity;
 
   /**
    * Heat perception is supported or needed.
    */
-  heat?: boolean;
+  heat?: Necessity;
 
   /**
    * The output uses one or more charts.
    */
-  chart?: boolean;
+  chart?: Necessity;
 
   /**
    * The output is displayed in high contrast.
    */
-  highContrast?: boolean;
+  highContrast?: Necessity;
 
   /**
    * The height you need to grip to perceive the content/output/signal.
@@ -440,27 +421,27 @@ export interface PerceptionMode {
   /**
    * A QR code is supported or needed.
    */
-  qrCode?: boolean;
+  qrCode?: Necessity;
 
   /**
    * Headphones are supported or needed.
    */
-  headphone?: boolean;
+  headphone?: Necessity;
 
   /**
    * A cable is supported or needed.
    */
-  cable?: boolean;
+  cable?: Necessity;
 
   /**
    * A radio connection is supported or needed (e.g. WiFi, Bluetooth, NFC, etc.)
    */
-  radio?: boolean;
+  radio?: Necessity;
 
   /**
    * `true` if you can or have to perceive the content with a device that you own.
    */
-  byod?: boolean;
+  byod?: Necessity;
 
   /**
    * Technology combinations that are sufficient to make use of the content/output/signal.
@@ -501,7 +482,7 @@ export interface PerceptionMode {
   /**
    * The output needs high concentration to understand.
    */
-  needsHighConcentration?: boolean;
+  needsHighConcentration?: Necessity;
 
   /**
    * `true` if the system’s audio quality is good enough for understanding speech, `false` if it is
@@ -539,7 +520,6 @@ export const getPerceptionModeSchemaDefinition: () => SchemaDefinition = () => (
     allowedValues: [0, 1, 2, 3, 4, 5, 6, 7, 8],
   },
   ...getLocalizedStringSchemaDefinition('contentWarning'),
-  light: BooleanField,
   needsHighConcentration: BooleanField,
   ...getPrefixedQuantitySchemaDefinition('attentionSpan', TimeIntervalSchema),
   audioIsComprehensible: BooleanField,
@@ -552,64 +532,65 @@ export const getPerceptionModeSchemaDefinition: () => SchemaDefinition = () => (
     optional: true,
     allowedValues: (Urgencies as any) as string[],
   },
-  animation: BooleanField,
-  animationFramerate: BooleanField,
-  static: BooleanField,
-  byod: BooleanField,
+  light: NecessityField,
+  animation: NecessityField,
+  static: NecessityField,
+  byod: NecessityField,
   blackAndWhite: BooleanField,
-  braille: BooleanField,
-  breathing: BooleanField,
-  button: BooleanField,
-  cable: BooleanField,
-  radio: BooleanField,
-  chart: BooleanField,
-  colorCode: BooleanField,
+  braille: NecessityField,
+  breathing: NecessityField,
+  button: NecessityField,
+  cable: NecessityField,
+  radio: NecessityField,
+  chart: NecessityField,
+  colorCode: NecessityField,
   colorGradient: BooleanField,
-  flash: BooleanField,
+  flash: NecessityField,
   flashingHazard: BooleanField,
   fontSize: BooleanField,
-  forceFeedback: BooleanField,
-  handwritten: BooleanField,
-  hapticClick: BooleanField,
-  headphone: BooleanField,
+  forceFeedback: NecessityField,
+  handwritten: NecessityField,
+  hapticClick: NecessityField,
+  headphone: NecessityField,
   highContrast: BooleanField,
   isEasyToUnderstand: BooleanField,
   isEasyToFind: BooleanField,
-  dedicatedScreenForSubtitles: BooleanField,
-  subtitles: BooleanField,
-  audioDescription: BooleanField,
-  realTimeCaptioning: BooleanField,
-  plainLanguageOption: BooleanField,
-  led: BooleanField,
-  morse: BooleanField,
-  heat: BooleanField,
-  music: BooleanField,
-  backgroundMusic: BooleanField,
-  numbers: BooleanField,
-  pictograms: BooleanField,
-  audibleClick: BooleanField,
-  beep: BooleanField,
-  bing: BooleanField,
-  pitchedTone: BooleanField,
-  rhythmic: BooleanField,
-  qrCode: BooleanField,
-  read: BooleanField,
-  screen: BooleanField,
-  printer: BooleanField,
-  paper: BooleanField,
-  signLanguage: BooleanField,
-  sound: BooleanField,
-  smell: BooleanField,
-  taste: BooleanField,
-  haptic: BooleanField,
-  tactile: BooleanField,
-  visual: BooleanField,
-  speech: BooleanField,
-  tactileGuides: BooleanField,
-  vibration: BooleanField,
-  fullBody: BooleanField,
-  stethoscope: BooleanField,
-  provisionalHearingAid: BooleanField,
+  dedicatedScreenForSubtitles: NecessityField,
+  subtitles: NecessityField,
+  audioDescription: NecessityField,
+  realTimeCaptioning: NecessityField,
+  plainLanguageOption: NecessityField,
+  led: NecessityField,
+  morse: NecessityField,
+  heat: NecessityField,
+  music: NecessityField,
+  backgroundMusic: NecessityField,
+  numbers: NecessityField,
+  pictograms: NecessityField,
+  audibleClick: NecessityField,
+  beep: NecessityField,
+  bing: NecessityField,
+  pitchedTone: NecessityField,
+  rhythmic: NecessityField,
+  qrCode: NecessityField,
+  read: NecessityField,
+  screen: NecessityField,
+  buzzer: NecessityField,
+  printer: NecessityField,
+  paper: NecessityField,
+  signLanguage: NecessityField,
+  sound: NecessityField,
+  smell: NecessityField,
+  taste: NecessityField,
+  haptic: NecessityField,
+  tactile: NecessityField,
+  visual: NecessityField,
+  speech: NecessityField,
+  tactileGuides: NecessityField,
+  vibration: NecessityField,
+  fullBody: NecessityField,
+  stethoscope: NecessityField,
+  provisionalHearingAid: NecessityField,
   apiDocumentationUrl: {
     type: String,
     optional: true,

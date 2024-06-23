@@ -4,9 +4,8 @@ import BooleanField from './BooleanField.js';
 import { getGrabBarsSchemaDefinition, GrabBars } from './GrabBars.js';
 import htmlColorSchemaDefinition from './htmlColorSchemaDefinition.js';
 import { getInteractableSchemaDefinition, Interactable } from './Interactable.js';
-import { getInteractionModeSchemaDefinition } from './InteractionMode.js';
 import { getIntercomSchemaDefinition, Intercom } from './Intercom.js';
-import getPrefixedSchemaDefinition, { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinition.js';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
 import {
   ForceSchema,
   getPrefixedQuantitySchemaDefinition,

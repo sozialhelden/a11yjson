@@ -1,5 +1,5 @@
-import { Media } from './Media.js';
 import { Complete } from './Complete.js';
+import { Media } from './Media.js';
 
 const mediaFixture: Complete<Media> = {
   type: 'document',
@@ -25,13 +25,13 @@ const mediaFixture: Complete<Media> = {
   interactions: {
     read: {
       perception: {
-        visual: true,
+        visual: 'required',
         flashingHazard: false,
         fontSize: '>6mm',
       },
       action: {
-        touch: true,
-        keyboard: true,
+        touch: 'required',
+        keyboard: 'optional',
       },
     },
   },

@@ -7,7 +7,21 @@ import { getLocalizedStringSchemaDefinition, LocalizedString } from './Localized
 import { getPerceptionModeSchemaDefinition, PerceptionMode } from './PerceptionMode.js';
 
 /**
- * Describes how you can interact with a thing and which abilities you need to do so.
+ * Many people with disabilities face barriers when interacting with places or things. These stem
+ * from the physical environment, the design of the object, or the way the interaction with the
+ * object or place is designed.
+ *
+ * The `Interactable` model allows to describe how you can interact with a thing or engange in the
+ * key purposes of a place, and which abilities you need for this.
+ *
+ * Attributes typically contain
+ *
+ * - barriers
+ * - means of interaction
+ * - required and optional abilities, experiences, or senses
+ *
+ * This allows for UIs that adapt to the user's needs and abilities, or to provide usage
+ * descriptions that work for everyone.
  */
 export interface InteractionMode {
   /**

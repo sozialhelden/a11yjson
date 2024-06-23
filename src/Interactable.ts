@@ -5,9 +5,14 @@ import SimpleSchema, {
 } from '@sozialhelden/simpl-schema';
 import { getInteractionModeSchemaDefinition, InteractionMode } from './InteractionMode.js';
 
+/**
+ * Mixin to link {@link InteractionMode} objects to your model.
+ */
+
 export interface Interactable<InteractionType extends string> {
   /**
-   * An object that indicates how the object can be interacted with.
+   * An object that indicates how the object can be interacted with, or how you can engange in the
+   * main function of a place or thing.
    *
    * The keys of this object are the interaction types, and the values are {@link InteractionMode}
    * objects.

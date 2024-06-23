@@ -10,32 +10,32 @@ const washBasinFixture: Complete<WashBasin> = {
   interactions: {
     changeTemperature: {
       action: {
-        singleHanded: true,
+        singleHanded: 'possible',
         necessaryGripHeight: '80cm',
         burnHazard: true,
-        tactileGuides: true,
-        turnKnob: true,
+        tactileGuides: 'always',
+        turnKnob: 'required',
         directionAxis: 'axial',
       },
       perception: {
-        heat: true,
-        light: true,
+        heat: 'always',
+        light: 'always',
         temperature: { min: 20, max: 60, unit: 'degC' },
       },
     },
     changeWaterPressure: {
       action: {
-        singleHanded: true,
+        singleHanded: 'possible',
         necessaryGripHeight: '80cm',
-        turnKnob: true,
+        turnKnob: 'required',
         directionAxis: 'sagittal',
         feedback: {
           description: { en: 'The knob shows its position.' },
-          visual: true,
+          visual: 'always',
         },
       },
       perception: {
-        tactileGuides: true,
+        tactileGuides: 'always',
       },
     },
     useWater: {},
@@ -44,46 +44,47 @@ const washBasinFixture: Complete<WashBasin> = {
     getCarbonizedWater: {
       // This describes an actual fixture to be found in the Sozialhelden e.V. office.
       action: {
-        singleHanded: false,
-        twoHanded: true,
+        singleHanded: 'impossible',
+        twoHanded: 'possible',
         necessaryGripHeight: '100cm',
-        tactileGuides: true,
-        knurled: true,
-        knob: true,
-        turnKnob: true,
-        press: true,
+        tactileGuides: 'always',
+        knurled: 'always',
+        knob: 'always',
+        turnKnob: 'required',
+        press: 'required',
         direction: 'down',
         isEasyToUnderstand: false,
       },
       perception: {
-        tactileGuides: true,
+        tactileGuides: 'always',
       },
     },
     useWaterJet: {},
     useWaterSpray: {},
     useSoap: {
       action: {
-        singleHanded: true,
+        singleHanded: 'possible',
         necessaryGripHeight: '120cm',
       },
       perception: {
-        smell: true,
-        visual: true,
+        smell: 'always',
+        visual: 'always',
+        isEasyToFind: true,
       },
     },
     getTowel: {
       action: {
-        singleHanded: true,
+        singleHanded: 'possible',
         necessaryGripHeight: '120cm',
       },
       perception: {
-        visual: true,
+        visual: 'always',
         isEasyToFind: true,
       },
     },
     getPaperTowel: {
       action: {
-        singleHanded: true,
+        singleHanded: 'possible',
         necessaryGripHeight: '120cm',
       },
       perception: {
@@ -92,7 +93,7 @@ const washBasinFixture: Complete<WashBasin> = {
     },
     useAirDryer: {
       action: {
-        singleHanded: true,
+        singleHanded: 'possible',
         necessaryGripHeight: '80cm',
       },
       perception: {
@@ -101,9 +102,9 @@ const washBasinFixture: Complete<WashBasin> = {
     },
     sanitizeHands: {
       action: {
-        singleHanded: true,
+        singleHanded: 'possible',
         necessaryGripHeight: '120cm',
-        press: true,
+        press: 'required',
         activationForce: { value: 10, unit: 'N' },
       },
       perception: {

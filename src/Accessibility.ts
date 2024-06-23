@@ -51,6 +51,7 @@ export const WheelchairAccessibilityGrades = [
 export type WheelchairAccessibilityGrade = typeof WheelchairAccessibilityGrades[number];
 
 export const GenericInteractions = [
+  'main',
   'watchMovies',
   'watchPlays',
   'explore',
@@ -62,9 +63,13 @@ export const GenericInteractions = [
   'see',
   'listen',
   'getFood',
+  'getDrinks',
   'getTreatment',
   'getService',
   'eat',
+  'order',
+  'orderAnnouncement',
+  'pickUpOrder',
   'pay',
   'buy',
   'sell',
@@ -134,7 +139,7 @@ export interface Accessibility extends Interactable<GenericInteraction> {
 
   /**
    * Ambient noise level in dB(A) relative to a reference pressure of 0.00002 Pa. Median over a
-   * 10-second period at least.
+* 10-second period at least.
    */
   ambientNoiseLevel?: Volume;
 
