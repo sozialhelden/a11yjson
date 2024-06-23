@@ -3,7 +3,8 @@
   // The following will hide the js and map files in the editor
   "files.exclude": {
     // "**/node_modules": true,
-    "**/build": true
+    "**/build": true,
+    "**/dist": true,
   },
   "editor.tabSize": 2,
   // ensure that a matching typescript version is used
