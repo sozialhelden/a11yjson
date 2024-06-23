@@ -4,6 +4,7 @@ export const Necessities = [
   'optional',
   'always',
   'sometimes',
+  'usually',
   'required',
   'possible',
   'impossible',
