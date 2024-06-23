@@ -317,12 +317,12 @@ export interface ActionMode {
   /**
    * The input has a knurled surface, for example around buttons.
    */
-  knurled?: Necessity;
+  knurled?: boolean;
 
   /**
    * The input has high contrast elements, for example around buttons.
    */
-  highContrast?: Necessity;
+  highContrast?: boolean;
 
   /**
    * Touchscreen input is supported or needed.
@@ -646,7 +646,7 @@ export const getActionModeSchemaDefinition: () => SchemaDefinition = () => ({
   move: NecessityField,
   tongue: NecessityField,
   walk: NecessityField,
-  knurled: NecessityField,
+  knurled: BooleanField,
   capacitive: NecessityField,
   screen: NecessityField,
   paper: NecessityField,
@@ -676,6 +676,16 @@ export const getActionModeSchemaDefinition: () => SchemaDefinition = () => ({
   sipAndPuff: NecessityField,
   turn: NecessityField,
   turnKnob: NecessityField,
+  direction: {
+    type: String,
+    allowedValues: (Directions as any) as string[],
+    optional: true,
+  },
+  directionAxis: {
+    type: String,
+    allowedValues: (DirectionAxes as any) as string[],
+    optional: true,
+  },
   tearApart: NecessityField,
   lick: NecessityField,
   smell: NecessityField,
@@ -691,22 +701,23 @@ export const getActionModeSchemaDefinition: () => SchemaDefinition = () => ({
   phone: NecessityField,
   photo: NecessityField,
   video: NecessityField,
-  highContrast: NecessityField,
   soundRecording: NecessityField,
   faceRecognition: NecessityField,
   fingerprintScan: NecessityField,
-  irisScan: BooleanField,
-  isEasyToUnderstand: BooleanField,
-  isEasyToFind: BooleanField,
+  irisScan: NecessityField,
   raisedText: NecessityField,
   voiceActivation: NecessityField,
   visualRecognition: NecessityField,
+  carryWeight: NecessityField,
+  highContrast: BooleanField,
+  isEasyToUnderstand: BooleanField,
+  isEasyToFind: BooleanField,
+  burnHazard: BooleanField,
   educationLevel: {
     type: Number,
     optional: true,
     allowedValues: [0, 1, 2, 3, 4, 5, 6, 7, 8],
   },
-  burnHazard: BooleanField,
   ...getPrefixedQuantitySchemaDefinition('heightFromFloor', LengthSchema),
   ...getPrefixedQuantitySchemaDefinition('necessaryGripHeight', LengthSchema),
   ...getPrefixedQuantitySchemaDefinition('necessaryClimbHeight', LengthSchema),

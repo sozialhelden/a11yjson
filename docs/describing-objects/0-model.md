@@ -13,7 +13,7 @@ them as they are, or mix them into your own model.
 
 ### <a id="Accessibility">Accessibility</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L92)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L93)</span>
 
   <p>Describes the physical (and sometimes human rated) accessibility of a place.</p>
 
@@ -32,6 +32,7 @@ but belongs to a place.</p>
 <code>null</code> indicates there are no desks, <code>undefined</code> or missing property indicates unknown.</p>
 </td></tr><tr><td class="property-name">entrances</td><td class="property-type"><code>undefined</code>&nbsp;|&nbsp;<a href="#Entrance">Entrance</a>[]</td><td class="property-docs"><p>Describes the accessibility of entrances to the place.</p>
 </td></tr><tr><td class="property-name">hasAirConditioning</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>Determines if there is air conditioning installed and actively used.</p>
+</td></tr><tr><td class="property-name">hasBackgroundMusic</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>Determines if there is background music playing.</p>
 </td></tr><tr><td class="property-name">hasBrailleSignage</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if there is braille navigation for/to this place, <code>false</code> if not.</p>
 </td></tr><tr><td class="property-name">hasInductionLoop</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the venue has induction loops installed in its functional units where this is
 relevant.</p>
@@ -75,6 +76,8 @@ Object with one or more of these keys:
 <code>main</code>
 
 <code>order</code>
+
+<code>orderAnnouncement</code>
 
 <code>pay</code>
 
@@ -246,7 +249,11 @@ you can create multiple places and nest them.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to write textual content with a braille keyboard is supported or needed.</p>
 </td></tr><tr><td class="property-name">brailleText</td><td class="property-type">One of the following strings:
@@ -274,7 +281,11 @@ you can create multiple places and nest them.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to read braille is supported or needed.</p>
 </td></tr><tr><td class="property-name">burnHazard</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>There is a burn hazard.</p>
@@ -303,7 +314,11 @@ you can create multiple places and nest them.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>A cable is supported or needed.</p>
 </td></tr><tr><td class="property-name">capacitive</td><td class="property-type">One of the following strings:
@@ -331,7 +346,11 @@ you can create multiple places and nest them.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The action uses a capacity sensor, for example a touch sensor.</p>
 </td></tr><tr><td class="property-name">carryWeight</td><td class="property-type">One of the following strings:
@@ -359,7 +378,11 @@ you can create multiple places and nest them.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to carry a weight is supported or needed.</p>
 </td></tr><tr><td class="property-name">clap</td><td class="property-type">One of the following strings:
@@ -387,7 +410,11 @@ you can create multiple places and nest them.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>Clapping your hands is supported or needed.</p>
 </td></tr><tr><td class="property-name">click</td><td class="property-type">One of the following strings:
@@ -415,7 +442,11 @@ you can create multiple places and nest them.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to click a button with a finger is supported or needed.</p>
 </td></tr><tr><td class="property-name">description</td><td class="property-type"><a href="../i18n">LocalizedString</a></td><td class="property-docs"><p>Describes the output as human-readable text.</p>
@@ -474,7 +505,11 @@ you can create multiple places and nest them.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to click a button with a finger is supported or needed.</p>
 </td></tr><tr><td class="property-name">drag</td><td class="property-type">One of the following strings:
@@ -502,7 +537,11 @@ you can create multiple places and nest them.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to drag an object is supported or needed.</p>
 </td></tr><tr><td class="property-name">dragAndDropGesture</td><td class="property-type">One of the following strings:
@@ -530,7 +569,11 @@ you can create multiple places and nest them.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to do a virtual drag-and-drop finger/mouse gesture is supported or needed.</p>
 </td></tr><tr><td class="property-name">educationLevel</td><td class="property-type"><a href="#Number">Number</a></td><td class="property-docs"><p>Education level needed to understand the action.</p>
@@ -571,7 +614,11 @@ you can create multiple places and nest them.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to use an eye tracker is supported or needed.</p>
 </td></tr><tr><td class="property-name">faceRecognition</td><td class="property-type">One of the following strings:
@@ -599,7 +646,11 @@ you can create multiple places and nest them.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The input uses face recognition.</p>
 </td></tr><tr><td class="property-name">feedback</td><td class="property-type"><a href="#PerceptionMode">PerceptionMode</a></td><td class="property-docs"><p>How is feedback given for an input?</p>
@@ -628,7 +679,11 @@ you can create multiple places and nest them.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The input uses a fingerprint scanner.</p>
 </td></tr><tr><td class="property-name">handwriting</td><td class="property-type">One of the following strings:
@@ -656,7 +711,11 @@ you can create multiple places and nest them.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to write textual content by hand is supported or needed.</p>
 </td></tr><tr><td class="property-name">haptic</td><td class="property-type">One of the following strings:
@@ -684,7 +743,11 @@ you can create multiple places and nest them.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>Haptic input is supported or needed.</p>
 </td></tr><tr><td class="property-name">headPointer</td><td class="property-type">One of the following strings:
@@ -712,7 +775,11 @@ you can create multiple places and nest them.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to use a head pointer is supported or needed.</p>
 </td></tr><tr><td class="property-name">headphone</td><td class="property-type">One of the following strings:
@@ -740,7 +807,11 @@ you can create multiple places and nest them.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>Headphones are supported or needed.</p>
 </td></tr><tr><td class="property-name">highContrast</td><td class="property-type">One of the following strings:
@@ -768,7 +839,11 @@ you can create multiple places and nest them.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The input has high contrast elements, for example around buttons.</p>
 </td></tr><tr><td class="property-name">instructionsUrl</td><td class="property-type"><a href="../i18n">LocalizedString</a></td><td class="property-docs"><p>URL describing how to use the input mechanism.</p>
@@ -797,7 +872,11 @@ you can create multiple places and nest them.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The input uses an iris scanner.</p>
 </td></tr><tr><td class="property-name">isEasyToFind</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the item is easy to find, <code>false</code> if people might face difficulties trying to
@@ -829,7 +908,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to use a joystick is supported or needed.</p>
 </td></tr><tr><td class="property-name">keyboard</td><td class="property-type">One of the following strings:
@@ -857,7 +940,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to write textual content by typing on a keyboard is supported or needed.</p>
 </td></tr><tr><td class="property-name">keypad</td><td class="property-type">One of the following strings:
@@ -885,7 +972,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to write numbers by typing on a keypad is supported or needed.</p>
 </td></tr><tr><td class="property-name">knob</td><td class="property-type">One of the following strings:
@@ -913,7 +1004,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The action uses a knob.</p>
 </td></tr><tr><td class="property-name">knurled</td><td class="property-type">One of the following strings:
@@ -941,7 +1036,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The input has a knurled surface, for example around buttons.</p>
 </td></tr><tr><td class="property-name">languages</td><td class="property-type"><code>string</code>[]</td><td class="property-docs"><p>Input languages supported.</p>
@@ -970,7 +1069,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>You can or must give input with your left hand.</p>
 </td></tr><tr><td class="property-name">lick</td><td class="property-type">One of the following strings:
@@ -998,7 +1101,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to lick an object with your tongue is supported or needed (e.g. a lollipop)</p>
 </td></tr><tr><td class="property-name">morseCode</td><td class="property-type">One of the following strings:
@@ -1026,7 +1133,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>Morse code input is supported or needed.</p>
 </td></tr><tr><td class="property-name">mouse</td><td class="property-type">One of the following strings:
@@ -1054,7 +1165,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to use a mouse is supported or needed.</p>
 </td></tr><tr><td class="property-name">move</td><td class="property-type">One of the following strings:
@@ -1082,7 +1197,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to move an object is supported or needed.</p>
 </td></tr><tr><td class="property-name">name</td><td class="property-type"><a href="../i18n">LocalizedString</a></td><td class="property-docs"><p>Describes which output is meant. Helpful if there are multiple outputs.</p>
@@ -1115,7 +1234,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>Handling paper is supported or needed.</p>
 </td></tr><tr><td class="property-name">pedal</td><td class="property-type">One of the following strings:
@@ -1143,7 +1266,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to use a pedal is supported or needed.</p>
 </td></tr><tr><td class="property-name">photo</td><td class="property-type">One of the following strings:
@@ -1171,7 +1298,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The input makes a photo.</p>
 </td></tr><tr><td class="property-name">pinch</td><td class="property-type">One of the following strings:
@@ -1199,7 +1330,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to pinch an object is supported or needed.</p>
 </td></tr><tr><td class="property-name">pinchFingerGesture</td><td class="property-type">One of the following strings:
@@ -1227,7 +1362,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to use a pinch finger gesture is supported or needed.</p>
 </td></tr><tr><td class="property-name">press</td><td class="property-type">One of the following strings:
@@ -1255,7 +1394,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to apply force to an object is supported or needed.</p>
 </td></tr><tr><td class="property-name">pullSwitch</td><td class="property-type">One of the following strings:
@@ -1283,7 +1426,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to use a pull switch is supported or needed.</p>
 </td></tr><tr><td class="property-name">pullstring</td><td class="property-type">One of the following strings:
@@ -1311,7 +1458,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to use a pullstring is supported or needed.</p>
 </td></tr><tr><td class="property-name">pushButton</td><td class="property-type">One of the following strings:
@@ -1339,7 +1490,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to use a push button is supported or needed.</p>
 </td></tr><tr><td class="property-name">pushSwitch</td><td class="property-type">One of the following strings:
@@ -1367,7 +1522,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to use a push switch is supported or needed.</p>
 </td></tr><tr><td class="property-name">qrCode</td><td class="property-type">One of the following strings:
@@ -1395,7 +1554,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>A QR code is supported or needed.</p>
 </td></tr><tr><td class="property-name">raisedText</td><td class="property-type">One of the following strings:
@@ -1423,7 +1586,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p><code>true</code> if the controls or signs have raised letters, <code>false</code> if not.</p>
 </td></tr><tr><td class="property-name">required</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>false</code> if the action is optional, <code>true</code> if it is required.</p>
@@ -1452,7 +1619,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to use rhythm input is supported or needed.</p>
 </td></tr><tr><td class="property-name">rightHanded</td><td class="property-type">One of the following strings:
@@ -1480,7 +1651,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>You can or must give input with your right hand.</p>
 </td></tr><tr><td class="property-name">rotate</td><td class="property-type">One of the following strings:
@@ -1508,7 +1683,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to rotate an object is supported or needed.</p>
 </td></tr><tr><td class="property-name">rotateTwoFingersGesture</td><td class="property-type">One of the following strings:
@@ -1536,7 +1715,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to use a two-finger rotation gesture is supported or needed.</p>
 </td></tr><tr><td class="property-name">scratch</td><td class="property-type">One of the following strings:
@@ -1564,7 +1747,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to scratch is supported or needed.</p>
 </td></tr><tr><td class="property-name">screen</td><td class="property-type">One of the following strings:
@@ -1592,7 +1779,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>A screen is supported or needed.</p>
 </td></tr><tr><td class="property-name">signLanguage</td><td class="property-type">One of the following strings:
@@ -1620,7 +1811,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to use sign language is supported or needed.</p>
 </td></tr><tr><td class="property-name">singleHanded</td><td class="property-type">One of the following strings:
@@ -1648,7 +1843,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>You can or must give input with one hand.</p>
 </td></tr><tr><td class="property-name">sipAndPuff</td><td class="property-type">One of the following strings:
@@ -1676,7 +1875,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to use a sip and puff switch is supported or needed.</p>
 </td></tr><tr><td class="property-name">smell</td><td class="property-type">One of the following strings:
@@ -1704,7 +1907,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to smell is supported or needed.</p>
 </td></tr><tr><td class="property-name">soundRecording</td><td class="property-type">One of the following strings:
@@ -1732,7 +1939,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The input makes a sound recording.</p>
 </td></tr><tr><td class="property-name">speak</td><td class="property-type">One of the following strings:
@@ -1760,7 +1971,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to speak is supported or needed.</p>
 </td></tr><tr><td class="property-name">squeeze</td><td class="property-type">One of the following strings:
@@ -1788,7 +2003,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to squeeze an object is supported or needed.</p>
 </td></tr><tr><td class="property-name">stateCount</td><td class="property-type"><code>number</code></td><td class="property-docs"><p>State count for a button or switch, for example 2 for a toggle button, 3 for a 3-way button.</p>
@@ -1817,7 +2036,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to use a swipe finger gesture is supported or needed.</p>
 </td></tr><tr><td class="property-name">swipeThreeFingersGesture</td><td class="property-type">One of the following strings:
@@ -1845,7 +2068,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to use a three-finger swipe gesture is supported or needed.</p>
 </td></tr><tr><td class="property-name">swipeTwoFingersGesture</td><td class="property-type">One of the following strings:
@@ -1873,7 +2100,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to use a three-finger swipe gesture is supported or needed.</p>
 </td></tr><tr><td class="property-name">tactile</td><td class="property-type">One of the following strings:
@@ -1901,7 +2132,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>Tactile input is supported or needed.</p>
 </td></tr><tr><td class="property-name">tactileGuides</td><td class="property-type">One of the following strings:
@@ -1929,7 +2164,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The input has tactile guides, for example around buttons.</p>
 </td></tr><tr><td class="property-name">tap</td><td class="property-type">One of the following strings:
@@ -1957,7 +2196,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to tap an element with a finger is supported or needed.</p>
 </td></tr><tr><td class="property-name">tearApart</td><td class="property-type">One of the following strings:
@@ -1985,7 +2228,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to tear something apart is supported or needed.</p>
 </td></tr><tr><td class="property-name">techSufficient</td><td class="property-type"><a href="#TechCombination">TechCombination</a>[]</td><td class="property-docs"><p>Technology combinations that are sufficient to make use of the output.</p>
@@ -2015,7 +2262,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to tilt an object is supported or needed.</p>
 </td></tr><tr><td class="property-name">tongue</td><td class="property-type">One of the following strings:
@@ -2043,7 +2294,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to move an object with your tongue is supported or needed.</p>
 </td></tr><tr><td class="property-name">touch</td><td class="property-type">One of the following strings:
@@ -2071,7 +2326,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>Touch input is supported or needed.</p>
 </td></tr><tr><td class="property-name">touchscreen</td><td class="property-type">One of the following strings:
@@ -2099,7 +2358,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>Touchscreen input is supported or needed.</p>
 </td></tr><tr><td class="property-name">trackball</td><td class="property-type">One of the following strings:
@@ -2127,7 +2390,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to use a trackball is supported or needed.</p>
 </td></tr><tr><td class="property-name">tripleClick</td><td class="property-type">One of the following strings:
@@ -2155,7 +2422,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to click a button with a finger is supported or needed.</p>
 </td></tr><tr><td class="property-name">turn</td><td class="property-type">One of the following strings:
@@ -2183,7 +2454,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to turn an object is supported or needed.</p>
 </td></tr><tr><td class="property-name">turnKnob</td><td class="property-type">One of the following strings:
@@ -2211,7 +2486,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to turn a knob is supported or needed.</p>
 </td></tr><tr><td class="property-name">twoHanded</td><td class="property-type">One of the following strings:
@@ -2239,7 +2518,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>You can or must give input with both hands.</p>
 </td></tr><tr><td class="property-name">url</td><td class="property-type"><a href="../i18n">LocalizedString</a></td><td class="property-docs"><p>URL where you can use the input mechanism, e.g. on your phone.</p>
@@ -2268,7 +2551,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The input makes a video.</p>
 </td></tr><tr><td class="property-name">visualRecognition</td><td class="property-type">One of the following strings:
@@ -2296,7 +2583,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p><code>true</code> if the input user interface needs or supports visual input, <code>false</code> if not.</p>
 </td></tr><tr><td class="property-name">voiceActivation</td><td class="property-type">One of the following strings:
@@ -2324,7 +2615,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p><code>true</code> if the control is activated by voice, <code>false</code> if not.</p>
 </td></tr><tr><td class="property-name">walk</td><td class="property-type">One of the following strings:
@@ -2352,7 +2647,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>Walking is supported or needed.</p>
 </td></tr><tr><td class="property-name">wave</td><td class="property-type">One of the following strings:
@@ -2380,7 +2679,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>Waving your hands is supported or needed.</p>
 </td></tr><tr><td class="property-name">weight</td><td class="property-type"><a href="#Mass">Mass</a></td><td class="property-docs"><p>A weight you need to be able to lift.</p>
@@ -2409,7 +2712,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The input features a wheel.</p>
 </td></tr><tr><td class="property-name">wireless</td><td class="property-type">One of the following strings:
@@ -2437,7 +2744,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The input is wireless.</p>
 </td></tr></table>
@@ -2551,6 +2862,8 @@ Object with one or more of these keys:
 <code>main</code>
 
 <code>order</code>
+
+<code>orderAnnouncement</code>
 
 <code>pay</code>
 
@@ -3555,7 +3868,11 @@ content.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output is an activation/engagement signal.</p>
 </td></tr><tr><td class="property-name">ambientNoiseLevel</td><td class="property-type"><a href="#Volume">Volume</a></td><td class="property-docs"><p>Ambient noise level in dB(A) relative to a reference pressure of 0.00002 Pa. Median over a
@@ -3586,7 +3903,11 @@ content.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output is animated.</p>
 </td></tr><tr><td class="property-name">apiDocumentationUrl</td><td class="property-type"><code>string</code></td><td class="property-docs"><p>The input API documentation URL.</p>
@@ -3616,7 +3937,11 @@ content.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output has an acoustic click feedback.</p>
 </td></tr><tr><td class="property-name">audioDescription</td><td class="property-type">One of the following strings:
@@ -3644,7 +3969,11 @@ content.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output has  audio description.</p>
 </td></tr><tr><td class="property-name">audioIsComprehensible</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the system’s audio quality is good enough for understanding speech, <code>false</code> if it is
@@ -3675,7 +4004,11 @@ difficult.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>There is background music playing.</p>
 </td></tr><tr><td class="property-name">beep</td><td class="property-type">One of the following strings:
@@ -3703,7 +4036,11 @@ difficult.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output uses one or more beeps as signal.</p>
 </td></tr><tr><td class="property-name">bing</td><td class="property-type">One of the following strings:
@@ -3731,7 +4068,11 @@ difficult.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output uses one or more bing-like signals.</p>
 </td></tr><tr><td class="property-name">blackAndWhite</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>The output uses black and white colors.</p>
@@ -3760,7 +4101,11 @@ difficult.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to read braille is supported or needed.</p>
 </td></tr><tr><td class="property-name">breathing</td><td class="property-type">One of the following strings:
@@ -3788,7 +4133,11 @@ difficult.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The light looks like it is breathing.</p>
 </td></tr><tr><td class="property-name">brightness</td><td class="property-type"><a href="#Brightness">Brightness</a></td><td class="property-docs"><p>The output&#39;s brightness.</p>
@@ -3817,7 +4166,11 @@ difficult.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output is using a buzzer / paging device.</p>
 </td></tr><tr><td class="property-name">byod</td><td class="property-type">One of the following strings:
@@ -3845,7 +4198,11 @@ difficult.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p><code>true</code> if you can or have to perceive the content with a device that you own.</p>
 </td></tr><tr><td class="property-name">cable</td><td class="property-type">One of the following strings:
@@ -3873,7 +4230,11 @@ difficult.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>A cable is supported or needed.</p>
 </td></tr><tr><td class="property-name">chart</td><td class="property-type">One of the following strings:
@@ -3901,7 +4262,11 @@ difficult.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output uses one or more charts.</p>
 </td></tr><tr><td class="property-name">colorCode</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>The output uses a discrete color code.</p>
@@ -3933,7 +4298,11 @@ content warning directly, but should instead show a button to show the content w
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output has a dedicated screen for subtitles.</p>
 </td></tr><tr><td class="property-name">description</td><td class="property-type"><a href="../i18n">LocalizedString</a></td><td class="property-docs"><p>Describes the content/output/signal as human-readable text.</p>
@@ -3976,7 +4345,11 @@ content warning directly, but should instead show a button to show the content w
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output is a flashing light.</p>
 </td></tr><tr><td class="property-name">flashingHazard</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the output is a flashing hazard, <code>false</code> if there is explicitly no flashing hazard
@@ -4008,7 +4381,11 @@ and someone / something ensures this. This can be relevant for people with epile
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The content/output/signal has active force feedback.</p>
 </td></tr><tr><td class="property-name">foregroundColors</td><td class="property-type"><code>string</code>[]</td><td class="property-docs"><p>Foreground output HTML colors (for example, the text or icon color).</p>
@@ -4039,7 +4416,11 @@ and someone / something ensures this. This can be relevant for people with epile
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The content/output/signal affects your full body.</p>
 </td></tr><tr><td class="property-name">handwritten</td><td class="property-type">One of the following strings:
@@ -4067,7 +4448,11 @@ and someone / something ensures this. This can be relevant for people with epile
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The content is handwritten.</p>
 </td></tr><tr><td class="property-name">haptic</td><td class="property-type">One of the following strings:
@@ -4095,7 +4480,11 @@ and someone / something ensures this. This can be relevant for people with epile
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output is haptic.</p>
 </td></tr><tr><td class="property-name">hapticClick</td><td class="property-type">One of the following strings:
@@ -4123,7 +4512,11 @@ and someone / something ensures this. This can be relevant for people with epile
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output has a haptic click feedback.</p>
 </td></tr><tr><td class="property-name">headphone</td><td class="property-type">One of the following strings:
@@ -4151,7 +4544,11 @@ and someone / something ensures this. This can be relevant for people with epile
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>Headphones are supported or needed.</p>
 </td></tr><tr><td class="property-name">heat</td><td class="property-type">One of the following strings:
@@ -4179,7 +4576,11 @@ and someone / something ensures this. This can be relevant for people with epile
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>Heat perception is supported or needed.</p>
 </td></tr><tr><td class="property-name">highContrast</td><td class="property-type">One of the following strings:
@@ -4207,7 +4608,11 @@ and someone / something ensures this. This can be relevant for people with epile
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output is displayed in high contrast.</p>
 </td></tr><tr><td class="property-name">instructionsUrl</td><td class="property-type"><a href="../i18n">LocalizedString</a></td><td class="property-docs"><p>URL describing how to make use of the content/output/signal.</p>
@@ -4240,7 +4645,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output is an LED.</p>
 </td></tr><tr><td class="property-name">light</td><td class="property-type">One of the following strings:
@@ -4268,7 +4677,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output is a light.</p>
 </td></tr><tr><td class="property-name">morse</td><td class="property-type">One of the following strings:
@@ -4296,7 +4709,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output uses morse code.</p>
 </td></tr><tr><td class="property-name">music</td><td class="property-type">One of the following strings:
@@ -4324,7 +4741,11 @@ understand how the input works, or <code>undefined</code> if this is unknown or 
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output uses music.</p>
 </td></tr><tr><td class="property-name">name</td><td class="property-type"><a href="../i18n">LocalizedString</a></td><td class="property-docs"><p>Describes which output is meant. Helpful if there are multiple signals/outputs/content
@@ -4356,7 +4777,11 @@ lements.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output needs high concentration to understand.</p>
 </td></tr><tr><td class="property-name">numbers</td><td class="property-type">One of the following strings:
@@ -4384,7 +4809,11 @@ lements.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output uses one or more numbers.</p>
 </td></tr><tr><td class="property-name">optional</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the perception is optional, <code>false</code> if it is required.</p>
@@ -4413,7 +4842,11 @@ lements.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output is displayed on a paper.</p>
 </td></tr><tr><td class="property-name">pictograms</td><td class="property-type">One of the following strings:
@@ -4441,7 +4874,11 @@ lements.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output uses one or more pictograms.</p>
 </td></tr><tr><td class="property-name">pitchedTone</td><td class="property-type">One of the following strings:
@@ -4469,7 +4906,11 @@ lements.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output uses a pitched tone as signal.</p>
 </td></tr><tr><td class="property-name">plainLanguageOption</td><td class="property-type">One of the following strings:
@@ -4497,7 +4938,11 @@ lements.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output has a plain language option.</p>
 </td></tr><tr><td class="property-name">printer</td><td class="property-type">One of the following strings:
@@ -4525,7 +4970,11 @@ lements.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output is from a printer.</p>
 </td></tr><tr><td class="property-name">provisionalHearingAid</td><td class="property-type">One of the following strings:
@@ -4553,7 +5002,11 @@ lements.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The perceiving person uses a provisional hearing aid, e.g. a stethoscope, a smartphone, or a
 headset with a microphone that amplifies the sound or speech.</p>
@@ -4582,7 +5035,11 @@ headset with a microphone that amplifies the sound or speech.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>A QR code is supported or needed.</p>
 </td></tr><tr><td class="property-name">radio</td><td class="property-type">One of the following strings:
@@ -4610,7 +5067,11 @@ headset with a microphone that amplifies the sound or speech.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>A radio connection is supported or needed (e.g. WiFi, Bluetooth, NFC, etc.)</p>
 </td></tr><tr><td class="property-name">read</td><td class="property-type">One of the following strings:
@@ -4638,7 +5099,11 @@ headset with a microphone that amplifies the sound or speech.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to read is supported or needed.</p>
 </td></tr><tr><td class="property-name">realTimeCaptioning</td><td class="property-type">One of the following strings:
@@ -4666,7 +5131,11 @@ headset with a microphone that amplifies the sound or speech.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output has realtime captioning.</p>
 </td></tr><tr><td class="property-name">required</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>false</code> if the perception is required to make use of the main function of the described
@@ -4696,7 +5165,11 @@ object, <code>true</code> if it is required.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output is rhythmic.</p>
 </td></tr><tr><td class="property-name">screen</td><td class="property-type">One of the following strings:
@@ -4724,7 +5197,11 @@ object, <code>true</code> if it is required.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output is displayed on a screen.</p>
 </td></tr><tr><td class="property-name">signLanguage</td><td class="property-type">One of the following strings:
@@ -4752,7 +5229,11 @@ object, <code>true</code> if it is required.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to understand sign language is supported or needed.</p>
 </td></tr><tr><td class="property-name">smell</td><td class="property-type">One of the following strings:
@@ -4780,7 +5261,11 @@ object, <code>true</code> if it is required.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to smell is supported or needed.</p>
 </td></tr><tr><td class="property-name">sound</td><td class="property-type">One of the following strings:
@@ -4808,7 +5293,11 @@ object, <code>true</code> if it is required.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output is acoustic.</p>
 </td></tr><tr><td class="property-name">soundVolume</td><td class="property-type"><a href="#Volume">Volume</a></td><td class="property-docs"><p>The content/output/signal has active vibration feedback.</p>
@@ -4837,7 +5326,11 @@ object, <code>true</code> if it is required.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The ability to understand speech is supported or needed.</p>
 </td></tr><tr><td class="property-name">static</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the output is usually static and does not change over time, <code>false</code> if it is dynamic
@@ -4867,7 +5360,11 @@ and changes over time.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The perceiving person uses a stethoscope.</p>
 <p>This is method for patient communication that is used by doctors to speak to patients with
@@ -4909,7 +5406,11 @@ can be preserved by this simple means.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output has subtitles.</p>
 </td></tr><tr><td class="property-name">tactile</td><td class="property-type">One of the following strings:
@@ -4937,7 +5438,11 @@ can be preserved by this simple means.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output is tactile.</p>
 </td></tr><tr><td class="property-name">tactileGuides</td><td class="property-type">One of the following strings:
@@ -4965,7 +5470,11 @@ can be preserved by this simple means.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output has tactile guides, for example around buttons.</p>
 </td></tr><tr><td class="property-name">taste</td><td class="property-type">One of the following strings:
@@ -4993,7 +5502,11 @@ can be preserved by this simple means.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>Tasting something is supported or needed.</p>
 </td></tr><tr><td class="property-name">techSufficient</td><td class="property-type"><a href="#TechCombination">TechCombination</a>[]</td><td class="property-docs"><p>Technology combinations that are sufficient to make use of the content/output/signal.</p>
@@ -5041,7 +5554,11 @@ can be preserved by this simple means.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The content/output/signal has active vibration feedback.</p>
 </td></tr><tr><td class="property-name">visual</td><td class="property-type">One of the following strings:
@@ -5069,7 +5586,11 @@ can be preserved by this simple means.</p>
 
 <code>required</code>
 
+<code>sometimes</code>
+
 <code>unknown</code>
+
+<code>usually</code>
 </p>
 </td><td class="property-docs"><p>The output is visual.</p>
 </td></tr></table>

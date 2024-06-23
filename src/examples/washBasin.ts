@@ -43,7 +43,7 @@ const washBasin: WashBasin = {
         twoHanded: 'possible',
         necessaryGripHeight: { value: 100, unit: 'cm' },
         tactileGuides: 'always',
-        knurled: 'always',
+        knurled: true,
         knob: 'always',
         turnKnob: 'required',
         press: 'required',

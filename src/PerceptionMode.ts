@@ -56,7 +56,7 @@ export interface PerceptionMode {
   /**
    * The output is an activation/engagement signal.
    */
-  activationSignal?: Necessity;
+  activationSignal?: boolean;
 
   /**
    * The output is a light.
@@ -320,7 +320,7 @@ export interface PerceptionMode {
   /**
    * The output is displayed in high contrast.
    */
-  highContrast?: Necessity;
+  highContrast?: boolean;
 
   /**
    * The height you need to grip to perceive the content/output/signal.
@@ -520,7 +520,7 @@ export const getPerceptionModeSchemaDefinition: () => SchemaDefinition = () => (
     allowedValues: [0, 1, 2, 3, 4, 5, 6, 7, 8],
   },
   ...getLocalizedStringSchemaDefinition('contentWarning'),
-  needsHighConcentration: BooleanField,
+  needsHighConcentration: NecessityField,
   ...getPrefixedQuantitySchemaDefinition('attentionSpan', TimeIntervalSchema),
   audioIsComprehensible: BooleanField,
   optional: BooleanField,
@@ -534,7 +534,7 @@ export const getPerceptionModeSchemaDefinition: () => SchemaDefinition = () => (
   },
   light: NecessityField,
   animation: NecessityField,
-  static: NecessityField,
+  static: BooleanField,
   byod: NecessityField,
   blackAndWhite: BooleanField,
   braille: NecessityField,
@@ -543,7 +543,7 @@ export const getPerceptionModeSchemaDefinition: () => SchemaDefinition = () => (
   cable: NecessityField,
   radio: NecessityField,
   chart: NecessityField,
-  colorCode: NecessityField,
+  colorCode: BooleanField,
   colorGradient: BooleanField,
   flash: NecessityField,
   flashingHazard: BooleanField,

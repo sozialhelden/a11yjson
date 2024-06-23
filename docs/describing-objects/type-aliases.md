@@ -308,7 +308,7 @@ Definition: <a href="#Quantity">Quantity</a>&nbsp;|&nbsp;<code>string</code>
 
 ### <a id="GenericInteraction">GenericInteraction</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L86)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L87)</span>
 
 
 
@@ -347,6 +347,8 @@ Definition: one of the following strings:
 - `eat`
 
 - `order`
+
+- `orderAnnouncement`
 
 - `pickUpOrder`
 
@@ -565,7 +567,7 @@ Definition: one of the following strings:
 
 ### <a id="Necessity">Necessity</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Necessity.ts#L18)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Necessity.ts#L20)</span>
 
 
 
@@ -574,6 +576,10 @@ Definition: one of the following strings:
 - `optional`
 
 - `always`
+
+- `sometimes`
+
+- `usually`
 
 - `required`
 

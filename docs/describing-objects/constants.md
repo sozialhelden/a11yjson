@@ -490,7 +490,7 @@ kilogram*meter/second^2.</p>
 
 
 
-Read-only tuple with 31 strings:
+Read-only tuple with 32 strings:
 <ul>
 <li><code>main</code></li>
 
@@ -526,6 +526,8 @@ Read-only tuple with 31 strings:
 
 <li><code>order</code></li>
 
+<li><code>orderAnnouncement</code></li>
+
 <li><code>pickUpOrder</code></li>
 
 <li><code>pay</code></li>
@@ -559,7 +561,7 @@ Read-only tuple with 31 strings:
 
 ### <a id="GenericInteractionsSet">GenericInteractionsSet</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L87)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Accessibility.ts#L88)</span>
 
 
 
@@ -595,6 +597,8 @@ Set&lt;One of the following strings:
 <code>main</code>
 
 <code>order</code>
+
+<code>orderAnnouncement</code>
 
 <code>pay</code>
 
@@ -963,11 +967,15 @@ Set&lt;One of the following strings:
 
 
 
-Read-only tuple with 12 strings:
+Read-only tuple with 14 strings:
 <ul>
 <li><code>optional</code></li>
 
 <li><code>always</code></li>
+
+<li><code>sometimes</code></li>
+
+<li><code>usually</code></li>
 
 <li><code>required</code></li>
 
@@ -994,7 +1002,7 @@ Read-only tuple with 12 strings:
 
 ### <a id="NecessityField">NecessityField</a>
 
-<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Necessity.ts#L20)</span>
+<span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Necessity.ts#L22)</span>
 
 
 

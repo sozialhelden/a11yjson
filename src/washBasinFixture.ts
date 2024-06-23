@@ -48,7 +48,7 @@ const washBasinFixture: Complete<WashBasin> = {
         twoHanded: 'possible',
         necessaryGripHeight: '100cm',
         tactileGuides: 'always',
-        knurled: 'always',
+        knurled: true,
         knob: 'always',
         turnKnob: 'required',
         press: 'required',
