@@ -17,8 +17,8 @@ const washBasin: WashBasin = {
         directionAxis: 'axial',
       },
       perception: {
-        heat: 'always',
-        light: 'always',
+        heat: 'required',
+        visual: 'optional',
         temperature: { min: 20, max: 60, unit: 'degC' },
       },
     },
@@ -37,11 +37,7 @@ const washBasin: WashBasin = {
         tactileGuides: 'always',
       },
     },
-    useWater: {},
-    getHotWater: {},
-    getColdWater: {},
     getCarbonizedWater: {
-      // This describes an actual fixture to be found in the Sozialhelden e.V. office.
       action: {
         singleHanded: 'impossible',
         twoHanded: 'possible',
@@ -58,8 +54,6 @@ const washBasin: WashBasin = {
         tactileGuides: 'always',
       },
     },
-    useWaterJet: {},
-    useWaterSpray: {},
     useSoap: {
       action: {
         singleHanded: 'possible',
