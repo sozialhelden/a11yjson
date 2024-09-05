@@ -6787,10 +6787,10 @@ unknown.</p>
   <p>The WheelchairPlaces interface describes the presence of reserved spots for wheelchairs.</p>
 
 
-  The `count` property is required.
+  
   
 
-  <table><tr><th class="property-name">Name</th><th class="property-type">Type</th><th class="property-docs"></th></tr><tr><td class="property-name">count*</td><td class="property-type"><code>number</code></td><td class="property-docs"><p>The number of designated places for wheelchairs, for example, in a cinema or theater.</p>
+  <table><tr><th class="property-name">Name</th><th class="property-type">Type</th><th class="property-docs"></th></tr><tr><td class="property-name">count</td><td class="property-type"><code>number</code></td><td class="property-docs"><p>The number of designated places for wheelchairs, for example, in a cinema or theater.</p>
 </td></tr><tr><td class="property-name">hasSpaceForAssistant</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>Is there additional space for an assistant?</p>
 </td></tr><tr><td class="property-name">wheelchairUserCapacity</td><td class="property-type"><code>number</code></td><td class="property-docs"><p>The number of people using a wheelchair that can be accomodated at the same time. Use this when
 there is no designated space for wheelchair users, but the number is known.</p>
