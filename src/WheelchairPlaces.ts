@@ -7,7 +7,7 @@ export interface WheelchairPlaces {
   /**
    * The number of designated places for wheelchairs, for example, in a cinema or theater.
    */
-  count: number;
+  count?: number;
   /**
    * Is there additional space for an assistant?
    */
@@ -27,6 +27,7 @@ export const getWheelchairPlacesSchemaDefinition: () => SchemaDefinition = () =>
   count: {
     type: 'SimpleSchema.Integer',
     min: 0,
+    optional: true,
   },
   hasSpaceForAssistant: {
     type: Boolean,
