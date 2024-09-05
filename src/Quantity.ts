@@ -250,7 +250,7 @@ export type Acceleration = Quantity | string;
 export type Hertz = Quantity | string;
 export type Temperature = Quantity | string;
 
-export function parseQuantity(unitString: string): Quantity | string {
+export function parseQuantity(unitString: string): Quantity {
   const matches = unitString.match(
     /^(>|<|<=|>=|=|==|~|~=|!=)? *([+-])? *(\d+(?:\.\d+)?)(?: *(\.\.\.?) *([+-])? *(\d+(?:\.\d+)?))? *(.+)?$/,
   ) || [];
