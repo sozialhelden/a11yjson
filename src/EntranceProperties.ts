@@ -1,10 +1,10 @@
 import { SchemaDefinition } from '@sozialhelden/simpl-schema';
+import BooleanField from './BooleanField.js';
 import { Door, getDoorSchemaDefinition } from './Door.js';
-import { Stairs, getStairsSchemaDefinition } from './Stairs.js';
+import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
 import { getPrefixedQuantitySchemaDefinition, Slope, SlopeSchema } from './Quantity.js';
-import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
-import BooleanField from './BooleanField.js';
+import { getStairsSchemaDefinition, Stairs } from './Stairs.js';
 
 /**
  * Describes an entrance to a place.
@@ -74,6 +74,11 @@ export interface EntranceProperties {
    * reference to the place that this entrance is connected to (on accessibility.cloud)
    */
   placeInfoId?: string;
+
+  /**
+   * URLs of this equipment in external data sources, for example in GTFS, IMDF or other sources.
+   */
+  sameAs?: string[];
 }
 
 export const getEntrancePropertiesSchemaDefinition: () => SchemaDefinition = () => ({
@@ -99,5 +104,12 @@ export const getEntrancePropertiesSchemaDefinition: () => SchemaDefinition = () 
   placeInfoId: {
     type: String,
     optional: true,
+  },
+  sameAs: {
+    type: Array,
+    optional: true,
+  },
+  'sameAs.$': {
+    type: String,
   },
 });

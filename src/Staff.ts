@@ -47,13 +47,11 @@ export const getStaffSchemaDefinition: () => SchemaDefinition = () => ({
   },
   languages: {
     type: Array,
-    defaultValue: [],
     optional: true,
   },
   'languages.$': IETFLanguageCodeSchemaKeyDefinition,
   spokenLanguages: {
     type: Array,
-    defaultValue: [],
     optional: true,
   },
   'spokenLanguages.$': IETFLanguageCodeSchemaKeyDefinition,

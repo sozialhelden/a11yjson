@@ -6,7 +6,7 @@ import { getPrefixedArraySchemaDefinition } from './lib/getPrefixedSchemaDefinit
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
 import { Necessity, NecessityField } from './Necessity.js';
 import {
-  Acceleration, AccelerationSchema, Brightness, BrightnessSchema, Force, ForceSchema, getPrefixedQuantitySchemaDefinition, Hertz, HertzSchema, Length, LengthSchema, Temperature, TemperatureSchema, TimeInterval, TimeIntervalSchema, Volume, VolumeSchema,
+  Acceleration, AccelerationSchema, Brightness, BrightnessSchema, Force, ForceSchema, getPrefixedQuantitySchemaDefinition, Hertz, HertzSchema, Length, LengthSchema, Temperature, TemperatureSchema, TimeInterval, TimeIntervalSchema, Volume, VolumeSchema
 } from './Quantity.js';
 import { getTechCombinationSchemaDefinition, TechCombination } from './TechCombination.js';
 import { Urgencies, Urgency } from './Urgency.js';
@@ -500,7 +500,6 @@ export interface PerceptionMode {
 export const getPerceptionModeSchemaDefinition: () => SchemaDefinition = () => ({
   languages: {
     type: Array,
-    defaultValue: [],
     optional: true,
   },
   'languages.$': IETFLanguageCodeSchemaKeyDefinition,

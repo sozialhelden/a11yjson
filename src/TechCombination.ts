@@ -38,7 +38,6 @@ export const getTechCombinationSchemaDefinition: () => SchemaDefinition = () => 
   ...getLocalizedStringSchemaDefinition('description'),
   uris: {
     type: Array,
-    defaultValue: [],
     optional: true,
   },
   'uris.$': {
