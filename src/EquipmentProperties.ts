@@ -7,7 +7,7 @@ import { getIntercomSchemaDefinition, Intercom } from './Intercom.js';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
 import {
-  getPrefixedQuantitySchemaDefinition, Length, LengthSchema,
+  getPrefixedQuantitySchemaDefinition, Length, LengthSchema
 } from './Quantity.js';
 import { getSeatSchemaDefinition, Seat } from './Seat.js';
 import validateUrl from './validateUrl.js';
@@ -421,7 +421,6 @@ export const getEquipmentPropertiesSchemaDefinition: () => SchemaDefinition = ()
   ...getPrefixedQuantitySchemaDefinition('cabinLength', LengthSchema),
   languages: {
     type: Array,
-    defaultValue: [],
     optional: true,
   },
   'languages.$': IETFLanguageCodeSchemaKeyDefinition,

@@ -13,7 +13,7 @@ import {
   Length,
   LengthSchema, Mass,
   MassSchema, TimeInterval,
-  TimeIntervalSchema,
+  TimeIntervalSchema
 } from './Quantity.js';
 import { getTechCombinationSchemaDefinition, TechCombination } from './TechCombination.js';
 import validateUrl from './validateUrl.js';
@@ -613,7 +613,6 @@ export const getActionModeSchemaDefinition: () => SchemaDefinition = () => ({
   }),
   languages: {
     type: Array,
-    defaultValue: [],
     optional: true,
   },
   'languages.$': IETFLanguageCodeSchemaKeyDefinition,

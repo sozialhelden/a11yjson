@@ -1,7 +1,7 @@
-import { EntranceProperties } from './EntranceProperties.js';
-import doorFixture from './doorFixture.js';
-import stairsFixture from './stairsFixture.js';
 import { Complete } from './Complete.js';
+import doorFixture from './doorFixture.js';
+import { EntranceProperties } from './EntranceProperties.js';
+import stairsFixture from './stairsFixture.js';
 
 const entrancePropertiesFixture: Complete<EntranceProperties> = {
   name: { en: 'string' },
@@ -20,5 +20,6 @@ const entrancePropertiesFixture: Complete<EntranceProperties> = {
   intercomEquipmentId: 'idHere',
   needsAppointment: true,
   placeInfoId: '1234',
+  sameAs: ['https://example.com/entrances/123'],
 };
 export default entrancePropertiesFixture;
