@@ -3149,7 +3149,7 @@ or needs a different key.</p>
 
 ### <a id="EntranceProperties">EntranceProperties</a>
 
-  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EntranceProperties.ts#L12)</span>
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/EntranceProperties.ts#L13)</span>
 
   <p>Describes an entrance to a place.</p>
 
@@ -3171,6 +3171,8 @@ is there signage that points to this entrance?</p>
 </td></tr><tr><td class="property-name">name</td><td class="property-type"><a href="../i18n">LocalizedString</a></td><td class="property-docs"><p>Name of the entrance (helpful if there are multiple entrances).</p>
 </td></tr><tr><td class="property-name">needsAppointment</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if you need an appointment to enter, <code>false</code> if not.</p>
 </td></tr><tr><td class="property-name">placeInfoId</td><td class="property-type"><code>string</code></td><td class="property-docs"><p>reference to the place that this entrance is connected to (on accessibility.cloud)</p>
+</td></tr><tr><td class="property-name">sameAs</td><td class="property-type"><code>string</code>[]</td><td class="property-docs"><p>URLs of this equipment in external data sources, for example in GTFS, IMDF or other sources.</p>
+</td></tr><tr><td class="property-name">sills</td><td class="property-type"><a href="#Sills">Sills</a></td><td class="property-docs"><p>Object that describes sills / thresholds that you have to cross to use the entrance.</p>
 </td></tr><tr><td class="property-name">slopeAngle</td><td class="property-type"><a href="#Slope">Slope</a></td><td class="property-docs"><p>How steep is the ground at the entrance?</p>
 </td></tr><tr><td class="property-name">stairs</td><td class="property-type"><a href="#Stairs">Stairs</a></td><td class="property-docs"><p>Object that describes stairs that you have to take to use the entrance.</p>
 </td></tr></table>
@@ -6157,6 +6159,25 @@ main function of a place or thing.</p>
 <p>The keys of this object are the interaction types, and the values are <a href="../0-model/#InteractionMode">InteractionMode</a>
 objects.</p>
 </td></tr><tr><td class="property-name">isHighContrast</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the signage has high contrast, <code>false</code> if not.</p>
+</td></tr></table>
+
+  
+
+### <a id="Sills">Sills</a>
+
+  <span class='source-link'>[:fontawesome-solid-code:](https://github.com/sozialhelden/a11yjson/blob/main/src/Sills.ts#L10)</span>
+
+  <p>The <code>Sills</code> interface describes one or more sills / thresholds that have to be crossed
+on the way, for example at a door. Sills are a separate, explicitly-recorded fact from
+steps: a stepless way can still have sills.</p>
+
+
+  
+  
+
+  <table><tr><th class="property-name">Name</th><th class="property-type">Type</th><th class="property-docs"></th></tr><tr><td class="property-name">count</td><td class="property-type"><code>number</code></td><td class="property-docs"><p>Number of sills / thresholds.</p>
+</td></tr><tr><td class="property-name">height</td><td class="property-type"><a href="#Length">Length</a></td><td class="property-docs"><p>Indicates how high the highest sill / threshold on the way is (can be a range).</p>
+</td></tr><tr><td class="property-name">isRounded</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the relevant sills are rounded (easier to cross), <code>false</code> if not.</p>
 </td></tr></table>
 
   

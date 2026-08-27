@@ -41,6 +41,7 @@ export * from './Room.js';
 export * from './Seat.js';
 export * from './Shower.js';
 export * from './Signage.js';
+export * from './Sills.js';
 export * from './SmokingPolicy.js';
 export * from './Staff.js';
 export * from './Stairs.js';

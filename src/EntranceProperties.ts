@@ -4,6 +4,7 @@ import { Door, getDoorSchemaDefinition } from './Door.js';
 import getPrefixedSchemaDefinition from './lib/getPrefixedSchemaDefinition.js';
 import { getLocalizedStringSchemaDefinition, LocalizedString } from './LocalizedString.js';
 import { getPrefixedQuantitySchemaDefinition, Slope, SlopeSchema } from './Quantity.js';
+import { getSillsSchemaDefinition, Sills } from './Sills.js';
 import { getStairsSchemaDefinition, Stairs } from './Stairs.js';
 
 /**
@@ -45,6 +46,10 @@ export interface EntranceProperties {
    *  Object that describes stairs that you have to take to use the entrance.
    */
   stairs?: Stairs;
+  /**
+   *  Object that describes sills / thresholds that you have to cross to use the entrance.
+   */
+  sills?: Sills;
   /**
    *  Object that describes the entrance’s door. `null` if there is no door.
    */
@@ -90,6 +95,7 @@ export const getEntrancePropertiesSchemaDefinition: () => SchemaDefinition = () 
   hasRemovableRamp: BooleanField,
   hasHoist: BooleanField,
   ...getPrefixedSchemaDefinition('stairs', getStairsSchemaDefinition()),
+  ...getPrefixedSchemaDefinition('sills', getSillsSchemaDefinition()),
   ...getPrefixedSchemaDefinition('door', getDoorSchemaDefinition()),
   elevatorEquipmentId: {
     type: String,
