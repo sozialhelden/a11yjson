@@ -1,6 +1,7 @@
 import { Complete } from './Complete.js';
 import doorFixture from './doorFixture.js';
 import { EntranceProperties } from './EntranceProperties.js';
+import sillsFixture from './sillsFixture.js';
 import stairsFixture from './stairsFixture.js';
 
 const entrancePropertiesFixture: Complete<EntranceProperties> = {
@@ -15,6 +16,7 @@ const entrancePropertiesFixture: Complete<EntranceProperties> = {
   hasSignage: false,
   hasHoist: false,
   stairs: stairsFixture,
+  sills: sillsFixture,
   door: doorFixture,
   elevatorEquipmentId: 'idHere',
   intercomEquipmentId: 'idHere',
