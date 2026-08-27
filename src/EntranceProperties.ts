@@ -47,6 +47,11 @@ export interface EntranceProperties {
    */
   stairs?: Stairs;
   /**
+   * `true` if there are sills / thresholds to cross, `false` if there are none.
+   * Records sill presence independently of the `sills` attribute details.
+   */
+  hasSills?: boolean;
+  /**
    *  Object that describes sills / thresholds that you have to cross to use the entrance.
    */
   sills?: Sills;
@@ -94,6 +99,7 @@ export const getEntrancePropertiesSchemaDefinition: () => SchemaDefinition = () 
   hasFixedRamp: BooleanField,
   hasRemovableRamp: BooleanField,
   hasHoist: BooleanField,
+  hasSills: BooleanField,
   ...getPrefixedSchemaDefinition('stairs', getStairsSchemaDefinition()),
   ...getPrefixedSchemaDefinition('sills', getSillsSchemaDefinition()),
   ...getPrefixedSchemaDefinition('door', getDoorSchemaDefinition()),

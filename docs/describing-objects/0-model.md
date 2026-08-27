@@ -3165,6 +3165,8 @@ or needs a different key.</p>
 this property MUST be <code>undefined</code>.</p>
 </td></tr><tr><td class="property-name">hasSignage</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p>If this entrance is NOT the main entrance: Is this entrance connected to the main entrance, and
 is there signage that points to this entrance?</p>
+</td></tr><tr><td class="property-name">hasSills</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if there are sills / thresholds to cross, <code>false</code> if there are none.
+Records sill presence independently of the <code>sills</code> attribute details.</p>
 </td></tr><tr><td class="property-name">intercomEquipmentId</td><td class="property-type"><code>string</code></td><td class="property-docs"><p>reference to the equipment id of the intercom of this entrance (on accessibility.cloud)</p>
 </td></tr><tr><td class="property-name">isLevel</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if this entrance has no steps and needs no ramp, <code>false</code> if there are steps or a ramp.</p>
 </td></tr><tr><td class="property-name">isMainEntrance</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if this is the main entrance, <code>false</code> if not.</p>
