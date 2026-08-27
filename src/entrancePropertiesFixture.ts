@@ -15,6 +15,7 @@ const entrancePropertiesFixture: Complete<EntranceProperties> = {
   hasRemovableRamp: true,
   hasSignage: false,
   hasHoist: false,
+  hasSills: true,
   stairs: stairsFixture,
   sills: sillsFixture,
   door: doorFixture,
