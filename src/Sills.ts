@@ -20,6 +20,11 @@ export interface Sills {
    * `true` if the relevant sills are rounded (easier to cross), `false` if not.
    */
   isRounded?: boolean;
+  /**
+   * `true` if the edges of the relevant sills are marked in high contrast (e.g. a colored
+   * edge strip), so they are easier to see, `false` if not.
+   */
+  hasHighContrastNosing?: boolean;
 }
 
 export const getSillsSchemaDefinition: () => SchemaDefinition = () => ({
@@ -30,4 +35,5 @@ export const getSillsSchemaDefinition: () => SchemaDefinition = () => ({
   },
   ...getPrefixedQuantitySchemaDefinition('height', LengthSchema),
   isRounded: BooleanField,
+  hasHighContrastNosing: BooleanField,
 });
