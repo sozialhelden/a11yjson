@@ -5,5 +5,6 @@ const sillsFixture: Complete<Sills> = {
   count: 1,
   height: '3cm',
   isRounded: true,
+  hasHighContrastNosing: true,
 };
 export default sillsFixture;

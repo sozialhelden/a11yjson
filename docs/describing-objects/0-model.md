@@ -6178,6 +6178,8 @@ steps: a stepless way can still have sills.</p>
   
 
   <table><tr><th class="property-name">Name</th><th class="property-type">Type</th><th class="property-docs"></th></tr><tr><td class="property-name">count</td><td class="property-type"><code>number</code></td><td class="property-docs"><p>Number of sills / thresholds.</p>
+</td></tr><tr><td class="property-name">hasHighContrastNosing</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the edges of the relevant sills are marked in high contrast (e.g. a colored
+edge strip), so they are easier to see, <code>false</code> if not.</p>
 </td></tr><tr><td class="property-name">height</td><td class="property-type"><a href="#Length">Length</a></td><td class="property-docs"><p>Indicates how high the highest sill / threshold on the way is (can be a range).</p>
 </td></tr><tr><td class="property-name">isRounded</td><td class="property-type"><code>boolean</code></td><td class="property-docs"><p><code>true</code> if the relevant sills are rounded (easier to cross), <code>false</code> if not.</p>
 </td></tr></table>
